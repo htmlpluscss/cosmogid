@@ -152,6 +152,54 @@
 
 	}
 
+	&__fixed {
+
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+		background-color: var(--blue);
+		transition: var(--transitionDefault);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 6px 20px;
+
+		@media ($mobile) {
+
+			padding: 6px 16px;
+
+		}
+
+		&.is-hidden {
+
+			opacity: 0;
+			pointer-events: none;
+
+		}
+
+		a {
+
+			font-weight: 300;
+			font-size: 8px;
+			line-height: 8px;
+			color: #fff;
+			text-decoration: none;
+			text-align: center;
+			height: 28px;
+
+		}
+
+		svg {
+
+			fill: #fff;
+			margin: auto;
+
+		}
+
+	}
+
 }
 
 .btn-menu-toggle {

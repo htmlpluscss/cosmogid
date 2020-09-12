@@ -10,7 +10,7 @@
 			threshold: [.1]
 		};
 
-		const headerBottom = document.querySelector('.header__bottom');
+		const headerFixed = document.querySelector('.header__fixed');
 
 		const callback = (entries, observer) =>
 
@@ -18,7 +18,7 @@
 
 				document.body.classList.toggle('bg-footer', entry.intersectionRatio > 0.1 && window.pageYOffset > 0);
 
-				headerBottom.classList.toggle('is-hidden', entry.intersectionRatio > 0.1);
+				headerFixed.classList.toggle('is-hidden', entry.intersectionRatio > 0.1);
 
 			});
 
