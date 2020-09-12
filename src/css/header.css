@@ -1,14 +1,14 @@
 .header {
 
-	/* background-color: var(--blue); */
 	color: #fff;
+	background-color: var(--blue);
 
 	&__top {
 
 		display: flex;
 		justify-content: space-between;
 		padding: 5px 0 3px;
-
+opacity: 0;
 	}
 
 	&__left {
@@ -103,7 +103,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 2px 0;
-
+opacity: 0
 	}
 
 	&__city {

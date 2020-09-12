@@ -30,7 +30,7 @@ body {
 	overflow-y: scroll;
 	position: relative;
 	background-color: var(--bg);
-background-image: url(/css/home.png);
+background-image: url(/css/menu.png);
 background-size: 320px auto;
 width: 320px !important;
 }
