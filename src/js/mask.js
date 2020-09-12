@@ -1,4 +1,4 @@
-MI.mask = (elems) => {
+/*CG.mask = (elems) => {
 
 	if(!elems.length) {
 
@@ -74,4 +74,4 @@ MI.mask = (elems) => {
 
 };
 
-MI.mask(document.querySelectorAll('.inputmask'));
+CG.mask(document.querySelectorAll('.inputmask'));*/

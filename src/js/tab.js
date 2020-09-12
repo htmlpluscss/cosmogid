@@ -1,4 +1,4 @@
-
+/*
 // tab-swiper
 
 ((tabs)=>{
@@ -85,4 +85,4 @@ if(document.querySelector('.tabs')) {
 
 	});
 
-};
+};*/

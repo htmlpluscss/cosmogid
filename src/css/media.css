@@ -1,4 +1,5 @@
-.visible-tablet {
+.visible-tablet,
+.visible-desktop {
 
 	display: none;
 
@@ -7,14 +8,23 @@
 .center {
 
 	margin: 0 auto;
-	width: 960px;
-	/* width: 320px; */
+	width: 600px;
 	max-width: 100%;
 	position: relative;
-	padding: 0 15px;
-
+	padding: 0 20px;
+padding: 0 16px;
 }
 
+@media ($mobile) {
+
+	.center {
+
+		padding: 0 16px;
+
+	}
+
+}
+/*
 @media ($tablet) {
 
 	.hidden-tablet {
@@ -31,8 +41,31 @@
 
 	.center {
 
-		padding: 0 20px;
+		width: 1000px;
 
 	}
 
 }
+
+@media ($desktop) {
+
+	.hidden-desktop {
+
+		display: none !important;
+
+	}
+
+	.visible-desktop {
+
+		display: block;
+
+	}
+
+	.center {
+
+		width: 1200px;
+		padding: 0 30px;
+
+	}
+
+} */

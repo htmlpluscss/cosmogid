@@ -12,23 +12,23 @@ https://github.com/htmlpluscss/
 
 	"use strict";
 
-	window.MI = window.MI || {};
-	MI.resizeTimeout = null;
-	MI.windowWidthOLd = window.innerWidth;
+	window.CG = window.CG || {};
+	CG.resizeTimeout = null;
+	CG.windowWidthOLd = window.innerWidth;
 
 	window.addEventListener("resize", () => {
 
 		window.requestAnimationFrame( () => {
 
-			if (!MI.resizeTimeout) {
+			if (!CG.resizeTimeout) {
 
-				MI.resizeTimeout = setTimeout( () => {
+				CG.resizeTimeout = setTimeout( () => {
 
-					MI.resizeTimeout = null;
+					CG.resizeTimeout = null;
 
-					if(MI.windowWidthOLd !== window.innerWidth) {
+					if(CG.windowWidthOLd !== window.innerWidth) {
 
-						MI.windowWidthOLd = window.innerWidth;
+						CG.windowWidthOLd = window.innerWidth;
 
 						PubSub.publish('windowWidthResize');
 
@@ -47,12 +47,9 @@ https://github.com/htmlpluscss/
 	window.addEventListener("load", () => PubSub.publish('pageLoad'));
 
 	// обработчик анимаций
-	MI.cssAnimation = a => {var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]};
+	CG.cssAnimation = a => {var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]};
 
 	// Determine if an element is in the visible viewport
-	MI.isInViewport = element => {
-		const rect = element.getBoundingClientRect();
-		return (rect.top >= 0 && rect.bottom <= window.innerHeight);
-	};
+	CG.isInViewport = el => el.getBoundingClientRect().top >= 0 && el.getBoundingClientRect().bottom <= window.innerHeight;
 
 })();

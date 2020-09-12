@@ -1,4 +1,4 @@
-((slide) => {
+/*((slide) => {
 
 	"use strict";
 
@@ -94,4 +94,4 @@
 
 	});
 
-})(document.querySelectorAll('.accordion'));
+})(document.querySelectorAll('.accordion'));*/

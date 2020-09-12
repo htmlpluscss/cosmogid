@@ -18,25 +18,25 @@
 
 		if(evt.target.classList.contains('modal') || evt.target.closest('.modal__close')){
 
-			MI.hideModal();
+			CG.hideModal();
 
 		}
 
 	});
 
-	MI.hideModal = () => {
+	CG.hideModal = () => {
 
 		document.body.classList.remove('modal-show');
 		wrapper.style.top = 0;
 		window.scrollTo(0,windowScroll);
 
-		MI.activeModal = false;
+		CG.activeModal = false;
 
 	};
 
-	MI.modalShow = selector => {
+	CG.modalShow = selector => {
 
-		if(!MI.activeModal){
+		if(!CG.activeModal){
 
 			windowScroll = window.pageYOffset;
 
@@ -44,20 +44,20 @@
 
 		}
 
-		MI.activeModal = modal.querySelector('.modal__item--' + selector);
+		CG.activeModal = modal.querySelector('.modal__item--' + selector);
 
 		Array.from(items, el =>
-			el.classList.toggle('visuallyhidden', el !== MI.activeModal));
+			el.classList.toggle('visuallyhidden', el !== CG.activeModal));
 
 		document.body.classList.add('modal-show');
 		window.scrollTo(0,0);
 
-		MI.activeModal.focus();
+		CG.activeModal.focus();
 
 	};
 
 	Array.from(btns, el =>
 		el.addEventListener('click', () =>
-			MI.modalShow(el.getAttribute('data-modal'))));
+			CG.modalShow(el.getAttribute('data-modal'))));
 
 })(document.querySelector('.modal'));

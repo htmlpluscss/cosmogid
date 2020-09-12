@@ -1,38 +1,23 @@
-((menu) => {
+
+// открыть|закрыть меню
+
+((btn) => {
 
 	"use strict";
 
-	if(!menu) {
+	if(!btn) {
 
 		return;
 
 	}
 
-	// открыть|закрыть меню
+	btn.addEventListener('click', () => document.body.classList.toggle('menu-open'));
 
-	document.querySelector('.btn-menu-toggle').addEventListener('click', () => {
-
-		if(document.body.classList.contains('menu-open')){
-
-			setTimeout( () => window.scrollTo(0, MI.windowScrollOld));
-
-		}
-		else {
-
-			MI.windowScrollOld = window.pageYOffset;
-
-		}
-
-		document.body.classList.toggle('menu-open');
-		menu.classList.toggle('visuallyhidden');
-
-	});
-
-})(document.querySelector('.menu'));
+})(document.querySelector('.btn-menu-toggle'));
 
 
 // каталог на главной
-
+/*
 ((menu) => {
 
 	"use strict";
@@ -195,4 +180,4 @@
 
 	});
 
-})(document.querySelectorAll('.js-open-menu-catalog'));
+})(document.querySelectorAll('.js-open-menu-catalog'));*/

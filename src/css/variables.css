@@ -1,17 +1,22 @@
 :root {
 
-	--color: #000;
-	--text: #aaa;
-	--orange: #ff4a00;
+	--color: #212121;
+	--text: #212121;
+
+	--blue: #418ebc;
+	--heavenly: #b3d4fc;
+	--pink: #ed4993;
+	--lilac: #92348f;
 	--error: #f00;
-	--border: #aaa;
+	--border: #e5e5e5;
 	--bg: #fff;
-	--green: #0ead43;
-	--shadow: 0 5px 15px rgba(0,0,0,.05);
-	--shadowTop: 0 -5px 15px rgba(0,0,0,.05);
+	--hr: #e0e0e0;
+	--ico: #bdbdbd;
 	--transitionDefault: .3s;
-	--heightHeader: 62px;
+	/* --heightHeader: 62px; */
 
 }
 
-$tablet: (min-width: 764px);
+$mobile: (max-width: 359px);   /*  < 360   */
+$tablet: (min-width: 768px);   /*  >= 768  */
+$desktop: (min-width: 1200px); /*  >= 1200 */

@@ -109,6 +109,7 @@ gulp.task('css', function () {
 			]))
 			.pipe(csso())
 			.pipe(rename({suffix: ".min"}))
+			.pipe(gulp.dest('src/css'))
 			.pipe(gulp.dest('build/css'))
 
 });
@@ -120,10 +121,10 @@ gulp.task('babel', function() {
 		.pipe(sourcemaps.init())
 		.pipe(concat('_js.js'))
 		.pipe(sourcemaps.write())
-		.pipe(babel({
+/*		.pipe(babel({
 			presets: ['@babel/env']
 		}))
-		.pipe(minify({
+*/		.pipe(minify({
 			preserveComments: "some",
 			ext : {
 				min:'.min.js'
@@ -158,6 +159,7 @@ gulp.task('concat', function() {
 
 	return gulp.src(['build/js/_min.js','build/js/_js.min.js'])
 		.pipe(concat('scripts.min.js'))
+		.pipe(gulp.dest('src/js/'))
 		.pipe(gulp.dest('build/js'))
 
 });

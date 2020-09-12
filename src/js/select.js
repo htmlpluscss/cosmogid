@@ -1,4 +1,4 @@
-((items)=>{
+/*((items)=>{
 
 	"use strict";
 
@@ -18,4 +18,4 @@
 
 	});
 
-})(document.querySelectorAll('.select'));
+})(document.querySelectorAll('.select'));*/

@@ -1,4 +1,4 @@
-((footer) => {
+/*((footer) => {
 
 	"use strict";
 
@@ -28,4 +28,4 @@
 
 	}
 
-})(document.querySelector('.footer'));
+})(document.querySelector('.footer'));*/
