@@ -1,6 +1,10 @@
 	<nav class="menu">
 
-		<img src="/img/logo-img.svg" alt="{{ site }}">
+		<div class="menu__logo">
+
+			<img src="/img/logo-img.svg" alt="{{ site }}">
+
+		</div>
 
 {% set menu = [
 
@@ -40,11 +44,31 @@
 
 {% for item in menu %}
 
-			<li class="menu__item">
+			<li class="menu__item{% if item.sub %} is-parent{% endif %}">
 
 				<a class="menu__link" href="/">
 					{{ item.name }}
 				</a>
+
+	{% if item.sub %}
+
+				<ul class="menu__sub">
+
+		{% for sub in item.sub %}
+
+					<li class="menu__sub-item">
+
+						<a class="menu__sub-link" href="/">
+							{{ sub }}
+						</a>
+
+					</li>
+
+		{% endfor %}
+
+				</ul>
+
+	{% endif %}
 
 			</li>
 

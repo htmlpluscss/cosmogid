@@ -17,6 +17,7 @@
 
 }
 
-$mobile: (max-width: 359px);   /*  < 360   */
+/* $mobile: (max-width: 359px);   < 360 */
+$mobile: (min-width: 359px);
 $tablet: (min-width: 768px);   /*  >= 768  */
 $desktop: (min-width: 1200px); /*  >= 1200 */

@@ -15,6 +15,31 @@
 
 })(document.querySelector('.btn-menu-toggle'));
 
+// sum menu
+
+((parent) => {
+
+	"use strict";
+
+	if(!parent.length) {
+
+		return;
+
+	}
+
+	Array.from(parent, el => {
+
+		el.querySelector('.menu__link').addEventListener('click', evt => {
+
+			evt.preventDefault();
+
+			el.classList.toggle('is-open');
+
+		});
+
+	});
+
+})(document.querySelectorAll('.menu__item.is-parent'));
 
 // каталог на главной
 /*
