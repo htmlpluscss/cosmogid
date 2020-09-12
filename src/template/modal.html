@@ -7,18 +7,79 @@
 
 			</div>
 
-			<div class="modal__item modal__item--city">
+			<form action="/" class="modal__item modal__item--city-confirm form-city-confirm">
 
+				<input type="hidden" value="Екатеринбург">
 
-			</div>
+				<h3 class="form-city-confirm__title">
+					Ваш город <b>Екатеринбург?</b>
+				</h3>
 
+				<div class="form-city-confirm__btn">
+
+					<button class="btn btn--outline">
+						Да
+					</button>
+
+				</div>
+
+				<div class="form-city-confirm__other">
+
+					<button class="btn btn--link" type="button" data-modal="cities">
+						Выбрать другой
+					</button>
+
+				</div>
+
+			</form>
+
+			<form class="modal__item modal__item--cities form-city">
+
+				<input class="input form-city__input" placeholder="Введите название города..." aria-label="Введите свой город">
+
+				<div class="form-city__result"></div>
+
+				<h3 class="form-city__title">
+					Наиболее популярные города
+				</h3>
+
+{% set cities = [
+	'Москва',
+	'Санкт-Петербург',
+	'Екатеринбург',
+	'Нижний Новгород',
+	'Новосибирск',
+	'Краснодар',
+	'Красноярск',
+	'Кемерово',
+	'Ростов-на-Дону',
+	'Тюмень',
+	'Челябинск'
+] %}
+
+				<ul class="form-city__list">
+
+{% for city in cities %}
+
+					<li>
+						<button type="button" class="form-city__select button" data-id="123">
+							{{ city }}
+						</button>
+					</li>
+
+{% endfor %}
+
+				</ul>
+
+			</form>
+<!--
 			<button type="button" class="modal__close modal__close-btn button" aria-label="Закрыть окно">
 				<svg width="16" height="16" viewBox="0 0 16 16">
 					<path d="M.82 16a.82.82 0 01-.58-1.41L14.59.24a.82.82 0 011.16 1.16L1.41 15.76a.83.83 0 01-.59.24z"/>
 					<path d="M15.18 16a.82.82 0 01-.58-.24L.24 1.41A.82.82 0 011.41.24l14.35 14.35a.82.82 0 01-.58 1.41z"/>
 				</svg>
 			</button>
-
+ -->
 		</div>
 
 	</div>

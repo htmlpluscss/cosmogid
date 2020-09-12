@@ -12,6 +12,7 @@
 	color: transparent;
 	text-align: center;
 	white-space: nowrap;
+	display: block;
 
 	&:focus {
 
@@ -35,15 +36,13 @@
 
 .btn {
 
-	display: block;
-	padding: 0 30px;
-	height: 45px;
-	font-size: 14px;
-	line-height: 45px;
+	padding: 0 14px;
+	height: 20px;
+	font-size: 11px;
+	line-height: 20px;
 	font-weight: 400;
-	color: #fff;
-	border-radius: 5px;
-	background-color: #fff;
+	color: var(--color);
+	border-radius: 2px;
 
 	&--blue {
 
@@ -54,12 +53,36 @@
 
 	}
 
-/* 	&--gray {
+ 	&--outline {
 
-	background-color: var(--text);
+		background-color: #fff;
+		line-height: 18px;
+		box-shadow: inset 0 0 0 1px var(--blue);
 
-}
+	}
 
+	&--link {
+
+		font-size: 12px;
+		line-height: 14px;
+		height: 14px;
+		padding: 0;
+		border-bottom: 1px solid;
+		border-radius: 0;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				border-bottom-color: transparent;
+
+			}
+
+		}
+
+	}
+
+/*
 &--tab {
 
 	background-color: #f6f6f6;
@@ -140,18 +163,6 @@
 
 }
 
-&--link {
-
-	font-size: 16px;
-	line-height: 20px;
-	height: 20px;
-	padding: 0;
-	color: var(--color);
-	background-color: transparent;
-	border-bottom: 1px solid;
-	border-radius: 0;
-
-}
 
 &-like,
 &-dislike {
@@ -224,8 +235,8 @@
 
 .input {
 
-	height: 30px;
-	line-height: 20px;
+	height: 28px;
+	line-height: 18px;
 
 	padding: 5px 10px;
 
@@ -240,8 +251,8 @@
 	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
 
 	background-color: #fff;
-	border: 0;
-	border-radius: 0;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
 
 	color: var(--text);
 
@@ -277,6 +288,7 @@
 	&:focus {
 
 		outline: none;
+		border-color: var(--heavenly);
 
 		&::placeholder {
 

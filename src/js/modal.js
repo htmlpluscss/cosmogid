@@ -14,9 +14,9 @@
 		wrapper = document.querySelector('.wrapper'),
 		windowScroll = window.pageYOffset;
 
-	modal.addEventListener('click', evt => {
+	modal.addEventListener('click', event => {
 
-		if(evt.target.classList.contains('modal') || evt.target.closest('.modal__close')){
+		if(event.target.classList.contains('modal') || event.target.closest('.modal__close')){
 
 			CG.hideModal();
 
@@ -53,6 +53,8 @@
 		window.scrollTo(0,0);
 
 		CG.activeModal.focus();
+
+		PubSub.publish('modalShow', selector);
 
 	};
 
