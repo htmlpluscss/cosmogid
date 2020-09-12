@@ -191,40 +191,23 @@
 		z-index: 10;
 		display: flex;
 		justify-content: center;
-		position: relative;
-		flex-grow: 1;
-		margin-top: 20px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
 
 		.button {
 
-			background-image: linear-gradient(to bottom, #ff763e, #d13d00);
-			width: 11px;
-			height: 11px;
-			margin: 3px;
-			border-radius: 50%;
-
-			&::after {
-
-				position: absolute;
-				top: 2px;
-				left: 2px;
-				right: 2px;
-				bottom: 2px;
-				content: '';
-				border-radius: 50%;
-				background-color: #fff;
-				opacity: 0;
-				transition: var(--transitionDefault);
-
-			}
+			width: 8px;
+			height: 8px;
+			margin: 4px;
+			border-radius: 2px;
+			background-color: var(--ico);
+			transition: var(--transitionDefault);
 
 			&.is-active {
 
-				&::after {
-
-					opacity: 1;
-
-				}
+				background-color: #fafafa;
 
 			}
 

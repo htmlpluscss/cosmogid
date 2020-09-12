@@ -6,11 +6,14 @@
 @import url(form.css);
 
 @import url(modal.css);
-/*@import url(swiper.css); */
+@import url(swiper.css);
 
 @import url(header.css);
 @import url(search.css);
 @import url(menu.css);
+
+@import url(billboard.css);
+
 /*
 @import url(footer.css);
  */
@@ -23,7 +26,6 @@
 @import url(breadcrumbs.css);
 
 @import url(search-shop.css);
-@import url(billboard.css);
 @import url(main-catalog.css);
 @import url(card-swiper.css);
 @import url(card-preview.css);
