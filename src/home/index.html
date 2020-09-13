@@ -2,21 +2,21 @@
 
 {% set description = "Профессиональная косметика в Интернет магазине, купить косметику в Екатеринбурге" %}
 
-<!-- {% set preloadImage = [
+{% set preloadImage = [
 	{
-		media: "(min-width: 425px)",
-		img : "/img/billboard/1--724x350.webp"
+		media: "(min-width: 768px)",
+		img : "/img/billboard/w1140.webp"
 	},
 	{
-		media: "(min-width: 375px) and (max-width: 424px)",
-		img : "/img/billboard/1--394x190.webp"
+		media: "(min-width: 361px) and (max-width: 767px)",
+		img : "/img/billboard/w744.webp"
 	},
 	{
-		media: "(max-width: 374px)",
-		img : "/img/billboard/1--330x160.webp"
+		media: "(max-width: 360px)",
+		img : "/img/billboard/w670.webp"
 	}
 ] %}
- -->
+
 {% extends "template/base.html" %}
 
 {% block content %}
@@ -24,8 +24,10 @@
 	<div class="center">
 
 {% include "home/billboard.html" %}
-% include "home/main-catalog.html" %}
-% include "home/top-swiper.html" %}
+{% include "home/sale-swiper.html" %}
+
+		<hr>
+
 % include "home/blog-swiper.html" %}
 % include "home/address-shops.html" %}
 
@@ -33,7 +35,7 @@
 
 	<script>
 
-		setTimeout( () => CG.modalShow('city-confirm'), 1000);
+		setTimeout( () => CG.modalShow('city-confirm'), 9991000);
 
 	</script>
 

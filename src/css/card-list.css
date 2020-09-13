@@ -1,0 +1,96 @@
+.card-list {
+
+	margin: 20px -20px;
+	padding: 0 20px;
+	position: relative;
+
+	@media ($mobile) {
+
+		margin: 16px -16px;
+		padding: 0 16px;
+
+	}
+
+	&__all {
+
+		position: absolute;
+		top: 0;
+		right: 16px;
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 500;
+		background-position: right;
+		background-repeat: no-repeat;
+		padding-right: 10px;
+		background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='8' viewBox='0 0 5 8'%3E%3Cpath d='M.943 0L0 .943 3.057 4 0 7.057.943 8l4-4-4-4z' fill='%23418EBC'/%3E%3C/svg%3E");
+
+	}
+
+	&__title {
+
+		margin-bottom: 8px;
+
+		&--sale {
+
+			display: flex;
+			align-items: center;
+
+			&::after {
+
+				width: 20px;
+				height: 20px;
+				content: '%';
+				text-align: center;
+				line-height: 20px;
+				border-radius: 50%;
+				background-color: var(--pink);
+				font-weight: bold;
+				font-size: 16px;
+				color: #fff;
+				margin-left: 4px;
+
+			}
+
+		}
+
+	}
+
+	&__label {
+
+		display: flex;
+		margin: 8px 0;
+
+		span {
+
+			padding: 3px;
+			font-size: 12px;
+			line-height: 12px;
+			border-radius: 2px;
+			background-color: var(--pink);
+
+		}
+
+	}
+
+	&__list {
+
+		display: flex;
+		margin: 0 -6px;
+		/* scroll-snap-type: x mandatory; */
+
+	}
+
+	&__item {
+
+		margin: 0 6px;
+		width: 124px;
+		flex-shrink: 0;
+		outline:1px solid red;
+		position: relative;
+		/* scroll-snap-align: start; */
+
+	}
+
+
+
+}

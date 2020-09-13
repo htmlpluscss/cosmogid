@@ -235,7 +235,8 @@ gulp.task('watch', function() {
 	gulp.watch(['src/js/*.*','!src/js/scripts.min.js'], gulp.series('js'));
 	gulp.watch(['src/css/*.*','!src/css/styles.min.css'], gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
-	gulp.watch(['src/**/*.html','!src/**/index.html'], gulp.series('html-touch'));
+	gulp.watch(['src/home/*.html','src/_include/*.html','src/template/*.html','!src/home/index.html'], gulp.series('html-touch'));
+//	gulp.watch(['src/**/*.html','!src/**/index.html'], gulp.series('html-touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));
 });

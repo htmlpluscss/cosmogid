@@ -1,0 +1,74 @@
+{% set list = [
+
+	{
+		name  : "Ericson Laboratoire",
+		text  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		img   : 28,
+		price : 2581,
+		oldPrice : 4585,
+		sale  : 30
+	},
+	{
+		name  : "Periche",
+		text  : "Argan Keratin Cleansing (Очищающий шампунь)",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		wishlist : "true"
+	},
+	{
+		name  : "Ericson Laboratoire",
+		text  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		img   : 28,
+		price : 2581,
+		oldPrice : 4585,
+		sale  : 30
+	},
+	{
+		name  : "Periche",
+		text  : "Argan Keratin Cleansing (Очищающий шампунь)",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		wishlist : "true"
+	},
+	{
+		name  : "Ericson Laboratoire",
+		text  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		img   : 28,
+		price : 2581,
+		oldPrice : 4585,
+		sale  : 30
+	}
+
+] %}
+
+	<section class="card-list">
+
+		<h2 class="card-list__title card-list__title--sale h1">
+			SALE
+		</h2>
+
+		<p class="card-list__label">
+			<span>Большие сроки годности</span>
+		</p>
+
+		<div class="card-list__list">
+
+{% for item in list %}
+
+			<article class="card-list__item">
+
+{% include "_include/card-preview.html" %}
+
+			</article>
+
+{% endfor %}
+
+		</div>
+
+		<a href="/" class="card-list__all">
+			Смотреть все
+		</a>
+
+	</section>
