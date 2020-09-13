@@ -34,7 +34,7 @@ body {
 
 background-image: url(/css/home.png);
 background-size: 320px auto;
-background-position: 0 1px;
+background-position: 0 -1px;
 width: 320px !important;
 }
 
