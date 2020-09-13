@@ -1,62 +1,55 @@
 {% set list = [
 
 	{
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
-		img   : 28,
-		price : 2581,
-		oldPrice : 4585
+		name  : "collistar",
+		img   : "collistar"
 	},
 	{
-		name  : "Periche",
-		desc  : "Argan Keratin Cleansing (Очищающий шампунь)",
-		img   : 27,
-		price : 2581,
-		wishlist : "true"
+		name  : "indola",
+		img   : "indola"
 	},
 	{
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
-		img   : 28,
-		price : 2581,
-		oldPrice : 4585
+		name  : "kalson",
+		img   : "kalson"
 	},
 	{
-		name  : "Periche",
-		desc  : "Argan Keratin Cleansing (Очищающий шампунь)",
-		img   : 27,
-		price : 2581,
-		wishlist : "true"
+		name  : "kalson",
+		img   : "kalson2"
 	},
 	{
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
-		img   : 28,
-		price : 2581,
-		oldPrice : 4585
+		name  : "collistar",
+		img   : "collistar"
+	},
+	{
+		name  : "indola",
+		img   : "indola"
+	},
+	{
+		name  : "kalson",
+		img   : "kalson"
 	}
 
 ] %}
 
-	<section class="card-list">
+	<section class="card-list card-list--brand">
 
 		<h2 class="card-list__title h1">
-			Мы рекомендуем
+			Популярные бренды
 		</h2>
 
-		<div class="card-list__list">
+		<ul class="card-list__list">
 
 {% for item in list %}
 
-			<article class="card-list__item">
+			<li class="card-list__item">
 
-{% include "_include/card-preview.html" %}
+{% include "_include/card-brand.html" %}
 
-			</article>
+			</li>
 
 {% endfor %}
 
-		</div>
+		</ul>
 
 		<a href="/" class="card-list__all">
 			Смотреть все

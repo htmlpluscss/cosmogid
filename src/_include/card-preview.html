@@ -8,7 +8,7 @@
 
 						<source srcset="/img/card-preview/{{ item.img }}--124x148.jpg 1x, /img/card-preview/{{ item.img }}--248x296.jpg 2x">
 
-						<img src="/img/card-preview/{{ item.img }}--124x148.jpg" alt="Xiaomi Redmi Note 7 6/64GB Twilight Gold" loading="lazy" width="124" height="148">
+						<img src="/img/card-preview/{{ item.img }}--248x296.jpg" alt="{{ item.name }}" loading="lazy" width="124" height="148">
 
 					</picture>
 
@@ -48,7 +48,7 @@
 
 {% if item.oldPrice %}
 
-						<strike>
+						<s>
 
 							<b class="visuallyhidden">
 								Старая цена
@@ -56,7 +56,7 @@
 
 							{{ item.oldPrice }} руб.
 
-						</strike>
+						</s>
 
 {% endif %}
 

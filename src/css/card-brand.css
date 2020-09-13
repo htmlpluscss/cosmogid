@@ -1,0 +1,13 @@
+.card-brand {
+
+	&__img {
+
+		object-fit: contain;
+		width: 88px;
+		height: 88px;
+		border-radius: 2px;
+		border: 1px solid var(--hr);
+
+	}
+
+}
