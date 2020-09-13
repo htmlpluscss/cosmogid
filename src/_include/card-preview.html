@@ -33,35 +33,46 @@
 
 {% endif %}
 
-				<form action="/" class="card-preview__order">
+				<form action="/" class="card-preview__order form-buy">
 
 					<input type="hidden" name="id" value="123456">
+					<input type="hidden" name="mode" value="add">
 
 					<p class="card-preview__price">
-						<span class="visuallyhidden">Цена</span>
-						{{ price }} руб.
-					</p>
+
+						<b class="visuallyhidden">
+							Цена
+						</b>
+
+						{{ item.price }} руб.
 
 {% if item.oldPrice %}
 
-					<p class="card-preview__price-old">
-						<span class="visuallyhidden">Старая цена</span>
-						{{ oldPrice }} руб.
-					</p>
+						<strike>
+
+							<b class="visuallyhidden">
+								Старая цена
+							</b>
+
+							{{ item.oldPrice }} руб.
+
+						</strike>
 
 {% endif %}
 
-					<button class="card-preview__buy btn btn--outline">
+					</p>
+
+					<button class="card-preview__buy btn btn--outline" data-remove="Удалить из корзины">
 						Добавить в корзину
 					</button>
 
-					<button class="card-preview__one-click btn btn--link" type="button">
+					<button class="card-preview__one-click btn btn--link buy-one-click" type="button">
 						Купить в один клик
 					</button>
 
 				</form>
 
-				<form action="/" class="card-preview__wishlist">
+				<form action="/" class="card-preview__wishlist form-wishlist">
 
 					<input type="hidden" name="id" value="123456">
 
@@ -74,10 +85,8 @@
 
 {% endif %}
 
-					<button class="button" aria-label="Добавить в избранное">
-						<svg width="14" height="14" viewBox="0 0 14 14">
-							<path d="M10.309 1c-1.157 0-2.171.555-2.935 1.604a5.527 5.527 0 00-.393.627 5.407 5.407 0 00-.38-.622C5.857 1.556 4.85 1 3.692 1 1.525 1 0 2.823 0 5.006c0 2.472 1.99 4.168 5.004 6.736.542.462 1.102.94 1.699 1.461a.41.41 0 00.54 0c.633-.554 1.228-1.058 1.802-1.546C11.854 9.274 14 7.507 14 5.007 14 2.82 12.472 1 10.309 1zM8.515 11.031c-.495.42-1.005.853-1.542 1.32-.5-.435-.975-.84-1.437-1.233C2.646 8.655.815 7.098.815 5.006c0-1.816 1.24-3.191 2.876-3.191.887 0 1.637.424 2.228 1.25.467.65.656 1.319.658 1.326a.41.41 0 00.79.006c.007-.026.78-2.582 2.942-2.582 1.636 0 2.876 1.375 2.876 3.191 0 2.067-1.861 3.642-4.67 6.025z"/>
-						</svg>
+					<button class="button">
+						Добавить в избранное
 					</button>
 
 				</form>
