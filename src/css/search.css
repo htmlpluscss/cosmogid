@@ -12,6 +12,12 @@
 
 	}
 
+	@media ($desktop) {
+
+		margin: 0 -30px;
+
+	}
+
 	&__inner {
 
 		position: relative;
