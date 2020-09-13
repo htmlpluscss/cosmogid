@@ -225,5 +225,30 @@
 
 }
 
-@media ($tablet) {
+.menu-open {
+
+	.header {
+
+		z-index: 9;
+
+	}
+
+	.wrapper {
+
+		&::after {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 0.3;
+			z-index: 8;
+			background-color: #000;
+
+		}
+
+	}
+
 }

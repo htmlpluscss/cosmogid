@@ -15,7 +15,7 @@
 
 	document.addEventListener('click', event => {
 
-		if(event.target.closest('.menu')){
+		if(!event.target.closest('.menu') && !event.target.closest('.btn-menu-toggle')){
 
 			document.body.classList.remove('menu-open');
 
