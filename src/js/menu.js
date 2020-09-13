@@ -13,6 +13,16 @@
 
 	btn.addEventListener('click', () => document.body.classList.toggle('menu-open'));
 
+	document.addEventListener('click', event => {
+
+		if(event.target.closest('.menu')){
+
+			document.body.classList.remove('menu-open');
+
+		}
+
+	});
+
 })(document.querySelector('.btn-menu-toggle'));
 
 // sum menu
