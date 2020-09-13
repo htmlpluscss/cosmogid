@@ -1,0 +1,62 @@
+{% set list = [
+
+	{
+		name  : "Ericson Laboratoire",
+		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		text  : "The beauty insider’s secret, IT Cosmetics was developed with plastic surgeons, the leading experts in skin rejuvenation, along with a former news presenter looking for beauty products that would stand up to unforgiving HD cameras.",
+		user  : "Иванова Наталья",
+		img   : 39,
+		price : 2581
+	},
+	{
+		name  : "Ericson Laboratoire",
+		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		text  : "The beauty insider’s secret, IT Cosmetics was developed with plastic surgeons, the leading experts in skin rejuvenation, along with a former news presenter looking for beauty products that would stand up to unforgiving HD cameras.",
+		user  : "Иванова Наталья",
+		img   : 39,
+		price : 2581
+	},
+	{
+		name  : "Ericson Laboratoire",
+		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		text  : "The beauty insider’s secret, IT Cosmetics was developed with plastic surgeons, the leading experts in skin rejuvenation, along with a former news presenter looking for beauty products that would stand up to unforgiving HD cameras.",
+		user  : "Иванова Наталья",
+		img   : 39,
+		price : 2581
+	},
+	{
+		name  : "Ericson Laboratoire",
+		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		text  : "The beauty insider’s secret, IT Cosmetics was developed with plastic surgeons, the leading experts in skin rejuvenation, along with a former news presenter looking for beauty products that would stand up to unforgiving HD cameras.",
+		user  : "Иванова Наталья",
+		img   : 39,
+		price : 2581
+	}
+
+] %}
+
+	<section class="card-list card-list--review">
+
+		<h2 class="card-list__title h1">
+			Рекомендации покупателей
+		</h2>
+
+		<div class="card-list__list">
+
+{% for item in list %}
+
+			<article class="card-list__item">
+
+{% include "_include/card-review.html" %}
+
+			</article>
+
+{% endfor %}
+
+		</div>
+
+		<a href="/" class="card-list__all">
+			Все
+		</a>
+
+	</section>

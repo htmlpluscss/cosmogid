@@ -17,8 +17,9 @@
 @import url(billboard.css);
 
 @import url(card-list.css);
-@import url(card-preview.css);
+@import url(card-product.css);
 @import url(card-brand.css);
+@import url(card-review.css);
 
 
 
@@ -32,7 +33,6 @@
 @import url(breadcrumbs.css);
 
 @import url(search-shop.css);
-@import url(card-swiper.css);
 
 @import url(catalog.css);
 @import url(filter.css);

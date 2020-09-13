@@ -74,6 +74,8 @@
 			line-height: 12px;
 			font-weight: 500;
 			font-size: 10px;
+			text-align: center;
+			background-color: var(--pink);
 
 		}
 

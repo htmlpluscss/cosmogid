@@ -4,7 +4,7 @@
 	padding: 0;
 	box-sizing: border-box;
 
-color: red !important
+/* color: red !important */
 }
 
 html {
@@ -32,10 +32,10 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
-background-image: url(/css/home.png);
+/* background-image: url(/css/home.png); */
 background-size: 320px auto;
 background-position: 0 -15px;
-width: 320px !important;
+/* width: 320px !important; */
 }
 
 a {

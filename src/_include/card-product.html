@@ -1,44 +1,44 @@
-			<div class="card-preview">
+			<div class="card-product">
 
-				<a href="/" class="card-preview__img">
+				<a href="/" class="card-product__img">
 
 					<picture>
 
-						<source srcset="/img/card-preview/{{ item.img }}--124x148.webp 1x, /img/card-preview/{{ item.img }}--248x296.webp 2x" type="image/webp">
+						<source srcset="/img/card-product/{{ item.img }}--124x148.webp 1x, /img/card-product/{{ item.img }}--248x296.webp 2x" type="image/webp">
 
-						<source srcset="/img/card-preview/{{ item.img }}--124x148.jpg 1x, /img/card-preview/{{ item.img }}--248x296.jpg 2x">
+						<source srcset="/img/card-product/{{ item.img }}--124x148.jpg 1x, /img/card-product/{{ item.img }}--248x296.jpg 2x">
 
-						<img src="/img/card-preview/{{ item.img }}--248x296.jpg" alt="{{ item.name }}" loading="lazy" width="124" height="148">
+						<img src="/img/card-product/{{ item.img }}--248x296.jpg" alt="{{ item.name }}" loading="lazy" width="124" height="148">
 
 					</picture>
 
 				</a>
 
-				<h3 class="card-preview__name">
+				<h3 class="card-product__name">
 					<a href="/">
 						{{ item.name }}
 					</a>
 				</h3>
 
-				<p class="card-preview__desc">
+				<p class="card-product__desc">
 					{{ item.desc }}
 				</p>
 
 {% if item.sale %}
 
-				<p class="card-preview__sale">
+				<p class="card-product__sale">
 					<span class="visuallyhidden">Скидка</span>
 					{{ item.sale }}%
 				</p>
 
 {% endif %}
 
-				<form action="/" class="card-preview__order form-buy">
+				<form action="/" class="card-product__order form-buy">
 
 					<input type="hidden" name="id" value="123456">
 					<input type="hidden" name="mode" value="add">
 
-					<p class="card-preview__price">
+					<p class="card-product__price">
 
 						<b class="visuallyhidden">
 							Цена
@@ -62,17 +62,17 @@
 
 					</p>
 
-					<button class="card-preview__buy btn btn--outline" data-remove="Удалить из корзины">
+					<button class="card-product__buy btn btn--outline" data-remove="Удалить из корзины">
 						Добавить в корзину
 					</button>
 
-					<button class="card-preview__one-click btn btn--link buy-one-click" type="button">
+					<button class="card-product__one-click btn btn--link buy-one-click" type="button">
 						Купить в один клик
 					</button>
 
 				</form>
 
-				<form action="/" class="card-preview__wishlist form-wishlist">
+				<form action="/" class="card-product__wishlist form-wishlist">
 
 					<input type="hidden" name="id" value="123456">
 

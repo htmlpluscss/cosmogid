@@ -1,0 +1,80 @@
+.card-review {
+
+	padding-right: 20px;
+
+	&__product {
+
+		display: flex;
+		text-decoration: none;
+
+	}
+
+	&__img {
+
+		width: 88px;
+		flex-shrink: 0;
+		margin-right: 8px;
+
+	}
+
+	&__name {
+
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: 500;
+		margin-bottom: 2px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-transform: uppercase;
+
+	}
+
+	&__desc {
+
+		font-size: 11px;
+		line-height: 14px;
+		color: #303030;
+		height: 28px;
+		overflow: hidden;
+		text-transform: lowercase;
+
+	}
+
+	&__price {
+
+		color: #000;
+		font: 500 11px/14px 'ProximaNova';
+		white-space: nowrap;
+		margin: 6px 0 8px;
+
+	}
+
+	&__blockquote {
+
+		margin-top: 8px;
+
+	}
+
+	&__text {
+
+		font-size: 12px;
+		line-height: 16px;
+		color: #303030;
+		margin: 4px 0;
+
+	}
+
+	&__user {
+
+		font-style: italic;
+		font-weight: 300;
+		font-size: 11px;
+		line-height: 13px;
+		color: #000;
+		text-align: right;
+		display: block;
+
+	}
+
+}

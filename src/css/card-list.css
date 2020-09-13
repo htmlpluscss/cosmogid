@@ -43,7 +43,7 @@
 				text-align: center;
 				line-height: 20px;
 				border-radius: 50%;
-				background-color: var(--pink);
+				background-color: color(var(--pink) a(60%));
 				font-weight: bold;
 				font-size: 16px;
 				color: #fff;
@@ -76,14 +76,8 @@
 
 		display: flex;
 		margin: 12px -6px;
-		/* overflow-x: auto; */
+		overflow-x: auto;
 		scroll-snap-type: x mandatory;
-
-	}
-
-	&--brand &__item {
-
-		width: 88px;
 
 	}
 
@@ -94,6 +88,18 @@
 		flex-shrink: 0;
 		position: relative;
 		scroll-snap-align: start;
+
+	}
+
+	&--brand &__item {
+
+		width: 88px;
+
+	}
+
+	&--review &__item {
+
+		width: 100%;
 
 	}
 
