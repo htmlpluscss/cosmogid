@@ -2,7 +2,9 @@
 
 	color: #fff;
 	background-color: var(--blue);
-	margin-bottom: 8px;
+	position: sticky;
+	z-index: 9;
+	top: 0;
 
 	.center {
 
@@ -97,13 +99,7 @@
 	hr {
 
 		background-color: var(--heavenly);
-		margin: 0 -20px;
-
-		@media ($mobile) {
-
-			margin: 0 -16px;
-
-		}
+		margin: 0 -16px;
 
 	}
 
@@ -165,27 +161,18 @@
 
 .bar {
 
-	position: sticky;
+	position: fixed;
 	left: 0;
 	right: 0;
-	top: calc(100vh - 40px);
-	height: 40px;
+	bottom: 0;
 	z-index: 9;
 	background-color: var(--blue);
-	/* transition: var(--transitionDefault); */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 6px 20px;
+	padding: 6px 16px;
 	width: 1200px;
 	max-width: 100%;
-	margin: auto;
-
-	@media ($mobile) {
-
-		padding: 6px 16px;
-
-	}
 
 	&.is-hidden {
 
@@ -226,39 +213,106 @@
 	font-weight: 300;
 	text-align: center;
 	color: #fff;
+	padding-top: 20px;
 
-	svg {
+	&__ico,
+	&__ico::before,
+	&__ico::after {
 
+		position: absolute;
+		width: 18px;
+		height: 2px;
+		top: 9px;
+		left: 0;
+		right: 0;
 		margin: auto;
-		fill: #fff;
+		background-color: #fff;
+		border-radius: 1px;
+		animation-name: menuClose;
+		animation-duration: var(--transitionDefault);
+		animation-play-state: paused;
+		animation-fill-mode: forwards;
 
+		.in-menu & {
+
+			background-color: var(--color);
+
+		}
+
+		.menu-open & {
+
+			animation-play-state: running;
+
+		}
+
+	}
+
+	&.in-menu {
+
+		color: var(--color);
+
+	}
+
+	&__ico::before {
+
+		top: -7px;
+		content: '';
+		animation-name: menuCloseTop;
+
+	}
+
+	&__ico::after {
+
+		top: 7px;
+		content: '';
+		animation-name: menuCloseBottom;
+
+	}
+
+}
+
+
+@keyframes menuClose {
+
+	100% {
+		background-color: transparent;
+	}
+
+}
+
+@keyframes menuCloseTop {
+
+	100% {
+		top: 0;
+		transform: rotate(225deg);
+	}
+
+}
+
+@keyframes menuCloseBottom {
+
+	100% {
+		top: 0;
+		transform: rotate(-225deg);
 	}
 
 }
 
 .menu-open {
 
-	.header {
+	.menu {
 
-		z-index: 9;
+		display: block;
 
 	}
 
-	.wrapper {
+	.bar,
+	.search,
+	.header,
+	.main,
+	.footer {
 
-		&::after {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			opacity: 0.3;
-			z-index: 8;
-			background-color: #000;
-
-		}
+		display: none;
 
 	}
 

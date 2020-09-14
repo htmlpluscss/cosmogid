@@ -1,29 +1,13 @@
 .menu {
 
 	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 8;
-	width: 230px;
-	padding: 20px;
+	padding: 0 16px;
+	flex-grow: 1;
 	background-color: #fff;
-
-	.menu-open & {
-
-		display: block;
-
-	}
-
-	@media ($mobile) {
-
-		padding: 16px;
-
-	}
 
 	&__list {
 
-		margin: 12px 0 6px;
+		margin-bottom: 16px;
 
 	}
 
@@ -57,12 +41,6 @@
 			}
 
 		}
-
-	}
-
-	&__list--second {
-
-		margin: 6px 0 8px;
 
 	}
 
@@ -113,6 +91,61 @@
 					color: var(--blue);
 
 				}
+
+			}
+
+		}
+
+	}
+
+	&__btn-close {
+
+		padding: 6px 0 6px;
+		position: relative;
+		left: -4px;
+
+	}
+}
+
+.menu-filter {
+
+	&__select {
+
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 12px;
+
+		.select {
+
+			width: 256px;
+
+			& + .select {
+
+				width: 128px;
+
+			}
+
+		}
+
+	}
+
+	&__list {
+
+		margin: 10px;
+
+	}
+
+	&__item {
+
+		&--first,
+		&--first.hide ~ &:not(.hide) {
+
+			&::before {
+
+				position: absolute;
+				top: -5px;
+				left: -10px;
+				content: attr(data-letter);
 
 			}
 

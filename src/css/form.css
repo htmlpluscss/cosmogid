@@ -468,6 +468,7 @@
 	}
 
 }
+*/
 
 
 .select {
@@ -475,44 +476,92 @@
 	position: relative;
 	display: block;
 
-	&__label {
+	&::after {
 
+		position: absolute;
+		top: 12px;
+		right: 14px;
+		content: '';
 		pointer-events: none;
-		display: block;
-		padding-right: 40px !important;
+		width: 11px;
+		height: 8px;
+		background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.303 4.977L9.428.852l1.179 1.178-5.304 5.303L0 2.03 1.178.852l4.125 4.125z' fill='gray'/%3E%3C/svg%3E");
 
-		&::after {
+	}
 
-			position: absolute;
-			width: 8px;
-			height: 8px;
-			top: 0;
-			right: 18px;
-			bottom: 0;
-			content: '';
-			margin: auto;
-			transition: .3s;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 241 241'%3E%3Cpath d='M220.088 57.667l-99.671 99.695-99.671-99.707a12.147 12.147 0 00-17.191 0c-4.74 4.752-4.74 12.451 0 17.203l108.261 108.297c4.74 4.752 12.439 4.752 17.179 0L237.256 74.859c4.74-4.752 4.74-12.463 0-17.215-4.728-4.729-12.428-4.729-17.168.023z'/%3E%3C/svg%3E");
+	&.is-default select {
 
-		}
+		color: color(var(--color) a(50%));
 
 	}
 
 	select {
 
-		position: absolute;
+		background-color: #fff;
+		position: relative;
+		display: block;
+		font-size: 16px;
+		font-family: inherit;
+		color: var(--color);
+		padding: 15px 20px;
 		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		opacity: 0.00001;
+		max-width: 100%;
+		border: 0;
+		border-radius: 0;
+		appearance: none;
+		line-height: 20px;
+		height: 50px;
+
+		border: 1px solid #d7d9e3;
+		border-radius: 2px;
+		height: 30px;
+		padding: 2px;
+
+		&::-ms-expand {
+
+			display: none;
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--color);
+				cursor: pointer;
+
+			}
+
+		}
+
+		&:focus {
+
+			outline: none;
+			border-color: #f1d0b8;
+			box-shadow: inset 0 0 0 1px #f1d0b8;
+
+		}
+
+	}
+
+	option {
+
+		font-size: 16px;
+		font-family: inherit;
+		color: var(--color);
+		line-height: 1.4;
+
+		&[value="none"] {
+
+			display: none;
+
+		}
 
 	}
 
 }
 
+/*
 .radio-btn {
 
 	display: block;

@@ -4,15 +4,9 @@
 
 	&__box {
 
-		margin: 0 -20px;
+		margin: 0 -16px;
 		overflow: hidden;
 		position: relative;
-
-		@media ($mobile) {
-
-			margin: 0 -16px;
-
-		}
 
 	}
 
@@ -26,13 +20,7 @@
 
 		width: 100%;
 		flex-shrink: 0;
-		padding: 0 20px;
-
-		@media ($mobile) {
-
-			padding: 0 16px;
-
-		}
+		padding: 0 16px;
 
 	}
 

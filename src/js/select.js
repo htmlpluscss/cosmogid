@@ -1,4 +1,4 @@
-/*((items)=>{
+((items)=>{
 
 	"use strict";
 
@@ -10,12 +10,10 @@
 
 	Array.from(items, el => {
 
-		const label = el.querySelector('.select__label'),
-			  select = el.querySelector('select');
+		const select = el.querySelector('select');
 
-		select.addEventListener('change', () =>
-			label.textContent = select.querySelector('[value="' + select.value + '"]').textContent);
+		select.addEventListener('change', () => select.blur());
 
 	});
 
-})(document.querySelectorAll('.select'));*/
+})(document.querySelectorAll('.select'));

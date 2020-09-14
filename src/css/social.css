@@ -12,6 +12,13 @@
 
 		display: flex;
 		margin: -4px;
+		justify-content: space-between;
+
+		@media ($tablet) {
+
+			justify-content: flex-start;
+
+		}
 
 	}
 

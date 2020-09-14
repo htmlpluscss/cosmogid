@@ -1,29 +1,21 @@
 
 // открыть|закрыть меню
 
-((btn) => {
+(() => {
 
 	"use strict";
 
-	if(!btn) {
-
-		return;
-
-	}
-
-	btn.addEventListener('click', () => document.body.classList.toggle('menu-open'));
-
 	document.addEventListener('click', event => {
 
-		if(!event.target.closest('.menu') && !event.target.closest('.btn-menu-toggle')){
+		if(event.target.closest('.btn-menu-toggle')) {
 
-			document.body.classList.remove('menu-open');
+			document.body.classList.toggle('menu-open');
 
 		}
 
 	});
 
-})(document.querySelector('.btn-menu-toggle'));
+})();
 
 // sum menu
 
@@ -39,9 +31,9 @@
 
 	Array.from(parent, el => {
 
-		el.querySelector('.menu__link').addEventListener('click', evt => {
+		el.querySelector('.menu__link').addEventListener('click', event => {
 
-			evt.preventDefault();
+			event.preventDefault();
 
 			el.classList.toggle('is-open');
 
@@ -51,168 +43,71 @@
 
 })(document.querySelectorAll('.menu__item.is-parent'));
 
-// каталог на главной
-/*
+// brand menu
+
 ((menu) => {
 
 	"use strict";
 
-	if(!menu.length) {
+	if(!menu) {
 
 		return;
 
 	}
 
-	Array.from(menu, el => {
+	const letter = menu.querySelector('.menu-filter__letter'),
+		  country = menu.querySelector('.menu-filter__country'),
+		  form = menu.querySelector('.menu-filter__form'),
+		  formInput = form.querySelector('.input'),
+		  items = menu.querySelectorAll('.menu-filter__item');
 
-		el.addEventListener('click', evt => {
+	const result = () => {
 
-			evt.preventDefault();
+		const _letter = letter.value,
+			  _country = country.value;
 
-			el.classList.toggle('is-open');
+		Array.from(items, el => {
 
-		});
+			if(_letter === "all" && _country === "all") {
 
-	});
+				el.classList.remove('hide');
 
-})(document.querySelectorAll('.main-catalog__head'));
+			}
+			else {
 
-// меню каталога
+				let visible = true;
 
-((btns) => {
+				if(_letter !== "all") {
 
-	"use strict";
+					if(_letter !== el.getAttribute('data-letter')){
 
-	if(!btns.length) {
+						visible = false;
 
-		return;
+					}
 
-	}
+				}
 
-	const menu = document.querySelector('.menu-catalog'),
-		  level1 = menu.querySelectorAll('.menu-catalog__head--arrow'),
-		  level2 = menu.querySelectorAll('.menu-catalog__level2-link--arrow'),
-		  btnClose = menu.querySelector('.menu-catalog__close'),
-		  btnBack = menu.querySelector('.menu-catalog__back'),
-		  category = menu.querySelector('.menu-catalog__current-category'),
-		  categoryTextDefault = category.textContent;
+				if(_country !== "all") {
 
-	let	level1Scroll = 0,
-		level2Scroll = 0,
-		level1Open = null,
-		level2Open = null;
+					if(_country !== el.getAttribute('data-country')){
 
-	// открыть меню
+						visible = false;
 
-	Array.from(btns, btn => btn.addEventListener('click', () => {
+					}
 
-		MI.windowScrollOld = window.pageYOffset;
-		window.scrollTo(0, 0);
-		document.body.classList.add('menu-catalog-open');
-		menu.classList.remove('visuallyhidden');
+				}
 
-	}));
+				el.classList.toggle('hide', !visible);
 
-	// закрыть меню
-
-	btnClose.addEventListener('click', () => {
-
-		setTimeout( () => window.scrollTo(0, MI.windowScrollOld));
-
-		document.body.classList.remove('menu-catalog-open');
-		menu.classList.add('visuallyhidden');
-
-	});
-
-	// На уровень назад
-
-	btnBack.addEventListener('click', () => {
-
-		if(menu.classList.contains('is-level3')) {
-
-			menu.style.height = level1Open.nextElementSibling.scrollHeight + "px";
-
-			menu.classList.remove('is-level3');
-
-			Array.from(level2, elem => elem.parentNode.classList.remove('is-open'));
-
-			window.scrollTo(0, level2Scroll);
-
-			category.textContent = level1Open.textContent;
-
-		}
-		else if (menu.classList.contains('is-level2')) {
-
-			menu.style.height = menu.querySelector('.menu-catalog__inner').clientHeight + "px";
-
-			menu.classList.remove('is-level2');
-
-			Array.from(level1, elem => elem.classList.remove('is-open'));
-
-			window.scrollTo(0, level1Scroll);
-
-			btnBack.classList.add('hide');
-
-			category.textContent = categoryTextDefault;
-
-		}
-		else {
-
-			console.log('что-то не так');
-
-		}
-
-	});
-
-
-	// первый уровень
-
-	Array.from(level1, el => {
-
-		el.addEventListener('click', evt => {
-
-			evt.preventDefault();
-
-			level1Scroll = window.pageYOffset;
-
-			menu.style.height = el.nextElementSibling.scrollHeight + "px";
-
-			menu.classList.add('is-level2');
-
-			Array.from(level1, elem => elem.classList.toggle('is-open', elem === el));
-
-			level1Open = el;
-
-			btnBack.classList.remove('hide');
-
-			category.textContent = el.textContent;
+			}
 
 		});
 
-	});
+	};
 
-	// второй уровень
 
-	Array.from(level2, el => {
+	letter.addEventListener('change', () => result());
 
-		el.addEventListener('click', evt => {
+	country.addEventListener('change', () => result());
 
-			evt.preventDefault();
-
-			level2Scroll = window.pageYOffset;
-
-			menu.style.height = el.parentNode.nextElementSibling.scrollHeight + "px";
-
-			menu.classList.add('is-level3');
-
-			Array.from(level2, elem => elem.parentNode.classList.toggle('is-open', elem === el));
-
-			level2Open = el;
-
-			category.textContent = el.textContent;
-
-		});
-
-	});
-
-})(document.querySelectorAll('.js-open-menu-catalog'));*/
+})(document.querySelector('.menu-filter'));

@@ -7,13 +7,7 @@
 	display: none;
 	width: 100%;
 	align-items: flex-start;
-	padding: 105px 20px;
-
-	@media ($mobile) {
-
-		padding: 105px 16px;
-
-	}
+	padding: 105px 16px;
 
 	&__box {
 

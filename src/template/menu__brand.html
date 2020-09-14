@@ -1,0 +1,1046 @@
+{% set menuBrand = [
+
+	{
+		letter : "A",
+		list : [
+			{
+				name    : "Academie (Франция)",
+				country : 3
+			},
+			{
+				name    : "Aerazen Lab (Италия)",
+				country : 7
+			},
+			{
+				name    : "Aespira (Австрия-Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "Alfaparf Milano (Италия)",
+				country : 7
+			},
+			{
+				name    : "Algologie (Франция)",
+				country : 3
+			},
+			{
+				name    : "American crew (США)",
+				country : 4
+			},
+			{
+				name    : "Anesi (Испания)",
+				country : 5
+			},
+			{
+				name    : "Anna Lotan (Израиль)",
+				country : 2
+			},
+			{
+				name    : "Aravia Professional (Россия)",
+				country : 1
+			},
+			{
+				name    : "Arganmidas (Канада)",
+				country : 17
+			},
+			{
+				name    : "Arosha (Италия)",
+				country : 7
+			},
+			{
+				name    : "Atelier (Франция)",
+				country : 3
+			}
+		]
+	},
+	{
+		letter : "B",
+		list : [
+			{
+				name    : "Barex (Италия)",
+				country : 7
+			},
+			{
+				name    : "Beauty Garden (Франция)",
+				country : 3
+			},
+			{
+				name    : "Beauty Style (США)",
+				country : 4
+			},
+			{
+				name    : "Bernard Cassiere (Франция)",
+				country : 3
+			},
+			{
+				name    : "Bio Medical Care (США)",
+				country : 4
+			},
+			{
+				name    : "Bio-Recherche (Франция)",
+				country : 3
+			},
+			{
+				name    : "Biodroga (Германия)",
+				country : 6
+			},
+			{
+				name    : "Biotechniques М120 (Франция)",
+				country : 3
+			},
+			{
+				name    : "Brilliance (Германия)",
+				country : 6
+			},
+			{
+				name    : "By Fama professional (Италия)",
+				country : 7
+			}
+		]
+	},
+	{
+		letter : "C",
+		list : [
+			{
+				name    : "Carita (Франция)",
+				country : 3
+			},
+			{
+				name    : "Casmara (Испания)",
+				country : 5
+			},
+			{
+				name    : "Cehko (Германия)",
+				country : 6
+			},
+			{
+				name    : "Cell Fusion C Universal Cosmetic (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "Cellabel (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "CellCosmet (Швейцария)",
+				country : 10
+			},
+			{
+				name    : "Celltense Endor Technologies (Антицеллюлитные средства)",
+				country : 0
+			},
+			{
+				name    : "Christina (Израиль)",
+				country : 2
+			},
+			{
+				name    : "Cimel (Испания)",
+				country : 5
+			},
+			{
+				name    : "Clean + Easy (США)",
+				country : 4
+			},
+			{
+				name    : "Colorescience (США)",
+				country : 4
+			},
+			{
+				name    : "Concept (Россия - Германия)",
+				country : 16
+			},
+			{
+				name    : "Constant Delight (Италия)",
+				country : 7
+			},
+			{
+				name    : "Corioliss (Великобритания)",
+				country : 9
+			},
+			{
+				name    : "Cosmedix (США)",
+				country : 4
+			},
+			{
+				name    : "Cosmofarma (Италия)",
+				country : 7
+			},
+			{
+				name    : "Cosmogid",
+				country : 0
+			},
+			{
+				name    : "Cristaline (США)",
+				country : 4
+			},
+			{
+				name    : "Cutrin (Финляндия)",
+				country : 0
+			}
+		]
+	},
+	{
+		letter : "D",
+		list : [
+			{
+				name    : "Daejoo Medical (Южная корея)",
+				country : 8
+			},
+			{
+				name    : "Daigo - метабиотик B&S Corporation (Япония)",
+				country : 11
+			},
+			{
+				name    : "Davines (Италия)",
+				country : 7
+			},
+			{
+				name    : "Deajong medical Карбокситерапия (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "Declare (Швейцария)",
+				country : 10
+			},
+			{
+				name    : "Demax (Япония)",
+				country : 11
+			},
+			{
+				name    : "Depileve (Испания)",
+				country : 5
+			},
+			{
+				name    : "Depilflax100 (Испания)",
+				country : 5
+			},
+			{
+				name    : "Dermaceutic (Франция)",
+				country : 3
+			},
+			{
+				name    : "Dermaheal (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "Dermatime (Испания)",
+				country : 5
+			},
+			{
+				name    : "Dermclar (Испания)",
+				country : 5
+			},
+			{
+				name    : "Dermophisiologique (Италия)",
+				country : 7
+			},
+			{
+				name    : "Dibi Milano (Италия)",
+				country : 7
+			},
+			{
+				name    : "Dr. med. Christine Schrammek (Германия)",
+				country : 6
+			},
+			{
+				name    : "Dr. Sea (Израиль)",
+				country : 2
+			},
+			{
+				name    : "DSD Pharm SL (Испания)",
+				country : 5
+			}
+		]
+	},
+	{
+		letter : "E",
+		list : [
+			{
+				name    : "Egia (Италия)",
+				country : 7
+			},
+			{
+				name    : "Ellevon (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "Essem Simple (Россия-Германия)",
+				country : 16
+			},
+			{
+				name    : "Estel Haute couture (Россия)",
+				country : 1
+			},
+			{
+				name    : "Estel Professional (Россия)",
+				country : 1
+			},
+			{
+				name    : "Estel Professional Deluxe (Россия)",
+				country : 1
+			},
+			{
+				name    : "Eyesel (Корея)",
+				country : 8
+			}
+		]
+	},
+	{
+		letter : "F",
+		list : [
+			{
+				name    : "Face (Испания)",
+				country : 5
+			},
+			{
+				name    : "Farmagan (Италия)",
+				country : 7
+			},
+			{
+				name    : "Farmavita (Италия)",
+				country : 7
+			},
+			{
+				name    : "Filorga (Франция)",
+				country : 3
+			},
+			{
+				name    : "Florylis (Франция)",
+				country : 3
+			},
+			{
+				name    : "Fuente Organic Attraction (Голландия)",
+				country : 12
+			},
+			{
+				name    : "Fusion Mesotherapy (Испания)",
+				country : 5
+			}
+		]
+	},
+	{
+		letter : "G",
+		list : [
+			{
+				name    : "G-Derm (Россия)",
+				country : 1
+			},
+			{
+				name    : "Gatineau (Франция)",
+				country : 3
+			},
+			{
+				name    : "Gehwol (Германия)",
+				country : 6
+			},
+			{
+				name    : "Gemmis (Франция)",
+				country : 3
+			},
+			{
+				name    : "General Topics ENERPEEL (Италия)",
+				country : 7
+			},
+			{
+				name    : "Genosys (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "GERnetic (Франция)",
+				country : 3
+			},
+			{
+				name    : "Gezatone (Франция)",
+				country : 3
+			},
+			{
+				name    : "GIGI (Израиль)",
+				country : 2
+			},
+			{
+				name    : "Goes (Италия)",
+				country : 7
+			},
+			{
+				name    : "Goldwell (Германия)",
+				country : 6
+			}
+		]
+	},
+	{
+		letter : "H",
+		list : [
+			{
+				name    : "HairMax LaserComb (США)",
+				country : 4
+			},
+			{
+				name    : "Hinoki Clinical (Япония)",
+				country : 11
+			},
+			{
+				name    : "Histomer",
+				country : 0
+			},
+			{
+				name    : "Holy Land (Израиль)",
+				country : 2
+			},
+			{
+				name    : "Hyalrepair (Россия)",
+				country : 1
+			},
+			{
+				name    : "Hyalual (Швейцария)",
+				country : 10
+			},
+			{
+				name    : "Hyamatrix (Россия)",
+				country : 1
+			},
+			{
+				name    : "Hydro Peptide (США)",
+				country : 4
+			}
+		]
+	},
+	{
+		letter : "I",
+		list : [
+			{
+				name    : "Ibsa (Италия)",
+				country : 7
+			},
+			{
+				name    : "ID-Farma (Испания)",
+				country : 5
+			},
+			{
+				name    : "Indola (Германия)",
+				country : 6
+			},
+			{
+				name    : "Inex (Франция)",
+				country : 3
+			},
+			{
+				name    : "Innea (Италия)",
+				country : 7
+			},
+			{
+				name    : "Inno Tds (Испания)",
+				country : 5
+			},
+			{
+				name    : "Insight (Италия)",
+				country : 7
+			},
+			{
+				name    : "Iodase (Италия)",
+				country : 7
+			},
+			{
+				name    : "Isov Sorex (Южная Корея)",
+				country : 8
+			}
+		]
+	},
+	{
+		letter : "J",
+		list : [
+			{
+				name    : "Jane Iredale (США)",
+				country : 4
+			},
+			{
+				name    : "Janssen (Германия)",
+				country : 6
+			},
+			{
+				name    : "Jean Klebert (Италия)",
+				country : 7
+			},
+			{
+				name    : "Joico (США)",
+				country : 4
+			},
+			{
+				name    : "Juvena (Швейцария)",
+				country : 10
+			}
+		]
+	},
+	{
+		letter : "K",
+		list : [
+			{
+				name    : "Kaaral (Италия)",
+				country : 7
+			},
+			{
+				name    : "Kapous (Италия)",
+				country : 7
+			},
+			{
+				name    : "Kativa (Перу)",
+				country : 0
+			},
+			{
+				name    : "Keen (Германия)",
+				country : 6
+			},
+			{
+				name    : "Keenwell (Испания)",
+				country : 5
+			},
+			{
+				name    : "KeraSpa (Канада)",
+				country : 17
+			},
+			{
+				name    : "Keune (Голландия)",
+				country : 12
+			},
+			{
+				name    : "Kezy (Италия)",
+				country : 7
+			},
+			{
+				name    : "Klapp (Германия)",
+				country : 6
+			},
+			{
+				name    : "Kondor (Россия)",
+				country : 1
+			},
+			{
+				name    : "Kosmoteros (Франция)",
+				country : 3
+			}
+		]
+	},
+	{
+		letter : "L",
+		list : [
+			{
+				name    : "L'Oreal Professionnel (Франция)",
+				country : 3
+			},
+			{
+				name    : "La Beaute Medicale (Россия)",
+				country : 1
+			},
+			{
+				name    : "La Biosthetique (Франция)",
+				country : 3
+			},
+			{
+				name    : "Label.m (Великобритания)",
+				country : 9
+			},
+			{
+				name    : "Laboratories Fijie (Франция)",
+				country : 3
+			},
+			{
+				name    : "Lakme (Испания)",
+				country : 5
+			},
+			{
+				name    : "Lamaris (Россия)",
+				country : 1
+			},
+			{
+				name    : "LC Bio (Франция)",
+				country : 3
+			},
+			{
+				name    : "Leistern (Германия)",
+				country : 6
+			},
+			{
+				name    : "LeviSsime (Испания)",
+				country : 5
+			},
+			{
+				name    : "Lingot (Швейцария)",
+				country : 10
+			},
+			{
+				name    : "Lisap (Италия)",
+				country : 7
+			},
+			{
+				name    : "Londa Professional (Германия)",
+				country : 6
+			},
+			{
+				name    : "Lysaskin (Франция)",
+				country : 3
+			},
+			{
+				name    : "Lysedia (Франция)",
+				country : 3
+			}
+		]
+	},
+	{
+		letter : "M",
+		list : [
+			{
+				name    : "M.A.D Skincare (США)",
+				country : 4
+			},
+			{
+				name    : "Magiray professional (Израиль)",
+				country : 2
+			},
+			{
+				name    : "Mastelli (Италия)",
+				country : 7
+			},
+			{
+				name    : "Matrix (США)",
+				country : 4
+			},
+			{
+				name    : "MD: Ceuticals (Великобритания)",
+				country : 9
+			},
+			{
+				name    : "Med-Planta (Cosmofarma, Италия)",
+				country : 7
+			},
+			{
+				name    : "Medic control peel / Mesaltera (Россия)",
+				country : 1
+			},
+			{
+				name    : "Medicalia (США)",
+				country : 4
+			},
+			{
+				name    : "Merz (Германия)",
+				country : 6
+			},
+			{
+				name    : "Mesoderm (Испания)",
+				country : 5
+			},
+			{
+				name    : "Mesodevice (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "MesoExfoliation (Белоруссия)",
+				country : 0
+			},
+			{
+				name    : "Mesopharm Professional (Италия)",
+				country : 7
+			},
+			{
+				name    : "Mesoproff (Испания)",
+				country : 5
+			},
+			{
+				name    : "Mesoram (Италия)",
+				country : 7
+			},
+			{
+				name    : "MI-Medical (Франция)",
+				country : 3
+			},
+			{
+				name    : "Microneedli skin nurse system - Мезороллеры (Германия)",
+				country : 6
+			},
+			{
+				name    : "Mimesis (Франция)",
+				country : 3
+			},
+			{
+				name    : "Miriamquevedo (Испания)",
+				country : 5
+			}
+		]
+	},
+	{
+		letter : "N",
+		list : [
+			{
+				name    : "Napura (Италия)",
+				country : 7
+			},
+			{
+				name    : "Natura Bisse (Испания)",
+				country : 5
+			},
+			{
+				name    : "Neauvia (Италия)",
+				country : 7
+			},
+			{
+				name    : "NeoStrata (США)",
+				country : 4
+			},
+			{
+				name    : "NeoStrata Exuviance (CША)",
+				country : 4
+			},
+			{
+				name    : "New Peel (Испания)",
+				country : 5
+			},
+			{
+				name    : "New Youth (США)",
+				country : 4
+			},
+			{
+				name    : "Nexxt (Германия)",
+				country : 6
+			},
+			{
+				name    : "Nioxin (США)",
+				country : 4
+			},
+			{
+				name    : "Norma de Durville (Франция)",
+				country : 3
+			},
+			{
+				name    : "Nouvelle (Италия)",
+				country : 7
+			}
+		]
+	},
+	{
+		letter : "O",
+		list : [
+			{
+				name    : "O.P.I. (США)",
+				country : 4
+			},
+			{
+				name    : "Obagi Zein ZO skin health (США)",
+				country : 4
+			},
+			{
+				name    : "Olos (Италия)",
+				country : 7
+			},
+			{
+				name    : "Ondevie (Франция)",
+				country : 3
+			},
+			{
+				name    : "ONmacabim (Израиль)",
+				country : 2
+			},
+			{
+				name    : "Orofluido (Испания)",
+				country : 5
+			},
+			{
+				name    : "Oster (США)",
+				country : 4
+			},
+			{
+				name    : "Oxygen botanicals (Канада)",
+				country : 17
+			}
+		]
+	},
+	{
+		letter : "P",
+		list : [
+			{
+				name    : "P199™ F199™ (США)",
+				country : 4
+			},
+			{
+				name    : "Paul Mitchell (США)",
+				country : 4
+			},
+			{
+				name    : "Periche (Испания)",
+				country : 5
+			},
+			{
+				name    : "Pevonia botanica (США)",
+				country : 4
+			},
+			{
+				name    : "pHformula (Испания)",
+				country : 5
+			},
+			{
+				name    : "Pleyana (Швейцария)",
+				country : 10
+			},
+			{
+				name    : "Premium (Россия)",
+				country : 1
+			},
+			{
+				name    : "Princess (Австрия)",
+				country : 0
+			},
+			{
+				name    : "Promoitalia (Италия)",
+				country : 7
+			},
+			{
+				name    : "Protokeratin (Россия)",
+				country : 1
+			},
+			{
+				name    : "Purles (Франция)",
+				country : 3
+			}
+		]
+	},
+	{
+		letter : "R",
+		list : [
+			{
+				name    : "R-Studio (Россия)",
+				country : 1
+			},
+			{
+				name    : "Redken (США)",
+				country : 4
+			},
+			{
+				name    : "RefectoCil (Австралия)",
+				country : 13
+			},
+			{
+				name    : "ReNew (Израиль)",
+				country : 2
+			},
+			{
+				name    : "Renew System BeautyPharmaCo (Франция)",
+				country : 3
+			},
+			{
+				name    : "Renokin (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "Renophase (Франция)",
+				country : 3
+			},
+			{
+				name    : "Repechage (США)",
+				country : 4
+			},
+			{
+				name    : "Restylane (Швеция)",
+				country : 0
+			},
+			{
+				name    : "Revitacare (Франция)",
+				country : 3
+			},
+			{
+				name    : "Revlon Professional (США)",
+				country : 4
+			},
+			{
+				name    : "Rica (Италия)",
+				country : 7
+			}
+		]
+	},
+	{
+		letter : "S",
+		list : [
+			{
+				name    : "Salerm (Испания)",
+				country : 5
+			},
+			{
+				name    : "Schwarzkopf Professional (Германия)",
+				country : 6
+			},
+			{
+				name    : "Selective Professional (Италия)",
+				country : 7
+			},
+			{
+				name    : "Selvert Thermal (Швейцария)",
+				country : 10
+			},
+			{
+				name    : "Sesderma (Испания)",
+				country : 5
+			},
+			{
+				name    : "SFM Medical Products (Германия)",
+				country : 6
+			},
+			{
+				name    : "Shot (Италия)",
+				country : 7
+			},
+			{
+				name    : "Silver Line (Дания)",
+				country : 0
+			},
+			{
+				name    : "Simone Mahler (Франция)",
+				country : 3
+			},
+			{
+				name    : "Sismetica (Россия)",
+				country : 1
+			},
+			{
+				name    : "Skin (Италия)",
+				country : 7
+			},
+			{
+				name    : "Skinasil (Россия)",
+				country : 1
+			},
+			{
+				name    : "Skingenetic's Code (Франция)",
+				country : 3
+			},
+			{
+				name    : "SkinMedica (США)",
+				country : 4
+			},
+			{
+				name    : "Soskin (Франция)",
+				country : 3
+			},
+			{
+				name    : "Sothys (Франция)",
+				country : 3
+			},
+			{
+				name    : "Spaquatoria (Россия)",
+				country : 1
+			},
+			{
+				name    : "Stella Marina (Россия)",
+				country : 1
+			},
+			{
+				name    : "Suisselle биоревитализация (Швейцария)",
+				country : 10
+			}
+		]
+	},
+	{
+		letter : "T",
+		list : [
+			{
+				name    : "Tefia (Италия)",
+				country : 7
+			},
+			{
+				name    : "Teotema Professional (Италия)",
+				country : 7
+			},
+			{
+				name    : "Tete Cosmeceutical (Швейцария)",
+				country : 10
+			},
+			{
+				name    : "Thermes Marins de Saint Malo (Франция)",
+				country : 3
+			},
+			{
+				name    : "Tigi (Великобритания)",
+				country : 9
+			},
+			{
+				name    : "Timecode (Испания)",
+				country : 5
+			},
+			{
+				name    : "Toni&Guy (Великобритания)",
+				country : 9
+			}
+		]
+	},
+	{
+		letter : "V",
+		list : [
+			{
+				name    : "Valeri-D (Россия)",
+				country : 1
+			},
+			{
+				name    : "Virta-Med (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "VIVAX (Россия)",
+				country : 1
+			},
+			{
+				name    : "Vivescence (Швейцария)",
+				country : 10
+			},
+			{
+				name    : "Vogt medical vertrieb (Германия)",
+				country : 6
+			}
+		]
+	},
+	{
+		letter : "W",
+		list : [
+			{
+				name    : "Wella (Германия)",
+				country : 6
+			},
+			{
+				name    : "Wims8 (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "WIQOmed PRX-T33 (Италия)",
+				country : 7
+			}
+		]
+	},
+	{
+		letter : "Y",
+		list : [
+			{
+				name    : "Yon-ka (Франция)",
+				country : 3
+			},
+			{
+				name    : "Yu.r (Южная Корея)",
+				country : 8
+			},
+			{
+				name    : "Yvoire LG Life Science (Южная Корея)",
+				country : 8
+			}
+		]
+	}
+
+] %}
+
+{% for item in menuBrand %}
+
+	{% for list in item.list %}
+
+							<li class="menu__sub-item menu-filter__item{% if loop.first %} menu-filter__item--first{% endif %}" data-letter="{{ item.letter }}" data-country="{{ list.country }}">
+
+								<a class="menu__sub-link" href="/">
+									{{ list.name }}
+								</a>
+
+							</li>
+
+	{% endfor %}
+
+{% endfor %}
