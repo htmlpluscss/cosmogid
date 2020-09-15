@@ -8,6 +8,18 @@
 		overflow: hidden;
 		position: relative;
 
+		@media ($tablet) {
+
+			margin: 0 -20px;
+
+		}
+
+		@media ($desktop) {
+
+			margin: 0 -30px;
+
+		}
+
 	}
 
 	&__list {

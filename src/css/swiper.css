@@ -194,20 +194,33 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 0;
+		bottom: 4px;
 
 		.button {
 
-			width: 8px;
-			height: 8px;
-			margin: 4px;
-			border-radius: 2px;
-			background-color: var(--ico);
-			transition: var(--transitionDefault);
+			width: 18px;
+			height: 18px;
 
-			&.is-active {
+			&.is-active::before {
 
 				background-color: #fafafa;
+
+			}
+
+			&::before {
+
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				content: '';
+				border-radius: 2px;
+				background-color: var(--ico);
+				transition: var(--transitionDefault);
 
 			}
 

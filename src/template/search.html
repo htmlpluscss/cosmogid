@@ -1,41 +1,22 @@
 
 		<form action="/sitesearch/" class="search">
 
-			<svg class="visuallyhidden">
-				<g id="ico-reset">
-					<path d="M.514 10.595A.52.52 0 01.15 9.71L9.123.675a.512.512 0 01.727 0c.201.202.201.53 0 .733L.88 10.443c-.101.1-.233.152-.365.152z"/>
-					<path d="M9.486 10.595a.508.508 0 01-.364-.152L.151 1.408a.52.52 0 010-.733.512.512 0 01.727 0L9.85 9.71a.52.52 0 01-.363.885z"/>
-				</g>
-				<g id="ico-pre-search">
-					<path d="M5.006 7.955a1.397 1.397 0 001.988 0 1.425 1.425 0 000-2.003c-.377-.38-3.972-2.88-4.69-3.377a.466.466 0 00-.596.055.475.475 0 00-.055.602c.494.722 2.975 4.343 3.353 4.723zM6.332 6.62a.475.475 0 010 .667.467.467 0 01-.663 0c-.146-.148-.879-1.174-1.76-2.44 1.256.888 2.275 1.626 2.423 1.773zM10.243 2.68A5.94 5.94 0 006 .91a.47.47 0 00-.469.473V3.27c0 .26.21.472.469.472a.47.47 0 00.469-.472V1.876c2.572.24 4.593 2.425 4.593 5.077a5.103 5.103 0 01-.858 2.83.474.474 0 00.39.735c.15 0 .3-.074.39-.21A6.05 6.05 0 0012 6.953a6.026 6.026 0 00-1.757-4.273z"/>
-					<path d="M8.619 11.318A5.026 5.026 0 016 12.052c-2.791 0-5.063-2.287-5.063-5.099 0-.78.17-1.529.507-2.225a.474.474 0 00-.217-.63.467.467 0 00-.627.218A6.021 6.021 0 000 6.953c0 1.615.624 3.132 1.757 4.273A5.94 5.94 0 006 12.996c1.097 0 2.17-.3 3.105-.87a.474.474 0 00.158-.649.467.467 0 00-.644-.16z"/>
-				</g>
-				<g id="ico-search">
-					<path d="M5.038 9.53A4.497 4.497 0 01.546 5.038 4.497 4.497 0 015.038.545 4.497 4.497 0 019.53 5.038 4.497 4.497 0 015.038 9.53zm0-8.133a3.645 3.645 0 00-3.64 3.64 3.645 3.645 0 003.64 3.641 3.645 3.645 0 003.64-3.64 3.645 3.645 0 00-3.64-3.641zm6.284 9.933a.426.426 0 000-.602L9.416 8.822a.426.426 0 10-.602.602l1.905 1.906a.425.425 0 00.603 0z"/>
-				</g>
-			</svg>
-
 			<div class="search__inner">
 
 				<input class="input search__input" placeholder="Введите запрос" aria-label="искать на сайте">
 
 				<button type="reset" class="button search__reset hide" aria-label="очистить форму поиска">
 					<svg width="10" height="11" viewBox="0 0 10 11">
-						<use xlink:href="#ico-reset"/>
+						<g id="ico-reset">
+							<path d="M.514 10.595A.52.52 0 01.15 9.71L9.123.675a.512.512 0 01.727 0c.201.202.201.53 0 .733L.88 10.443c-.101.1-.233.152-.365.152z"/>
+							<path d="M9.486 10.595a.508.508 0 01-.364-.152L.151 1.408a.52.52 0 010-.733.512.512 0 01.727 0L9.85 9.71a.52.52 0 01-.363.885z"/>
+						</g>
 					</svg>
 				</button>
 
 				<div class="search__result hide">
 
-					<span class="search__result-item">
-
-						<span class="search__result-ico">
-
-							<svg width="12" height="13" viewBox="0 0 12 13">
-								<use xlink:href="#ico-pre-search"/>
-							</svg>
-
-						</span>
+					<span class="search__result-item search__result-item--pre-search">
 
 						<span class="search__result-value">
 							тушь для ресниц
@@ -49,15 +30,7 @@
 
 					</span>
 
-					<span class="search__result-item">
-
-						<span class="search__result-ico">
-
-							<svg width="12" height="13" viewBox="0 0 12 13">
-								<use xlink:href="#ico-pre-search"/>
-							</svg>
-
-						</span>
+					<span class="search__result-item search__result-item--pre-search">
 
 						<span class="search__result-value">
 							тушь для ресниц
@@ -73,15 +46,7 @@
 
 					<hr>
 
-					<a href="/" class="search__result-item">
-
-						<span class="search__result-ico">
-
-							<svg width="12" height="12" viewBox="0 0 12 12">
-								<use xlink:href="#ico-search"/>
-							</svg>
-
-						</span>
+					<a href="/" class="search__result-item search__result-item--search">
 
 						<span class="search__result-value">
 							тушь для бровей
@@ -89,15 +54,7 @@
 
 					</a>
 
-					<a href="/" class="search__result-item">
-
-						<span class="search__result-ico">
-
-							<svg width="12" height="12" viewBox="0 0 12 12">
-								<use xlink:href="#ico-search"/>
-							</svg>
-
-						</span>
+					<a href="/" class="search__result-item search__result-item--search">
 
 						<span class="search__result-value">
 							тушь для ресниц

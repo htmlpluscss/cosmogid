@@ -1,21 +1,33 @@
 .card-list {
 
-	margin: 12px -16px 0;
-	padding: 0 16px;
+	margin: 16px 0;
 	position: relative;
+
+	@media ($tablet) {
+
+		margin: 20px 0;
+
+	}
+
+	@media ($desktop) {
+
+		margin: 30px 0;
+
+	}
 
 	&__all {
 
 		position: absolute;
-		top: 0;
-		right: 16px;
-		font-size: 12px;
-		line-height: 20px;
+		top: 6px;
+		right: 0;
+		font-size: 14px;
+		line-height: 22px;
 		font-weight: 500;
 		background-position: right;
 		background-repeat: no-repeat;
-		padding-right: 10px;
-		background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='8' viewBox='0 0 5 8'%3E%3Cpath d='M.943 0L0 .943 3.057 4 0 7.057.943 8l4-4-4-4z' fill='%23424242'/%3E%3C/svg%3E");
+		padding-right: 12px;
+		background-size: auto 10px;
+		background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 8'%3E%3Cpath d='M.943 0L0 .943 3.057 4 0 7.057.943 8l4-4-4-4z' fill='%23424242'/%3E%3C/svg%3E");
 		color: var(--text);
 		text-decoration: none;
 
@@ -25,7 +37,7 @@
 
 				color: var(--blue);
 				text-decoration: underline;
-				background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='8' viewBox='0 0 5 8'%3E%3Cpath d='M.943 0L0 .943 3.057 4 0 7.057.943 8l4-4-4-4z' fill='%23418EBC'/%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 8'%3E%3Cpath d='M.943 0L0 .943 3.057 4 0 7.057.943 8l4-4-4-4z' fill='%23418EBC'/%3E%3C/svg%3E");
 
 			}
 
@@ -36,6 +48,7 @@
 	&__title {
 
 		margin-bottom: 8px;
+		padding-right: 64px;
 
 		&--sale {
 
@@ -44,17 +57,17 @@
 
 			&::after {
 
-				width: 20px;
-				height: 20px;
+				width: 24px;
+				height: 24px;
 				content: '%';
 				text-align: center;
-				line-height: 20px;
+				line-height: 24px;
 				border-radius: 50%;
 				background-color: var(--pink);
 				font-weight: bold;
 				font-size: 16px;
 				color: #fff;
-				margin-left: 4px;
+				margin-left: 8px;
 
 			}
 
@@ -69,9 +82,9 @@
 
 		span {
 
-			padding: 3px;
-			font-size: 12px;
-			line-height: 12px;
+			padding: 2px 8px;
+			font-size: 14px;
+			line-height: 18px;
 			border-radius: 2px;
 			background-color: color(var(--pink) a(60%));
 
@@ -82,7 +95,7 @@
 	&__list {
 
 		display: flex;
-		padding: 12px 0;
+		padding: 10px 0;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 
@@ -90,8 +103,8 @@
 
 	&__item {
 
-		margin: 0 6px;
-		width: 124px;
+		margin: 0 8px;
+		width: 180px;
 		flex-shrink: 0;
 		position: relative;
 		scroll-snap-align: start;
@@ -100,6 +113,12 @@
 		&:first-child {
 
 			margin-left: 0;
+
+		}
+
+		&:last-child {
+
+			margin-right: 0;
 
 		}
 

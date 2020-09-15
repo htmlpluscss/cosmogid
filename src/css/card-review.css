@@ -19,10 +19,10 @@
 
 	&__name {
 
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 18px;
 		font-weight: 500;
-		margin-bottom: 2px;
+		margin-bottom: 6px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -33,10 +33,10 @@
 
 	&__desc {
 
-		font-size: 11px;
-		line-height: 14px;
+		font-size: 14px;
+		line-height: 16px;
 		color: #303030;
-		height: 28px;
+		height: 32px;
 		overflow: hidden;
 		text-transform: lowercase;
 
@@ -45,9 +45,9 @@
 	&__price {
 
 		color: #000;
-		font: 500 11px/14px 'ProximaNova';
+		font: 500 14px/20px 'ProximaNova';
 		white-space: nowrap;
-		margin: 6px 0 8px;
+		margin: 8px 0;
 
 	}
 
@@ -59,10 +59,10 @@
 
 	&__text {
 
-		font-size: 12px;
-		line-height: 16px;
+		font-size: 14px;
+		line-height: 18px;
 		color: #303030;
-		margin: 4px 0;
+		margin: 8px 0;
 
 	}
 
@@ -70,8 +70,8 @@
 
 		font-style: italic;
 		font-weight: 300;
-		font-size: 11px;
-		line-height: 13px;
+		font-size: 14px;
+		line-height: 18px;
 		color: #000;
 		text-align: right;
 		display: block;

@@ -12,7 +12,12 @@
 
 		const select = el.querySelector('select');
 
-		select.addEventListener('change', () => select.blur());
+		select.addEventListener('change', () => {
+
+			select.blur();
+			el.classList.remove('is-default');
+
+		});
 
 	});
 
