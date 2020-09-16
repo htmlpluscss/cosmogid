@@ -33,26 +33,41 @@
 
 {% endif %}
 
+				<form action="/" class="card-product__order form-buy">
+
+					<input type="hidden" name="id" value="{{ item.id }}">
+					<input type="hidden" name="mode" value="{% if item.inBasket %}del{% else %}add{% endif %}">
+
 {% if item.size %}
 
-				<ul class="card-product__size">
+					<div class="card-product__size">
 
-	{% for item in item.size %}
+	{% for size in item.size %}
 
-					<li class="card-product__size-item">
-						{{ item }}
-					</li>
+						<label class="card-product__size-item form-buy__size">
+
+							<input
+								name="size"
+								type="radio"
+								value="{{ size.id }}"
+								data-price="{{ size.price }}"
+								data-old-price="{{ size.oldPrice }}"
+								class="form-buy__size-input visuallyhidden"
+								{% if size.active %}checked="checked"{% endif %}
+								{% if size.inBasket %}data-in-basket="in basket"{% endif %}
+								>
+
+							<span class="card-product__size-label form-buy__size-label">
+								{{ size.value }}
+							</span>
+
+						</label>
 
 	{% endfor %}
 
-				</ul>
+					</div>
 
 {% endif %}
-
-				<form action="/" class="card-product__order form-buy">
-
-					<input type="hidden" name="id" value="123456">
-					<input type="hidden" name="mode" value="add">
 
 					<p class="card-product__price">
 
@@ -60,17 +75,25 @@
 							Цена
 						</b>
 
-						{{ item.price }} руб.
+						<span class="card-product__price-value">
+							{{ item.price }}
+						</span>
+
+						руб.
 
 {% if item.oldPrice %}
 
-						<s>
+						<s class="card-product__old-price">
 
 							<b class="visuallyhidden">
 								Старая цена
 							</b>
 
-							{{ item.oldPrice }} руб.
+							<span class="card-product__old-price-value">
+								{{ item.oldPrice }}
+							</span>
+
+							руб.
 
 						</s>
 
