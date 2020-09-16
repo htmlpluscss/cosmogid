@@ -3,9 +3,6 @@
 {% set menu = [
 
 	{
-		name : "Бренды"
-	},
-	{
 		name : "Средства для лица"
 	},
 	{
@@ -50,6 +47,41 @@
 		</div>
 
 		<ul class="menu__list">
+
+			<li class="menu__item is-parent">
+
+				<a class="menu__link" href="/">
+					Бренды
+				</a>
+
+				<div class="menu__sub menu-filter">
+
+					<div class="menu-filter__select">
+
+{% include "template/menu__country.html" %}
+{% include "template/menu__letter.html" %}
+
+					</div>
+
+					<form action="/" class="menu-filter__form">
+
+						<input class="input" placeholder="найти бренд" aria-label="фильтр бренда">
+
+					</form>
+
+					<div class="menu__sub">
+
+						<ul class="menu-filter__list">
+
+{% include "template/menu__brand.html" %}
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</li>
 
 {% for item in menu %}
 

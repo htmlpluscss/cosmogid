@@ -61,7 +61,7 @@
 
 	&__item.is-open &__sub {
 
-		max-height: 10000px;
+		max-height: 1000px;
 		opacity: 1;
 
 	}
@@ -106,7 +106,7 @@
 
 	}
 
-}
+}/*
 
 .menu-filter {
 
@@ -160,4 +160,4 @@
 
 	}
 
-}
+} */
