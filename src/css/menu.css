@@ -1,36 +1,107 @@
 .menu {
 
 	display: none;
-	padding: 10px 16px;
-	flex-grow: 1;
-	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+	transition: height 0.1s linear 0.5s;
+	will-change: height;
 
-	&__list {
+	.is-level2&,
+	.is-level3& {
 
-		margin-bottom: 16px;
+		transition-delay: 0s;
 
 	}
 
-	&__item.is-parent &__link::after {
+	&__inner {
 
-		width: 5px;
-		height: 8px;
-		margin-left: 10px;
-		background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='8' viewBox='0 0 5 8'%3E%3Cpath d='M4.56 4a.559.559 0 01-.164.396l-3.44 3.44a.56.56 0 11-.792-.792L3.208 4 .164.956A.56.56 0 01.956.164l3.44 3.44c.11.11.164.253.164.396z' fill='%23424242'/%3E%3C/svg%3E");
-		content: '';
-		transition: var(--transitionDefault);
+		position: relative;
+		transition: 0.5s ease .1s;
+		transform: translate3d(0, 0, 0);
+		will-change: transform;
+
+		.is-level2 & {
+
+			transform: translate3d(-100%, 0, 0);
+
+		}
+
+		.is-level3 & {
+
+			transform: translate3d(-200%, 0, 0);
+
+		}
+
+	}
+
+	&__list {
+
+		position: static;
+		width: 100%;
+
+	}
+
+	&__level1-item {
+
+		position: static;
+
+	}
+
+	&__item {
+
+		border-bottom: 1px solid var(--hr);
+
+	}
+
+	&__level2,
+	&__level3 {
+
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 100%;
+		visibility: hidden;
+		transition: 0s 0.5s;
+		display: block;
+
+	}
+
+	&__head.is-open + &__level2,
+	&__level2-item.is-open + &__level3 {
+
+		display: block;
+		visibility: visible;
+		transition: none;
 
 	}
 
 	&__link {
 
+		text-transform: uppercase;
+		padding: 16px 24px 16px 16px;
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 20px;
 		text-decoration: none;
-		display: flex;
-		align-items: center;
-		margin: 12px 0;
+		position: relative;
+		display: block;
+
+		&--arrow::after {
+
+			position: absolute;
+			width: 10px;
+			height: 16px;
+			margin: auto;
+			right: 16px;
+			top: 0;
+			bottom: 0;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 8'%3E%3Cpath d='M4.56 4a.559.559 0 01-.164.396l-3.44 3.44a.56.56 0 11-.792-.792L3.208 4 .164.956A.56.56 0 01.956.164l3.44 3.44c.11.11.164.253.164.396z' fill='%23424242'/%3E%3C/svg%3E");
+			content: '';
+
+		}
 
 		@media ($desktop) {
 
@@ -44,45 +115,72 @@
 
 	}
 
-	&__list--second &__link {
+	&__header {
 
-		font-size: 14px;
-		line-height: 18px;
-		display: block;
-		margin: 10px 0;
-
-	}
-
-	&__item.is-open &__link::after {
-
-		transform: rotate(-90deg);
-
-	}
-
-	&__item.is-open &__sub {
-
-		max-height: 1000px;
-		opacity: 1;
+		height: var(--heightHeaderFixed);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+		background-color: var(--bg);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid var(--hr);
 
 	}
 
-	&__sub {
+	&__current-category {
 
-		overflow: hidden;
-		max-height: 0;
-		opacity: 0;
-		margin-top: -8px;
-		position: relative;
-		transition: var(--transitionDefault);
+		text-align: center;
+
+	}
+
+	&__back {
+
+		position: absolute;
+		width: 26px;
+		height: 26px;
+		top: 0;
+		left: 10px;
+		bottom: 0;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	&__close {
+
+		position: absolute;
+		width: 26px;
+		height: 26px;
+		top: 0;
+		right: 10px;
+		bottom: 0;
+		margin: auto;
+		stroke: #000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	&__second {
+
+		margin-top: 16px;
 
 		&-link {
 
-			font-size: 14px;
-			line-height: 18px;
+			font-size: 16px;
+			line-height: 20px;
 			display: block;
+			padding: 8px 16px;
 			font-weight: 500;
-			margin: 8px 0 8px 16px;
 			text-decoration: none;
+			position: relative;
 
 			@media ($desktop) {
 
@@ -97,6 +195,7 @@
 		}
 
 	}
+
 
 }/*
 

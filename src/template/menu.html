@@ -1,69 +1,146 @@
-	<nav class="menu">
-
 {% set menu = [
 
 	{
-		name : "Бренды"
+		parent : "Бренды"
 	},
 	{
-		name : "Средства для лица"
+		parent : "Средства для лица"
 	},
 	{
-		name : "Средства для волос"
+		parent : "Средства для волос"
 	},
 	{
-		name : "Средства для рук"
+		parent : "Средства для рук"
 	},
 	{
-		name : "Средства для тела"
+		parent : "Средства для тела"
 	},
 	{
-		name : "Средства для тела"
+		parent : "Средства для тела"
 	},
 	{
-		name : "Прочее",
-		sub  : [
-			'Макияж',
-			'Защита от солнца',
-			'Уход для мужчин',
-			'Наборы средств',
-			'Проф. оборудование',
-			'Акессуары',
-			'Парфюмерия',
-			'Дезинфекция',
-			'Подарочные сертификаты'
+		parent : "Прочее",
+		category  : [
+			{
+				name : "Макияж",
+				list : [
+					'Уход для мужчин',
+					'Наборы средств',
+					'Проф. оборудование',
+					'Акессуары'
+				]
+			},
+			{
+				name : "Защита от солнца",
+				list : [
+					'Наборы средств',
+					'Проф. оборудование',
+					'Акессуары'
+				]
+			},
+			{
+				name : "Уход для мужчин",
+				list : [
+					'Макияж',
+					'Защита от солнца',
+					'Наборы средств'
+				]
+			},
+			{
+				name : "Наборы средств"
+			},
+			{
+				name : "Проф. оборудование"
+			},
+			{
+				name : "Акессуары"
+			},
+			{
+				name : "Парфюмерия"
+			},
+			{
+				name : "Дезинфекция"
+			},
+			{
+				name : "Подарочные сертификаты"
+			}
 		]
 	}
 
 ] %}
 
+<nav class="menu">
+
+	<div class="menu__header">
+
+		<h3 class="menu__current-category h2">
+			Меню
+		</h3>
+
+		<button type="button" class="menu__back button hide" aria-label="На уровень назад">
+			<svg width="10" height="16" viewBox="0 0 10 16">
+				<path d="M3.16 8l6-6a.88.88 0 000-1.24l-.54-.5a.88.88 0 00-1.24 0L.26 7.38a.88.88 0 000 1.24l7.12 7.12a.88.88 0 001.24 0l.52-.52a.88.88 0 000-1.24z"/>
+			</svg>
+		</button>
+
+		<button type="button" class="menu__close button" aria-label="Закрыть меню">
+			<svg width="16" height="16" viewBox="0 0 16 16">
+				<path d="M.82 16a.82.82 0 01-.58-1.41L14.59.24a.82.82 0 011.16 1.16L1.41 15.76a.83.83 0 01-.59.24z"/>
+				<path d="M15.18 16a.82.82 0 01-.58-.24L.24 1.41A.82.82 0 011.41.24l14.35 14.35a.82.82 0 01-.58 1.41z"/>
+			</svg>
+		</button>
+
+	</div>
+
+	<div class="menu__inner">
+
 		<ul class="menu__list">
 
 {% for item in menu %}
 
-			<li class="menu__item{% if item.sub %} is-parent{% endif %}">
+			<li class="menu__item menu__level1-item">
 
-				<a class="menu__link" href="/">
-					{{ item.name }}
+				<a class="menu__link menu__link--arrow{% if item.category %} menu__head{% endif %}" href="/" title="{{ item.parent }}">
+					{{ item.parent }}
 				</a>
 
-	{% if item.sub %}
+	{% if item.category %}
 
-				<ul class="menu__sub">
+				<div class="menu__level2">
 
-		{% for sub in item.sub %}
+		{% for level2 in item.category %}
 
-					<li class="menu__sub-item">
+					<div class="menu__item menu__level2-item">
 
-						<a class="menu__sub-link" href="/">
-							{{ sub }}
+						<a class="menu__link{% if level2.list %} menu__link--arrow menu__head-level2{% endif %}" href="/" title="{{ level2.name }}">
+							{{ level2.name }}
 						</a>
 
-					</li>
+					</div>
+
+			{% if level2.list %}
+
+					<ul class="menu__level3">
+
+				{% for level3 in level2.list %}
+
+						<li class="menu__item menu__level3-item">
+
+							<a class="menu__link" href="/" title="{{ level3 }}">
+								{{ level3 }}
+							</a>
+
+						</li>
+
+				{% endfor %}
+
+					</ul>
+
+			{% endif %}
 
 		{% endfor %}
 
-				</ul>
+				</div>
 
 	{% endif %}
 
@@ -75,38 +152,24 @@
 
 {% set second = [
 
-	{
-		name : "Акции"
-	},
-	{
-		name : "Оплата и доставка"
-	},
-	{
-		name : "Бренды"
-	},
-	{
-		name : "Информация"
-	},
-	{
-		name : "О нас"
-	},
-	{
-		name : "Контакты"
-	},
-	{
-		name : "Информация"
-	}
+	"Акции",
+	"Оплата и доставка",
+	"Бренды",
+	"Информация",
+	"О нас",
+	"Контакты",
+	"Информация"
 
 ] %}
 
-		<ul class="menu__list menu__list--second">
+		<ul class="menu__second">
 
 {% for item in second %}
 
-			<li class="menu__item">
+			<li class="menu__second-item">
 
-				<a class="menu__link" href="/">
-					{{ item.name }}
+				<a class="menu__second-link" href="/">
+					{{ item }}
 				</a>
 
 			</li>
@@ -115,4 +178,6 @@
 
 		</ul>
 
-	</nav>
+	</div>
+
+</nav>
