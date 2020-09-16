@@ -1,10 +1,18 @@
 .header {
 
-	color: #fff;
 	background-color: var(--blue);
-	position: sticky;
-	z-index: 9;
-	top: 0;
+
+	&__fixed {
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+		color: #fff;
+		background-color: var(--blue);
+
+	}
 
 	.center {
 
@@ -231,28 +239,7 @@
 		margin: auto;
 		background-color: #fff;
 		border-radius: 1px;
-		animation-name: menuClose;
-		animation-duration: var(--transitionDefault);
-		animation-play-state: paused;
-		animation-fill-mode: forwards;
-
-		.in-menu & {
-
-			background-color: var(--color);
-
-		}
-
-		.menu-open & {
-
-			animation-play-state: running;
-
-		}
-
-	}
-
-	&.in-menu {
-
-		color: var(--color);
+		transition: var(--transitionDefault);
 
 	}
 
@@ -260,7 +247,6 @@
 
 		top: -9px;
 		content: '';
-		animation-name: menuCloseTop;
 
 	}
 
@@ -268,35 +254,25 @@
 
 		top: 9px;
 		content: '';
-		animation-name: menuCloseBottom;
 
 	}
 
-}
+	.menu-open &__ico {
 
-
-@keyframes menuClose {
-
-	100% {
 		background-color: transparent;
-	}
 
-}
+		&::before {
 
-@keyframes menuCloseTop {
+			transform: translate3d(0, 9px, 0) rotate(225deg);
 
-	100% {
-		top: 0;
-		transform: rotate(225deg);
-	}
+		}
 
-}
+		&::after {
 
-@keyframes menuCloseBottom {
+			transform: translate3d(0, -9px, 0) rotate(-225deg);
 
-	100% {
-		top: 0;
-		transform: rotate(-225deg);
+		}
+
 	}
 
 }
@@ -311,7 +287,7 @@
 
 	.bar,
 	.search,
-	.header,
+	.header__bottom,
 	.main,
 	.footer {
 

@@ -1,21 +1,17 @@
 
 // открыть|закрыть меню
 
-(() => {
+((btn) => {
 
 	"use strict";
 
-	document.addEventListener('click', event => {
+	if(btn) {
 
-		if(event.target.closest('.btn-menu-toggle')) {
+		btn.addEventListener('click', () => document.body.classList.toggle('menu-open'));
 
-			document.body.classList.toggle('menu-open');
+	}
 
-		}
-
-	});
-
-})();
+})(document.querySelector('.btn-menu-toggle'));
 
 // sum menu
 
