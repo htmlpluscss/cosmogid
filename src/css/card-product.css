@@ -77,15 +77,21 @@
 
 	&__sale {
 
-		font-size: 14px;
-		line-height: 26px;
-		padding: 0 5px;
-		border-radius: 2px;
-		background-color: var(--heavenly);
+		border-radius: 50%;
+		background-color: var(--pink);
 		position: absolute;
 		top: 0;
 		left: 0;
 		color: #fff;
+		width: 48px;
+		height: 48px;
+		content: '%';
+		text-align: center;
+		line-height: 48px;
+		border-radius: 50%;
+		background-color: var(--pink);
+		font-size: 18px;
+		font-weight: 700;
 
 	}
 
