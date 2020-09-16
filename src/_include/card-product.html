@@ -20,7 +20,7 @@
 					</a>
 				</h3>
 
-				<p class="card-product__desc">
+				<p class="card-product__desc{% if item.size %} card-product__desc--2-row{% endif %}">
 					{{ item.desc }}
 				</p>
 
@@ -30,6 +30,22 @@
 					<span class="visuallyhidden">Скидка</span>
 					{{ item.sale }}%
 				</p>
+
+{% endif %}
+
+{% if item.size %}
+
+				<ul class="card-product__size">
+
+	{% for item in item.size %}
+
+					<li class="card-product__size-item">
+						{{ item }}
+					</li>
+
+	{% endfor %}
+
+				</ul>
 
 {% endif %}
 

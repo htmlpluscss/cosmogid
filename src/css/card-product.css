@@ -47,6 +47,32 @@
 		height: 48px;
 		overflow: hidden;
 		text-transform: lowercase;
+		margin-bottom: 18px;
+
+		&--2-row {
+
+			height: 32px;
+			margin-bottom: 10px;
+
+		}
+
+	}
+
+	&__size {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -4px;
+
+		&-item {
+
+			border: 1px solid var(--hr);
+			padding: 0 4px;
+			font-size: 12px;
+			line-height: 14px;
+			margin: 4px;
+
+		}
 
 	}
 
