@@ -93,6 +93,10 @@
 
 		[name="mode"][value="del"] ~ .btn[data-remove] {
 
+			background-color: var(--pink);
+			box-shadow: none;
+			color: #fff;
+
 			&::before {
 
 				display: block;
