@@ -19,13 +19,16 @@
 
 	@media ($desktop) {
 
-		padding: 30px;
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
 
 	}
 
 	&__inner {
 
 		position: relative;
+		display: flex;
 
 	}
 
@@ -39,6 +42,12 @@
 
 		}
 
+		@media ($desktop) {
+
+			height: 42px;
+
+		}
+
 	}
 
 	&__reset {
@@ -46,6 +55,21 @@
 		position: absolute;
 		top: 11px;
 		right: 11px;
+
+		@media ($desktop) {
+
+			top: 16px;
+			right: 120px;
+
+		}
+
+	}
+
+	&__submit {
+
+		position: absolute;
+		top: 0;
+		right: 0;
 
 	}
 

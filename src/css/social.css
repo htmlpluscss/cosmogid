@@ -33,11 +33,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 66px;
+		width: 36px;
 		height: 36px;
 		background-color: #fff;
 		border: 1px solid var(--hr);
 		border-radius: 2px;
+
+		@media ($mobile) {
+
+			border: 0;
+			width: auto;
+			height: 30px;
+
+		}
 
 		@media ($desktop) {
 

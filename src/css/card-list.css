@@ -80,22 +80,34 @@
 
 	&__item {
 
-		margin: 0 8px;
+		padding: 0 8px;
 		width: 180px;
 		flex-shrink: 0;
 		position: relative;
 		scroll-snap-align: start;
 		scroll-snap-stop: always;
 
+		@media ($tablet) {
+
+			width: 25%;
+
+		}
+
+		@media ($desktop) {
+
+			width: 20%;
+
+		}
+
 		&:first-child {
 
-			margin-left: 0;
+			padding-left: 0;
 
 		}
 
 		&:last-child {
 
-			margin-right: 0;
+			padding-right: 0;
 
 		}
 
@@ -103,13 +115,33 @@
 
 	&--brand &__item {
 
-		width: 88px;
+		width: 88px !important;
+		padding: 0;
+		margin-left: 16px;
+
+		&:first-child {
+
+			margin-left: 0;
+
+		}
 
 	}
 
 	&--review &__item {
 
 		width: 100%;
+
+		@media ($tablet) {
+
+			width: 50%;
+
+		}
+
+		@media ($desktop) {
+
+			width: 25%;
+
+		}
 
 	}
 

@@ -7,60 +7,13 @@
 
 				<button type="reset" class="button search__reset hide" aria-label="очистить форму поиска">
 					<svg width="10" height="11" viewBox="0 0 10 11">
-						<g id="ico-reset">
-							<path d="M.514 10.595A.52.52 0 01.15 9.71L9.123.675a.512.512 0 01.727 0c.201.202.201.53 0 .733L.88 10.443c-.101.1-.233.152-.365.152z"/>
-							<path d="M9.486 10.595a.508.508 0 01-.364-.152L.151 1.408a.52.52 0 010-.733.512.512 0 01.727 0L9.85 9.71a.52.52 0 01-.363.885z"/>
-						</g>
+						<use xlink:href="#ico-reset"/>
 					</svg>
 				</button>
 
 				<div class="search__result hide">
 
-					<span class="search__result-item search__result-item--pre-search">
-
-						<span class="search__result-value">
-							тушь для ресниц
-						</span>
-
-						<button class="search__result-remove button" type="button" aria-label="удалить из поиска">
-							<svg width="10" height="11" viewBox="0 0 10 11">
-								<use xlink:href="#ico-reset"/>
-							</svg>
-						</button>
-
-					</span>
-
-					<span class="search__result-item search__result-item--pre-search">
-
-						<span class="search__result-value">
-							тушь для ресниц
-						</span>
-
-						<button class="search__result-remove button" type="button" aria-label="удалить из поиска">
-							<svg width="10" height="11" viewBox="0 0 10 11">
-								<use xlink:href="#ico-reset"/>
-							</svg>
-						</button>
-
-					</span>
-
-					<hr>
-
-					<a href="/" class="search__result-item search__result-item--search">
-
-						<span class="search__result-value">
-							тушь для бровей
-						</span>
-
-					</a>
-
-					<a href="/" class="search__result-item search__result-item--search">
-
-						<span class="search__result-value">
-							тушь для ресниц
-						</span>
-
-					</a>
+{% include "template/search__ajax.html" %}
 
 				</div>
 

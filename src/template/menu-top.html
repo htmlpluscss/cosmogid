@@ -1,0 +1,27 @@
+
+{% set menuTop = [
+
+	"Оставить отзыв",
+	"Доставка и оплата",
+	"Контакты",
+	"Статьи",
+	"Онлайн чат"
+
+] %}
+
+
+	<ul class="menu-top">
+
+{% for item in menuTop %}
+
+		<li class="menu-top__item">
+
+			<a href="/">
+				{{ item }}
+			</a>
+
+		</li>
+
+{% endfor %}
+
+	</ul>

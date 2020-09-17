@@ -29,7 +29,6 @@
 		CG.windowScrollOld = window.pageYOffset;
 		window.scrollTo(0, 0);
 		document.body.classList.add('menu-open');
-		menu.classList.remove('visuallyhidden');
 
 	}));
 
@@ -40,7 +39,6 @@
 		setTimeout( () => window.scrollTo(0, CG.windowScrollOld));
 
 		document.body.classList.remove('menu-open');
-		menu.classList.add('visuallyhidden');
 
 	});
 

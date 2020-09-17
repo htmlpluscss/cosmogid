@@ -1,0 +1,52 @@
+
+.bar {
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+	background-color: var(--blue);
+
+	@media ($desktop) {
+
+		display: none;
+
+	}
+
+	&__box {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 0 4px;
+
+	}
+
+	&.is-hidden {
+
+		opacity: 0;
+		pointer-events: none;
+
+	}
+
+	a {
+
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 20px;
+		color: #fff;
+		text-decoration: none;
+		text-align: center;
+		height: 40px;
+
+	}
+
+	svg {
+
+		fill: #fff;
+		margin: auto;
+
+	}
+
+}

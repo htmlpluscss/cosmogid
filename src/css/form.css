@@ -87,6 +87,29 @@
 
 	}
 
+	&--search {
+
+		background-color: #8DB2C7;
+		color: #fff;
+		padding-right: 0;
+		padding-left: 36px;
+		width: 100px;
+		height: 42px;
+		line-height: 42px;
+		text-align: left;
+		border-radius: 0 2px 2px 0;
+
+		svg {
+
+			fill: #fff !important;
+			position: absolute;
+			top: 14px;
+			left: 11px;
+
+		}
+
+	}
+
 /*
 &--tab {
 

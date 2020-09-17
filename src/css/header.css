@@ -3,6 +3,18 @@
 	background-color: var(--blue);
 	padding-top: var(--heightHeaderFixed);
 
+	@media ($desktop) {
+
+		padding-top: 0;
+
+		~ .search {
+
+			display: none;
+
+		}
+
+	}
+
 	&__fixed {
 
 		position: absolute;
@@ -20,19 +32,45 @@
 
 		}
 
+		@media ($desktop) {
+
+			position: relative !important
+
+		}
+
 	}
 
 	.center {
 
 		width: 100%;
 
+		@media ($desktop) {
+
+			width: 1200px;
+
+		}
+
 	}
 
 	&__top {
 
+		display: none;
+
+		@media ($desktop) {
+
+			display: flex;
+			justify-content: space-between;
+			background-color: #576D7A;
+
+		}
+
+	}
+
+	&__box {
+
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		padding: 10px 0;
 
 	}
 
@@ -67,14 +105,48 @@
 
 	}
 
-	&__wishlist {
+	&__search {
 
-		font-size: 12px;
-		line-height: 15px;
-		font-weight: 300;
-		text-align: center;
-		color: #fff;
-		text-decoration: none;
+		display: none;
+
+		@media ($desktop) {
+
+			flex-grow: 1;
+			margin: 20px 30px;
+			display: block;
+
+		}
+
+	}
+
+	&__icons {
+
+		display: flex;
+		margin: 10px 0;
+
+		&-item {
+
+			& + & {
+
+				margin-left: 16px;
+
+			}
+
+		}
+
+		&-link {
+
+			font-size: 12px;
+			line-height: 15px;
+			font-weight: 300;
+			text-align: center;
+			color: #fff;
+			position: relative;
+			text-decoration: none;
+			flex-shrink: 0;
+			display: block;
+
+		}
 
 		svg {
 
@@ -82,20 +154,6 @@
 			fill: #fff;
 
 		}
-
-	}
-
-	&__cart {
-
-		font-size: 12px;
-		line-height: 15px;
-		font-weight: 300;
-		text-align: center;
-		color: #fff;
-		position: relative;
-		text-decoration: none;
-		margin-left: 16px;
-		flex-shrink: 0;
 
 		&-count {
 
@@ -113,13 +171,6 @@
 
 		}
 
-		svg {
-
-			margin: auto;
-			fill: #fff;
-
-		}
-
 	}
 
 	hr {
@@ -134,6 +185,12 @@
 		justify-content: space-between;
 		padding: 10px 0;
 		align-items: center;
+
+		@media ($desktop) {
+
+			display: none;
+
+		}
 
 	}
 
@@ -172,6 +229,23 @@
 
 	}
 
+	&__logo {
+
+		flex-shrink: 0;
+
+		img {
+
+			@media ($desktop) {
+
+				width: 182px;
+				height: 42px;
+
+			}
+
+		}
+
+	}
+
 	&__phone {
 
 		font-size: 16px;
@@ -185,69 +259,13 @@
 
 		}
 
-	}
+		@media ($desktop) {
 
+			font-size: 14px;
+			line-height: 28px;
+			margin-left: 20px;
 
-}
-
-.bar {
-
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 9;
-	background-color: var(--blue);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 10px 16px 4px;
-	width: 1200px;
-	max-width: 100%;
-
-	&.is-hidden {
-
-		opacity: 0;
-		pointer-events: none;
-
-	}
-
-	a {
-
-		font-weight: 300;
-		font-size: 12px;
-		line-height: 20px;
-		color: #fff;
-		text-decoration: none;
-		text-align: center;
-		height: 40px;
-
-	}
-
-	svg {
-
-		fill: #fff;
-		margin: auto;
-
-	}
-
-}
-
-.menu-open {
-
-	.menu {
-
-		display: block;
-
-	}
-
-	.bar,
-	.search,
-	.header,
-	.main,
-	.footer {
-
-		display: none;
+		}
 
 	}
 
