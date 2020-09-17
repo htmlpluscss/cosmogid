@@ -22,4 +22,38 @@
 
 	});
 
+	// btn up top
+
+	const footerUP = document.querySelector('.footer__up');
+
+	if(footerUP) {
+
+		PubSub.subscribe('windowScroll', () =>
+			footerUP.classList.toggle("is-show", window.innerHeight < window.pageYOffset));
+
+		footerUP.addEventListener('click', () => document.body.scrollIntoView({behavior: "smooth"}));
+
+	}
+
+	// fixed
+
+	let ScrollTopPrev = window.pageYOffset;
+
+	window.addEventListener("scroll", () => {
+
+		if(window.pageYOffset <= 0) {
+
+			headerFixed.classList.remove('is-fixed');
+
+		}
+		else if(window.pageYOffset > window.innerHeight){
+
+			headerFixed.classList.toggle('is-fixed', window.pageYOffset <= ScrollTopPrev);
+
+		}
+
+		ScrollTopPrev = window.pageYOffset;
+
+	});
+
 })(document.querySelector('.header'));

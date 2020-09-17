@@ -130,14 +130,14 @@
 		top: 0;
 		left: 0;
 		color: #fff;
-		width: 48px;
-		height: 48px;
+		width: 36px;
+		height: 36px;
 		content: '%';
 		text-align: center;
-		line-height: 48px;
+		line-height: 36px;
 		border-radius: 50%;
 		background-color: var(--pink);
-		font-size: 18px;
+		font-size: 14px;
 		font-weight: 700;
 
 	}

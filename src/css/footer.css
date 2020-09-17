@@ -3,4 +3,28 @@
 	flex-shrink: 0;
 	padding-bottom: 50px;
 
+	&__up {
+
+		position: fixed;
+		width: 48px;
+		height: 48px;
+		right: 25px;
+		bottom: 90px;
+		box-shadow: 0 0 14px rgba(0,0,0,.3);
+		border-radius: 50%;
+		background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath fill='%23418ebc' d='M1.54 6.73a.887.887 0 0 1-1.275 0 .936.936 0 0 1 0-1.305L5.362.271a.889.889 0 0 1 1.277 0l5.097 5.154a.937.937 0 0 1 0 1.304.889.889 0 0 1-1.277 0l-4.46-4.227L1.54 6.729z'/%3E%3C/svg%3E%0A") center no-repeat;
+		opacity: 0;
+		pointer-events: none;
+		transition: var(--transitionDefault);
+		z-index: 9;
+
+		&.is-show {
+
+			opacity: 1;
+			pointer-events: auto;
+
+		}
+
+	}
+
 }
