@@ -45,6 +45,12 @@
 		position: relative;
 		display: block;
 
+		@media ($desktop) {
+
+			padding-bottom: 42.85%;
+
+		}
+
 	}
 
 	img {
