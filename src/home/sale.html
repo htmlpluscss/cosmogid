@@ -80,17 +80,29 @@
 			<span>Большие сроки годности</span>
 		</p>
 
-		<div class="card-list__list">
+		<div class="swiper-container-wrap">
+
+			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="5">
+
+				<div class="card-list__list swiper-wrapper">
+
+{% for double in [1,2,3,4,5] %}
 
 {% for item in list %}
 
-			<article class="card-list__item">
+					<article class="card-list__item swiper-slide">
 
 {% include "_include/card-product.html" %}
 
-			</article>
+					</article>
 
 {% endfor %}
+
+{% endfor %}
+
+				</div>
+
+			</div>
 
 		</div>
 

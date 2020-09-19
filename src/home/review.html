@@ -7,30 +7,6 @@
 		user  : "Иванова Наталья",
 		img   : 39,
 		price : 2581
-	},
-	{
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
-		text  : "The beauty insider’s secret, IT Cosmetics was developed with plastic surgeons, the leading experts in skin rejuvenation, along with a former news presenter looking for beauty products that would stand up to unforgiving HD cameras.",
-		user  : "Иванова Наталья",
-		img   : 39,
-		price : 2581
-	},
-	{
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
-		text  : "The beauty insider’s secret, IT Cosmetics was developed with plastic surgeons, the leading experts in skin rejuvenation, along with a former news presenter looking for beauty products that would stand up to unforgiving HD cameras.",
-		user  : "Иванова Наталья",
-		img   : 39,
-		price : 2581
-	},
-	{
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
-		text  : "The beauty insider’s secret, IT Cosmetics was developed with plastic surgeons, the leading experts in skin rejuvenation, along with a former news presenter looking for beauty products that would stand up to unforgiving HD cameras.",
-		user  : "Иванова Наталья",
-		img   : 39,
-		price : 2581
 	}
 
 ] %}
@@ -41,17 +17,29 @@
 			Рекомендации покупателей
 		</h2>
 
-		<div class="card-list__list">
+		<div class="swiper-container-wrap">
+
+			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="4">
+
+				<div class="card-list__list swiper-wrapper">
+
+{% for double in [1,2,3,4,5,6,7,8,9,10,11,12] %}
 
 {% for item in list %}
 
-			<article class="card-list__item">
+					<article class="card-list__item swiper-slide">
 
 {% include "_include/card-review.html" %}
 
-			</article>
+					</article>
 
 {% endfor %}
+
+{% endfor %}
+
+				</div>
+
+			</div>
 
 		</div>
 

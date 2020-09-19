@@ -1,20 +1,21 @@
 /**
- * Swiper 4.4.5
+ * Swiper 6.2.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
- * http://www.idangero.us/swiper/
+ * http://swiperjs.com
  *
- * Copyright 2014-2018 Vladimir Kharlampidi
+ * Copyright 2014-2020 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
- * Released on: December 14, 2018
+ * Released on: September 4, 2020
  */
 .swiper-container-style {
 
 	position: relative;
 
-	.swiper-controls {
+	.swiper-container-wrap {
 
+		position: relative;
 
 	}
 
@@ -23,27 +24,7 @@
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
-		list-style: none;
-		padding: 0;
 		z-index: 1;
-
-	}
-
-	.swiper-container-no-flexbox .swiper-slide {
-
-		float: left;
-
-	}
-
-	.swiper-container-wrap {
-
-		position: relative;
-
-	}
-
-	.swiper-container--off .swiper-wrapper {
-
-		justify-content: center;
 
 	}
 
@@ -61,7 +42,14 @@
 	.swiper-container-android .swiper-slide,
 	.swiper-wrapper {
 
-		transform: translate3d(0px, 0, 0);
+		transform: translate3d(0, 0, 0);
+
+	}
+
+	.swiper-container-free-mode .swiper-wrapper {
+
+		transition-timing-function: ease-out;
+		margin: 0 auto;
 
 	}
 
@@ -73,47 +61,31 @@
 		position: relative;
 		transition-property: transform;
 
-	}
+		&-invisible-blank {
 
-	.swiper-container--slides-per-view-auto .swiper-slide {
-
-		width: auto !important;
-		padding-left: 32px;
-
-		&:first-child {
-
-			padding-left: 0 !important;
+			visibility: hidden;
 
 		}
 
 	}
 
-	.swiper-slide-invisible-blank {
-
-		visibility: hidden;
-
-	}
-
 	/* Auto Height */
-	.swiper-container-autoheight,
-	.swiper-container-autoheight .swiper-slide {
+	.swiper-container-autoheight {
 
 		height: auto;
 
-	}
+		.swiper-slide {
 
-	.swiper-container-autoheight .swiper-wrapper {
+			height: auto;
 
-		align-items: flex-start;
-		transition-property: transform, height;
+		}
 
-	}
+		.swiper-wrapper {
 
-	/* IE10 Windows Phone 8 Fixes */
-	.swiper-container-wp8-horizontal,
-	.swiper-container-wp8-horizontal > .swiper-wrapper {
+			align-items: flex-start;
+			transition-property: transform, height;
 
-		touch-action: pan-y;
+		}
 
 	}
 
@@ -133,68 +105,94 @@
 
 	}
 
-	.swiper-button-prev,
-	.swiper-button-next {
+	.swiper-button {
 
-		z-index: 2;
-		position: relative;
-		pointer-events: auto;
+		&-prev,
+		&-next {
 
-		border-radius: 50%;
-		width: 36px;
-		height: 36px;
-		background-color: #f7f7f7;
+			z-index: 2;
+			position: relative;
+			pointer-events: auto;
 
-		svg {
-
-			fill: var(--text);
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-
-		}
-
-		&.swiper-button-disabled {
-
-			pointer-events: none;
-			background-color: transparent;
+			width: 24px;
+			height: 55px;
 
 			svg {
 
-		/* 		opacity: 0.5; */
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: auto;
+				margin: auto;
+				fill: #fafafa;
+				transition: var(--transitionDefault);
+
+			}
+
+			@media ($desktop) {
+
+				&:hover svg {
+
+					fill: var(--ico);
+
+				}
 
 			}
 
 		}
 
+		&-disabled {
+
+			pointer-events: none;
+			opacity: 0;
+
+		}
+
+		&-lock {
+
+			display: none;
+
+		}
+
+		&-prev {
+
+			left: -40px;
+
+		}
+
+		&-next {
+
+			right: -40px;
+
+		}
+
 	}
 
-	.swiper-button-prev {
-
-		left: 12px;
-
-	}
-
-	.swiper-button-next {
-
-		right: 12px;
-
-	}
 
 	.swiper-pagination {
 
-		transition: 300ms opacity;
-		transform: translate3d(0, 0, 0);
-		z-index: 6;
+		z-index: 3;
 		display: flex;
 		justify-content: center;
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 4px;
+		bottom: 0;
+
+		&-lock {
+
+			display: none;
+
+		}
+
+		&-hidden {
+
+			opacity: 0;
+
+		}
 
 		.button {
 
@@ -243,11 +241,14 @@
 
 	}
 
-	button.swiper-pagination-bullet {
+	.swiper-notification {
 
-		border: none;
-		box-shadow: none;
-		appearance: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+		opacity: 0;
+		z-index: -1000;
 
 	}
 
@@ -259,8 +260,8 @@
 
 	.swiper-container-fade .swiper-slide {
 
-		pointer-events: none;
 		opacity: 0;
+		pointer-events: none;
 		transition-property: opacity;
 
 		&-active {

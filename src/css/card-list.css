@@ -76,38 +76,38 @@
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 
+		@media ($desktop) {
+
+			overflow-x: hidden;
+
+			.swiper-container-style & {
+
+				overflow-x: visible;
+
+			}
+
+		}
+
 	}
 
 	&__item {
 
-		padding: 0 8px;
 		width: 180px;
 		flex-shrink: 0;
 		position: relative;
 		scroll-snap-align: start;
 		scroll-snap-stop: always;
+		margin-right: 16px;
 
 		@media ($tablet) {
 
-			width: 25%;
+			width: calc((100% - 48px) / 4);/*  48 = 16 * 3 */
 
 		}
 
 		@media ($desktop) {
 
-			width: 20%;
-
-		}
-
-		&:first-child {
-
-			padding-left: 0;
-
-		}
-
-		&:last-child {
-
-			padding-right: 0;
+			width: calc((100% - 64px) / 5);/*  64 = 16 * 4 */
 
 		}
 
@@ -115,15 +115,7 @@
 
 	&--brand &__item {
 
-		width: 88px !important;
-		padding: 0;
-		margin-left: 16px;
-
-		&:first-child {
-
-			margin-left: 0;
-
-		}
+		width: 90px !important;
 
 	}
 

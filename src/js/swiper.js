@@ -23,7 +23,7 @@
 			  swipePrev = document.createElement('button'),
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
-			  card = swipe.classList.contains('swiper-container--card'),
+			  cardList = swipe.classList.contains('swiper-container--card-list'),
 			  product = swipe.classList.contains('swiper-container--product'),
 			  billboard = swipe.classList.contains('swiper-container--billboard');;
 
@@ -34,8 +34,8 @@
 		swipePrev.className = 'swiper-button-prev button';
 		swipeNext.className = 'swiper-button-next button';
 
-		swipePrev.innerHTML = '<svg width="8" height="14" viewBox="0 0 8 14"><path d="M.16 7.38l6.48 6.46a.54.54 0 10.77-.77L1.31 7 7.4.93a.54.54 0 00-.77-.77L.16 6.62a.54.54 0 000 .77z"/></svg>';
-		swipeNext.innerHTML = '<svg width="8" height="14" viewBox="0 0 8 14"><path d="M7.4 6.62L.93.16a.54.54 0 10-.77.77L6.25 7 .16 13.07a.54.54 0 00.77.77L7.4 7.38a.54.54 0 000-.77z"/></svg>';
+		swipePrev.innerHTML = '<svg width="47.5" height="110" viewBox="0 0 47.5 110"><path d="M46.5 102L11.25 55 46.5 8a5 5 0 10-8-6L1 52a5 5 0 000 6l37.5 50a5 5 0 108-6z"/></svg>';
+		swipeNext.innerHTML = '<svg width="47.5" height="110" viewBox="0 0 47.5 110"><path d="M46.5 52L9 2a5 5 0 00-8 6l35.25 47L1 102a5 5 0 108 6l37.5-50a5 5 0 000-6z"/></svg>';
 
 		swipeBtns.appendChild(swipePrev);
 		swipeBtns.appendChild(swipeNext);
@@ -44,7 +44,11 @@
 		swipe.parentNode.appendChild(swipeControls);
 
 		// eager
-		Array.from(swipe.querySelectorAll('[loading="lazy"]'), img => img.setAttribute('loading','eager'));
+		if(swipe.classList.contains('swiper-container--loading-eager')) {
+
+			Array.from(swipe.querySelectorAll('[loading="lazy"]'), img => img.setAttribute('loading','eager'));
+
+		}
 
 		// hide
 		Array.from(items, el => el.classList.remove('hide'));
@@ -59,37 +63,70 @@
 			}
 
 			swipeNav.classList.add('hide');
+			swipeBtns.classList.add('hide');
 			swipeControls.classList.add('hide');
 
 		}
 
 		resetSwipe();
 
-		if (card) {
+		if (cardList) {
 
-			if(swipe.classList.contains('swiper-container--navigation')){
-
-				swipeBtns.classList.add('hide');
-				swipeNav.classList.remove('hide');
-				swipeControls.classList.remove('hide');
-
-			}
+			let row = swipe.getAttribute('data-count-row');
 
 			toggleSwipe = () => {
 
-				toggleSwipe = false;
+				resetSwipe();
 
-				new Swiper(swipe, {
-					loop: true,
-					slidesPerView: 'auto',
-					pagination: {
-						el: swipeNav,
-						clickable: true,
-						bulletElement: 'button',
-						bulletClass: 'button',
-						bulletActiveClass: 'is-active'
+				swipe.parentNode.classList.remove('swiper-container-style');
+
+				if (window.innerWidth >= 1200) {
+
+					if(row === 'auto') {
+
+						swipe.parentNode.classList.add('swiper-container-style');
+
+						swipeBtns.classList.remove('hide');
+						swipeControls.classList.remove('hide');
+
+						mySwipe = new Swiper(swipe, {
+							loop: false,
+							slidesPerView: row,
+							spaceBetween: 16,
+							navigation: {
+								nextEl: swipeNext,
+								prevEl: swipePrev
+							}
+						});
+
 					}
-				});
+					else {
+
+						row = parseInt(row);
+
+						if (count > row) {
+
+							swipe.parentNode.classList.add('swiper-container-style');
+
+							swipeBtns.classList.remove('hide');
+							swipeControls.classList.remove('hide');
+
+							mySwipe = new Swiper(swipe, {
+								loop: false,
+								slidesPerView: row,
+								slidesPerGroup: row,
+								spaceBetween: 16,
+								navigation: {
+									nextEl: swipeNext,
+									prevEl: swipePrev
+								}
+							});
+
+						}
+
+					}
+
+				}
 
 			}
 

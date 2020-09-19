@@ -15,14 +15,6 @@
 	{
 		name  : "collistar",
 		img   : "collistar"
-	},
-	{
-		name  : "indola",
-		img   : "indola"
-	},
-	{
-		name  : "kalson",
-		img   : "kalson"
 	}
 
 ] %}
@@ -33,19 +25,31 @@
 			Популярные бренды
 		</h2>
 
-		<ul class="card-list__list">
+		<div class="swiper-container-wrap">
+
+			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="auto">
+
+				<ul class="card-list__list swiper-wrapper">
+
+{% for double in [1,2,3,4,5,6,7,8,9,10] %}
 
 {% for item in list %}
 
-			<li class="card-list__item">
+					<li class="card-list__item swiper-slide">
 
 {% include "_include/card-brand.html" %}
 
-			</li>
+					</li>
 
 {% endfor %}
 
-		</ul>
+{% endfor %}
+
+				</ul>
+
+			</div>
+
+		</div>
 
 		<a href="/" class="card-list__all">
 			Все
