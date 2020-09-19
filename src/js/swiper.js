@@ -92,7 +92,6 @@
 						mySwipe = new Swiper(swipe, {
 							loop: false,
 							slidesPerView: row,
-							spaceBetween: 16,
 							navigation: {
 								nextEl: swipeNext,
 								prevEl: swipePrev
