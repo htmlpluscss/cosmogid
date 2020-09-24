@@ -2,8 +2,14 @@
 
 	@media ($desktop) {
 
-		background-color: var(--blue);
-		margin-bottom: 16px;
+		margin: 4px 0 31px;
+
+		&__inner {
+
+			width: 1220px;
+			margin: auto;
+
+		}
 
 		&__header {
 
@@ -14,20 +20,19 @@
 		&__list {
 
 			display: flex;
-			justify-content: center;
+			justify-content: space-between;
 
 		}
 
 		&__link {
 
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 20px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 24px;
 			text-decoration: none;
 			position: relative;
 			display: block;
-			color: #fff;
-			padding: 8px 16px;
+			color: var(--text);
 			white-space: nowrap;
 
 		}
@@ -47,7 +52,7 @@
 
 	}
 
-	@media (max-width: 1199px) {
+	@media ($responsive) {
 
 		display: none;
 		overflow: hidden;
@@ -250,7 +255,7 @@
 
 }
 
-@media (max-width: 1199px) {
+@media ($responsive) {
 
 	.menu-open {
 
@@ -337,6 +342,7 @@
 	&__item {
 
 		white-space: nowrap;
+		margin-left: 22px;
 
 	}
 
@@ -344,10 +350,9 @@
 
 		display: block;
 		color: #fff;
-		font-size: 14px;
-		line-height: 28px;
-		font-weight: 500;
-		padding: 0 14px;
+		font-size: 12px;
+		line-height: 34px;
+		font-weight: 600;
 		text-decoration: none;
 		white-space: nowrap;
 
@@ -355,7 +360,7 @@
 
 			&:hover {
 
-				background-color: #8db2c7;
+				text-decoration: underline;
 
 			}
 

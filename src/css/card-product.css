@@ -1,34 +1,102 @@
 .card-product {
 
 	position: relative;
+	border: 1px solid var(--border);
+	padding: 5px 11px;
 
+height: 452px;
+overflow: hidden;
+left: 2px;
 	&__img {
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		padding-bottom: 20px;
 
 		img {
 
 			width: 100%;
-			height: 148px;
+			height: 166px;
 			object-fit: contain;
 
 		}
 
 	}
 
-	&__name {
+	&__ratio {
+
+		position: absolute;
+		left: 7px;
+		bottom: 3px;
+		height: 10px;
+		width: 60px;
+		background-image: url("data:image/svg+xml,%3Csvg width='120' height='10' viewBox='0 0 120 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23418EBC'%3E%3Cpath d='M5.5 0l1.2 3.8h4L7.5 6.1l1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8L.3 3.8h4L5.5 0zM53.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L53.5 0zM41.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L41.5 0zM29.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L29.5 0zM17.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L17.5 0z'/%3E%3C/g%3E%3Cg fill='%23e4e4e4'%3E%3Cpath d='M101.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4l1.2-3.8zM89.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L89.5 0zM77.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L77.5 0zM65.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L65.5 0z'/%3E%3C/g%3E%3C/svg%3E");
+
+		&--4 {
+
+			background-position: -12px 0;
+
+		}
+
+		&--3 {
+
+			background-position: -24px 0;
+
+		}
+
+		&--2 {
+
+			background-position: -36px 0;
+
+		}
+
+		&--1 {
+
+			background-position: -48px 0;
+
+		}
+
+	}
+
+	&__availability {
+
+		position: absolute;
+		right: 8px;
+		bottom: 0;
+		color: var(--blue);
+		font-size: 11px;
+		line-height: 14px;
+		font-style: italic;
+
+	}
+
+	&__brand {
 
 		font-size: 14px;
-		line-height: 18px;
+		line-height: 20px;
 		font-weight: 500;
-		padding: 6px 0;
+		font-style: normal;
+		letter-spacing: 0.7px;
+		color: #303030;
+margin-top: 32px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		text-transform: uppercase;
+
+	}
+
+	&__name {
+
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 400;
+		color: #737373;
+		max-height: 42px;
+		overflow: hidden;
+		text-transform: lowercase;
 
 		a {
 
@@ -37,24 +105,21 @@
 
 		}
 
-	}
+		&--5-row {
 
-	&__desc {
-
-		font-size: 14px;
-		line-height: 16px;
-		color: #303030;
-		height: 48px;
-		overflow: hidden;
-		text-transform: lowercase;
-		margin-bottom: 18px;
-
-		&--2-row {
-
-			height: 32px;
-			margin-bottom: 10px;
+			max-height: 70px;
 
 		}
+
+	}
+
+	&__sku {
+
+		display: block;
+		font-size: 12px;
+		line-height: 14px;
+		color: #737373;
+		margin: 4px 0 9px;
 
 	}
 
@@ -63,22 +128,30 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin: -4px;
-
+height: 49px;
 		&-item {
 
 			margin: 4px;
 			position: relative;
 			cursor: pointer;
 
+&:nth-child(n+3) {
+
+	display: none;
+
+}
+
 		}
 
 		&-label {
 
-			border: 1px solid var(--hr);
-			padding: 0 4px;
-			font-size: 12px;
-			line-height: 14px;
+			border: 1px solid var(--border);
+			padding: 0 6px;
+			font-size: 11px;
+			line-height: 18px;
+			color: #737373;
 			display: block;
+			border-radius: 2px;
 
 			input[data-in-basket] ~ & {
 
@@ -111,11 +184,12 @@
 
 		.button {
 
-			width: 22px;
-			height: 22px;
+			width: 30px;
+			height: 30px;
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
+			background-size: 14px 14px;
 			background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath class='path-add' d='M10.309 1c-1.157 0-2.171.555-2.935 1.604a5.527 5.527 0 00-.393.627 5.407 5.407 0 00-.38-.622C5.857 1.556 4.85 1 3.692 1 1.525 1 0 2.823 0 5.006c0 2.472 1.99 4.168 5.004 6.736.542.462 1.102.94 1.699 1.461a.41.41 0 00.54 0c.633-.554 1.228-1.058 1.802-1.546C11.854 9.274 14 7.507 14 5.007 14 2.82 12.472 1 10.309 1zM8.515 11.031c-.495.42-1.005.853-1.542 1.32-.5-.435-.975-.84-1.437-1.233C2.646 8.655.815 7.098.815 5.006c0-1.816 1.24-3.191 2.876-3.191.887 0 1.637.424 2.228 1.25.467.65.656 1.319.658 1.326a.41.41 0 00.79.006c.007-.026.78-2.582 2.942-2.582 1.636 0 2.876 1.375 2.876 3.191 0 2.067-1.861 3.642-4.67 6.025z' fill='%23757575'/%3E%3C/svg%3E");
 
 		}
@@ -127,18 +201,17 @@
 		border-radius: 50%;
 		background-color: var(--pink);
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: -14px;
+		left: -20px;
 		color: #fff;
-		width: 36px;
-		height: 36px;
+		width: 45px;
+		height: 45px;
 		content: '%';
 		text-align: center;
-		line-height: 36px;
+		line-height: 45px;
 		border-radius: 50%;
-		background-color: var(--pink);
-		font-size: 14px;
-		font-weight: 700;
+		font-size: 16px;
+		font-family: 'ProximaNova';
 
 	}
 
@@ -146,7 +219,7 @@
 
 		[name="mode"][value="del"] ~ .btn[data-remove] {
 
-			background-color: var(--pink);
+			background-color: var(--blue);
 			box-shadow: none;
 			color: #fff;
 
@@ -164,15 +237,27 @@
 	&__price {
 
 		display: flex;
-		color: #000;
-		font: 500 14px/20px 'ProximaNova';
+		color: #303030;
+		font: 500 16px/20px 'ProximaNova';
 		white-space: nowrap;
 		margin: 8px 0;
+		justify-content: center;
 
 		s {
 
-			color: #757575;
-			margin-left: 10px;
+			color: #908d8d;
+			margin-right: 8px;
+			font-size: 12px;
+
+		}
+
+		&-suf {
+
+			&::before {
+
+				content: '';
+
+			}
 
 		}
 
@@ -180,16 +265,40 @@
 
 	&__buy {
 
-		width: 100%;
+		width: 138px;
 		padding: 0;
+		margin: auto;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 25px;
+		height: 27px;
 		overflow: hidden;
 
 	}
 
 	&__one-click {
 
-		color: var(--text);
-		margin-top: 10px;
+		color: var(--blue);
+		margin: 5px auto;
+		border-bottom-style: dotted;
+		font-style: italic;
+		font-size: 11px;
+		height: 16px;
+		line-height: 16px;
+
+	}
+
+	&__fast-view {
+
+		position: absolute;
+		width: 120px;
+		height: 20px;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		pointer-events: none;
+		opacity: 0;
 
 	}
 

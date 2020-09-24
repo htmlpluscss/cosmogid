@@ -180,7 +180,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 0;
+		bottom: 30px;
 
 		&-lock {
 
@@ -196,44 +196,21 @@
 
 		.button {
 
-			width: 18px;
-			height: 18px;
+			width: 13px;
+			height: 13px;
+			background-color: #fff;
+			border-radius: 50%;
+			border: 1px solid var(--blueHover);
+			transition: var(--transitionDefault);
+			margin: 0 8.5px;
 
 			@media ($desktop) {
 
-				width: 20px;
-				height: 20px;
-				margin: 10px;
-
-				&::before {
-
-					width: 20px;
-					height: 20px;
-
-				}
-
 			}
 
-			&.is-active::before {
+			&.is-active {
 
-				background-color: #fafafa;
-
-			}
-
-			&::before {
-
-				position: absolute;
-				width: 10px;
-				height: 10px;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				margin: auto;
-				content: '';
-				border-radius: 2px;
-				background-color: var(--ico);
-				transition: var(--transitionDefault);
+				background-color: var(--blue);
 
 			}
 

@@ -87,28 +87,6 @@
 
 	}
 
-	&--search {
-
-		background-color: #8DB2C7;
-		color: #fff;
-		padding-right: 0;
-		padding-left: 36px;
-		width: 100px;
-		height: 42px;
-		line-height: 42px;
-		text-align: left;
-		border-radius: 0 2px 2px 0;
-
-		svg {
-
-			fill: #fff !important;
-			position: absolute;
-			top: 14px;
-			left: 11px;
-
-		}
-
-	}
 
 /*
 &--tab {
@@ -266,7 +244,7 @@
 	height: 32px;
 	line-height: 22px;
 
-	padding: 5px 10px;
+	padding: 5px 14px;
 
 	font-size: 16px;
 
@@ -279,7 +257,7 @@
 	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
 
 	background-color: #fff;
-	border: 1px solid #e5e5e5;
+	border: 1px solid var(--blue);
 	border-radius: 2px;
 
 	color: var(--text);
@@ -294,9 +272,10 @@
 
 	&::placeholder {
 
-		color: #757575;
+		color: var(--ico);
 		opacity: 1;
-		font-size: 14px;
+		font-size: 12px;
+		letter-spacing: .2px;
 
 	}
 
@@ -316,7 +295,6 @@
 	&:focus {
 
 		outline: none;
-		border-color: var(--heavenly);
 
 		&::placeholder {
 

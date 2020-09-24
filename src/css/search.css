@@ -1,27 +1,19 @@
 .search {
 
-	padding: 16px;
-	margin-bottom: 16px;
 	position: relative;
-	background-color: var(--heavenly);
+	max-width: 626px;
 
 	@media ($mobile) {
-
-		padding: 10px;
 
 	}
 
 	@media ($tablet) {
 
-		padding: 20px;
 
 	}
 
 	@media ($desktop) {
 
-		margin: 0;
-		padding: 0;
-		background-color: transparent;
 
 	}
 
@@ -34,17 +26,10 @@
 
 	&__input {
 
-		border: 0;
-
-		&::placeholder {
-
-			font-size: 12px;
-
-		}
+		flex-grow: 1;
 
 		@media ($desktop) {
 
-			height: 42px;
 
 		}
 
@@ -67,15 +52,35 @@
 
 	&__submit {
 
-		position: absolute;
-		top: 0;
-		right: 0;
+		width: 44px;
+		background-color: var(--blue);
+		padding: 0;
+		height: 32px;
+		flex-shrink: 0;
+		border-radius: 0 2px 2px 0;
+
+		svg {
+
+			fill: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+
+		}
 
 	}
 
-	svg {
+	&__photo {
 
-		fill: var(--ico);
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		top: 5px;
+		right: 58px;
+		outline:1px solid red;
 
 	}
 
@@ -108,12 +113,6 @@
 			&--pre-search {
 
 				background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23bdbdbd' d='M5.038 9.53A4.497 4.497 0 01.546 5.038 4.497 4.497 0 015.038.545 4.497 4.497 0 019.53 5.038 4.497 4.497 0 015.038 9.53zm0-8.133a3.645 3.645 0 00-3.64 3.64 3.645 3.645 0 003.64 3.641 3.645 3.645 0 003.64-3.64 3.645 3.645 0 00-3.64-3.641zm6.284 9.933a.426.426 0 000-.602L9.416 8.822a.426.426 0 10-.602.602l1.905 1.906a.425.425 0 00.603 0z'/%3E%3C/svg%3E");
-
-			}
-
-			&--search {
-
-				background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23bdbdbd' viewBox='0 0 12 13'%3E%3Cpath d='M5.006 7.955a1.397 1.397 0 001.988 0 1.425 1.425 0 000-2.003c-.377-.38-3.972-2.88-4.69-3.377a.466.466 0 00-.596.055.475.475 0 00-.055.602c.494.722 2.975 4.343 3.353 4.723zM6.332 6.62a.475.475 0 010 .667.467.467 0 01-.663 0c-.146-.148-.879-1.174-1.76-2.44 1.256.888 2.275 1.626 2.423 1.773zM10.243 2.68A5.94 5.94 0 006 .91a.47.47 0 00-.469.473V3.27c0 .26.21.472.469.472a.47.47 0 00.469-.472V1.876c2.572.24 4.593 2.425 4.593 5.077a5.103 5.103 0 01-.858 2.83.474.474 0 00.39.735c.15 0 .3-.074.39-.21A6.05 6.05 0 0012 6.953a6.026 6.026 0 00-1.757-4.273z'/%3E%3Cpath d='M8.619 11.318A5.026 5.026 0 016 12.052c-2.791 0-5.063-2.287-5.063-5.099 0-.78.17-1.529.507-2.225a.474.474 0 00-.217-.63.467.467 0 00-.627.218A6.021 6.021 0 000 6.953c0 1.615.624 3.132 1.757 4.273A5.94 5.94 0 006 12.996c1.097 0 2.17-.3 3.105-.87a.474.474 0 00.158-.649.467.467 0 00-.644-.16z'/%3E%3C/svg%3E");
 
 			}
 

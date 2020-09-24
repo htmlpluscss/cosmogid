@@ -1,6 +1,6 @@
 .header {
 
-	background-color: var(--blue);
+	/* background-color: var(--blue); */
 	padding-top: var(--heightHeaderFixed);
 
 	@media ($desktop) {
@@ -23,7 +23,7 @@
 		right: 0;
 		z-index: 9;
 		color: #fff;
-		background-color: var(--blue);
+		/* background-color: var(--blue); */
 		transition: var(--transitionDefault);
 
 		&.is-fixed {
@@ -42,11 +42,9 @@
 
 	.center {
 
-		width: 100%;
+		@media ($responsive) {
 
-		@media ($desktop) {
-
-			width: 1200px;
+			width: 100%;
 
 		}
 
@@ -60,7 +58,7 @@
 
 			display: flex;
 			justify-content: space-between;
-			background-color: #576D7A;
+			background-color: var(--blue);
 
 		}
 
@@ -88,20 +86,14 @@
 
 	&__btn-menu {
 
-		margin-right: 10px;
-		margin-left: -4px;
-		width: 45px;
-		height: 45px;
+		width: 32px;
+		height: 32px;
 		flex-shrink: 0;
-		font-size: 12px;
-		line-height: 15px;
-		font-weight: 300;
-		text-align: center;
-		color: #fff;
-		padding-top: 30px;
-		background-position: top;
-		background-repeat: no-repeat;
-		background-image: url("data:image/svg+xml,%3Csvg width='40' height='30' viewBox='0 0 40 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='white' stroke-width='3' stroke-linecap='round'%3E%3Cline x1='2' y1='14' x2='36' y2='14'/%3E%3Cline x1='2' y1='5' x2='36' y2='5'/%3E%3Cline x1='2' y1='23' x2='36' y2='23'/%3E%3C/g%3E%3C/svg%3E%0A");
+		border-radius: 2px;
+		outline:1px solid red;
+		/* background-color: var(--blue); */
+		color: transparent;
+		margin-right: 22px;
 
 	}
 
@@ -112,7 +104,7 @@
 		@media ($desktop) {
 
 			flex-grow: 1;
-			margin: 20px 30px;
+			margin: 29px 21px;
 			display: block;
 
 		}
@@ -128,7 +120,7 @@
 
 			& + & {
 
-				margin-left: 16px;
+				margin-left: 18px;
 
 			}
 
@@ -137,21 +129,37 @@
 		&-link {
 
 			font-size: 12px;
-			line-height: 15px;
-			font-weight: 300;
+			line-height: 18px;
 			text-align: center;
-			color: #fff;
+			color: var(--color);
 			position: relative;
 			text-decoration: none;
 			flex-shrink: 0;
 			display: block;
+			padding: 4px 0 0;
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: var(--text);
+
+					svg {
+
+						fill: var(--text);
+
+					}
+
+				}
+
+			}
 
 		}
 
 		svg {
 
-			margin: auto;
-			fill: #fff;
+			margin: 0 auto;
+			fill: #6f6f6f;
 
 		}
 
@@ -159,23 +167,18 @@
 
 			position: absolute;
 			top: 0;
-			right: 0;
-			width: 18px;
-			height: 18px;
+			right: 10px;
+			width: 14px;
+			height: 14px;
 			border-radius: 50%;
-			line-height: 18px;
+			line-height: 14px;
 			font-weight: 500;
-			font-size: 12px;
+			font-size: 10px;
+			color: #fff;
 			text-align: center;
 			background-color: var(--pink);
 
 		}
-
-	}
-
-	hr {
-
-		background-color: var(--heavenly);
 
 	}
 
@@ -197,33 +200,25 @@
 	&__city {
 
 		position: relative;
-		padding-left: 24px;
-		padding-right: 18px;
-		font-size: 16px;
-		line-height: 20px;
+		margin-left: 15px;
+		border-bottom: 1px dotted;
+		font-size: 12px;
+		line-height: 18px;
+		height: 18px;
+		font-weight: 600;
 		color: #fff;
 		max-width: 50%;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M6.733 2C4.674 2 3 3.682 3 5.75c0 2.6 3.37 6.014 3.513 6.159a.312.312 0 00.44 0c.144-.145 3.514-3.56 3.514-6.159C10.467 3.682 8.792 2 6.733 2zm0 9.236c-.742-.8-3.11-3.5-3.11-5.486a3.122 3.122 0 013.11-3.125A3.122 3.122 0 019.845 5.75c0 1.984-2.369 4.687-3.112 5.486z' fill='white'/%3E%3Cpath d='M6.733 3.875c-1.029 0-1.866.841-1.866 1.875s.837 1.875 1.866 1.875c1.03 0 1.867-.841 1.867-1.875a1.873 1.873 0 00-1.867-1.875zm0 3.125C6.047 7 5.49 6.44 5.49 5.75S6.047 4.5 6.733 4.5c.687 0 1.245.56 1.245 1.25S7.42 7 6.733 7z' fill='white'/%3E%3C/svg%3E");
-		background-position: left;
-		background-repeat: no-repeat;
-		background-size: contain;
+		margin-right: 32px;
 
-		&::after {
+		@media ($desktop) {
 
-			position: absolute;
-			top: 2px;
-			right: 0;
-			bottom: 0;
-			width: 18px;
-			height: 6px;
-			margin: auto;
-			content: '';
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 4'%3E%3Cpath d='M3.5 4a.488.488 0 01-.347-.144L.143.84a.492.492 0 010-.695.49.49 0 01.694 0L3.5 2.814 6.163.144a.49.49 0 01.693 0 .492.492 0 010 .695l-3.01 3.017A.488.488 0 013.5 4z' fill='white'/%3E%3C/svg%3E%0A");
+			&:hover {
+
+				border-bottom-color: transparent;
+
+			}
 
 		}
 
@@ -237,8 +232,8 @@
 
 			@media ($desktop) {
 
-				width: 182px;
-				height: 42px;
+				width: 160px;
+				height: 33px;
 
 			}
 
@@ -251,19 +246,31 @@
 		font-size: 16px;
 		line-height: 20px;
 		flex-shrink: 0;
+		position: relative;
 
 		a {
 
 			color: #fff;
 			text-decoration: none;
 
+			svg {
+
+				position: absolute;
+				top: 2px;
+				left: -20px;
+				fill: #fff;
+				outline:1px solid red;
+
+			}
+
 		}
 
 		@media ($desktop) {
 
-			font-size: 14px;
-			line-height: 28px;
-			margin-left: 20px;
+			font-size: 12px;
+			line-height: 18px;
+			margin-left: 24px;
+			font-weight: 600;
 
 		}
 

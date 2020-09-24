@@ -4,25 +4,41 @@
 
 					<picture>
 
-						<source srcset="/img/card-product/{{ item.img }}--148x148.webp 1x, /img/card-product/{{ item.img }}--296x296.webp 2x" type="image/webp">
+						<source srcset="/img/card-product/{{ item.img }}--160x160.webp 1x, /img/card-product/{{ item.img }}--320x320.webp 2x" type="image/webp">
 
-						<source srcset="/img/card-product/{{ item.img }}--148x148.jpg 1x, /img/card-product/{{ item.img }}--296x296.jpg 2x">
+						<source srcset="/img/card-product/{{ item.img }}--160x160.jpg 1x, /img/card-product/{{ item.img }}--320x320.jpg 2x">
 
-						<img src="/img/card-product/{{ item.img }}--296x296.jpg" alt="{{ item.name }}" loading="lazy" width="148" height="148">
+						<img src="/img/card-product/{{ item.img }}--320x320.jpg" alt="{{ item.name }}" loading="lazy" width="160" height="160">
 
 					</picture>
 
+{% if item.ratio %}
+
+					<span class="card-product__ratio card-product__ratio--{{ item.ratio }}">
+						<span class="visuallyhidden">Рейтинг {{ item.ratio }} звезд</span>
+					</span>
+
+{% endif %}
+
+{% if item.availability %}
+
+					<span class="card-product__availability">
+						{{ item.availability }}
+					</span>
+
+{% endif %}
+
 				</a>
 
-				<h3 class="card-product__name">
+				<address class="card-product__brand">
+					{{ item.brand }}
+				</address>
+
+				<h3 class="card-product__name{% if item.size %} card-product__name--5-row{% endif %}">
 					<a href="/">
 						{{ item.name }}
 					</a>
 				</h3>
-
-				<p class="card-product__desc{% if item.size %} card-product__desc--2-row{% endif %}">
-					{{ item.desc }}
-				</p>
 
 {% if item.sale %}
 
@@ -33,10 +49,26 @@
 
 {% endif %}
 
+{% if item.label %}
+
+				<p class="card-product__label">
+					{{ item.label }}%
+				</p>
+
+{% endif %}
+
 				<form action="/" class="card-product__order form-buy">
 
 					<input type="hidden" name="id" value="{{ item.id }}">
 					<input type="hidden" name="mode" value="{% if item.inBasket %}del{% else %}add{% endif %}">
+
+{% if item.sku %}
+
+					<span class="card-product__sku">
+						Арт : <span class="card-product__sku-value">{{ item.sku }}</span>
+					</span>
+
+{% endif %}
 
 {% if item.size %}
 
@@ -50,6 +82,7 @@
 								name="size"
 								type="radio"
 								value="{{ size.id }}"
+								data-sku="{{ item.sku }}"
 								data-price="{{ size.price }}"
 								data-old-price="{{ size.oldPrice }}"
 								class="form-buy__size-input visuallyhidden"
@@ -71,16 +104,6 @@
 
 					<p class="card-product__price">
 
-						<b class="visuallyhidden">
-							Цена
-						</b>
-
-						<span class="card-product__price-value">
-							{{ item.price }}
-						</span>
-
-						руб.
-
 {% if item.oldPrice %}
 
 						<s class="card-product__old-price">
@@ -93,16 +116,30 @@
 								{{ item.oldPrice }}
 							</span>
 
-							руб.
+							<span class="card-product__price-suf">
+								₽
+							</span>
 
 						</s>
 
 {% endif %}
 
+						<b class="visuallyhidden">
+							Цена
+						</b>
+
+						<span class="card-product__price-value">
+							{{ item.price }}
+						</span>
+
+						<span class="card-product__price-suf">
+							₽
+						</span>
+
 					</p>
 
 					<button class="card-product__buy btn btn--outline" data-remove="В корзине">
-						Добавить в корзину
+						В корзину
 					</button>
 
 					<button class="card-product__one-click btn btn--link buy-one-click" type="button">
@@ -129,5 +166,17 @@
 					</button>
 
 				</form>
+
+				<button class="card-product__fast-view btn btn--shadow" type="button">
+					Быстрый просмотр
+				</button>
+
+{% if item.desc %}
+
+				<p class="card-product__desc">
+					{{ item.desc }}%
+				</p>
+
+{% endif %}
 
 			</div>

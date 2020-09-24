@@ -2,70 +2,103 @@
 
 	{
 		id    : 1,
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		sku   : 1309659,
+		brand : "Ericson Laboratoire",
+		name  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		desc  : "Крем обеспечивает выраженный немедленный увлажняющий эффект и долговременное увлажнение кожи в течение 24 часов",
 		img   : 28,
 		price : 2581,
 		oldPrice : 4585,
 		sale  : 30,
 		size  : [
 			{
-				id    : "1",
-				value : "50 мл",
+				id    : 1,
+				sku   : 1309659,
+				value : "3 шт/10 мл",
 				price : 2581,
 				oldPrice : 4585,
 				active   : "true"
 			},
 			{
 				id    : "1-100",
-				value : "100 мл",
+				sku   : 1309659-100,
+				value : "3 шт/20 мл",
 				price : 3581
 			},
 			{
 				id    : "1-200",
+				sku   : 1309659-200,
 				value : "200 мл",
-				price : 4581,
-				oldPrice : 6585,
-				inBasket : "true"
+				price : 4581
+			},
+			{
+				id    : "1-300",
+				sku   : 1309659-300,
+				value : "300 мл",
+				price : 7000
+			},
+			{
+				id    : "1-400",
+				sku   : 1309659-400,
+				value : "400 мл",
+				price : 8000
 			}
-		]
+		],
+		ratio : 5,
+		availability: "есть в наличии"
 	},
 	{
 		id    : 2,
-		name  : "Periche",
-		desc  : "Argan Keratin Cleansing (Очищающий шампунь)",
+		sku   : 1309659,
+		brand : "Periche",
+		name  : "Argan Keratin Cleansing (Очищающий шампунь)",
+		desc  : "Крем обеспечивает выраженный немедленный увлажняющий эффект и долговременное увлажнение кожи в течение 24 часов",
 		img   : 27,
 		price : 2581,
 		sale  : 25,
 		wishlist : "true",
-		inBasket : "true"
+		inBasket : "true",
+		ratio : 4,
+		availability: "нет в наличии"
 	},
 	{
 		id    : 3,
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		sku   : 1309659,
+		brand : "Ericson Laboratoire",
+		name  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		desc  : "Крем обеспечивает выраженный немедленный увлажняющий эффект и долговременное увлажнение кожи в течение 24 часов",
 		img   : 28,
 		price : 2581,
 		oldPrice : 4585,
-		sale  : 30
+		sale  : 30,
+		ratio : 3,
+		availability: "под заказ"
 	},
 	{
 		id    : 4,
-		name  : "Periche",
-		desc  : "Argan Keratin Cleansing (Очищающий шампунь)",
+		sku   : 1309659,
+		brand : "Periche",
+		name  : "Argan Keratin Cleansing (Очищающий шампунь)",
+		desc  : "Крем обеспечивает выраженный немедленный увлажняющий эффект и долговременное увлажнение кожи в течение 24 часов",
 		img   : 27,
 		price : 2581,
 		sale  : 25,
-		wishlist : "true"
+		wishlist : "true",
+		ratio : 2,
+		availability: "есть в наличии"
 	},
 	{
 		id    : 5,
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		sku   : 1309659,
+		brand : "Ericson Laboratoire",
+		name  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		desc  : "Крем обеспечивает выраженный немедленный увлажняющий эффект и долговременное увлажнение кожи в течение 24 часов",
 		img   : 28,
 		price : 2581,
 		oldPrice : 4585,
-		sale  : 30
+		sale  : 30,
+		ratio : 1,
+		availability: "есть в наличии"
 	}
 
 ] %}
@@ -73,14 +106,14 @@
 	<section class="card-list">
 
 		<h2 class="card-list__title h2">
-			SALE
+			Sale
 		</h2>
 
 		<p class="card-list__label">
 			<span>Большие сроки годности</span>
 		</p>
 
-		<div class="swiper-container-wrap">
+		<div class="card-list__wrap swiper-container-wrap">
 
 			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="5">
 
@@ -104,10 +137,10 @@
 
 			</div>
 
-		</div>
+			<a href="/" class="card-list__all">
+				Смотреть все
+			</a>
 
-		<a href="/" class="card-list__all">
-			Смотреть все
-		</a>
+		</div>
 
 	</section>

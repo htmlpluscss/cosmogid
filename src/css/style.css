@@ -16,6 +16,7 @@
 @import url(social.css);
 
 @import url(billboard.css);
+@import url(service.css);
 
 @import url(card-list.css);
 @import url(card-product.css);
@@ -33,7 +34,7 @@
 @import url(article.css);
 @import url(breadcrumbs.css);
 
-@import url(search-shop.css);
+
 
 @import url(catalog.css);
 @import url(filter.css);

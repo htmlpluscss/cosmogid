@@ -4,13 +4,14 @@
 	--text: #424242;
 
 	--blue: #418ebc;
-	--heavenly: #b3d4fc;
+	--blueHover: #5db2e4;
+--heavenly: #b3d4fc;
 	--pink: #ed4993;
-	--lilac: #92348f;
+--lilac: #92348f;
 	--error: #f00;
-	--border: #e5e5e5;
+	--border: #e4e4e4;
 	--bg: #fff;
-	--hr: #e0e0e0;
+--hr: #e0e0e0;
 	--ico: #bdbdbd;
 	--transitionDefault: .3s;
 	--heightHeaderFixed: 66px;
@@ -19,4 +20,5 @@
 
 $mobile: (max-width: 359px);   /*  <  360  */
 $tablet: (min-width: 768px);   /*  >= 768  */
-$desktop: (min-width: 1200px); /*  >= 1200 */
+$desktop: (min-width: 1250px); /*  >= 1250 */
+$responsive: (max-width: 1249px);   /*  <  1250  */

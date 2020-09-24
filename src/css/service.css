@@ -1,0 +1,47 @@
+.service {
+
+	margin: 52px 0;
+	position: relative;
+
+	&__list {
+
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__item {
+
+		padding-left: 60px;
+		position: relative;
+		font-size: 14px;
+		line-height: 25px;
+
+		b {
+
+			font-size: 18px;
+			font-weight: 400;
+
+		}
+
+	}
+
+	&__ico {
+
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+
+		svg {
+
+			fill: #707070;
+
+		}
+
+	}
+
+}

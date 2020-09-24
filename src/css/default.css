@@ -4,7 +4,7 @@
 	padding: 0;
 	box-sizing: border-box;
 
-/* color: red !important */
+color: red !important
 }
 
 html {
@@ -32,10 +32,9 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
-/* background-image: url(/css/home.png); */
-background-size: 320px auto;
-background-position: 0 -15px;
-/* width: 320px !important; */
+background-image: url(/css/1.png);
+background-position: center -0px;
+
 }
 
 a {
@@ -107,21 +106,21 @@ table {
 .h1 {
 
 	font-size: 28px;
-	font-weight: 500;
+	font-weight: 600;
 
 }
 
 .h2 {
 
 	font-size: 24px;
-	font-weight: 500;
+	font-weight: 600;
 
 }
 
 .h3 {
 
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: 600;
 
 }
 
