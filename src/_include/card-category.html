@@ -1,0 +1,36 @@
+
+			<a href="/" class="card-category">
+
+				<figure>
+
+					<picture>
+
+{% if item.mod == "is-rows-2" %}
+						<source srcset="/img/card-category/{{ item.img }}--300x450.webp 1x, /img/card-category/{{ item.img }}--600x900.webp 2x" type="image/webp" media="(min-width: 768px)">
+						<source srcset="/img/card-category/{{ item.img }}--300x450.jpg 1x, /img/card-category/{{ item.img }}--600x900.jpg 2x" media="(min-width: 768px)">
+{% else %}
+						<source srcset="/img/card-category/{{ item.img }}--410x205.webp 1x, /img/card-category/{{ item.img }}--820x410.webp 2x" type="image/webp" media="(min-width: 768px)">
+						<source srcset="/img/card-category/{{ item.img }}--410x205.jpg 1x, /img/card-category/{{ item.img }}--820x410.jpg 2x" media="(min-width: 768px)">
+{% endif %}
+
+						<source srcset="/img/card-category/{{ item.img }}--360x180.webp 1x, /img/card-category/{{ item.img }}--720x360.webp 2x" type="image/webp">
+
+						<source srcset="/img/card-category/{{ item.img }}--360x180.png 1x, /img/card-category/{{ item.img }}--720x360.png 2x">
+
+						<img class="card-category__img" src="/img/card-category/{{ item.img }}--720x360.png" alt="{{ item.name | replace('<br>', '') }}" width="360" height="180" loading="lazy">
+
+					</picture>
+
+					<figcaption class="card-category__name">
+
+						{{ item.name | safe }}
+
+					</figcaption>
+
+				</figure>
+
+				<span class="card-category__btn">
+					Купить
+				</span>
+
+			</a>

@@ -1,56 +1,82 @@
 {% set list = [
 
 	{
-		name  : "collistar",
-		img   : "collistar"
+		name  : "christina",
+		img   : "christina"
 	},
 	{
-		name  : "indola",
-		img   : "indola"
+		name  : "alessandro",
+		img   : "alessandro"
 	},
 	{
-		name  : "kalson",
-		img   : "kalson"
+		name  : "casmara",
+		img   : "casmara"
 	},
 	{
-		name  : "collistar",
-		img   : "collistar"
+		name  : "prirodniy",
+		img   : "prirodniy"
+	},
+	{
+		name  : "academie",
+		img   : "academie"
+	},
+	{
+		name  : "loreal",
+		img   : "loreal"
+	},
+	{
+		name  : "keune",
+		img   : "keune"
+	},
+	{
+		name  : "christina",
+		img   : "christina"
 	}
 
 ] %}
 
 	<section class="card-list card-list--brand">
 
-		<h2 class="card-list__title h2">
-			Популярные бренды
-		</h2>
+		<div class="card-list__head">
 
-		<div class="card-list__wrap swiper-container-wrap">
+			<h2 class="card-list__title h2">
+				Популярные бренды
+			</h2>
 
-			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="auto">
+		</div>
 
-				<ul class="card-list__list swiper-wrapper">
+		<div class="card-list__wrap">
 
-{% for double in [1,2,3,4,5,6,7,8,9,10] %}
+			<ul class="card-list__brand">
 
 {% for item in list %}
 
-					<li class="card-list__item swiper-slide">
+				<li class="card-list__brand-item">
 
 {% include "_include/card-brand.html" %}
 
-					</li>
+				</li>
 
 {% endfor %}
 
-{% endfor %}
+				<li class="card-list__brand-item is-big">
 
-				</ul>
+					<picture>
 
-			</div>
+						<source srcset="/img/card-brand/{{ item.img }}--88x88.webp 1x, /img/card-brand/{{ item.img }}--176x176.webp 2x" type="image/webp">
+
+						<source srcset="/img/card-brand/{{ item.img }}--88x88.png 1x, /img/card-brand/{{ item.img }}--176x176.png 2x">
+
+						<img src="/img/card-brand/{{ item.img }}--176x176.png" alt="{{ item.name }}" width="88" height="88" loading="lazy">
+
+					</picture>
+
+				</li>
+
+			</ul>
 
 			<a href="/" class="card-list__all">
-				Все
+				Смотреть все
 			</a>
 
 		</div>

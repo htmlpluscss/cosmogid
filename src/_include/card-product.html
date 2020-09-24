@@ -4,11 +4,11 @@
 
 					<picture>
 
-						<source srcset="/img/card-product/{{ item.img }}--160x160.webp 1x, /img/card-product/{{ item.img }}--320x320.webp 2x" type="image/webp">
+						<source srcset="/img/card-product/{{ item.img }}--150x150.webp 1x, /img/card-product/{{ item.img }}--300x300.webp 2x" type="image/webp">
 
-						<source srcset="/img/card-product/{{ item.img }}--160x160.jpg 1x, /img/card-product/{{ item.img }}--320x320.jpg 2x">
+						<source srcset="/img/card-product/{{ item.img }}--150x150.jpg 1x, /img/card-product/{{ item.img }}--300x300.jpg 2x">
 
-						<img src="/img/card-product/{{ item.img }}--320x320.jpg" alt="{{ item.name }}" loading="lazy" width="160" height="160">
+						<img src="/img/card-product/{{ item.img }}--300x300.jpg" alt="{{ item.name }}" loading="lazy" width="150" height="150">
 
 					</picture>
 
@@ -34,7 +34,7 @@
 					{{ item.brand }}
 				</address>
 
-				<h3 class="card-product__name{% if item.size %} card-product__name--5-row{% endif %}">
+				<h3 class="card-product__name">
 					<a href="/">
 						{{ item.name }}
 					</a>
@@ -82,7 +82,7 @@
 								name="size"
 								type="radio"
 								value="{{ size.id }}"
-								data-sku="{{ item.sku }}"
+								data-sku="{{ size.sku }}"
 								data-price="{{ size.price }}"
 								data-old-price="{{ size.oldPrice }}"
 								class="form-buy__size-input visuallyhidden"

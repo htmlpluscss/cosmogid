@@ -1,0 +1,63 @@
+{% set list = [
+
+	{
+		name  : "Шампуни <br>для волос",
+		img   : 1,
+		mod   : ""
+	},
+	{
+		name  : "Сыворотки <br>для лица",
+		img   : 2,
+		mod   : "is-rows-2"
+	},
+	{
+		name  : "Эмульсия <br>для лица",
+		img   : 3,
+		mod   : ""
+	},
+	{
+		name  : "Дневной крем <br>для лица",
+		img   : 4,
+		mod   : ""
+	},
+	{
+		name  : "Стайлинги <br>для волос",
+		img   : 5,
+		mod   : ""
+	}
+
+] %}
+
+	<section class="card-list">
+
+		<div class="card-list__head">
+
+			<h2 class="card-list__title h2">
+				Популярные категории
+			</h2>
+
+		</div>
+
+		<div class="card-list__wrap">
+
+			<ul class="card-list__category">
+
+{% for item in list %}
+
+				<li class="card-list__category-item {{ item.mod }}">
+
+{% include "_include/card-category.html" %}
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+			<a href="/" class="card-list__all">
+				Смотреть все
+			</a>
+
+		</div>
+
+	</section>
