@@ -1,30 +1,28 @@
 .social {
 
 	margin: 16px 0;
+	display: flex;
+	align-items: center;
 
 	&__title {
 
-		margin: 16px 0;
+		flex-shrink: 0;
+		margin-right: 24px;
+		font-size: 14px;
+		font-weight: 600;
 
 	}
 
 	&__list {
 
 		display: flex;
-		margin: -4px;
-		justify-content: space-between;
-
-		@media ($tablet) {
-
-			justify-content: flex-start;
-
-		}
+		margin: -3px;
 
 	}
 
 	&__item {
 
-		margin: 4px;
+		margin: 3px;
 
 	}
 
@@ -33,17 +31,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 36px;
-		height: 36px;
-		background-color: #fff;
-		border: 1px solid var(--hr);
-		border-radius: 2px;
+		width: 16px;
+		height: 16px;
 
 		@media ($mobile) {
 
-			border: 0;
-			width: auto;
-			height: 30px;
 
 		}
 
@@ -51,11 +43,17 @@
 
 			&:hover {
 
-				border-color: var(--blue);
+
 
 			}
 
 		}
+
+	}
+
+	svg {
+
+		fill: #fff;
 
 	}
 

@@ -4,7 +4,7 @@
 	padding: 0;
 	box-sizing: border-box;
 
-color: red !important
+/* color: red !important */
 }
 
 html {
@@ -32,9 +32,9 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
-background-image: url(/css/1.png);
-background-position: center 8px;
-
+/* background-image: url(/css/1.png); */
+background-position: center -5637px;
+background-repeat: no-repeat;
 }
 
 a {
