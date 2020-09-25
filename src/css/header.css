@@ -90,8 +90,7 @@
 		height: 32px;
 		flex-shrink: 0;
 		border-radius: 2px;
-		outline:1px solid red;
-		/* background-color: var(--blue); */
+		background-color: var(--blue);
 		color: transparent;
 		margin-right: 22px;
 

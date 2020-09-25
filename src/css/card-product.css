@@ -254,12 +254,6 @@ height: 49px;
 
 		&-suf {
 
-			&::before {
-
-				content: '';
-
-			}
-
 		}
 
 	}
