@@ -19,10 +19,12 @@
 @import url(service.css);
 
 @import url(card-list.css);
+@import url(card-item.css);
 @import url(card-product.css);
 @import url(card-brand.css);
 @import url(card-review.css);
 @import url(card-category.css);
+@import url(card-procedure.css);
 
 
 

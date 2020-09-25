@@ -34,8 +34,8 @@
 		swipePrev.className = 'swiper-button-prev button';
 		swipeNext.className = 'swiper-button-next button';
 
-		swipePrev.innerHTML = '<svg width="47.5" height="110" viewBox="0 0 47.5 110"><path d="M46.5 102L11.25 55 46.5 8a5 5 0 10-8-6L1 52a5 5 0 000 6l37.5 50a5 5 0 108-6z"/></svg>';
-		swipeNext.innerHTML = '<svg width="47.5" height="110" viewBox="0 0 47.5 110"><path d="M46.5 52L9 2a5 5 0 00-8 6l35.25 47L1 102a5 5 0 108 6l37.5-50a5 5 0 000-6z"/></svg>';
+		swipePrev.innerHTML = '<svg width="16" height="29" viewBox="0 0 16 29"><path d="M0 14.034c0-.503.192-1.006.575-1.39L12.645.577a1.966 1.966 0 112.78 2.78L4.744 14.034l10.68 10.68a1.966 1.966 0 01-2.78 2.779L.574 15.423A1.96 1.96 0 010 14.035z"/></svg>';
+		swipeNext.innerHTML = '<svg width="16" height="29" viewBox="0 0 16 29"><path d="M16 14.034a1.96 1.96 0 01-.575 1.39L3.355 27.493a1.965 1.965 0 11-2.78-2.78l10.68-10.679L.575 3.356a1.966 1.966 0 012.78-2.78l12.07 12.069c.383.384.575.887.575 1.39z"/></svg>';
 
 		swipeBtns.appendChild(swipePrev);
 		swipeBtns.appendChild(swipeNext);

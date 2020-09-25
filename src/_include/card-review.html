@@ -6,53 +6,49 @@
 
 						<picture>
 
-							<source srcset="/img/card-review/{{ item.img }}--88x88.webp 1x, /img/card-review/{{ item.img }}--176x176.webp 2x" type="image/webp">
+							<source srcset="/img/card-product/{{ item.img }}--120x120.webp 1x, /img/card-product/{{ item.img }}--240x240.webp 2x" type="image/webp">
 
-							<source srcset="/img/card-review/{{ item.img }}--88x88.jpg 1x, /img/card-review/{{ item.img }}--176x176.jpg 2x">
+							<source srcset="/img/card-product/{{ item.img }}--120x120.jpg 1x, /img/card-product/{{ item.img }}--240x240.jpg 2x">
 
-							<img src="/img/card-review/{{ item.img }}--176x176.jpg" alt="{{ item.name }}" width="88" height="88" loading="lazy">
+							<img src="/img/card-product/{{ item.img }}--240x240.jpg" alt="{{ item.name }}" width="120" height="120" loading="lazy">
 
 						</picture>
 
 					</div>
 
-					<div class="card-review__info">
+					<h3 class="card-review__brand">
+						{{ item.brand }}
+					</h3>
 
-						<h3 class="card-review__name">
-							{{ item.name }}
-						</h3>
-
-						<p class="card-review__desc">
-							{{ item.desc }}
-						</p>
-
-						<p class="card-review__price">
-
-							<b class="visuallyhidden">
-								Цена
-							</b>
-
-							{{ item.price }} руб.
-
-						</p>
-
-					</div>
+					<p class="card-review__name">
+						{{ item.name }}
+					</p>
 
 				</a>
 
 				<blockquote class="card-review__blockquote">
-
-					<p class="card-review__text">
-
-						{{ item.text }}
-
-					</p>
 
 					<cite class="card-review__user">
 
 						{{ item.user }}
 
 					</cite>
+
+					<small class="card-review__city">
+
+						{{ item.city }}
+
+					</small>
+
+					<span class="card-review__ratio card-review__ratio--{{ item.ratio }}">
+						<span class="visuallyhidden">Рейтинг {{ item.ratio }} звезд</span>
+					</span>
+
+					<p class="card-review__text">
+
+						{{ item.text }}
+
+					</p>
 
 				</blockquote>
 

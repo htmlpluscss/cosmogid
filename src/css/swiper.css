@@ -115,7 +115,7 @@
 			pointer-events: auto;
 
 			width: 24px;
-			height: 55px;
+			height: 48px;
 
 			svg {
 
@@ -127,7 +127,7 @@
 				width: 100%;
 				height: auto;
 				margin: auto;
-				fill: #fafafa;
+				fill: var(--border);
 				transition: var(--transitionDefault);
 
 			}

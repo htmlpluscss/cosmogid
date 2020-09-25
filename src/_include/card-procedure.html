@@ -1,0 +1,63 @@
+			<div class="card-procedure">
+
+				<a href="/" class="card-procedure__img">
+
+					<picture>
+
+						<source srcset="/img/card-product/{{ item.img }}--150x150.webp 1x, /img/card-product/{{ item.img }}--300x300.webp 2x" type="image/webp">
+
+						<source srcset="/img/card-product/{{ item.img }}--150x150.jpg 1x, /img/card-product/{{ item.img }}--300x300.jpg 2x">
+
+						<img src="/img/card-product/{{ item.img }}--300x300.jpg" alt="{{ item.title }}" loading="lazy" width="150" height="150">
+
+					</picture>
+
+				</a>
+
+				<address class="card-procedure__brand">
+					{{ item.brand }}
+				</address>
+
+				<h3 class="card-procedure__title">
+					“{{ item.title }}”
+				</h3>
+
+{% if item.label %}
+
+				<p class="card-procedure__label">
+					{{ item.label }}
+				</p>
+
+{% endif %}
+
+				<dl class="card-procedure__desc">
+
+					<div class="card-procedure__desc-item">
+
+						<dt>
+							Результат:
+						</dt>
+						<dd>
+							{{ item.result }}
+						</dd>
+
+					</div>
+
+					<div class="card-procedure__desc-item">
+
+						<dt>
+							Курс:
+						</dt>
+						<dd>
+							{{ item.kurs }}
+						</dd>
+
+					</div>
+
+				</dl>
+
+				<a href="/" class="card-procedure__btn btn btn--outline">
+					Подробнее
+				</a>
+
+			</div>

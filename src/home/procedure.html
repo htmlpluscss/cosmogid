@@ -1,17 +1,26 @@
 {% set list = [
 
 	{
-		name  : "Ericson Laboratoire",
-		desc  : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
-		text  : "The beauty insider’s secret, IT Cosmetics was developed with plastic surgeons, the leading experts in skin rejuvenation, along with a former news presenter looking for beauty products that would stand up to unforgiving HD cameras.",
-		user  : "Иванова Наталья",
-		img   : 39,
-		price : 2581
+		brand  : "HOLY LAND",
+		title  : "Атравматическая чистка лица",
+		img    : 28,
+		label  : "хит",
+		result : "Чистое лицо, без камедонов, сужение пор.",
+		kurs   : "1р/неделя, 5-6раз."
+	},
+	{
+		brand  : "HOLY LAND",
+		title  : "Атравматическая чистка лица",
+		img    : 27,
+		label  : "NEW",
+		result : "Чистое лицо, без камедонов, сужение пор.",
+		kurs   : "1р/неделя, 5-6раз."
 	}
 
 ] %}
 
-	<section class="card-list card-list--review">
+
+	<section class="card-list">
 
 		<div class="card-list__head">
 
@@ -27,17 +36,17 @@
 
 		<div class="card-list__wrap swiper-container-wrap">
 
-			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="4">
+			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="5">
 
 				<div class="card-list__list swiper-wrapper">
 
-{% for double in [1,2,3,4,5,6,7,8,9,10,11,12] %}
+{% for double in [1,2,3,4,5] %}
 
 {% for item in list %}
 
 					<article class="card-list__item swiper-slide">
 
-{% include "_include/card-review.html" %}
+{% include "_include/card-procedure.html" %}
 
 					</article>
 
