@@ -6,40 +6,79 @@
 
 	}
 
+	const headerCount = document.querySelector('.header__cart .header__icons-count');
+
 	Array.from(forms, form => {
 
 		const inputID = form.querySelector('[name="id"]'),
-			  inputMode = form.querySelector('[name="mode"]'),
+			  storeID = form.querySelector('[name="storeid"]'),
 			  sku = form.querySelector('.card-product__sku-value'),
-			  priceText = form.querySelector('.card-product__price-value'),
-			  priceOldText = form.querySelector('.card-product__old-price-value'),
-			  priceOldBox = form.querySelector('.card-product__old-price');
+			  sale = form.querySelector('.card-product__sale-value'),
+			  btn = form.querySelector('.card-product__btn'),
+			  price = form.querySelector('.card-product__price-value'),
+			  priceOld = form.querySelector('.card-product__old-price-value');
 
-		// кнопки size
+		// кнопки варианты товара
 
-		const btnSize = form.querySelectorAll('.form-buy__size-input');
+		const articleID = form.querySelectorAll('.form-buy__article-input');
 
-		Array.from(btnSize, input => {
+		Array.from(articleID, input => {
 
 			input.addEventListener('change', () => {
 
-				inputID.value = input.value;
 				sku.textContent = input.getAttribute('data-sku');
-				priceText.textContent = input.getAttribute('data-price');
+				price.textContent = input.getAttribute('data-price');
 
-				if(input.getAttribute('data-old-price')) {
+				if(priceOld) {
 
-					priceOldBox.classList.remove('hide');
-					priceOldText.textContent = input.getAttribute('data-old-price');
+					if(input.getAttribute('data-old-price')) {
+
+						priceOld.parentNode.classList.remove('hide');
+						priceOld.textContent = input.getAttribute('data-old-price');
+
+					}
+					else {
+
+						priceOld.parentNode.classList.add('hide');
+
+					}
+
+				}
+
+				if(sale) {
+
+					if(input.getAttribute('data-sale')) {
+
+						sale.parentNode.classList.remove('hide');
+						sale.textContent = input.getAttribute('data-sale');
+
+					}
+					else {
+
+						sale.parentNode.classList.add('hide');
+
+					}
+
+				}
+
+				if(storeID) {
+
+					storeID.value = input.getAttribute('data-storeid') ? input.getAttribute('data-storeid') : 1;
+
+				}
+
+				if(input.getAttribute('data-in-basket')) {
+
+					btn.querySelector('a').classList.remove('hide');
+					btn.querySelector('button').classList.add('hide');
 
 				}
 				else {
 
-					priceOldBox.classList.add('hide');
+					btn.querySelector('a').classList.add('hide');
+					btn.querySelector('button').classList.remove('hide');
 
 				}
-
-				inputMode.value = input.getAttribute('data-in-basket') ? 'del' : 'add';
 
 			});
 
@@ -55,6 +94,7 @@
 				  xhr = new XMLHttpRequest();
 
 			xhr.open("POST", form.getAttribute('action'));
+			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
 			xhr.onreadystatechange = () => {
 
@@ -66,31 +106,33 @@
 
 				if (xhr.status === 200) {
 
-					console.log(xhr.responseText, ' надо возвращать del или add', form.elements.id.value);
-				//	form.elements.mode.value = xhr.responseText;
+					const cart = JSON.parse(xhr.responseText);
+					console.log(cart);
 
-					form.elements.mode.value = form.elements.mode.value === 'del' ? 'add' : 'del'; // для демо
+					if(cart.headerCount) {
 
-					if(btnSize.length) {
+						headerCount.textContent = cart.headerCount;
 
-						Array.from(btnSize, input => {
+					}
 
-							if(input.value === form.elements.id.value) {
+					if(cart.mode === "add") {
 
-								if(form.elements.mode.value === 'del') {
+						form.querySelector('.card-product__btn a').classList.remove('hide');
+						form.querySelector('.card-product__btn button').classList.add('hide');
 
-									input.setAttribute('data-in-basket','in basket');
+						if(articleID.length) {
+
+							Array.from(articleID, input => {
+
+								if(input.value === cart.articleid) {
+
+									input.setAttribute('data-in-basket', 'in basket');
 
 								}
-								else {
 
-									input.removeAttribute('data-in-basket');
+							});
 
-								}
-
-							}
-
-						});
+						}
 
 					}
 

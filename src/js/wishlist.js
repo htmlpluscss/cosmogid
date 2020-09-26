@@ -16,6 +16,7 @@
 				  xhr = new XMLHttpRequest();
 
 			xhr.open("POST", form.getAttribute('action'));
+			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
 			xhr.onreadystatechange = () => {
 

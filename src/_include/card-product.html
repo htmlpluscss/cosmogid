@@ -40,15 +40,6 @@
 					</a>
 				</h3>
 
-{% if item.sale %}
-
-				<p class="card-product__sale">
-					<span class="visuallyhidden">Скидка</span>
-					{{ item.sale }}%
-				</p>
-
-{% endif %}
-
 {% if item.label %}
 
 				<p class="card-product__label">
@@ -60,7 +51,7 @@
 				<form action="/" class="card-product__order form-buy">
 
 					<input type="hidden" name="id" value="{{ item.id }}">
-					<input type="hidden" name="mode" value="{% if item.inBasket %}del{% else %}add{% endif %}">
+					<input type="hidden" name="storeid" value="{{ item.storeid }}">
 
 {% if item.sku %}
 
@@ -70,28 +61,54 @@
 
 {% endif %}
 
-{% if item.size %}
+{% if item.sale %}
 
-					<div class="card-product__size">
+					<p class="card-product__sale">
+						<span class="visuallyhidden">Скидка</span>
+						<span class="card-product__sale-value">{{ item.sale }}</span>%
+					</p>
 
-	{% for size in item.size %}
+{% endif %}
 
-						<label class="card-product__size-item form-buy__size">
+{% if item.article %}
+
+					<div class="card-product__article">
+
+	{% for article in item.article %}
+
+						<label class="card-product__article-item form-buy__article">
 
 							<input
-								name="size"
+								name="articleid"
 								type="radio"
-								value="{{ size.id }}"
-								data-sku="{{ size.sku }}"
-								data-price="{{ size.price }}"
-								data-old-price="{{ size.oldPrice }}"
-								class="form-buy__size-input visuallyhidden"
-								{% if size.active %}checked="checked"{% endif %}
-								{% if size.inBasket %}data-in-basket="in basket"{% endif %}
-								>
 
-							<span class="card-product__size-label form-buy__size-label">
-								{{ size.value }}
+								value="{{ article.id }}"
+
+								data-sku="{{ article.sku }}"
+								data-price="{{ article.price }}"
+								data-old-price="{{ article.oldPrice }}"
+
+								class="form-buy__article-input visuallyhidden"
+
+								{% if article.active %}
+									checked="checked"
+								{% endif %}
+
+								{% if article.sale %}
+									data-sale="{{ article.sale }}"
+								{% endif %}
+
+								{% if article.storeid %}
+									data-storeid="{{ article.storeid }}"
+								{% endif %}
+
+								{% if article.inBasket %}
+									data-in-basket="in basket"
+								{% endif %}
+							>
+
+							<span class="card-product__article-label form-buy__article-label">
+								{{ article.value }}
 							</span>
 
 						</label>
@@ -138,9 +155,17 @@
 
 					</p>
 
-					<button class="card-product__buy btn btn--outline" data-remove="В корзине">
-						В корзину
-					</button>
+					<div class="card-product__btn">
+
+						<button class="btn btn--outline{% if item.inBasket %} hide{% endif %}">
+							В корзину
+						</button>
+
+						<a href="/basket/" class="btn btn--pink{% if not item.inBasket %} hide{% endif %}">
+							В корзине
+						</a>
+
+					</div>
 
 					<button class="card-product__one-click btn btn--link buy-one-click" type="button">
 						Купить в один клик
@@ -150,7 +175,8 @@
 
 				<form action="/" class="card-product__wishlist form-wishlist">
 
-					<input type="hidden" name="id" value="123456">
+					<input type="hidden" name="id" value="{{ item.id }}">
+					<input type="hidden" name="type" value="0">
 
 {% if item.wishlist %}
 
@@ -174,7 +200,7 @@
 {% if item.desc %}
 
 				<p class="card-product__desc">
-					{{ item.desc }}%
+					{{ item.desc }}
 				</p>
 
 {% endif %}
