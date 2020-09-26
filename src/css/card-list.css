@@ -30,7 +30,6 @@
 			.swiper-slide {
 
 				height: auto;
-				display: flex;
 
 			}
 
@@ -120,6 +119,7 @@
 		scroll-snap-align: start;
 		scroll-snap-stop: always;
 		margin-right: 40px;
+		display: flex;
 
 		@media ($tablet) {
 

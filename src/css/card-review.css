@@ -76,6 +76,15 @@
 		line-height: 25px;
 		color: #000;
 		margin: 8px 0;
+		height: 100px;
+		overflow: hidden;
+
+	}
+
+	&__link {
+
+		font-size: 12px;
+		font-style: italic;
 
 	}
 
