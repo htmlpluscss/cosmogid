@@ -6,6 +6,8 @@
 
 	}
 
+	const headerCount = document.querySelector('.header__wishlist .header__icons-count');
+
 	Array.from(forms, form => {
 
 		form.addEventListener('submit', event => {
@@ -28,10 +30,26 @@
 
 				if (xhr.status === 200) {
 
-					console.log(xhr.responseText, ' надо возвращать del или add');
-				//	form.elements.mode.value = xhr.responseText;
+					const obj = JSON.parse(xhr.responseText);
+					console.log(obj);
 
-					form.elements.mode.value = form.elements.mode.value === 'del' ? 'add' : 'del'; // для демо
+					if(obj.headerCount) {
+
+						headerCount.classList.toggle('hide', obj.headerCount === 0);
+						headerCount.textContent = obj.headerCount;
+
+					}
+
+					if(obj.mode === 'add') {
+
+						form.elements.mode.value = 'del';
+
+					}
+					else if (obj.mode === 'del') {
+
+						form.elements.mode.value = 'add';
+
+					}
 
 				}
 
