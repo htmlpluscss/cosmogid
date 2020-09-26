@@ -1,6 +1,6 @@
 .service {
 
-	margin: 52px 0;
+	margin: 52px 14px;
 	position: relative;
 
 	&__list {
@@ -26,21 +26,12 @@
 
 	}
 
-	&__ico {
+	svg {
 
+		fill: #707070;
 		position: absolute;
-		width: 60px;
-		height: 60px;
-		top: 0;
+		top: 2px;
 		left: 0;
-		display: flex;
-		align-items: center;
-
-		svg {
-
-			fill: #707070;
-
-		}
 
 	}
 

@@ -181,14 +181,13 @@
 		&-link {
 
 			font-size: 12px;
-			line-height: 18px;
+			line-height: 14px;
 			text-align: center;
 			color: var(--color);
 			position: relative;
 			text-decoration: none;
 			flex-shrink: 0;
 			display: block;
-			padding: 4px 0 0;
 
 			@media ($desktop) {
 
