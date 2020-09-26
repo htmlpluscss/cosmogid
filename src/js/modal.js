@@ -62,4 +62,14 @@
 		el.addEventListener('click', () =>
 			CG.modalShow(el.getAttribute('data-modal'))));
 
+	document.addEventListener('keydown', event => {
+
+		if(CG.activeModal && event.keyCode === 27){
+
+			CG.hideModal();
+
+		}
+
+	});
+
 })(document.querySelector('.modal'));

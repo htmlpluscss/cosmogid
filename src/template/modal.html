@@ -9,7 +9,7 @@
 
 			<form action="/" class="modal__item modal__item--city-confirm form-city-confirm">
 
-				<input type="hidden" value="Екатеринбург">
+				<input type="hidden" name="city" value="Екатеринбург">
 
 				<h3 class="form-city-confirm__title">
 					Ваш город <b>Екатеринбург?</b>
@@ -33,9 +33,9 @@
 
 			</form>
 
-			<form class="modal__item modal__item--cities form-city">
+			<form action="/" class="modal__item modal__item--cities form-city">
 
-				<input class="input form-city__input" placeholder="Введите название города..." aria-label="Введите свой город">
+				<input class="input form-city__input" placeholder="Введите название города..." aria-label="Введите свой город" name="searchword">
 
 				<div class="form-city__result"></div>
 
