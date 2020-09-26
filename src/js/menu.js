@@ -1,9 +1,9 @@
 
-((btns) => {
+((btn) => {
 
 	"use strict";
 
-	if(!btns.length) {
+	if(!btn) {
 
 		return;
 
@@ -22,15 +22,36 @@
 		level1Open = null,
 		level2Open = null;
 
-	// открыть меню
+	// открыть|закрыть меню
 
-	Array.from(btns, btn => btn.addEventListener('click', () => {
+	btn.addEventListener('click', () => {
 
-		CG.windowScrollOld = window.pageYOffset;
-		window.scrollTo(0, 0);
-		document.body.classList.add('menu-open');
+		if(CG.OpenMenu) {
 
-	}));
+			document.body.classList.remove('menu-open');
+
+			window.scrollTo(0, CG.windowScrollOld);
+
+			CG.OpenMenu = false;
+
+			setTimeout( () => document.documentElement.classList.remove('scroll-behavior-off'), 100);
+
+		}
+		else {
+
+			document.documentElement.classList.add('scroll-behavior-off');
+
+			CG.OpenMenu = true;
+
+			// записываем значение скролла страницы
+			CG.windowScrollOld = window.pageYOffset;
+			window.scrollTo(0, 0);
+
+			document.body.classList.add('menu-open');
+
+		}
+
+	});
 
 	// закрыть меню
 
@@ -133,4 +154,4 @@
 
 	});
 
-})(document.querySelectorAll('.js-open-menu'));
+})(document.querySelector('.js-toggle-menu'));

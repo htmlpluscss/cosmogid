@@ -73,17 +73,6 @@
 
 	}
 
-	&__photo {
-
-		position: absolute;
-		width: 22px;
-		height: 22px;
-		top: 5px;
-		right: 58px;
-		outline:1px solid red;
-
-	}
-
 	&__result {
 
 		position: absolute;
