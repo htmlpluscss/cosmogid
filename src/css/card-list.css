@@ -203,6 +203,7 @@
 	&__brand {
 
 		position: relative;
+
 		@supports(display: grid) {
 
 			display: grid;
@@ -214,7 +215,6 @@
 
 			&-item {
 
-min-height: 102px;
 				background-color: #fff;
 
 				&.is-big {
@@ -224,12 +224,6 @@ min-height: 102px;
 					grid-column-start: -2;
 					grid-column-end: -1;
 					margin: -1px;
-
-				}
-
-				.card-brand {
-
-					display: none;
 
 				}
 

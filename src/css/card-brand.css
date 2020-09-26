@@ -1,11 +1,12 @@
 .card-brand {
 
-	width: 90px;
-	height: 90px;
-	border-radius: 2px;
-	border: 1px solid var(--hr);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: block;
+	position: relative;
+
+	img {
+
+		object-fit: contain;
+
+	}
 
 }
