@@ -9,12 +9,12 @@
 
 	}
 
-	const menu = document.querySelector('.menu'),
-		  level1 = menu.querySelectorAll('.menu__head'),
-		  level2 = menu.querySelectorAll('.menu__head-level2'),
-		  btnClose = menu.querySelector('.menu__close'),
-		  btnBack = menu.querySelector('.menu__back'),
-		  category = menu.querySelector('.menu__current-category'),
+	const menu = document.querySelector('.menu-catalog'),
+		  level1 = menu.querySelectorAll('.menu-catalog__head'),
+		  level2 = menu.querySelectorAll('.menu-catalog__head-level2'),
+		  btnClose = menu.querySelector('.menu-catalog__close'),
+		  btnBack = menu.querySelector('.menu-catalog__back'),
+		  category = menu.querySelector('.menu-catalog__current-category'),
 		  categoryTextDefault = category.textContent;
 
 	let	level1Scroll = 0,
@@ -22,44 +22,51 @@
 		level1Open = null,
 		level2Open = null;
 
+	const menuOpen = () => {
+
+		document.documentElement.classList.add('scroll-behavior-off');
+
+		CG.OpenMenu = true;
+
+		// записываем значение скролла страницы
+		CG.windowScrollOld = window.pageYOffset;
+		window.scrollTo(0, 0);
+
+		document.body.classList.add('menu-open');
+
+		PubSub.publish('SwiperAutoPlayStop');
+
+	};
+
+	const menuClose = () => {
+
+		document.body.classList.remove('menu-open');
+
+		window.scrollTo(0, CG.windowScrollOld);
+
+		CG.OpenMenu = false;
+
+		setTimeout( () => document.documentElement.classList.remove('scroll-behavior-off'), 100);
+
+		PubSub.publish('SwiperAutoPlayStart');
+
+	};
+
 	// открыть|закрыть меню
 
-	btn.addEventListener('click', () => {
-
-		if(CG.OpenMenu) {
-
-			document.body.classList.remove('menu-open');
-
-			window.scrollTo(0, CG.windowScrollOld);
-
-			CG.OpenMenu = false;
-
-			setTimeout( () => document.documentElement.classList.remove('scroll-behavior-off'), 100);
-
-		}
-		else {
-
-			document.documentElement.classList.add('scroll-behavior-off');
-
-			CG.OpenMenu = true;
-
-			// записываем значение скролла страницы
-			CG.windowScrollOld = window.pageYOffset;
-			window.scrollTo(0, 0);
-
-			document.body.classList.add('menu-open');
-
-		}
-
-	});
+	btn.addEventListener('click', () => CG.OpenMenu ? menuClose() : menuOpen());
 
 	// закрыть меню
 
-	btnClose.addEventListener('click', () => {
+	btnClose.addEventListener('click', () => menuClose);
 
-		setTimeout( () => window.scrollTo(0, CG.windowScrollOld));
+	document.addEventListener('click', event => {
 
-		document.body.classList.remove('menu-open');
+		if(document.body.classList.contains('menu-open') && !event.target.closest('.js-toggle-menu') && !event.target.closest('.menu-catalog')) {
+
+			menuClose();
+
+		}
 
 	});
 
@@ -82,7 +89,7 @@
 		}
 		else if (menu.classList.contains('is-level2')) {
 
-			menu.style.height = menu.querySelector('.menu__inner').clientHeight + "px";
+			menu.style.height = menu.querySelector('.menu-catalog__inner').clientHeight + "px";
 
 			menu.classList.remove('is-level2');
 

@@ -25,7 +25,8 @@
 			  count = items.length,
 			  cardList = swipe.classList.contains('swiper-container--card-list'),
 			  product = swipe.classList.contains('swiper-container--product'),
-			  billboard = swipe.classList.contains('swiper-container--billboard');;
+			  billboard = swipe.classList.contains('swiper-container--billboard'),
+			  autoplay = swipe.getAttribute('data-autoplay') * 1000;
 
 		swipeNav.className = 'swiper-pagination';
 		swipeControls.className = 'swiper-controls';
@@ -167,7 +168,7 @@
 					loop: true,
 					preloadImages: false,
 					autoplay: {
-						delay: 5000
+						delay: autoplay
 					},
 					pagination: {
 						el: swipeNav,
@@ -220,5 +221,13 @@
 		}
 
 	});
+
+	PubSub.subscribe('SwiperAutoPlayStop', () =>
+		Array.from(swiperContainer, swipe =>
+			swipe.swiper && swipe.swiper.autoplay.running && swipe.swiper.autoplay.stop()));
+
+	PubSub.subscribe('SwiperAutoPlayStart', () =>
+		Array.from(swiperContainer, swipe =>
+			swipe.swiper && swipe.getAttribute('data-autoplay') && swipe.swiper.autoplay.start()));
 
 })(document.querySelectorAll('.swiper-container'));

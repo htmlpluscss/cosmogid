@@ -73,6 +73,7 @@
 	&__left {
 
 		display: flex;
+		position: relative;
 
 	}
 

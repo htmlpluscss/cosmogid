@@ -32,6 +32,8 @@
 
 		CG.activeModal = false;
 
+		PubSub.publish('SwiperAutoPlayStart');
+
 	};
 
 	CG.modalShow = selector => {
@@ -55,6 +57,8 @@
 		CG.activeModal.focus();
 
 		PubSub.publish('modalShow', selector);
+
+		PubSub.publish('SwiperAutoPlayStop');
 
 	};
 

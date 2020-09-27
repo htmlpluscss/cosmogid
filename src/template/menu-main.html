@@ -1,0 +1,36 @@
+{% set menu = [
+
+	"Бренды",
+	"Волосы",
+	"Лицо",
+	"Тело",
+	"Пилинги и скрабы",
+	"Руки",
+	"Ноги",
+	"Мужчинам",
+	"Защита от солнца",
+	"Мезотерапия",
+	"Прочее",
+	"Sale"
+
+] %}
+
+<nav class="menu-main">
+
+	<ul class="menu-main__list">
+
+{% for item in menu %}
+
+		<li class="menu-main__item">
+
+			<a class="menu-main__link" href="/" title="{{ item }}">
+				{{ item }}
+			</a>
+
+		</li>
+
+{% endfor %}
+
+	</ul>
+
+</nav>
