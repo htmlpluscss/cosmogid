@@ -159,13 +159,13 @@
 
 		&-prev {
 
-			left: 0;
+			left: -40px;
 
 		}
 
 		&-next {
 
-			right: 0;
+			right: -40px;
 
 		}
 

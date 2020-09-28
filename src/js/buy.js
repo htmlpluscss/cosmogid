@@ -12,8 +12,7 @@
 
 		const inputID = form.querySelector('[name="id"]'),
 			  storeID = form.querySelector('[name="storeid"]'),
-			  sku = form.querySelector('.card-product__sku-value'),
-			  sale = form.querySelector('.card-product__sale-value'),
+			  sale = form.querySelector('.card-product__sale'),
 			  btn = form.querySelector('.card-product__btn'),
 			  price = form.querySelector('.card-product__price-value'),
 			  priceOld = form.querySelector('.card-product__old-price-value');
@@ -26,7 +25,6 @@
 
 			input.addEventListener('change', () => {
 
-				sku.textContent = input.getAttribute('data-sku');
 				price.textContent = input.getAttribute('data-price');
 
 				if(priceOld) {

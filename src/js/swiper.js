@@ -115,7 +115,7 @@
 								loop: false,
 								slidesPerView: row,
 								slidesPerGroup: row,
-								spaceBetween: 40,
+								spaceBetween: 30,
 								navigation: {
 									nextEl: swipeNext,
 									prevEl: swipePrev

@@ -1,6 +1,6 @@
-			<div class="card-procedure">
+			<div class="card-item card-procedure">
 
-				<a href="/" class="card-procedure__img">
+				<a href="/" class="card-item__img">
 
 					<picture>
 
@@ -14,18 +14,20 @@
 
 				</a>
 
-				<address class="card-procedure__brand">
+				<address class="card-item__cat">
 					{{ item.brand }}
 				</address>
 
-				<h3 class="card-procedure__title">
+				<h3 class="card-item__title">
 					“{{ item.title }}”
 				</h3>
 
 {% if item.label %}
 
-				<p class="card-procedure__label">
-					{{ item.label }}
+				<p class="card-item__label">
+					<span class="card-item__label-item">
+						{{ item.label }}
+					</span>
 				</p>
 
 {% endif %}
@@ -56,8 +58,12 @@
 
 				</dl>
 
-				<a href="/" class="card-procedure__btn btn btn--outline">
-					Подробнее
-				</a>
+				<div class="card-item__btn">
+
+					<a href="/" class="btn btn--outline">
+						Подробнее
+					</a>
+
+				</div>
 
 			</div>
