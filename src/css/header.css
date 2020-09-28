@@ -1,18 +1,6 @@
 .header {
 
-	padding-top: var(--heightHeaderFixed);
-
-	@media ($desktop) {
-
-		padding-top: 0;
-
-		~ .search {
-
-			display: none;
-
-		}
-
-	}
+	/* padding-top: var(--heightHeaderFixed); */
 
 	&__fixed {
 
@@ -59,6 +47,12 @@
 			background-color: var(--blue);
 
 		}
+
+	}
+
+	&__center {
+
+		padding: 26px 0;
 
 	}
 
@@ -152,13 +146,12 @@
 
 	&__search {
 
-		display: none;
+		flex-grow: 1;
+		margin: 0 21px;
 
-		@media ($desktop) {
+		@media ($responsive) {
 
-			flex-grow: 1;
-			margin: 29px 21px;
-			display: block;
+			display: none;
 
 		}
 
@@ -167,7 +160,6 @@
 	&__icons {
 
 		display: flex;
-		margin: 10px 0;
 
 		&-item {
 
@@ -236,12 +228,9 @@
 
 	&__bottom {
 
-		display: flex;
-		justify-content: space-between;
-		padding: 10px 0;
-		align-items: center;
+		margin: 4px 0 31px;
 
-		@media ($desktop) {
+		@media ($responsive) {
 
 			display: none;
 

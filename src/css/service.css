@@ -8,6 +8,12 @@
 		display: flex;
 		justify-content: space-between;
 
+		@media ($responsive) {
+
+			display: none;
+
+		}
+
 	}
 
 	&__item {

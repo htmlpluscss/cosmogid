@@ -1,96 +1,11 @@
 	<header class="header">
 
-		<div class="header__top">
+{% include "template/header__top.html" %}
 
-			<div class="center">
+{% include "template/header__center.html" %}
 
-				<div class="header__box">
+{% include "template/header__bottom.html" %}
 
-					<div class="header__left">
-
-{% include "template/contact-top.html" %}
-
-					</div>
-
-					<div class="header__right">
-
-{% include "template/menu-top.html" %}
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="header__fixed">
-
-			<div class="center">
-
-				<div class="header__box">
-
-					<div class="header__left">
-
-						<button class="header__btn-menu button js-toggle-menu" type="button">
-							<span>меню</span>
-						</button>
-
-						<a class="header__logo" href="/">
-
-							<picture>
-
-								<source srcset="/img/logo.svg" media="(min-width: 1220px)">
-								<source srcset="/img/logo-img.svg">
-
-								<img src="/img/logo.svg" alt="{{ site }}" width="54" height="45" loading="lazy">
-
-							</picture>
-
-						</a>
-
-{% include "template/menu-catalog.html" %}
-
-					</div>
-
-					<div class="header__search">
-
-{% include "template/header__search.html" %}
-
-					</div>
-
-					<div class="header__right header__icons">
-
-{% include "template/header__icons.html" %}
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="center">
-
-			<div class="header__bottom">
-
-				<button class="header__city button" type="button" data-modal="cities">
-					Екатеринбург
-				</button>
-
-				<div class="header__phone">
-
-					<a href="tel:+73433394843">
-						+7 (343) 339-48-43
-					</a>
-
-				</div>
-
-			</div>
-
-{% include "template/menu-main.html" %}
-
-		</div>
+{% include "template/bar.html" %}
 
 	</header>

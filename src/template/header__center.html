@@ -1,0 +1,39 @@
+		<div class="header__center">
+
+			<div class="center">
+
+				<div class="header__box">
+
+					<div class="header__left">
+
+						<button class="header__btn-menu button js-toggle-menu" type="button">
+							<span>меню</span>
+						</button>
+
+						<a class="header__logo" href="/">
+
+							<img src="/img/logo.svg" alt="{{ site }}" width="54" height="45" loading="lazy">
+
+						</a>
+
+{% include "template/menu/menu-catalog.html" %}
+
+					</div>
+
+					<div class="header__search">
+
+{% include "template/header__search.html" %}
+
+					</div>
+
+					<div class="header__right header__icons">
+
+{% include "template/header__icons.html" %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
