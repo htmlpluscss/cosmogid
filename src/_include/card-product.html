@@ -1,6 +1,6 @@
-			<div class="card-product">
+			<div class="card-item card-product">
 
-				<a href="/" class="card-product__img">
+				<a href="/" class="card-item__img">
 
 					<picture>
 
@@ -14,7 +14,7 @@
 
 {% if item.ratio %}
 
-					<span class="card-product__ratio card-product__ratio--{{ item.ratio }}">
+					<span class="card-item__ratio card-item__ratio--{{ item.ratio }}">
 						<span class="visuallyhidden">Рейтинг {{ item.ratio }} звезд</span>
 					</span>
 
@@ -22,7 +22,7 @@
 
 {% if item.availability %}
 
-					<span class="card-product__availability">
+					<span class="card-item__availability">
 						{{ item.availability }}
 					</span>
 
@@ -30,21 +30,21 @@
 
 				</a>
 
-				<address class="card-product__brand">
+				<address class="card-item__cat">
 					{{ item.brand }}
 				</address>
 
-				<h3 class="card-product__name">
+				<h3 class="card-item__title">
 					<a href="/">
 						{{ item.name }}
 					</a>
 				</h3>
 
-{% if item.label %}
+{% if item.article and item.article.length > 5 %}
 
-				<p class="card-product__label">
-					{{ item.label }}
-				</p>
+				<a href="/" class="card-product__article-link">
+					всего {{ item.article.length }} вариантов
+				</a>
 
 {% endif %}
 
@@ -61,20 +61,38 @@
 
 {% endif %}
 
-{% if item.sale %}
+{% if item.sale or item.label %}
 
-					<p class="card-product__sale">
-						<span class="visuallyhidden">Скидка</span>
-						<span class="card-product__sale-value">{{ item.sale }}</span>%
+					<p class="card-item__label">
+
+	{% if item.sale %}
+
+						<span class="card-item__label-item">
+
+							<span class="visuallyhidden">Скидка</span>
+							<span class="card-product__sale">{{ item.sale }}</span>%
+
+						</span>
+
+	{% endif %}
+
+	{% if item.label %}
+
+						<span class="card-item__label-item">
+							{{ item.label }}
+						</span>
+
+	{% endif %}
+
 					</p>
 
 {% endif %}
 
-{% if item.article %}
+{% if item.article and item.article.length <= 5 %}
 
 					<div class="card-product__article">
 
-	{% for article in item.article %}
+		{% for article in item.article %}
 
 						<label class="card-product__article-item form-buy__article">
 
@@ -113,7 +131,7 @@
 
 						</label>
 
-	{% endfor %}
+		{% endfor %}
 
 					</div>
 
@@ -155,11 +173,19 @@
 
 					</p>
 
-					<div class="card-product__btn">
+					<div class="card-item__btn card-product__btn">
 
+{% if item.article and item.article.length > 5 %}
+
+						<a href="/" class="btn btn--outline{% if item.inBasket %} hide{% endif %}">
+							Купить
+						</a>
+
+{% else %}
 						<button class="btn btn--outline{% if item.inBasket %} hide{% endif %}">
 							В корзину
 						</button>
+{% endif %}
 
 						<a href="/basket/" class="btn btn--pink{% if not item.inBasket %} hide{% endif %}">
 							В корзине
@@ -173,7 +199,7 @@
 
 				</form>
 
-				<form action="/" class="card-product__wishlist form-wishlist">
+				<form action="/" class="card-item__wishlist form-wishlist">
 
 					<input type="hidden" name="id" value="{{ item.id }}">
 					<input type="hidden" name="type" value="0">
@@ -192,10 +218,6 @@
 					</button>
 
 				</form>
-
-				<button class="card-product__fast-view btn btn--shadow" type="button">
-					Быстрый просмотр
-				</button>
 
 {% if item.desc %}
 
