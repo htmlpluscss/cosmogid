@@ -2,20 +2,70 @@
 
 		<div class="modal__box">
 
-			<div class="modal__item modal__item--callback">
+			<div class="modal__item modal__item--info modal-info">
+
+				<div id="modal-info__title" class="modal-info__title h4"></div>
+
+				<div id="modal-info__message" class="modal-info__message"></div>
+
+				<div class="modal-info__btn">
+
+					<button class="btn btn--outline modal__close" type="button">
+						Закрыть
+					</button>
+
+				</div>
 
 
 			</div>
 
-			<form action="/" class="modal__item modal__item--city-confirm form-city-confirm">
+			<form action="/" class="modal__item modal__item--callback form-modal form">
+
+				<h3 class="form-modal__title h3">
+					Заказать звонок
+				</h3>
+
+				<div class="form-modal__input-box">
+
+					<input type="tel" class="input" placeholder="Введите Ваш номер телефона" aria-label="Ваш номер телефона" required="required">
+
+				</div>
+
+				<div class="form-modal__input-box">
+
+					<input class="input" placeholder="Введите Ваше имя" aria-label="Ваше имя" required="required">
+
+				</div>
+
+				<div class="form-modal__checkbox">
+
+					<label class="checkbox">
+
+						<input type="checkbox" class="checkbox__input" required="required">
+
+						<span class="checkbox__label white-space-nowrap">
+							Я согласен на обработку <a href="/" target="_blank">персональных данных</a>
+						</span>
+
+					</label>
+
+				</div>
+
+				<button class="form-modal__submit btn btn--blue">
+					Отправить
+				</button>
+
+			</form>
+
+			<form action="/" class="modal__item modal__item--city-confirm form-city-confirm modal-info">
 
 				<input type="hidden" name="city" value="Екатеринбург">
 
-				<h3 class="form-city-confirm__title">
+				<h3 class="modal-info__title modal-info__title--city h4">
 					Ваш город <b>Екатеринбург?</b>
 				</h3>
 
-				<div class="form-city-confirm__btn">
+				<div class="modal-info__btn">
 
 					<button class="btn btn--outline">
 						Да
@@ -23,7 +73,7 @@
 
 				</div>
 
-				<div class="form-city-confirm__other">
+				<div class="modal-info__foot">
 
 					<button class="btn btn--link" type="button" data-modal="cities">
 						Выбрать другой
@@ -39,7 +89,7 @@
 
 				<div class="form-city__result"></div>
 
-				<h3 class="form-city__title">
+				<h3 class="form-city__title h4">
 					Наиболее популярные города
 				</h3>
 
@@ -72,6 +122,7 @@
 				</ul>
 
 			</form>
+
 <!--
 			<button type="button" class="modal__close modal__close-btn button" aria-label="Закрыть окно">
 				<svg width="16" height="16" viewBox="0 0 16 16">

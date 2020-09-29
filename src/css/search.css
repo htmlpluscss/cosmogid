@@ -27,6 +27,9 @@
 	&__input {
 
 		flex-grow: 1;
+		height: 32px;
+		padding: 5px 14px;
+		border-color: var(--blue);
 
 		@media ($desktop) {
 
@@ -80,7 +83,7 @@
 		right: -1px;
 		z-index: 8;
 		padding: 6px 0;
-		border: 1px solid var(--heavenly);
+		border: 1px solid var(--border);
 		background-color: #fff;
 		border-radius: 2px;
 
