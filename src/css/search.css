@@ -29,6 +29,7 @@
 		flex-grow: 1;
 		height: 32px;
 		padding: 5px 14px;
+		border-radius: 2px 0 0 2px;
 		border-color: var(--blue);
 
 		@media ($desktop) {

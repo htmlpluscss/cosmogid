@@ -1,40 +1,5 @@
 .card-product {
 
-	&__ratio {
-
-		position: absolute;
-		left: 7px;
-		bottom: 3px;
-		height: 10px;
-		width: 60px;
-		background-image: url("data:image/svg+xml,%3Csvg width='120' height='10' viewBox='0 0 120 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23418EBC'%3E%3Cpath d='M5.5 0l1.2 3.8h4L7.5 6.1l1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8L.3 3.8h4L5.5 0zM53.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L53.5 0zM41.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L41.5 0zM29.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L29.5 0zM17.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L17.5 0z'/%3E%3C/g%3E%3Cg fill='%23e4e4e4'%3E%3Cpath d='M101.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4l1.2-3.8zM89.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L89.5 0zM77.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L77.5 0zM65.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L65.5 0z'/%3E%3C/g%3E%3C/svg%3E");
-
-		&--4 {
-
-			background-position: -12px 0;
-
-		}
-
-		&--3 {
-
-			background-position: -24px 0;
-
-		}
-
-		&--2 {
-
-			background-position: -36px 0;
-
-		}
-
-		&--1 {
-
-			background-position: -48px 0;
-
-		}
-
-	}
-
 	&__sku {
 
 		display: block;
@@ -115,7 +80,7 @@
 	&__one-click {
 
 		color: var(--blue);
-		margin: 10px auto 20px;
+		margin: 12px auto 0;
 		border-bottom-style: dotted;
 		font-style: italic;
 		font-size: 11px;

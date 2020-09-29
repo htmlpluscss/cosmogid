@@ -45,6 +45,7 @@
 		right: 20px;
 		bottom: 20px;
 		padding-right: 5px;
+		transition: var(--transitionDefault);
 
 		&::after {
 
@@ -62,5 +63,15 @@
 
 	}
 
+	@media ($desktop) {
+
+		&:hover &__btn {
+
+			color: #fff;
+			background-color: var(--pink);
+
+		}
+
+	}
 
 }

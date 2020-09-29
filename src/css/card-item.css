@@ -2,7 +2,7 @@
 
 	position: relative;
 	border: 1px solid var(--border);
-	padding: 11px;
+	padding: 20px 10px;
 	display: flex;
 	width: 100%;
 	flex-direction: column;
@@ -11,6 +11,7 @@
 
 		&.is-hover:hover {
 
+			border-color: #fff;
 			box-shadow: 0px 3px 6px rgba(65, 142, 188, 0.3);
 
 		}
@@ -21,7 +22,8 @@
 
 		position: relative;
 		display: block;
-		padding-bottom: 20px;
+		margin-bottom: 8px;
+		text-decoration: none;
 
 	}
 
@@ -76,31 +78,81 @@
 
 	}
 
-	&__label {
+	&__ratio {
 
-		position: absolute;
-		top: 8px;
-		left: -4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 12px;
+		line-height: 14px;
+		color: var(--blue);
+		text-decoration: none;
+		margin: 10px 0;
 
-		&-item {
+		&::before {
 
-			border-radius: 2px;
-			background-color: var(--pink);
-			color: #fff;
-			padding: 0 8px;
-			text-align: center;
-			line-height: 24px;
-			font-size: 16px;
-			margin-bottom: 8px;
-			display: block;
+			content: '';
+			height: 10px;
+			width: 60px;
+			margin-right: 5px;
+			background-image: url("data:image/svg+xml,%3Csvg width='120' height='10' viewBox='0 0 120 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23418EBC'%3E%3Cpath d='M5.5 0l1.2 3.8h4L7.5 6.1l1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8L.3 3.8h4L5.5 0zM53.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L53.5 0zM41.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L41.5 0zM29.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L29.5 0zM17.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L17.5 0z'/%3E%3C/g%3E%3Cg fill='%23e4e4e4'%3E%3Cpath d='M101.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4l1.2-3.8zM89.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L89.5 0zM77.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L77.5 0zM65.5 0l1.2 3.8h4l-3.2 2.3 1.2 3.8-3.2-2.3-3.2 2.3 1.2-3.8-3.2-2.3h4L65.5 0z'/%3E%3C/g%3E%3C/svg%3E");
+
+		}
+
+		&--4::before {
+
+			background-position: -12px 0;
+
+		}
+
+		&--3::before {
+
+			background-position: -24px 0;
+
+		}
+
+		&--2::before {
+
+			background-position: -36px 0;
+
+		}
+
+		&--1::before {
+
+			background-position: -48px 0;
 
 		}
 
 	}
 
-	&__sale {
+	&__label {
 
-		font-family: 'ProximaNova';
+		position: absolute;
+		top: -1px;
+		left: -1px;
+
+		&-item {
+
+			border-radius: 0 2px 2px 0;
+			background-color: #B14EAE;
+			color: #fff;
+			padding: 0 8px;
+			text-align: center;
+			line-height: 25px;
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 4px;
+			display: block;
+
+			&--sale {
+
+				font-weight: 500;
+				font-family: 'ProximaNova';
+				background-color: var(--pink);
+
+			}
+
+		}
 
 	}
 
@@ -136,7 +188,7 @@
 
 		.btn {
 
-			width: 138px;
+			width: 140px;
 			padding: 0;
 			font-size: 12px;
 			font-weight: 500;

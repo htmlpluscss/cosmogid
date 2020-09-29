@@ -85,7 +85,7 @@
 
 					if(row === 'auto') {
 
-						swipe.parentNode.classList.add('swiper-container-style');
+/*						swipe.parentNode.classList.add('swiper-container-style');
 
 						swipeBtns.classList.remove('hide');
 						swipeControls.classList.remove('hide');
@@ -98,7 +98,7 @@
 								prevEl: swipePrev
 							}
 						});
-
+*/
 					}
 					else {
 
@@ -111,6 +111,12 @@
 							swipeBtns.classList.remove('hide');
 							swipeControls.classList.remove('hide');
 
+							if(swipe.getAttribute('data-nav')) {
+
+								swipeNav.classList.remove('hide');
+
+							}
+
 							mySwipe = new Swiper(swipe, {
 								loop: false,
 								slidesPerView: row,
@@ -119,6 +125,13 @@
 								navigation: {
 									nextEl: swipeNext,
 									prevEl: swipePrev
+								},
+								pagination: {
+									el: swipeNav,
+									clickable: true,
+									bulletElement: 'button',
+									bulletClass: 'button',
+									bulletActiveClass: 'is-active'
 								}
 							});
 
@@ -134,7 +147,7 @@
 
 		if (product) {
 
-			swipeControls.classList.remove('hide');
+/*			swipeControls.classList.remove('hide');
 			swipePrev.classList.add('swiper-button-disabled');
 
 			toggleSwipe = () => {
@@ -150,7 +163,7 @@
 					}
 				});
 
-			}
+			}*/
 
 		}
 

@@ -488,7 +488,7 @@
 	&__item {
 
 		white-space: nowrap;
-		margin-left: 22px;
+		margin-left: 28px;
 
 	}
 
@@ -496,8 +496,8 @@
 
 		display: block;
 		color: #fff;
-		font-size: 12px;
-		line-height: 34px;
+		font-size: 14px;
+		line-height: 37px;
 		font-weight: 600;
 		text-decoration: none;
 		white-space: nowrap;

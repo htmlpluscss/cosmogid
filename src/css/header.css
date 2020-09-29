@@ -1,6 +1,6 @@
 .header {
 
-	/* padding-top: var(--heightHeaderFixed); */
+	/* padding-top: var(--heightHeaderFixed);
 
 	&__fixed {
 
@@ -35,7 +35,7 @@
 		}
 
 	}
-
+*/
 	&__top {
 
 		display: none;
@@ -52,7 +52,7 @@
 
 	&__center {
 
-		padding: 26px 0;
+		padding: 22px 0;
 
 	}
 
@@ -82,10 +82,11 @@
 		width: 32px;
 		height: 32px;
 		flex-shrink: 0;
-		background-color: var(--blue);
 		color: transparent;
 		margin-right: 22px;
 		position: relative;
+		border-radius: 2px;
+		border: 2px solid var(--blue);
 
 		&::after,
 		&::before,
@@ -97,23 +98,24 @@
 			right: 0;
 			bottom: 0;
 			margin: auto;
-			width: 15px;
-			height: 1px;
+			width: 18px;
+			height: 2px;
 			transition: var(--transitionDefault);
-			background-color: #fff;
+			background-color: var(--color);
+			transform: rotate(180deg);
 
 		}
 
 		&::before {
 
-			bottom: 10px;
+			bottom: 12px;
 			content: '';
 
 		}
 
 		&::after {
 
-			top: 10px;
+			top: 12px;
 			content: '';
 
 		}
@@ -128,14 +130,14 @@
 
 			&::before {
 
-				transform: rotate(45deg);
+				transform: rotate(-45deg);
 				bottom: 0;
 
 			}
 
 			&::after {
 
-				transform: rotate(-45deg);
+				transform: rotate(45deg);
 				top: 0;
 
 			}
@@ -147,7 +149,7 @@
 	&__search {
 
 		flex-grow: 1;
-		margin: 0 21px;
+		margin: 0 20px;
 
 		@media ($responsive) {
 
@@ -228,7 +230,7 @@
 
 	&__bottom {
 
-		margin: 4px 0 31px;
+		margin: 8px 0 30px;
 
 		@media ($responsive) {
 
@@ -241,19 +243,19 @@
 	&__city {
 
 		position: relative;
-		padding-left: 16px;
-		margin-right: 36px;
+		padding-left: 28px;
+		margin-right: 18px;
 		max-width: 50%;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.813 3A2.812 2.812 0 005 5.813C5 8.498 7.813 12 7.813 12s2.812-3.502 2.812-6.188A2.813 2.813 0 007.812 3zm0 4.365a1.519 1.519 0 110-3.037 1.519 1.519 0 010 3.037z' fill='%23fff'/%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.74 4.13a3.87 3.87 0 00-3.87 3.86c0 3.7 3.87 8.51 3.87 8.51s3.87-4.82 3.87-8.5a3.87 3.87 0 00-3.87-3.88zm0 6a2.09 2.09 0 110-4.18 2.09 2.09 0 010 4.18z' fill='%23fff'/%3E%3C/svg%3E");
 		background-repeat: no-repeat;
 		background-position: left;
 
 		&-value {
 
 			display: block;
-			font-size: 12px;
+			font-size: 14px;
 			line-height: 18px;
 			height: 18px;
 			font-weight: 600;
@@ -306,8 +308,8 @@
 			svg {
 
 				position: absolute;
-				top: 2px;
-				left: -20px;
+				top: 0;
+				left: -22px;
 				fill: #fff;
 
 			}
@@ -316,9 +318,9 @@
 
 		@media ($desktop) {
 
-			font-size: 12px;
-			line-height: 18px;
-			margin-left: 24px;
+			font-size: 14px;
+			line-height: 22px;
+			margin-left: 20px;
 			font-weight: 600;
 
 		}

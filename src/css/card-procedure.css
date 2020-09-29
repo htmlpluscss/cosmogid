@@ -1,12 +1,28 @@
 .card-procedure {
 
+	.card-item {
+
+		&__cat,
+		&__title {
+
+			text-align: center;
+
+		}
+
+		&__btn {
+
+			margin-top: auto;
+
+		}
+
+	}
+
 	&__desc {
 
 		font-size: 12px;
 		line-height: 14px;
 		color: #737373;
-		margin: 12px 0;
-		min-height: 84px;
+		margin: 6px 0 16px;
 
 		&-item {
 

@@ -2,7 +2,7 @@
 
 	flex-shrink: 0;
 	background-color: var(--blue);
-	padding: 45px 0 18px;
+	padding: 44px 0 18px;
 	color: #fff;
 
 	@media ($responsive) {
@@ -64,7 +64,7 @@
 
 	&-callback {
 
-		font-size: 11px;
+		font-size: 12px;
 		line-height: 18px;
 		font-weight: 500;
 		font-style: italic;
@@ -72,14 +72,21 @@
 		text-decoration-style: dotted;
 		height: 18px;
 		color: #fff;
+
 	}
 
 	&__menu {
 
 		width: 25%;
 		font-weight: 500;
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 18px;
+
+		li {
+
+			margin: 7px 0;
+
+		}
 
 		a {
 
@@ -88,7 +95,6 @@
 
 			&[href^="tel"] {
 
-				font-size: 14px;
 				font-weight: 600;
 
 			}
@@ -117,9 +123,9 @@
 	&__head {
 
 		font-weight: 600;
-		font-size: 14px;
-		line-height: 18px;
-		margin-bottom: 12px;
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 16px;
 
 	}
 
@@ -130,7 +136,7 @@
 		font-weight: 500;
 		font-size: 12px;
 		line-height: 18px;
-		margin-top: 50px;
+		margin-top: 30px;
 
 		p:first-child {
 
@@ -154,11 +160,8 @@
 
 		&__label {
 
-			white-space: nowrap;
-			font-size: 14px;
-			font-weight: 600;
 			display: block;
-			line-height: 18px;
+			margin-bottom: 10px;
 
 		}
 
@@ -173,7 +176,6 @@
 		&__input-box {
 
 			position: relative;
-			margin: 13px 0;
 
 		}
 
@@ -201,6 +203,8 @@
 		}
 
 		&__checkbox {
+
+			margin-top: 10px;
 
 			.checkbox__label {
 
