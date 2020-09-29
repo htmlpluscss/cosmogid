@@ -4,7 +4,8 @@
 		parent : "Бренды"
 	},
 	{
-		parent : "Волосы"
+		parent : "Волосы",
+		separator : "top"
 	},
 	{
 		parent : "Лицо"
@@ -79,7 +80,11 @@
 		]
 	},
 	{
-		parent : "Sale"
+		parent : "Sale",
+		separator : "top"
+	},
+	{
+		parent : "Новинки"
 	}
 
 
@@ -114,7 +119,7 @@
 
 {% for item in menu %}
 
-			<li class="menu-catalog__item menu-catalog__level1-item">
+			<li class="menu-catalog__item menu-catalog__level1-item{% if item.separator %} menu-catalog__separator{% endif %}">
 
 				<a class="menu-catalog__link{% if item.category %} menu-catalog__link--arrow menu-catalog__head{% endif %}" href="/" title="{{ item.parent }}">
 					{{ item.parent }}
@@ -168,13 +173,12 @@
 
 {% set second = [
 
-	"Акции",
 	"Оплата и доставка",
-	"Бренды",
-	"Информация",
-	"О нас",
 	"Контакты",
-	"Информация"
+	"Возврат и обмен товара",
+	"Профессионалам",
+	"Статьи",
+	"Протоколы процедур"
 
 ] %}
 

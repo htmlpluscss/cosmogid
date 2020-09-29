@@ -1,6 +1,6 @@
 .menu-catalog {
 
-	display: none;
+	/* display: none; */
 
 	@media ($desktop) {
 
@@ -20,11 +20,31 @@
 
 		}
 
+		&__separator {
+
+			&::before {
+
+				height: 1px;
+				margin: 12px 16px;
+				content: '';
+				display: block;
+				background-color: #f1f1f1;
+
+			}
+
+		}
+
 		&__second {
 
-			margin-top: 12px;
-			padding-top: 12px;
-			border-top: 1px solid #f1f1f1;
+			&::before {
+
+				height: 1px;
+				margin: 12px 16px;
+				content: '';
+				display: block;
+				background-color: #f1f1f1;
+
+			}
 
 		}
 
