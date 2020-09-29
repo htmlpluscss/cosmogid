@@ -1,22 +1,28 @@
 .menu-catalog {
 
-	/* display: none; */
+	display: none;
 
 	@media ($desktop) {
 
 		position: absolute;
-		top: 100%;
+		top: 100px;
 		left: 0;
 		z-index: 8;
 		width: 235px;
 		background-color: #fff;
-		border: 1px solid #F1F1F1;
+		border: 1px solid #ececec;
 		padding: 30px 0;
-		box-shadow: 0px 4px 4px rgba(181, 181, 181, 0.25);
+		margin-top: 3px;
 
 		&__header {
 
 			display: none;
+
+		}
+
+		&__inner {
+
+			top: -31px;
 
 		}
 
@@ -48,8 +54,7 @@
 
 		}
 
-		&__link,
-		&__second-link {
+		&__link {
 
 			display: block;
 			font-weight: 500;
@@ -77,6 +82,7 @@
 			&:hover {
 
 				color: var(--blue);
+				font-weight: 600;
 
 				&--arrow::after {
 
@@ -94,39 +100,82 @@
 
 		}
 
-		&__level2,
-		&__level3 {
+		&__level2 {
 
 			display: none;
 			position: absolute;
-			width: 100%;
+			width: calc(1220px - 235px);
 			top: 0;
 			left: 100%;
 			bottom: 0;
 			background-color: #fff;
-			border: 1px solid #F1F1F1;
+			border: 1px solid #ececec;
+			border-left: 0;
 			padding: 30px 0;
-			box-shadow: 0px 4px 4px rgba(181, 181, 181, 0.25);
 
-			&::after {
+			height: calc(100% + 62px);
 
-				position: absolute;
-				width: 7px;
-				top: 0;
-				left: -6px;
-				bottom: 0;
-				content: '';
-				background-color: #fff;
+			&-column {
+
+				flex-basis: 25%;
+				flex-grow: 1;
+
+			}
+
+			&-head {
+
+				font-weight: 600;
+				margin-bottom: 8px;
 
 			}
 
 		}
 
-		&__item:hover &__level2,
-		&__level2-item:hover + &__level3,
-		&__level3:hover {
+		&__item:hover &__level2 {
+
+			display: flex;
+
+		}
+
+		&__level3 {
+
+			max-height: 200px;
+			overflow: hidden;
+
+		}
+
+		&__level3 &__link {
+
+
+		}
+
+		&__second-link {
 
 			display: block;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			color: #303030;
+			text-decoration: none;
+			padding: 4px 16px;
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			svg {
+
+				fill: var(--blue);
+				width: 25px;
+				height: 25px;
+				margin-right: 8px;
+
+			}
+
+			&:hover {
+
+				color: var(--blue);
+
+			}
 
 		}
 
@@ -183,7 +232,7 @@
 
 		&__item {
 
-			border-bottom: 1px solid var(--hr);
+			border-bottom: 1px solid var(--border);
 
 		}
 
@@ -251,7 +300,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border-bottom: 1px solid var(--hr);
+			border-bottom: 1px solid var(--border);
 
 		}
 

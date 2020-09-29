@@ -124,8 +124,6 @@
 				left: 0;
 				right: 0;
 				bottom: 0;
-				width: 100%;
-				height: auto;
 				margin: auto;
 				fill: var(--border);
 				transition: var(--transitionDefault);

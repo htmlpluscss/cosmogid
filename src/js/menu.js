@@ -1,15 +1,15 @@
 
-((btn) => {
+((menu) => {
 
 	"use strict";
 
-	if(!btn) {
+	if(!menu) {
 
 		return;
 
 	}
 
-	const menu = document.querySelector('.menu-catalog'),
+	const btn = document.querySelector('.js-toggle-menu'),
 		  level1 = menu.querySelectorAll('.menu-catalog__head'),
 		  level2 = menu.querySelectorAll('.menu-catalog__head-level2'),
 		  btnClose = menu.querySelector('.menu-catalog__close'),
@@ -161,4 +161,4 @@
 
 	});
 
-})(document.querySelector('.js-toggle-menu'));
+})(document.querySelector('.menu-catalog'));

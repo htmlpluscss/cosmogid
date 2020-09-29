@@ -156,7 +156,7 @@
 
 		if (billboard) {
 
-			swipeBtns.classList.add('hide');
+			swipeBtns.classList.remove('hide');
 			swipeNav.classList.remove('hide');
 			swipeControls.classList.remove('hide');
 
@@ -169,6 +169,10 @@
 					preloadImages: false,
 					autoplay: {
 						delay: autoplay
+					},
+					navigation: {
+						nextEl: swipeNext,
+						prevEl: swipePrev
 					},
 					pagination: {
 						el: swipeNav,
