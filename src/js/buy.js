@@ -156,11 +156,31 @@
 
 	}
 
-	Array.from(btns, form => {
+	const formBuyOneClick = document.querySelector('.form-buy-one-click__product');
 
-		form.addEventListener('click', event => {
+	Array.from(btns, btn => {
 
-			alert('модалка заказа, в нее передаем id');
+		btn.addEventListener('click', event => {
+
+			const card = btn.closest('.card-product'),
+				  id = card.querySelector('[name="id"]'),
+				  storeid = card.querySelector('[name="storeid"]'),
+				  articleid = card.querySelector('[name="articleid"]:checked'),
+				  cat = card.querySelector('.card-item__cat'),
+				  title = card.querySelector('.card-item__title'),
+				  price = card.querySelector('.card-product__price-value'),
+				  img = card.querySelector('.card-item__img').innerHTML;
+
+			formBuyOneClick.querySelector('[name="id"]').value = id.value;
+			formBuyOneClick.querySelector('[name="storeid"]').value = storeid ? storeid.value : '';
+			formBuyOneClick.querySelector('[name="articleid"]').value = articleid ? articleid.value : '';
+
+			formBuyOneClick.querySelector('.card-item__img').innerHTML = img;
+			formBuyOneClick.querySelector('.card-item__cat').textContent = cat.textContent;
+			formBuyOneClick.querySelector('.card-item__title').textContent = title.textContent;
+			formBuyOneClick.querySelector('.card-item__price').textContent = price.textContent;
+
+			CG.modalShow('buy-one-click');
 
 		});
 

@@ -112,29 +112,6 @@
 
 	}
 
-	&__price {
-
-		display: flex;
-		color: #303030;
-		font: 500 16px/20px 'ProximaNova';
-		white-space: nowrap;
-		margin: 8px 0;
-		justify-content: center;
-
-		s {
-
-			color: #908d8d;
-			margin-right: 8px;
-			font-size: 12px;
-
-		}
-
-		&-suf {
-
-		}
-
-	}
-
 	&__one-click {
 
 		color: var(--blue);
