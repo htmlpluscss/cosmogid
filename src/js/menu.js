@@ -28,9 +28,12 @@
 
 		CG.OpenMenu = true;
 
-		// записываем значение скролла страницы
-		CG.windowScrollOld = window.pageYOffset;
-		window.scrollTo(0, 0);
+		if(window.innerWidth < 1200) {
+
+			CG.windowScrollOld = window.pageYOffset;
+			window.scrollTo(0, 0);
+
+		}
 
 		document.body.classList.add('menu-open');
 
@@ -42,7 +45,11 @@
 
 		document.body.classList.remove('menu-open');
 
-		window.scrollTo(0, CG.windowScrollOld);
+		if(window.innerWidth < 1200) {
+
+			window.scrollTo(0, CG.windowScrollOld);
+
+		}
 
 		CG.OpenMenu = false;
 
