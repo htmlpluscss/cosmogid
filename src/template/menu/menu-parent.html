@@ -1,0 +1,60 @@
+{% set menu = [
+
+	{
+		id     : 1,
+		parent : "Волосы"
+	},
+	{
+		id     : 2,
+		parent : "Лицо"
+	},
+	{
+		id     : 3,
+		parent : "Тело"
+	},
+	{
+		id     : 4,
+		parent : "Пилинги и скрабы"
+	},
+	{
+		id     : 5,
+		parent : "Руки"
+	},
+	{
+		id     : 6,
+		parent : "Ноги"
+	},
+	{
+		id     : 7,
+		parent : "Мужчинам"
+	},
+	{
+		id     : 8,
+		parent : "Защита от солнца"
+	},
+	{
+		id     : 9,
+		parent : "Мезотерапия"
+	},
+	{
+		id     : 10,
+		parent : "Прочее"
+	}
+
+] %}
+
+			<ul class="menu-catalog__list">
+
+{% for item in menu %}
+
+				<li class="menu-catalog__item">
+
+					<a class="menu-catalog__link menu-catalog__parent" href="/" title="{{ item.parent }}" data-id="{{ item.id }}">
+						{{ item.parent }}
+					</a>
+
+				</li>
+
+{% endfor %}
+
+			</ul>

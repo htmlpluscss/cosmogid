@@ -1,0 +1,63 @@
+{% set brand = [
+
+	{
+		name  : "collistar",
+		img   : "collistar"
+	},
+	{
+		name  : "casmara",
+		img   : "casmara"
+	},
+	{
+		name  : "indola",
+		img   : "indola"
+	},
+	{
+		name  : "loreal",
+		img   : "loreal"
+	},
+	{
+		name  : "kalson",
+		img   : "kalson"
+	},
+	{
+		name  : "keune",
+		img   : "keune"
+	}
+
+] %}
+
+
+			<ul class="menu-catalog__brand">
+
+{% for item in brand %}
+
+				<li class="menu-catalog__brand-item">
+
+					<a class="menu-catalog__brand-link" href="/">
+
+						<picture>
+
+							<source srcset="/img/card-brand/{{ item.img }}--110x60.webp 1x, /img/card-brand/{{ item.img }}--220x120.webp 2x" type="image/webp">
+
+							<source srcset="/img/card-brand/{{ item.img }}--110x60.jpg 1x, /img/card-brand/{{ item.img }}--220x120.jpg 2x">
+
+							<img src="/img/card-brand/{{ item.img }}--220x120.jpg" alt="{{ item.name }}" width="110" height="60" loading="lazy">
+
+						</picture>
+
+					</a>
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+			<div class="menu-catalog__brand-all">
+
+				<a class="menu-catalog__level2-head" href="/">
+					Все бренды категории
+				</a>
+
+			</div>

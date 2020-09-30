@@ -10,17 +10,20 @@
 	}
 
 	const btn = document.querySelector('.js-toggle-menu'),
-		  level1 = menu.querySelectorAll('.menu-catalog__head'),
+		  level1 = menu.querySelectorAll('.menu-catalog__parent'),
+		  second = menu.querySelectorAll('.menu-catalog__second-link'),
 		  level2 = menu.querySelectorAll('.menu-catalog__head-level2'),
 		  btnClose = menu.querySelector('.menu-catalog__close'),
 		  btnBack = menu.querySelector('.menu-catalog__back'),
 		  category = menu.querySelector('.menu-catalog__current-category'),
-		  categoryTextDefault = category.textContent;
+		  categoryTextDefault = category.textContent,
+		  btnSlide = menu.querySelectorAll('.menu-catalog__slide-btn');
 
 	let	level1Scroll = 0,
 		level2Scroll = 0,
 		level1Open = null,
-		level2Open = null;
+		level2Open = null,
+		level2Active = null;
 
 	const menuOpen = () => {
 
@@ -78,7 +81,7 @@
 	});
 
 	// На уровень назад
-
+/*
 	btnBack.addEventListener('click', () => {
 
 		if(menu.classList.contains('is-level3')) {
@@ -117,14 +120,52 @@
 
 	});
 
-
+*/
 	// первый уровень
 
 	Array.from(level1, el => {
 
-		el.addEventListener('click', evt => {
+		const id = el.getAttribute('data-id');
 
-			evt.preventDefault();
+		// наведение
+		el.addEventListener('mouseleave', event => {
+
+			if(window.innerWidth >= 1250) {
+
+
+			}
+
+		});
+
+		el.addEventListener('mouseenter', event => {
+
+			if(window.innerWidth >= 1250) {
+
+				Array.from(level1, elem => elem.classList.toggle('is-hover', elem === el));
+
+				if(level2Active) {
+
+					level2Active.classList.add('hide');
+
+				}
+
+				level2Active = menu.querySelector('.menu-catalog__level2--' + id);
+
+				if(level2Active) {
+
+					level2Active.classList.remove('hide');
+
+				}
+
+			}
+
+		});
+
+		/*
+
+		el.addEventListener('click', event => {
+
+			event.preventDefault();
 
 			level1Scroll = window.pageYOffset;
 
@@ -141,16 +182,36 @@
 			category.textContent = el.textContent;
 
 		});
+*/
+	});
+
+	// первый уровень, второстипенное меню
+	Array.from(second, el => {
+
+		el.addEventListener('mouseenter', () => {
+
+			if(level2Active) {
+
+				level2Active.classList.add('hide');
+
+				Array.from(level1, elem => elem.classList.remove('is-hover'));
+
+				level2Active = false;
+
+			}
+
+		});
 
 	});
 
-	// второй уровень
 
+	// второй уровень
+/*
 	Array.from(level2, el => {
 
-		el.addEventListener('click', evt => {
+		el.addEventListener('click', event => {
 
-			evt.preventDefault();
+			event.preventDefault();
 
 			level2Scroll = window.pageYOffset;
 
@@ -163,6 +224,27 @@
 			level2Open = el;
 
 			category.textContent = el.textContent;
+
+		});
+
+	});*/
+
+	// развернуть меню slide
+
+	Array.from(btnSlide, el => {
+
+		const parent = el.parentNode,
+			  itemsHide = parent.querySelectorAll('.menu-catalog__level2-item.hide');
+
+		let open = false;
+
+		el.addEventListener('click', event => {
+
+			open = !open;
+
+			el.classList.toggle('is-open', open);
+
+			Array.from(itemsHide, item => item.classList.toggle('hide', !open));
 
 		});
 

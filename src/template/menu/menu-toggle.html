@@ -1,0 +1,69 @@
+{% set menu = [
+
+	{
+		name  : "По виду средства",
+		list  : [
+			"Кератин-наполнитель",
+			"Ампулы",
+			"Бальзам",
+			"Безсульфатный шампунь",
+			"Воск",
+			"Гель ",
+			"Глина",
+			"Двухфазное средство",
+			"Капли",
+			"Капсулы",
+		]
+	},
+	{
+		name  : "По виду процедуры",
+		list  : [
+			"Балансирование",
+			"Восстановление и обновление структуры",
+			"Восстановление упругости и эластичности",
+			"Восстановление после антибиотиков, солнечной инсоляции",
+			"Выведение токсинов",
+			"Выравнивание микрорельефа кожи",
+			"Выравнивание цвета кожи",
+			"Детский уход",
+			"Дневной уход"
+		]
+	}
+
+] %}
+
+{% for item in menu %}
+
+		<div class="menu-catalog__level2-block">
+
+			<a class="menu-catalog__level2-head" href="/">
+				{{ item.name }}
+			</a>
+
+			<ul class="menu-catalog__level2-list">
+
+	{% for link in item.list %}
+
+				<li class="menu-catalog__level2-item{% if loop.index > 8 %} hide{% endif %}">
+
+					<a class="menu-catalog__level2-link" href="/" title="{{ link }}">
+						{{ link }}
+					</a>
+
+				</li>
+
+	{% endfor %}
+
+			</ul>
+
+	{% if item.list.length > 8 %}
+
+			<button class="menu-catalog__slide-btn button" data-alt="Свернуть">
+				Развернуть
+			</button>
+
+	{% endif %}
+
+		</div>
+
+{% endfor %}
