@@ -252,6 +252,29 @@
 
 	}
 
+	&__label {
+
+		font-size: 14px;
+		font-weight: 600;
+		color: var(--text);
+
+	}
+
+	&__links {
+
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 24px;
+
+		.btn {
+
+			font-weight: 500;
+			font-size: 12px;
+
+		}
+
+	}
+
 	&__submit {
 
 		margin: 26px 0;

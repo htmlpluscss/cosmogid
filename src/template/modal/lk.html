@@ -1,18 +1,80 @@
-			<form action="/" class="modal__item modal__item--callback form-modal form">
+			<form action="/" class="modal__item modal__item--login form-modal form">
 
 				<h3 class="form-modal__title h3">
-					Заказать звонок
+					Вход
 				</h3>
 
 				<div class="form-modal__input-box">
 
-					<input type="tel" class="input" placeholder="Введите Ваш номер телефона" aria-label="Ваш номер телефона" required="required" name="phone">
+					<label class="form-modal__label" for="form-login-email">
+						E-mail
+					</label>
+
+					<input type="email" class="input" placeholder="Например abc@mail.ru" aria-label="Ваш E-mail" required="required" name="email" id="form-login-email">
 
 				</div>
 
 				<div class="form-modal__input-box">
 
-					<input class="input" placeholder="Введите Ваше имя" aria-label="Ваше имя" required="required" name="name">
+					<label class="form-modal__label" for="form-login-password">
+						Пароль
+					</label>
+
+					<input type="password" class="input" aria-label="Ваш пароль" required="required" name="password" id="form-login-password">
+
+				</div>
+
+				<div class="form-modal__links">
+
+					<button type="button" class="btn btn--link" data-modal="reset">
+						Забыли пароль?
+					</button>
+
+					<button type="button" class="btn btn--link" data-modal="reg">
+						Зарегистрироваться
+					</button>
+
+				</div>
+
+				<button class="form-modal__submit btn btn--blue">
+					Войти
+				</button>
+
+			</form>
+
+			<form action="/" class="modal__item modal__item--reg form-modal form">
+
+				<h3 class="form-modal__title h3">
+					Регистрация
+				</h3>
+
+				<div class="form-modal__input-box">
+
+					<label class="form-modal__label" for="form-reg-email">
+						E-mail
+					</label>
+
+					<input type="email" class="input" placeholder="Например abc@mail.ru" aria-label="Ваш E-mail" required="required" name="email" id="form-reg-email">
+
+				</div>
+
+				<div class="form-modal__input-box">
+
+					<label class="form-modal__label" for="form-reg-password">
+						Пароль
+					</label>
+
+					<input type="password" class="input" aria-label="Ваш пароль" required="required" name="password" id="form-reg-password" autocomplete="new-password">
+
+				</div>
+
+				<div class="form-modal__input-box">
+
+					<label class="form-modal__label" for="form-reg-password-repeat">
+						Пароль повторить
+					</label>
+
+					<input type="password" class="input" aria-label="Ваш пароль" required="required" name="password-repeat" id="form-reg-password-repeat" autocomplete="new-password">
 
 				</div>
 
@@ -31,7 +93,53 @@
 				</div>
 
 				<button class="form-modal__submit btn btn--blue">
-					Отправить
+					Зарегистрироваться
+				</button>
+
+				<div class="form-modal__links">
+
+					<button type="button" class="btn btn--link" data-modal="login">
+						Авторизация
+					</button>
+
+					<button type="button" class="btn btn--link" data-modal="reset">
+						Забыли пароль?
+					</button>
+
+				</div>
+
+			</form>
+
+			<form action="/" class="modal__item modal__item--reset form-modal form">
+
+				<h3 class="form-modal__title h3">
+					Восстановление доступа
+				</h3>
+
+				<div class="form-modal__input-box">
+
+					<label class="form-modal__label" for="form-reset-email">
+						E-mail
+					</label>
+
+					<input type="email" class="input" placeholder="Например abc@mail.ru" aria-label="Ваш E-mail" required="required" name="email" id="form-reset-email">
+
+				</div>
+
+				<div class="form-modal__links">
+
+					<button type="button" class="btn btn--link" data-modal="login">
+						Авторизация
+					</button>
+
+					<button type="button" class="btn btn--link" data-modal="reg">
+						Регистрация
+					</button>
+
+				</div>
+
+				<button class="form-modal__submit btn btn--blue">
+					Восстановить
 				</button>
 
 			</form>
