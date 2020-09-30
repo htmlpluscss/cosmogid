@@ -3,24 +3,11 @@
 	position: relative;
 	max-width: 626px;
 
-	@media ($mobile) {
-
-	}
-
-	@media ($tablet) {
-
-
-	}
-
-	@media ($desktop) {
-
-
-	}
-
 	&__inner {
 
-		position: relative;
 		display: flex;
+		z-index: 8;
+		position: relative;
 
 	}
 
@@ -31,11 +18,6 @@
 		padding: 5px 14px;
 		border-radius: 2px 0 0 2px;
 		border-color: var(--blue);
-
-		@media ($desktop) {
-
-
-		}
 
 	}
 
@@ -79,77 +61,71 @@
 	&__result {
 
 		position: absolute;
-		top: 100%;
-		left: -1px;
-		right: -1px;
-		z-index: 8;
-		padding: 6px 0;
+		top: -10px;
+		left: -10px;
+		right: -10px;
+		z-index: 7;
+		padding: 10px;
+		padding-top: 50px;
 		border: 1px solid var(--border);
 		background-color: #fff;
 		border-radius: 2px;
+		box-shadow: 0px 1px 5px rgba(65, 142, 188, 0.5);
 
-		&-item {
+		&-not {
 
-			position: relative;
+			margin: 12px;
+
+		}
+
+		.card-item {
+
 			display: flex;
+			flex-direction: row;
 			align-items: center;
-			color: var(--text);
-			font-size: 14px;
-			line-height: 16px;
-			padding: 4px 10px 4px 28px;
 			text-decoration: none;
-			background-position: 8px center;
-			background-repeat: no-repeat;
-			background-size: auto 14px;
+			border-bottom: 0;
+			border-left: 0;
+			border-right: 0;
+			padding: 0;
 
-			&--pre-search {
+			&:first-child {
 
-				background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23bdbdbd' d='M5.038 9.53A4.497 4.497 0 01.546 5.038 4.497 4.497 0 015.038.545 4.497 4.497 0 019.53 5.038 4.497 4.497 0 015.038 9.53zm0-8.133a3.645 3.645 0 00-3.64 3.64 3.645 3.645 0 003.64 3.641 3.645 3.645 0 003.64-3.64 3.645 3.645 0 00-3.64-3.641zm6.284 9.933a.426.426 0 000-.602L9.416 8.822a.426.426 0 10-.602.602l1.905 1.906a.425.425 0 00.603 0z'/%3E%3C/svg%3E");
+				border-top: 0;
 
 			}
 
-			@media ($desktop) {
+			&__img {
 
-				a&:hover {
+				width: 34px;
+				height: 34px;
+				margin-right: 8px;
 
-					color: var(--blue);
+				img {
 
-					svg {
-
-						fill: var(--blue);
-
-					}
+					width: 34px;
+					height: 34px;
 
 				}
 
 			}
 
-		}
+			&__title {
 
-		hr {
-
-			background-color: #f5f5f5;
-			margin: 5px 0;
-
-		}
-
-		&-remove {
-
-			margin-left: auto;
-
-			@media ($desktop) {
-
-				&:hover svg {
-
-					fill: #757575;
-
-				}
+				flex-grow: 1;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				margin-left: 5px;
 
 			}
 
-		}
+			&__price {
 
-		&-value {
+				width: 80px;
+				justify-content: flex-end;
+
+			}
 
 		}
 

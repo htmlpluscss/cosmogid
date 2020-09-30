@@ -1,46 +1,64 @@
 
-					<span class="search__result-item search__result-item--pre-search">
+{% for double in [1,2,3,4,5] %}
 
-						<span class="search__result-value">
-							тушь для ресниц
+					<a href="/" class="card-item">
+
+						<span class="card-item__img">
+
+							<picture>
+
+								<source srcset="/img/card-product/27--34x34.webp 1x, /img/card-product/27--68x68.webp 2x" type="image/webp">
+
+								<source srcset="/img/card-product/27--34x34.jpg 1x, /img/card-product/27--68x68.jpg 2x">
+
+								<img src="/img/card-product/27--68x68.jpg" alt="" width="34" height="34">
+
+							</picture>
+
 						</span>
 
-						<button class="search__result-remove button" type="button" aria-label="удалить из поиска">
-							<svg width="10" height="11" viewBox="0 0 10 11">
-								<use xlink:href="#ico-reset"/>
-							</svg>
-						</button>
-
-					</span>
-
-					<span class="search__result-item search__result-item--pre-search">
-
-						<span class="search__result-value">
-							тушь для ресниц
+						<span class="card-item__cat">
+							Ericson Laboratoire
 						</span>
 
-						<button class="search__result-remove button" type="button" aria-label="удалить из поиска">
-							<svg width="10" height="11" viewBox="0 0 10 11">
-								<use xlink:href="#ico-reset"/>
-							</svg>
-						</button>
+						<span class="card-item__title">
+							Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл
+						</span>
 
-					</span>
-
-					<hr>
-
-					<a href="/" class="search__result-item search__result-item--search">
-
-						<span class="search__result-value">
-							тушь для бровей
+						<span class="card-item__price" data-suf="₽">
+							2581
 						</span>
 
 					</a>
 
-					<a href="/" class="search__result-item search__result-item--search">
+					<a href="/" class="card-item">
 
-						<span class="search__result-value">
-							тушь для ресниц
+						<span class="card-item__img">
+
+							<picture>
+
+								<source srcset="/img/card-product/28--34x34.webp 1x, /img/card-product/28--68x68.webp 2x" type="image/webp">
+
+								<source srcset="/img/card-product/28--34x34.jpg 1x, /img/card-product/28--68x68.jpg 2x">
+
+								<img src="/img/card-product/28--68x68.jpg" alt="" width="34" height="34">
+
+							</picture>
+
+						</span>
+
+						<span class="card-item__cat">
+							Periche
+						</span>
+
+						<span class="card-item__title">
+							Argan Keratin Cleansing (Очищающий шампунь)
+						</span>
+
+						<span class="card-item__price" data-suf="₽">
+							581
 						</span>
 
 					</a>
+
+{% endfor %}

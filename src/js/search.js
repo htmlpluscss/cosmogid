@@ -61,20 +61,6 @@
 
 		});
 
-		result.addEventListener('click', event => {
-
-			const remove = event.target.closest('.search__result-remove');
-
-			if(remove) {
-
-				remove.closest('.search__result-item').classList.add('is-remove');
-
-				console.log('удаляем результаты')
-
-			}
-
-		});
-
 	});
 
 })(document.querySelectorAll('.search'));

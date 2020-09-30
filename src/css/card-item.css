@@ -33,6 +33,7 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		flex-shrink: 0;
 
 		img {
 
@@ -56,6 +57,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		text-transform: uppercase;
+		flex-shrink: 0;
 
 	}
 
@@ -164,6 +166,7 @@
 		white-space: nowrap;
 		margin: 8px 0;
 		justify-content: center;
+		flex-shrink: 0;
 
 		&[data-suf]::after {
 
