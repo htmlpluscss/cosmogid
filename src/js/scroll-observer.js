@@ -1,4 +1,4 @@
-/*((footer) => {
+((footer) => {
 
 	"use strict";
 
@@ -10,7 +10,7 @@
 			threshold: [.1]
 		};
 
-		const headerFixed = document.querySelector('.header__fixed');
+		const bar = document.querySelector('.bar');
 
 		const callback = (entries, observer) =>
 
@@ -18,7 +18,11 @@
 
 				document.body.classList.toggle('bg-footer', entry.intersectionRatio > 0.1 && window.pageYOffset > 0);
 
-				headerFixed.classList.toggle('is-hidden', entry.intersectionRatio > 0.1);
+				if(bar) {
+
+					bar.classList.toggle('is-hidden', entry.intersectionRatio > 0.1);
+
+				}
 
 			});
 
@@ -28,4 +32,4 @@
 
 	}
 
-})(document.querySelector('.footer'));*/
+})(document.querySelector('.footer'));

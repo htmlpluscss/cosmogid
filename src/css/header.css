@@ -1,5 +1,15 @@
 .header {
 
+	background-color: #fff;
+
+	@media ($responsive) {
+
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		margin-bottom: 16px;
+
+	}
+
+
 	/* padding-top: var(--heightHeaderFixed);
 
 	&__fixed {
@@ -38,13 +48,28 @@
 */
 	&__top {
 
-		display: none;
+		display: flex;
+		justify-content: space-between;
+		background-color: var(--blue);
 
-		@media ($desktop) {
+	}
 
-			display: flex;
+	&__top &__left {
+
+		@media ($responsive) {
+
 			justify-content: space-between;
-			background-color: var(--blue);
+			flex-grow: 1;
+
+		}
+
+	}
+
+	&__top &__right {
+
+		@media ($responsive) {
+
+			display: none;
 
 		}
 
@@ -53,6 +78,22 @@
 	&__center {
 
 		padding: 22px 0;
+
+		@media ($responsive) {
+
+			padding: 16px 0;
+
+		}
+
+	}
+
+	&__center &__box {
+
+		@media ($responsive) {
+
+			flex-wrap: wrap;
+
+		}
 
 	}
 
@@ -87,6 +128,12 @@
 		position: relative;
 		border-radius: 2px;
 		border: 2px solid var(--blue);
+
+		@media ($responsive) {
+
+			margin-right: 10px;
+
+		}
 
 		&::after,
 		&::before,
@@ -153,7 +200,8 @@
 
 		@media ($responsive) {
 
-			display: none;
+			margin: 16px 0 0;
+			order: 3;
 
 		}
 
@@ -169,6 +217,12 @@
 
 				margin-left: 18px;
 
+				@media ($mobile) {
+
+					margin-left: 6px;
+
+				}
+
 			}
 
 		}
@@ -183,6 +237,11 @@
 			text-decoration: none;
 			flex-shrink: 0;
 			display: block;
+
+			@media ($mobile) {
+
+				font-size: 11px;
+			}
 
 			@media ($desktop) {
 
@@ -243,8 +302,9 @@
 	&__city {
 
 		position: relative;
-		padding-left: 28px;
+		padding-left: 26px;
 		margin-right: 18px;
+		margin-left: -4px;
 		max-width: 50%;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -282,10 +342,10 @@
 
 		img {
 
-			@media ($desktop) {
+			@media ($responsive) {
 
-				width: 160px;
-				height: 33px;
+				width: 36px;
+				height: 30px;
 
 			}
 
@@ -295,10 +355,12 @@
 
 	&__phone {
 
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 14px;
+		line-height: 32px;
+		font-weight: 600;
 		flex-shrink: 0;
 		position: relative;
+		margin-left: 20px;
 
 		a {
 
@@ -309,19 +371,12 @@
 
 				position: absolute;
 				top: 0;
+				bottom: 0;
+				margin: auto;
 				left: -22px;
 				fill: #fff;
 
 			}
-
-		}
-
-		@media ($desktop) {
-
-			font-size: 14px;
-			line-height: 22px;
-			margin-left: 20px;
-			font-weight: 600;
 
 		}
 

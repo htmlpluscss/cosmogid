@@ -13,6 +13,7 @@ https://github.com/htmlpluscss/
 	"use strict";
 
 	window.CG = window.CG || {};
+	CG.breakPoints = 1250;
 	CG.resizeTimeout = null;
 	CG.windowWidthOLd = window.innerWidth;
 

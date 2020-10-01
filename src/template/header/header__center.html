@@ -12,7 +12,14 @@
 
 						<a class="header__logo" href="/">
 
-							<img src="/img/logo.svg" alt="{{ site }}" width="54" height="45" loading="lazy">
+							<picture>
+
+								<source srcset="/img/logo.svg" media="(min-width: 1220px)">
+								<source srcset="/img/logo-img.svg">
+
+								<img src="/img/logo.svg" alt="{{ site }}" width="160" height="33" loading="lazy">
+
+							</picture>
 
 						</a>
 

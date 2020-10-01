@@ -31,7 +31,7 @@
 
 		CG.OpenMenu = true;
 
-		if(window.innerWidth < 1200) {
+		if(window.innerWidth < CG.breakPoints) {
 
 			CG.windowScrollOld = window.pageYOffset;
 			window.scrollTo(0, 0);
@@ -48,7 +48,7 @@
 
 		document.body.classList.remove('menu-open');
 
-		if(window.innerWidth < 1200) {
+		if(window.innerWidth < CG.breakPoints) {
 
 			window.scrollTo(0, CG.windowScrollOld);
 
@@ -130,7 +130,7 @@
 		// наведение
 		el.addEventListener('mouseleave', event => {
 
-			if(window.innerWidth >= 1250) {
+			if(window.innerWidth >= CG.breakPoints) {
 
 
 			}
@@ -139,7 +139,7 @@
 
 		el.addEventListener('mouseenter', event => {
 
-			if(window.innerWidth >= 1250) {
+			if(window.innerWidth >= CG.breakPoints) {
 
 				Array.from(level1, elem => elem.classList.toggle('is-hover', elem === el));
 

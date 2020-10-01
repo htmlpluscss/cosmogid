@@ -3,17 +3,16 @@
 	margin: 52px 14px;
 	position: relative;
 
+	@media ($responsive) {
+
+		display: none;
+
+	}
+
 	&__list {
 
 		display: flex;
 		justify-content: space-between;
-
-		@media ($responsive) {
-
-			display: none;
-
-		}
-
 	}
 
 	&__item {

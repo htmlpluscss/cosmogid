@@ -8,10 +8,20 @@
 .center {
 
 	margin: 0 auto;
-	width: 600px;
 	max-width: 100%;
 	position: relative;
-	padding: 0 16px;
+
+}
+
+
+@media ($responsive) {
+
+	.center {
+
+		width: 600px;
+		padding: 0 16px;
+
+	}
 
 }
 
@@ -64,7 +74,6 @@
 	.center {
 
 		width: 1220px;
-		padding: 0;
 
 	}
 

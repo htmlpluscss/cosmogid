@@ -1,12 +1,30 @@
 .card-list {
 
-	margin: 60px 0;
 	position: relative;
+
+	@media ($responsive) {
+
+		margin: 30px 0;
+
+	}
+
+	@media ($desktop) {
+
+		margin: 60px 0;
+
+	}
 
 	&__head {
 
 		min-height: 70px;
 		position: relative;
+
+		@media ($responsive) {
+
+			min-height: 0;
+			padding-right: 90px;
+
+		}
 
 	}
 
@@ -52,7 +70,6 @@
 
 		position: absolute;
 		right: 0;
-		bottom: 0;
 		font-size: 12px;
 		line-height: 16px;
 		font-weight: 500;
@@ -74,6 +91,8 @@
 
 		@media ($desktop) {
 
+			bottom: 0;
+
 			&:hover {
 
 				color: var(--blue);
@@ -88,11 +107,32 @@
 
 		}
 
+		@media ($responsive) {
+
+			top: 2px;
+			font-size: 10px;
+			padding-right: 18px;
+
+			svg {
+
+				width: 12px;
+				height: 6px;
+
+			}
+
+		}
+
 	}
 
 	&__title {
 
 		text-align: center;
+
+		@media ($responsive) {
+
+			text-align: left;
+
+		}
 
 	}
 
@@ -101,6 +141,12 @@
 		display: flex;
 		justify-content: center;
 		margin: 3px 0;
+
+		@media ($responsive) {
+
+			justify-content: flex-start;
+
+		}
 
 		span {
 
@@ -118,17 +164,27 @@
 	&__list {
 
 		display: flex;
-		padding: 14px 0;
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
+
+		@media ($responsive) {
+
+			margin: 0 -16px;
+			padding-bottom: 16px;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+
+		}
+
+		@media ($mobile) {
+
+			margin: 0 -10px;
+
+		}
 
 		@media ($desktop) {
 
-			overflow-x: hidden;
-
 			.swiper-container-style & {
 
-				overflow-x: visible;
+				overflow: visible;
 
 			}
 
@@ -141,19 +197,31 @@
 		width: 211px;
 		flex-shrink: 0;
 		position: relative;
-		scroll-snap-align: start;
-		scroll-snap-stop: always;
-		margin-right: 30px;
 		display: flex;
+
+		@media ($responsive) {
+
+			padding-left: 16px;
+			scroll-snap-align: start;
+			scroll-snap-stop: always;
+
+		}
+
+		@media ($mobile) {
+
+			padding-left: 10px;
+
+		}
 
 		@media ($tablet) {
 
-			width: calc((100% - 90px) / 4);/*  90 = 30 * 3 */
+			width: calc((100% - 30px) / 4);/*  90 = 10 * 3 */
 
 		}
 
 		@media ($desktop) {
 
+			margin-right: 30px;
 			width: calc((100% - 120px) / 5);/*  120 = 30 * 4 */
 
 		}
@@ -166,14 +234,26 @@
 
 	}
 
-	&--review &__item {
+	&--review &__item,
+	&--consultation &__item {
 
-		width: 100%;
+		@media ($responsive) {
+
+			padding: 0 16px;
+			width: 100%;
+
+		}
+
+		@media ($mobile) {
+
+			padding: 0 10px;
+
+		}
 
 		@media ($tablet) {
 
 			/* width: calc((100% - 30px) / 2); */
-			width: 100%;
+
 
 		}
 
@@ -187,37 +267,41 @@
 
 	&__category {
 
-		@supports(display: grid) {
+		@media ($desktop) {
 
-			display: grid;
-			grid-gap: 40px 50px;
-			grid-template-rows: 206px 206px;
-			grid-template-columns: 410px 300px 410px;
+			@supports(display: grid) {
 
-			&-item {
+				display: grid;
+				grid-gap: 40px 50px;
+				grid-template-rows: 206px 206px;
+				grid-template-columns: 410px 300px 410px;
 
-				position: relative;
+				&-item {
 
-				&.is-rows-2 {
+					position: relative;
 
-					grid-row: span 2;
+					&.is-rows-2 {
+
+						grid-row: span 2;
+
+					}
+
+
+		/*
+
+					&--2-columns {
+
+						grid-column: span 2;
+
+					}
+					grid-row-start: 1;
+					grid-row-end: 2;
+					grid-column-start: 2;
+					grid-column-end: 3;
+		 */
+
 
 				}
-
-
-	/*
-
-				&--2-columns {
-
-					grid-column: span 2;
-
-				}
-				grid-row-start: 1;
-				grid-row-end: 2;
-				grid-column-start: 2;
-				grid-column-end: 3;
-	 */
-
 
 			}
 
@@ -225,7 +309,24 @@
 
 		@media ($responsive) {
 
-			display: none;
+			display: flex;
+			flex-wrap: wrap;
+			margin: -4px;
+
+			&-item {
+
+				width: calc(50% - 8px);
+				margin: 4px;
+				height: 0;
+				padding-bottom: calc(31.25% - 5px);
+
+				&.is-rows-2 {
+
+					display: none;
+
+				}
+
+			}
 
 		}
 
@@ -235,26 +336,37 @@
 
 		position: relative;
 
-		@supports(display: grid) {
+		@media ($desktop) {
 
-			display: grid;
-			grid-gap: 1px;
-			grid-template-rows: auto;
-			grid-template-columns: 190px 190px 190px 190px 1fr;
-			background-color: var(--border);
-			padding: 1px;
+			@supports(display: grid) {
 
-			&-item {
+				display: grid;
+				grid-gap: 1px;
+				grid-template-rows: auto;
+				grid-template-columns: 190px 190px 190px 190px 1fr;
+				background-color: var(--border);
+				padding: 1px;
 
-				background-color: #fff;
+				img {
 
-				&.is-big {
+					width: 100%;
+					height: auto;
 
-					grid-row-start: 1;
-					grid-row-end: 3;
-					grid-column-start: -2;
-					grid-column-end: -1;
-					margin: -1px;
+				}
+
+				&-item {
+
+					background-color: #fff;
+
+					&.is-big {
+
+						grid-row-start: 1;
+						grid-row-end: 3;
+						grid-column-start: -2;
+						grid-column-end: -1;
+						margin: -1px;
+
+					}
 
 				}
 
@@ -262,9 +374,48 @@
 
 		}
 
+		@media ($mobile) {
+
+			margin: 0 -10px;
+
+			&-item {
+
+				padding-left: 10px;
+
+			}
+
+		}
+
 		@media ($responsive) {
 
-			display: none;
+			display: flex;
+			margin: 0 -16px;
+			padding-bottom: 16px;
+			padding-right: 16px;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+
+			&-item {
+
+				padding-left: 16px;
+				scroll-snap-align: start;
+				scroll-snap-stop: always;
+
+				&.is-big {
+
+					display: none;
+
+				}
+
+			}
+
+			.card-brand {
+
+				background-color: #fff;
+				border-radius: 2px;
+				border: 1px solid #e0e0e0;
+
+			}
 
 		}
 

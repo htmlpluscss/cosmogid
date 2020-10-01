@@ -2,24 +2,44 @@
 
 	position: relative;
 	border: 1px solid var(--border);
-	padding: 28px 26px 56px;
+
+	@media ($responsive) {
+
+		padding: 28px 10px 48px;
+
+	}
+
+	@media ($desktop) {
+
+		padding: 28px 26px 56px;
+
+	}
 
 	&__link {
 
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		text-decoration: none;
-		opacity: 0;
-		transition: var(--transitionDefault);
-		background-color: color(var(--pink) a(30%));
+
+		@media ($responsive) {
+
+			right: 10px;
+			bottom: 10px;
+
+		}
 
 		@media ($desktop) {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: var(--transitionDefault);
+			background-color: color(var(--pink) a(30%));
 
 			&:hover {
 
@@ -33,16 +53,33 @@
 
 	&__btn {
 
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 44px;
-		color: #3D3D3D;
-		text-align: center;
-		width: 184px;
-		height: 44px;
 		background-color: #fff;
-		box-shadow: 0px 1px 5px rgba(65, 142, 188, 0.5);
-		border-radius: 5px;
+		text-align: center;
+		color: #303030;
+		font-weight: 500;
+		display: block;
+
+		@media ($responsive) {
+
+			width: 94px;
+			height: 22px;
+			line-height: 20px;
+			border-radius: 2px;
+			font-size: 12px;
+			border: 1px solid var(--blue);
+
+		}
+
+		@media ($desktop) {
+
+			font-size: 14px;
+			line-height: 44px;
+			width: 184px;
+			height: 44px;
+			box-shadow: 0px 1px 5px rgba(65, 142, 188, 0.5);
+			border-radius: 5px;
+
+		}
 
 	}
 
@@ -60,7 +97,13 @@
 		font-size: 12px;
 		line-height: 15px;
 		color: #737373;
-		margin-top: 21px;
+		margin-top: 8px;
+
+		@media ($desktop) {
+
+			margin-top: 22px;
+
+		}
 
 	}
 
@@ -80,16 +123,36 @@
 		font-size: 12px;
 		color: #737373;
 		position: absolute;
-		left: 25px;
-		bottom: 22px;
+		left: 10px;
+		bottom: 14px;
 		font-style: normal;
+
+		@media ($desktop) {
+
+			left: 25px;
+			bottom: 22px;
+
+		}
 
 	}
 
 	&__date {
 
 		left: auto;
-		right: 25px;
+		right: 10px;
+
+		@media ($responsive) {
+
+			bottom: auto;
+			top: 8px;
+
+		}
+
+		@media ($desktop) {
+
+			right: 25px;
+
+		}
 
 	}
 

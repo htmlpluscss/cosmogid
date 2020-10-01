@@ -81,7 +81,7 @@
 
 				swipe.parentNode.classList.remove('swiper-container-style');
 
-				if (window.innerWidth >= 1200) {
+				if (window.innerWidth >= CG.breakPoints) {
 
 					if(row === 'auto') {
 

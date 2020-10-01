@@ -25,13 +25,7 @@
 
 		position: absolute;
 		top: 11px;
-		right: 11px;
-
-		@media ($desktop) {
-
-			right: 60px;
-
-		}
+		right: 60px;
 
 	}
 

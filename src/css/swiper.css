@@ -103,6 +103,12 @@
 		bottom: 0;
 		pointer-events: none;
 
+		@media ($responsive) {
+
+			display: none;
+
+		}
+
 	}
 
 	.swiper-button {
@@ -182,6 +188,12 @@
 		right: 0;
 		bottom: 30px;
 
+		@media ($responsive) {
+
+			bottom: 16px;
+
+		}
+
 		&-lock {
 
 			display: none;
@@ -204,7 +216,11 @@
 			transition: var(--transitionDefault);
 			margin: 0 8.5px;
 
-			@media ($desktop) {
+			@media ($responsive) {
+
+				width: 10px;
+				height: 10px;
+				margin: 0 5px;
 
 			}
 
