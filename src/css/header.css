@@ -357,10 +357,10 @@
 
 		font-size: 14px;
 		line-height: 32px;
-		font-weight: 600;
 		flex-shrink: 0;
 		position: relative;
 		margin-left: 20px;
+		font-family: 'ProximaNova';
 
 		a {
 

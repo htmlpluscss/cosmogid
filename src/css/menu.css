@@ -113,6 +113,12 @@
 
 		}
 
+		&__level3 {
+
+			display: none;
+
+		}
+
 		&__item {
 
 			position: static;
@@ -274,87 +280,62 @@
 	@media ($responsive) {
 
 		overflow: hidden;
+		padding: 48px 0;
 		position: relative;
-		transition: height 0.1s linear 0.5s;
-		will-change: height;
-		padding-top: var(--heightHeaderFixed);
 
-		.is-level2&,
-		.is-level3& {
-
-			transition-delay: 0s;
-
-		}
-
-		&__inner {
-
-			position: relative;
-			transition: 0.5s ease .1s;
-			transform: translate3d(0, 0, 0);
-			will-change: transform;
-
-			.is-level2 & {
-
-				transform: translate3d(-100%, 0, 0);
-
-			}
-
-			.is-level3 & {
-
-				transform: translate3d(-200%, 0, 0);
-
-			}
-
-		}
-
-		&__list {
-
-			position: static;
-			width: 100%;
-
-		}
-
-		&__item {
-
-			border-bottom: 1px solid var(--border);
-			position: static;
-
-		}
-
-		&__level2,
+		&__left,
 		&__level3 {
 
-			position: absolute;
-			top: 0;
-			left: 100%;
 			width: 100%;
-			visibility: hidden;
-			transition: 0s 0.5s;
-			display: block;
+			flex-shrink: 0;
 
 		}
 
-		&__parent.is-open + &__level2,
-		&__level2-item.is-open + &__level3 {
+		&__right {
 
-			display: block;
-			visibility: visible;
-			transition: none;
+			width: 100%;
+			flex-shrink: 0;
+			position: relative;
+
+			&-top,
+			&-brand {
+
+				display: none;
+
+			}
 
 		}
 
-		&__link {
+		&__level3 &__level2-head {
 
-			text-transform: uppercase;
-			padding: 16px 24px 16px 16px;
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 20px;
+			display: none;
+
+		}
+
+		&__level3 &__level2-list,
+		&__level3 &__level2-item {
+
+			display: block !important;
+
+		}
+
+		&__link,
+		&__second-link,
+		&__level2-head,
+		&__level2-link {
+
+			display: block;
+			color: var(--color);
 			text-decoration: none;
 			position: relative;
-			display: block;
+			text-transform: uppercase;
+			padding: 14px 24px 14px 16px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 25px;
+			border-bottom: 1px solid var(--border);
 
-			&--arrow::after {
+			&.is-arrow::after {
 
 				position: absolute;
 				width: 10px;
@@ -373,9 +354,50 @@
 
 		}
 
+		&__inner {
+
+			padding: 0;
+			display: flex;
+			position: relative;
+			transition: transform var(--transitionDefault);
+			transform: translate3d(0, 0, 0);
+			will-change: transform;
+
+			.is-level2 & {
+
+				transform: translate3d(-100%, 0, 0);
+
+			}
+
+			.is-level3 & {
+
+				transform: translate3d(-200%, 0, 0);
+
+			}
+
+		}
+
+		&__level2 {
+
+			&-head,
+			&-link {
+
+				text-transform: none;
+
+			}
+
+			&-list {
+
+				display: none;
+
+			}
+
+		}
+
 		&__header {
 
 			height: var(--heightHeaderFixed);
+			height: 48px;
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -392,6 +414,10 @@
 		&__current-category {
 
 			text-align: center;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			width: calc(100% - 100px);
 
 		}
 
@@ -428,17 +454,19 @@
 
 		&__second {
 
-			margin-top: 16px;
-
 			&-link {
 
-				font-size: 16px;
-				line-height: 20px;
-				display: block;
-				padding: 8px 16px;
-				font-weight: 500;
-				text-decoration: none;
-				position: relative;
+				display: flex;
+				align-items: center;
+
+				svg {
+
+					fill: var(--blue);
+					width: 25px;
+					height: 25px;
+					margin-right: 16px;
+
+				}
 
 			}
 

@@ -12,18 +12,17 @@
 	const btn = document.querySelector('.js-toggle-menu'),
 		  level1 = menu.querySelectorAll('.menu-catalog__parent'),
 		  second = menu.querySelectorAll('.menu-catalog__second-link'),
-		  level2 = menu.querySelectorAll('.menu-catalog__head-level2'),
+		  level2 = menu.querySelectorAll('.menu-catalog__level2-head.is-arrow'),
+		  boxLevel3 = menu.querySelector('.menu-catalog__level3'),
 		  btnClose = menu.querySelector('.menu-catalog__close'),
 		  btnBack = menu.querySelector('.menu-catalog__back'),
 		  category = menu.querySelector('.menu-catalog__current-category'),
 		  categoryTextDefault = category.textContent,
 		  btnSlide = menu.querySelectorAll('.menu-catalog__slide-btn');
 
-	let	level1Scroll = 0,
-		level2Scroll = 0,
-		level1Open = null,
-		level2Open = null,
-		level2Active = null;
+	let	level2Active = null,
+		level1Scroll = 0,
+		level2Scroll = 0;
 
 	const menuOpen = () => {
 
@@ -66,9 +65,10 @@
 
 	btn.addEventListener('click', () => CG.OpenMenu ? menuClose() : menuOpen());
 
+
 	// закрыть меню
 
-	btnClose.addEventListener('click', () => menuClose);
+	btnClose.addEventListener('click', () => menuClose());
 
 	document.addEventListener('click', event => {
 
@@ -81,29 +81,21 @@
 	});
 
 	// На уровень назад
-/*
+
 	btnBack.addEventListener('click', () => {
 
 		if(menu.classList.contains('is-level3')) {
 
-			menu.style.height = level1Open.nextElementSibling.scrollHeight + "px";
-
 			menu.classList.remove('is-level3');
-
-			Array.from(level2, elem => elem.parentNode.classList.remove('is-open'));
 
 			window.scrollTo(0, level2Scroll);
 
-			category.textContent = level1Open.textContent;
+			category.textContent = level2Active.textContent;
 
 		}
 		else if (menu.classList.contains('is-level2')) {
 
-			menu.style.height = menu.querySelector('.menu-catalog__inner').clientHeight + "px";
-
 			menu.classList.remove('is-level2');
-
-			Array.from(level1, elem => elem.classList.remove('is-open'));
 
 			window.scrollTo(0, level1Scroll);
 
@@ -120,24 +112,16 @@
 
 	});
 
-*/
+
 	// первый уровень
 
 	Array.from(level1, el => {
 
 		const id = el.getAttribute('data-id');
 
-		// наведение
-		el.addEventListener('mouseleave', event => {
-
-			if(window.innerWidth >= CG.breakPoints) {
-
-
-			}
-
-		});
-
 		el.addEventListener('mouseenter', event => {
+
+			// десктоп
 
 			if(window.innerWidth >= CG.breakPoints) {
 
@@ -151,38 +135,44 @@
 
 				level2Active = menu.querySelector('.menu-catalog__level2--' + id);
 
-				if(level2Active) {
-
-					level2Active.classList.remove('hide');
-
-				}
+				level2Active.classList.remove('hide');
 
 			}
 
 		});
 
-		/*
-
 		el.addEventListener('click', event => {
 
-			event.preventDefault();
+			// мобайл
 
-			level1Scroll = window.pageYOffset;
+			if(window.innerWidth < CG.breakPoints) {
 
-			menu.style.height = el.nextElementSibling.scrollHeight + "px";
+				event.preventDefault();
 
-			menu.classList.add('is-level2');
+				level1Scroll = window.pageYOffset;
 
-			Array.from(level1, elem => elem.classList.toggle('is-open', elem === el));
+				window.scrollTo(0, 0);
 
-			level1Open = el;
+				menu.classList.add('is-level2');
 
-			btnBack.classList.remove('hide');
+				if(level2Active) {
 
-			category.textContent = el.textContent;
+					level2Active.classList.add('hide');
+
+				}
+
+				level2Active = menu.querySelector('.menu-catalog__level2--' + id);
+
+				level2Active.classList.remove('hide');
+
+				btnBack.classList.remove('hide');
+
+				category.textContent = el.textContent;
+
+			}
 
 		});
-*/
+
 	});
 
 	// первый уровень, второстипенное меню
@@ -190,13 +180,19 @@
 
 		el.addEventListener('mouseenter', () => {
 
-			if(level2Active) {
+			// десктоп
 
-				level2Active.classList.add('hide');
+			if(window.innerWidth >= CG.breakPoints) {
 
-				Array.from(level1, elem => elem.classList.remove('is-hover'));
+				if(level2Active) {
 
-				level2Active = false;
+					level2Active.classList.add('hide');
+
+					Array.from(level1, elem => elem.classList.remove('is-hover'));
+
+					level2Active = false;
+
+				}
 
 			}
 
@@ -206,28 +202,31 @@
 
 
 	// второй уровень
-/*
+
 	Array.from(level2, el => {
 
 		el.addEventListener('click', event => {
 
-			event.preventDefault();
+			// мобайл
+			if(window.innerWidth < CG.breakPoints) {
 
-			level2Scroll = window.pageYOffset;
+				event.preventDefault();
 
-			menu.style.height = el.parentNode.nextElementSibling.scrollHeight + "px";
+				level2Scroll = window.pageYOffset;
 
-			menu.classList.add('is-level3');
+				window.scrollTo(0, 0);
 
-			Array.from(level2, elem => elem.parentNode.classList.toggle('is-open', elem === el));
+				boxLevel3.innerHTML = el.parentNode.innerHTML;
 
-			level2Open = el;
+				menu.classList.add('is-level3');
 
-			category.textContent = el.textContent;
+				category.textContent = el.textContent;
+
+			}
 
 		});
 
-	});*/
+	});
 
 	// развернуть меню slide
 
