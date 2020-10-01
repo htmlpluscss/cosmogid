@@ -280,7 +280,7 @@
 	@media ($responsive) {
 
 		overflow: hidden;
-		padding: 48px 0;
+		padding: 60px 0;
 		position: relative;
 
 		&__left,
@@ -397,7 +397,7 @@
 		&__header {
 
 			height: var(--heightHeaderFixed);
-			height: 48px;
+			height: 60px;
 			position: fixed;
 			top: 0;
 			left: 0;

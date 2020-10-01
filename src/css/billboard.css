@@ -91,6 +91,13 @@
 		position: relative;
 		display: block;
 
+		@media ($tablet) {
+
+			padding: 0;
+			height: 362px;
+
+		}
+
 		@media ($desktop) {
 
 			padding: 0;

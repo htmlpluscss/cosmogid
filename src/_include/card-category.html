@@ -6,12 +6,15 @@
 					<picture>
 
 {% if item.mod == "is-rows-2" %}
-						<source srcset="/img/card-category/{{ item.img }}--300x450.webp 1x, /img/card-category/{{ item.img }}--600x900.webp 2x" type="image/webp" media="(min-width: 768px)">
-						<source srcset="/img/card-category/{{ item.img }}--300x450.jpg 1x, /img/card-category/{{ item.img }}--600x900.jpg 2x" media="(min-width: 768px)">
+						<source srcset="/img/card-category/{{ item.img }}--300x450.webp 1x, /img/card-category/{{ item.img }}--600x900.webp 2x" type="image/webp" media="(min-width: 1250px)">
+						<source srcset="/img/card-category/{{ item.img }}--300x450.jpg 1x, /img/card-category/{{ item.img }}--600x900.jpg 2x" media="(min-width: 1250px)">
 {% else %}
-						<source srcset="/img/card-category/{{ item.img }}--410x205.webp 1x, /img/card-category/{{ item.img }}--820x410.webp 2x" type="image/webp" media="(min-width: 768px)">
-						<source srcset="/img/card-category/{{ item.img }}--410x205.jpg 1x, /img/card-category/{{ item.img }}--820x410.jpg 2x" media="(min-width: 768px)">
+						<source srcset="/img/card-category/{{ item.img }}--410x205.webp 1x, /img/card-category/{{ item.img }}--820x410.webp 2x" type="image/webp" media="(min-width: 1250px)">
+						<source srcset="/img/card-category/{{ item.img }}--410x205.jpg 1x, /img/card-category/{{ item.img }}--820x410.jpg 2x" media="(min-width: 1250px)">
 {% endif %}
+
+						<source srcset="/img/card-category/{{ item.img }}--380x238.webp 1x, /img/card-category/{{ item.img }}--760x476.webp 2x" type="image/webp" media="(min-width: 768px)">
+						<source srcset="/img/card-category/{{ item.img }}--380x238.png 1x, /img/card-category/{{ item.img }}--760x476.png 2x" media="(min-width: 768px)">
 
 						<source srcset="/img/card-category/{{ item.img }}--192x120.webp 1x, /img/card-category/{{ item.img }}--384x240.webp 2x" type="image/webp" media="(min-width: 361px)">
 						<source srcset="/img/card-category/{{ item.img }}--192x120.png 1x, /img/card-category/{{ item.img }}--384x240.png 2x" media="(min-width: 361px)">

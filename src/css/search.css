@@ -1,7 +1,12 @@
 .search {
 
 	position: relative;
-	max-width: 626px;
+
+	@media ($desktop) {
+
+		max-width: 626px;
+
+	}
 
 	&__inner {
 

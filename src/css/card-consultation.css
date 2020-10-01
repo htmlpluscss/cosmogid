@@ -1,6 +1,7 @@
 .card-consultation {
 
 	position: relative;
+	width: 100%;
 	border: 1px solid var(--border);
 
 	@media ($responsive) {

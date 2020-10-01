@@ -3,7 +3,12 @@
 	background-color: #fff;
 
 	@media ($responsive) {
-		margin-bottom: 16px;
+
+		.center {
+
+			width: 100%;
+
+		}
 
 		&.is-fixed {
 
@@ -35,6 +40,12 @@
 			background-color: #fff;
 
 		}
+
+	}
+
+	&.is-fixed &__search {
+
+		display: none;
 
 	}
 
@@ -200,6 +211,7 @@
 
 			margin: 16px 0 0;
 			order: 3;
+			width: 100%;
 
 		}
 
@@ -215,6 +227,12 @@
 
 				margin-left: 18px;
 
+				@media ($responsive) {
+
+					margin-left: 10px;
+
+				}
+
 				@media ($mobile) {
 
 					margin-left: 6px;
@@ -227,7 +245,7 @@
 
 		&-link {
 
-			font-size: 12px;
+			font-size: 11px;
 			line-height: 14px;
 			text-align: center;
 			color: var(--color);
@@ -239,9 +257,12 @@
 			@media ($mobile) {
 
 				font-size: 11px;
+
 			}
 
 			@media ($desktop) {
+
+				font-size: 12px;
 
 				&:hover {
 
