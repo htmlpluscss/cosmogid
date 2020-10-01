@@ -17,11 +17,6 @@
 		&-prev,
 		&-next {
 
-			width: 34px;
-			height: 45px;
-			background-color: color(#c4c4c4 a(40%));
-			padding: 5px;
-
 			svg {
 
 				fill: #fff;

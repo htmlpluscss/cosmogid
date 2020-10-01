@@ -114,8 +114,10 @@
 			position: relative;
 			pointer-events: auto;
 
-			width: 24px;
-			height: 48px;
+			width: 34px;
+			height: 45px;
+			background-color: color(#fff a(20%));
+			padding: 5px;
 
 			svg {
 
