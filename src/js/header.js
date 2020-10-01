@@ -1,24 +1,23 @@
-((header) => {
+((headerFixed) => {
 
 	"use strict";
 
-	if(!header) {
+	if(!headerFixed) {
 
 		return;
 
 	}
 
-	CG.headerHeight = header.clientHeight;
+	const header = document.querySelector('.header');
 
-//	PubSub.subscribe('windowScroll', () => header.classList.toggle('is-scroll', window.pageYOffset > 0));
+	document.documentElement.style.setProperty("--heightHeaderFixed", headerFixed.clientHeight + 'px');
 
-	PubSub.subscribe('windowWidthResize', () => {
+	PubSub.subscribe('windowScroll', () =>
+		header.classList.toggle('is-fixed', window.innerHeight < window.pageYOffset));
 
-		CG.headerHeight = header.clientHeight;
+	PubSub.subscribe('windowWidthResize', () =>
+		document.documentElement.style.setProperty("--heightHeaderFixed", headerFixed.clientHeight + 'px'));
 
-		document.documentElement.style.setProperty("--heightHeaderFixed", CG.headerHeight + 'px');
-
-	});
 
 	// btn up top
 
@@ -41,17 +40,31 @@
 
 		if(window.pageYOffset <= 0) {
 
-			header.classList.remove('is-fixed');
+			headerFixed.classList.remove('is-show');
 
 		}
 		else if(window.pageYOffset > window.innerHeight){
 
-			header.classList.toggle('is-fixed', window.pageYOffset <= ScrollTopPrev);
+			headerFixed.classList.toggle('is-show', window.pageYOffset <= ScrollTopPrev);
 
 		}
 
 		ScrollTopPrev = window.pageYOffset;
 
 	});
+
+	// close menu
+
+	PubSub.subscribe('SwiperAutoPlayStart', () => {
+
+		if (window.innerHeight < window.pageYOffset){
+
+			header.classList.add('is-fixed');
+			headerFixed.classList.add('is-show');
+
+		}
+
+	});
+
 
 })(document.querySelector('.header__fixed'));

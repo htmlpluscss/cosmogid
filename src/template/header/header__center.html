@@ -1,39 +1,43 @@
-		<div class="header__center">
+		<div class="header__fixed">
 
-			<div class="center">
+			<div class="header__center">
 
-				<div class="header__box">
+				<div class="center">
 
-					<div class="header__left">
+					<div class="header__box">
 
-						<button class="header__btn-menu button js-toggle-menu" type="button">
-							<span>меню</span>
-						</button>
+						<div class="header__left">
 
-						<a class="header__logo" href="/">
+							<button class="header__btn-menu button js-toggle-menu" type="button">
+								<span>меню</span>
+							</button>
 
-							<picture>
+							<a class="header__logo" href="/">
 
-								<source srcset="/img/logo.svg" media="(min-width: 1220px)">
-								<source srcset="/img/logo-img.svg">
+								<picture>
 
-								<img src="/img/logo.svg" alt="{{ site }}" width="160" height="33" loading="lazy">
+									<source srcset="/img/logo.svg" media="(min-width: 1220px)">
+									<source srcset="/img/logo-img.svg">
 
-							</picture>
+									<img src="/img/logo.svg" alt="{{ site }}" width="160" height="33" loading="lazy">
 
-						</a>
+								</picture>
 
-					</div>
+							</a>
 
-					<div class="header__search">
+						</div>
+
+						<div class="header__search">
 
 {% include "template/header/header__search.html" %}
 
-					</div>
+						</div>
 
-					<div class="header__right header__icons">
+						<div class="header__right header__icons">
 
 {% include "template/header/header__icons.html" %}
+
+						</div>
 
 					</div>
 
