@@ -212,6 +212,13 @@ gulp.task('copy', function() {
 
 });
 
+gulp.task('ftp-all', function () {
+
+	return gulp.src(['build/**/*','!build/**/*.html'])
+		.pipe(ftp(config.ftp));
+
+});
+
 gulp.task('ftp', function () {
 
 	if(!config) {
@@ -222,8 +229,8 @@ gulp.task('ftp', function () {
 
 	const f = filter('**/*.html', {restore: true});
 
-//	return gulp.src('build/**/*.{css,html,js}', {since: gulp.lastRun('ftp')})
-	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
+	return gulp.src('build/**/*.{css,html,js}', {since: gulp.lastRun('ftp')})
+//	return gulp.src('build/**/*', {since: gulp.lastRun('ftp')})
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))

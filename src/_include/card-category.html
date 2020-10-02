@@ -6,6 +6,8 @@
 					<picture>
 
 {% if item.mod == "is-rows-2" %}
+
+						<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" media="(max-width: 1249px)">
 						<source srcset="/img/card-category/{{ item.img }}--300x450.webp 1x, /img/card-category/{{ item.img }}--600x900.webp 2x" type="image/webp" media="(min-width: 1250px)">
 						<source srcset="/img/card-category/{{ item.img }}--300x450.jpg 1x, /img/card-category/{{ item.img }}--600x900.jpg 2x" media="(min-width: 1250px)">
 {% else %}
