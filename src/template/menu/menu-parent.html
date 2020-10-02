@@ -2,7 +2,8 @@
 
 	{
 		id     : 0,
-		parent : "Бренды"
+		parent : "Бренды",
+		mod    : "is-brand"
 	},
 	{
 		id     : 1,
@@ -53,7 +54,7 @@
 
 				<li class="menu-catalog__item">
 
-					<a class="menu-catalog__link menu-catalog__parent is-arrow" href="/" title="{{ item.parent }}" data-id="{{ item.id }}">
+					<a class="menu-catalog__link menu-catalog__parent is-arrow{% if item.mod %} {{ item.mod }}{% endif %}" href="/" title="{{ item.parent }}" data-id="{{ item.id }}">
 						{{ item.parent }}
 					</a>
 

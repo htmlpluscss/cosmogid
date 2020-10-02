@@ -41,6 +41,13 @@
 
 		PubSub.publish('SwiperAutoPlayStop');
 
+		// eager
+		if(window.innerWidth >= CG.breakPoints) {
+
+			Array.from(menu.querySelectorAll('[loading="lazy"]'), img => img.setAttribute('loading','eager'));
+
+		}
+
 	};
 
 	const menuClose = () => {
@@ -144,6 +151,12 @@
 		el.addEventListener('click', event => {
 
 			// мобайл
+
+			if(el.classList.contains('is-brand')) {
+
+				return;
+
+			}
 
 			if(window.innerWidth < CG.breakPoints) {
 
