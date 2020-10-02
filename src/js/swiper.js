@@ -169,11 +169,11 @@
 
 		if (billboard) {
 
-			swipeBtns.classList.remove('hide');
-			swipeNav.classList.remove('hide');
-			swipeControls.classList.remove('hide');
-
 			toggleSwipe = () => {
+
+				swipeNav.classList.remove('hide');
+				swipeBtns.classList.remove('hide');
+				swipeControls.classList.remove('hide');
 
 				toggleSwipe = false;
 
@@ -233,7 +233,7 @@
 
 			script.onload = () => PubSub.publish('swiperJsLoad');
 
-			document.head.appendChild(script);
+			setTimeout( () => document.head.appendChild(script), 7000);
 
 		}
 

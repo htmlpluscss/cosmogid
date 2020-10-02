@@ -124,14 +124,24 @@
 		font-size: 12px;
 		color: #737373;
 		position: absolute;
-		left: 10px;
 		bottom: 14px;
 		font-style: normal;
 
 		@media ($desktop) {
 
-			left: 25px;
 			bottom: 22px;
+
+		}
+
+	}
+
+	&__autor {
+
+		left: 10px;
+
+		@media ($desktop) {
+
+			left: 25px;
 
 		}
 
@@ -139,7 +149,6 @@
 
 	&__date {
 
-		left: auto;
 		right: 10px;
 
 		@media ($responsive) {
