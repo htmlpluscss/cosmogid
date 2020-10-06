@@ -85,8 +85,31 @@ gulp.task('html', function() {
 
 gulp.task('html-touch', function() {
 
+
 	return gulp.src('src/**/index.html')
-		.pipe(touch());
+		.pipe(plumber())
+		.pipe(nunjucksRender({
+			data: {
+				domain: domain,
+				url: 'http://' + domain,
+				site: site
+			},
+			path: 'src/'
+		}))
+		.pipe(w3cjs({
+			verifyMessage: function(type, message) {
+
+				// prevent logging error message
+				if(message.indexOf('Attribute “loading” not allowed on element “img” at this point.') === 0) return false;
+
+				if(message.indexOf('iframe') !== -1) return false;
+
+				// allow message to pass through
+				return true;
+			}
+		}))
+		.pipe(w3cjs.reporter())
+		.pipe(gulp.dest('build'))
 
 });
 
@@ -244,7 +267,7 @@ gulp.task('watch', function() {
 	gulp.watch(['src/js/*.*','!src/js/scripts.js','!src/js/scripts.min.js'], gulp.series('js'));
 	gulp.watch(['src/css/*.*','!src/css/styles.min.css'], gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
-	gulp.watch(['src/home/*.html','src/_include/*.html','src/template/**/*.html','!src/home/index.html'], gulp.series('html-touch'));
+	gulp.watch(['src/product/*.html','src/_include/*.html','src/template/**/*.html','!src/product/index.html'], gulp.series('html-touch'));
 //	gulp.watch(['src/**/*.html','!src/**/index.html'], gulp.series('html-touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));

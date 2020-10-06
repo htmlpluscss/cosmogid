@@ -36,12 +36,12 @@
 })(document.querySelectorAll('.tab-swiper'));
 
 
-
+*/
 // tabs
 
-if(document.querySelector('.tabs')) {
+((tabs)=>{
 
-	Array.from(document.querySelectorAll('.tabs'), (tab) => {
+	Array.from(tabs, tab => {
 
 		let btn = tab.querySelectorAll('.tabs__btn'),
 			item = tab.querySelectorAll('.tabs__item'),
@@ -59,14 +59,12 @@ if(document.querySelector('.tabs')) {
 
 			nav.appendChild(_btn);
 
-			el.classList.add('visuallyhidden');
-
 			_btn.addEventListener('click', () => {
 
 				Array.from(item, (elem,inx) => {
 
-					btn[inx].classList.toggle('tabs__nav-btn--active', inx === index);
-					elem.classList.toggle('tabs__item--active', inx === index);
+					elem.classList.toggle('is-show', inx === index);
+					btn[inx].classList.toggle('is-active', inx === index);
 
 				});
 
@@ -78,11 +76,11 @@ if(document.querySelector('.tabs')) {
 
 		btn = nav.querySelectorAll('.tabs__nav-btn');
 
-		item[0].classList.add('tabs__item--active');
-		btn[0].classList.add('tabs__nav-btn--active');
+		item[0].classList.add('is-show');
+		btn[0].classList.add('is-active');
 
 		tab.insertBefore(nav, item[0]);
 
 	});
 
-};*/
+})(document.querySelectorAll('.tabs'));

@@ -1,0 +1,119 @@
+{% set list = [
+
+	{
+		id    : 1,
+		sku   : 1309659,
+		name  : "Натуральный шатен №12",
+		stock : "есть в наличии",
+		price : 2581,
+		oldPrice : 4585,
+		sale  : 30,
+		active: "true"
+	},
+	{
+		id    : 2,
+		sku   : 1309660,
+		name  : "Золотой №4",
+		stock : "нет в наличии",
+		price : 3581,
+		sale  : 20,
+		inBasket : "true",
+		storeid  : 2
+	},
+	{
+		id    : 3,
+		sku   : 1309670,
+		name  : "Золотой №4",
+		stock : "под заказ",
+		price : 2581,
+		oldPrice : 4585,
+		sale  : 30,
+		inBasket : "true"
+	},
+	{
+		id    : 4,
+		sku   : 1309680,
+		name  : "Золотой №4",
+		stock : "есть в наличии",
+		price : 2581,
+		storeid  : 3
+	},
+	{
+		id    : 5,
+		sku   : 1309690,
+		name  : "Золотой №4",
+		stock : "есть в наличии",
+		price : 4578,
+		sale  : 25
+	}
+
+] %}
+			<div class="product-article">
+
+{% for article in list %}
+
+				<label class="product-article__item">
+
+					<input class="product-article__input visuallyhidden"
+						type="radio"
+						name="articleid"
+
+						value="{{ article.id }}"
+
+						data-sku="{{ article.sku }}"
+						data-price="{{ article.price }}"
+						data-stock="{{ article.stock }}"
+
+						{% if article.oldPrice %}
+							data-old-price="{{ article.oldPrice }}"
+						{% endif %}
+
+						{% if article.active %}
+							checked="checked"
+						{% endif %}
+
+						{% if article.sale %}
+							data-sale="{{ article.sale }}"
+						{% endif %}
+
+						{% if article.storeid %}
+							data-storeid="{{ article.storeid }}"
+						{% endif %}
+
+						{% if article.inBasket %}
+							data-in-basket="in basket"
+						{% endif %}
+					>
+
+					<span class="product-article__box">
+
+						<span class="product-article__img">
+
+							<picture>
+								<source srcset="/img/product/34x34.webp 1x, /img/product/68x68.webp 2x" type="image/webp">
+								<source srcset="/img/product/34x34.jpg 1x, /img/product/68x68.jpg 2x">
+								<img class="product-img__img" src="/img/product/34x34.jpg" alt="{{ article.name }}" loading="lazy" width="34" height="34">
+							</picture>
+
+						</span>
+
+						<span class="product-article__price">
+							{% if article.oldPrice %}
+							<s>
+								{{ article.oldPrice }}₽
+							</s>
+							{% endif %}
+							{{ article.price }}₽
+						</span>
+
+						<span class="product-article__name">
+							{{ article.name }}
+						</span>
+
+					</span>
+
+				</label>
+
+{% endfor %}
+
+			</div>

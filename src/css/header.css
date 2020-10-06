@@ -379,7 +379,8 @@
 		flex-shrink: 0;
 		position: relative;
 		margin-left: 20px;
-		font-family: 'ProximaNova';
+		font-weight: 600;
+		font-family: 'ProximaNovaNumber';
 
 		a {
 

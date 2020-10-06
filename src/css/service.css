@@ -31,6 +31,30 @@
 
 	}
 
+	&__link {
+
+		text-decoration: none;
+		color: var(--color);
+		display: block;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--blue);
+
+				svg {
+
+					fill: var(--blue);
+
+				}
+
+			}
+
+		}
+
+	}
+
 	svg {
 
 		fill: #707070;

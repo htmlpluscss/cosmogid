@@ -148,8 +148,8 @@
 
 			&--sale {
 
-				font-weight: 500;
-				font-family: 'ProximaNova';
+				font-weight: 600;
+				font-family: 'ProximaNovaNumber';
 				background-color: var(--pink);
 
 			}
@@ -162,7 +162,7 @@
 
 		display: flex;
 		color: #303030;
-		font: 500 16px/20px 'ProximaNova';
+		font: 600 16px/20px 'ProximaNovaNumber';
 		white-space: nowrap;
 		margin: 8px 0;
 		justify-content: center;
@@ -215,7 +215,6 @@
 
 			width: 30px;
 			height: 30px;
-			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: 14px 14px;

@@ -146,7 +146,7 @@
 
 })(document.querySelectorAll('.form-buy'));
 
-// кнопка в один клик
+// кнопка в один клик в карточке
 
 ((btns) => {
 
@@ -160,7 +160,7 @@
 
 	Array.from(btns, btn => {
 
-		btn.addEventListener('click', event => {
+		btn.addEventListener('click', () => {
 
 			const card = btn.closest('.card-product'),
 				  id = card.querySelector('[name="id"]'),
