@@ -3,98 +3,56 @@
 	margin: 30px 0;
 	position: relative;
 
-	#review {
+	&__all {
 
 		position: absolute;
-		left: 0;
-		top: calc((var(--heightHeader) * -1) - 20px);
-
-	}
-
-	&__title {
-
-		line-height: 36px;
-
-	}
-
-	&__write {
-
-		position: absolute;
-		top: 0;
 		right: 0;
-
-	}
-
-	&__item {
-
-		margin-top: 14px;
-		border-top: 1px solid #e3e3e3;
-		padding-top: 14px;
-
-		& + & {
-
-			margin-top: 20px;
-
-		}
-
-	}
-
-	&__autor {
-
-		font-size: 14px;
-		font-weight: 700;
-
-	}
-
-	&__date {
-
+		top: 40px;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 500;
+		padding-right: 32px;
 		color: var(--text);
-		font-size: 11px;
+		text-decoration: none;
 
-	}
+		svg {
 
-	&__stars {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			fill: none;
+			stroke: var(--text);
 
-		margin: 10px 0;
+		}
 
-	}
+		@media ($desktop) {
 
-	&__body {
+			&:hover {
 
-		&-item {
+				color: var(--blue);
 
-			padding-left: 24px;
-			font-size: 9px;
-			line-height: 14px;
-			margin: 10px 0;
-			background-repeat: no-repeat;
-			background-position: 0 2px;
+				svg {
 
-			dt {
+					stroke: var(--blue);
 
-				display: block;
-				font-size: 12px;
-				line-height: 18px;
-				font-weight: 700;
+				}
 
 			}
 
-			&--plus {
+		}
 
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cline x1='0' y1='7' x2='14' y2='7' stroke='%23aaa'/%3E%3Cline x1='7' y1='0' x2='7' y2='14' stroke='%23aaa'/%3E%3C/svg%3E");
+		@media ($responsive) {
 
-			}
+			top: 2px;
+			font-size: 10px;
+			padding-right: 18px;
 
-			&--minus {
+			svg {
 
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cline x1='0' y1='7' x2='14' y2='7' stroke='%23aaa'/%3E%3C/svg%3E");
-
-			}
-
-			&--text {
-
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23aaa' width='20' height='18' viewBox='0 0 20 18'%3E%3Cpath d='M16.88 0H2.69A2.69 2.69 0 000 2.69v8.68a2.69 2.69 0 002.68 2.69V18l5.66-3.94h8.53a2.69 2.69 0 002.69-2.69V2.69A2.69 2.69 0 0016.88 0zm1.54 11.37a1.55 1.55 0 01-1.54 1.54H8l-4.17 2.9v-2.9H2.69a1.55 1.55 0 01-1.54-1.54V2.69a1.55 1.55 0 011.54-1.54h14.19a1.55 1.55 0 011.54 1.54z'%3E%3C/path%3E%3Cpath d='M5.24 4.05h9.09V5.2H5.24zM5.24 6.5h9.09v1.14H5.24zM5.24 8.94h9.09v1.15H5.24z'%3E%3C/path%3E%3C/svg%3E");
-				background-size: 18px auto;
+				width: 12px;
+				height: 6px;
 
 			}
 
@@ -102,29 +60,307 @@
 
 	}
 
-	&__footer {
+	hr {
+
+		margin: 20px 0;
+		background-color: #e4e4e4;
+
+	}
+
+	&-item {
+
+		position: relative;
+		margin: 24px 0;
+
+		&__like {
+
+			position: absolute;
+			top: 0;
+			right: 0;
+
+		}
+
+		&__head {
+
+			display: flex;
+			align-items: center;
+
+		}
+
+		&__img {
+
+			flex-shrink: 0;
+			margin-right: 20px;
+			border: 1px solid var(--border);
+
+		}
+
+		&__autor {
+
+			font-style: normal;
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 600;
+
+		}
+
+		&__date,
+		&__articleid {
+
+			font-size: 14px;
+			line-height: 16px;
+			color: #9c9c9c;
+
+			b {
+
+				color: var(--color);
+				font-weight: 400;
+
+			}
+
+		}
+
+		&__text {
+
+			margin: 10px 0;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 22px;
+
+		}
+
+	}
+
+	&-like {
 
 		display: flex;
 		align-items: center;
-		border: 1px solid #e8e8e8;
-		border-radius: 5px;
-		padding: 5px 15px;
-		margin-top: 20px;
 
-		&-label {
+		&__title {
 
-			font-size: 12px;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
 			padding-right: 10px;
 
 		}
 
-		.btn {
+		&__btn {
 
-			margin-right: 5px;
+			height: 28px;
+			line-height: 26px;
+			font-weight: 500;
+			font-size: 12px;
+			padding-left: 30px;
+			padding-right: 10px;
+			border: 1px solid #E4E4E4;
+			border-radius: 2px;
+			background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 9.46c0-.36-.13-.7-.35-.94.25-.3.38-.7.34-1.13a1.45 1.45 0 00-1.4-1.35h-3.35c.16-.55.43-1.56.43-2.37 0-1.29-1-2.37-1.63-2.37-.56 0-.96.34-.98.36a.3.3 0 00-.1.23V3.9L6.4 7.6l-.07.04v-.11c0-.17-.12-.3-.27-.3h-2.7C2.6 7.23 2 7.9 2 8.71v4.75c0 .82.6 1.49 1.35 1.49h1.63c.58 0 1.09-.41 1.27-.99.45.26 1.06.4 1.44.4h4.97c.59 0 1.1-.44 1.23-1.04.06-.31.02-.63-.1-.9.4-.22.67-.67.67-1.18 0-.21-.05-.41-.13-.6.4-.22.67-.67.67-1.18zm-1.14.73c-.1.01-.2.09-.23.2-.03.11 0 .23.07.31.14.14.22.33.22.54 0 .37-.26.69-.6.73-.1.01-.2.09-.23.2-.03.11 0 .23.07.31.18.18.25.44.2.7a.71.71 0 01-.7.58H7.69c-.44 0-1.18-.23-1.44-.5a.26.26 0 00-.3-.07.3.3 0 00-.16.27c0 .5-.36.9-.81.9H3.35c-.44 0-.8-.4-.8-.9V8.71c0-.49.36-.89.8-.89H5.8v.3c0 .1.05.2.13.25.08.06.18.06.26.02l.55-.3c.05-.03.1-.08.12-.14l1.63-3.86a.33.33 0 00.02-.12V2.05c.11-.07.3-.16.54-.16.3 0 1.09.8 1.09 1.78 0 1.05-.52 2.55-.53 2.57-.03.09-.02.19.03.27.05.08.14.13.22.13h3.73c.45 0 .84.35.87.8a.91.91 0 01-.38.84.3.3 0 00-.13.27c0 .1.06.2.15.25.23.13.37.38.37.66 0 .37-.26.69-.6.73z' fill='%23797979'/%3E%3Cpath d='M6.06 7.82c-.15 0-.27.14-.27.3v5.34c0 .17.12.3.27.3.15 0 .27-.13.27-.3V8.12c0-.16-.12-.3-.27-.3z' fill='%23797979'/%3E%3C/svg%3E");
+			background-position: 8px center;
+			background-repeat: no-repeat;
+
+		}
+
+		&.is-like &__btn {
+
+			border-color: var(--blue);
+			color: var(--blue);
+
+		}
+
+		&.is-like &__title {
+
+			display: none;
 
 		}
 
 	}
 
+	&-sort {
+
+		display: flex;
+		align-items: center;
+		margin: 20px 0;
+
+		&__title {
+
+			font-size: 14px;
+			font-weight: 400;
+			padding: 12px;
+			padding-left: 0;
+
+		}
+
+		&__radio {
+
+			cursor: pointer;
+			padding: 12px;
+			font-size: 14px;
+			position: relative;
+			text-transform: lowercase;
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: var(--blue);
+
+				}
+
+			}
+
+		}
+
+		&__input {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: .001;
+			z-index: -1;
+
+		}
+
+		&__input:checked ~ &__label {
+
+			color: var(--blue);
+			font-weight: 600;
+
+		}
+
+	}
+
+	&-form {
+
+		margin: 10px 0;
+
+		&__title {
+
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			margin: 4px 0;
+
+		}
+
+		&__fieldset {
+
+			position: relative;
+			opacity: 1;
+			max-height: 1000px;
+			transition: var(--transitionDefault);
+
+			&.is-hide {
+
+				opacity: 0;
+				max-height: 0;
+				pointer-events: none;
+
+			}
+
+		}
+
+		&__label {
+
+			font-size: 14px;
+			line-height: 20px;
+
+		}
+
+		&__btn {
+
+			width: 192px;
+			height: 38px;
+			line-height: 38px;
+			font-size: 14px;
+			font-weight: 600;
+			margin: 20px 0;
+
+		}
+
+		&__row {
+
+			display: flex;
+			margin: 20px 0 0;
+
+		}
+
+		&__select {
+
+			margin: 10px 0;
+
+		}
+
+		&__ratio {
+
+			width: 300px;
+
+			&-box {
+
+				position: relative;
+				display: flex;
+				margin: 10px 0;
+
+			}
+
+			&-star {
+
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				position: relative;
+				cursor: pointer;
+				margin-right: 16px;
+				background-color: #faf8f8;
+				background-position: center;
+				background-repeat: no-repeat;
+				color: transparent;
+				font-size: 0;
+				background-image: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.8 0l1.53 4.7h4.95l-4 2.9 1.53 4.71-4-2.9-4 2.9 1.52-4.7-4-2.9h4.95L6.8 0z' fill='%23FFD12E'/%3E%3C/svg%3E");
+
+			}
+
+			input {
+
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				opacity: .0001;
+				z-index: -1;
+
+			}
+
+			#review-form-star-1:checked ~ [for="review-form-star-1"],
+			#review-form-star-2:checked ~ [for="review-form-star-1"],
+			#review-form-star-2:checked ~ [for="review-form-star-2"],
+			#review-form-star-3:checked ~ [for="review-form-star-1"],
+			#review-form-star-3:checked ~ [for="review-form-star-2"],
+			#review-form-star-3:checked ~ [for="review-form-star-3"],
+			#review-form-star-4:checked ~ [for="review-form-star-1"],
+			#review-form-star-4:checked ~ [for="review-form-star-2"],
+			#review-form-star-4:checked ~ [for="review-form-star-3"],
+			#review-form-star-4:checked ~ [for="review-form-star-4"],
+			#review-form-star-5:checked ~ .review-form__ratio-star {
+
+				background-color: var(--blue);
+
+			}
+
+		}
+
+		&__input-text,
+		&__input-name {
+
+			margin-bottom: 20px;
+
+		}
+
+		&__input-name {
+
+			max-width: 512px;
+
+		}
+
+	}
 
 }

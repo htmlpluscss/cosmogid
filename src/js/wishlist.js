@@ -40,16 +40,7 @@
 
 					}
 
-					if(obj.mode === 'add') {
-
-						form.elements.mode.value = 'del';
-
-					}
-					else if (obj.mode === 'del') {
-
-						form.elements.mode.value = 'add';
-
-					}
+					form.elements.mode.value = obj.mode;
 
 				}
 

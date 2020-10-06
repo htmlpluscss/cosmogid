@@ -1,0 +1,29 @@
+				<div class="certification">
+
+					<p class="certification__text">
+						Мы гарантируем качество товара. Все товары представленные на сайте оригинальные. Предоставляем все необходимые документы.
+					</p>
+
+					<ul class="certification__list gallery-set">
+
+{% for item in [1,2,3,4,5] %}
+
+						<li class="certification__item">
+
+							<a class="certification__link gallery-set__item" href="/img/certification/big.jpg">
+
+								<picture>
+									<source srcset="/img/certification/270x220.webp 1x, /img/certification/540x440.webp 2x" type="image/webp">
+									<source srcset="/img/certification/270x220.jpg 1x, /img/certification/540x440.jpg 2x">
+									<img class="certification-img__img" src="/img/certification/big.jpg" alt="Название сертификата" loading="lazy" width="270" height="220">
+								</picture>
+
+							</a>
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>

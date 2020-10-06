@@ -182,6 +182,12 @@
 
 		}
 
+		&-suf {
+
+			padding-left: 4px;
+
+		}
+
 	}
 
 	&__btn {

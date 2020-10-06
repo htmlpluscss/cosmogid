@@ -51,6 +51,8 @@
 		Array.from(items, el =>
 			el.classList.toggle('visuallyhidden', el !== CG.activeModal));
 
+		modal.classList.toggle('is-full', selector === 'gallery');
+
 		document.body.classList.add('modal-show');
 		window.scrollTo(0,0);
 

@@ -70,6 +70,8 @@
 
 			});
 
+			el.remove();
+
 		});
 
 		nav.classList.add('tabs__nav');

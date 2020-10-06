@@ -34,6 +34,7 @@
 			position: relative;
 			cursor: pointer;
 			flex-shrink: 0;
+			max-width: calc(50% - 8px);
 
 		}
 
@@ -46,6 +47,9 @@
 			color: #737373;
 			display: block;
 			border-radius: 2px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 
 			input[data-in-basket] ~ & {
 

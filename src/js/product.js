@@ -1,3 +1,99 @@
+
+// переключение фото
+((preview) => {
+
+	if(!preview.length) {
+
+		return;
+
+	}
+
+	const swiperProduct = document.querySelector('.swiper-container--product');
+
+	Array.from(preview, (el, index) => {
+
+		el.addEventListener('click', () => {
+
+			Array.from(preview, elem => {
+
+				elem.classList.toggle('is-active', el === elem);
+
+			});
+
+			if(swiperProduct.swiper) {
+
+				swiperProduct.swiper.slideTo(index);
+
+			}
+			else {
+
+				swiperProduct.setAttribute('data-initialSlide', index);
+
+			}
+
+		});
+
+	});
+
+})(document.querySelectorAll('.product-img__preview-item'));
+
+// кнопка купить
+((form) => {
+
+	if(!form) {
+
+		return;
+
+	}
+
+	const headerCount = document.querySelector('.header__cart .header__icons-count');
+
+	form.addEventListener('submit', event => {
+
+		event.preventDefault();
+
+		const formData = new FormData(form),
+			  xhr = new XMLHttpRequest();
+
+		xhr.open("POST", form.getAttribute('action'));
+		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
+		xhr.onreadystatechange = () => {
+
+			if (xhr.readyState != 4){
+
+				return;
+
+			}
+
+			if (xhr.status === 200) {
+
+				const cart = JSON.parse(xhr.responseText);
+				console.log(cart);
+
+				if(cart.headerCount) {
+
+					headerCount.textContent = cart.headerCount;
+
+				}
+
+				if(cart.mode === "add") {
+
+					form.querySelector('.card-product__btn a').classList.remove('hide');
+					form.querySelector('.card-product__btn button').classList.add('hide');
+
+				}
+
+			}
+
+		}
+
+		xhr.send(formData);
+
+	});
+
+})(document.querySelector('.product-buy'));
+
 // articleID
 
 ((articleInput) => {
@@ -12,7 +108,7 @@
 
 	const product = document.querySelector('.product-main'),
 		  form = product.querySelector('.product-buy'),
-		  ID = form.querySelector('[name="id"]'),
+		  articleID = form.querySelector('[name="articleid"]'),
 		  storeID = form.querySelector('[name="storeid"]'),
 		  sale = product.querySelector('.product-label__sale'),
 		  sku = product.querySelector('.product-body__sku-value'),
@@ -27,7 +123,7 @@
 
 		input.addEventListener('change', () => {
 
-			ID.value = input.value;
+			articleID.value = input.value;
 
 			price.textContent = input.getAttribute('data-price');
 
@@ -150,6 +246,8 @@
 
 	}
 
+	const headerCount = document.querySelector('.header__cart .header__icons-count');
+
 	Array.from(set, form => {
 
 		const fieldset = form.querySelector('.product-set__fieldset'),
@@ -215,6 +313,7 @@
 			Array.from(input, (el,index) => {
 
 				items[index].classList.toggle('hide', !el.checked);
+				items[index].querySelector('.product-set__articleid').checked = el.checked;
 
 				if(el.checked) {
 

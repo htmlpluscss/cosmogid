@@ -281,3 +281,41 @@ gulp.task('default', gulp.series(
 	'copy',
 	gulp.parallel('ftp','watch','serve')
 	));
+
+
+gulp.task('proxy-server', function() {
+
+	gulp.watch(['src/js/*.*','!src/js/scripts.js','!src/js/scripts.min.js'], gulp.series('js'));
+	gulp.watch(['src/css/*.*','!src/css/styles.min.css'], gulp.series('css'));
+
+	server.init({
+		proxy: "http://koroleva-krasoty.com",
+		https: false,
+		serveStatic: ['.'],
+		rewriteRules: [
+			{
+				match: new RegExp('/css/styles.min.css', 'g'),
+				fn: function() {
+					return '/build/css/styles.css';
+				}
+			},
+			{
+				match: new RegExp('/js/scripts.min.js', 'g'),
+				fn: function() {
+					return '/build/js/scripts.js';
+				}
+			}
+		],
+		files: [
+			{
+				match: ['build/**/*'],
+				fn: function (event, file) {
+					this.reload();
+				}
+			}
+		]
+	});
+
+});
+
+gulp.task('proxy', gulp.series('copy-js','js','css','proxy-server'));

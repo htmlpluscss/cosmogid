@@ -1,99 +1,178 @@
-		<section class="review">
+{% include "product/review-form.html" %}
 
-			<h2 class="h1 review__title">
-				Отзывы
-			</h2>
+				<div class="review">
 
-			<div class="review__list">
+					<a href="/" class="review__all">
+						Смотреть все отзывы
+						<svg width="17" height="9" viewBox="0 0 17 9">
+							<path d="M0 4.5h15.5M11.5 1l4 3.5-4 3.5"/>
+						</svg>
+					</a>
 
-				<article class="review__item">
+					<hr>
 
-					<header class="review__header">
+					<form action="/" class="review-sort">
 
-						<h3 class="review__autor">
-							Александр
+						<h3 class="review-sort__title">
+							Сортировать по:
 						</h3>
 
-						<time datetime="2020-06-24" class="review__date">
-							24 июня 2020
-						</time>
+						<label class="review-sort__radio">
 
-						<p class="review__stars">
-							<span class="stars" data-value="4.5">
-								4,5 звезды
+							<input type="radio" name="sort" value="date" class="review-sort__input" checked="checked">
+
+							<span class="review-sort__label">
+								Дате
 							</span>
-						</p>
 
-					</header>
+						</label>
 
-					<blockquote class="review__body">
+						<label class="review-sort__radio">
 
-						<dl>
+							<input type="radio" name="sort" value="best" class="review-sort__input">
 
-							<div class="review__body-item review__body-item--plus">
+							<span class="review-sort__label">
+								Оценке
+							</span>
 
-								<dt>
-									Достоинства:
-								</dt>
+						</label>
 
-								<dd>
-									Хорошие ценники, техники предостаточно, большая официальная гарантия и сервис отработан до самых мелочей.
-								</dd>
+						<label class="review-sort__radio">
+
+							<input type="radio" name="sort" value="ratio" class="review-sort__input">
+
+							<span class="review-sort__label">
+								Полезности
+							</span>
+
+						</label>
+
+					</form>
+
+					<div id="review-sort-result">
+
+						<blockquote class="review-item">
+
+							<div class="review-item__head">
+
+								<div class="review-item__img">
+									<picture>
+										<source srcset="/img/product/50x50.webp 1x, /img/product/100x100.webp 2x" type="image/webp">
+										<source srcset="/img/product/50x50.jpg 1x, /img/product/100x100.jpg 2x">
+										<img class="product-img__img" src="/img/product/50x50.jpg" alt="название продукта или бренда" loading="lazy" width="50" height="50">
+									</picture>
+								</div>
+
+								<div class="review-item__desc">
+
+									<cite class="review-item__autor" data-ratio="5">
+										Юлия
+									</cite>
+
+									<time datetime="2020-08-22" class="review-item__date">
+										25 Сентября, 10:47
+									</time>
+
+									<div class="review-item__articleid">
+										Цвет: <b>10.2 темный пепельный</b>
+									</div>
+
+								</div>
 
 							</div>
 
-							<div class="review__body-item review__body-item--minus">
+							<div class="review-item__text">
+								<p>
+									Много лет пользуюсь этой краской. Отлично ложится, прекрасный ровный цвет, полное закрашивание седины и великолепный бальзам в наборе.
+								</p>
+							</div>
 
-								<dt>
-									Недостатки:
-								</dt>
+							<div class="review-item__like">
 
-								<dd>
-									Хорошие ценники, техники предостаточно, большая официальная гарантия и сервис отработан до самых мелочей.
-								</dd>
+								<form action="/" class="review-like is-like">
+
+									<p class="review-like__title">
+										Сказать
+									</p>
+
+									<button class="review-like__btn btn">
+										Спасибо <span class="review-like__count">0</span>
+									</button>
+
+								</form>
 
 							</div>
 
-							<div class="review__body-item review__body-item--text">
+						</blockquote>
 
-								<dt>
-									Комментарий:
-								</dt>
+						<blockquote class="review-item">
 
-								<dd>
-									Стиральная машина куплена, прошло все ровно и теперь можно нацеливаться на покупку уже сушилки, причем и модель прямо здесь же выбрали.
-								</dd>
+							<div class="review-item__head">
+
+								<div class="review-item__img">
+									<picture>
+										<source srcset="/img/product/50x50.webp 1x, /img/product/100x100.webp 2x" type="image/webp">
+										<source srcset="/img/product/50x50.jpg 1x, /img/product/100x100.jpg 2x">
+										<img class="product-img__img" src="/img/product/50x50.jpg" alt="название продукта или бренда" loading="lazy" width="50" height="50">
+									</picture>
+								</div>
+
+								<div class="review-item__desc">
+
+									<cite class="review-item__autor" data-ratio="5">
+										Юлия
+									</cite>
+
+									<time datetime="2020-08-22" class="review-item__date">
+										25 Сентября, 10:47
+									</time>
+
+									<div class="review-item__articleid">
+										Цвет: <b>10.2 темный пепельный</b>
+									</div>
+
+								</div>
 
 							</div>
 
-						</dl>
+							<div class="review-item__text text-short">
 
-					</blockquote>
+								<p>
+									Краска просто супер,быстро удобно и качественно! Я ,правда, перепутала с тональностью, для моих волос нужен был блонд,но тем не менее рискнула и попробовал этот цвет, настолько цвет получился натуральным,этого даже не передать,после окрашивания никто кроме меня этого и не заметил,хотя цвет моих волос,отличается сильно от покрашивания данной краской,выглядит очень натурально,просто супер!!!!я рекомендую,мы мужики не любим краситься,ведь окрашивание почти всегда тебя"выдает",но не с этой краской,так,что не бойтесь, используйте краску по инструкции и результат Вас обрадует и Ваш образ будет идеальным! Обязательно выдерживайте временные...
+								</p>
 
-					<footer class="review__footer">
+								<div class="text-short__hide">
 
-						<p class="review__footer-label">
-							Вам понравился отзыв?
-						</p>
+									<p>
+										Представлена широкая палитра очаровательных оттенков - от натуральных до ярких. Orofluido Colour Elixir представляет собой смесь с жидкой текстурой, благодаря чему краску легко наносить на корни и всю длину волоса. Эмульсия разработана таким образом, чтобы обеспечить легкое смывание красителя с волос. В составе формулы Orofluido Colour Elixir нет аммиака. С помощью этой краски можно эффективно покрасить седые волосы, а также осветлиться до ...
+									</p>
 
-						<button type="button" class="btn btn-like" data-count="15">
-							<span class="visuallyhidden">Да</span>
-						</button>
+								</div>
 
-						<button type="button" class="btn btn-dislike" data-count="2">
-							<span class="visuallyhidden">Нет</span>
-						</button>
+								<button class="btn btn--read text-short__btn" type="button">
+									Читать полностью
+								</button>
 
-					</footer>
+							</div>
 
-				</article>
+							<div class="review-item__like">
 
-			</div>
+								<form action="/" class="review-like">
 
-			<button class="btn btn--small review__write" type="button">
-				Написать отзыв
-			</button>
+									<p class="review-like__title">
+										Сказать
+									</p>
 
-			<span id="review"></span>
+									<button class="review-like__btn btn">
+										Спасибо <span class="review-like__count">0</span>
+									</button>
 
-		</section>
+								</form>
+
+							</div>
+
+						</blockquote>
+
+					</div>
+
+				</div>
