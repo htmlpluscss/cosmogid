@@ -514,13 +514,32 @@
 
 	&__tags {
 
-		display: flex;
-		flex-wrap: wrap;
 		margin: 20px -9px;
+
+		@media ($responsive) {
+
+			margin: 20px -4px;
+			height: 72px;
+			overflow: hidden;
+
+		}
+
+		&-list {
+
+			display: flex;
+			flex-wrap: wrap;
+
+		}
 
 		&-item {
 
 			margin: 7px 9px;
+
+			@media ($responsive) {
+
+				margin: 4px;
+
+			}
 
 		}
 
@@ -538,6 +557,13 @@
 			border: 1px solid #E4E4E4;
 			white-space: nowrap;
 			border-radius: 22px;
+
+			@media ($responsive) {
+
+				padding: 4px 8px;
+				font-size: 12px;
+
+			}
 
 		}
 

@@ -70,7 +70,7 @@ CG.swiper = swipe => {
 			const countCurrent = swipe.querySelector('.swiper-count');
 
 			countCurrent.textContent = '';
-console.log(initialSlide)
+
 			if(count > 1) {
 
 				swipeBtns.classList.remove('hide');
@@ -191,10 +191,20 @@ console.log(initialSlide)
 
 			toggleSwipe = false;
 
+			swipeNav.classList.remove('hide');
+			swipeControls.classList.remove('hide');
+
 			new Swiper(swipe, {
 				loop: false,
 				initialSlide: initialSlide,
-				preloadImages: false
+				preloadImages: false,
+				pagination: {
+					el: swipeNav,
+					clickable: true,
+					bulletElement: 'button',
+					bulletClass: 'button',
+					bulletActiveClass: 'is-active'
+				}
 			});
 
 		}

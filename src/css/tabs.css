@@ -21,11 +21,15 @@
 
 	&--small &__nav-btn {
 
-		height: 20px;
-		line-height: 20px;
-		font-size: 12px;
-		margin-left: 20px;
-		font-weight: 500;
+		@media ($desktop) {
+
+			height: 20px;
+			line-height: 20px;
+			font-size: 12px;
+			margin-left: 20px;
+			font-weight: 500;
+
+		}
 
 	}
 
@@ -44,6 +48,16 @@
 			margin-left: 40px;
 			font-weight: 600;
 			padding: 0;
+
+			@media ($desktop) {
+
+			}
+
+			@media ($responsive) {
+
+				font-size: 14px;
+
+			}
 
 			&:first-child {
 

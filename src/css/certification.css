@@ -16,6 +16,12 @@
 		flex-wrap: wrap;
 		margin: 15px -15px;
 
+		@media ($responsive) {
+
+			margin: 10px -10px;
+
+		}
+
 	}
 
 	&__item {
@@ -23,6 +29,13 @@
 		border: 1px solid var(--border);
 		position: relative;
 		margin: 15px;
+
+		@media ($responsive) {
+
+			margin: 10px;
+			width: calc(50% - 20px);
+
+		}
 
 	}
 
@@ -32,6 +45,19 @@
 		padding: 20px;
 		justify-content: center;
 		align-items: center;
+
+		@media ($responsive) {
+
+			padding: 10px;
+
+			img {
+
+				height: auto;
+				width: 100%;
+
+			}
+
+		}
 
 		@media ($desktop) {
 

@@ -82,7 +82,7 @@
 
 				if (xhr.status === 200) {
 
-					resultList.innerHTML = xhr.responseText;
+					result.innerHTML = xhr.responseText;
 					form.classList.remove('is-loading');
 
 				}

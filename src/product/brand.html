@@ -20,20 +20,24 @@
 
 		</div>
 
-		<ul class="card-list__tags">
+		<div class="card-list__tags">
+
+			<ul class="card-list__tags-list">
 
 {% for item in list %}
 
-			<li class="card-list__tags-item">
+				<li class="card-list__tags-item">
 
-				<a class="card-list__tags-link" href="/">
-					{{ item }}
-				</a>
+					<a class="card-list__tags-link" href="/">
+						{{ item }}
+					</a>
 
-			</li>
+				</li>
 
 {% endfor %}
 
-		</ul>
+			</ul>
+
+		</div>
 
 	</section>
