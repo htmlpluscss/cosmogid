@@ -1,3 +1,6 @@
+
+// подтверждение города
+
 ((form) => {
 
 	if(!form) {
@@ -6,48 +9,29 @@
 
 	}
 
-	PubSub.subscribe('modalShow', (...data) => {
+	// показать форму
 
-		if (data[1] === 'cities') {
-
-			setTimeout( () => document.querySelector('.form-city__input').focus(), 1000);
-
-		}
-
-	});
+	setTimeout( () => form.classList.remove('hide'), 10000);
 
 	form.addEventListener('submit', event => {
 
 		event.preventDefault();
+
+		Cookies.set('YourCity', form.elements.city);
 
 		const formData = new FormData(form),
 			  xhr = new XMLHttpRequest();
 
 		xhr.open("POST", form.getAttribute('action'));
 		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-
-		xhr.onreadystatechange = () => {
-
-			if (xhr.readyState != 4){
-
-				return;
-
-			}
-
-			if (xhr.status === 200) {
-
-				CG.hideModal();
-
-			}
-
-		}
-
 		xhr.send(formData);
 
 	});
 
 })(document.querySelector('.form-city-confirm'));
 
+
+// поиск и выбор города
 
 ((form) => {
 
@@ -96,5 +80,17 @@
 	});
 
 	form.addEventListener('submit', event => event.preventDefault());
+
+	// фокус в поле поиска
+
+	PubSub.subscribe('modalShow', (...data) => {
+
+		if (data[1] === 'cities') {
+
+			setTimeout( () => document.querySelector('.form-city__input').focus(), 1000);
+
+		}
+
+	});
 
 })(document.querySelector('.form-city'));

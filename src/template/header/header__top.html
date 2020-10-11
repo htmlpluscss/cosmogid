@@ -6,11 +6,39 @@
 
 					<div class="header__left">
 
-						<button class="header__city button" type="button" data-modal="cities">
-							<span class="header__city-value">
+						<div class="header__city">
+
+							<button type="button" class="header__city-current button" data-modal="cities">
 								Екатеринбург
-							</span>
-						</button>
+							</button>
+
+							<form action="/" class="form-city-confirm modal-info hide">
+
+								<input type="hidden" name="city" value="Екатеринбург">
+
+								<h3 class="modal-info__title modal-info__title--city h4">
+									Ваш город <b>Екатеринбург?</b>
+								</h3>
+
+								<div class="modal-info__btn">
+
+									<button class="btn btn--outline">
+										Да
+									</button>
+
+								</div>
+
+								<div class="modal-info__foot">
+
+									<button class="btn btn--link" type="button" data-modal="cities">
+										Выбрать другой
+									</button>
+
+								</div>
+
+							</form>
+
+						</div>
 
 						<div class="header__phone">
 
