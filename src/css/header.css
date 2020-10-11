@@ -123,14 +123,22 @@
 
 	&__btn-menu {
 
-		width: 32px;
 		height: 32px;
 		flex-shrink: 0;
-		color: transparent;
 		margin-right: 22px;
 		position: relative;
 		border-radius: 2px;
 		border: 2px solid var(--blue);
+
+		span {
+
+			display: block;
+			padding: 0 6px 0 32px;
+			font-size: 13px;
+			font-weight: 500;
+			color: var(--text);
+
+		}
 
 		@media ($responsive) {
 
@@ -146,12 +154,11 @@
 
 		&::after,
 		&::before,
-		span {
+		span::before {
 
 			position: absolute;
 			top: 0;
-			left: 0;
-			right: 0;
+			left: 6px;
 			bottom: 0;
 			margin: auto;
 			width: 18px;
@@ -159,42 +166,40 @@
 			transition: var(--transitionDefault);
 			background-color: var(--color);
 			transform: rotate(180deg);
+			content: '';
 
 		}
 
 		&::before {
 
 			bottom: 12px;
-			content: '';
 
 		}
 
 		&::after {
 
 			top: 12px;
-			content: '';
 
 		}
 
 		.menu-open & {
 
-			span {
+			span::before {
 
 				opacity: 0;
+				transform: rotate(0deg);
 
 			}
 
 			&::before {
 
-				transform: rotate(-45deg);
-				bottom: 0;
+				transform: translate3d(0, 6px, 0) rotate(-45deg);
 
 			}
 
 			&::after {
 
-				transform: rotate(45deg);
-				top: 0;
+				transform: translate3d(0, -6px, 0) rotate(45deg);
 
 			}
 
@@ -235,7 +240,7 @@
 
 				@media ($mobile) {
 
-					margin-left: 6px;
+					margin-left: 5px;
 
 				}
 

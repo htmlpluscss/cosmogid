@@ -356,7 +356,7 @@
 
 		&__inner {
 
-			padding: 0;
+			padding: 0 !important;
 			display: flex;
 			position: relative;
 			transition: transform var(--transitionDefault);
