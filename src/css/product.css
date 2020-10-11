@@ -52,6 +52,7 @@
 		@media ($tablet) {
 
 			width: 320px;
+			padding-right: 20px;
 
 		}
 
@@ -66,9 +67,11 @@
 
 		}
 
-		@media ($mobile) {
+		img {
 
-			img {
+			margin: auto;
+
+			@media ($mobile) {
 
 				width: 300px;
 				height: 300px;

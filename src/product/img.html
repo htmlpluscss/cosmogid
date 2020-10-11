@@ -13,12 +13,18 @@
 							<a class="product-img__link gallery-set__item" href="/img/product/big.jpg">
 
 								<picture>
-	<!--
-									<source srcset="/img/product/{{ item }}--tablet@1x.webp 1x, /img/product/{{ item }}--tablet@2x.webp 2x" type="image/webp" media="(min-width: 375px)">
-									<source srcset="/img/product/{{ item }}--tablet@1x.jpg 1x, /img/product/{{ item }}--tablet@2x.jpg 2x" media="(min-width: 375px)"> -->
 
-									<source srcset="/img/product/320x320.webp 1x, /img/product/640x640.webp 2x" type="image/webp">
-									<source srcset="/img/product/320x320.jpg 1x, /img/product/640x640.jpg 2x">
+									<source srcset="/img/product/320x320.webp" type="image/webp" media="(min-width: 1250px) or (max-width: 360px)">
+									<source srcset="/img/product/320x320.jpg" media="(min-width: 1250px) or (max-width: 360px)">
+
+									<source srcset="/img/product/600x600.webp" type="image/webp" media="(min-width: 768px)">
+									<source srcset="/img/product/600x600.jpg" media="(min-width: 768px)">
+
+									<source srcset="/img/product/848x848.webp" type="image/webp" media="(min-width: 424px)">
+									<source srcset="/img/product/848x848.jpg" media="(min-width: 424px)">
+
+									<source srcset="/img/product/750x750.webp" type="image/webp" media="(min-width: 375px)">
+									<source srcset="/img/product/750x750.jpg" media="(min-width: 375px)">
 
 									<img class="product-img__img" src="/img/product/320x320.jpg" alt="{{ title }}" loading="lazy" width="320" height="320">
 
