@@ -1,16 +1,19 @@
-((elems)=>{
+((elem)=>{
 
 	"use strict";
 
-	if(!elems.length) {
+	if(elem) {
 
-		return;
+		document.body.addEventListener('click', event => {
+
+			if(event.target.closest('.text-short__btn')){
+
+				event.target.closest('.text-short').classList.toggle('is-open');
+
+			}
+
+		});
 
 	}
 
-	Array.from(elems, el =>
-		el.querySelector('.text-short__btn').addEventListener('click', () =>
-			el.classList.toggle('is-open')));
-
-
-})(document.querySelectorAll('.text-short'));
+})(document.querySelector('.text-short'));
