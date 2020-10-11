@@ -1,3 +1,56 @@
+// ajax add item
+
+((form) => {
+
+	if(!form) {
+
+		return;
+
+	}
+
+	const btn = form.querySelector('.btn');
+
+	form.addEventListener('submit', event => {
+
+		event.preventDefault();
+
+		const formData = new FormData(form),
+			  xhr = new XMLHttpRequest();
+
+		xhr.open("POST", form.getAttribute('action'));
+		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
+		btn.disabled = true;
+
+		xhr.onreadystatechange = () => {
+
+			if (xhr.readyState != 4){
+
+				return;
+
+			}
+
+			if (xhr.status === 200) {
+
+				btn.disabled = false;
+
+				console.log(xhr.responseText);
+
+				form.elements.page.value = parseInt(form.elements.page.value + 1);
+
+				document.querySelector('#review-sort-result').innerHTML = document.querySelector('#review-sort-result').innerHTML + xhr.responseText;
+
+			}
+
+		}
+
+		xhr.send(formData);
+
+	});
+
+})(document.querySelector('.review__ajax-add'));
+
+
 // сортировака
 
 ((sort) => {

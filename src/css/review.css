@@ -3,66 +3,10 @@
 	margin: 30px 0;
 	position: relative;
 
-	&__all {
+	&__ajax-add {
 
-		position: absolute;
-		right: 0;
-		top: 40px;
-		font-size: 12px;
-		line-height: 16px;
-		font-weight: 500;
-		padding-right: 32px;
-		color: var(--text);
-		text-decoration: none;
-
-		svg {
-
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			fill: none;
-			stroke: var(--text);
-
-		}
-
-		@media ($responsive) {
-
-			display: none;
-
-		}
-
-		@media ($desktop) {
-
-			&:hover {
-
-				color: var(--blue);
-
-				svg {
-
-					stroke: var(--blue);
-
-				}
-
-			}
-
-		}
-
-		@media ($responsive) {
-
-			top: 2px;
-			font-size: 10px;
-			padding-right: 18px;
-
-			svg {
-
-				width: 12px;
-				height: 6px;
-
-			}
-
-		}
+		display: flex;
+		justify-content: center;
 
 	}
 
