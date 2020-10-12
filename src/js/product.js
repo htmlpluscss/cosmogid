@@ -308,7 +308,8 @@
 		form.addEventListener('change', () => {
 
 			let _total = 0,
-				_sale  = 0
+				_sale  = 0,
+				plus = false;
 
 			Array.from(input, (el,index) => {
 
@@ -321,6 +322,14 @@
 					_total += parseFloat(el.getAttribute('data-price'));
 
 				}
+
+				if(plus === false && index > 0) {
+
+					plus = !items[index - 1].classList.contains('hide');
+
+				}
+
+				items[index].classList.toggle('is-plus', plus);
 
 			});
 
