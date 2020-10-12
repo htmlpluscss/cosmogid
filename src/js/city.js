@@ -82,16 +82,4 @@
 
 	form.addEventListener('submit', event => event.preventDefault());
 
-	// фокус в поле поиска
-
-	PubSub.subscribe('modalShow', (...data) => {
-
-		if (data[1] === 'cities') {
-
-			setTimeout( () => document.querySelector('.form-city__input').focus(), 1000);
-
-		}
-
-	});
-
 })(document.querySelector('.form-city'));
