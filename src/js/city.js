@@ -18,7 +18,7 @@
 		event.preventDefault();
 
 		form.classList.add('hide');
-		Cookies.set('YourCity', form.elements.city.value);
+		Cookies.set('ucity', form.elements.city.value);
 
 		const formData = new FormData(form),
 			  xhr = new XMLHttpRequest();
