@@ -86,7 +86,18 @@
 			border-bottom: 0;
 			border-left: 0;
 			border-right: 0;
-			padding: 0;
+			padding: 5px 0;
+
+			@media ($desktop) {
+
+				&:hover .card-item__cat,
+				&:hover .card-item__title {
+
+					color: var(--blue);
+
+				}
+
+			}
 
 			&:first-child {
 
@@ -98,7 +109,7 @@
 
 				width: 34px;
 				height: 34px;
-				margin-right: 8px;
+				flex-shrink: 0;
 
 				img {
 
@@ -109,19 +120,32 @@
 
 			}
 
-			&__title {
+			&__body {
 
+				max-width: calc(100% - 34px - 80px);
+				padding-left: 8px;
 				flex-grow: 1;
+
+			}
+
+			&__row {
+
 				overflow: hidden;
 				white-space: nowrap;
 				text-overflow: ellipsis;
-				margin-left: 5px;
+
+			}
+
+			&__cat {
+
+				margin-right: 5px;
 
 			}
 
 			&__price {
 
 				width: 80px;
+				flex-shrink: 0;
 				justify-content: flex-end;
 
 			}
