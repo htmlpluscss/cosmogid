@@ -1,145 +1,71 @@
-			<form action="/" class="modal__item modal__item--login form-modal form">
+			<form action="/" class="modal__item modal__item--login form-lk form-login">
 
-				<h3 class="form-modal__title h3">
-					Вход
-				</h3>
+				<div class="form-lk__head">
 
-				<div class="form-modal__input-box">
-
-					<label class="form-modal__label" for="form-login-email">
-						E-mail
-					</label>
-
-					<input type="email" class="input" placeholder="Например abc@mail.ru" aria-label="Ваш E-mail" required="required" name="email" id="form-login-email">
+					<h3 class="form-lk__title h3">
+						Вход в личный кабинет
+					</h3>
 
 				</div>
 
-				<div class="form-modal__input-box">
+				<label class="form-lk__label" for="form-login">
+					Введите телефон или эл.почту
+				</label>
 
-					<label class="form-modal__label" for="form-login-password">
-						Пароль
-					</label>
+				<input class="form-lk__input modal__focus input" required="required" name="login" id="form-login">
 
-					<input type="password" class="input" aria-label="Ваш пароль" required="required" name="password" id="form-login-password">
+				<p class="form-lk__after">
+					Найдем Вас в Cosmogid или зарегистрируем
+				</p>
 
-				</div>
+				<button class="form-lk__submit btn btn--blue">
+					Отправить
+				</button>
 
-				<div class="form-modal__links">
+			</form>
 
-					<button type="button" class="btn btn--link" data-modal="reset">
-						Забыли пароль?
+			<form action="/" class="modal__item modal__item--sms form-lk form-sms">
+
+				<div class="form-lk__head">
+
+					<button class="button form-lk__back" type="button" aria-label="Изменить номер телефона" data-modal="login">
+						<svg width="8" height="13" viewBox="0 0 8 13">
+							<path fill="none" d="M7.5.5l-6 6 6 6" stroke="#595858"/>
+						</svg>
 					</button>
 
-					<button type="button" class="btn btn--link" data-modal="reg">
-						Зарегистрироваться
-					</button>
+					<h3 class="form-lk__title h3" id="modal-sms__phone">
+						Авторизация через телефон
+					</h3>
 
 				</div>
 
-				<button class="form-modal__submit btn btn--blue">
+				<label class="form-lk__label" for="form-sms">
+					Введите 4 цифры кода подтверждения
+				</label>
+
+				<input class="form-lk__input modal__focus input" required="required" name="sms" id="form-sms" type="tel">
+
+				<p class="form-lk__after">
+					Мы отправили SMS с кодом на ваш номер
+				</p>
+
+				<button class="form-lk__submit btn btn--blue">
 					Войти
 				</button>
 
-			</form>
+				<div class="form-lk__repeat">
 
-			<form action="/" class="modal__item modal__item--reg form-modal form">
+					Не получили код?
 
-				<h3 class="form-modal__title h3">
-					Регистрация
-				</h3>
+					<span class="form-sms__repeat-text">
+						Попробуйте через <span class="form-sms__timer">60</span> сек.
+					</span>
 
-				<div class="form-modal__input-box">
-
-					<label class="form-modal__label" for="form-reg-email">
-						E-mail
-					</label>
-
-					<input type="email" class="input" placeholder="Например abc@mail.ru" aria-label="Ваш E-mail" required="required" name="email" id="form-reg-email">
-
-				</div>
-
-				<div class="form-modal__input-box">
-
-					<label class="form-modal__label" for="form-reg-password">
-						Пароль
-					</label>
-
-					<input type="password" class="input" aria-label="Ваш пароль" required="required" name="password" id="form-reg-password" autocomplete="new-password">
-
-				</div>
-
-				<div class="form-modal__input-box">
-
-					<label class="form-modal__label" for="form-reg-password-repeat">
-						Пароль повторить
-					</label>
-
-					<input type="password" class="input" aria-label="Ваш пароль" required="required" name="password-repeat" id="form-reg-password-repeat" autocomplete="new-password">
-
-				</div>
-
-				<div class="form-modal__checkbox">
-
-					<label class="checkbox">
-
-						<input type="checkbox" class="checkbox__input" required="required">
-
-						<span class="checkbox__label white-space-nowrap">
-							Я согласен на обработку <a href="/" target="_blank">персональных данных</a>
-						</span>
-
-					</label>
-
-				</div>
-
-				<button class="form-modal__submit btn btn--blue">
-					Зарегистрироваться
-				</button>
-
-				<div class="form-modal__links">
-
-					<button type="button" class="btn btn--link" data-modal="login">
-						Авторизация
-					</button>
-
-					<button type="button" class="btn btn--link" data-modal="reset">
-						Забыли пароль?
+					<button class="form-lk__repeat-sms btn btn--read hide" type="button">
+						Отправить новое sms
 					</button>
 
 				</div>
-
-			</form>
-
-			<form action="/" class="modal__item modal__item--reset form-modal form">
-
-				<h3 class="form-modal__title h3">
-					Восстановление доступа
-				</h3>
-
-				<div class="form-modal__input-box">
-
-					<label class="form-modal__label" for="form-reset-email">
-						E-mail
-					</label>
-
-					<input type="email" class="input" placeholder="Например abc@mail.ru" aria-label="Ваш E-mail" required="required" name="email" id="form-reset-email">
-
-				</div>
-
-				<div class="form-modal__links">
-
-					<button type="button" class="btn btn--link" data-modal="login">
-						Авторизация
-					</button>
-
-					<button type="button" class="btn btn--link" data-modal="reg">
-						Регистрация
-					</button>
-
-				</div>
-
-				<button class="form-modal__submit btn btn--blue">
-					Восстановить
-				</button>
 
 			</form>

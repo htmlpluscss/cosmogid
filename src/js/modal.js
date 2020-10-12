@@ -62,6 +62,14 @@
 
 		PubSub.publish('SwiperAutoPlayStop');
 
+		const inputFocus = CG.activeModal.querySelector('.modal__focus');
+
+		if (inputFocus) {
+
+			setTimeout( () => inputFocus.focus(), 1000);
+
+		}
+
 	};
 
 	Array.from(btns, el =>
