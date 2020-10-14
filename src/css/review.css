@@ -269,13 +269,28 @@
 
 		&__foot {
 
+			margin-top: 20px;
 			display: flex;
 			align-items: center;
-			margin-top: 20px;
+			justify-content: center;
+			flex-wrap: wrap;
 
 			.btn {
 
-				margin-right: 16px;
+				max-width: calc(50% - 8px);
+
+				& + .btn {
+
+					margin-left: 16px;
+
+				}
+
+			}
+
+			@media ($tablet) {
+
+				flex-wrap: nowrap;
+				justify-content: flex-start;
 
 			}
 
@@ -284,6 +299,7 @@
 		&__all-request {
 
 			white-space: nowrap;
+			margin: 10px 16px;
 
 		}
 

@@ -900,6 +900,70 @@
 
 	}
 
+	&-param {
+
+		&__item {
+
+			font-size: 12px;
+			line-height: 20px;
+			margin-bottom: 10px;
+
+			@media ($tablet) {
+
+				display: flex;
+				font-size: 14px;
+				line-height: 22px;
+
+			}
+
+		}
+
+		&__head {
+
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 22px;
+			padding-right: 10px;
+			flex-shrink: 0;
+
+		}
+
+		&__body {
+
+			flex-grow: 1;
+
+		}
+
+		&__column {
+
+			column-gap: 16px;
+			column-count: 2;
+
+			@media ($tablet) {
+
+				column-count: auto;
+				column-width: 250px;
+
+			}
+
+			&-item {
+
+				display: inline-block;
+				width: 100%;
+				margin-bottom: 10px;
+
+				a {
+
+					font-style: italic;
+
+				}
+
+			}
+
+		}
+
+	}
+
 }
 
 
