@@ -250,9 +250,7 @@
 
 	Array.from(set, form => {
 
-		const fieldset = form.querySelector('.product-set__fieldset'),
-			  input = form.querySelectorAll('.product-set__input'),
-			  items = form.querySelectorAll('.product-set__item'),
+		const input = form.querySelectorAll('.product-set__input'),
 			  total = form.querySelector('.product-set__total-value'),
 			  totalNotSale = form.querySelector('.product-set__total-value-not-sale'),
 			  sale = form.querySelector('.product-set__total-value-sale');
@@ -308,13 +306,11 @@
 		form.addEventListener('change', () => {
 
 			let _total = 0,
-				_sale  = 0,
-				plus = false;
+				_sale  = 0;
 
-			Array.from(input, (el,index) => {
+			Array.from(input, el => {
 
-				items[index].classList.toggle('hide', !el.checked);
-				items[index].querySelector('.product-set__articleid').checked = el.checked;
+				el.closest('.product-set__item').classList.toggle('is-off', !el.checked);
 
 				if(el.checked) {
 
@@ -323,21 +319,11 @@
 
 				}
 
-				if(plus === false && index > 0) {
-
-					plus = !items[index - 1].classList.contains('hide');
-
-				}
-
-				items[index].classList.toggle('is-plus', plus);
-
 			});
 
 			sale.textContent = _sale;
 			total.textContent = _total;
 			totalNotSale.textContent = _total + _sale;
-
-			fieldset.classList.toggle('hide', form.querySelectorAll('.product-set__input:checked').length === 0);
 
 		});
 
