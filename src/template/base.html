@@ -20,7 +20,7 @@
 
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="{{ description }}">
+	<meta name="description" content="{{ description | default('') }}">
 	<meta name="theme-color" content="#418ebc">
 
 	<meta property="og:locale" content="ru_RU">
@@ -28,7 +28,7 @@
 	<meta property="og:url" content="{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}">
 	<meta property="og:type" content="{{ ogType | default('website') }}">
 	<meta property="og:title" content="{{ title }}">
-	<meta property="og:description" content="{{ description }}">
+	<meta property="og:description" content="{{ description | default('') }}">
 
 	<meta property="og:image" content="{{ url }}/{{ ogImage | default('og.png') }}">
 	<meta property="og:image:secure_url" content="{{ url }}/{{ ogImage | default('og.png') }}">

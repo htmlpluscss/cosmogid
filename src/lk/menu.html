@@ -1,0 +1,63 @@
+<nav class="menu-lk">
+
+	<div class="center">
+
+		<ul class="menu-lk__list">
+
+{% set menu = [
+
+	"Заказы",
+	"Отложенные товары 4",
+	"История просмотра",
+	"Сравнение товаров 3",
+	"Подборка проф. ухода",
+	"Вступить в Cosmogid Профи",
+	"Мои данные и настройки"
+
+] %}
+
+{% for item in menu %}
+
+			<li class="menu-lk__item{% if menuActive === item %} is-current{% endif %}">
+
+				<a href="/">
+					{{ item }}
+				</a>
+
+			</li>
+
+{% endfor %}
+
+		</ul>
+
+		<ul class="menu-lk-second">
+
+{% set menu = [
+
+	"заказы в обработке 1",
+	"архив заказов 0",
+	"заказанные товары 0"
+
+] %}
+
+{% for item in menu %}
+
+			<li class="menu-lk-second__item{% if menuSecontdActive === item %} is-current{% endif %}">
+
+				<a href="/">
+					{{ item }}
+				</a>
+
+			</li>
+
+{% endfor %}
+
+		</ul>
+
+	</div>
+
+</nav>
+
+	</div>
+
+</nav>

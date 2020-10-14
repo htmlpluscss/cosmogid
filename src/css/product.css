@@ -58,10 +58,11 @@
 
 		@media ($responsive) {
 
-			.swiper-controls {
+			padding-bottom: 20px;
 
-				height: 30px;
-				position: relative;
+			.swiper-pagination {
+
+				bottom: -15px;
 
 			}
 

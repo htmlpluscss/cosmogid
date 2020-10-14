@@ -154,7 +154,13 @@
 
 		display: flex;
 		justify-content: center;
-		margin: 16px;
+		margin: 10px;
+
+		@media ($desktop) {
+
+			margin: 16px;
+
+		}
 
 		.btn {
 
@@ -285,14 +291,21 @@
 
 .form-lk {
 
-	width: 400px;
+	width: 100%;
 	padding: 18px 25px;
+
+	@media ($tablet) {
+
+		width: 400px;
+
+	}
 
 	&__head {
 
 		display: flex;
 		align-items: center;
 		margin-bottom: 18px;
+		padding-right: 18px;
 
 	}
 
