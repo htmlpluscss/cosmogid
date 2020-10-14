@@ -108,12 +108,31 @@
 
 	}
 
-	const btnShow = form.querySelector('.review-form__show-form');
+	form.addEventListener('change', event => {
 
-	btnShow.addEventListener('click', () =>
-		Array.from(form.querySelectorAll('.review-form__fieldset'), el =>
-			el.classList.toggle('is-hide')));
+		if(event.target.classList.contains('review-form__subject-input')){
 
+			if(event.target.getAttribute('data-type') === 'review') {
+
+				Array.from(form.querySelectorAll('[data-review]'), el =>
+					el.textContent = el.getAttribute('data-review'));
+
+			}
+			else {
+
+				Array.from(form.querySelectorAll('[data-request]'), el =>
+					el.textContent = el.getAttribute('data-request'));
+
+				form.querySelector('.review-form__hidden-in-request').classList.add('hide');
+
+			}
+
+			Array.from(form.querySelectorAll('.review-form__fieldset'), el =>
+				el.classList.toggle('is-hide'));
+
+		}
+
+	});
 
 })(document.querySelector('.review-form'));
 

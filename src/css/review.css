@@ -247,6 +247,8 @@
 			opacity: 1;
 			max-height: 1000px;
 			transition: var(--transitionDefault);
+			width: 500px;
+			max-width: 100%;
 
 			&.is-hide {
 
@@ -265,6 +267,26 @@
 
 		}
 
+		&__foot {
+
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+
+			.btn {
+
+				margin-right: 16px;
+
+			}
+
+		}
+
+		&__all-request {
+
+			white-space: nowrap;
+
+		}
+
 		&__btn {
 
 			width: 192px;
@@ -272,13 +294,16 @@
 			line-height: 38px;
 			font-size: 14px;
 			font-weight: 600;
-			margin: 20px 0 0;
+
+		}
+
+		&__legend {
+
+			margin-bottom: 20px;
 
 		}
 
 		&__row {
-
-			margin: 20px 0 0;
 
 			@media ($tablet) {
 

@@ -81,6 +81,23 @@
 
 	}
 
+	&--white {
+
+		background-color: #fff;
+		box-shadow: inset 0 0 0 1px #e4e4e4;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: #e4e4e4;
+
+			}
+
+		}
+
+	}
+
 	&--outline {
 
 		background-color: #fff;

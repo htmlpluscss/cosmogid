@@ -7,12 +7,36 @@
 						</h3>
 
 						<p class="review-form__label">
-							Мы всегда рады честным и конструктивным отзывам!
+							Вы можете быть первым, кто напишет отзыв об этом продукте или оставьте заявку, чтоб кто-то другой написал её скорее.
 						</p>
 
-						<button class="review-form__show-form review-form__btn btn btn--pink" type="button">
-							Написать отзыв
-						</button>
+						<div class="review-form__foot">
+
+							<label class="review-form__subject review-form__btn btn btn--pink">
+
+								<input type="radio" name="subject" class="review-form__subject-input visuallyhidden" value="Отзыв" data-type="review">
+
+								<span class="review-form__subject-label">
+									Написать отзыв
+								</span>
+
+							</label>
+
+							<label class="review-form__subject review-form__btn btn btn--white">
+
+								<input type="radio" name="subject" class="review-form__subject-input visuallyhidden" value="Заявка">
+
+								<span class="review-form__subject-label">
+									Оставить заявку
+								</span>
+
+							</label>
+
+							<div class="review-form__all-request">
+								Уже заявок 1 шт.
+							</div>
+
+						</div>
 
 					</div>
 
@@ -20,14 +44,14 @@
 
 						<p class="review-form__legend">
 
-							<span class="review-form__title h3">
+							<span class="review-form__title h3" data-review="Новый отзыв к товару" data-request="Оставить заявку">
 								Новый отзыв к товару
 							</span>
 
 							“Крем для рук ERICSON LABORATOIRE mini-kit acti-biotic (мини-кит) 3 шт по 10 мл”
 						</p>
 
-						<div class="review-form__row">
+						<div class="review-form__row review-form__hidden-in-request">
 
 							<div class="review-form__ratio">
 
@@ -86,7 +110,7 @@
 
 						</div>
 
-						<label for="review-form-text">
+						<label for="review-form-text" data-review="Отзыв:" data-request="Заявка:">
 							Отзыв:
 						</label>
 
