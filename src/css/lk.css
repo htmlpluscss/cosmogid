@@ -9,6 +9,20 @@
 
 	}
 
+	&-row-flex {
+
+		display: flex;
+		align-items: center;
+		margin: -10px;
+
+		&__item {
+
+			margin: 10px;
+
+		}
+
+	}
+
 /* menu */
 
 	&-menu {
@@ -157,6 +171,16 @@
 
 		}
 
+		tfoot {
+
+			td {
+
+				border-bottom: 0;
+
+			}
+
+		}
+
 		th, td {
 
 			font-weight: 500;
@@ -182,20 +206,6 @@
 			font-size: 13px;
 			color: #4D4D4D;
 
-		}
-
-	}
-
-/* order */
-
-	&-order {
-
-		&__remove {
-
-			display: flex;
-			align-items: center;
-			white-space: nowrap;
-
 			a {
 
 				color: var(--blue);
@@ -212,6 +222,29 @@
 				}
 
 			}
+
+			.btn {
+
+				height: 26px;
+				line-height: 26px;
+				font-size: 12px;
+				padding: 0 26px;
+
+			}
+
+		}
+
+	}
+
+/* order */
+
+	&-order {
+
+		&__remove {
+
+			display: flex;
+			align-items: center;
+			white-space: nowrap;
 
 			.button {
 
