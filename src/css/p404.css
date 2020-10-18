@@ -1,0 +1,147 @@
+.p404 {
+
+	@media ($responsive) {
+
+		margin: 30px 0;
+
+	}
+
+	@media ($desktop) {
+
+		width: 750px;
+		margin: 100px auto;
+
+	}
+
+	&__box {
+
+		@media ($tablet) {
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+	}
+
+	&__img {
+
+		@media ($tablet) {
+
+			width: 375px;
+
+		}
+
+		img {
+
+			@media ($responsive) {
+
+				width: calc(375px / 2);
+				height: calc(294px / 2);
+				margin: auto;
+
+			}
+
+			@media ($tablet) {
+
+				width: 375px;
+				height: 294px;
+
+			}
+
+		}
+
+	}
+
+	&__text {
+
+		line-height: 2;
+		font-weight: 500;
+
+		@media ($responsive) {
+
+			font-size: 14px;
+			text-align: center;
+
+		}
+
+		@media ($tablet) {
+
+			text-align: left;
+			padding-left: 8px;
+
+		}
+
+		@media ($desktop) {
+
+			font-size: 18px;
+
+		}
+
+	}
+
+	&__list {
+
+		justify-content: space-between;
+		border-top: 1px solid var(--border);
+		padding: 16px 0;
+
+		@media ($responsive) {
+
+			display: none;
+
+		}
+
+		@media ($tablet) {
+
+			display: flex;
+
+		}
+
+		li {
+
+			padding: 0 20px;
+			line-height: 1;
+			flex-grow: 1;
+			font-weight: 500;
+			text-align: center;
+			border-left: 1px solid var(--blue);
+
+			@media ($responsive) {
+
+				font-size: 14px;
+
+			}
+
+			@media ($desktop) {
+
+				font-size: 16px;
+
+			}
+
+			&:first-child {
+
+				border-left: 0;
+				padding-left: 0;
+
+			}
+
+			&:last-child {
+
+				padding-right: 0;
+
+			}
+
+		}
+
+		a {
+
+			text-decoration: none;
+			display: block;
+
+		}
+
+	}
+
+}
