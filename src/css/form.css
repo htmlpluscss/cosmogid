@@ -185,6 +185,15 @@
 
 	color: var(--color);
 
+	&--small {
+
+		height: 26px;
+		line-height: 26px;
+		padding: 0 14px;
+		border-color: var(--border);
+
+	}
+
 	textarea& {
 
 		resize: none;

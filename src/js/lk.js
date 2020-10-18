@@ -29,4 +29,4 @@
 
 	});
 
-})(document.querySelectorAll('.lk-table-2__img-hover-tr'));
+})(document.querySelectorAll('.lk__img-hover-tr'));

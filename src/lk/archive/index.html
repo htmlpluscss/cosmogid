@@ -1,11 +1,11 @@
-{% set title = "Заказы" %}
+{% set title = "Заказ" %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
 {% set menuActive = 'Заказы' %}
-{% set menuSecontdActive = 'заказы в обработке 0' %}
+{% set menuSecontdActive = 'архив заказов 7' %}
 
 	<div class="lk-header">
 
@@ -14,6 +14,7 @@
 		<div class="center">
 
 {% include "lk/menu-orders.html" %}
+{% include "lk/filter-date.html" %}
 
 		</div>
 
@@ -21,7 +22,7 @@
 
 	<div class="center">
 
-{% include "lk/empty/faq.html" %}
+{% include "lk/archive/orders.html" %}
 
 	</div>
 

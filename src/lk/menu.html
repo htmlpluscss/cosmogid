@@ -36,32 +36,4 @@
 
 	</div>
 
-	<div class="center">
-
-		<ul class="lk-menu__list-second">
-
-{% set menu = [
-
-	"заказы в обработке 1",
-	"архив заказов 0",
-	"заказанные товары 0"
-
-] %}
-
-{% for item in menu %}
-
-			<li class="lk-menu__item-second{% if menuSecontdActive === item %} is-current{% endif %}">
-
-				<a href="/">
-					{{ item }}
-				</a>
-
-			</li>
-
-{% endfor %}
-
-		</ul>
-
-	</div>
-
 </nav>
