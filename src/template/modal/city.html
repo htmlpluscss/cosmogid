@@ -42,16 +42,58 @@
 
 			</form>
 
-			<form action="/" class="modal__item modal__item--points">
+			<form action="/" class="modal__item modal__item--points modal-points" novalidate="novalidate">
 
-				<h3 class="h3">
+				<h3 class="modal-points__title h3">
 					Москва - пункты выдачи и постаматы
 				</h3>
 
-				<p class="h4">
-					Выбор пункта выдачи
-				</p>
+				<div class="modal-points__box">
 
-				<input class="input" placeholder="Найти по станции метро или улице" aria-label="Введите адрес">
+					<div class="modal-points__map"></div>
+
+					<div class="modal-points__search">
+
+						<p class="modal-points__head h4">
+							Выбор пункта выдачи
+						</p>
+
+						<input class="modal-points__input input" placeholder="Найти по станции метро или улице" aria-label="Введите адрес" name="searchword">
+
+						<div class="modal-points__result">
+
+							<a href="/" class="modal-points__result-item">
+
+								<h4 class="modal-points__result-metro">
+									Новогиреево
+								</h4>
+
+								<p class="modal-points__result-address">
+									г. Москва, ул. улица Фёдора Полетаева, дом 34, корпус 1
+								</p>
+
+								<p class="modal-points__result-detail">
+									Постамат Box 3024 <br>Срок хранения заказа: 2 дн
+								</p>
+
+							</a>
+
+							<a href="/" class="modal-points__result-item">
+
+								<p class="modal-points__result-address">
+									г. Москва, ул. улица Фёдора Полетаева, дом 34, корпус 1
+								</p>
+
+								<p class="modal-points__result-detail">
+									Постамат Box 3024 <br>Срок хранения заказа: 2 дн
+								</p>
+
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
 
 			</form>
