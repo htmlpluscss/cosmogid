@@ -13,15 +13,11 @@
 
 	}
 
-	&__box {
+	@media ($tablet) {
 
-		@media ($tablet) {
-
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 	}
 
@@ -83,19 +79,18 @@
 
 	&__list {
 
-		justify-content: space-between;
-		border-top: 1px solid var(--border);
-		padding: 16px 0;
+		padding: 20px 0;
+		display: flex;
 
 		@media ($responsive) {
 
-			display: none;
+			justify-content: center;
 
 		}
 
 		@media ($tablet) {
 
-			display: flex;
+			justify-content: flex-start;
 
 		}
 
@@ -103,9 +98,6 @@
 
 			padding: 0 20px;
 			line-height: 1;
-			flex-grow: 1;
-			font-weight: 500;
-			text-align: center;
 			border-left: 1px solid var(--blue);
 
 			@media ($responsive) {
@@ -139,6 +131,7 @@
 
 			text-decoration: none;
 			display: block;
+			font-weight: 500;
 
 		}
 
