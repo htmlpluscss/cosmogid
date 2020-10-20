@@ -1,4 +1,4 @@
-/*((filter)=>{
+((filter)=>{
 
 	"use strict";
 
@@ -8,11 +8,13 @@
 
 	}
 
-	const btnOpen = document.querySelectorAll('.filter-open'),
-		  btnClose = filter.querySelectorAll('.filter-close'),
-		  btnRange = filter.querySelectorAll('.filter__range-item');
+	const rangeInput = filter.querySelectorAll('.filter__range-input');
 
-	Array.from(btnOpen, el =>
+	Array.from(rangeInput, el =>
+		el.addEventListener('focus', () =>
+			setTimeout( () => el.setSelectionRange(0,99), 100)));
+
+	/*Array.from(btnOpen, el =>
 		el.addEventListener('click', () =>
 			document.body.classList.add('filter-show')));
 
@@ -43,7 +45,7 @@
 
 		}
 
-	});
+	});*/
 
 
-})(document.querySelector('.filter'));*/
+})(document.querySelector('.filter'));

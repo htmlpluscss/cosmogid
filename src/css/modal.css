@@ -618,28 +618,8 @@
 	&__result {
 
 		flex-grow: 1;
-		overflow-y: auto;
-		scroll-snap-type: y mandatory;
 		padding: 20px 30px;
 		border: 1px solid var(--border);
-
-		&::-webkit-scrollbar {
-
-			width: 4px;
-
-		}
-
-		&::-webkit-scrollbar-track {
-
-			background-color: #d3d3d3;
-
-		}
-
-		&::-webkit-scrollbar-thumb {
-
-			background-color: color(#115afe a(50%));
-
-		}
 
 		@media ($responsive) {
 

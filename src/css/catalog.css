@@ -74,6 +74,26 @@
 
 	}
 
+	&__body {
+
+		display: flex;
+
+	}
+
+	&__filter {
+
+		width: 220px;
+		position: relative;
+		margin-right: 36px;
+
+	}
+
+	&__items {
+
+		flex-grow: 1;
+
+	}
+
 	&-list {
 
 		&__item {
