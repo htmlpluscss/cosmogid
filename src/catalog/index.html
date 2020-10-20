@@ -1,26 +1,40 @@
-{% set title = "Купить планшет, электронную книгу Xiaomi, mi pad в Евпатории цена, рассрочка" %}
+{% set title = "Каталог профессиональной косметики" %}
 
-{% set description = "Хотите купить планшет, электронную книгу Xiaomi mi pad, mi в Евпатории недорого? В нашем фирменном магазине сиаоми Mishka-Shop вы можете это сделать. Действует доставка, гарантия и страховка на все товары." %}
+{% set description = "Профессиональная косметика для лица огромный выбор по низким ценам в интернет-магазине профессиональной косметики CosmoGid." %}
 
-{% set ogImage = "img/catalog/og.jpg" %}
-{% set ogImage236 = "img/catalog/og-236.jpg" %}
 {% set urlPage = "catalog" %}
 
-{% set breadcrumbs = ['Каталог','Ноутбуки, планшеты, периферия','Планшеты'] %}
+{% set breadcrumbs = ['Каталог'] %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-	<section class="center filter-show__hide">
+	<section class="center">
 
-% include "_include/breadcrumbs.html" %}
-% include "catalog/head.html" %}
-% include "catalog/list.html" %}
-% include "catalog/article.html" %}
+{% include "catalog/head.html" %}
 
-	</section>
+		<div class="catalog__body">
+
+			<div class="catalog__filter">
 
 {% include "catalog/filter.html" %}
+
+			</div>
+
+			<div class="catalog__items">
+
+{% include "catalog/list.html" %}
+
+			</div>
+
+		</div>
+
+{% include "catalog/article.html" %}
+{% include "catalog/articles.html" %}
+{% include "home/sale.html" %}
+{% include "home/visited.html" %}
+
+	</section>
 
 {% endblock %}

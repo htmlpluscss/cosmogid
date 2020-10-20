@@ -1,4 +1,4 @@
-/*((ask) => {
+((ask) => {
 
 	"use strict";
 
@@ -66,4 +66,4 @@
 
 	});
 
-})(document.querySelectorAll('.ask'));*/
+})(document.querySelectorAll('.catalog-filter-tags'));

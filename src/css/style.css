@@ -26,6 +26,7 @@
 @import url(card-category.css);
 @import url(card-procedure.css);
 @import url(card-consultation.css);
+@import url(card-article.css);
 
 @import url(product.css);
 @import url(breadcrumbs.css);
@@ -38,14 +39,7 @@
 @import url(p404.css);
 
 @import url(lk.css);
-/*
-
 
 @import url(pagin.css);
-
-
-
 @import url(catalog.css);
 @import url(filter.css);
-
- */

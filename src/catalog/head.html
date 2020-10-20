@@ -1,70 +1,59 @@
 	<header class="catalog-head">
 
 		<h1 class="h1 catalog-head__title">
-			Планшеты
+			{{ title }}
 		</h1>
 
-		<p class="catalog-head__count">
-			546 товаров
-		</p>
+		<form action="/" class="catalog-filter-tags">
 
-		<div class="catalog-head__btn">
+{% set list = [
 
-			<div class="catalog-head__filter">
+	"Сухая кожа головы",
+	"Жирная кожа головы",
+	"Чувствительная кожа головы",
+	"Секущиеся волосы",
+	"Увлажнение волос",
+	"Придание объема",
+	"Ламинирование волос",
+	"Средства от перхоти",
+	"Восстановление структуры волос",
+	"Для тонких волос",
+	"Вьющиеся волосы",
+	"Окрашенные волосы",
+	"Сухая кожа головы",
+	"Жирная кожа головы",
+	"Чувствительная кожа головы",
+	"Секущиеся волосы",
+	"Увлажнение волос",
+	"Придание объема",
+	"Ламинирование волос",
+	"Средства от перхоти",
+	"Восстановление структуры волос",
+	"Для тонких волос",
+	"Вьющиеся волосы",
+	"Окрашенные волосы"
 
-				<button class="btn btn--white filter-open" type="button">
-					Фильтр
+] %}
+
+
+{% for item in list %}
+
+				<label class="catalog-filter-tags__item{% if loop.index > 12 %} hide{% endif %}">
+
+					<input type="checkbox" class="catalog-filter-tags__input visuallyhidden" name="catalog-filter-tags" value="{{ item }}">
+
+					<span class="catalog-filter-tags__label">
+						{{ item }}
+					</span>
+
+				</label>
+
+{% endfor %}
+
+				<button class="btn btn--link catalog-filter-tags__show-all" type="button">
+					Ещё 11
 				</button>
 
-			</div>
-
-			<form action="/" class="catalog-head__sort">
-
-				<div class="select">
-
-					<label class="select__label btn btn--white" for="catalog-sort">
-						По популярности
-					</label>
-
-					<select id="catalog-sort">
-						<option value="1">По популярности</option>
-						<option value="2">По алфавиту</option>
-						<option value="3">По цене возрастание</option>
-						<option value="4">По цене уменьшению</option>
-					</select>
-
-				</div>
-
-			</form>
-
-		</div>
-
-		<div class="btn-scrollbar">
-
-			<div class="btn-scrollbar__item">
-
-				<a href="/" class="btn btn--tab is-active">
-					Смартфоны
-				</a>
-
-			</div>
-
-			<div class="btn-scrollbar__item">
-
-				<a href="/" class="btn btn--tab">
-					Ноутбуки
-				</a>
-
-			</div>
-
-			<div class="btn-scrollbar__item">
-
-				<a href="/" class="btn btn--tab">
-					Транспорт
-				</a>
-
-			</div>
-
-		</div>
+		</form>
 
 	</header>

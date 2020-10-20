@@ -1,0 +1,79 @@
+{% set list = [
+
+	{
+		title  : "Ухоженные руки за 5 минут!",
+		img    : 1,
+		text   : "Новый крем с усиленной формулой, легкая текстура, усиленный витаминами от производителя.."
+	},
+	{
+		title  : "Гид по красоте",
+		img    : 2,
+		text   : "Лучшие протоколы процедур!"
+	},
+	{
+		title  : "Наши сертификаты",
+		img    : 3,
+		text   : "Лучший подарок на любой праздник!"
+	}
+
+] %}
+
+	<aside class="card-list">
+
+		<div class="card-list__head">
+
+			<h3 class="card-list__title h2">
+				Другие популярные статьи
+			</h3>
+
+			<a href="/" class="card-list__all">
+				Смотреть все
+				<svg width="17" height="9" viewBox="0 0 17 9">
+					<path d="M0 4.5h15.5M11.5 1l4 3.5-4 3.5"/>
+				</svg>
+			</a>
+
+		</div>
+
+		<ul class="card-list__list card-articles">
+
+{% for item in list %}
+
+			<li class="card-articles__item">
+
+				<a href="/" class="card-article">
+
+					<picture>
+
+						<source srcset="/img/card-article/{{ item.img }}--315x152.webp 1x, /img/card-article/{{ item.img }}--630x304.webp 2x" type="image/webp">
+
+						<source srcset="/img/card-article/{{ item.img }}--315x152.jpg 1x, /img/card-article/{{ item.img }}--630x304.jpg 2x">
+
+						<img class="card-article__img" src="/img/card-article/{{ item.img }}--630x304.jpg" alt="{{ item.title }}" loading="lazy" width="315" height="152">
+
+					</picture>
+
+					<span class="card-article__title h3">
+						{{ item.title }}
+					</span>
+
+					<span class="card-article__text">
+						{{ item.text }}
+					</span>
+
+					<span class="card-article__readme">
+						Читать
+						<svg width="18" height="9" viewBox="0 0 18 9">
+							<path d="M.97 4.29h15.57M12.52.79l4.02 3.5-4.02 3.5"/>
+						</svg>
+					</span>
+
+				</a>
+
+			</li>
+
+{% endfor %}
+
+		</ul>
+
+	</aside>
