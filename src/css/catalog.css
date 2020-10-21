@@ -94,6 +94,65 @@
 
 	}
 
+	&-bar {
+
+		background-color: color(#c4c4c4 a(17%));
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px 12px;
+		margin: 20px 0;
+
+		&__right {
+
+			display: flex;
+			align-items: center;
+
+		}
+
+	}
+
+	&-view {
+
+		display: flex;
+		margin-left: 24px;
+
+		&__radio {
+
+			width: 27px;
+			height: 27px;
+			position: relative;
+			cursor: pointer;
+			margin: 0 6px;
+
+		}
+
+		&__ico {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			fill: #bebebe;
+
+		}
+
+		input {
+
+			opacity: .0001;
+			z-index: -1;
+			appearance: none;
+
+		}
+
+		&__radio:hover &__ico,
+		input:checked + &__ico {
+
+			fill: #818181;
+
+		}
+
+	}
+
 	&-list {
 
 		&__item {

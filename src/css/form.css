@@ -770,3 +770,20 @@
 	}
 
 }
+
+.select-label-row {
+
+	display: flex;
+	align-items: center;
+
+	&__label {
+
+		white-space: nowrap;
+		font-size: 14px;
+		color: #818181;
+		font-weight: 500;
+		padding: 0 10px;
+
+	}
+
+}

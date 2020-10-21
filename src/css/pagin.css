@@ -1,46 +1,71 @@
 .pagin {
-/*
-	margin: 40px -15px;
-	padding: 20px 10px;
-	position: relative;
+
 	display: flex;
+	justify-content: flex-end;
+	margin: 20px 0;
 
-	@media ($tablet) {
+	&__list {
 
-		padding: 20px 15px;
-		margin: 40px -20px;
+		display: flex;
 
 	}
 
 	&__item {
 
-		flex-grow: 1;
 		flex-shrink: 0;
-		width: 25px;
-
-		&--arrow {
-
-			flex-grow: 0;
-
-		}
 
 		&--current {
 
-			pointer-events: none;
+			a {
+
+				color: #818181;
+
+			}
+
+		}
+
+		&--sep {
+
+			padding: 0 2px;
 
 		}
 
 	}
 
-	&__link {
+	a {
 
-		display: flex;
-		height: 25px;
-		font-size: 22px;
-		line-height: 25px;
-		justify-content: center;
-		align-items: center;
+		color: #bebebe;
+		font-size: 14px;
+		line-height: 22px;
+		padding: 0 4px;
+		display: block;
+		height: 22px;
+		text-decoration: none;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #999;
+
+				svg {
+
+					stroke: #999;
+
+				}
+
+			}
+
+		}
+
+		svg {
+
+			fill: none;
+			margin: 4px;
+			stroke: #dbdbdb;
+
+		}
 
 	}
- */
+
 }
