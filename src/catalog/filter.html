@@ -5,32 +5,74 @@
 			<div class="filter__item">
 
 				<h3 class="filter__title">
-					Цена, ₽
+					Цена, <span class="filter__title-suf">₽</span>
 				</h3>
 
 				<div class="filter__range">
 
-					<div class="filter__range-item">
+					<div class="slider-range" data-min="360" data-max="159999" data-start="360,159999">
 
-						<span class="filter__range-pref">
-							от
-						</span>
+						<div class="slider-range__key">
 
-						<input type="tel" class="filter__range-input input" value="360">
+							<div class="slider-range__input">
 
-					</div>
+								<span class="slider-range__input-pref">
+									от
+								</span>
 
-					<div class="filter__range-item">
+								<input type="tel" class="input slider-range__input-min" value="360" name="price-min">
 
-						<span class="filter__range-pref">
-							до
-						</span>
+							</div>
 
-						<input type="tel" class="filter__range-input input" value="159 999">
+							<div class="slider-range__input">
+
+								<span class="slider-range__input-pref">
+									до
+								</span>
+
+								<input type="tel" class="input slider-range__input-max" value="159 999" name="price-max">
+
+							</div>
+
+						</div>
+
+						<div class="slider-range__track"></div>
 
 					</div>
 
 				</div>
+
+			</div>
+
+			<div class="filter__item">
+
+				<label class="checkbox-toggle">
+
+					<input class="checkbox-toggle__input" type="checkbox">
+
+					<span class="checkbox-toggle__label">
+						Товары со скидкой
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="filter__item">
+
+				<label class="checkbox-toggle">
+
+					<input class="checkbox-toggle__input" type="checkbox">
+
+					<span class="checkbox-toggle__label">
+						Хиты продаж
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="filter__item">
 
 			</div>
 
@@ -335,12 +377,12 @@
 
 			<div class="filter__item">
 
-				<label class="checkbox-2">
+				<label class="checkbox-toggle">
 
-					<input class="checkbox-2__input" type="checkbox">
+					<input class="checkbox-toggle__input" type="checkbox">
 
-					<span class="checkbox-2__label is-title is-star">
-						Все популярные бренды
+					<span class="checkbox-toggle__label">
+						Популярные бренды
 					</span>
 
 				</label>

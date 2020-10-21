@@ -7,6 +7,12 @@
 		font-size: 15px;
 		margin-bottom: 10px;
 
+		&-suf {
+
+			font-weight: 400;
+
+		}
+
 	}
 
 	&__item {
@@ -43,46 +49,6 @@
 
 	}
 
-	&__range {
-
-		display: flex;
-		justify-content: space-between;
-
-		&-item {
-
-			position: relative;
-			width: calc(50% - 5px);
-
-		}
-
-		&-pref {
-
-			position: absolute;
-			width: 30px;
-			top: 0;
-			left: 0;
-			text-align: center;
-			font-size: 14px;
-			line-height: 28px;
-			color: #bfbfbf;
-			pointer-events: none;
-			z-index: 1;
-
-		}
-
-		&-input {
-
-			border-color: #bfbfbf !important;
-			border-radius: 2px;
-			padding: 0 10px 0 30px;
-			height: 28px;
-			line-height: 28px;
-			color: var(--text);
-
-		}
-
-	}
-
 }
 
 .scroll-bar {
@@ -105,6 +71,62 @@
 	&::-webkit-scrollbar-thumb {
 
 		background-color: color(#115afe a(50%));
+
+	}
+
+}
+
+.slider-range {
+
+	white-space: nowrap;
+
+	&__key {
+
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__input {
+
+		position: relative;
+		width: calc(50% - 5px);
+
+		&-pref {
+
+			position: absolute;
+			width: 30px;
+			top: 0;
+			left: 0;
+			text-align: center;
+			font-size: 14px;
+			line-height: 28px;
+			color: #bfbfbf;
+			pointer-events: none;
+			z-index: 1;
+
+		}
+
+		.input {
+
+			border-color: #bfbfbf !important;
+			border-radius: 2px;
+			padding: 0 10px 0 30px;
+			height: 28px;
+			line-height: 28px;
+			color: var(--text);
+
+		}
+
+	}
+
+	&__track {
+
+		margin: 24px 0;
+		height: 2px;
+		padding: 0 10px;
+		background-color: #bebebe;
+		position: relative;
 
 	}
 

@@ -53,4 +53,13 @@ https://github.com/htmlpluscss/
 	// Determine if an element is in the visible viewport
 	CG.isInViewport = el => el.getBoundingClientRect().top >= 0 && el.getBoundingClientRect().bottom <= window.innerHeight;
 
+	// отделяем тысячи
+	CG.sepNumber = str => {
+		str = parseInt(str, 10).toString();
+		return str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+	};
+
+	// склеиваем тысячи
+	CG.strToNumber = str => parseInt(str.replace(/\s+/g,''), 10);
+
 })();

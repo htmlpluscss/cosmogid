@@ -1,4 +1,4 @@
-((filter)=>{
+( filter => {
 
 	"use strict";
 
@@ -8,11 +8,34 @@
 
 	}
 
-	const rangeInput = filter.querySelectorAll('.filter__range-input');
+	filter.addEventListener('input', () => {
 
-	Array.from(rangeInput, el =>
-		el.addEventListener('focus', () =>
-			setTimeout( () => el.setSelectionRange(0,99), 100)));
+		const formData = new FormData(filter),
+			  xhr = new XMLHttpRequest();
+
+		xhr.open("POST", filter.getAttribute('action'));
+		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
+		xhr.onreadystatechange = () => {
+
+			if (xhr.readyState !== 4){
+
+				return;
+
+			}
+
+			if (xhr.status === 200) {
+
+				console.log(xhr.responseText);
+
+			}
+
+		}
+
+		xhr.send(formData);
+
+	});
+
 
 	/*Array.from(btnOpen, el =>
 		el.addEventListener('click', () =>
