@@ -20,7 +20,7 @@
 									от
 								</span>
 
-								<input type="tel" class="input slider-range__input-min" value="360" name="price-min">
+								<input type="tel" class="input slider-range__input-min" value="360" name="price-min" maxlength="7">
 
 							</div>
 
@@ -30,7 +30,7 @@
 									до
 								</span>
 
-								<input type="tel" class="input slider-range__input-max" value="159 999" name="price-max">
+								<input type="tel" class="input slider-range__input-max" value="159 999" name="price-max" maxlength="7">
 
 							</div>
 
@@ -74,94 +74,60 @@
 
 			<div class="filter__item">
 
-			</div>
-
-			<div class="filter__item">
-
 				<h3 class="filter__title">
 					Раздел
 				</h3>
 
-				<div class="filter__fieldset text-short">
+				<div class="filter__fieldset only-hit">
 
-					<div class="filter__checkbox">
+					<div class="only-hit__sort">
 
-						<label class="checkbox-2">
+						<div class="filter__checkbox only-hit__item" data-hit="1">
 
-							<input class="checkbox-2__input" type="checkbox" checked="checked">
+							<label class="checkbox-2">
 
-							<span class="checkbox-2__label">
-								Волосы
-								<span class="checkbox-2__label-suf">(24)</span>
-							</span>
+								<input class="checkbox-2__input" type="checkbox">
 
-						</label>
+								<span class="checkbox-2__label">
+									Волосы
+									<span class="checkbox-2__label-suf">(24)</span>
+								</span>
 
-					</div>
+							</label>
 
-					<div class="filter__checkbox">
+						</div>
 
-						<label class="checkbox-2">
+						<div class="filter__checkbox only-hit__item" data-hit="2">
 
-							<input class="checkbox-2__input" type="checkbox">
+							<label class="checkbox-2">
 
-							<span class="checkbox-2__label">
-								Лицо
-								<span class="checkbox-2__label-suf">(24)</span>
-							</span>
+								<input class="checkbox-2__input" type="checkbox">
 
-						</label>
+								<span class="checkbox-2__label">
+									Лицо
+									<span class="checkbox-2__label-suf">(24)</span>
+								</span>
 
-					</div>
+							</label>
 
-					<div class="filter__checkbox">
+						</div>
 
-						<label class="checkbox-2">
+						<div class="filter__checkbox only-hit__item" data-hit="3">
 
-							<input class="checkbox-2__input" type="checkbox">
+							<label class="checkbox-2">
 
-							<span class="checkbox-2__label">
-								Тело
-								<span class="checkbox-2__label-suf">(28)</span>
-							</span>
+								<input class="checkbox-2__input" type="checkbox">
 
-						</label>
+								<span class="checkbox-2__label">
+									Тело
+									<span class="checkbox-2__label-suf">(28)</span>
+								</span>
 
-					</div>
+							</label>
 
-					<div class="filter__checkbox">
+						</div>
 
-						<label class="checkbox-2">
-
-							<input class="checkbox-2__input" type="checkbox">
-
-							<span class="checkbox-2__label">
-								Пилинги и скрабы
-								<span class="checkbox-2__label-suf">(24)</span>
-							</span>
-
-						</label>
-
-					</div>
-
-					<div class="filter__checkbox">
-
-						<label class="checkbox-2">
-
-							<input class="checkbox-2__input" type="checkbox">
-
-							<span class="checkbox-2__label">
-								Руки
-								<span class="checkbox-2__label-suf">(20)</span>
-							</span>
-
-						</label>
-
-					</div>
-
-					<div class="text-short__hide">
-
-						<div class="filter__checkbox">
+						<div class="filter__checkbox only-hit__item" data-hit="4">
 
 							<label class="checkbox-2">
 
@@ -176,7 +142,7 @@
 
 						</div>
 
-						<div class="filter__checkbox">
+						<div class="filter__checkbox only-hit__item" data-hit="5">
 
 							<label class="checkbox-2">
 
@@ -191,10 +157,70 @@
 
 						</div>
 
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Ноги
+									<span class="checkbox-2__label-suf">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Мужчинам
+									<span class="checkbox-2__label-suf">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Защита от солнца
+									<span class="checkbox-2__label-suf">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Мезотерапия
+									<span class="checkbox-2__label-suf">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
 					</div>
 
-					<button class="btn btn--readme text-short__btn" type="button" data-alt="Свернуть">
-						<span class="text-short__btn-inner">Показать ещё 6</span>
+					<button class="btn btn--readme only-hit__btn" type="button" data-alt="Свернуть">
+						<span class="only-hit__btn-inner">Показать ещё 4</span>
 					</button>
 
 				</div>
@@ -207,171 +233,7 @@
 					Бренд
 				</h3>
 
-				<div class="filter__fieldset text-short">
-
-					<div class="filter__scroll scroll-bar">
-
-						<div class="filter__checkbox">
-
-							<label class="checkbox-2">
-
-								<input class="checkbox-2__input" type="checkbox">
-
-								<span class="checkbox-2__label is-star">
-									Davines
-									<span class="checkbox-2__label-suf">(24)</span>
-								</span>
-
-							</label>
-
-						</div>
-
-						<div class="filter__checkbox">
-
-							<label class="checkbox-2">
-
-								<input class="checkbox-2__input" type="checkbox">
-
-								<span class="checkbox-2__label">
-									Declare
-									<span class="checkbox-2__label-suf">(24)</span>
-								</span>
-
-							</label>
-
-						</div>
-
-						<div class="filter__checkbox">
-
-							<label class="checkbox-2">
-
-								<input class="checkbox-2__input" type="checkbox">
-
-								<span class="checkbox-2__label">
-									Demax
-									<span class="checkbox-2__label-suf">(28)</span>
-								</span>
-
-							</label>
-
-						</div>
-
-						<div class="filter__checkbox">
-
-							<label class="checkbox-2">
-
-								<input class="checkbox-2__input" type="checkbox">
-
-								<span class="checkbox-2__label is-star">
-									Depileve
-									<span class="checkbox-2__label-suf">(24)</span>
-								</span>
-
-							</label>
-
-						</div>
-
-						<div class="filter__checkbox">
-
-							<label class="checkbox-2">
-
-								<input class="checkbox-2__input" type="checkbox">
-
-								<span class="checkbox-2__label">
-									Depileve
-									<span class="checkbox-2__label-suf">(20)</span>
-								</span>
-
-							</label>
-
-						</div>
-
-						<div class="text-short__hide">
-
-							<div class="filter__checkbox">
-
-								<label class="checkbox-2">
-
-									<input class="checkbox-2__input" type="checkbox">
-
-									<span class="checkbox-2__label">
-										Davines
-										<span class="checkbox-2__label-suf">(24)</span>
-									</span>
-
-								</label>
-
-							</div>
-
-							<div class="filter__checkbox">
-
-								<label class="checkbox-2">
-
-									<input class="checkbox-2__input" type="checkbox">
-
-									<span class="checkbox-2__label">
-										Declare
-										<span class="checkbox-2__label-suf">(24)</span>
-									</span>
-
-								</label>
-
-							</div>
-
-							<div class="filter__checkbox">
-
-								<label class="checkbox-2">
-
-									<input class="checkbox-2__input" type="checkbox">
-
-									<span class="checkbox-2__label">
-										Demax
-										<span class="checkbox-2__label-suf">(28)</span>
-									</span>
-
-								</label>
-
-							</div>
-
-							<div class="filter__checkbox">
-
-								<label class="checkbox-2">
-
-									<input class="checkbox-2__input" type="checkbox">
-
-									<span class="checkbox-2__label">
-										Depileve
-										<span class="checkbox-2__label-suf">(24)</span>
-									</span>
-
-								</label>
-
-							</div>
-
-							<div class="filter__checkbox">
-
-								<label class="checkbox-2">
-
-									<input class="checkbox-2__input" type="checkbox">
-
-									<span class="checkbox-2__label">
-										Depileve
-										<span class="checkbox-2__label-suf">(20)</span>
-									</span>
-
-								</label>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<button class="btn btn--readme text-short__btn" type="button" data-alt="Свернуть">
-						<span class="text-short__btn-inner">Показать ещё 244</span>
-					</button>
-
-				</div>
+{% include "catalog/filter__brand.html" %}
 
 			</div>
 
@@ -471,6 +333,161 @@
 						</label>
 
 					</div>
+
+				</div>
+
+			</div>
+
+			<div class="filter__item">
+
+				<h3 class="filter__title">
+					Хиты первые
+				</h3>
+
+				<div class="filter__fieldset only-hit">
+
+					<div class="only-hit__sort">
+
+						<div class="filter__checkbox only-hit__item" data-hit="4">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Волосы
+									<span class="checkbox-2__label-suf">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="5">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Лицо
+									<span class="checkbox-2__label-suf">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="3">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label is-star">
+									Тело
+									<span class="checkbox-2__label-suf">(28)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="2">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label is-star">
+									Пилинги и скрабы
+									<span class="checkbox-2__label-suf">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="1">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label is-star">
+									Руки
+									<span class="checkbox-2__label-suf">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Ноги
+									<span class="checkbox-2__label-suf">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Мужчинам
+									<span class="checkbox-2__label-suf">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Защита от солнца
+									<span class="checkbox-2__label-suf">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Мезотерапия
+									<span class="checkbox-2__label-suf">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+					</div>
+
+					<button class="btn btn--readme only-hit__btn" type="button" data-alt="Свернуть">
+						<span class="only-hit__btn-inner">Показать ещё 4</span>
+					</button>
 
 				</div>
 

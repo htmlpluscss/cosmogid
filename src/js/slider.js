@@ -17,7 +17,7 @@
 			  inputMin = slider.querySelector('.slider-range__input-min'),
 			  inputMax = slider.querySelector('.slider-range__input-max'),
 			  track = slider.querySelector('.slider-range__track'),
-			  filter = document.querySelector('.filter');
+			  form = slider.closest('form');
 
 		noUiSlider.create(track, {
 			connect: true,
@@ -36,15 +36,7 @@
 
 		});
 
-		track.noUiSlider.on('end', values => {
-
-			if (filter) {
-
-				filter.dispatchEvent(new CustomEvent("input"));
-
-			}
-
-		});
+		track.noUiSlider.on('end', values => form.dispatchEvent(new CustomEvent("change")));
 
 	// события в инпутах
 
@@ -58,6 +50,8 @@
 					event.preventDefault();
 
 				}
+
+				form.dispatchEvent(new CustomEvent("change"));
 
 			});
 

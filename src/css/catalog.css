@@ -86,6 +86,7 @@
 		width: 220px;
 		position: relative;
 		margin-right: 36px;
+		flex-shrink: 0;
 
 	}
 
