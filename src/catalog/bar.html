@@ -55,7 +55,7 @@
 
 							<label class="catalog-view__radio">
 
-								<input type="radio" name="view" value="column" checked="checked">
+								<input type="radio" name="view" value="row"{% if view == 'row' %} checked="checked"{% endif %}>
 
 								<span class="catalog-view__ico">
 									<svg width="27" height="27" viewBox="0 0 27 27">
@@ -67,7 +67,7 @@
 
 							<label class="catalog-view__radio">
 
-								<input type="radio" name="view" value="row">
+								<input type="radio" name="view" value="column"{% if view == 'column' %} checked="checked"{% endif %}>
 
 								<span class="catalog-view__ico">
 									<svg width="26" height="27" viewBox="0 0 26 27">

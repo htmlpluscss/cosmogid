@@ -162,20 +162,26 @@
 
 		btn.addEventListener('click', () => {
 
-			const card = btn.closest('.card-product'),
-				  id = card.querySelector('[name="id"]'),
-				  storeid = card.querySelector('[name="storeid"]'),
-				  articleid = card.querySelector('[name="articleid"]:checked'),
-				  cat = card.querySelector('.card-item__cat'),
-				  title = card.querySelector('.card-item__title'),
+			const card = btn.closest('.card-product') || btn.closest('.card-product-row'),
+				  id = card.querySelector('[name="id"]') ||
+				  	   card.querySelector('.card-product__order [name="id"]'),
+				  storeid = card.querySelector('[name="storeid"]') ||
+				  	   card.querySelector('.card-product__order [name="storeid"]'),
+				  articleid = card.querySelector('[name="articleid"]:checked') ||
+				  	   card.querySelector('.card-product__order [name="articleid"]:checked'),
+				  cat = card.querySelector('.card-item__cat') ||
+				  		card.querySelector('.card-product-row__cat'),
+				  title = card.querySelector('.card-item__title') ||
+				  		  card.querySelector('.card-product-row__title'),
 				  price = card.querySelector('.card-product__price-value'),
-				  img = card.querySelector('.card-item__img').innerHTML;
+				  img = card.querySelector('.card-item__img') ||
+				  		card.querySelector('.card-product-row__img');
 
 			formBuyOneClick.querySelector('[name="id"]').value = id.value;
 			formBuyOneClick.querySelector('[name="storeid"]').value = storeid ? storeid.value : '';
 			formBuyOneClick.querySelector('[name="articleid"]').value = articleid ? articleid.value : '';
 
-			formBuyOneClick.querySelector('.card-item__img').innerHTML = img;
+			formBuyOneClick.querySelector('.card-item__img').innerHTML = img.innerHTML;
 			formBuyOneClick.querySelector('.card-item__cat').textContent = cat.textContent;
 			formBuyOneClick.querySelector('.card-item__title').textContent = title.textContent;
 			formBuyOneClick.querySelector('.card-item__price').textContent = price.textContent;

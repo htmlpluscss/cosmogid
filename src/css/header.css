@@ -311,10 +311,21 @@
 
 		}
 
+		@media ($responsive) {
+
+			&-hover {
+
+				display: none;
+
+			}
+
+		}
+
 		@media ($tablet) {
 
 			&-hover {
 
+				display: block;
 				position: absolute;
 				top: 100%;
 				left: 0;
@@ -351,7 +362,7 @@
 
 	}
 
-	&__user-menu {
+	&__profile-menu {
 
 		@media ($tablet) {
 

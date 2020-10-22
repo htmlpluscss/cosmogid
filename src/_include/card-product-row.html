@@ -1,0 +1,238 @@
+			<div class="card-product-row">
+
+				<a href="/" class="card-product-row__left">
+
+					<span class="card-product-row__img">
+
+						<picture>
+
+							<source srcset="/img/card-product/{{ item.img }}--150x150.webp 1x, /img/card-product/{{ item.img }}--300x300.webp 2x" type="image/webp">
+
+							<source srcset="/img/card-product/{{ item.img }}--150x150.jpg 1x, /img/card-product/{{ item.img }}--300x300.jpg 2x">
+
+							<img src="/img/card-product/{{ item.img }}--300x300.jpg" alt="{{ item.title }}" loading="lazy" width="150" height="150">
+
+						</picture>
+
+					</span>
+
+				</a>
+
+				<div class="card-product-row__center">
+
+					<a href="/" class="card-product-row__link">
+
+						<address class="card-product-row__cat">
+							{{ item.brand }}
+						</address>
+
+						<h3 class="card-product-row__title">
+							{{ item.title }}
+						</h3>
+
+					</a>
+
+{% if item.article and item.article.length > 5 %}
+
+					<a href="/" class="card-product__article-link">
+						всего {{ item.article.length }} вариантов
+					</a>
+
+{% endif %}
+
+{% if item.ratio %}
+
+					<span class="card-product-row__ratio card-product-row__ratio--{{ item.ratio }}">
+
+						<span class="visuallyhidden">Рейтинг {{ item.ratio }} звезд</span>
+
+	{% if item.ratioTotal %}
+						<span class="visuallyhidden">Всего оценок</span>{{ item.ratioTotal }}
+	{% endif %}
+
+					</span>
+
+{% endif %}
+
+{% if item.desc %}
+
+					<p class="card-product-row__desc">
+						{{ item.desc }}
+					</p>
+
+{% endif %}
+
+				</div>
+
+				<div class="card-product-row__right">
+
+					<form action="/" class="card-product__order form-buy">
+
+						<input type="hidden" name="id" value="{{ item.id }}">
+						<input type="hidden" name="storeid" value="{{ item.storeid }}">
+
+{% if item.sale or item.label %}
+
+						<p class="card-product-row__label">
+
+	{% if item.sale %}
+
+							<span class="card-product-row__label-item card-product-row__label-item--sale">
+
+								<span class="visuallyhidden">Скидка</span>
+								<span class="card-product__sale">{{ item.sale }}</span>%
+
+							</span>
+
+	{% endif %}
+
+	{% if item.label %}
+
+							<span class="card-product-row__label-item">
+								{{ item.label }}
+							</span>
+
+	{% endif %}
+
+						</p>
+
+{% endif %}
+
+						<div class="card-product-row__form">
+
+							<p class="card-product__price card-product-row__price">
+
+{% if item.oldPrice %}
+
+								<s class="card-product__old-price">
+
+									<b class="visuallyhidden">
+										Старая цена
+									</b>
+
+									<span class="card-product__old-price-value">
+										{{ item.oldPrice }}
+									</span>
+
+									<span class="card-product__price-suf">
+										₽
+									</span>
+
+								</s>
+
+{% endif %}
+
+								<b class="visuallyhidden">
+									Цена
+								</b>
+
+								<span class="card-product__price-value">
+									{{ item.price }}
+								</span>
+
+								<span class="card-product__price-suf">
+									₽
+								</span>
+
+							</p>
+
+{% if item.article and item.article.length <= 5 %}
+
+							<div class="card-product__article">
+
+		{% for article in item.article %}
+
+								<label class="card-product__article-item form-buy__article">
+
+									<input
+										name="articleid"
+										type="radio"
+
+										value="{{ article.id }}"
+
+										data-sku="{{ article.sku }}"
+										data-price="{{ article.price }}"
+										data-old-price="{{ article.oldPrice }}"
+
+										class="form-buy__article-input visuallyhidden"
+
+										{% if article.active %}
+											checked="checked"
+										{% endif %}
+
+										{% if article.sale %}
+											data-sale="{{ article.sale }}"
+										{% endif %}
+
+										{% if article.storeid %}
+											data-storeid="{{ article.storeid }}"
+										{% endif %}
+
+										{% if article.inBasket %}
+											data-in-basket="in basket"
+										{% endif %}
+									>
+
+									<span class="card-product__article-label form-buy__article-label">
+										{{ article.value }}
+									</span>
+
+								</label>
+
+		{% endfor %}
+
+							</div>
+
+{% endif %}
+
+							<div class="card-product-row__btn card-product__btn">
+
+{% if item.article and item.article.length > 5 %}
+
+								<a href="/" class="btn btn--outline{% if item.inBasket %} hide{% endif %}">
+									Купить
+								</a>
+
+{% else %}
+								<button class="btn btn--outline{% if item.inBasket %} hide{% endif %}">
+									В корзину
+								</button>
+{% endif %}
+
+								<a href="/basket/" class="btn btn--pink{% if not item.inBasket %} hide{% endif %}">
+									В корзине
+								</a>
+
+							</div>
+
+							<button class="card-product-row__one-click btn btn--link buy-one-click" type="button">
+								Купить в один клик
+							</button>
+
+						</div>
+
+					</form>
+
+					<form action="/" class="card-product-row__wishlist form-wishlist form-wishlist--text">
+
+						<input type="hidden" name="id" value="{{ item.id }}">
+						<input type="hidden" name="type" value="0">
+
+{% if item.wishlist %}
+
+						<input type="hidden" name="mode" value="del">
+
+{% else %}
+						<input type="hidden" name="mode" value="add">
+
+{% endif %}
+
+						<button class="button">
+							в избранное
+						</button>
+
+					</form>
+
+				</div>
+
+			</div>
