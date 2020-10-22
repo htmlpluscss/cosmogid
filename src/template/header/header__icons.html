@@ -1,6 +1,35 @@
 
 		<div class="header__icons-item visible-tablet">
 
+{% if profile %}
+
+			<a href="/lk" class="header__icons-link header__profile">
+
+				<svg width="24" height="24" viewBox="0 0 24 24">
+					<path d="M12 11.5a4.25 4.25 0 11.01-8.5 4.25 4.25 0 01-.01 8.5zm0-7a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5zM20.25 21H3.75a.75.75 0 01-.75-.75c0-2.45.96-4.75 2.69-6.46A6.16 6.16 0 0110 12.04h3.98c1.64 0 3.2.64 4.32 1.75A9.05 9.05 0 0121 20.25c0 .42-.33.75-.75.75zM4.54 19.5h14.92a7.53 7.53 0 00-2.2-4.65 4.66 4.66 0 00-3.27-1.3h-3.98c-1.24 0-2.43.47-3.27 1.3a7.53 7.53 0 00-2.2 4.65z"/>
+				</svg>
+
+				Татьяна
+
+			</a>
+
+			<div class="header__icons-hover">
+
+				<ul class="header__user-menu">
+					<li><a href="/lk">Заказы</a></li>
+					<li><a href="/lk">Отложенные товары : 4 </a></li>
+					<li><a href="/lk">История просмотра</a></li>
+					<li><a href="/lk">Сравнение товаров</a></li>
+					<li><a href="/lk">Подборка проф. ухода</a></li>
+					<li><a href="/lk">Cosmogid профи</a></li>
+					<li><a href="/lk">Мои данные и настройки</a></li>
+					<li><a href="/">Выход</a></li>
+				</ul>
+
+			</div>
+
+{% else %}
+
 			<button type="button" class="header__icons-link header__profile button" data-modal="login">
 
 				<svg width="24" height="24" viewBox="0 0 24 24">
@@ -10,6 +39,8 @@
 				Профиль
 
 			</button>
+
+{% endif %}
 
 		</div>
 
@@ -26,6 +57,58 @@
 				Избранное
 
 			</a>
+
+			<div class="header__icons-hover">
+
+				<div class="header__wishlist-box">
+
+					<b class="header__wishlist-head">
+						Недавно добавлены
+					</b>
+
+					<ul class="header__wishlist-list">
+
+						<li class="header__wishlist-item">
+
+							<a href="/" class="header__wishlist-link">
+
+								<picture>
+									<source srcset="/img/product/50x50.webp 1x, /img/product/100x100.webp 2x" type="image/webp">
+									<source srcset="/img/product/50x50.jpg 1x, /img/product/100x100.jpg 2x">
+									<img src="/img/product/50x50.jpg" alt="Крем для рук ERICSON LABORATOIRE mini-kit acti-biotic (мини-кит) 3 шт по 10 мл" loading="lazy" width="50" height="50">
+								</picture>
+
+								Крем для рук ERICSON LABORATOIRE mini-kit acti-biotic (мини-кит) 3 шт по 10 мл
+
+							</a>
+
+						</li>
+
+						<li class="header__wishlist-item">
+
+							<a href="/" class="header__wishlist-link">
+
+								<picture>
+									<source srcset="/img/product/50x50.webp 1x, /img/product/100x100.webp 2x" type="image/webp">
+									<source srcset="/img/product/50x50.jpg 1x, /img/product/100x100.jpg 2x">
+									<img src="/img/product/50x50.jpg" alt="Argan Keratin Cleansing" loading="lazy" width="50" height="50">
+								</picture>
+
+								Argan Keratin Cleansing
+
+							</a>
+
+						</li>
+
+					</ul>
+
+					<a href="/" class="btn btn--outline">
+						Посмотреть все
+					</a>
+
+				</div>
+
+			</div>
 
 		</div>
 
@@ -60,5 +143,90 @@
 				Корзина
 
 			</a>
+
+			<div class="header__icons-hover header__icons-hover--right">
+
+				<div class="header__cart-box">
+
+					<ul class="header__cart-list scroll-bar">
+
+						<li class="header__cart-item">
+
+							<a href="/" class="header__cart-link">
+
+								<span class="header__cart-img">
+
+									<picture>
+										<source srcset="/img/product/50x50.webp 1x, /img/product/100x100.webp 2x" type="image/webp">
+										<source srcset="/img/product/50x50.jpg 1x, /img/product/100x100.jpg 2x">
+										<img src="/img/product/50x50.jpg" alt="Крем для рук ERICSON LABORATOIRE mini-kit acti-biotic (мини-кит) 3 шт по 10 мл" loading="lazy" width="50" height="50">
+									</picture>
+
+								</span>
+
+								<span class="header__cart-name">
+
+									Крем для рук ERICSON LABORATOIRE mini-kit acti-biotic (мини-кит) 3 шт по 10 мл
+
+								</span>
+
+								<span class="header__cart-price">
+
+									<s>4585 ₽</s>
+
+									2581 ₽
+
+								</span>
+
+							</a>
+
+						</li>
+
+						<li class="header__cart-item">
+
+							<a href="/" class="header__cart-link">
+
+								<span class="header__cart-img">
+
+									<picture>
+										<source srcset="/img/product/50x50.webp 1x, /img/product/100x100.webp 2x" type="image/webp">
+										<source srcset="/img/product/50x50.jpg 1x, /img/product/100x100.jpg 2x">
+										<img src="/img/product/50x50.jpg" alt="Argan Keratin Cleansing" loading="lazy" width="50" height="50">
+									</picture>
+
+								</span>
+
+								<span class="header__cart-name">
+
+									Argan Keratin Cleansing
+
+								</span>
+
+								<span class="header__cart-price">
+
+									<s>4585 ₽</s>
+
+									2581 ₽
+
+								</span>
+
+							</a>
+
+						</li>
+
+					</ul>
+
+					<p class="header__cart-total">
+						<span>Итог</span>
+						<span>5162 ₽</span>
+					</p>
+
+					<a href="/" class="btn btn--pink">
+						Перейти в корзину
+					</a>
+
+				</div>
+
+			</div>
 
 		</div>
