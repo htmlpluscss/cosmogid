@@ -1,6 +1,8 @@
 .header {
 
 	background-color: #fff;
+	position: relative;
+	z-index: 6;
 
 	@media ($responsive) {
 

@@ -169,7 +169,6 @@ CG.swiper = swipe => {
 							pagination: {
 								el: swipeNav,
 								clickable: true,
-								bulletElement: 'button',
 								bulletClass: 'button',
 								bulletActiveClass: 'is-active'
 							}
@@ -201,7 +200,6 @@ CG.swiper = swipe => {
 				pagination: {
 					el: swipeNav,
 					clickable: true,
-					bulletElement: 'button',
 					bulletClass: 'button',
 					bulletActiveClass: 'is-active'
 				}
@@ -234,7 +232,6 @@ CG.swiper = swipe => {
 				pagination: {
 					el: swipeNav,
 					clickable: true,
-					bulletElement: 'button',
 					bulletClass: 'button',
 					bulletActiveClass: 'is-active'
 				}
