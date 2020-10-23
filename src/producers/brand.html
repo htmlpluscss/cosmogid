@@ -1031,16 +1031,24 @@
 
 {% for item in menuBrand %}
 
+	<div class="producers-list__letter" data-letter="{{ item.letter }}">
+
+		<div class="producers-list__column">
+
 	{% for list in item.list %}
 
-							<li class="menu__sub-item menu-filter__item{% if loop.first %} menu-filter__item--first{% endif %}" data-letter="{{ item.letter }}" data-country="{{ list.country }}">
+			<div class="producers-list__item{% if [1,2,3,4,5] | random == 5 %} is-star{% endif %}" data-country="{{ list.country }}" data-category="{{ [1,2,3,4,5,6,7,8,9] | random }}">
 
-								<a class="menu__sub-link" href="/">
-									{{ list.name }}
-								</a>
+				<a href="/">
+					{{ list.name }}
+				</a>
 
-							</li>
+			</div>
 
 	{% endfor %}
+
+		</div>
+
+	</div>
 
 {% endfor %}

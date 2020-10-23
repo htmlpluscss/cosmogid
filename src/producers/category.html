@@ -1,0 +1,34 @@
+{% set cat = [
+
+	"Волосы",
+	"Лицо",
+	"Тело",
+	"Пилинги и скрабы",
+	"Руки",
+	"Ноги",
+	"Мужчинам",
+	"Защита от солнца",
+	"Мезотерапия"
+
+] %}
+
+
+	<div class="select is-default">
+
+		<select name="category">
+
+			<option value="all">
+				Все разделы
+			</option>
+
+{% for name in cat %}
+
+			<option value="{{ loop.index }}">
+				{{ name }}
+			</option>
+
+{% endfor %}
+
+		</select>
+
+	</div>
