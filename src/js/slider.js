@@ -16,8 +16,7 @@
 			  input = slider.querySelectorAll('.input'),
 			  inputMin = slider.querySelector('.slider-range__input-min'),
 			  inputMax = slider.querySelector('.slider-range__input-max'),
-			  track = slider.querySelector('.slider-range__track'),
-			  form = slider.closest('form');
+			  track = slider.querySelector('.slider-range__track');
 
 		noUiSlider.create(track, {
 			connect: true,
@@ -36,7 +35,7 @@
 
 		});
 
-		track.noUiSlider.on('end', values => form.dispatchEvent(new CustomEvent("change")));
+		track.noUiSlider.on('end', values => inputMax.dispatchEvent(new CustomEvent("change", {'bubbles' : true})));
 
 	// события в инпутах
 
@@ -48,10 +47,11 @@
 
 					el.blur();
 					event.preventDefault();
+					event.stopPropagation();
 
 				}
 
-				form.dispatchEvent(new CustomEvent("change"));
+				el.dispatchEvent(new CustomEvent("change", {'bubbles' : true}));
 
 			});
 

@@ -8,16 +8,33 @@
 
 	}
 
-	// отправка
+	const floatBtn = filter.querySelector('.filter__float'),
+		  counerTotal = filter.querySelectorAll('.filter__couner'),
+		  catalogRight = document.querySelector('.catalog__items'),
+		  pagin = catalogRight.querySelector('.pagin'),
+		  listResult = catalogRight.querySelector('.catalog-list');
+
+	let setTimeoutID = null;
+
+	// запрос количества и перерисовка фильтра
 
 	filter.addEventListener('change', event => {
 
-		if(event.target === filter || event.target.getAttribute('name')) {
+		if(event.target.getAttribute('name')) {
+
+			// анимация в фильтре
+			filter.classList.add('is-loading');
+			floatBtn.style.top = event.target.getBoundingClientRect().top - filter.getBoundingClientRect().top + 'px';
+			floatBtn.classList.add('is-show');
+			clearTimeout(setTimeoutID);
+
+			// запрос
 
 			const formData = new FormData(filter),
 				  xhr = new XMLHttpRequest();
 
 			xhr.open("POST", filter.getAttribute('action'));
+			xhr.responseType = 'json';
 			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
 			xhr.onreadystatechange = () => {
@@ -30,7 +47,27 @@
 
 				if (xhr.status === 200) {
 
-					console.log(xhr.responseText);
+					const obj = xhr.response;
+
+					console.log(obj);
+
+					filter.classList.remove('is-loading');
+
+					Array.from(counerTotal, el => el.textContent = obj.total);
+
+					setTimeoutID = setTimeout( ()=> floatBtn.classList.remove('is-show'), 5000);
+
+					if(obj.list) {
+
+						listResult.innerHTML = obj.list;
+
+					}
+
+					if(obj.pagin) {
+
+						pagin.innerHTML = obj.pagin;
+
+					}
 
 				}
 
@@ -39,6 +76,43 @@
 			xhr.send(formData);
 
 		}
+
+	});
+
+	// отправка
+
+	filter.addEventListener('submit', event => {
+
+		event.preventDefault();
+
+		const formData = new FormData(filter),
+			  xhr = new XMLHttpRequest();
+
+		xhr.open("POST", filter.getAttribute('action'));
+		xhr.responseType = 'json';
+		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
+		formData.append("result", true);
+		catalogRight.classList.add('is-loading');
+
+		xhr.onreadystatechange = () => {
+
+			if (xhr.readyState !== 4){
+
+				return;
+
+			}
+
+			if (xhr.status === 200) {
+
+				console.log(xhr.responseText);
+				catalogRight.classList.remove('is-loading');
+
+			}
+
+		}
+
+		xhr.send(formData);
 
 	});
 
@@ -83,7 +157,9 @@
 
 	});
 
-	/*Array.from(btnOpen, el =>
+	/*
+
+	Array.from(btnOpen, el =>
 		el.addEventListener('click', () =>
 			document.body.classList.add('filter-show')));
 

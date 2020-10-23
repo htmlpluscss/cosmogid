@@ -23,11 +23,18 @@
 
 			</div>
 
-			<div class="catalog__items">
+			<div class="catalog__body">
 
 {% include "catalog/bar.html" %}
-{% include "catalog/pagin.html" %}
+
+				<div class="catalog__items">
+
 {% include "catalog/column.html" %}
+
+					<span class="loading-indicator"></span>
+
+				</div>
+
 {% include "catalog/pagin.html" %}
 
 			</div>

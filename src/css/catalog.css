@@ -8,10 +8,14 @@
 
 			margin-bottom: 14px;
 
-		}
+			&[data-counter]::after {
 
-		&__sort {
+				content: attr(data-counter);
+				font-size: 14px;
+				font-weight: 400;
+				color: #818181;
 
+			}
 
 		}
 
@@ -74,7 +78,7 @@
 
 	}
 
-	&__body {
+	&__box {
 
 		display: flex;
 		margin-bottom: 60px;
@@ -87,12 +91,39 @@
 		position: relative;
 		margin-right: 36px;
 		flex-shrink: 0;
+		z-index: 2;
+
+	}
+
+	&__body {
+
+		flex-grow: 1;
+		z-index: 1;
+		position: relative;
 
 	}
 
 	&__items {
 
-		flex-grow: 1;
+		position: relative;
+
+		&.is-loading {
+
+			pointer-events: none;
+
+			& > * {
+
+				opacity: .3;
+
+			}
+
+			.loading-indicator {
+
+				opacity: 1;
+
+			}
+
+		}
 
 	}
 
@@ -178,6 +209,44 @@
 			margin: 20px 0;
 
 		}
+
+	}
+
+}
+
+
+.loading-indicator {
+
+	height: 25px;
+	position: sticky;
+	bottom: 50%;
+	z-index: 9;
+	display: block;
+	opacity: 0;
+	pointer-events: none;
+
+	&::before {
+
+		position: absolute;
+		width: 30px;
+		height: 25px;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		content: '';
+		animation: loadingIndicator 2s infinite linear;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23418ebc' width='30' viebox='0 0 30 25' height='25'%3E%3Ccircle r='5' cx='15' cy='5'/%3E%3Ccircle r='5' cx='5' cy='20'/%3E%3Ccircle r='5' cx='25' cy='20'/%3E%3C/svg%3E");
+
+	}
+
+}
+
+@keyframes loadingIndicator {
+
+	to {
+
+		transform: rotateZ(720deg);
 
 	}
 
