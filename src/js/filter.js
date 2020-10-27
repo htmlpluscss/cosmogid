@@ -8,7 +8,11 @@
 
 	}
 
-	const floatBtn = filter.querySelector('.filter__float'),
+	let windowScroll = window.pageYOffset;
+
+	const btnShow = document.querySelector('.btn-filter-show'),
+		  btnClose = document.querySelector('.btn-filter-hide'),
+		  floatBtn = filter.querySelector('.filter__float'),
 		  counerTotal = filter.querySelectorAll('.filter__couner'),
 		  catalogRight = document.querySelector('.catalog__items'),
 		  pagin = catalogRight.querySelector('.pagin'),
@@ -157,41 +161,22 @@
 
 	});
 
-	/*
+	// показываем фильтр в мобильном
 
-	Array.from(btnOpen, el =>
-		el.addEventListener('click', () =>
-			document.body.classList.add('filter-show')));
+	btnShow.addEventListener('click', () => {
 
+		windowScroll = window.pageYOffset;
+		document.body.classList.add('filter-show');
+		window.scrollTo(0, 0);
 
-	Array.from(btnClose, el =>
-		el.addEventListener('click', () =>
-			document.body.classList.remove('filter-show')));
+	});
 
+	btnClose.addEventListener('click', () => {
 
-	Array.from(btnRange, el => {
+		document.body.classList.remove('filter-show');
+		window.scrollTo(0, windowScroll);
 
-		const btn = el.querySelector('.filter__range-reset'),
-			  input = el.querySelector('.input');
-
-		btn.addEventListener('click', () => {
-
-			input.value = '';
-			input.focus();
-			btn.classList.add('hide');
-
-		});
-
-		input.addEventListener('input', () => btn.classList.toggle('hide', !input.value));
-
-		if(!input.value) {
-
-			btn.classList.add('hide');
-
-		}
-
-	});*/
-
+	});
 
 })( document.querySelector('.filter') );
 

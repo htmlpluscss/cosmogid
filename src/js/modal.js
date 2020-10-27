@@ -8,11 +8,12 @@
 
 	}
 
-	var items = modal.querySelectorAll('.modal__item'),
-		btns = document.querySelectorAll('[data-modal]'),
-		box = modal.querySelector('.modal__box'),
-		wrapper = document.querySelector('.wrapper'),
-		windowScroll = window.pageYOffset;
+	let windowScroll = window.pageYOffset;
+
+	const items = modal.querySelectorAll('.modal__item'),
+		  btns = document.querySelectorAll('[data-modal]'),
+		  box = modal.querySelector('.modal__box'),
+		  wrapper = document.querySelector('.wrapper');
 
 	modal.addEventListener('click', event => {
 

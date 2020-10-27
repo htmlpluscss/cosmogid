@@ -1,8 +1,14 @@
 .pagin {
 
 	display: flex;
-	justify-content: flex-end;
 	margin: 20px 0;
+	justify-content: center;
+
+	@media ($desktop) {
+
+		justify-content: flex-end;
+
+	}
 
 	&__list {
 

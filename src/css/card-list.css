@@ -30,6 +30,12 @@
 			min-height: 0;
 			padding-right: 90px;
 
+			&--not-all {
+
+				padding-right: 0;
+
+			}
+
 		}
 
 	}
@@ -514,30 +520,66 @@
 
 	&__tags {
 
-		margin: 20px -9px;
-
 		@media ($responsive) {
 
-			margin: 20px -4px;
-			height: 72px;
-			overflow: hidden;
+			margin: 0 -16px;
+			overflow-x: scroll;
+			padding: 12px;
+
+		}
+
+		@media ($desktop) {
+
+			margin: 20px -9px;
+
+		}
+
+		@media ($mobile) {
+
+			margin: 0 -10px;
+			padding: 10px;
 
 		}
 
 		&-list {
 
 			display: flex;
-			flex-wrap: wrap;
+
+			@media ($desktop) {
+
+				flex-wrap: wrap;
+
+			}
 
 		}
 
 		&-item {
 
-			margin: 7px 9px;
+			@media ($desktop) {
+
+				padding: 7px 9px;
+
+			}
 
 			@media ($responsive) {
 
-				margin: 4px;
+				padding-right: 8px;
+
+				&:last-child {
+
+					padding-right: 16px;
+
+				}
+
+			}
+
+			@media ($mobile) {
+
+				&:last-child {
+
+					padding-right: 10px;
+
+				}
 
 			}
 

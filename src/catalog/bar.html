@@ -4,8 +4,8 @@
 
 						<div class="select-label-row">
 
-							<label class="select-label-row__label">
-								Сортировать по
+							<label class="select-label-row__label visible-tablet">
+								Сортировать
 							</label>
 
 							<div class="select-label-row__select">
@@ -13,9 +13,14 @@
 								<div class="select">
 
 									<select name="sort">
-										<option value="1">Популярности</option>
-										<option value="2">Цене</option>
-										<option value="3">Скидки</option>
+										<option value="1">По популярности</option>
+										<option value="2">По увеличению цены</option>
+										<option value="3">По уменьшению цены</option>
+										<option value="4">По размеру скидки</option>
+										<option value="5">По новизне</option>
+										<option value="6">По названию</option>
+										<option value="7">По цене за мл</option>
+										<option value="8">По отзывам</option>
 									</select>
 
 								</div>
@@ -28,54 +33,69 @@
 
 					<div class="catalog-bar__right">
 
-						<div class="select-label-row">
+						<div class="visible-desktop">
 
-							<label class="select-label-row__label">
-								Показывать по
-							</label>
+							<div class="select-label-row">
 
-							<div class="select-label-row__select">
+								<label class="select-label-row__label">
+									Показывать по
+								</label>
 
-								<div class="select">
+								<div class="select-label-row__select">
 
-									<select name="count">
-										<option value="16">16</option>
-										<option value="32" selected="selected">32</option>
-										<option value="64">64</option>
-										<option value="128">128</option>
-									</select>
+									<div class="select">
+
+										<select name="count">
+											<option value="12">12</option>
+											<option value="24" selected="selected">24</option>
+											<option value="48">48</option>
+											<option value="96">96</option>
+										</select>
+
+									</div>
 
 								</div>
 
 							</div>
 
+							<div class="catalog-view">
+
+								<label class="catalog-view__radio">
+
+									<input type="radio" name="view" value="row"{% if view == 'row' %} checked="checked"{% endif %}>
+
+									<span class="catalog-view__ico">
+										<svg width="27" height="27" viewBox="0 0 27 27">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M11.37 3.99H3.38v7.98h7.99V4zm11.97 11.98h-7.98v7.98h7.98v-7.98zm-19.96 0h7.99v7.98H3.38v-7.98zM23.34 3.99h-7.98v7.98h7.98V4z"/>
+										</svg>
+									</span>
+
+								</label>
+
+								<label class="catalog-view__radio">
+
+									<input type="radio" name="view" value="column"{% if view == 'column' %} checked="checked"{% endif %}>
+
+									<span class="catalog-view__ico">
+										<svg width="26" height="27" viewBox="0 0 26 27">
+											<path d="M.9 15.79h3.62v-3.97H.89v3.97zm0 7.93h3.62v-3.97H.89v3.97zm0-15.86h3.62V3.89H.89v3.97zm7.24 7.93h16.68v-3.97H8.14v3.97zm0 7.93h16.68v-3.97H8.14v3.97zm0-19.83v3.97h16.68V3.89H8.14z"/>
+										</svg>
+									</span>
+
+								</label>
+
+							</div>
+
 						</div>
 
-						<div class="catalog-view">
+						<div class="hidden-desktop">
 
-							<label class="catalog-view__radio">
-
-								<input type="radio" name="view" value="row"{% if view == 'row' %} checked="checked"{% endif %}>
-
-								<span class="catalog-view__ico">
-									<svg width="27" height="27" viewBox="0 0 27 27">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M11.37 3.99H3.38v7.98h7.99V4zm11.97 11.98h-7.98v7.98h7.98v-7.98zm-19.96 0h7.99v7.98H3.38v-7.98zM23.34 3.99h-7.98v7.98h7.98V4z"/>
-									</svg>
-								</span>
-
-							</label>
-
-							<label class="catalog-view__radio">
-
-								<input type="radio" name="view" value="column"{% if view == 'column' %} checked="checked"{% endif %}>
-
-								<span class="catalog-view__ico">
-									<svg width="26" height="27" viewBox="0 0 26 27">
-										<path d="M.9 15.79h3.62v-3.97H.89v3.97zm0 7.93h3.62v-3.97H.89v3.97zm0-15.86h3.62V3.89H.89v3.97zm7.24 7.93h16.68v-3.97H8.14v3.97zm0 7.93h16.68v-3.97H8.14v3.97zm0-19.83v3.97h16.68V3.89H8.14z"/>
-									</svg>
-								</span>
-
-							</label>
+							<button class="button catalog-bar__btn-filter-show btn-filter-show" type="button">
+								<svg width="22" height="22" viewBox="0 0 22 22">
+									<path d="M19.06 5.15c0-.78-.82-1.37-2.5-1.78a22.2 22.2 0 00-5.1-.53c-1.93 0-3.74.19-5.11.53-1.68.41-2.5 1-2.5 1.78 0 .29.12.55.35.79l5.17 6.22v5.96a.56.56 0 00.57.56c.08 0 .17-.02.25-.06l3.03-1.5c.2-.09.32-.28.32-.5v-4.46l5.18-6.22c.22-.24.34-.5.34-.8zM6.88 4.4c1.25-.28 2.88-.43 4.58-.43 1.7 0 3.32.15 4.57.43 1.39.31 1.78.64 1.87.75-.1.1-.48.44-1.87.74-1.25.28-2.87.44-4.57.44-1.7 0-3.33-.16-4.58-.43-1.38-.31-1.77-.65-1.86-.75.09-.1.48-.44 1.86-.75zm5.66 7.2a.56.56 0 00-.13.36v4.31l-1.9.94v-5.25a.56.56 0 00-.14-.36L6.53 6.97c1.35.31 3.09.49 4.93.49 1.84 0 3.58-.18 4.93-.49l-3.85 4.63z"/>
+								</svg>
+								Фильтр
+							</button>
 
 						</div>
 
