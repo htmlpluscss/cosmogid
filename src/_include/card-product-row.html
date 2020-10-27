@@ -1,22 +1,74 @@
-			<div class="card-product-row">
+			<div class="card-product-row{% if item.sale %} is-sale{% endif %}{% if item.label %} is-label{% endif %}">
 
-				<a href="/" class="card-product-row__left">
+				<div class="card-product-row__left">
 
-					<span class="card-product-row__img">
+					<a href="/" class="card-product-row__img">
 
 						<picture>
 
-							<source srcset="/img/card-product/{{ item.img }}--150x150.webp 1x, /img/card-product/{{ item.img }}--300x300.webp 2x" type="image/webp">
+							<source srcset="/img/card-product/{{ item.img }}--150x150.webp 1x, /img/card-product/{{ item.img }}--300x300.webp 2x" type="image/webp" media="(min-width: 768px)">
+							<source srcset="/img/card-product/{{ item.img }}--150x150.jpg 1x, /img/card-product/{{ item.img }}--300x300.jpg 2x" media="(min-width: 768px)">
 
-							<source srcset="/img/card-product/{{ item.img }}--150x150.jpg 1x, /img/card-product/{{ item.img }}--300x300.jpg 2x">
+							<source srcset="/img/card-product/{{ item.img }}--80x80.webp 1x, /img/card-product/{{ item.img }}--160x160.webp 2x" type="image/webp">
+							<source srcset="/img/card-product/{{ item.img }}--80x80.jpg 1x, /img/card-product/{{ item.img }}--160x160.jpg 2x">
 
 							<img src="/img/card-product/{{ item.img }}--300x300.jpg" alt="{{ item.title }}" loading="lazy" width="150" height="150">
 
 						</picture>
 
-					</span>
+					</a>
 
-				</a>
+					<div class="hidden-tablet">
+
+						<div class="card-product-row__right-foot">
+
+							<form action="/" class="card-product-row__wishlist form-wishlist">
+
+								<input type="hidden" name="id" value="{{ item.id }}">
+								<input type="hidden" name="type" value="0">
+
+{% if item.wishlist %}
+
+								<input type="hidden" name="mode" value="del">
+
+{% else %}
+
+								<input type="hidden" name="mode" value="add">
+
+{% endif %}
+
+								<button class="button">
+									в избранное
+								</button>
+
+							</form>
+
+							<form action="/" class="card-product-row__compare form-compare">
+
+								<input type="hidden" name="id" value="{{ item.id }}">
+								<input type="hidden" name="type" value="0">
+
+{% if item.compare %}
+
+								<input type="hidden" name="mode" value="del">
+
+{% else %}
+
+								<input type="hidden" name="mode" value="add">
+
+{% endif %}
+
+								<button class="button">
+									сравнить
+								</button>
+
+							</form>
+
+						</div>
+
+					</div>
+
+				</div>
 
 				<div class="card-product-row__center">
 
@@ -213,49 +265,53 @@
 
 					</form>
 
-					<div class="card-product-row__right-foot">
+					<div class="visible-tablet">
 
-						<form action="/" class="card-product-row__wishlist form-wishlist form-wishlist--text">
+						<div class="card-product-row__right-foot">
 
-							<input type="hidden" name="id" value="{{ item.id }}">
-							<input type="hidden" name="type" value="0">
+							<form action="/" class="card-product-row__wishlist form-wishlist form-wishlist--text">
+
+								<input type="hidden" name="id" value="{{ item.id }}">
+								<input type="hidden" name="type" value="0">
 
 {% if item.wishlist %}
 
-							<input type="hidden" name="mode" value="del">
+								<input type="hidden" name="mode" value="del">
 
 {% else %}
 
-							<input type="hidden" name="mode" value="add">
+								<input type="hidden" name="mode" value="add">
 
 {% endif %}
 
-							<button class="button">
-								в избранное
-							</button>
+								<button class="button">
+									в избранное
+								</button>
 
-						</form>
+							</form>
 
-						<form action="/" class="card-product-row__compare form-compare form-compare--text">
+							<form action="/" class="card-product-row__compare form-compare form-compare--text">
 
-							<input type="hidden" name="id" value="{{ item.id }}">
-							<input type="hidden" name="type" value="0">
+								<input type="hidden" name="id" value="{{ item.id }}">
+								<input type="hidden" name="type" value="0">
 
 {% if item.compare %}
 
-							<input type="hidden" name="mode" value="del">
+								<input type="hidden" name="mode" value="del">
 
 {% else %}
 
-							<input type="hidden" name="mode" value="add">
+								<input type="hidden" name="mode" value="add">
 
 {% endif %}
 
-							<button class="button">
-								сравнить
-							</button>
+								<button class="button">
+									сравнить
+								</button>
 
-						</form>
+							</form>
+
+						</div>
 
 					</div>
 

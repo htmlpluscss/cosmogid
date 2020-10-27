@@ -2,6 +2,12 @@
 
 	position: relative;
 
+	@media ($responsive) {
+
+		padding: 50px 0 80px;
+
+	}
+
 	&.is-loading {
 
 		opacity: .7;
@@ -10,10 +16,11 @@
 
 	&__head {
 
-		position: sticky;
+		position: fixed;
 		top: 0;
+		left: 0;
+		right: 0;
 		z-index: 9;
-		margin: 0 -16px;
 		background-color: var(--bg);
 		border-bottom: 1px solid var(--border);
 		padding: 16px;
@@ -31,12 +38,6 @@
 		@media ($desktop) {
 
 			display: none;
-
-		}
-
-		@media ($mobile) {
-
-			margin: 0 -10px;
 
 		}
 
@@ -165,6 +166,42 @@
 	&__item {
 
 		margin: 20px 0;
+
+		@media ($responsive) {
+
+			border-top: 1px solid var(--border);
+			margin: 0 -16px;
+			padding: 16px;
+
+		}
+
+		@media ($mobile) {
+
+			margin: 0 -10px;
+			padding: 10px;
+
+		}
+
+		&--view {
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border: 0 !important;
+
+			@media ($tablet) {
+
+				display: none;
+
+			}
+
+			.filter__title {
+
+				margin: 0;
+
+			}
+
+		}
 
 	}
 

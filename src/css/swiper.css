@@ -166,13 +166,25 @@
 
 		&-prev {
 
-			left: -40px;
+			left: -15px;
+
+			@media (min-width: 1300px) {
+
+				left: -40px;
+
+			}
 
 		}
 
 		&-next {
 
-			right: -40px;
+			right: -15px;
+
+			@media (min-width: 1300px) {
+
+				right: -40px;
+
+			}
 
 		}
 

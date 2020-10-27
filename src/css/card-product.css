@@ -98,28 +98,113 @@
 .card-product-row {
 
 	display: flex;
+	flex-wrap: wrap;
 	position: relative;
+	box-shadow: 0px 2px 6px rgba(107, 107, 107, 0.15);
+
+	@media ($responsive) {
+
+		margin: 16px -16px;
+		padding: 16px;
+
+	}
+
+	@media ($mobile) {
+
+		margin: 10px -10px;
+		padding: 10px;
+
+	}
+
+	@media ($tablet) {
+
+		flex-wrap: nowrap;
+		box-shadow: none;
+
+	}
+
+	&.is-sale &__left,
+	&.is-label &__left {
+
+		padding-top: 10px;
+
+	}
+
+	&.is-sale.is-label &__left {
+
+		padding-top: 40px;
+
+	}
 
 	&__left {
 
-		width: 150px;
+		width: 80px;
 		flex-shrink: 0;
 		margin-right: 16px;
-		margin-left: 16px;
+
+		@media ($tablet) {
+
+			width: 150px;
+			padding-top: 0 !important;
+
+		}
+
+		@media ($desktop) {
+
+			margin-left: 16px;
+
+		}
+
+		img {
+
+			width: 80px;
+			height: 80px;
+
+			@media ($tablet) {
+
+				width: 150px;
+				height: 150px;
+
+			}
+
+		}
+
+	}
+
+	&__center {
+
+		@media ($responsive) {
+
+			max-width: calc(100% - 80px - 16px);
+
+		}
+
+		@media ($tablet) {
+
+			max-width: calc(100% - 150px - 16px);
+
+		}
 
 	}
 
 	&__right {
 
-		width: 220px;
+		width: 100%;
 		flex-shrink: 0;
-		margin-left: 32px;
+
+		@media ($tablet) {
+
+			width: 220px;
+			margin-left: 32px;
+
+		}
 
 		&-foot {
 
 			display: flex;
 			justify-content: space-between;
 			margin-top: 10px;
+			align-items: center;
 
 		}
 
@@ -259,11 +344,11 @@
 
 	&__form {
 
-		padding: 5px 10px;
 		position: relative;
 
-		@media ($desktop) {
+		@media ($tablet) {
 
+			padding: 5px 10px;
 			border: 1px solid var(--border);
 
 		}
