@@ -1,8 +1,8 @@
-			<div class="card-product-row{% if item.sale %} is-sale{% endif %}{% if item.label %} is-label{% endif %}">
+			<div class="card-product-row{% if item.sale %} is-sale{% endif %}{% if item.label %} is-label{% endif %} articleid-events">
 
 				<div class="card-product-row__left">
 
-					<a href="/" class="card-product-row__img">
+					<a href="/" class="card-product-row__img articleid-events__img">
 
 						<picture>
 
@@ -22,7 +22,7 @@
 
 						<div class="card-product-row__right-foot">
 
-							<form action="/" class="card-product-row__wishlist form-wishlist">
+							<form action="/" class="form card-product-row__wishlist form-wishlist">
 
 								<input type="hidden" name="id" value="{{ item.id }}">
 								<input type="hidden" name="type" value="0">
@@ -43,7 +43,7 @@
 
 							</form>
 
-							<form action="/" class="card-product-row__compare form-compare">
+							<form action="/" class="form card-product-row__compare form-compare">
 
 								<input type="hidden" name="id" value="{{ item.id }}">
 								<input type="hidden" name="type" value="0">
@@ -74,23 +74,15 @@
 
 					<a href="/" class="card-product-row__link">
 
-						<address class="card-product-row__cat">
+						<address class="card-product-row__cat articleid-events__cat">
 							{{ item.brand }}
 						</address>
 
-						<h3 class="card-product-row__title">
+						<h3 class="card-product-row__title articleid-events__title">
 							{{ item.title }}
 						</h3>
 
 					</a>
-
-{% if item.article and item.article.length > 5 %}
-
-					<a href="/" class="card-product__article-link">
-						всего {{ item.article.length }} вариантов
-					</a>
-
-{% endif %}
 
 {% if item.ratio %}
 
@@ -114,14 +106,87 @@
 
 {% endif %}
 
+{% if item.article %}
+
+	{% if item.article.length > 5 %}
+
+					<a href="/" class="card-product__article-all">
+						всего {{ item.article.length }} вариантов
+					</a>
+
+	{% else %}
+
+					<form action="/" class="articleid-events__form">
+
+		{% set articleid = 0 %}
+
+		{% for article in item.article %}
+
+			{% if article.active %}
+
+				{% set articleid = article.id %}
+
+			{% endif %}
+
+						<label class="articleid-events__item form-buy__article">
+
+							<input
+								name="articleid"
+								type="radio"
+
+								value="{{ article.id }}"
+
+								data-sku="{{ article.sku }}"
+								data-price="{{ article.price }}"
+								data-old-price="{{ article.oldPrice }}"
+
+								class="form-buy__article-input visuallyhidden"
+
+								{% if article.active %}
+									checked="checked"
+								{% endif %}
+
+								{% if article.sale %}
+									data-sale="{{ article.sale }}"
+								{% endif %}
+
+								{% if article.storeid %}
+									data-storeid="{{ article.storeid }}"
+								{% endif %}
+
+								{% if article.inBasket %}
+									data-in-basket="in basket"
+								{% endif %}
+							>
+
+							<span class="articleid-events__label form-buy__article-label">
+								{{ article.value }}
+							</span>
+
+						</label>
+
+		{% endfor %}
+
+					</form>
+
+	{% endif %}
+
+{% endif %}
+
 				</div>
 
 				<div class="card-product-row__right">
 
-					<form action="/" class="card-product__order form-buy">
+					<form action="/" class="form card-product__order form-buy">
 
-						<input type="hidden" name="id" value="{{ item.id }}">
-						<input type="hidden" name="storeid" value="{{ item.storeid }}">
+						<input type="hidden" name="id" value="{{ item.id }}" class="articleid-events__id">
+						<input type="hidden" name="storeid" value="{{ item.storeid }}" class="articleid-events__storeid">
+
+{% if articleid %}
+
+						<input type="hidden" name="articleid" value="{{ articleid }}" class="articleid-events__value">
+
+{% endif %}
 
 {% if item.sale or item.label %}
 
@@ -132,7 +197,7 @@
 							<span class="card-product-row__label-item card-product-row__label-item--sale">
 
 								<span class="visuallyhidden">Скидка</span>
-								<span class="card-product__sale">{{ item.sale }}</span>%
+								<span class="card-product__sale articleid-events__sale">{{ item.sale }}</span>%
 
 							</span>
 
@@ -162,7 +227,7 @@
 										Старая цена
 									</b>
 
-									<span class="card-product__old-price-value">
+									<span class="card-product__old-price-value articleid-events__old-price-value">
 										{{ item.oldPrice }}
 									</span>
 
@@ -178,7 +243,7 @@
 									Цена
 								</b>
 
-								<span class="card-product__price-value">
+								<span class="card-product__price-value articleid-events__price-value">
 									{{ item.price }}
 								</span>
 
@@ -188,56 +253,7 @@
 
 							</p>
 
-{% if item.article and item.article.length <= 5 %}
-
-							<div class="card-product__article">
-
-		{% for article in item.article %}
-
-								<label class="card-product__article-item form-buy__article">
-
-									<input
-										name="articleid"
-										type="radio"
-
-										value="{{ article.id }}"
-
-										data-sku="{{ article.sku }}"
-										data-price="{{ article.price }}"
-										data-old-price="{{ article.oldPrice }}"
-
-										class="form-buy__article-input visuallyhidden"
-
-										{% if article.active %}
-											checked="checked"
-										{% endif %}
-
-										{% if article.sale %}
-											data-sale="{{ article.sale }}"
-										{% endif %}
-
-										{% if article.storeid %}
-											data-storeid="{{ article.storeid }}"
-										{% endif %}
-
-										{% if article.inBasket %}
-											data-in-basket="in basket"
-										{% endif %}
-									>
-
-									<span class="card-product__article-label form-buy__article-label">
-										{{ article.value }}
-									</span>
-
-								</label>
-
-		{% endfor %}
-
-							</div>
-
-{% endif %}
-
-							<div class="card-product-row__btn card-product__btn">
+							<div class="card-product-row__btn card-product__btn articleid-events__btn">
 
 {% if item.article and item.article.length > 5 %}
 
@@ -269,7 +285,7 @@
 
 						<div class="card-product-row__right-foot">
 
-							<form action="/" class="card-product-row__wishlist form-wishlist form-wishlist--text">
+							<form action="/" class="form card-product-row__wishlist form-wishlist form-wishlist--text">
 
 								<input type="hidden" name="id" value="{{ item.id }}">
 								<input type="hidden" name="type" value="0">
@@ -290,7 +306,7 @@
 
 							</form>
 
-							<form action="/" class="card-product-row__compare form-compare form-compare--text">
+							<form action="/" class="form card-product-row__compare form-compare form-compare--text">
 
 								<input type="hidden" name="id" value="{{ item.id }}">
 								<input type="hidden" name="type" value="0">

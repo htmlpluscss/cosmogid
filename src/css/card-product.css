@@ -24,49 +24,7 @@
 
 	&__article {
 
-		margin: 4px -4px;
-		display: flex;
-		flex-wrap: wrap;
-
-		&-item {
-
-			margin: 4px;
-			position: relative;
-			cursor: pointer;
-			flex-shrink: 0;
-			max-width: calc(50% - 8px);
-
-		}
-
-		&-label {
-
-			border: 1px solid var(--border);
-			padding: 0 6px;
-			font-size: 11px;
-			line-height: 18px;
-			color: #737373;
-			display: block;
-			border-radius: 2px;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-
-			input[data-in-basket] ~ & {
-
-				color: #fff;
-				background-color: var(--blue);
-
-			}
-
-			input:checked ~ & {
-
-				border-color: var(--blue);
-
-			}
-
-		}
-
-		&-link {
+		&-all {
 
 			font-size: 13px;
 			font-style: italic;
@@ -403,3 +361,4 @@
 	}
 
 }
+

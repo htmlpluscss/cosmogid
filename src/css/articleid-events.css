@@ -1,0 +1,49 @@
+.articleid-events {
+
+	&__form {
+
+		margin: 4px -4px;
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	&__item {
+
+		margin: 4px;
+		position: relative;
+		cursor: pointer;
+		flex-shrink: 0;
+		max-width: calc(50% - 8px);
+
+	}
+
+	&__label {
+
+		border: 1px solid var(--border);
+		padding: 0 6px;
+		font-size: 11px;
+		line-height: 18px;
+		color: #737373;
+		display: block;
+		border-radius: 2px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		input[data-in-basket] ~ & {
+
+			color: #fff;
+			background-color: var(--blue);
+
+		}
+
+		input:checked ~ & {
+
+			border-color: var(--blue);
+
+		}
+
+	}
+
+}

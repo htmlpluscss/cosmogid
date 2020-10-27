@@ -7,7 +7,7 @@
 		return;
 
 	}
-
+/*
 	let observer = new MutationObserver(mutationRecords => {
 
 		const t = mutationRecords[0].target,
@@ -65,5 +65,5 @@
 		});
 
 	});
-
-})(document.querySelectorAll('.catalog-filter-tags'));
+*/
+})(document.querySelectorAll('.ask'));
