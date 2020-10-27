@@ -213,25 +213,51 @@
 
 					</form>
 
-					<form action="/" class="card-product-row__wishlist form-wishlist form-wishlist--text">
+					<div class="card-product-row__right-foot">
 
-						<input type="hidden" name="id" value="{{ item.id }}">
-						<input type="hidden" name="type" value="0">
+						<form action="/" class="card-product-row__wishlist form-wishlist form-wishlist--text">
+
+							<input type="hidden" name="id" value="{{ item.id }}">
+							<input type="hidden" name="type" value="0">
 
 {% if item.wishlist %}
 
-						<input type="hidden" name="mode" value="del">
+							<input type="hidden" name="mode" value="del">
 
 {% else %}
-						<input type="hidden" name="mode" value="add">
+
+							<input type="hidden" name="mode" value="add">
 
 {% endif %}
 
-						<button class="button">
-							в избранное
-						</button>
+							<button class="button">
+								в избранное
+							</button>
 
-					</form>
+						</form>
+
+						<form action="/" class="card-product-row__compare form-compare form-compare--text">
+
+							<input type="hidden" name="id" value="{{ item.id }}">
+							<input type="hidden" name="type" value="0">
+
+{% if item.compare %}
+
+							<input type="hidden" name="mode" value="del">
+
+{% else %}
+
+							<input type="hidden" name="mode" value="add">
+
+{% endif %}
+
+							<button class="button">
+								сравнить
+							</button>
+
+						</form>
+
+					</div>
 
 				</div>
 

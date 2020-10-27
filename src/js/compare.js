@@ -6,9 +6,9 @@
 
 	}
 
-	Array.from(forms, form => {
+//	const headerCount = document.querySelector('.header__wishlist .header__icons-count');
 
-		// отправка
+	Array.from(forms, form => {
 
 		form.addEventListener('submit', event => {
 
@@ -32,21 +32,16 @@
 				if (xhr.status === 200) {
 
 					const obj = xhr.response;
-
 					console.log(obj);
+/*
+					if(obj.headerCount) {
 
-					if(obj.modalShow) {
+						headerCount.classList.toggle('hide', obj.headerCount === 0);
+						headerCount.textContent = obj.headerCount;
 
-						if(obj.modalShow === 'info') {
+					}*/
 
-							document.querySelector('#modal-info__title').innerHTML = obj.title ? obj.title : '';
-							document.querySelector('#modal-info__message').innerHTML = obj.message ? obj.message : '';
-
-						}
-
-						CG.modalShow(obj.modalShow);
-
-					}
+					form.elements.mode.value = obj.mode;
 
 				}
 
@@ -58,4 +53,4 @@
 
 	});
 
-})(document.querySelectorAll('.form'));
+})(document.querySelectorAll('.form-compare'));

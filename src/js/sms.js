@@ -89,6 +89,7 @@
 			  xhr = new XMLHttpRequest();
 
 		xhr.open("POST", formLogin.getAttribute('action'));
+		xhr.responseType = 'json';
 		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
 		xhr.onreadystatechange = () => {
@@ -101,7 +102,7 @@
 
 			if (xhr.status === 200) {
 
-				const obj = JSON.parse(xhr.responseText);
+				const obj = xhr.response;
 
 				console.log(obj);
 

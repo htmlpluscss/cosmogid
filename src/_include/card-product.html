@@ -1,6 +1,6 @@
 			<div class="card-item card-product is-hover">
 
-				<a href="/" class="card-item__head">
+				<div class="card-item__head">
 
 {% include "_include/card-item__img.html" %}
 
@@ -26,7 +26,28 @@
 
 {% endif %}
 
-				</a>
+
+					<form action="/" class="card-item__compare form-compare">
+
+						<input type="hidden" name="id" value="{{ item.id }}">
+						<input type="hidden" name="type" value="0">
+
+{% if item.compare %}
+
+						<input type="hidden" name="mode" value="del">
+
+{% else %}
+						<input type="hidden" name="mode" value="add">
+
+{% endif %}
+
+						<button class="button">
+							Добавить в сравнение
+						</button>
+
+					</form>
+
+				</div>
 
 				<address class="card-item__cat">
 					{{ item.brand }}

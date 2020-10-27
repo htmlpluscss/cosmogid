@@ -115,6 +115,20 @@
 		flex-shrink: 0;
 		margin-left: 32px;
 
+		&-foot {
+
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+
+		}
+
+	}
+
+	&__wishlist {
+
+		margin-left: -10px;
+
 	}
 
 	&__link {
@@ -300,14 +314,6 @@
 		font-size: 12px;
 		height: 16px;
 		line-height: 16px;
-
-	}
-
-	&__wishlist {
-
-		display: flex;
-		margin: 10px 0;
-		justify-content: flex-end;
 
 	}
 

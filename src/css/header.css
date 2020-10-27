@@ -323,7 +323,7 @@
 
 		}
 
-		@media ($tablet) {
+		@media ($desktop) {
 
 			&-hover {
 
@@ -366,7 +366,7 @@
 
 	&__profile-menu {
 
-		@media ($tablet) {
+		@media ($desktop) {
 
 			li {
 

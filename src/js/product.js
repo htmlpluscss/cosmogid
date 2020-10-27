@@ -56,6 +56,7 @@
 			  xhr = new XMLHttpRequest();
 
 		xhr.open("POST", form.getAttribute('action'));
+		xhr.responseType = 'json';
 		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
 		xhr.onreadystatechange = () => {
@@ -68,7 +69,7 @@
 
 			if (xhr.status === 200) {
 
-				const cart = JSON.parse(xhr.responseText);
+				const cart = xhr.response;
 				console.log(cart);
 
 				if(cart.headerCount) {
@@ -265,6 +266,7 @@
 				  xhr = new XMLHttpRequest();
 
 			xhr.open("POST", form.getAttribute('action'));
+			xhr.responseType = 'json';
 			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
 			xhr.onreadystatechange = () => {
@@ -277,7 +279,7 @@
 
 				if (xhr.status === 200) {
 
-					const cart = JSON.parse(xhr.responseText);
+					const cart = xhr.response;
 					console.log(cart);
 
 					if(cart.headerCount) {
