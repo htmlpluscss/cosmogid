@@ -1,0 +1,400 @@
+	<form class="filter" action="/">
+
+		<div class="filter__head">
+
+			<h3 class="filter__head-innner">
+				Фильтры
+			</h3>
+
+			<button class="button filter__btn-close btn-filter-hide" type="button" aria-label="Закрыть фильтр">
+				<svg width="24" height="24" viewBox="0 0 24 24">
+					<path d="M6.5 5.5L19 18"/>
+					<path d="M19 5.5L6.5 18"/>
+				</svg>
+			</button>
+
+		</div>
+
+		<div class="filter__body">
+
+			<div class="filter__item">
+
+				<h3 class="filter__title">
+					Цена, <span class="filter__title-suf">₽</span>
+				</h3>
+
+				<div class="filter__range">
+
+					<div class="slider-range" data-min="360" data-max="159999" data-start="360,159999">
+
+						<div class="slider-range__key">
+
+							<div class="slider-range__input">
+
+								<span class="slider-range__input-pref">
+									от
+								</span>
+
+								<input type="tel" class="input slider-range__input-min" value="360" name="price-min" maxlength="7">
+
+							</div>
+
+							<div class="slider-range__input">
+
+								<span class="slider-range__input-pref">
+									до
+								</span>
+
+								<input type="tel" class="input slider-range__input-max" value="159 999" name="price-max" maxlength="7">
+
+							</div>
+
+						</div>
+
+						<div class="slider-range__track"></div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="filter__item">
+
+				<h3 class="filter__title">
+					Раздел
+				</h3>
+
+				<div class="filter__fieldset only-hit">
+
+					<div class="only-hit__sort">
+
+						<div class="filter__checkbox only-hit__item" data-hit="1">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox" name="name1">
+
+								<span class="checkbox-2__label">
+									Волосы
+									<span class="checkbox-2__label-suf filter__count">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="2">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox" name="name2">
+
+								<span class="checkbox-2__label">
+									Лицо
+									<span class="checkbox-2__label-suf filter__count">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="3">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox" name="name3">
+
+								<span class="checkbox-2__label">
+									Тело
+									<span class="checkbox-2__label-suf filter__count">(28)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="4">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox" name="name4">
+
+								<span class="checkbox-2__label">
+									Пилинги и скрабы
+									<span class="checkbox-2__label-suf filter__count">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="5">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox" name="name5">
+
+								<span class="checkbox-2__label">
+									Руки
+									<span class="checkbox-2__label-suf filter__count">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Ноги
+									<span class="checkbox-2__label-suf filter__count">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Мужчинам
+									<span class="checkbox-2__label-suf filter__count">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Защита от солнца
+									<span class="checkbox-2__label-suf filter__count">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Мезотерапия
+									<span class="checkbox-2__label-suf filter__count">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+					</div>
+
+					<button class="btn btn--readme only-hit__btn" type="button" data-alt="Свернуть">
+						<span class="only-hit__btn-inner">Показать ещё 4</span>
+					</button>
+
+				</div>
+
+			</div>
+
+			<div class="filter__item">
+
+				<h3 class="filter__title">
+					Бренд
+				</h3>
+
+{% include "catalog/filter__brand.html" %}
+
+			</div>
+
+			<div class="filter__item">
+
+				<h3 class="filter__title">
+					Страна
+				</h3>
+
+				<div class="filter__fieldset only-hit">
+
+					<div class="only-hit__sort">
+
+						<div class="filter__checkbox only-hit__item" data-hit="4">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Франция
+									<span class="checkbox-2__label-suf filter__count">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="5">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Япония
+									<span class="checkbox-2__label-suf filter__count">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="3">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Россия
+									<span class="checkbox-2__label-suf filter__count">(28)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="2">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Италия
+									<span class="checkbox-2__label-suf filter__count">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item" data-hit="1">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Англия
+									<span class="checkbox-2__label-suf filter__count">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Италия
+									<span class="checkbox-2__label-suf filter__count">(24)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									США
+									<span class="checkbox-2__label-suf filter__count">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Мексика
+									<span class="checkbox-2__label-suf filter__count">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="filter__checkbox only-hit__item">
+
+							<label class="checkbox-2">
+
+								<input class="checkbox-2__input" type="checkbox">
+
+								<span class="checkbox-2__label">
+									Казахстан
+									<span class="checkbox-2__label-suf filter__count">(20)</span>
+								</span>
+
+							</label>
+
+						</div>
+
+					</div>
+
+					<button class="btn btn--readme only-hit__btn" type="button" data-alt="Свернуть">
+						<span class="only-hit__btn-inner">Показать ещё 4</span>
+					</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="filter__foot">
+
+			<button class="btn btn--pink">
+				Показать <span class="filter__couner">7</span>
+			</button>
+
+		</div>
+
+		<div class="filter__float">
+
+			<button class="btn btn--pink">
+				Показать <span class="filter__couner">7</span>
+			</button>
+
+		</div>
+
+	</form>

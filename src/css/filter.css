@@ -238,6 +238,53 @@
 
 }
 
+.filter-livesearch {
+
+	.input{
+
+		height: 28px;
+		line-height: 28px;
+		padding: 0 30px 0 8px;
+
+		&::placeholder {
+
+			font-size: 12px;
+
+		}
+
+		&:valid {
+
+			border-color: #bfbfbf;
+
+		}
+
+	}
+
+	.button {
+
+		position: absolute;
+		width: 28px;
+		height: 28px;
+		top: 0;
+		right: 0;
+		background-color: #bfbfbf;
+
+		svg {
+
+			fill: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+
+		}
+
+	}
+
+}
+
 .scroll-bar {
 
 	overflow-y: auto;
@@ -283,11 +330,14 @@
 
 			position: absolute;
 			width: 30px;
+			height: 20px;
+			line-height: 20px;
 			top: 0;
 			left: 0;
+			bottom: 0;
+			margin: auto;
 			text-align: center;
 			font-size: 14px;
-			line-height: 28px;
 			color: #bfbfbf;
 			pointer-events: none;
 			z-index: 1;

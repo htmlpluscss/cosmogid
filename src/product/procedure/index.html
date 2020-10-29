@@ -1,0 +1,92 @@
+{% set title = "Профессиональный уходовый комлекс ZO Skin Health «Увлажнение до кончиков пальцев»" %}
+
+{% set description = "Краска для волос Orofluido Colour Elixir создана на основе арганового, льняного и кипарисового масел, которые перемешиваются с активатором для того, чтобы сделать цвет более интенсивным, а также гарантировать проникновение сквозь текстуру волоса окрашивающих пигментов без повреждений кутикулы." %}
+
+{% set ogImage = "img/product/big.jpg" %}
+{% set ogImage236 = "img/product/og-236.jpg" %}
+{% set urlPage = "product" %}
+
+{% set preloadImage = [
+	{
+		media: "(min-width: 1250px)",
+		img : "/img/product/320x320.webp"
+	},
+	{
+		media: "(min-width: 375px) and (max-width: 767px)",
+		img : "/img/product/750x750.webp"
+	},
+	{
+		media: "(max-width: 374px)",
+		img : "/img/product/640x640.webp"
+	}
+] %}
+
+{% set breadcrumbs = ['Протоколы процедур','Процедура для улучшения состояния кожи рук и ног       Профессиональный уходовый комплекс ZO Skin Health','Процедура для улучшения состояния кожи рук и ног Профессиональный уходовый комплекс ZO Skin Health'] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+{% include "product/schema.html" %}
+
+		<div class="product-main articleid-events">
+
+{% include "product/img.html" %}
+
+			<div class="product-right">
+
+{% include "product/label.html" %}
+
+				<div class="product-body">
+
+					<div class="product-desc">
+
+{% include "product/head.html" %}
+
+{% include "product/article.html" %}
+
+					</div>
+
+					<div class="product-cart">
+
+						<div class="product-cart__sticky">
+
+{% include "product/buy.html" %}
+
+{% include "product/delivery.html" %}
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+{% include "product/set.html" %}
+
+{% include "product/tab.html" %}
+
+{% include "product/param.html" %}
+
+{% include "product/sale.html" %}
+
+{% include "product/others.html" %}
+
+{% include "product/hit.html" %}
+
+{% include "product/related.html" %}
+
+{% include "product/brand.html" %}
+
+{% include "product/tab2.html" %}
+
+{% include "home/visited.html" %}
+
+	</article>
+
+{% endblock %}

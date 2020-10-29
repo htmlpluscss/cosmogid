@@ -1,0 +1,209 @@
+{% set list = [
+
+	{
+		id    : 1,
+		brand : "Ericson Laboratoire",
+		title : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл super life 3 in 1",
+		img   : 28,
+		price : 2581,
+		oldPrice : 4585,
+		sale  : 30,
+		article : [
+			{
+				id    : 1,
+				value : "3 шт/10 мл",
+				price : 2581,
+				oldPrice : 4585,
+				sale  : 30,
+				active   : "true"
+			},
+			{
+				id    : "1-100",
+				value : "3 шт/20 мл",
+				price : 3581,
+				sale  : 20,
+				inBasket : "true",
+				storeid  : 2
+			},
+			{
+				id    : "1-200",
+				value : "200 мл",
+				price : 4581,
+				sale  : 10
+			},
+			{
+				id    : "1-300",
+				value : "300 мл",
+				price : 7000
+			},
+			{
+				id    : "1-400",
+				value : "400 мл",
+				price : 8000
+			}
+		],
+		ratio : 5,
+		ratioTotal : 1
+	},
+	{
+		id    : 2,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		label : "хит",
+		wishlist : "true",
+		inStock  : "false",
+		storeid  : 3,
+		ratio : 4,
+		ratioTotal : 1
+	},
+	{
+		id    : 3,
+		brand : "Ericson Laboratoire",
+		title : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		img   : 28,
+		price : 2581,
+		sale  : 30,
+		article : [
+			{
+				id    : 3,
+				value : "3 шт/10 мл",
+				price : 2581,
+				sale  : 30,
+				active   : "true"
+			},
+			{
+				id    : "3-100",
+				value : "3 шт/20 мл",
+				price : 3581,
+				sale  : 20,
+				inBasket : "true",
+				storeid  : 2
+			},
+			{
+				id    : "3-200",
+				value : "200 мл",
+				price : 4581,
+				sale  : 10
+			},
+			{
+				id    : "3-300",
+				value : "300 мл",
+				price : 7000
+			},
+			{
+				id    : "3-400",
+				value : "400 мл",
+				price : 8000
+			},
+			{
+				id    : "3-500",
+				value : "500 мл",
+				price : 10000
+			}
+		],
+		ratio : 3,
+		ratioTotal : 1
+	},
+	{
+		id    : 4,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing (Очищающий шампунь)",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		wishlist : "true",
+		ratio : 2,
+		ratioTotal : 2
+	},
+	{
+		id    : 2,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		label : "хит",
+		wishlist : "true",
+		inBasket : "true",
+		storeid  : 3,
+		ratio : 4,
+		ratioTotal : 1
+	},
+	{
+		id    : 3,
+		brand : "Ericson Laboratoire",
+		title : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		img   : 28,
+		price : 2581,
+		sale  : 30,
+		article : [
+			{
+				id    : 3,
+				value : "3 шт/10 мл",
+				price : 2581,
+				sale  : 30,
+				active   : "true"
+			},
+			{
+				id    : "3-100",
+				value : "3 шт/20 мл",
+				price : 3581,
+				sale  : 20,
+				inBasket : "true",
+				storeid  : 2
+			},
+			{
+				id    : "3-200",
+				value : "200 мл",
+				price : 4581,
+				sale  : 10
+			},
+			{
+				id    : "3-300",
+				value : "300 мл",
+				price : 7000
+			},
+			{
+				id    : "3-400",
+				value : "400 мл",
+				price : 8000
+			},
+			{
+				id    : "3-500",
+				value : "500 мл",
+				price : 10000
+			}
+		],
+		ratio : 3,
+		ratioTotal : 1
+	},
+	{
+		id    : 4,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing (Очищающий шампунь)",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		wishlist : "true",
+		ratio : 2,
+		ratioTotal : 2
+	}
+
+] %}
+
+	<div class="catalog-list">
+
+{% for item in list %}
+
+		<article class="catalog-list__item">
+
+{% include "_include/card-product.html" %}
+
+		</article>
+
+{% endfor %}
+
+	</div>
