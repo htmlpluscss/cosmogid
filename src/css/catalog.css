@@ -49,6 +49,7 @@
 
 		position: relative;
 		display: flex;
+		overflow: hidden;
 
 		@media ($responsive) {
 

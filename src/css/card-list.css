@@ -415,35 +415,35 @@
 
 		@media ($desktop) {
 
-			@supports(display: grid) {
+			display: flex;
 
-				display: grid;
-				grid-gap: 1px;
-				grid-template-rows: auto;
-				grid-template-columns: 190px 190px 190px 190px 1fr;
+			&-list {
+
+				display: flex;
+				flex-wrap: wrap;
 				background-color: var(--border);
-				padding: 1px;
+				padding-bottom: 1px;
 
-				img {
+			}
 
-					width: 100%;
-					height: auto;
+			img {
 
-				}
+				width: 100%;
+				height: auto;
 
-				&-item {
+			}
 
-					background-color: #fff;
+			&-item {
 
-					&.is-big {
+				background-color: #fff;
+				margin-top: 1px;
+				margin-left: 1px;
+				width: calc(25% - 1px);
 
-						grid-row-start: 1;
-						grid-row-end: 3;
-						grid-column-start: -2;
-						grid-column-end: -1;
-						margin: -1px;
+				&-big {
 
-					}
+					width: 456px;
+					flex-shrink: 0;
 
 				}
 
@@ -452,8 +452,6 @@
 		}
 
 		@media ($mobile) {
-
-			margin: 0 -10px;
 
 			&-item {
 
@@ -469,19 +467,7 @@
 
 		}
 
-		@media ($tablet) {
-
-
-		}
-
 		@media ($responsive) {
-
-			display: flex;
-			margin: 0 0 0 -16px;
-			padding-bottom: 16px;
-			padding-right: 16px;
-			overflow-x: auto;
-			scroll-snap-type: x mandatory;
 
 			&-item {
 
@@ -489,7 +475,7 @@
 				scroll-snap-align: start;
 				scroll-snap-stop: always;
 
-				&.is-big {
+				&-big {
 
 					display: none;
 
@@ -500,7 +486,6 @@
 					padding-right: 16px;
 
 				}
-
 
 			}
 

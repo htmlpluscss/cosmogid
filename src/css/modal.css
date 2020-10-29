@@ -7,7 +7,19 @@
 	display: none;
 	width: 100%;
 	justify-content: center;
-	padding: 105px 16px;
+	padding: 48px 16px;
+
+	@media ($desktop) {
+
+		padding: 105px 16px;
+
+	}
+
+	@media ($mobile) {
+
+		padding: 16px;
+
+	}
 
 	&:not(.is-full) {
 
@@ -225,7 +237,7 @@
 
 	@media ($responsive) {
 
-		width: 100%
+		width: 100%;
 
 	}
 
@@ -262,6 +274,12 @@
 
 			width: calc(50% - 8px);
 			margin: 4px;
+
+			@media ($mobile) {
+
+				width: calc(100% - 8px);
+
+			}
 
 		}
 
@@ -409,6 +427,19 @@
 
 	width: 350px;
 	padding: 26px 32px;
+
+	@media ($mobile) {
+
+		width: 300px;
+		padding: 20px;
+
+		.checkbox__label {
+
+			white-space: normal;
+
+		}
+
+	}
 
 	&__title {
 

@@ -592,7 +592,6 @@
 	&.is-default select {
 
 		color: #757575;
-		font-size: 14px;
 
 	}
 
@@ -624,6 +623,8 @@
 		}
 
 		@media ($desktop) {
+
+			font-size: 13px;
 
 			&:hover {
 
