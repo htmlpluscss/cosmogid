@@ -13,6 +13,12 @@
 		const btn = form.querySelector('.catalog-filter-tags__show-all'),
 			  items = form.querySelectorAll('.catalog-filter-tags__item');
 
+		if(!btn) {
+
+			return;
+
+		}
+
 		btn.addEventListener('click', () => {
 
 			btn.classList.add('hide');

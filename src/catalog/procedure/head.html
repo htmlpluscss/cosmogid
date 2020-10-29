@@ -1,0 +1,44 @@
+	<header class="catalog-head">
+
+		<h1 class="h1 catalog-head__title" data-counter="300 вариантов">
+			{{ title }}
+		</h1>
+
+		<p class="catalog-head__desc">
+			Интернет-магазин профессиональной косметики Cosmogid- является проводником в мир красоты и ухода за собой. Мы представляем Вашему вниманию <a href="/">готовые программы</a> для профессионального и домашнего применения разработанные ведущими специалистами.
+		</p>
+
+		<form action="/" class="catalog-filter-tags">
+
+{% set list = [
+
+	"Омоложение лица",
+	"Снятие отеков",
+	"Увлажнение и восстановление кожи лица",
+	"SPA процедуры для лица",
+	"Аксессуары для процедур",
+	"Для похудения"
+
+] %}
+
+			<div class="catalog-filter-tags__list">
+
+{% for item in list %}
+
+				<label class="catalog-filter-tags__item">
+
+					<input type="checkbox" class="catalog-filter-tags__input visuallyhidden" name="catalog-filter-tags" value="{{ item }}">
+
+					<span class="catalog-filter-tags__label">
+						{{ item }}
+					</span>
+
+				</label>
+
+{% endfor %}
+
+			</div>
+
+		</form>
+
+	</header>

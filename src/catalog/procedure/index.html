@@ -1,0 +1,49 @@
+{% set title = "Протоколы процедур (программы ухода от Cosmogid)" %}
+
+{% set description = "Интернет-магазин профессиональной косметики Cosmogid- является проводником в мир красоты и ухода за собой. Мы представляем Вашему вниманию готовые программы для профессионального и домашнего применения разработанные ведущими специалистами." %}
+
+{% set urlPage = "catalog/procedure" %}
+{% set view = "row" %}
+
+{% set breadcrumbs = ['Каталог','Протоколы процедур'] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="center">
+
+{% include "catalog/procedure/head.html" %}
+
+		<div class="catalog__box">
+
+			<div class="catalog__filter">
+
+{% include "catalog/filter.html" %}
+
+			</div>
+
+			<div class="catalog__body">
+
+{% include "catalog/bar.html" %}
+
+				<div class="catalog__items">
+
+{% include "catalog/procedure/list.html" %}
+
+					<span class="loading-indicator"></span>
+
+				</div>
+
+{% include "catalog/pagin.html" %}
+
+			</div>
+
+		</div>
+
+{% include "home/procedure-new-products.html" %}
+{% include "home/visited.html" %}
+
+	</section>
+
+{% endblock %}

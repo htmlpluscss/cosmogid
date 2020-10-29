@@ -34,6 +34,15 @@
 
 		}
 
+		&__desc {
+
+			font-size: 14px;
+			line-height: 22px;
+			color: var(--text);
+			margin: 10px 0 20px;
+
+		}
+
 	}
 
 	&-filter-tags {

@@ -4,6 +4,40 @@
 
 {% include "_include/card-item__img.html" %}
 
+{% if item.ratio %}
+
+					<span class="card-item__ratio card-item__ratio--{{ item.ratio }}">
+
+						<span class="visuallyhidden">Рейтинг {{ item.ratio }} звезд</span>
+
+	{% if item.ratioTotal %}
+						<span class="visuallyhidden">Всего оценок</span>{{ item.ratioTotal }}
+	{% endif %}
+
+					</span>
+
+{% endif %}
+
+					<form action="/" class="form card-item__compare form-compare">
+
+						<input type="hidden" name="id" value="{{ item.id }}">
+						<input type="hidden" name="type" value="0">
+
+{% if item.compare %}
+
+						<input type="hidden" name="mode" value="del">
+
+{% else %}
+						<input type="hidden" name="mode" value="add">
+
+{% endif %}
+
+						<button class="button">
+							Добавить в сравнение
+						</button>
+
+					</form>
+
 				</div>
 
 				<address class="card-item__cat">
@@ -57,5 +91,25 @@
 					</a>
 
 				</div>
+
+				<form action="/" class="form card-item__wishlist form-wishlist">
+
+					<input type="hidden" name="id" value="{{ item.id }}">
+					<input type="hidden" name="type" value="0">
+
+{% if item.wishlist %}
+
+					<input type="hidden" name="mode" value="del">
+
+{% else %}
+					<input type="hidden" name="mode" value="add">
+
+{% endif %}
+
+					<button class="button">
+						Добавить в избранное
+					</button>
+
+				</form>
 
 			</div>
