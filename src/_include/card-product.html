@@ -1,4 +1,4 @@
-			<div class="card-item card-product is-hover articleid-events">
+			<div class="card-item card-product is-hover{% if item.inStock == 'false' %}-btn{% endif %} articleid-events">
 
 				<div class="card-item__head">
 
@@ -25,7 +25,6 @@
 					</span>
 
 {% endif %}
-
 
 					<form action="/" class="form card-item__compare form-compare">
 
@@ -126,30 +125,92 @@
 
 {% endif %}
 
-				<form action="/" class="form card-product__order form-buy">
 
-					<input type="hidden" name="id" value="{{ item.id }}" class="articleid-events__id">
-					<input type="hidden" name="storeid" value="{{ item.storeid }}" class="articleid-events__storeid">
+{% if item.inStock == "false" %}
 
-{% if articleid %}
+				<button class="button card-item__btn-hover" type="button">
+					Написать отзыв
+				</button>
 
-					<input type="hidden" name="articleid" value="{{ articleid }}" class="articleid-events__value">
+				<div class="form card-product__order">
 
-{% endif %}
-
-{% if item.sku %}
+	{% if item.sku %}
 
 					<span class="card-product__sku">
 						Арт : <span class="card-product__sku-value">{{ item.sku }}</span>
 					</span>
 
-{% endif %}
+	{% endif %}
 
-{% if item.sale or item.label %}
+	{% if item.label %}
 
 					<p class="card-item__label">
 
-	{% if item.sale %}
+		{% if item.label %}
+
+						<span class="card-item__label-item">
+							{{ item.label }}
+						</span>
+
+		{% endif %}
+
+					</p>
+
+	{% endif %}
+
+					<p class="card-product__price card-item__price">
+
+						<b class="visuallyhidden">
+							Цена
+						</b>
+
+						<span class="card-product__price-value articleid-events__price-value">
+							{{ item.price }}
+						</span>
+
+						<span class="card-product__price-suf">
+							₽
+						</span>
+
+					</p>
+
+					<div class="card-item__btn card-product__btn">
+
+						<a href="/" class="btn btn--outline">
+							Нет в наличии
+						</a>
+
+					</div>
+
+				</div>
+
+
+{% else %}
+
+				<form action="/" class="form card-product__order form-buy">
+
+					<input type="hidden" name="id" value="{{ item.id }}" class="articleid-events__id">
+					<input type="hidden" name="storeid" value="{{ item.storeid }}" class="articleid-events__storeid">
+
+	{% if articleid %}
+
+					<input type="hidden" name="articleid" value="{{ articleid }}" class="articleid-events__value">
+
+	{% endif %}
+
+	{% if item.sku %}
+
+					<span class="card-product__sku">
+						Арт : <span class="card-product__sku-value">{{ item.sku }}</span>
+					</span>
+
+	{% endif %}
+
+	{% if item.sale or item.label %}
+
+					<p class="card-item__label">
+
+		{% if item.sale %}
 
 						<span class="card-item__label-item card-item__label-item--sale">
 
@@ -158,23 +219,23 @@
 
 						</span>
 
-	{% endif %}
+		{% endif %}
 
-	{% if item.label %}
+		{% if item.label %}
 
 						<span class="card-item__label-item">
 							{{ item.label }}
 						</span>
 
-	{% endif %}
+		{% endif %}
 
 					</p>
 
-{% endif %}
+	{% endif %}
 
 					<p class="card-product__price card-item__price">
 
-{% if item.oldPrice %}
+	{% if item.oldPrice %}
 
 						<s class="card-product__old-price">
 
@@ -192,7 +253,7 @@
 
 						</s>
 
-{% endif %}
+	{% endif %}
 
 						<b class="visuallyhidden">
 							Цена
@@ -210,17 +271,17 @@
 
 					<div class="card-item__btn card-product__btn form-buy__btns articleid-events__btn">
 
-{% if item.article and item.article.length > 5 %}
+	{% if item.article and item.article.length > 5 %}
 
 						<a href="/" class="btn btn--outline{% if item.inBasket %} hide{% endif %}">
 							Купить
 						</a>
 
-{% else %}
+	{% else %}
 						<button class="btn btn--outline{% if item.inBasket %} hide{% endif %}">
 							В корзину
 						</button>
-{% endif %}
+	{% endif %}
 
 						<a href="/basket/" class="btn btn--pink{% if not item.inBasket %} hide{% endif %}">
 							В корзине
@@ -233,6 +294,8 @@
 					</button>
 
 				</form>
+
+{% endif %}
 
 				<form action="/" class="form card-item__wishlist form-wishlist">
 
