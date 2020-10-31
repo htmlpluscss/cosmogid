@@ -87,4 +87,4 @@
 
 	});
 
-})( document.querySelector('.lk-club') );
+})( document.querySelector('.lk-form--club') );

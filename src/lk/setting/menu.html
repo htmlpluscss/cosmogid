@@ -1,0 +1,23 @@
+		<ul class="lk-menu__list-second">
+
+{% set menu = [
+
+	"личные данные",
+	"настройки",
+	"подписки"
+
+] %}
+
+{% for item in menu %}
+
+			<li class="lk-menu__item-second{% if menuSecontdActive === item %} is-current{% endif %}">
+
+				<a href="/">
+					{{ item }}
+				</a>
+
+			</li>
+
+{% endfor %}
+
+		</ul>

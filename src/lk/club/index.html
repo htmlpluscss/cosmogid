@@ -30,321 +30,397 @@
 
 	<div class="center">
 
-		<form action="/" class="lk-club form" enctype="multipart/form-data">
+		<form action="/" class="form lk-form lk-form--club" enctype="multipart/form-data">
 
-			<div class="lk-club__inputbox">
+			<div class="lk-form__table">
 
-				<label class="lk-club__label" for="lk-club-name">
-					Имя:
-				</label>
+				<div class="lk-form__row">
 
-				<div class="lk-club__control">
+					<label class="lk-form__label" for="lk-form-name">
+						Имя:
+					</label>
 
-					<input class="input" required="required" name="name" id="lk-club-name">
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="name" id="lk-form-name">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-surname">
+						Фамилия:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="surname" id="lk-form-surname">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-phone">
+						Телефон:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="phone" id="lk-form-phone" type="tel">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-email">
+						E-mail:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="email" id="lk-form-email" type="email">
+
+					</div>
 
 				</div>
 
 			</div>
 
-			<div class="lk-club__inputbox">
+			<div class="lk-form__table lk-form__table--club">
 
-				<label class="lk-club__label" for="lk-club-fio">
-					Фамилия:
-				</label>
+				<div class="lk-form__row">
 
-				<div class="lk-club__control">
+					<label class="lk-form__label">
+						Вы:
+					</label>
 
-					<input class="input" required="required" name="fio" id="lk-club-fio">
+					<div class="lk-form__control">
 
-				</div>
+						<div class="lk-form__club">
 
-			</div>
+							<div class="lk-form__club-item lk-form__club-group">
 
-			<div class="lk-club__inputbox">
+								<div class="lk-form__club-type lk-form__flex">
 
-				<label class="lk-club__label" for="lk-club-phone">
-					Телефон:
-				</label>
+									<label class="checkbox-radio">
 
-				<div class="lk-club__control">
+										<input type="radio" class="checkbox-radio__input" value="profi" name="type" checked="checked" data-group="profi">
 
-					<input class="input" required="required" name="phone" id="lk-club-phone" type="tel">
+										<span class="checkbox-radio__label">
+											Профессионал
+										</span>
 
-				</div>
-
-			</div>
-
-			<div class="lk-club__inputbox">
-
-				<label class="lk-club__label" for="lk-club-email">
-					E-mail:
-				</label>
-
-				<div class="lk-club__control">
-
-					<input class="input" required="required" name="email" id="lk-club-email" type="email">
-
-				</div>
-
-			</div>
-
-			<div class="lk-club__inputbox">
-
-				<label class="lk-club__label">
-					Вы:
-				</label>
-
-				<div class="lk-club__control">
-
-					<div class="lk-club__column">
-
-						<div class="lk-club__column-item lk-club__column-group">
-
-							<div class="lk-club__column-type">
-
-								<label class="checkbox-radio">
-
-									<input type="radio" class="checkbox-radio__input" value="profi" name="type" checked="checked" data-group="profi">
-
-									<span class="checkbox-radio__label">
-										Профессионал
-									</span>
-
-								</label>
-
-							</div>
-
-							<fieldset data-disabled-false="profi" data-disabled-true="wholesale">
-
-								<div class="lk-club__column">
-
-									<div class="lk-club__column-item lk-club__column-group">
-
-										<label class="checkbox-radio">
-
-											<input type="radio" class="checkbox-radio__input" value="Салон красоты" name="profi-sub" data-group="salon" checked="checked">
-
-											<span class="checkbox-radio__label">
-												Салон красоты
-												<small>
-													(отметьте оказываемые вами услуги)
-												</small>
-											</span>
-
-										</label>
-
-										<fieldset data-disabled-false="salon" data-disabled-true="private">
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-11" checked="checked">
-
-												<span class="checkbox-2__label">
-													Солярий
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-12">
-
-												<span class="checkbox-2__label">
-													Депиляция
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-13">
-
-												<span class="checkbox-2__label">
-													Косметолгия
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-14">
-
-												<span class="checkbox-2__label">
-													Маникюр и педикюр
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-15">
-
-												<span class="checkbox-2__label">
-													Массаж
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-16">
-
-												<span class="checkbox-2__label">
-													Парикмахерская
-												</span>
-
-											</label>
-
-										</fieldset>
-
-									</div>
-
-									<div class="lk-club__column-item lk-club__column-group">
-
-										<label class="checkbox-radio">
-
-											<input type="radio" class="checkbox-radio__input" value="Частный мастер" name="profi-sub" data-group="private">
-
-											<span class="checkbox-radio__label">
-												Частный мастер
-												<small>
-													(отметьте оказываемые вами услуги)
-												</small>
-											</span>
-
-										</label>
-
-										<fieldset disabled="disabled" data-disabled-false="private" data-disabled-true="salon">
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-21">
-
-												<span class="checkbox-2__label">
-													Бровист
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-22">
-
-												<span class="checkbox-2__label">
-													Косметолог
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-23">
-
-												<span class="checkbox-2__label">
-													Косметолог-Эстетист
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-24">
-
-												<span class="checkbox-2__label">
-													Массажист
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-25">
-
-												<span class="checkbox-2__label">
-													Мастер мникюра и педикюра
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-26">
-
-												<span class="checkbox-2__label">
-													Парикмахер
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-27">
-
-												<span class="checkbox-2__label">
-													Стилист
-												</span>
-
-											</label>
-
-											<label class="checkbox-2">
-
-												<input class="checkbox-2__input" type="checkbox" name="type-details-28">
-
-												<span class="checkbox-2__label">
-													Визажист
-												</span>
-
-											</label>
-
-										</fieldset>
-
-									</div>
+									</label>
 
 								</div>
 
-							</fieldset>
+								<fieldset data-disabled-false="profi" data-disabled-true="wholesale">
 
-						</div>
+									<div class="lk-form__club">
 
-						<div class="lk-club__column-item lk-club__column-group">
+										<div class="lk-form__club-item lk-form__club-group">
 
-							<div class="lk-club__column-type">
+											<div class="lk-form__flex">
 
-								<label class="checkbox-radio">
+												<label class="checkbox-radio">
 
-									<input type="radio" class="checkbox-radio__input" value="wholesale" name="type" data-group="wholesale">
+													<input type="radio" class="checkbox-radio__input" value="Салон красоты" name="profi-sub" data-group="salon" checked="checked">
 
-									<span class="checkbox-radio__label">
-										Оптовый покупатель
-									</span>
+													<span class="checkbox-radio__label">
+														Салон красоты
+														<small>
+															(отметьте оказываемые вами услуги)
+														</small>
+													</span>
 
-								</label>
+												</label>
+
+											</div>
+
+											<fieldset data-disabled-false="salon" data-disabled-true="private">
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-11" checked="checked">
+
+														<span class="checkbox-2__label">
+															Солярий
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-12">
+
+														<span class="checkbox-2__label">
+															Депиляция
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-13">
+
+														<span class="checkbox-2__label">
+															Косметолгия
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-14">
+
+														<span class="checkbox-2__label">
+															Маникюр и педикюр
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-15">
+
+														<span class="checkbox-2__label">
+															Массаж
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-16">
+
+														<span class="checkbox-2__label">
+															Парикмахерская
+														</span>
+
+													</label>
+
+												</div>
+
+											</fieldset>
+
+										</div>
+
+										<div class="lk-form__club-item lk-form__club-group">
+
+											<label class="checkbox-radio">
+
+												<input type="radio" class="checkbox-radio__input" value="Частный мастер" name="profi-sub" data-group="private">
+
+												<span class="checkbox-radio__label">
+													Частный мастер
+													<small>
+														(отметьте оказываемые вами услуги)
+													</small>
+												</span>
+
+											</label>
+
+											<fieldset disabled="disabled" data-disabled-false="private" data-disabled-true="salon">
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-21">
+
+														<span class="checkbox-2__label">
+															Бровист
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-22">
+
+														<span class="checkbox-2__label">
+															Косметолог
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-23">
+
+														<span class="checkbox-2__label">
+															Косметолог-Эстетист
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-24">
+
+														<span class="checkbox-2__label">
+															Массажист
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-25">
+
+														<span class="checkbox-2__label">
+															Мастер мникюра и педикюра
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-26">
+
+														<span class="checkbox-2__label">
+															Парикмахер
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-27">
+
+														<span class="checkbox-2__label">
+															Стилист
+														</span>
+
+													</label>
+
+												</div>
+
+												<div class="lk-form__flex">
+
+													<label class="checkbox-2">
+
+														<input class="checkbox-2__input" type="checkbox" name="type-details-28">
+
+														<span class="checkbox-2__label">
+															Визажист
+														</span>
+
+													</label>
+
+												</div>
+
+											</fieldset>
+
+										</div>
+
+									</div>
+
+								</fieldset>
 
 							</div>
 
-							<fieldset disabled="disabled" data-disabled-false="wholesale" data-disabled-true="profi">
+							<div class="lk-form__club-item lk-form__club-group">
 
-								<label class="checkbox-radio">
+								<div class="lk-form__club-type">
 
-									<input type="radio" class="checkbox-radio__input" value="Розничный магазин" name="wholesale-sub">
+									<label class="checkbox-radio">
 
-									<span class="checkbox-radio__label">
-										Розничный магазин
-									</span>
+										<input type="radio" class="checkbox-radio__input" value="wholesale" name="type" data-group="wholesale">
 
-								</label>
+										<span class="checkbox-radio__label">
+											Оптовый покупатель
+										</span>
 
-								<label class="checkbox-radio">
+									</label>
 
-									<input type="radio" class="checkbox-radio__input" value="Косметолог" name="wholesale-sub">
+								</div>
 
-									<span class="checkbox-radio__label">
-										Косметолог
-									</span>
+								<fieldset disabled="disabled" data-disabled-false="wholesale" data-disabled-true="profi">
 
-								</label>
+									<div class="lk-form__flex">
 
-							</fieldset>
+										<label class="checkbox-radio">
+
+											<input type="radio" class="checkbox-radio__input" value="Розничный магазин" name="wholesale-sub">
+
+											<span class="checkbox-radio__label">
+												Розничный магазин
+											</span>
+
+										</label>
+
+									</div>
+
+									<div class="lk-form__flex">
+
+										<label class="checkbox-radio">
+
+											<input type="radio" class="checkbox-radio__input" value="Косметолог" name="wholesale-sub">
+
+											<span class="checkbox-radio__label">
+												Косметолог
+											</span>
+
+										</label>
+
+									</div>
+
+								</fieldset>
+
+							</div>
 
 						</div>
 
@@ -354,9 +430,9 @@
 
 			</div>
 
-			<div class="lk-club__files">
+			<div class="lk-form__files">
 
-				<p class="lk-club__label lk-club__label--full">
+				<p class="lk-form__label lk-form__label--full">
 					Загрузите сканы:
 				</p>
 
@@ -419,7 +495,7 @@
 
 			</div>
 
-			<button class="btn btn--blue lk-club__submit">
+			<button class="btn btn--blue lk-form__submit">
 				Отправить заявку
 			</button>
 

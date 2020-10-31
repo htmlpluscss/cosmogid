@@ -1,0 +1,160 @@
+{% set title = "Личные данные" %}
+
+{% set profile = true %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% set menuActive = 'Мои данные и настройки' %}
+{% set menuSecontdActive = 'личные данные' %}
+
+	<div class="lk-header">
+
+{% include "lk/menu.html" %}
+
+		<div class="center">
+
+{% include "lk/setting/menu.html" %}
+
+		</div>
+
+	</div>
+
+	<div class="center">
+
+		<form action="/" class="form lk-form">
+
+			<div class="lk-form__table">
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label lk-form__label--required" for="lk-form-name">
+						Имя:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="name" id="lk-form-name" value="Иван">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label lk-form__label--required" for="lk-form-surname">
+						Фамилия:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="surname" id="lk-form-surname" value="Иванов">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-middlename">
+						Отчество:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" name="middlename" id="lk-form-middlename" value="Иванович">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label lk-form__label--required" for="lk-form-phone">
+						Телефон:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="phone" id="lk-form-phone" type="tel" value="+79610000000">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-email">
+						E-mail:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" name="email" id="lk-form-email" type="email" value="ivanov@mail.ru">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-date">
+						Дата рождения:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" name="date" id="lk-form-date" type="date" value="1985-10-12">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label">
+						Обращение:
+					</label>
+
+					<div class="lk-form__control lk-form__control--row">
+
+						<label class="checkbox-radio">
+
+							<input type="radio" class="checkbox-radio__input" value="women" name="gender">
+
+							<span class="checkbox-radio__label">
+								Уважаемая
+							</span>
+
+						</label>
+
+						<label class="checkbox-radio">
+
+							<input type="radio" class="checkbox-radio__input" value="men" name="gender" checked="checked">
+
+							<span class="checkbox-radio__label">
+								Уважаемый
+							</span>
+
+						</label>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<p class="lk-form__note-required">
+				- поля обязательные для заполнения
+			</p>
+
+			<button class="btn btn--blue lk-form__submit">
+				Сохранить
+			</button>
+
+		</form>
+
+	</div>
+
+{% endblock %}

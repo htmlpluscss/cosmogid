@@ -1,0 +1,188 @@
+{% set title = "Уведомления" %}
+
+{% set profile = true %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% set menuActive = 'Мои данные и настройки' %}
+{% set menuSecontdActive = 'настройки' %}
+
+	<div class="lk-header">
+
+{% include "lk/menu.html" %}
+
+		<div class="center">
+
+{% include "lk/setting/menu.html" %}
+
+		</div>
+
+	</div>
+
+	<div class="center">
+
+		<form action="/" class="form lk-form">
+
+			<h3 class="lk-form__head h3">
+				Статус заказа
+			</h3>
+
+			<p class="lk-form__text">
+				Отслеживайте заказы в реальном времени
+			</p>
+
+			<div class="lk-form__table">
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-phone">
+						Телефон:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="phone" id="lk-form-phone" type="tel" value="+79610000000">
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-email">
+						E-mail:
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" required="required" name="email" id="lk-form-email" type="email" value="ivanov@mail.ru">
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<button class="btn btn--blue lk-form__submit">
+				Сохранить
+			</button>
+
+		</form>
+
+		<form action="/" class="form lk-form">
+
+			<h3 class="lk-form__head h3">
+				Отложенные товары
+			</h3>
+
+			<p class="lk-form__text">
+				Узнавайте о снижении цены и появлении в продаже любимых товаров
+			</p>
+
+			<div class="lk-form__flex">
+
+				<label class="checkbox-2">
+
+					<input class="checkbox-2__input" type="checkbox" name="viber-wishlist" checked="checked">
+
+					<span class="checkbox-2__label">
+						Viber
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="lk-form__flex">
+
+				<label class="checkbox-2">
+
+					<input class="checkbox-2__input" type="checkbox" name="email-sale">
+
+					<span class="checkbox-2__label">
+						E-mail
+					</span>
+
+				</label>
+
+			</div>
+
+			<h3 class="lk-form__head h3">
+				Акции и скидки
+			</h3>
+
+			<p class="lk-form__text">
+				Экономьте на акциях и распродажах
+			</p>
+
+			<div class="lk-form__flex">
+
+				<label class="checkbox-2">
+
+					<input class="checkbox-2__input" type="checkbox" name="viber-sale">
+
+					<span class="checkbox-2__label">
+						Viber
+					</span>
+
+				</label>
+
+			</div>
+
+			<div class="lk-form__flex">
+
+				<label class="checkbox-2">
+
+					<input class="checkbox-2__input" type="checkbox" name="email-wishlist" checked="checked">
+
+					<span class="checkbox-2__label">
+						E-mail
+					</span>
+
+				</label>
+
+			</div>
+
+			<h3 class="lk-form__head h3">
+				Ответы на ваши вопросы о товарах
+			</h3>
+
+			<p class="lk-form__text">
+				Получайте уведомления, когда на ваш вопрос о товаре ответят
+			</p>
+
+			<div class="lk-form__table">
+
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-email">
+						E-mail:
+					</label>
+
+					<div class="lk-form__control">
+
+						<div class="select">
+							<select name="timer">
+								<option value="0">немедленно</option>
+								<option value="60">раз в час</option>
+								<option value="24" selected="selected">раз в день</option>
+							</select>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<button class="btn btn--blue lk-form__submit">
+				Сохранить
+			</button>
+
+		</form>
+
+	</div>
+
+{% endblock %}
