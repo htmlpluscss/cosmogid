@@ -1,0 +1,137 @@
+{% set title = "Сравнение товаров" %}
+
+{% set profile = true %}
+
+{% set view = "row" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% set menuActive = 'Сравнение товаров 7' %}
+
+	<div class="lk-header">
+
+{% include "lk/menu.html" %}
+
+	</div>
+
+	<section class="center">
+
+		<div class="catalog__box">
+
+			<div class="catalog__filter">
+
+				<form class="form lk-form" action="/">
+
+					<div class="lk-form__item">
+
+						<label class="lk-form__item-label" for="lk-form-section">
+							Для раздела:
+						</label>
+
+						<div class="select">
+
+							<select name="section" id="lk-form-section">
+								<option value="1">Руки (4)</option>
+							</select>
+
+						</div>
+
+					</div>
+
+					<div class="lk-form__item">
+
+						<label class="lk-form__item-label" for="lk-form-category">
+							Категория:
+						</label>
+
+						<div class="select">
+
+							<select name="category" id="lk-form-category">
+								<option value="1">Крем (4)</option>
+							</select>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+
+			<div class="catalog__body">
+
+				<div class="catalog__compare swiper-container swiper-container--compare">
+
+					<div class="catalog__compare-nav">
+
+						<button class="button" type="button" aria-label="прокрутить назад">
+							<svg width="20" height="12" viewBox="0 0 20 12">
+								<path d="M19.09 6.01H1.07M6.53 10.79L1.07 6l5.46-4.77"/>
+							</svg>
+						</button>
+
+						<button class="button" type="button" aria-label="прокрутить вперед">
+							<svg width="20" height="12" viewBox="0 0 20 12">
+								<path d="M.43 6.01h18.01M12.98 1.24l5.46 4.77-5.46 4.78"/>
+							</svg>
+						</button>
+
+					</div>
+
+{% include "lk/compare/list.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="catalog__box">
+
+			<div class="catalog__filter">
+
+{% set compare = [
+
+	'Стоимость',
+	'Акции',
+	'Обьем',
+	'Страна производства',
+	'Вид процедуры ухода за руками',
+	'Тип кожи',
+	'Проблема кожи',
+	'Возраст',
+	'Частота применения',
+	'Время применения'
+
+] %}
+				<div class="compare-table">
+
+{% for key in compare %}
+
+					<div class="compare-key">
+						{{ key }}
+					</div>
+
+{% endfor %}
+
+				</div>
+
+			</div>
+
+			<div class="catalog__body">
+
+				<div class="catalog__compare swiper-container swiper-container--compare-table">
+
+{% include "lk/compare/list-2.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+{% endblock %}

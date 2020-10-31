@@ -201,6 +201,12 @@
 		z-index: 1;
 		position: relative;
 
+		@media ($desktop) {
+
+			width: calc(100% - 220px - 36px);
+
+		}
+
 	}
 
 	&__items {
@@ -364,6 +370,19 @@
 		display: flex;
 		flex-wrap: wrap;
 
+		&.is-compare {
+
+			flex-wrap: nowrap;
+			margin: 0 !important;
+
+			.card-item__wishlist {
+
+				display: none;
+
+			}
+
+		}
+
 		@media ($tablet) {
 
 			margin: -8px;
@@ -381,6 +400,7 @@
 			width: 50%;
 			padding: 4px;
 			display: flex;
+			flex-shrink: 0;
 
 			@media ($tablet) {
 
@@ -405,6 +425,66 @@
 		&__item {
 
 			margin: 20px 0;
+
+		}
+
+	}
+
+	&__compare {
+
+		overflow: hidden;
+		margin: -4px;
+
+		@media ($tablet) {
+
+			margin: -8px;
+
+		}
+
+		@media ($desktop) {
+
+			margin: -10px;
+
+		}
+
+		&-nav {
+
+			display: flex;
+			justify-content: flex-end;
+			height: 30px;
+			align-items: flex-start;
+
+			.button {
+
+				margin-right: 10px;
+
+				svg {
+
+					fill: none;
+					stroke: var(--border);
+
+				}
+
+				@media ($desktop) {
+
+					&:hover svg {
+
+						stroke: var(--color);
+
+					}
+
+				}
+
+			}
+
+		}
+
+		&-remove {
+
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 3;
 
 		}
 
@@ -483,5 +563,21 @@
 		transform: rotateZ(720deg);
 
 	}
+
+}
+
+.compare-key,
+.compare-value {
+
+	margin: 16px 0;
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--text);
+
+}
+
+.compare-key {
+
+	font-weight: 500;
 
 }

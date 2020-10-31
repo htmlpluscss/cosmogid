@@ -358,6 +358,7 @@
 
 			padding: 0 !important;
 			display: flex;
+			align-items: flex-start;
 			position: relative;
 			transition: transform var(--transitionDefault);
 			transform: translate3d(0, 0, 0);

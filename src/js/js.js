@@ -14,6 +14,7 @@ https://github.com/htmlpluscss/
 
 	window.CG = window.CG || {};
 	CG.breakPoints = 1250;
+	CG.heightHeaderFixed = 118;
 	CG.resizeTimeout = null;
 	CG.windowWidthOLd = window.innerWidth;
 

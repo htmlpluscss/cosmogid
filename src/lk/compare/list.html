@@ -1,0 +1,221 @@
+{% set list = [
+
+	{
+		id    : 1,
+		brand : "Ericson Laboratoire",
+		title : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл super life 3 in 1",
+		img   : 28,
+		price : 2581,
+		oldPrice : 4585,
+		sale  : 30,
+		article : [
+			{
+				id    : 1,
+				value : "3 шт/10 мл",
+				price : 2581,
+				oldPrice : 4585,
+				sale  : 30,
+				active   : "true"
+			},
+			{
+				id    : "1-100",
+				value : "3 шт/20 мл",
+				price : 3581,
+				sale  : 20,
+				inBasket : "true",
+				storeid  : 2
+			},
+			{
+				id    : "1-200",
+				value : "200 мл",
+				price : 4581,
+				sale  : 10
+			},
+			{
+				id    : "1-300",
+				value : "300 мл",
+				price : 7000
+			},
+			{
+				id    : "1-400",
+				value : "400 мл",
+				price : 8000
+			}
+		],
+		ratio : 5,
+		ratioTotal : 1
+	},
+	{
+		id    : 2,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		label : "хит",
+		wishlist : "true",
+		inStock  : "false",
+		storeid  : 3,
+		ratio : 4,
+		ratioTotal : 1
+	},
+	{
+		id    : 3,
+		brand : "Ericson Laboratoire",
+		title : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		img   : 28,
+		price : 2581,
+		sale  : 30,
+		article : [
+			{
+				id    : 3,
+				value : "3 шт/10 мл",
+				price : 2581,
+				sale  : 30,
+				active   : "true"
+			},
+			{
+				id    : "3-100",
+				value : "3 шт/20 мл",
+				price : 3581,
+				sale  : 20,
+				inBasket : "true",
+				storeid  : 2
+			},
+			{
+				id    : "3-200",
+				value : "200 мл",
+				price : 4581,
+				sale  : 10
+			},
+			{
+				id    : "3-300",
+				value : "300 мл",
+				price : 7000
+			},
+			{
+				id    : "3-400",
+				value : "400 мл",
+				price : 8000
+			},
+			{
+				id    : "3-500",
+				value : "500 мл",
+				price : 10000
+			}
+		],
+		ratio : 3,
+		ratioTotal : 1
+	},
+	{
+		id    : 4,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing (Очищающий шампунь)",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		wishlist : "true",
+		ratio : 2,
+		ratioTotal : 2
+	},
+	{
+		id    : 2,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		label : "хит",
+		wishlist : "true",
+		inBasket : "true",
+		storeid  : 3,
+		ratio : 4,
+		ratioTotal : 1
+	},
+	{
+		id    : 3,
+		brand : "Ericson Laboratoire",
+		title : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		img   : 28,
+		price : 2581,
+		sale  : 30,
+		article : [
+			{
+				id    : 3,
+				value : "3 шт/10 мл",
+				price : 2581,
+				sale  : 30,
+				active   : "true"
+			},
+			{
+				id    : "3-100",
+				value : "3 шт/20 мл",
+				price : 3581,
+				sale  : 20,
+				inBasket : "true",
+				storeid  : 2
+			},
+			{
+				id    : "3-200",
+				value : "200 мл",
+				price : 4581,
+				sale  : 10
+			},
+			{
+				id    : "3-300",
+				value : "300 мл",
+				price : 7000
+			},
+			{
+				id    : "3-400",
+				value : "400 мл",
+				price : 8000
+			},
+			{
+				id    : "3-500",
+				value : "500 мл",
+				price : 10000
+			}
+		],
+		ratio : 3,
+		ratioTotal : 1
+	},
+	{
+		id    : 4,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing (Очищающий шампунь)",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		wishlist : "true",
+		ratio : 2,
+		ratioTotal : 2
+	}
+
+] %}
+
+	<div class="catalog-list is-compare swiper-wrapper">
+
+{% for item in list %}
+
+		<article class="catalog-list__item swiper-slide">
+
+			<div class="catalog__compare-remove">
+
+				<button class="btn btn--remove" type="button">
+					<svg width="17" height="17" viewBox="0 0 17 17">
+						<path d="M13.32 8.07c0-2.99-2.4-5.42-5.34-5.42a5.4 5.4 0 00-5.35 5.42c0 1.5.6 2.86 1.57 3.84a5.3 5.3 0 003.78 1.59 5.4 5.4 0 005.34-5.43zm-5.34 4.87a4.83 4.83 0 01-4.8-4.86 4.85 4.85 0 014.8-4.88c1.32 0 2.52.55 3.39 1.43.87.88 1.4 2.1 1.4 3.44a4.86 4.86 0 01-4.8 4.87z"/>
+						<path d="M9.41 9.13L8.37 8.07l1.04-1.06a.28.28 0 000-.4.27.27 0 00-.39 0L7.98 7.69 6.94 6.62a.27.27 0 00-.4 0 .28.28 0 000 .4L7.6 8.06 6.55 9.13a.28.28 0 000 .4c.1.11.28.11.39 0l1.04-1.06 1.04 1.06c.11.11.28.11.4 0a.28.28 0 000-.4z"/>
+					</svg>
+					Убрать
+				</button>
+
+			</div>
+
+{% include "_include/card-product.html" %}
+
+		</article>
+
+{% endfor %}
+
+	</div>

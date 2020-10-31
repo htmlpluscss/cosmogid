@@ -172,6 +172,42 @@ fieldset {
 
 	}
 
+	&--remove {
+
+		line-height: 30px;
+		height: 30px;
+		padding: 0 10px 0 20px;
+		color: #818181;
+		font-weight: 500;
+		font-size: 11px;
+
+		svg {
+
+			position: absolute;
+			top: 6px;
+			left: 0;
+			fill: #818181;
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--color);
+
+				svg {
+
+					fill: var(--color);
+
+				}
+
+			}
+
+		}
+
+	}
+
 }
 
 .input {

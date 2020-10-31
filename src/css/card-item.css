@@ -7,6 +7,12 @@
 	width: 100%;
 	flex-direction: column;
 
+	&.is-not {
+
+		padding-bottom: 48px;
+
+	}
+
 	@media ($desktop) {
 
 		&.is-hover:hover {
@@ -20,23 +26,6 @@
 		&.is-hover:hover &__desc {
 
 			display: block;
-
-		}
-
-	}
-
-	&.is-hover-btn:hover {
-
-		&::after {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			opacity: .2;
-			background-color: #5b5b5b;
 
 		}
 
@@ -237,6 +226,12 @@
 			padding-left: 4px;
 
 		}
+
+	}
+
+	&.is-not &__price {
+
+		color: #908d8d;
 
 	}
 

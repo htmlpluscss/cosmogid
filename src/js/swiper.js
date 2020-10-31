@@ -2,7 +2,14 @@ CG.swiper = swipe => {
 
 	let mySwipe = null,
 		toggleSwipe = null,
-		resetSwipe = null;
+		resetSwipe = null,
+		timer = 10000;
+
+	if(Cookies.get('acity') || Cookies.get('ucity')) {
+
+		timer = 0;
+
+	}
 
 	const swipeControls = document.createElement('div'),
 		  swipeNav = document.createElement('div'),
@@ -16,6 +23,8 @@ CG.swiper = swipe => {
 		  cardList = swipe.classList.contains('swiper-container--card-list'),
 		  product = swipe.classList.contains('swiper-container--product'),
 		  billboard = swipe.classList.contains('swiper-container--billboard'),
+		  compare = swipe.classList.contains('swiper-container--compare'),
+		  compareTable = swipe.classList.contains('swiper-container--compare-table'),
 		  gallery = swipe.classList.contains('swiper-container--gallery');
 
 	swipeNav.className = 'swiper-pagination';
@@ -113,7 +122,7 @@ CG.swiper = swipe => {
 
 	if (cardList) {
 
-		let row = swipe.getAttribute('data-count-row');
+		const row = parseInt(swipe.getAttribute('data-count-row'));
 
 		toggleSwipe = () => {
 
@@ -123,58 +132,35 @@ CG.swiper = swipe => {
 
 			if (window.innerWidth >= CG.breakPoints) {
 
-				if(row === 'auto') {
+				if (count > row) {
 
-/*						swipe.parentNode.classList.add('swiper-container-style');
+					swipe.parentNode.classList.add('swiper-container-style');
 
 					swipeBtns.classList.remove('hide');
 					swipeControls.classList.remove('hide');
 
+					if(swipe.getAttribute('data-nav')) {
+
+						swipeNav.classList.remove('hide');
+
+					}
+
 					mySwipe = new Swiper(swipe, {
 						loop: false,
 						slidesPerView: row,
+						slidesPerGroup: row,
+						spaceBetween: 30,
 						navigation: {
 							nextEl: swipeNext,
 							prevEl: swipePrev
+						},
+						pagination: {
+							el: swipeNav,
+							clickable: true,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
 						}
 					});
-*/
-				}
-				else {
-
-					row = parseInt(row);
-
-					if (count > row) {
-
-						swipe.parentNode.classList.add('swiper-container-style');
-
-						swipeBtns.classList.remove('hide');
-						swipeControls.classList.remove('hide');
-
-						if(swipe.getAttribute('data-nav')) {
-
-							swipeNav.classList.remove('hide');
-
-						}
-
-						mySwipe = new Swiper(swipe, {
-							loop: false,
-							slidesPerView: row,
-							slidesPerGroup: row,
-							spaceBetween: 30,
-							navigation: {
-								nextEl: swipeNext,
-								prevEl: swipePrev
-							},
-							pagination: {
-								el: swipeNav,
-								clickable: true,
-								bulletClass: 'button',
-								bulletActiveClass: 'is-active'
-							}
-						});
-
-					}
 
 				}
 
@@ -241,6 +227,75 @@ CG.swiper = swipe => {
 
 	}
 
+	if (compare) {
+
+		toggleSwipe = () => {
+
+			toggleSwipe = false;
+
+			const btn = swipe.querySelectorAll('.catalog__compare-nav .button'),
+				  mySwipeCompareTable = document.querySelector('.swiper-container--compare-table');
+
+			mySwipe = new Swiper(swipe, {
+				slidesPerView: 4,
+				simulateTouch: false
+			});
+
+			btn[0].addEventListener('click', () => {
+
+				mySwipe.slidePrev();
+				mySwipeCompareTable.swiper.slidePrev();
+
+			});
+
+			btn[1].addEventListener('click', () => {
+
+				mySwipe.slideNext();
+				mySwipeCompareTable.swiper.slideNext();
+
+			});
+
+			swipe.addEventListener('click', event => {
+
+				if(event.target.closest('.btn--remove')){
+
+					const slide = event.target.closest('.swiper-slide');
+
+					Array.from(swipe.querySelectorAll('.swiper-slide'), (el,index) => {
+
+						if(el === slide) {
+
+							swipe.swiper.removeSlide(index);
+							mySwipeCompareTable.swiper.removeSlide(index);
+							return false;
+
+						}
+
+					});
+
+				}
+
+			});
+
+		}
+
+	}
+
+	if (compareTable) {
+
+		toggleSwipe = () => {
+
+			toggleSwipe = false;
+
+			mySwipe = new Swiper(swipe, {
+				slidesPerView: 4,
+				simulateTouch: false
+			});
+
+		}
+
+	}
+
 	PubSub.subscribe('windowWidthResize', () => {
 
 		if (window.Swiper && toggleSwipe) {
@@ -274,7 +329,7 @@ CG.swiper = swipe => {
 
 		script.onload = () => PubSub.publish('swiperJsLoad');
 
-		setTimeout( () => document.head.appendChild(script), 5000);
+		setTimeout( () => document.head.appendChild(script), timer);
 
 	}
 

@@ -10,13 +10,20 @@
 
 	const header = document.querySelector('.header');
 
-	document.documentElement.style.setProperty("--heightHeaderFixed", headerFixed.clientHeight + 'px');
+	CG.heightHeaderFixed = headerFixed.clientHeight;
+
+	document.documentElement.style.setProperty("--heightHeaderFixed", CG.heightHeaderFixed + 'px');
 
 	PubSub.subscribe('windowScroll', () =>
 		header.classList.toggle('is-fixed', window.innerHeight < window.pageYOffset));
 
-	PubSub.subscribe('windowWidthResize', () =>
-		document.documentElement.style.setProperty("--heightHeaderFixed", headerFixed.clientHeight + 'px'));
+	PubSub.subscribe('windowWidthResize', () => {
+
+		CG.heightHeaderFixed = headerFixed.clientHeight;
+
+		document.documentElement.style.setProperty("--heightHeaderFixed", CG.heightHeaderFixed + 'px');
+
+	});
 
 
 	// btn up top

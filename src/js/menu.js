@@ -99,6 +99,8 @@
 
 			category.textContent = level2Active.textContent;
 
+			menu.style.height = level2Active.clientHeight + CG.heightHeaderFixed + 'px';
+
 		}
 		else if (menu.classList.contains('is-level2')) {
 
@@ -109,6 +111,8 @@
 			btnBack.classList.add('hide');
 
 			category.textContent = categoryTextDefault;
+
+			menu.style.height = 'auto';
 
 		}
 		else {
@@ -182,6 +186,8 @@
 
 				category.textContent = el.textContent;
 
+				menu.style.height = level2Active.clientHeight + CG.heightHeaderFixed + 'px';
+
 			}
 
 		});
@@ -234,6 +240,8 @@
 				menu.classList.add('is-level3');
 
 				category.textContent = el.textContent;
+
+				menu.style.height = boxLevel3.clientHeight + CG.heightHeaderFixed + 'px';
 
 			}
 
