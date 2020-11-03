@@ -1,0 +1,71 @@
+.wishlist {
+
+	&__text {
+
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--text);
+		margin: 20px 0;
+		max-width: 600px;
+
+	}
+
+	&__bar {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: 20px -6px;
+
+		&-link,
+		&-btn {
+
+			white-space: nowrap;
+			font-size: 14px;
+			color: var(--text);
+			text-decoration: none;
+			padding: 0 8px;
+			line-height: 24px;
+			margin: 6px;
+			border: 1px solid var(--border);
+			border-radius: 2px;
+			font-weight: 500;
+
+			&.is-current {
+
+				color: #fff;
+				border-color: var(--blue);
+				background-color: var(--blue);
+
+			}
+
+		}
+
+		&-btn {
+
+			height: 26px;
+			padding-right: 30px;
+
+			svg {
+
+				position: absolute;
+				top: 3px;
+				right: 5px;
+				fill: var(--text);
+
+			}
+
+		}
+
+	}
+
+	&-checkbox {
+
+		position: absolute;
+		top: 0;
+		left: 2px;
+		z-index: 3;
+		padding: 18px;
+
+	}
+
+}

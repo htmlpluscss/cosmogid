@@ -385,6 +385,16 @@
 
 	}
 
+	&__text {
+
+		font-size: 14px;
+		line-height: 20px;
+		margin: 20px 0;
+		font-weight: 600;
+		color: #8b8b8b;
+
+	}
+
 	&__after {
 
 		text-align: center;

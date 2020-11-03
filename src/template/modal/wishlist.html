@@ -1,0 +1,67 @@
+			<form action="/" class="modal__item modal__item--create-wishlist form-lk">
+
+				<div class="form-lk__head">
+
+					<h3 class="form-lk__title h3">
+						Создание новой группы
+					</h3>
+
+				</div>
+
+				<label class="form-lk__label" for="form-new-group-wishlist">
+					Введите название группы
+				</label>
+
+				<input class="form-lk__input modal__focus input" required="required" name="name" id="form-new-group-wishlist" placeholder="название группы">
+
+				<button class="form-lk__submit btn btn--blue">
+					Сохранить
+				</button>
+
+			</form>
+
+			<form action="/" class="modal__item modal__item--move-wishlist form-lk">
+
+				<input class="wishlist-checked-list" type="hidden" name="list[]">
+
+				<div class="form-lk__head">
+
+					<h3 class="form-lk__title h3">
+						Выбор группы для перемещения
+					</h3>
+
+				</div>
+
+				<p class="form-lk__text">
+					Пожалуйста, выберите группу, в которую Вы хотите переместить товар
+				</p>
+
+				<div class="radio-btn">
+
+					<label class="radio-btn__item">
+
+						<input type="radio" name="move-wishlist" value="на подарок" class="radio-btn__input" required="required">
+
+						<span class="radio-btn__label">
+							на подарок 2
+						</span>
+
+					</label>
+
+					<label class="radio-btn__item">
+
+						<input type="radio" name="move-wishlist" value="себе" class="radio-btn__input" required="required">
+
+						<span class="radio-btn__label">
+							себе 2
+						</span>
+
+					</label>
+
+				</div>
+
+				<button class="form-lk__submit btn btn--blue">
+					Переместить
+				</button>
+
+			</form>

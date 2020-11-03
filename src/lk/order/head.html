@@ -12,24 +12,32 @@
 				<li>Товаров: 2</li>
 				<li>Масса: 350 гр</li>
 				<li>Стоимость: 5578</li>
-				<li>Статус: Доставлен</li>
+				<li>Статус: Готов к отправке</li>
 			</ul>
 
 			<div class="lk-order__forms">
 
-				<form action="/" class="form">
+				<form action="/" class="lk-order__forms-item form">
+
+					<button class="lk-btn btn btn--blue">
+						Положить товары в корзину
+					</button>
+
+				</form>
+
+				<button class="lk-order__forms-item lk-btn btn btn--outline" type="button" data-modal="new-post">
+					Написать в тех. поддержку
+				</button>
+
+				<form action="/" class="lk-order__forms-item form lk-order__forms-cancel-order">
 
 					<button class="lk-btn btn btn--outline">
 						Анулировать
 					</button>
 
-				</form>
-
-				<form action="/" class="form">
-
-					<button class="lk-btn btn btn--blue">
-						Положить товары в корзину
-					</button>
+					<p>
+						Если заказ еще не <br>передан в доставку
+					</p>
 
 				</form>
 

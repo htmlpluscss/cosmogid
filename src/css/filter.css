@@ -240,6 +240,10 @@
 
 .filter-livesearch {
 
+	position: relative;
+	width: 300px;
+	max-width: 100%;
+
 	.input{
 
 		height: 28px;

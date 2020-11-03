@@ -955,3 +955,54 @@ fieldset {
 	}
 
 }
+
+.radio-btn {
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: -6px;
+
+	&__item {
+
+		margin: 6px;
+		position: relative;
+
+	}
+
+	&__input {
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		opacity: 0.001;
+		z-index: -1;
+		appearance: none;
+
+	}
+
+	&__label {
+
+		white-space: nowrap;
+		font-size: 14px;
+		color: var(--text);
+		padding: 0 8px;
+		line-height: 24px;
+		border: 1px solid var(--border);
+		border-radius: 2px;
+		font-weight: 500;
+		cursor: pointer;
+		display: block;
+
+	}
+
+	&__input:checked + &__label {
+
+		color: #fff;
+		border-color: var(--blue);
+		background-color: var(--blue);
+
+	}
+
+}
