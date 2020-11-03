@@ -1,4 +1,4 @@
-			<div class="card-item card-product is-hover{% if item.inStock == 'false' %}-btn{% endif %} articleid-events">
+			<div class="card-item card-product is-hover{% if item.inStock == 'false' %} is-not{% endif %} articleid-events">
 
 				<div class="card-item__head">
 
@@ -128,10 +128,6 @@
 
 {% if item.inStock == "false" %}
 
-				<button class="button card-item__btn-hover" type="button">
-					Написать отзыв
-				</button>
-
 				<div class="form card-product__order">
 
 	{% if item.sku %}
@@ -183,7 +179,6 @@
 					</div>
 
 				</div>
-
 
 {% else %}
 
