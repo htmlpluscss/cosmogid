@@ -1,20 +1,10 @@
 {% set title = "Сравнение товаров" %}
 
-{% set profile = true %}
-
 {% set view = "row" %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
-
-{% set menuActive = 'Сравнение товаров 7' %}
-
-	<div class="lk-header">
-
-{% include "lk/menu.html" %}
-
-	</div>
 
 	<section class="center">
 
@@ -22,17 +12,17 @@
 
 			<div class="catalog__filter">
 
-				<form class="form lk-form" action="/">
+				<form class="form" action="/">
 
-					<div class="lk-form__item">
+					<div class="form__item">
 
-						<label class="lk-form__item-label" for="lk-form-section">
+						<label class="form__label" for="form-section">
 							Для раздела:
 						</label>
 
 						<div class="select">
 
-							<select name="section" id="lk-form-section">
+							<select name="section" id="form-section">
 								<option value="1">Руки (4)</option>
 							</select>
 
@@ -40,15 +30,15 @@
 
 					</div>
 
-					<div class="lk-form__item">
+					<div class="form__item">
 
-						<label class="lk-form__item-label" for="lk-form-category">
+						<label class="form__label" for="form-category">
 							Категория:
 						</label>
 
 						<div class="select">
 
-							<select name="category" id="lk-form-category">
+							<select name="category" id="form-category">
 								<option value="1">Крем (4)</option>
 							</select>
 
@@ -80,7 +70,7 @@
 
 					</div>
 
-{% include "lk/compare/list.html" %}
+{% include "compare/list.html" %}
 
 				</div>
 
@@ -124,7 +114,7 @@
 
 				<div class="catalog__compare swiper-container swiper-container--compare-table">
 
-{% include "lk/compare/list-2.html" %}
+{% include "compare/list-2.html" %}
 
 				</div>
 

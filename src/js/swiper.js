@@ -273,6 +273,13 @@ CG.swiper = swipe => {
 
 					});
 
+					if(swipe.querySelectorAll('.swiper-slide').length <= 4) {
+
+						btn[0].classList.add('hide');
+						btn[1].classList.add('hide');
+
+					}
+
 				}
 
 			});

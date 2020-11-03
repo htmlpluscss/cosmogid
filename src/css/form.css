@@ -931,3 +931,27 @@ fieldset {
 	}
 
 }
+
+.form {
+
+	&__item {
+
+		& + & {
+
+			margin-top: 24px;
+
+		}
+
+	}
+
+	&__label {
+
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--text);
+		margin-bottom: 10px;
+		display: block;
+
+	}
+
+}
