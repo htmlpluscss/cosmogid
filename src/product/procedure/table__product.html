@@ -1,0 +1,171 @@
+			<div class="procedure-product procedure-product--{{ item.id }}">
+
+				<div class="procedure-product__head">
+
+					<div class="procedure-product__check">
+
+						<label class="checkbox-only">
+
+							<input
+
+								class="checkbox-only__input"
+								type="checkbox"
+
+								value="{{ item.id }}"
+								data-articleid="{% if item.article %}{{ item.article[0].id }}{% else %}0{% endif %}"
+								data-storeid="0"
+
+								{% if item.check %}
+									checked="checked"
+								{% endif %}
+
+							>
+
+							<span class="checkbox-only__check"></span>
+
+							<span class="checkbox-only__check-text">
+								Добавлен в программу
+							</span>
+
+						</label>
+
+					</div>
+
+					<p class="procedure-product__type">
+						{{ item.type }}
+					</p>
+
+					<p class="procedure-product__desc">
+						({{ item.desc }})
+					</p>
+
+				</div>
+
+				<div class="procedure-product__body">
+
+					<div class="procedure-product__img">
+
+						<picture>
+
+							<source srcset="/img/procedure/{{ item.img }}--96x96.webp 1x, /img/procedure/{{ item.img }}--192x192.webp 2x" type="image/webp">
+
+							<source srcset="/img/procedure/{{ item.img }}--96x96.jpg 1x, /img/procedure/{{ item.img }}--192x192.jpg 2x">
+
+							<img src="/img/procedure/{{ item.img }}--192x192.jpg" alt="{{ item.title }}" loading="lazy" width="96" height="96">
+
+						</picture>
+
+						<span class="procedure-product__sale{% if not item.sale %} hide{% endif %}">
+							{{ item.sale }}
+						</span>
+
+					</div>
+
+					<div class="procedure-product__text">
+
+						<p class="procedure-product__title">
+							<span class="color-blue">{{ item.brand }}</span>
+							{{ item.title }}
+						</p>
+
+{% if item.ratio %}
+
+						<span class="procedure-product__ratio procedure-product__ratio--{{ item.ratio }}">{{ item.ratioTotal }}</span>
+
+{% endif %}
+
+{% if item.article %}
+
+						<form action="/" class="articleid-events__form">
+
+	{% for article in item.article %}
+
+							<label class="articleid-events__item">
+
+								<input
+
+									class="visuallyhidden"
+									name="articleid"
+									type="radio"
+
+									{% if loop.first %}
+										checked="checked"
+									{% endif %}
+
+									value="{{ article.id }}"
+
+									data-parent-id="{{ item.id }}"
+
+									data-price="{{ article.price }}"
+									data-old-price="{{ article.oldPrice }}"
+									data-sale="{{ article.sale }}"
+									data-storeid="0"
+
+									data-volume="{{ article.volume }}"
+
+								>
+
+								<span class="articleid-events__label">
+									{{ article.volume }}
+								</span>
+
+							</label>
+
+	{% endfor %}
+
+						</form>
+
+{% endif %}
+
+						<div class="procedure-product__foot">
+
+							<p class="procedure-product__price">
+
+{% if item.priceOld %}
+
+								<s>
+									<span class="procedure-product__price-old-value">
+										{{ item.priceOld }}
+									</span>
+									₽
+								</s>
+
+{% endif %}
+								<span class="procedure-product__price-value">
+									{{ item.price }}
+								</span>
+								₽
+
+							</p>
+
+							<form action="/" class="form procedure-product__wishlist form-wishlist">
+
+								<input type="hidden" name="id" value="{{ item.id }}">
+								<input type="hidden" name="type" value="0">
+								<input type="hidden" name="mode" value="add">
+
+								<button class="button">
+									Добавить в избранное
+								</button>
+
+							</form>
+
+							<form action="/" class="form procedure-product__compare form-compare">
+
+								<input type="hidden" name="id" value="{{ item.id }}">
+								<input type="hidden" name="type" value="0">
+								<input type="hidden" name="mode" value="add">
+
+								<button class="button">
+									Добавить в сравнение
+								</button>
+
+							</form>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>

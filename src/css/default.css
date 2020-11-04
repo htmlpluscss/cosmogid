@@ -4,7 +4,6 @@
 	padding: 0;
 	box-sizing: border-box;
 
-/* color: red !important */
 }
 
 html {
@@ -32,9 +31,6 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
- /* background-image: url(/css/1.png); */
-background-position: center 61px;
-background-repeat: no-repeat;
 }
 
 a {
@@ -97,6 +93,18 @@ table {
 .color-blue {
 
 	color: var(--blue);
+
+}
+
+.color-pink {
+
+	color: var(--pink);
+
+}
+
+.align-center {
+
+	text-align: center;
 
 }
 

@@ -1,0 +1,64 @@
+{% set list = [
+
+	{
+		brand  : "HOLY LAND",
+		title  : "Атравматическая чистка лица",
+		img    : 28,
+		label  : "хит",
+		result : "Чистое лицо, без камедонов, сужение пор.",
+		kurs   : "1р/неделя, 5-6раз.",
+		ratio  : 5,
+		ratioTotal : 1
+	},
+	{
+		brand  : "HOLY LAND",
+		title  : "Атравматическая чистка лица",
+		img    : 27,
+		label  : "new",
+		result : "Чистое лицо, без камедонов",
+		kurs   : "1р/неделя, 5-6раз."
+	}
+
+] %}
+
+	<section class="card-list card-list--related">
+
+		<div class="card-list__head card-list__head--achtung">
+
+			<h2 class="card-list__title h2">
+				Рекомендуемые программы для поддержания результата
+			</h2>
+
+			<p class="card-list__head-second">
+				Не забывайте про <em class="color-blue">поддерживающий ежедневный домашний уход</em>, тогда курс процедур будет максимально эффективным. Попробуйте:
+			</p>
+
+		</div>
+
+		<div class="card-list__wrap swiper-container-wrap">
+
+			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="5">
+
+				<div class="card-list__list swiper-wrapper">
+
+{% for double in [1,2,3,4,5] %}
+
+{% for item in list %}
+
+					<article class="card-list__item swiper-slide">
+
+{% include "_include/card-procedure.html" %}
+
+					</article>
+
+{% endfor %}
+
+{% endfor %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>

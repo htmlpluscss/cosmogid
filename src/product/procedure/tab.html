@@ -1,0 +1,44 @@
+		<section class="tabs product-tab">
+
+			<div class="tabs__item tabs__item--active">
+
+				<h2 class="tabs__btn">
+					Общее описание программы
+				</h2>
+
+{% include "product/description.html" %}
+
+			</div>
+
+			<div class="tabs__item tabs__item--active">
+
+				<h2 class="tabs__btn">
+					Таблица поэтапного нанесения
+				</h2>
+
+{% include "product/procedure/table-step.html" %}
+{% include "product/procedure/table-step-result.html" %}
+
+			</div>
+
+			<div class="tabs__item tabs__item--active">
+
+				<h2 class="tabs__btn">
+					Видео
+				</h2>
+
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/H5Jh0EG5iaI" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
+
+			</div>
+
+			<div class="tabs__item">
+
+				<h2 class="tabs__btn">
+					Сертификаты
+				</h2>
+
+{% include "product/certification.html" %}
+
+			</div>
+
+		</section>

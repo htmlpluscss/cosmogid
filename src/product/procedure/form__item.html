@@ -1,0 +1,80 @@
+				<div class="procedure-form__item procedure-form__item--{{ item.id }}{% if not item.check %} hide{% endif %}">
+
+					<input type="hidden" name="id[]" value="{{ item.id }}" class="procedure-form__item-id">
+					<input type="hidden" name="articleid[]" value="{% if item.article %}{{ item.article[0].id }}{% else %}0{% endif %}" class="procedure-form__item-articleid">
+					<input type="hidden" name="storeid[]" value="0" class="procedure-form__item-storeid">
+
+					<div class="procedure-form__item-img">
+
+						<picture>
+
+							<source srcset="/img/procedure/{{ item.img }}--50x50.webp 1x, /img/procedure/{{ item.img }}--100x100.webp 2x" type="image/webp">
+
+							<source srcset="/img/procedure/{{ item.img }}--50x50.jpg 1x, /img/procedure/{{ item.img }}--100x100.jpg 2x">
+
+							<img src="/img/procedure/{{ item.img }}--100x100.jpg" alt="{{ item.title }}" loading="lazy" width="50" height="50">
+
+						</picture>
+
+{% if item.sale %}
+
+						<span class="procedure-form__item-sale">{{ item.sale }}%</span>
+
+{% endif %}
+					</div>
+
+					<div class="procedure-form__item-check">
+
+						<label class="checkbox-only">
+
+							<input
+
+								class="checkbox-only__input"
+								type="checkbox"
+
+								value="{{ item.id }}"
+
+								{% if item.check %}
+									checked="checked"
+								{% endif %}
+
+								data-price="{{ item.price }}"
+								data-price-old="{{ item.priceOld }}">
+
+							<span class="checkbox-only__check"></span>
+
+						</label>
+
+					</div>
+
+					<div class="procedure-form__item-body">
+
+						<p class="procedure-form__item-type">
+							{{ item.type }} <br>
+							<span class="color-blue">{{ item.brand }}</span>
+							{{ item.title }}
+						</p>
+
+						<p class="procedure-form__item-price">
+
+{% if item.priceOld %}
+
+							<s>
+								<span class="procedure-form__item-price-old-value">
+									{{ item.priceOld }}
+								</span>
+								₽
+							</s>
+
+{% endif %}
+
+							<span class="procedure-form__item-price-value">
+								{{ item.price }}
+							</span>
+							₽
+
+						</p>
+
+					</div>
+
+				</div>

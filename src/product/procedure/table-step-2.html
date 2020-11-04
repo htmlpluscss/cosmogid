@@ -1,0 +1,45 @@
+				<tbody>
+
+					<tr>
+						<th colspan="6" class="procedure-table-step__number h1">
+							Шаг 2 - <span class="color-blue">Предупреждение и коррекция</span>
+						</th>
+					</tr>
+
+					<tr>
+						<td colspan="6" class="procedure-table-step__head">
+							Слабая форма высыпаний (1-2 элемента)
+						</td>
+					</tr>
+
+{% for item in list2a %}
+
+{% include "product/procedure/table-step__product.html" %}
+
+{% endfor %}
+
+					<tr>
+						<td colspan="6" class="procedure-table-step__head">
+							Средняя форма высыпаний (3-6 элемента)
+						</td>
+					</tr>
+
+{% for item in list2b %}
+
+{% include "product/procedure/table-step__product.html" %}
+
+{% endfor %}
+
+					<tr>
+						<td colspan="6" class="procedure-table-step__head">
+							Сильная форма высыпаний (от 6 элементов)
+						</td>
+					</tr>
+
+{% for item in list2c %}
+
+{% include "product/procedure/table-step__product.html" %}
+
+{% endfor %}
+
+				</tbody>

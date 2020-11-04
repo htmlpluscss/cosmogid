@@ -1,0 +1,25 @@
+		<div class="procedure-step">
+
+			<h2 class="procedure-step__title h1">
+				Пошаговое описание программы лечения
+			</h2>
+
+			<p class="procedure-step__number h1">
+				Шаг 1 - <a href="/">GSR ™</a>
+			</p>
+
+			<p class="procedure-step__intro">
+				Комплексная система подготовки кожи <a href="/">ZO Getting Skin Ready ™</a> - первый и необходимый шаг на пути к здоровой коже. Это простая система, компоненты которой, действуя в синергизме, способствуют нормализации функций кожи и оптимизации эффективности всех программ.
+			</p>
+
+			<div class="procedure-table">
+
+{% for item in list1 %}
+
+{% include "product/procedure/table__row.html" %}
+
+{% endfor %}
+
+			</div>
+
+		</div>

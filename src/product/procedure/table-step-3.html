@@ -1,0 +1,60 @@
+				<tbody>
+
+					<tr>
+						<th colspan="6" class="procedure-table-step__number h1">
+							Шаг 3 - <span class="color-blue">Защита от УФ-излучения</span>
+						</th>
+					</tr>
+
+					<tr class="procedure-table-step__head-row">
+						<th>
+							Физические фильтры
+						</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+{% for item in list3a %}
+
+{% include "product/procedure/table-step__product.html" %}
+
+{% endfor %}
+
+					<tr class="procedure-table-step__head-row">
+						<th>
+							Химические фильтры
+						</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+{% for item in list3b %}
+
+{% include "product/procedure/table-step__product.html" %}
+
+{% endfor %}
+
+					<tr class="procedure-table-step__head-row">
+						<th>
+							Доп. препараты <small>для маскировки мелких недостатков</small>
+						</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+{% for item in list3c %}
+
+{% include "product/procedure/table-step__product.html" %}
+
+{% endfor %}
+
+				</tbody>

@@ -1,4 +1,4 @@
-{% set title = "Профессиональный уходовый комлекс ZO Skin Health «Увлажнение до кончиков пальцев»" %}
+{% set title = "ZO Skin программа лечения акне для нормальной и сухой кожи" %}
 
 {% set description = "Краска для волос Orofluido Colour Elixir создана на основе арганового, льняного и кипарисового масел, которые перемешиваются с активатором для того, чтобы сделать цвет более интенсивным, а также гарантировать проникновение сквозь текстуру волоса окрашивающих пигментов без повреждений кутикулы." %}
 
@@ -21,7 +21,7 @@
 	}
 ] %}
 
-{% set breadcrumbs = ['Протоколы процедур','Процедура для улучшения состояния кожи рук и ног       Профессиональный уходовый комплекс ZO Skin Health','Процедура для улучшения состояния кожи рук и ног Профессиональный уходовый комплекс ZO Skin Health'] %}
+{% set breadcrumbs = ['Протоколы процедур','ZO Skin программа лечения акне для нормальной и сухой кожи'] %}
 
 {% extends "template/base.html" %}
 
@@ -33,7 +33,7 @@
 
 		<div class="product-main articleid-events">
 
-{% include "product/img.html" %}
+{% include "product/procedure/img.html" %}
 
 			<div class="product-right">
 
@@ -43,9 +43,7 @@
 
 					<div class="product-desc">
 
-{% include "product/head.html" %}
-
-{% include "product/article.html" %}
+{% include "product/procedure/head.html" %}
 
 					</div>
 
@@ -53,7 +51,9 @@
 
 						<div class="product-cart__sticky">
 
-{% include "product/buy.html" %}
+{% include "product/procedure/buy.html" %}
+
+{% include "product/procedure/note.html" %}
 
 {% include "product/delivery.html" %}
 
@@ -67,21 +67,300 @@
 
 		</div>
 
-{% include "product/set.html" %}
+{% include "product/procedure/text.html" %}
 
-{% include "product/tab.html" %}
+{% set list1 = [
+
+	{
+		id    : 1,
+		brand : "ZO Skin",
+		title : "Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием), 200 мл",
+		img   : 2,
+		price : 3302,
+		priceOld : 3333,
+		sale  : 15,
+		type  : "Очищение",
+		desc  : "утром и вечером",
+		check : "true",
+		ratio : 5,
+		ratioTotal : 1
+	},
+	{
+		id    : 2,
+		brand : "ZO Skin",
+		title : "Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием),960 мл",
+		img   : 3,
+		price : 12000,
+		priceOld : 12073,
+		sale  : 15,
+		type  : "Отшелушивание",
+		desc  : "утром или вечером 2-3 раза в неделю, при необходимости – ежедневно",
+		check : "true",
+		ratio : 4,
+		ratioTotal : 2,
+		article : [
+			{
+				id     : 2,
+				volume : "75 мл",
+				price  : 12000,
+				oldPrice : 12073,
+				sale   : 15
+			},
+			{
+				id     : "1-100",
+				volume : "50 мл",
+				price  : 3581,
+				oldPrice : 4585,
+				sale   : 20
+			},
+			{
+				id     : "3-100",
+				volume : "100 мл",
+				price  : 3567
+			}
+		]
+	},
+	{
+		id    : 3,
+		brand : "ZO Skin",
+		title : "Health by Zein Obagi Calming Toner pH Balancer (Смягчающий тоник для восстановления поверхностного рH), 180 мл",
+		img   : 4,
+		price : 2528,
+		priceOld : 2974,
+		sale  : 15,
+		check : "true",
+		type  : "Тонизирование",
+		desc  : "утром или вечером 2-3 раза в неделю, при необходимости – ежедневно",
+		ratio : 3,
+		ratioTotal : 3
+	}
+
+] %}
+
+{% set list2a = [
+
+	{
+		id    : 24,
+		brand : "ZO Skin",
+		title : "Health Ossential Daily Power Defense (Ежедневное защитное средство)",
+		img   : 2,
+		price : 2486,
+		priceOld : 2497,
+		sale  : 15,
+		type  : "Защита",
+		desc  : "утром и вечером",
+		check : "true"
+	},
+	{
+		id    : 25,
+		title : "Серная маска Sulfur Masque",
+		img   : 4,
+		price : 12000,
+		priceOld : 12073,
+		type  : "Очищение",
+		desc  : "вечером, 2-3 раза в неделю",
+		ratio : 2,
+		ratioTotal : 2
+	},
+	{
+		id    : 26,
+		brand : "ZO Skin",
+		title : "Health Medical Enzymatic Peel (Интенсивное отшелушивающее средство)",
+		img   : 3,
+		price : 12073,
+		priceOld : 12000,
+		sale  : 15,
+		type  : "Отшелушивание",
+		desc  : "утром или вечером"
+	},
+	{
+		id    : 27,
+		brand : "ZO Skin",
+		title : "Health Ossential Instant Pore Refiner (Сыворотка, сужающая поры), 29 г",
+		img   : 2,
+		price : 12000,
+		check : "true",
+		type  : "Сужение пор",
+		desc  : "утром или вечером"
+	}
+
+] %}
+
+{% set list2b = [
+
+	{
+		id    : 28,
+		brand : "ZO Skin",
+		title : "Health Ossential Daily Power Defense (Ежедневное защитное средство)",
+		img   : 2,
+		price : 2486,
+		priceOld : 2497,
+		sale  : 15,
+		type  : "Защита",
+		desc  : "утром и вечером",
+		check : "true"
+	},
+	{
+		id    : 29,
+		brand : "ZO Skin",
+		title : "Health Medical Acne Control (Средство для проблемной кожи), 60 мл",
+		img   : 2,
+		price : 12073,
+		priceOld : 12000,
+		type  : "Обеззараживание",
+		desc  : "вечером, 2-3 раза в неделю*",
+		check : "true"
+	},
+	{
+		id    : 21,
+		title : "Серная маска Sulfur Masque",
+		img   : 4,
+		price : 12000,
+		priceOld : 12073,
+		type  : "Очищение",
+		desc  : "вечером, 2-3 раза в неделю",
+		check : "true"
+	},
+	{
+		id    : 22,
+		brand : "ZO Skin",
+		title : "Health Ossential Instant Pore Refiner (Сыворотка, сужающая поры), 29 г",
+		img   : 2,
+		price : 1000,
+		type  : "Сужение пор",
+		desc  : "утром или вечером"
+	}
+
+] %}
+
+{% set list2c = [
+
+	{
+		id    : 212,
+		brand : "ZO Skin",
+		title : "Health Ossential Daily Power Defense (Ежедневное защитное средство)",
+		img   : 2,
+		price : 2486,
+		priceOld : 2497,
+		sale  : 15,
+		type  : "Защита",
+		desc  : "утром и вечером",
+		check : "true"
+	},
+	{
+		id    : 213,
+		title : "Серная маска Sulfur Masque",
+		img   : 4,
+		price : 12000,
+		priceOld : 12073,
+		type  : "Очищение",
+		desc  : "вечером, 2-3 раза в неделю",
+		ratio : 2,
+		ratioTotal : 2
+	},
+	{
+		id    : 214,
+		title : "Health Medical Enzymatic Peel (Интенсивное отшелушивающее средство)",
+		img   : 3,
+		price : 12073,
+		priceOld : 12000,
+		sale  : 15,
+		type  : "Отшелушивание",
+		desc  : "утром или вечером"
+	},
+	{
+		id    : 215,
+		title : "Health Ossential Instant Pore Refiner (Сыворотка, сужающая поры), 29 г",
+		img   : 2,
+		price : 12000,
+		type  : "Сужение пор",
+		desc  : "утром или вечером"
+	}
+
+] %}
+
+{% set list3a = [
+
+	{
+		id    : 31,
+		brand : "ZO Skin",
+		title : "Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием), 200 мл",
+		img   : 2,
+		price : 3302,
+		priceOld : 3333,
+		sale  : 15,
+		type  : "Защита от солнца-основа под макияж",
+		desc  : "утром",
+		check : "true",
+		ratio : 5,
+		ratioTotal : 1
+	},
+	{
+		id    : 32,
+		brand : "ZO Skin",
+		title : "Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием),960 мл",
+		img   : 3,
+		price : 12000,
+		priceOld : 12073,
+		sale  : 15,
+		type  : "Защита от солнца-крем",
+		desc  : "утром или вечером 2-3 раза в неделю, при необходимости – ежедневно",
+		ratio : 4,
+		ratioTotal : 2
+	}
+
+] %}
+
+{% set list3b = [
+
+	{
+		id    : 33,
+		brand : "ZO Skin",
+		title : "Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием),960 мл",
+		img   : 3,
+		price : 12000,
+		priceOld : 12073,
+		sale  : 15,
+		type  : "Защита от солнца- тональный крем",
+		desc  : "утром",
+		check : "true",
+		ratio : 4,
+		ratioTotal : 2
+	}
+
+] %}
+
+{% set list3c = [
+
+	{
+		id    : 34,
+		brand : "ZO Skin",
+		title : "Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием),960 мл",
+		img   : 3,
+		price : 12000,
+		priceOld : 12073,
+		sale  : 15,
+		type  : "Корректирующее и маскирующее средство",
+		desc  : "наносить точечно",
+		check : "true",
+		ratio : 4,
+		ratioTotal : 2
+	}
+
+] %}
+
+{% include "product/procedure/step-1.html" %}
+{% include "product/procedure/step-2.html" %}
+{% include "product/procedure/step-3.html" %}
+{% include "product/procedure/total.html" %}
+
+{% include "product/procedure/tab.html" %}
 
 {% include "product/param.html" %}
 
-{% include "product/sale.html" %}
+{% include "product/procedure/related.html" %}
 
-{% include "product/others.html" %}
-
-{% include "product/hit.html" %}
-
-{% include "product/related.html" %}
-
-{% include "product/brand.html" %}
+{% include "product/procedure/brand.html" %}
 
 {% include "product/tab2.html" %}
 

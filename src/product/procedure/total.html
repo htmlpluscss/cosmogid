@@ -1,0 +1,115 @@
+		<form action="/" class="procedure-form">
+
+			<h4 class="procedure-form__title h1">
+				Итоговый комплекс препаратов
+			</h4>
+
+			<div class="procedure-form__box">
+
+				<div class="procedure-form__detals">
+
+					<div class="procedure-form__group">
+
+						<div class="procedure-form__head">
+							Шаг 1 - <span class="color-blue">GSR ™</span>
+						</div>
+
+						<div class="procedure-form__list">
+
+{% for item in list1 %}
+
+{% include "product/procedure/form__item.html" %}
+
+{% endfor %}
+
+						</div>
+
+					</div>
+
+					<div class="procedure-form__group">
+
+						<div class="procedure-form__head">
+							Шаг 2 - <span class="color-blue">Предупреждение и коррекция</span>
+						</div>
+
+						<div class="procedure-form__list">
+
+{% for item in list2a %}
+
+{% include "product/procedure/form__item.html" %}
+
+{% endfor %}
+
+{% for item in list2b %}
+
+{% include "product/procedure/form__item.html" %}
+
+{% endfor %}
+
+{% for item in list2c %}
+
+{% include "product/procedure/form__item.html" %}
+
+{% endfor %}
+
+						</div>
+
+					</div>
+
+					<div class="procedure-form__group">
+
+						<div class="procedure-form__head">
+							Шаг 3 - <span class="color-blue">Защита от УФ-излучения</span>
+						</div>
+
+						<div class="procedure-form__list">
+
+{% for item in list3a %}
+
+{% include "product/procedure/form__item.html" %}
+
+{% endfor %}
+
+{% for item in list3b %}
+
+{% include "product/procedure/form__item.html" %}
+
+{% endfor %}
+
+{% for item in list3c %}
+
+{% include "product/procedure/form__item.html" %}
+
+{% endfor %}
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="procedure-form__result is-form">
+
+					<div class="procedure-form__result-inner">
+
+						<p>
+							Вы собрали комплексную программу из <span class="procedure-form__counter">11</span> средств на сумму:
+						</p>
+
+						<p class="procedure-form__result-numbers">
+							<b><span class="procedure-form__sum-set">15000</span> ₽</b>
+							<small>вместо <s><span class="procedure-form__sum">16500</span> ₽</s></small><br>
+							Ваша дополнительная скидка составила <b><span class="color-pink"><span class="procedure-form__diff">1500</span> ₽</span></b>
+						</p>
+
+						<button class="btn btn--pink">
+							Купить
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</form>

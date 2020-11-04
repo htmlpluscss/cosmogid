@@ -1,0 +1,47 @@
+		<div class="procedure-step">
+
+			<p class="procedure-step__number h1">
+				Шаг 3 - <a href="/">Защита от УФ-излучения</a>
+			</p>
+
+			<p class="procedure-step__intro">
+				Защита кожи от повреждений, вызванных УФ-излучением. <br>Солнцезащитные средства <a href="/">ZO</a> обладают широким спектром действия и максимально защищают от наиболее широкого диапазона солнечного излучения – УФА/УФВ, высокоэнергитического видимого света (BBC) и инфракрасного (ИК) излучения. Кроме того, эти препараты поддерживают функции кожи и повышают естественную устойчивость кожи к УФ-излучению.
+
+			</p>
+
+			<div class="procedure-table">
+
+				<h3 class="procedure-table__head-row">
+					Физические фильтры
+				</h3>
+
+{% for item in list3a %}
+
+{% include "product/procedure/table__row.html" %}
+
+{% endfor %}
+
+				<h3 class="procedure-table__head-row">
+					Химические фильтры
+				</h3>
+
+{% for item in list3b %}
+
+{% include "product/procedure/table__row.html" %}
+
+{% endfor %}
+
+				<h3 class="procedure-table__head-row">
+					Дополнительные препараты для маскировки мелких недостатков
+				</h3>
+
+{% for item in list3c %}
+
+{% include "product/procedure/table__row.html" %}
+
+{% endfor %}
+
+
+			</div>
+
+		</div>

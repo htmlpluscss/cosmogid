@@ -47,6 +47,12 @@
 
 			}
 
+			.product-info {
+
+				margin-left: -100px;
+
+			}
+
 		}
 
 		@media ($tablet) {
@@ -301,8 +307,13 @@
 
 			b {
 
-				letter-spacing: .8px;
 				font-weight: 500;
+
+			}
+
+			a {
+
+				text-decoration: none;
 
 			}
 
@@ -339,8 +350,35 @@
 			line-height: 18px;
 			padding: 0 4px;
 			font-weight: 300;
-			font-family: 'ProximaNovaNumber';
 			background-color: rgba(196, 196, 196, 0.2);
+
+		}
+
+		&__info {
+
+			font-size: 11px;
+			line-height: 18px;
+			font-weight: 500;
+			text-align: right;
+
+			&::before {
+
+				content: '*';
+				color: var(--pink);
+				font-size: 36px;
+				font-weight: 600;
+				vertical-align: middle;
+				position: relative;
+				top: 5px;
+
+			}
+
+			b {
+
+				font-size: 18px;
+				font-weight: 400;
+
+			}
 
 		}
 
@@ -394,6 +432,28 @@
 			font-size: 12px;
 			height: 16px;
 			line-height: 16px;
+
+		}
+
+	}
+
+	&-note {
+
+		font-size: 11px;
+		line-height: 17px;
+		margin: 20px 0;
+		padding-left: 12px;
+		position: relative;
+
+		&::before {
+
+			content: '*';
+			color: var(--pink);
+			font-size: 36px;
+			position: absolute;
+			top: 5px;
+			left: 0;
+			font-weight: 600;
 
 		}
 
@@ -993,6 +1053,85 @@
 					font-style: italic;
 
 				}
+
+			}
+
+		}
+
+	}
+
+	&-info {
+
+		color: #595959;
+
+		&__title {
+
+			font-size: 20px;
+			font-weight: 600;
+			margin: 14px 0;
+
+		}
+
+		ul li {
+
+			padding-left: 8px;
+			margin: 10px 0;
+			font-size: 14px;
+			line-height: 18px;
+			font-weight: 600;
+
+			&::before {
+
+				position: absolute;
+				width: 3px;
+				height: 3px;
+				top: 6px;
+				left: 0;
+				border-radius: 50%;
+				content: '';
+				background-color: #595959;
+
+			}
+
+			a {
+
+				color: inherit;
+
+			}
+
+		}
+
+	}
+
+	&-text {
+
+		margin: 32px 0;
+		font-weight: 600;
+		color: #595959;
+		font-size: 14px;
+		line-height: 18px;
+
+		a {
+
+			text-decoration: none;
+
+		}
+
+		ul li {
+
+			padding-left: 8px;
+			margin: 8px 0;
+
+			&::before {
+
+				position: absolute;
+				width: 3px;
+				height: 3px;
+				top: 6px;
+				left: 0;
+				border-radius: 50%;
+				content: '';
+				background-color: #595959;
 
 			}
 

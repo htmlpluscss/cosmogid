@@ -21,9 +21,7 @@
 
 			});
 
-			console.log(list)
-
-			total.textcontent = list.length;
+			total.textContent = list.length;
 
 			Array.from(wishlistCheckedList, input => input.value = list);
 
