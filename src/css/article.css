@@ -288,3 +288,16 @@
 	margin-top: 0;
 
 }
+
+.youtube {
+
+	display: flex;
+	justify-content: center;
+
+	iframe {
+
+		max-width: 100%;
+
+	}
+
+}
