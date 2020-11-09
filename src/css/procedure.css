@@ -3,21 +3,41 @@
 	&-step {
 
 		color: #595959;
-		margin: 32px 0;
+		margin: 24px 0;
+
+		@media ($desktop) {
+
+			margin: 32px 0;
+
+		}
 
 		&__title {
 
-			text-align: center;
-			font-size: 20px;
-			margin: 18px 0;
+			margin: 10px 0;
+			font-size: 14px;
+
+			@media ($desktop) {
+
+				margin: 18px 0;
+				text-align: center;
+				font-size: 20px;
+
+			}
 
 		}
 
 		&__number {
 
-			font-size: 18px;
-			margin: 18px 0;
 			font-weight: 600;
+			font-size: 14px;
+			margin: 10px 0;
+
+			@media ($desktop) {
+
+				margin: 18px 0;
+				font-size: 20px;
+
+			}
 
 			a {
 
@@ -29,9 +49,16 @@
 
 		&__intro {
 
-			font-size: 13px;
-			line-height: 21px;
-			margin: 18px 0;
+			font-size: 12px;
+			line-height: 18px;
+
+			@media ($desktop) {
+
+				font-size: 13px;
+				line-height: 21px;
+				margin: 18px 0;
+
+			}
 
 			a {
 
@@ -46,17 +73,30 @@
 
 	&-table {
 
-		margin: 18px 0;
+		margin: 10px 0;
+
+		@media ($desktop) {
+
+			margin: 18px 0;
+
+		}
 
 		&__head {
 
 			font-weight: 600;
-			font-size: 16px;
+			font-size: 13px;
 			line-height: 18px;
 			color: #595959;
-			padding: 12px 30px;
+			padding: 10px 14px;
 			background-color: color(var(--pink) a(10%));
 			border-bottom: 1px solid var(--border);
+
+			@media ($desktop) {
+
+				font-size: 16px;
+				padding: 12px 30px;
+
+			}
 
 			&::before {
 
@@ -75,15 +115,28 @@
 			&-row {
 
 				font-weight: 600;
-				font-size: 16px;
-				text-align: center;
+				font-size: 13px;
 				color: #595959;
-				padding: 12px;
+				padding: 10px 0;
 				border-bottom: 1px solid var(--border);
+
+				@media ($desktop) {
+
+					font-size: 16px;
+					text-align: center;
+					padding: 12px;
+
+				}
 
 				& ~ & {
 
-					margin-top: 24px;
+					margin-top: 12px;
+
+					@media ($desktop) {
+
+						margin-top: 24px;
+
+					}
 
 				}
 
@@ -93,8 +146,13 @@
 
 		&__row {
 
-			display: flex;
 			border-bottom: 1px solid var(--border);
+
+			@media ($tablet) {
+
+				display: flex;
+
+			}
 
 			&:first-child {
 
@@ -106,18 +164,45 @@
 
 		&__product {
 
-			width: 420px;
 			flex-shrink: 0;
-			padding: 10px 40px 10px 0;
+			padding: 10px 0;
+
+			@media ($tablet) {
+
+				width: 50%;
+				padding: 10px 10px 10px 0;
+
+			}
+
+			@media ($desktop) {
+
+				padding-right: 40px;
+				width: 420px;
+
+			}
 
 		}
 
 		&__desc {
 
 			flex-grow: 1;
-			padding: 10px 0 10px 40px;
-			border-left: 1px solid var(--border);
 			display: flex;
+			min-height: 86px;
+			padding-bottom: 10px;
+
+			@media ($tablet) {
+
+				padding: 10px 0 10px 10px;
+				border-left: 1px solid var(--border);
+
+			}
+
+			@media ($desktop) {
+
+				padding-left: 40px;
+				padding-bottom: 10px;
+
+			}
 
 		}
 
@@ -127,23 +212,42 @@
 
 		&__title {
 
-			text-align: center;
-			font-size: 20px;
-			margin: 36px 0 18px;
+			font-size: 16px;
+			margin: 20px 0 10px;
+
+			@media ($desktop) {
+
+				text-align: center;
+				font-size: 20px;
+				margin: 36px 0 18px;
+
+			}
 
 		}
 
 		&__box {
 
-			display: flex;
-			border: 1px solid var(--border);
+			border-top: 1px solid var(--border);
+
+			@media ($desktop) {
+
+				display: flex;
+				border: 1px solid var(--border);
+
+			}
 
 		}
 
 		&__detals {
 
 			flex-grow: 1;
-			padding: 16px;
+			padding: 10px 0;
+
+			@media ($desktop) {
+
+				padding: 16px;
+
+			}
 
 		}
 
@@ -153,21 +257,49 @@
 			font-size: 14px;
 			line-height: 21px;
 			color: #595959;
-			display: flex;
+
+			@media ($responsive) {
+
+				font-size: 12px;
+
+			}
+
+			@media ($desktop) {
+
+				display: flex;
+
+			}
 
 			&.is-form {
 
-				align-items: center;
-				padding: 20px;
-				width: 256px;
 				flex-shrink: 0;
-				border-left: 1px solid var(--border);
+
+				@media ($responsive) {
+
+					justify-content: center;
+
+				}
+
+				@media ($desktop) {
+
+					width: 256px;
+					padding: 20px;
+					align-items: center;
+					border-left: 1px solid var(--border);
+
+				}
 
 			}
 
 			&-left {
 
-				width: 700px;
+				@media ($tablet) {
+
+					width: 700px;
+					max-width: 100%;
+					padding-right: 24px;
+
+				}
 
 				s {
 
@@ -209,19 +341,29 @@
 
 			&-right {
 
-				width: 200px;
+				@media ($tablet) {
+
+					width: 200px;
+
+				}
 
 			}
 
 			&-numbers {
 
-				margin: 20px 0 10px;
+				margin: 0 0 10px;
 				position: relative;
 				padding-left: 20px;
 				font-weight: 600;
 				font-size: 12px;
 				line-height: 20px;
 				color: #737373;
+
+				@media ($desktop) {
+
+					margin: 20px 0 10px;
+
+				}
 
 				&::before {
 
@@ -243,6 +385,12 @@
 				font-size: 18px;
 				color: #595959;
 
+				@media ($responsive) {
+
+					font-size: 16px;
+
+				}
+
 			}
 
 			small {
@@ -263,9 +411,16 @@
 		&__head {
 
 			font-weight: 600;
-			font-size: 18px;
+			font-size: 13px;
 			color: #595959;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
+
+			@media ($desktop) {
+
+				font-size: 18px;
+				margin-bottom: 20px;
+
+			}
 
 		}
 
@@ -278,10 +433,21 @@
 
 		&__item {
 
-			width: 25%;
-			display: flex;
+			width: 50%;
 			position: relative;
 			padding: 20px 18px 20px 0;
+
+			@media ($tablet) {
+
+				display: flex;
+
+			}
+
+			@media ($desktop) {
+
+				width: 25%;
+
+			}
 
 			&.is-remove {
 
@@ -319,6 +485,12 @@
 				width: 60px;
 				flex-shrink: 0;
 				position: relative;
+
+				@media ($responsive) {
+
+					float: left;
+
+				}
 
 				img {
 
@@ -432,10 +604,16 @@
 			font-size: 13px;
 			color: #595959;
 			font-weight: 500;
-			line-height: 18px;
+			line-height: 14px;
 			padding-left: 10px;
 			padding-right: 5px;
 			position: relative;
+
+			@media ($desktop) {
+
+				line-height: 18px;
+
+			}
 
 			.procedure-table-step & {
 
@@ -468,9 +646,16 @@
 
 		&__desc {
 
-			font-size: 12px;
+			font-size: 10px;
 			color: #595959;
-			line-height: 18px;
+			line-height: 14px;
+
+			@media ($desktop) {
+
+				font-size: 12px;
+				line-height: 18px;
+
+			}
 
 		}
 
@@ -520,10 +705,17 @@
 			left: -10px;
 			color: #fff;
 			padding: 0 5px;
-			line-height: 18px;
+			line-height: 14px;
 			font-size: 13px;
 			font-weight: 600;
 			background-color: var(--pink);
+
+			@media ($desktop) {
+
+				font-size: 11px;
+				line-height: 18px;
+
+			}
 
 			&::after {
 
@@ -536,9 +728,16 @@
 		&__title {
 
 			font-weight: 500;
-			font-size: 13px;
-			line-height: 18px;
+			font-size: 12px;
+			line-height: 14px;
 			color: #595959;
+
+			@media ($desktop) {
+
+				font-size: 13px;
+				line-height: 18px;
+
+			}
 
 		}
 
@@ -591,18 +790,30 @@
 
 			display: flex;
 			color: #595959;
-			font-size: 18px;
+			font-size: 14px;
 			white-space: nowrap;
 			margin: 8px 0;
 			flex-shrink: 0;
 			font-weight: 500;
 			align-items: baseline;
 
+			@media ($desktop) {
+
+				font-size: 18px;
+
+				s {
+
+					font-size: 12px;
+
+				}
+
+			}
+
 			s {
 
 				color: #737373;
 				margin-right: 8px;
-				font-size: 12px;
+				font-size: 11px;
 				font-weight: 300;
 
 			}
@@ -641,7 +852,7 @@
 			right: 0;
 			bottom: 0;
 			content: '';
-			background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+			background-image: linear-gradient(to top, rgba(255,255,255,1) 20px, rgba(255,255,255,0));
 
 		}
 
@@ -715,16 +926,24 @@
 		&__btn {
 
 			position: absolute;
-			right: 40px;
+			right: 14px;
 			bottom: 0;
 			z-index: 1;
-			font-size: 12px;
+			font-size: 11px;
 			font-weight: 500;
 			color: var(--blue);
 			padding: 0;
 			height: 17px;
 			line-height: 17px;
 			border-bottom: 1px dotted;
+			background-color: #fff;
+
+			@media ($desktop) {
+
+				right: 40px;
+				font-size: 12px;
+
+			}
 
 			&::after {
 
@@ -760,7 +979,20 @@
 		font-size: 14px;
 		line-height: 18px;
 		color: #595959;
-		margin: 32px 0;
+		margin-bottom: 10px;
+
+		@media ($responsive) {
+
+			overflow-x: auto;
+
+		}
+
+		@media ($desktop) {
+
+			font-size: 13px;
+			margin: 32px 0;
+
+		}
 
 		table {
 
@@ -784,10 +1016,17 @@
 
 		&__number {
 
-			font-size: 18px;
-			font-weight: 500;
-			padding: 18px 10px !important;
+			font-size: 14px;
+			padding: 10px !important;
 			text-align: left;
+
+			@media ($desktop) {
+
+				font-size: 18px;
+				font-weight: 500;
+				padding: 18px 10px !important;
+
+			}
 
 		}
 

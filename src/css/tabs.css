@@ -38,6 +38,13 @@
 		display: flex;
 		border-bottom: 1px solid var(--border);
 
+		@media ($responsive) {
+
+			overflow-x: auto;
+			padding-bottom: 1px;
+
+		}
+
 		&-btn {
 
 			height: 28px;
