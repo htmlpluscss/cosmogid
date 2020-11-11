@@ -1,0 +1,47 @@
+<aside class="billboard swiper-container-style">
+
+	<div class="center">
+
+		<div class="billboard__box">
+
+			<div class="swiper-container swiper-container--billboard swiper-container--loading-eager" data-autoplay="5">
+
+				<ul class="billboard__list swiper-wrapper">
+
+{% for item in [1,2] %}
+
+					<li class="billboard__item swiper-slide{% if loop.index > 1 %} hide{% endif %}">
+
+						<a class="billboard__news" href="/" title="Все линии бренда Wella SP уж на сайте!">
+
+							<picture>
+
+								<source srcset="/img/news/billboard/940x264.webp 1x, /img/news/billboard/1880x528.webp 2x" type="image/webp" media="(min-width: 768px)">
+								<source srcset="/img/news/billboard/784x528.webp" type="image/webp" media="(min-width: 376px)">
+								<source srcset="/img/news/billboard/686x528.webp" type="image/webp" media="(min-width: 361px)">
+								<source srcset="/img/news/billboard/656x528.webp" type="image/webp">
+
+								<source srcset="/img/news/billboard/940x264.jpg 1x, /img/news/billboard/1880x528.jpg 2x" media="(min-width: 768px)">
+								<source srcset="/img/news/billboard/784x528.jpg" media="(min-width: 376px)">
+								<source srcset="/img/news/billboard/686x528.jpg" media="(min-width: 361px)">
+								<source srcset="/img/news/billboard/656x528.jpg">
+
+								<img src="/img/news/billboard/1880x528.jpg" alt="" loading="lazy" width="328" height="264">
+
+							</picture>
+
+						</a>
+
+					</li>
+
+{% endfor %}
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</aside>

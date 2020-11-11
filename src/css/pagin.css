@@ -16,32 +16,10 @@
 
 	}
 
-	&__item {
-
-		flex-shrink: 0;
-
-		&--current {
-
-			a {
-
-				color: #818181;
-
-			}
-
-		}
-
-		&--sep {
-
-			padding: 0 2px;
-
-		}
-
-	}
-
 	a {
 
 		color: #bebebe;
-		font-size: 14px;
+		font-size: 18px;
 		line-height: 22px;
 		padding: 0 4px;
 		display: block;
@@ -69,6 +47,28 @@
 			fill: none;
 			margin: 4px;
 			stroke: #dbdbdb;
+
+		}
+
+	}
+
+	&__item {
+
+		flex-shrink: 0;
+
+		&--current {
+
+			a {
+
+				color: var(--pink);
+
+			}
+
+		}
+
+		&--sep {
+
+			padding: 0 2px;
 
 		}
 

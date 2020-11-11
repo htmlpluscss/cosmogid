@@ -38,13 +38,13 @@
 
 		&-prev {
 
-			left: 16px;
+			left: 16px !important;
 
 		}
 
 		&-next {
 
-			right: 16px;
+			right: 16px !important;
 
 		}
 
@@ -79,6 +79,14 @@
 			padding: 0 10px;
 
 		}
+
+	}
+
+	&__news {
+
+		height: 264px;
+		display: block;
+		position: relative;
 
 	}
 

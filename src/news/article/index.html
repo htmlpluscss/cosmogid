@@ -1,0 +1,107 @@
+{% set title = "Все линии бренда Wella SP уже на сайте!" %}
+
+{% set description = "" %}
+
+{% set urlPage = "news" %}
+
+{% set breadcrumbs = ['Новости',title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+		<div class="news">
+
+			<div class="news__body">
+
+				<div class="news-item news-item--article">
+
+					<div class="news-item__body">
+
+						<header class="news-item__header">
+
+							<div class="news-item__head">
+
+								<div class="news-item__cat">
+									о новинках
+								</div>
+
+								<time class="news-item__date" datetime="2020-11-02">
+									02.11.2020
+								</time>
+
+							</div>
+
+							<h1 class="news-item__title">
+								Все линии бренда <a href="/">Wella SP</a> уж на сайте!
+							</h1>
+
+							<div class="news__logo-brand">
+
+								<picture>
+
+									<source srcset="/img/news/bar/wella.webp 1x, /img/news/bar/wella@2x.webp 2x" type="image/webp">
+
+									<source srcset="/img/news/bar/wella.jpg 1x, /img/news/bar/wella@2x.jpg 2x">
+
+									<img src="/img/news/bar/wella.jpg" alt="" loading="lazy" width="150" height="106">
+
+								</picture>
+
+							</div>
+
+						</header>
+
+						<div class="news-item__text">
+
+							<p>
+								Теперь в нашем каталоге Вы можете купить все линии товаров для ухода за влосами от немецкого бренда <a href="/">Wella SP</a>!
+							</p>
+
+							<p>
+								Марка <a href="/">Wella Professional</a> давно известна своим высоким качеством продукции и инновационным подходом к разработке линий для ухода за волосами.
+							</p>
+
+							<p>
+								Wella SP порадует Вас широким ассортиментом продукции для ухода даже за самыми непослушными волосами! 15 инновационных линеек уже ждут Вас в нашем каталоге Подобрать средства идеальные именно для Ваших волос - легко!
+							</p>
+
+						</div>
+
+						<div class="news-item__img-center">
+
+							<img src="/img/news/wella.jpg" srcset="/img/news/wella@2x.jpg 2x" alt="" loading="lazy">
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="page-pagin">
+
+			<a class="page-pagin__prev" href="/">
+				<svg width="19" height="10" viewBox="0 0 19 10">
+					<path d="M18.26 4.75H1M5.46.85L1 4.75l4.46 3.9"/>
+				</svg>
+				Вернуться
+			</a>
+
+			<a class="page-pagin__next" href="/">
+				Следующая новость
+				<svg width="15" height="8" viewBox="0 0 15 8">
+					<path d="M.97 3.8H14M10.64.86L14 3.8l-3.36 2.95"/>
+				</svg>
+			</a>
+
+		</div>
+
+	</article>
+
+{% endblock %}

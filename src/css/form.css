@@ -607,7 +607,7 @@ fieldset {
 
 		}
 
-		&__input:checked + &__label {
+		&__input:checked:not(:disabled) + &__label {
 
 			&::before {
 

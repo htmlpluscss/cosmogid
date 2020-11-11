@@ -1,0 +1,76 @@
+{% set title = "Новости" %}
+
+{% set description = "" %}
+
+{% set urlPage = "news" %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="center">
+
+{% include "news/head.html" %}
+
+		<div class="news">
+
+			<div class="news__body">
+
+				<article class="news-item news-item--first">
+
+{% include "news/slider.html" %}
+
+					<div class="news-item__body">
+
+						<div class="news-item__head">
+
+							<div class="news-item__cat">
+								о новинках
+							</div>
+
+							<time class="news-item__date" datetime="2020-11-02">
+								02.11.2020
+							</time>
+
+						</div>
+
+						<h2 class="news-item__title">
+							Все линии бренда <a href="/">Wella SP</a> уж на сайте!
+						</h2>
+
+						<p class="news-item__text">
+							Теперь в нашем <a href="/">каталоге</a> Вы можете купить все линии товаров для ухода за влосами от немецкого бренда Wella SP!
+							<a class="news-item__read" href="/">читать дальше</a>
+						</p>
+
+					</div>
+
+				</article>
+
+				<hr>
+
+{% include "news/list.html" %}
+{% include "news/pagin.html" %}
+
+			</div>
+
+			<aside class="news__bar">
+
+{% include "news/bar.html" %}
+
+			</aside>
+
+		</div>
+
+	</section>
+
+	<div class="center">
+
+{% include "club/best.html" %}
+{% include "home/visited.html" %}
+
+	</div>
+
+{% endblock %}

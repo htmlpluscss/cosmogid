@@ -22,43 +22,6 @@
 
 	}
 
-	&-head {
-
-		@media ($desktop) {
-
-			margin: 32px 0;
-
-		}
-
-		&__title {
-			font-size: 16px;
-
-			@media ($desktop) {
-
-				font-size: 26px;
-				color: var(--text);
-
-			}
-
-			&.is-first-letter:first-letter {
-
-				color: var(--pink);
-
-			}
-
-		}
-
-		&__text {
-
-			font-size: 14px;
-			line-height: 23px;
-			color: #595959;
-			margin: 10px 0;
-
-		}
-
-	}
-
 	&-card {
 
 		@media ($desktop) {

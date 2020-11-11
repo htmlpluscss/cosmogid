@@ -1,0 +1,79 @@
+{% set list = [
+
+	{
+		title : "Новики от <a href=\"/\">Cellabel</a>!",
+		img   : 1
+	},
+	{
+		title : "Попробуйте новый бренд для волос <a href=\"/\">CHI (Америка)</a>",
+		img   : 2
+	},
+	{
+		title : "Распродажа от <a href=\"/\">Cellabel</a>!",
+		img   : 1
+	},
+	{
+		title : "Попробуйте новый бренд для волос <a href=\"/\">CHI (Америка)</a>",
+		img   : 2
+	},
+	{
+		title : "Новики от <a href=\"/\">Cellabel</a>!",
+		img   : 1
+	},
+	{
+		title : "Попробуйте новый бренд для волос CHI (Америка)",
+		img   : 2
+	}
+
+] %}
+
+{% for item in list %}
+
+		<article class="news-item">
+
+			<div class="news-item__flex">
+
+				<a class="news-item__img" href="/" title="{{ item.title | striptags(true) }}">
+
+					<picture>
+
+						<source srcset="/img/news/list/{{ item.img }}--396x215.webp 1x, /img/news/list/{{ item.img }}--792x430.webp 2x" type="image/webp">
+
+						<source srcset="/img/news/list/{{ item.img }}--396x215.jpg 1x, /img/news/list/{{ item.img }}--792x430.jpg 2x">
+
+						<img src="/img/news/list/{{ item.img }}--792x430.jpg" alt="{{ item.title | striptags(true) }}" loading="lazy" width="396" height="215">
+
+					</picture>
+
+				</a>
+
+				<div class="news-item__body">
+
+					<div class="news-item__head">
+
+						<div class="news-item__cat">
+							о новинках
+						</div>
+
+						<time class="news-item__date" datetime="2020-11-02">
+							02.11.2020
+						</time>
+
+					</div>
+
+					<h2 class="news-item__title">
+						{{ item.title | safe }}
+					</h2>
+
+					<p class="news-item__text">
+						Теперь в нашем <a href="/">каталоге</a> Вы можете купить все линии товаров для ухода за влосами от немецкого бренда Cellabel!
+						<a class="news-item__read" href="/">читать дальше</a>
+					</p>
+
+				</div>
+
+			</div>
+
+		</article>
+
+{% endfor %}
