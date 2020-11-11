@@ -687,9 +687,15 @@
 
 		&__table {
 
-			margin: 32px 0;
-			display: table;
 			width: 380px;
+			max-width: 100%;
+
+			@media ($desktop) {
+
+				margin: 32px 0;
+				display: table;
+
+			}
 
 			&--club {
 
@@ -697,7 +703,11 @@
 
 				.lk-form__label {
 
-					width: 120px;
+					@media ($desktop) {
+
+						width: 120px;
+
+					}
 
 				}
 
@@ -707,7 +717,17 @@
 
 		&__row {
 
-			display: table-row;
+			@media ($responsive) {
+
+				margin: 10px 0;
+
+			}
+
+			@media ($desktop) {
+
+				display: table-row;
+
+			}
 
 		}
 
@@ -717,9 +737,23 @@
 			font-weight: 500;
 			color: var(--text);
 			line-height: 20px;
-			display: table-cell;
-			vertical-align: top;
-			padding: 8px 0;
+
+			@media ($desktop) {
+
+				display: table-cell;
+				vertical-align: top;
+				padding: 8px 0;
+
+			}
+
+			small {
+
+				font-size: 11px;
+				color: #a1a1a1;
+				line-height: 12px;
+				display: block;
+
+			}
 
 			&--required::after {
 
@@ -732,14 +766,19 @@
 
 		&__control {
 
-			display: table-cell;
-			padding: 3px 0 3px 16px;
+			@media ($desktop) {
+
+				display: table-cell;
+				padding: 3px 0 3px 16px;
+
+			}
 
 			.input {
 
 				height: 30px;
 				line-height: 30px;
 				padding: 0 10px;
+				border-color: var(--border);
 
 				@media ($desktop) {
 
@@ -806,7 +845,11 @@
 
 			&-item {
 
-				padding: 5px 30px 5px 0;
+				@media ($desktop) {
+
+					padding: 5px 30px 5px 0;
+
+				}
 
 			}
 

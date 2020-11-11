@@ -276,7 +276,7 @@
 
 	"use strict";
 
-	btn.addEventListener('click', () =>
+	btn && btn.addEventListener('click', () =>
 		document.querySelector('.procedure-form').dispatchEvent(new CustomEvent("submit")));
 
 })(document.querySelector('.procedure-form__result-submit'));

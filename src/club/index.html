@@ -1,0 +1,29 @@
+{% set title = "Клуб профессионалов" %}
+
+{% set description = "Клуб профессионалов – это закрытая площадка в рамках Cosmogid профи, вступить в которую могут только профессионалы красоты: студии и салоны красоты, а также косметологи, стилисты, визажисты, мастера ногтевого сервиса и другие профессионалы." %}
+
+{% set urlPage = "club" %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+{% include "club/head.html" %}
+{% include "club/card.html" %}
+{% include "club/service.html" %}
+{% include "club/article.html" %}
+
+	</article>
+
+	<div class="center">
+
+{% include "club/best.html" %}
+{% include "home/visited.html" %}
+
+	</div>
+
+{% endblock %}

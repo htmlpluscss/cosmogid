@@ -208,6 +208,44 @@ fieldset {
 
 	}
 
+	&--next {
+
+		background-color: var(--pink);
+		color: #fff;
+		font-weight: 700;
+		min-width: 184px;
+		height: 44px;
+		padding: 0 40px;
+		line-height: 44px;
+		border-radius: 5px;
+
+		&::after {
+
+			position: absolute;
+			width: 17px;
+			height: 9px;
+			top: 0;
+			right: 16px;
+			bottom: 0;
+			content: '';
+			margin: auto;
+			background-image: url("data:image/svg+xml,%3Csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4.26h15.5M11.5.76l4 3.5-4 3.5' stroke='%23fff'/%3E%3C/svg%3E");
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+				background-color: var(--pink);
+
+			}
+
+		}
+
+	}
+
 }
 
 .input {
@@ -474,11 +512,23 @@ fieldset {
 
 		}
 
-		&__input:checked + &__label::before {
+		&__input:checked + &__label {
 
-			background-position: center;
-			background-repeat: no-repeat;
-			background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.85 1.32L4.52 5.1l3.64-3.78' stroke='%23595959'/%3E%3C/svg%3E");
+			&::before {
+
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.85 1.32L4.52 5.1l3.64-3.78' stroke='%23595959'/%3E%3C/svg%3E");
+
+			}
+
+			&.is-pink::before {
+
+				border-color: var(--pink);
+				background-color: var(--pink);
+				background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.85 1.32L4.52 5.1l3.64-3.78' stroke='%23fff'/%3E%3C/svg%3E");
+
+			}
 
 		}
 
@@ -488,12 +538,19 @@ fieldset {
 
 			&::before {
 
-				border-color: #e4e4e4;
-				background-color: #f5f5f5;
+				border-color: #e4e4e4 !important;
+				background-color: #f5f5f5 !important;
 
 			}
 
 		}
+
+		&__input:disabled:checked + &__label::before {
+
+			background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.85 1.32L4.52 5.1l3.64-3.78' stroke='%23e4e4e4'/%3E%3C/svg%3E") !important;
+
+		}
+
 
 	}
 
@@ -542,11 +599,27 @@ fieldset {
 
 			}
 
+			&.is-pink::before {
+
+				border-color: var(--pink);
+
+			}
+
 		}
 
-		&__input:checked + &__label::before {
+		&__input:checked + &__label {
 
-			box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 11px var(--blue);
+			&::before {
+
+				box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 11px var(--blue);
+
+			}
+
+			&.is-pink::before {
+
+				box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 11px var(--pink);
+
+			}
 
 		}
 
@@ -819,105 +892,6 @@ fieldset {
 
 }
 
-/*
-.radio-btn {
-
-	display: block;
-	width: 100%;
-	position: relative;
-
-	&__input {
-
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		top: 0;
-		left: 0;
-		opacity: 0.001;
-		z-index: -1;
-
-	}
-
-	&__label {
-
-		display: block;
-		font-size: 18px;
-		font-weight: 700;
-		padding: 0 24px;
-		line-height: 50px;
-		border-radius: 5px;
-		border: 1px solid var(--text);
-
-	}
-
-	&__input:checked + &__label {
-
-		background-color: #303030;
-		color: #fff;
-		border-color: #303030;
-
-	}
-
-}
-
-
-.radio-color {
-
-	display: block;
-	width: 100%;
-	border-radius: 5px;
-	position: relative;
-	border: 1px solid var(--text);
-
-	&__input {
-
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		top: 0;
-		left: 0;
-		opacity: 0.001;
-		z-index: -1;
-
-	}
-
-	&__label {
-
-		display: block;
-		font-size: 0;
-		color: transparent;
-		height: 26px;
-		width: 30px;
-		margin: 5px;
-		border-radius: 5px;
-
-	}
-
-	&__input:checked + &__label {
-
-		&::after {
-
-			width: 18px;
-			height: 18px;
-			position: absolute;
-			top: -6px;
-			right: -6px;
-			border-radius: 50%;
-			background-color: #fff;
-			content: '';
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M225.882 331.294a30.057 30.057 0 01-21.233-8.885l-45.176-45.176c-11.761-11.761-11.761-30.856 0-42.616s30.856-11.761 42.616 0l25.449 25.449 84.179-72.132c13.809-9.276 32.527-5.587 41.788 8.222 7.695 11.475 6.611 26.699-2.635 36.954l-105.412 90.353a30.141 30.141 0 01-19.576 7.831z' fill='%23ff4a00'/%3E%3Cpath d='M256 512C114.613 512 0 397.387 0 256S114.613 0 256 0s256 114.613 256 256-114.613 256-256 256zm0-451.765C147.878 60.235 60.235 147.878 60.235 256S147.878 451.765 256 451.765 451.765 364.122 451.765 256 364.122 60.235 256 60.235z' fill='%23ff4a00'/%3E%3C/svg%3E");
-
-		}
-
-	}
-
-} */
-
-
-
 .form {
 
 	&:invalid &__submit {
@@ -992,6 +966,23 @@ fieldset {
 
 		margin-right: 20px;
 		width: 100px;
+		height: 28px;
+		line-height: 28px;
+		font-weight: 600;
+		font-size: 12px;
+		background-color: #fff;
+		box-shadow: inset 0 0 0 1px var(--pink);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #fff;
+				background-color: var(--pink);
+
+			}
+
+		}
 
 		&::befoer {
 

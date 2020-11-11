@@ -1,0 +1,70 @@
+{% set list = [
+
+	{
+		id    : 3,
+		brand : "Ericson Laboratoire",
+		title : "Mini-kit acti-biotic (Мини-Кит), 3 шт по 10 мл",
+		img   : 28,
+		price : 2581,
+		oldPrice : 4585,
+		sale  : 30,
+		label : "new",
+		ratio : 3
+	},
+	{
+		id    : 4,
+		brand : "Periche",
+		title : "Argan Keratin Cleansing (Очищающий шампунь)",
+		img   : 27,
+		price : 2581,
+		sale  : 25,
+		wishlist : "true",
+		ratio : 2
+	}
+
+] %}
+
+	<section class="card-list">
+
+		<div class="card-list__head">
+
+			<h2 class="card-list__title h2">
+				Рекомендации для Вас
+			</h2>
+
+			<a href="/" class="card-list__all">
+				Смотреть все
+				<svg width="17" height="9" viewBox="0 0 17 9">
+					<path d="M0 4.5h15.5M11.5 1l4 3.5-4 3.5"/>
+				</svg>
+			</a>
+
+		</div>
+
+		<div class="card-list__wrap swiper-container-wrap">
+
+			<div class="card-list__swiper swiper-container swiper-container--card-list" data-count-row="5">
+
+				<div class="card-list__list swiper-wrapper">
+
+{% for double in [1,2,3,4,5,6,7,8,9,10] %}
+
+{% for item in list %}
+
+					<article class="card-list__item swiper-slide">
+
+{% include "_include/card-product.html" %}
+
+					</article>
+
+{% endfor %}
+
+{% endfor %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>

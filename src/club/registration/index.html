@@ -1,36 +1,26 @@
 {% set title = "Вступить в Cosmogid Профи" %}
 
-{% set profile = true %}
+{% set breadcrumbs = ['Клуб профессионалов','Заявка на вступление'] %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-{% set menuActive = title %}
-
-	<div class="lk-header">
-
-{% include "lk/menu.html" %}
-
-		<div class="center">
-
-			<h1 class="h2">
-				Заявка на вступление  в клуб профессионалов Cosmogid Профи
-			</h1>
-
-			<p class="lk__text lk__text--desc">
-				Для оформления заявки заполните поля формы отправки, приложив сканы ваших документов об образовании в бьюти-сфере.
-			</p>
-
-			<hr>
-
-		</div>
-
-	</div>
-
 	<div class="center">
 
 		<form action="/" class="form lk-form lk-form--club" enctype="multipart/form-data">
+
+			<div class="club-head">
+
+				<h1 class="club-head__title h1">
+					Заявка на вступление в клуб профессионалов <span class="color-pink">Cosmogid Профи</span>
+				</h1>
+
+				<p class="club-head__text">
+					Для оформления заявки заполните поля формы отправки, приложив сканы ваших документов об образовании в бьюти-сфере.
+				</p>
+
+			</div>
 
 			<div class="lk-form__table">
 
@@ -90,6 +80,21 @@
 
 				</div>
 
+				<div class="lk-form__row">
+
+					<label class="lk-form__label" for="lk-form-site">
+						Сайт:
+						<small>(при наличии)</small>
+					</label>
+
+					<div class="lk-form__control">
+
+						<input class="input" name="site" id="lk-form-site" type="url">
+
+					</div>
+
+				</div>
+
 			</div>
 
 			<div class="lk-form__table lk-form__table--club">
@@ -112,7 +117,7 @@
 
 										<input type="radio" class="checkbox-radio__input" value="profi" name="type" checked="checked" data-group="profi">
 
-										<span class="checkbox-radio__label">
+										<span class="checkbox-radio__label is-pink">
 											Профессионал
 										</span>
 
@@ -132,7 +137,7 @@
 
 													<input type="radio" class="checkbox-radio__input" value="Салон красоты" name="profi-sub" data-group="salon" checked="checked">
 
-													<span class="checkbox-radio__label">
+													<span class="checkbox-radio__label is-pink">
 														Салон красоты
 														<small>
 															(отметьте оказываемые вами услуги)
@@ -151,7 +156,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-11" checked="checked">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Солярий
 														</span>
 
@@ -165,7 +170,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-12">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Депиляция
 														</span>
 
@@ -179,7 +184,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-13">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Косметолгия
 														</span>
 
@@ -193,7 +198,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-14">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Маникюр и педикюр
 														</span>
 
@@ -207,7 +212,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-15">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Массаж
 														</span>
 
@@ -221,7 +226,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-16">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Парикмахерская
 														</span>
 
@@ -239,7 +244,7 @@
 
 												<input type="radio" class="checkbox-radio__input" value="Частный мастер" name="profi-sub" data-group="private">
 
-												<span class="checkbox-radio__label">
+												<span class="checkbox-radio__label is-pink">
 													Частный мастер
 													<small>
 														(отметьте оказываемые вами услуги)
@@ -256,7 +261,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-21">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Бровист
 														</span>
 
@@ -270,7 +275,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-22">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Косметолог
 														</span>
 
@@ -284,7 +289,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-23">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Косметолог-Эстетист
 														</span>
 
@@ -298,7 +303,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-24">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Массажист
 														</span>
 
@@ -312,7 +317,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-25">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Мастер мникюра и педикюра
 														</span>
 
@@ -326,7 +331,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-26">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Парикмахер
 														</span>
 
@@ -340,7 +345,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-27">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Стилист
 														</span>
 
@@ -354,7 +359,7 @@
 
 														<input class="checkbox-2__input" type="checkbox" name="type-details-28">
 
-														<span class="checkbox-2__label">
+														<span class="checkbox-2__label is-pink">
 															Визажист
 														</span>
 
@@ -380,7 +385,7 @@
 
 										<input type="radio" class="checkbox-radio__input" value="wholesale" name="type" data-group="wholesale">
 
-										<span class="checkbox-radio__label">
+										<span class="checkbox-radio__label is-pink">
 											Оптовый покупатель
 										</span>
 
@@ -396,7 +401,7 @@
 
 											<input type="radio" class="checkbox-radio__input" value="Розничный магазин" name="wholesale-sub">
 
-											<span class="checkbox-radio__label">
+											<span class="checkbox-radio__label is-pink">
 												Розничный магазин
 											</span>
 
@@ -410,7 +415,7 @@
 
 											<input type="radio" class="checkbox-radio__input" value="Косметолог" name="wholesale-sub">
 
-											<span class="checkbox-radio__label">
+											<span class="checkbox-radio__label is-pink">
 												Косметолог
 											</span>
 
@@ -445,7 +450,7 @@
 						<small></small>
 					</span>
 
-					<span class="input-files__btn btn btn--outline">
+					<span class="input-files__btn btn">
 						Выбрать
 					</span>
 
@@ -464,7 +469,7 @@
 						<small></small>
 					</span>
 
-					<span class="input-files__btn btn btn--outline">
+					<span class="input-files__btn btn">
 						Выбрать
 					</span>
 
@@ -483,7 +488,7 @@
 						<small></small>
 					</span>
 
-					<span class="input-files__btn btn btn--outline">
+					<span class="input-files__btn btn">
 						Выбрать
 					</span>
 
@@ -495,8 +500,8 @@
 
 			</div>
 
-			<button class="btn btn--blue lk-form__submit">
-				Отправить заявку
+			<button class="btn btn--pink lk-form__submit">
+				Отправить
 			</button>
 
 		</form>
