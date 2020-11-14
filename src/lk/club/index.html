@@ -1,0 +1,50 @@
+{% set title = "Клуб Cosmogid Профи" %}
+
+{% set profile = true %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% set menuActive = 'Мои данные и настройки' %}
+{% set menuSecontdActive = 'клуб Cosmogid' %}
+
+	<div class="lk-header">
+
+{% include "lk/menu.html" %}
+
+		<div class="center">
+
+{% include "lk/setting/menu.html" %}
+
+		</div>
+
+	</div>
+
+	<div class="center">
+
+		<form action="/" class="form form-table form-club" enctype="multipart/form-data">
+
+{% include "lk/club/head.html" %}
+
+{% include "lk/club/data.html" %}
+
+{% include "club/registration/contact.html" %}
+
+{% include "club/registration/profi.html" %}
+
+{% include "club/registration/brand.html" %}
+
+{% include "club/registration/files.html" %}
+
+{% include "club/registration/comment.html" %}
+
+			<button class="btn btn--pink lk-form__submit">
+				Сохранить
+			</button>
+
+		</form>
+
+	</div>
+
+{% endblock %}

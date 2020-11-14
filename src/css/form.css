@@ -180,6 +180,7 @@ fieldset {
 		color: #818181;
 		font-weight: 500;
 		font-size: 11px;
+		transition: var(--transitionDefault);
 
 		svg {
 
@@ -187,6 +188,7 @@ fieldset {
 			top: 6px;
 			left: 0;
 			fill: #818181;
+			transition: var(--transitionDefault);
 
 		}
 
@@ -210,16 +212,15 @@ fieldset {
 
 	&--next {
 
-		background-color: var(--pink);
-		color: #fff;
 		font-weight: 700;
 		min-width: 184px;
 		height: 44px;
 		padding: 0 40px;
 		line-height: 44px;
 		border-radius: 5px;
+		border: 1px solid var(--pink);
 
-		&::after {
+		svg {
 
 			position: absolute;
 			width: 17px;
@@ -227,11 +228,41 @@ fieldset {
 			top: 0;
 			right: 16px;
 			bottom: 0;
-			content: '';
 			margin: auto;
-			background-image: url("data:image/svg+xml,%3Csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4.26h15.5M11.5.76l4 3.5-4 3.5' stroke='%23fff'/%3E%3C/svg%3E");
+			stroke: #595959;
+			fill: none;
 
 		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: var(--pink);
+				color: #fff;
+
+				svg {
+
+					stroke: #fff;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&--super {
+
+		width: 720px;
+		max-width: 100%;
+		height: 80px;
+		line-height: 80px;
+		font-size: 24px;
+		font-weight: 700;
+		background-color: var(--pink);
+		color: #fff;
 
 		@media ($desktop) {
 
@@ -507,6 +538,21 @@ fieldset {
 				display: inline-block;
 				vertical-align: baseline;
 				background-image: url("data:image/svg+xml,%3Csvg width='14' height='13' viewBox='0 0 14 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.92.45l1.53 4.7h4.94l-4 2.9 1.53 4.7-4-2.9-4 2.9 1.53-4.7-4-2.9h4.94L6.92.45z' fill='%23FFD12E'/%3E%3C/svg%3E");
+
+			}
+
+		}
+
+		&__ico {
+
+			width: 18px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+
+			svg {
+
+				fill: #595959;
 
 			}
 
@@ -933,11 +979,18 @@ fieldset {
 
 .input-files {
 
-	position: relative;
-	overflow: hidden;
-	cursor: pointer;
 	display: flex;
-	align-items: center;
+
+	&__control {
+
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+	}
 
 	&__input {
 
@@ -953,10 +1006,24 @@ fieldset {
 	&__label {
 
 		color: var(--text);
-		font-size: 14px;
-		font-weight: 300;
-		width: 280px;
-		padding-right: 20px;
+
+		@media ($responsive) {
+
+			width: 100%;
+			font-size: 12px;
+			font-weight: 500;
+			margin: 8px 0;
+
+		}
+
+		@media ($tablet) {
+
+			width: 280px;
+			font-size: 14px;
+			font-weight: 300;
+			margin: 0 20px 0 0;
+
+		}
 
 		small {
 
@@ -1085,6 +1152,267 @@ fieldset {
 		color: #fff;
 		border-color: var(--blue);
 		background-color: var(--blue);
+
+	}
+
+}
+
+
+.form-table {
+
+	&__item {
+
+		margin: 5px 0;
+
+		small {
+
+			display: block;
+			font-size: 10px;
+			line-height: 12px;
+			font-weight: 300;
+
+		}
+
+	}
+
+	&__table {
+
+		@media ($desktop) {
+
+			margin: 32px 0;
+			display: table;
+
+		}
+
+	}
+
+	&__row {
+
+		@media ($responsive) {
+
+			margin: 10px 0;
+
+		}
+
+		@media ($desktop) {
+
+			display: table-row;
+
+		}
+
+	}
+
+	&__label {
+
+		font-size: 15px;
+		font-weight: 500;
+		color: var(--text);
+		line-height: 18px;
+
+		@media ($responsive) {
+
+			margin-bottom: 6px;
+			display: block;
+
+		}
+
+		@media ($desktop) {
+
+			display: table-cell;
+			vertical-align: top;
+			padding: 12px 0;
+
+			&--w136 {
+
+				width: 136px;
+
+			}
+
+			&--w70 {
+
+				width: 70px;
+
+			}
+
+			&--double {
+
+				padding: 3px 0;
+
+			}
+
+			&--small {
+
+				padding: 3px 0;
+
+				small {
+
+					font-size: 11px;
+					color: #a1a1a1;
+					line-height: 18px;
+					display: block;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__control {
+
+		&-contact {
+
+			display: flex;
+			flex-wrap: wrap;
+			white-space: nowrap;
+
+			.form-table__item {
+
+				width: 50%;
+
+			}
+
+		}
+
+		@media ($desktop) {
+
+			display: table-cell;
+			padding: 6px 0 6px 16px;
+
+			&--w324 {
+
+				width: 324px;
+
+			}
+
+			&--w960 {
+
+				width: 960px;
+
+			}
+
+		}
+
+		.input {
+
+			height: 30px;
+			line-height: 30px;
+			padding: 0 10px;
+			border-color: var(--border);
+
+			@media ($desktop) {
+
+				font-size: 14px;
+
+			}
+
+			&:valid:not(:focus) {
+
+				border-color: var(--border);
+
+			}
+
+		}
+
+		textarea.input {
+
+			height: 120px;
+
+		}
+
+		&--row {
+
+			display: flex;
+
+			.checkbox-radio + .checkbox-radio {
+
+				margin-left: 20px;
+
+			}
+
+		}
+
+	}
+
+	&__submit {
+
+		display: flex;
+		justify-content: center;
+
+		@media ($responsive) {
+
+			margin: 30px 0;
+
+		}
+
+		@media ($tablet) {
+
+			margin: 60px 0;
+
+		}
+
+	}
+
+	&__flex {
+
+		display: flex;
+
+	}
+
+	&__group {
+
+		@media ($responsive) {
+
+			.form-table__flex {
+
+				margin-left: 24px;
+
+			}
+
+		}
+
+		@media ($tablet) {
+
+			display: flex;
+
+		}
+
+		small {
+
+			font-size: 11px;
+			color: #a1a1a1;
+			display: block;
+
+		}
+
+		&-item {
+
+			@media ($tablet) {
+
+				padding-right: 32px;
+
+			}
+
+			.form-table__flex {
+
+				margin: 10px 0;
+
+			}
+
+		}
+
+		&-type {
+
+			display: flex;
+
+			@media ($tablet) {
+
+				margin: 6px 0 20px;
+
+			}
+
+		}
 
 	}
 

@@ -1,6 +1,12 @@
 
 ( total => {
 
+	if(!total) {
+
+		return;
+
+	}
+
 	const wishlistCheckedList = document.querySelectorAll('.wishlist-checked-list');
 
 	const setSelected = () => {

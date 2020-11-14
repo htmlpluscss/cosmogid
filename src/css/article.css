@@ -31,10 +31,18 @@
 
 		text-align: center;
 
-		u {
+		a {
 
 			text-decoration: none;
-			border-bottom: 2px solid var(--pink);
+			color: inherit;
+			border-bottom: 2px solid transparent;
+			transition: var(--transitionDefault);
+
+			&:hover {
+
+				border-color: var(--pink);
+
+			}
 
 		}
 
