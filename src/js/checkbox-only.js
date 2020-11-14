@@ -8,7 +8,7 @@
 		const input = el.querySelector('.checkbox-only__input'),
 			  text = el.querySelector('.checkbox-only__check-text');
 
-		input.addEventListener('change', () => {
+		text && input.addEventListener('change', () => {
 
 			if(input.checked) {
 

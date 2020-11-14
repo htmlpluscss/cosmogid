@@ -1,63 +1,5 @@
 .wishlist {
 
-	&__text {
-
-		font-size: 14px;
-		line-height: 20px;
-		color: var(--text);
-		margin: 20px 0;
-		max-width: 600px;
-
-	}
-
-	&__bar {
-
-		display: flex;
-		flex-wrap: wrap;
-		margin: 20px -6px;
-
-		&-link,
-		&-btn {
-
-			white-space: nowrap;
-			font-size: 14px;
-			color: var(--text);
-			text-decoration: none;
-			padding: 0 8px;
-			line-height: 24px;
-			margin: 6px;
-			border: 1px solid var(--border);
-			border-radius: 2px;
-			font-weight: 500;
-
-			&.is-current {
-
-				color: #fff;
-				border-color: var(--blue);
-				background-color: var(--blue);
-
-			}
-
-		}
-
-		&-btn {
-
-			height: 26px;
-			padding-right: 30px;
-
-			svg {
-
-				position: absolute;
-				top: 3px;
-				right: 5px;
-				fill: var(--text);
-
-			}
-
-		}
-
-	}
-
 	&-checkbox {
 
 		position: absolute;
@@ -65,6 +7,104 @@
 		left: 2px;
 		z-index: 3;
 		padding: 18px;
+
+	}
+
+	&-bar {
+
+		display: flex;
+		align-items: center;
+
+	}
+
+	&-checked-total {
+
+		font-size: 14px;
+		font-weight: 500;
+		color: #818181;
+		padding-left: 24px;
+		position: relative;
+		margin-right: 30px;
+		white-space: nowrap;
+
+		.checkbox-only {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+
+		}
+
+	}
+
+	&-all-in-basket {
+
+		font-size: 12px;
+		font-weight: 500;
+		height: 27px;
+		line-height: 27px;
+		padding: 0 24px;
+		margin-right: 20px;
+
+		@media ($responsive) {
+
+			padding: 0 1px;
+			width: 22px;
+			height: 22px;
+			line-height: 22px;
+			margin-right: 12px;
+
+		}
+
+	}
+
+	&-btn-move,
+	&-btn-remove {
+
+		font-size: 14px;
+		font-weight: 600;
+		padding: 0;
+		height: 27px;
+		line-height: 27px;
+		background-color: transparent !important;
+		color: var(--blue);
+		margin-right: 24px;
+
+		@media ($responsive) {
+
+			padding: 5px 9px;
+			width: 22px;
+			height: 22px;
+			line-height: 22px;
+			margin-right: 12px;
+
+		}
+
+	}
+
+	&-btn-remove {
+
+		@media ($responsive) {
+
+			padding: 2px 1px 1px 2px;
+
+		}
+
+		@media ($desktop) {
+
+			padding-left: 24px;
+
+			svg {
+
+				position: absolute;
+				top: 2px;
+				left: 0;
+
+			}
+
+		}
 
 	}
 

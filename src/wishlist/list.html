@@ -179,7 +179,7 @@
 
 ] %}
 
-	<div class="catalog-list">
+	<div class="catalog-list" data-empty="Ничего не найдено">
 
 {% for item in list %}
 
@@ -187,15 +187,11 @@
 
 			<div class="wishlist-checkbox">
 
-				<label class="checkbox-2">
+				<label class="checkbox-only">
 
-					<input class="checkbox-2__input" type="checkbox" value="{{ item.id }}">
+					<input class="checkbox-only__input" type="checkbox" value="{{ item.id }}">
 
-					<span class="checkbox-2__label">
-						<span class="hide">
-							Выбрать
-						</span>
-					</span>
+					<span class="checkbox-only__check"></span>
 
 				</label>
 

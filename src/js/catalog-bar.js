@@ -36,4 +36,4 @@
 
 	});
 
-})(document.querySelector('.catalog-bar'));
+})(document.querySelector('form.catalog-bar'));
