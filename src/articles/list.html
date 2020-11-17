@@ -1,0 +1,117 @@
+{% set list = [
+
+	{
+		title : "Восстановить грудь без пластической операции!",
+		text  : "Сохранить молодость и упругость Вашей груди стало возможным  с новыми технологиями от компании GERnetic!",
+		cat   : "тело",
+		img   : 2
+	},
+	{
+		title : "Как выбрать краску для волос и покрасить волосы в домашних условиях",
+		text  : "Как подобрать краску для волос? Как выбрать нужный оттенок?",
+		cat   : "волосы",
+		img   : 3
+	},
+	{
+		title : "Ламинирование волос в домашних условия",
+		text  : "Сохранить молодость и упругость Вашей груди стало возможным  с новыми технологиями от компании GERnetic!",
+		cat   : "волосы",
+		img   : 4
+	},
+	{
+		title : "Восстановить грудь без пластической операции!",
+		text  : "Сохранить молодость и упругость Вашей груди стало возможным  с новыми технологиями от компании GERnetic!",
+		cat   : "тело",
+		img   : 2
+	},
+	{
+		title : "Восстановить грудь без пластической операции!",
+		text  : "Сохранить молодость и упругость Вашей груди стало возможным  с новыми технологиями от компании GERnetic!",
+		cat   : "тело",
+		img   : 3
+	},
+	{
+		title : "Восстановить грудь без пластической операции!",
+		text  : "Сохранить молодость и упругость Вашей груди стало возможным  с новыми технологиями от компании GERnetic!",
+		cat   : "тело",
+		img   : 4
+	},
+	{
+		title : "Восстановить грудь без пластической операции!",
+		text  : "Сохранить молодость и упругость Вашей груди стало возможным  с новыми технологиями от компании GERnetic!",
+		cat   : "тело",
+		img   : 2
+	},
+	{
+		title : "Восстановить грудь без пластической операции!",
+		text  : "Сохранить молодость и упругость Вашей груди стало возможным  с новыми технологиями от компании GERnetic!",
+		cat   : "тело",
+		img   : 3
+	},
+	{
+		title : "Восстановить грудь без пластической операции!",
+		text  : "Сохранить молодость и упругость Вашей груди стало возможным  с новыми технологиями от компании GERnetic!",
+		cat   : "тело",
+		img   : 4
+	}
+
+] %}
+
+<div class="news-column">
+
+{% for item in list %}
+
+	<div class="news-column__item">
+
+		<article class="news-item">
+
+			<div class="news-item__flex">
+
+				<a class="news-item__img" href="/" title="{{ item.title | striptags(true) }}">
+
+					<picture>
+
+						<source srcset="/img/articles/{{ item.img }}--294x215.webp 1x, /img/articles/{{ item.img }}--588x430.webp 2x" type="image/webp">
+
+						<source srcset="/img/articles/{{ item.img }}--294x215.jpg 1x, /img/articles/{{ item.img }}--588x430.jpg 2x">
+
+						<img src="/img/articles/{{ item.img }}--588x430.jpg" alt="{{ item.title | striptags(true) }}" loading="lazy" width="294" height="215">
+
+					</picture>
+
+				</a>
+
+				<div class="news-item__body">
+
+					<div class="news-item__head">
+
+						<a href="/" class="news-item__cat">
+							{{ item.cat }}
+						</a>
+
+						<time class="news-item__date" datetime="2020-11-02">
+							02.11.2020
+						</time>
+
+					</div>
+
+					<h2 class="news-item__title">
+						{{ item.title }}
+					</h2>
+
+					<p class="news-item__text">
+						{{ item.text }}
+						<a class="news-item__read" href="/">читать дальше</a>
+					</p>
+
+				</div>
+
+			</div>
+
+		</article>
+
+	</div>
+
+{% endfor %}
+
+	</div>

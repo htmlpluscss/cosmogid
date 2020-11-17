@@ -1,0 +1,68 @@
+.subscribe-pink {
+
+	background-color: var(--pink);
+	padding: 20px 24px 30px;
+
+	@media ($responsive) {
+
+		padding: 14px 24px 20px;
+
+	}
+
+	&__label {
+
+		text-align: center;
+		color: #fff;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 600;
+		display: block;
+		margin-bottom: 10px;
+
+		@media ($responsive) {
+
+			font-size: 13px;
+			text-align: left;
+
+		}
+
+	}
+
+	&__input {
+
+		width: 100%;
+		border: 0;
+		border-radius: 5px;
+
+	}
+
+	&__input-box {
+
+		position: relative;
+
+	}
+
+	&__btn {
+
+		position: absolute;
+		width: 34px;
+		height: 34px;
+		top: 5px;
+		right: 5px;
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			fill: none;
+			stroke: var(--pink);
+
+		}
+
+	}
+
+}

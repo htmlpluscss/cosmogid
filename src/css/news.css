@@ -54,6 +54,13 @@
 
 	&__bar {
 
+		&-sticky {
+
+			position: sticky;
+			top: 24px;
+
+		}
+
 		@media ($desktop) {
 
 			flex-shrink: 0;
@@ -67,10 +74,27 @@
 
 	&-bar {
 
-		position: sticky;
-		top: 24px;
 		padding: 24px 18px;
 		background: rgba(196, 196, 196, 0.14);
+		margin-bottom: 32px;
+
+		@media ($mobile) {
+
+			margin: 0 -10px 10px;
+
+		}
+
+		@media ($responsive) {
+
+			margin: 0 -16px 16px;
+
+		}
+
+		@media ($tablet) {
+
+			margin: 0 0 24px;
+
+		}
 
 		&__logo {
 
@@ -110,8 +134,7 @@
 			@media ($responsive) {
 
 				display: flex;
-				flex-wrap: wrap;
-				margin: -10px;
+				margin: -5px;
 				justify-content: center;
 
 			}
@@ -122,7 +145,16 @@
 
 			@media ($responsive) {
 
-				margin: 10px;
+				margin: 5px;
+				max-width: 215px;
+				width: calc(100% / 3 - 10px);
+
+				img {
+
+					width: 100%;
+					height: auto;
+
+				}
 
 			}
 
@@ -164,6 +196,13 @@
 
 				margin-top: 0;
 
+				.news-item__img img {
+
+					width: 396px;
+					height: 264px;
+
+				}
+
 			}
 
 			.billboard {
@@ -196,6 +235,7 @@
 			margin-right: 20px;
 			flex-shrink: 0;
 			width: 100%;
+			position: relative;
 
 			img {
 
@@ -212,7 +252,30 @@
 
 			@media ($tablet) {
 
-				width: 300px;
+				width: 294px;
+
+			}
+
+		}
+
+		&__label {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			&-item {
+
+				color: #fff;
+				border-radius: 0 2px 2px 0;
+				padding: 0 6px;
+				text-align: center;
+				line-height: 25px;
+				font-size: 13px;
+				font-weight: 600;
+				margin-bottom: 4px;
+				display: block;
+				background-color: var(--pink);
 
 			}
 
@@ -240,6 +303,18 @@
 
 		}
 
+		&__cat {
+
+			a& {
+
+				color: var(--pink);
+				font-weight: 600;
+				text-decoration: none;
+
+			}
+
+		}
+
 		&__cat + &__date {
 
 			margin-left: 8px;
@@ -254,13 +329,13 @@
 			color: #303030;
 			font-size: 19px;
 			margin: 18px 0 10px;
+			text-decoration: none;
 
 			a {
 
 				color: var(--pink);
 
 			}
-
 
 		}
 
@@ -312,6 +387,51 @@
 			img {
 
 				max-width: 100%;
+
+			}
+
+		}
+
+	}
+
+	&-column &-item__img {
+
+		@media ($desktop) {
+
+			width: 294px;
+
+		}
+
+	}
+
+	&-column {
+
+		@media ($desktop) {
+
+			display: flex;
+			flex-wrap: wrap;
+			margin: 20px -14px;
+
+		}
+
+		&__item {
+
+			@media ($desktop) {
+
+				width: 294px;
+				margin: 14px;
+
+				.news-item {
+
+					margin: 0;
+
+					&__flex {
+
+						display: block;
+
+					}
+
+				}
 
 			}
 

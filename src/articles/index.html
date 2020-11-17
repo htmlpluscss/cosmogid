@@ -1,0 +1,103 @@
+{% set title = "Статьи" %}
+
+{% set description = "В своем instagram мы показываем интересные новинки и делимся секретами ухода. Подписаться" %}
+
+{% set urlPage = "articles" %}
+
+{% set ogImage = "img/articles/ogImage.jpg" %}
+{% set ogImage236 = "img/articles/ogImage236.jpg" %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="center">
+
+{% include urlPage + "/head.html" %}
+
+		<div class="news">
+
+			<div class="news__body">
+
+				<article class="news-item news-item--first">
+
+					<div class="news-item__flex">
+
+						<a class="news-item__img" href="/" title="Парафинотерапия — рецепт красоты и здоровья Вашей кожи">
+
+							<picture>
+
+								<source srcset="/img/articles/1--396x264.webp 1x, /img/articles/1--792x528.webp 2x" type="image/webp" media="(min-width: 1250px)">
+								<source srcset="/img/articles/1--396x264.jpg 1x, /img/articles/1--792x528.jpg 2x" media="(min-width: 1250px)">
+
+								<source srcset="/img/articles/1--294x215.webp 1x, /img/articles/1--588x430.webp 2x" type="image/webp">
+								<source srcset="/img/articles/1--294x215.jpg 1x, /img/articles/1--588x430.jpg 2x">
+
+								<img src="/img/articles/1--792x528.jpg" alt="Парафинотерапия — рецепт красоты и здоровья Вашей кожи" loading="lazy" width="294" height="215">
+
+							</picture>
+
+							<span class="news-item__label">
+								<span class="news-item__label-item">
+									NEW
+								</span>
+							</span>
+
+						</a>
+
+						<div class="news-item__body">
+
+							<div class="news-item__head">
+
+								<a href="/" class="news-item__cat">
+									тело
+								</a>
+
+								<time class="news-item__date" datetime="2020-11-02">
+									02.11.2020
+								</time>
+
+							</div>
+
+							<h2 class="news-item__title">
+								Парафинотерапия — рецепт красоты и здоровья Вашей кожи
+							</h2>
+
+							<p class="news-item__text">
+								Бархатистая, невероятно гладкая, глубоко увлажнённая кожа даже в самое холодное время года — добиться столь потрясающих результатов Вам помогут процедуры парафинотерапии на основе парафина косметического. После применения этого средства кожа точно обретает второе дыхание, радует нежностью и посвежевшим видом!
+								<a class="news-item__read" href="/">читать дальше</a>
+							</p>
+
+						</div>
+
+					</div>
+
+				</article>
+
+{% include urlPage + "/list.html" %}
+{% include "news/pagin.html" %}
+
+			</div>
+
+			<aside class="news__bar">
+
+{% include "news/bar.html" %}
+
+{% include urlPage + "/subscribe.html" %}
+
+			</aside>
+
+		</div>
+
+	</section>
+
+	<div class="center">
+
+{% include "club/best.html" %}
+{% include "home/visited.html" %}
+
+	</div>
+
+{% endblock %}

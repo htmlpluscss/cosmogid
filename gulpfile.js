@@ -72,6 +72,7 @@ gulp.task('html', function() {
 				// prevent logging error message
 				if(message.indexOf('Attribute “loading” not allowed on element “img” at this point.') === 0) return false;
 
+				if(message.indexOf('srcset') !== -1) return false;
 				if(message.indexOf('iframe') !== -1) return false;
 
 				// allow message to pass through
