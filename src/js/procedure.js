@@ -247,7 +247,7 @@
 
 	});
 
-})(document.querySelectorAll('.articleid-events__form'));
+})(document.querySelectorAll('.procedure-product .articleid-events__form'));
 
 // desc right
 ( desc => {

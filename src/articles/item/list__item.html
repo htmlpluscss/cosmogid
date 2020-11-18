@@ -1,0 +1,156 @@
+	<div class="card-list-mini">
+
+{% for item in list %}
+
+		<aside class="card-list-mini__item articleid-events">
+
+			<a href="/" class="card-list-mini__img">
+
+				<picture>
+
+					<source srcset="/img/card-list-mini/{{ item.img }}--80x80.webp 1x, /img/card-list-mini/{{ item.img }}--160x160.webp 2x" type="image/webp">
+
+					<source srcset="/img/card-list-mini/{{ item.img }}--80x80.jpg 1x, /img/card-list-mini/{{ item.img }}--160x160.jpg 2x">
+
+					<img src="/img/card-list-mini/{{ item.img }}--160x160.jpg" alt="Alessandro Socks treatment kit lavendar (Набор носков с расслабляющим ароматом лаванды для парафинотерапии), 5 пар" loading="lazy" width="80" height="80">
+
+				</picture>
+
+			</a>
+
+			<div class="card-list-mini__title">
+				<a href="/">{{ item.title }}</a>
+				{{ item.text }}
+			</div>
+
+{% set articleid = 0 %}
+
+{% if item.article %}
+
+			<form action="/" class="articleid-events__form">
+
+	{% for article in item.article %}
+
+		{% if article.active %}
+
+			{% set articleid = article.id %}
+
+		{% endif %}
+
+				<label class="articleid-events__item form-buy__article">
+
+					<input
+						name="articleid"
+						type="radio"
+
+						value="{{ article.id }}"
+
+						data-price="{{ article.price }}"
+						data-old-price="{{ article.oldPrice }}"
+
+						class="form-buy__article-input visuallyhidden"
+
+						{% if article.active %}
+							checked="checked"
+						{% endif %}
+
+						{% if article.label %}
+							data-label="{{ article.label }}"
+						{% endif %}
+
+						{% if article.storeid %}
+							data-storeid="{{ article.storeid }}"
+						{% endif %}
+
+						{% if article.inBasket %}
+							data-in-basket="in basket"
+						{% endif %}
+					>
+
+					<span class="articleid-events__label form-buy__article-label">
+						{{ article.value }}
+					</span>
+
+				</label>
+
+	{% endfor %}
+
+			</form>
+
+{% endif %}
+
+			<p class="card-list-mini__price">
+
+{% if item.old %}
+
+				<s class="card-list-mini__old-price">
+
+					<span class="card-list-mini__old-price-value articleid-events__old-price-value" data-suf="₽">
+						{{ item.old }}
+					</span>
+
+				</s>
+
+{% endif %}
+
+				<span class="card-list-mini__price-value articleid-events__price-value" data-suf="₽">
+					{{ item.price }}
+				</span>
+
+			</p>
+
+		{% if item.label %}
+
+			<p class="card-list-mini__label">
+				<span class="card-list-mini__label-item">
+					{{ item.label }}
+				</span>
+			</p>
+
+		{% endif %}
+
+			<form action="/" class="form card-list-mini__buy form-buy">
+
+				<input type="hidden" name="id" value="{{ item.id }}" class="articleid-events__id">
+				<input type="hidden" name="storeid" value="{{ item.storeid }}" class="articleid-events__storeid">
+				<input type="hidden" name="articleid" value="{{ articleid }}" class="articleid-events__value">
+
+				<div class="articleid-events__btn">
+
+					<button class="button" aria-label="положить в корзину">
+						<svg width="21" height="22" viewBox="0 0 21 22">
+							<path d="M15.06 20.66L13.96 9.9a.58.58 0 00-.59-.52H11.5a2.78 2.78 0 00-2.81-2.75 2.78 2.78 0 00-2.81 2.75H4.01c-.3 0-.55.23-.58.52L2.3 20.66c-.03.34.24.63.59.63h11.58c.35 0 .62-.3.58-.63zM8.7 7.77c.9 0 1.64.72 1.64 1.6H7.05c0-.88.74-1.6 1.64-1.6zM3.54 20.15l1-9.63h1.34v1.15c0 .31.26.57.59.57.32 0 .58-.26.58-.57v-1.15h3.28v1.15c0 .31.26.57.58.57.33 0 .59-.26.59-.57v-1.15h1.34l1 9.63H3.54z" fill="#908D8D"/>
+							<ellipse cx="14.83" cy="6.75" rx="6.11" ry="6.15" fill="#ED4993"/>
+							<path d="M17.12 6.39h-1.93V4.45c0-.2-.15-.36-.36-.36-.2 0-.36.15-.36.36v1.94h-1.92c-.2 0-.36.16-.36.36 0 .2.15.37.36.37h1.92v1.94c0 .2.16.36.36.36.2 0 .36-.16.36-.36V7.12h1.93c.2 0 .36-.16.36-.37 0-.2-.16-.36-.36-.36z" fill="#fff"/>
+						</svg>
+					</button>
+
+					<a href="/" class="hide" title="перейти в корзину">
+						<svg width="21" height="22" viewBox="0 0 21 22">
+							<path d="M15.06 20.66L13.96 9.9a.58.58 0 00-.59-.52H11.5a2.78 2.78 0 00-2.81-2.75 2.78 2.78 0 00-2.81 2.75H4.01c-.3 0-.55.23-.58.52L2.3 20.66c-.03.34.24.63.59.63h11.58c.35 0 .62-.3.58-.63zM8.7 7.77c.9 0 1.64.72 1.64 1.6H7.05c0-.88.74-1.6 1.64-1.6zM3.54 20.15l1-9.63h1.34v1.15c0 .31.26.57.59.57.32 0 .58-.26.58-.57v-1.15h3.28v1.15c0 .31.26.57.58.57.33 0 .59-.26.59-.57v-1.15h1.34l1 9.63H3.54z" fill="#908D8D"/>
+							<ellipse cx="14.83" cy="6.75" rx="6.11" ry="6.15" fill="#ED4993"/>
+							<path d="M15.59 10V3.33h-1.02l-1.92 1.94.68.71 1.09-1.13V10h1.17z" fill="#fff"/>
+						</svg>
+					</a>
+
+				</div>
+
+			</form>
+
+			<form action="/" class="form card-list-mini__wishlist form-wishlist">
+
+				<input type="hidden" name="id" value="{{ item.id }}">
+				<input type="hidden" name="type" value="0">
+				<input type="hidden" name="mode" value="add">
+
+				<button class="button">
+					Добавить в избранное
+				</button>
+
+			</form>
+
+		</aside>
+
+{% endfor %}
+
+	</div>

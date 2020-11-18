@@ -135,4 +135,102 @@
 
 	}
 
+	&-achtung {
+
+		position: relative;
+		padding: 7px 0 0 40px;
+		font-size: 14px;
+		min-height: 32px;
+		line-height: 18px;
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M27.75 15.29a12 12 0 11-24 0 12 12 0 0124 0zm-10.5 6a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-1.5-13.5c-.82 0-1.5.67-1.5 1.5v6a1.5 1.5 0 103 0v-6c0-.83-.67-1.5-1.5-1.5z' fill='%23ED4993'/%3E%3C/svg%3E");
+
+	}
+
+	&-counter-increment {
+
+		counter-reset: headings 0;
+
+		&__item {
+
+			counter-increment: headings 1;
+			margin: 16px 0;
+			overflow: hidden;
+
+			@media ($tablet) {
+
+				margin: 32px 0;
+
+			}
+
+			&.is-flex {
+
+				@media ($tablet) {
+
+					display: flex;
+
+				}
+
+			}
+
+		}
+
+		&__img {
+
+			flex-shrink: 0;
+			position: relative;
+			max-width: 40%;
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 5px;
+
+			@media ($tablet) {
+
+				margin-right: 20px;
+				margin-bottom: 0;
+
+			}
+
+			img {
+
+				border: 1px solid var(--border);
+				max-width: 100%;
+				height: auto;
+
+			}
+
+			&.is-counter::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 16px;
+				line-height: 23px;
+				min-width: 40px;
+				text-align: center;
+				border-radius: 0 0 2px 0;
+				border: 1px solid var(--border);
+				content: counter(headings, decimal);
+				background-color: #fff;
+
+			}
+
+		}
+
+		&__text {
+
+			position: relative;
+
+			&.is-counter::before {
+
+				content: counter(headings, decimal) '.';
+				float: left;
+				margin-right: 4px;
+
+			}
+
+		}
+
+	}
+
 }

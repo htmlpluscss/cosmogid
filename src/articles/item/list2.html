@@ -1,0 +1,71 @@
+{% set list = [
+
+	{
+		id    : 124,
+		title : "Kapous",
+		text  : "очищающий лосьон для рук  и ног перед парафинотерапией",
+		old   : 8888,
+		price : 1000,
+		img   : 1,
+		label : "NEW",
+		article : [
+			{
+				id     : 124,
+				value  : "75 мл",
+				price  : 1000,
+				old    : 8888,
+				active : true
+			},
+			{
+				id     : "124-100",
+				value  : "50 мл",
+				price  : 2000,
+				storeid: 2
+			}
+		]
+	},
+	{
+		id    : 125,
+		title : "Clean+Easy",
+		text  : "спрей антисептик для парафинотерапии",
+		old   : 12073,
+		price : 10000,
+		img   : 2
+	},
+	{
+		id    : 126,
+		title : "ARAVIA",
+		text  : "мягкий скраб с маслом  персика",
+		old   : 12073,
+		price : 10000,
+		img   : 2,
+		label : "NEW",
+		article : [
+			{
+				id     : 126,
+				value  : "75 мл",
+				price  : 1000,
+				old    : 12073,
+				active : true
+			},
+			{
+				id     : "126-100",
+				value  : "50 мл",
+				price  : 2000,
+				storeid: 2
+			}
+		]
+	},
+	{
+		id    : 127,
+		title : "Kapous",
+		text  : "эмульсию с коллагеном и эластином перед парафинотерапией",
+		old   : 12073,
+		price : 10000,
+		img   : 2,
+		label : "NEW"
+	}
+
+] %}
+
+{% include "articles/item/list__item.html" %}
