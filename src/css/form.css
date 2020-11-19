@@ -253,6 +253,90 @@ fieldset {
 
 	}
 
+	&--next-grad {
+
+		font-weight: 600;
+		font-size: 14px;
+		min-width: 184px;
+		height: 44px;
+		padding: 2px;
+		line-height: 40px;
+		border-radius: 5px;
+		border: 0;
+		background: linear-gradient(to right, var(--pink), var(--text));
+
+		span {
+
+			display: block;
+			border-radius: 6px;
+			background-color: #fff;
+
+		}
+
+		svg {
+
+			position: absolute;
+			width: 17px;
+			height: 9px;
+			top: 0;
+			right: 16px;
+			bottom: 0;
+			margin: auto;
+			stroke: #595959;
+			fill: none;
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				box-shadow: 0 4px 10px rgba(176, 52, 108, 0.35);
+				background: var(--pink);
+				color: #fff;
+
+				span {
+
+					background-color: transparent;
+
+				}
+
+				svg {
+
+					stroke: #fff;
+
+				}
+
+			}
+
+		}
+
+		@media ($responsive) {
+
+			font-size: 11px;
+			line-height: 16px;
+			height: 18px;
+			min-width: 118px;
+			padding: 1px;
+			border-radius: 2px;
+
+			span {
+
+				border-radius: 2px;
+
+			}
+
+			svg {
+
+				right: 5px;
+				transform: scale(.6);
+
+			}
+
+		}
+
+	}
+
 	&--super {
 
 		width: 720px;

@@ -1,0 +1,40 @@
+{% set title = "Вступить в Cosmogid Профи" %}
+
+{% set description = "Для оформления заявки заполните поля формы отправки, приложив сканы ваших документов об образовании в бьюти-сфере." %}
+
+{% set urlPage = "club" %}
+
+{% set ogImage = "img/club/service@2x.png" %}
+{% set ogImage236 = "img/club/service.png" %}
+
+{% set breadcrumbs = ['Клуб профессионалов','Заявка на вступление'] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<form action="/" class="form form-table form-club" enctype="multipart/form-data">
+
+{% include "club/registration/head.html" %}
+
+{% include "club/registration/data.html" %}
+
+{% include "club/registration/contact.html" %}
+
+{% include "club/registration/profi.html" %}
+
+{% include "club/registration/brand.html" %}
+
+{% include "club/registration/files.html" %}
+
+{% include "club/registration/comment.html" %}
+
+{% include "club/registration/foot.html" %}
+
+		</form>
+
+	</div>
+
+{% endblock %}

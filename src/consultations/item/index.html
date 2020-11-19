@@ -1,0 +1,104 @@
+{% set title = "Как делать эпиляцию" %}
+
+{% set description = "Для укрепления луковиц волос советую Вам: Ампулы от выпадения, для ослабленных и склонных к выпадению волос. Уникальное сочетание ингредиентов (аминексил 1,5% + корень имбиря + виперид) мгновенно воздействует для минимизации выпадения волос." %}
+
+{% set urlPage = "consultations/item" %}
+
+{% set ogImage = "img/consultations/ogImage.jpg" %}
+{% set ogImage236 = "img/consultations/ogImage236.jpg" %}
+
+{% set breadcrumbs = ['Консультации специалистов',title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Question",
+				"author": {
+					"@type": "Person",
+					"name": "Юлия"
+				},
+				"name": "Как делать эпиляцию",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"author": {
+						"@type": "Person",
+						"name": "Юлия Аксенова (косметолог)"
+					},
+					"text":  "Для укрепления луковиц волос советую Вам: Ампулы от выпадения, для ослабленных и склонных к выпадению волос. Уникальное сочетание ингредиентов (аминексил 1,5% + корень имбиря + виперид) мгновенно воздействует для минимизации выпадения волос. Значительно сокращает выпадение волос через 6 недель использования. Укрепляет структуру волос от корней. Обладает успокаивающими свойствами, снижает зуд и дискомфорт кожи головы через 3 недели использования. Помогает сохранить естественный защитный барьер кожи головы. Волосы становятся прочнее и красивее."
+				}
+			}
+		</script>
+
+		<div class="consultations">
+
+			<div class="consultations__body">
+
+				<blockquote class="consultations-item">
+
+					<div class="consultations-item__body">
+
+						<h2 class="consultations-item__title">
+							Вопрос:
+						</h2>
+
+						<p class="consultations-item__text">
+							Здравствуйте подскажите пожалуйста как пользоваться Гелем с гликолевой кислотой (25%) рН 2,5 200 мл,надо его чем нибудь разводить?И делать предпиллинги перед этим основным или нанести этот гель,затем нейтролизовать и сыворатку востанавливающую???
+						</p>
+
+						<address class="consultations-item__head">
+
+							<a href="/" class="consultations-item__cat">
+								тело
+							</a>
+
+							<time class="consultations-item__date" datetime="2020-11-02">
+								02.11.2020, Юлия
+							</time>
+
+						</address>
+
+					</div>
+
+				</blockquote>
+
+				<blockquote class="consultations-item">
+
+					<h2 class="consultations-item__title">
+						Как делать эпиляцию:
+					</h2>
+
+					<p class="consultations-item__text">
+						Добрый день, Юлия! <br>Для укрепления луковиц волос советую Вам: <br><a href="/">Ампулы от выпадения, для ослабленных и склонных к выпадению волос</a><br> Уникальное сочетание ингредиентов (аминексил 1,5% + корень имбиря + виперид) мгновенно воздействует для минимизации выпадения волос. Значительно сокращает выпадение волос через 6 недель использования. Укрепляет структуру волос от корней. Обладает успокаивающими свойствами, снижает зуд и дискомфорт кожи головы через 3 недели использования. Помогает сохранить естественный защитный барьер кожи головы. Волосы становятся прочнее и красивее.
+					</p>
+
+					<cite class="consultations-item__cite">
+						С уважением, Юлия Аксенова (косметолог)
+					</cite>
+
+				</blockquote>
+
+			</div>
+
+			<aside class="consultations__bar">
+
+				<div class="consultations__bar-sticky">
+
+{% include "consultations/bar.html" %}
+
+				</div>
+
+			</aside>
+
+		</div>
+
+{% include "news/article/pagin.html" %}
+
+	</article>
+
+{% endblock %}

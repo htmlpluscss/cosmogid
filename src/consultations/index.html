@@ -1,0 +1,43 @@
+{% set title = "Консультации специалистов" %}
+
+{% set description = "Посмотреть готовые консультации, задать вопрос косметологу или подобрать личную схему ухода, заполнив специальную форму" %}
+
+{% set urlPage = "consultations" %}
+
+{% set ogImage = "img/consultations/ogImage.jpg" %}
+{% set ogImage236 = "img/consultations/ogImage236.jpg" %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+{% include "consultations/head.html" %}
+
+		<div class="consultations">
+
+			<div class="consultations__body">
+
+{% include "consultations/list.html" %}
+{% include "news/pagin.html" %}
+
+			</div>
+
+			<aside class="consultations__bar">
+
+				<div class="consultations__bar-sticky">
+
+{% include "consultations/bar.html" %}
+
+				</div>
+
+			</aside>
+
+		</div>
+
+	</article>
+
+{% endblock %}

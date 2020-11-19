@@ -86,6 +86,43 @@
 
 		}
 
+		&__flex {
+
+			margin: 10px 0;
+
+			@media ($desktop) {
+
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+
+				&-form-fast-result {
+
+					width: 396px;
+					margin-left: 36px;
+
+				}
+
+			}
+
+			@media ($responsive) {
+
+				&-right {
+
+					margin-top: 20px;
+
+				}
+
+				&-form-fast-result {
+
+					margin-bottom: 24px;
+
+				}
+
+			}
+
+		}
+
 	}
 
 	&-pagin {
