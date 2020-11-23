@@ -1306,9 +1306,9 @@ fieldset {
 			vertical-align: top;
 			padding: 12px 0;
 
-			&--w136 {
+			&--w140 {
 
-				width: 136px;
+				width: 140px;
 
 			}
 
@@ -1347,13 +1347,38 @@ fieldset {
 
 		&-contact {
 
-			display: flex;
-			flex-wrap: wrap;
-			white-space: nowrap;
+			@media ($desktop) {
+
+				display: flex;
+				flex-wrap: wrap;
+
+			}
 
 			.form-table__item {
 
-				width: 50%;
+				margin: 10px 0 20px;
+
+				@media ($desktop) {
+
+					width: 162px;
+					margin: 5px 16px 5px 0;
+
+				}
+
+				.input {
+
+					margin: 12px 0;
+
+					& ~ .checkbox-2 {
+
+						font-size: 12px;
+						line-height: 18px;
+						font-weight: 300;
+						margin: 8px 0;
+
+					}
+
+				}
 
 			}
 
