@@ -1,0 +1,34 @@
+{% set title = "Задать вопрос специалисту" %}
+
+{% set description = "Если Вам требуется подобрать уход и обширная консультация- воспользуйтесь формой подобрать личную схему ухода" %}
+
+{% set urlPage = "consultations/question" %}
+
+{% set ogImage = "img/consultations/ogImage.jpg" %}
+{% set ogImage236 = "img/consultations/ogImage236.jpg" %}
+
+{% set breadcrumbs = ['Консультации специалистов',title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<form action="/" class="form form-table">
+
+{% include "consultations/question/head.html" %}
+
+{% include "consultations/question/data.html" %}
+
+{% include "consultations/question/contact.html" %}
+
+{% include "consultations/question/comment.html" %}
+
+{% include "consultations/question/foot.html" %}
+
+		</form>
+
+	</div>
+
+{% endblock %}

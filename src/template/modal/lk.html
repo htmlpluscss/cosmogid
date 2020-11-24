@@ -24,7 +24,9 @@
 
 			</form>
 
-			<form action="/" class="modal__item modal__item--sms form-lk form-sms">
+			<form action="/" class="modal__item modal__item--sms form-lk form-sms" id="form-sms-login">
+
+				<input type="hidden" class="form-sms__login" name="login">
 
 				<div class="form-lk__head">
 
@@ -34,19 +36,19 @@
 						</svg>
 					</button>
 
-					<h3 class="form-lk__title h3" id="modal-sms__phone">
+					<h3 class="form-lk__title h3 form-sms__title">
 						Авторизация через телефон
 					</h3>
 
 				</div>
 
-				<label class="form-lk__label" for="form-sms">
+				<label class="form-lk__label" for="form-sms-code">
 					Введите 4 цифры кода подтверждения
 				</label>
 
-				<input class="form-lk__input modal__focus input" required="required" name="sms" id="form-sms" type="tel">
+				<input class="form-lk__input modal__focus input form-sms__code" required="required" name="code" id="form-sms-code" type="tel">
 
-				<p class="form-lk__after">
+				<p class="form-lk__after form-sms__from">
 					Мы отправили SMS с кодом на ваш номер
 				</p>
 
@@ -63,7 +65,7 @@
 					</span>
 
 					<button class="form-lk__repeat-sms btn btn--read hide" type="button">
-						Отправить новое sms
+						Отправить новый код
 					</button>
 
 				</div>

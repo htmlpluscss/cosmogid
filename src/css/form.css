@@ -1526,3 +1526,75 @@ fieldset {
 	}
 
 }
+
+.confirm-phone {
+
+	position: relative;
+
+	&__btn {
+
+		position: absolute;
+		font-weight: 500;
+
+		@media ($responsive) {
+
+			top: 4px;
+			right: 4px;
+			height: 22px;
+			font-size: 11px;
+			line-height: 22px;
+
+		}
+
+		@media ($desktop) {
+
+			top: 0;
+			left: 100%;
+			margin-left: 8px;
+			font-size: 12px;
+			height: 30px;
+			line-height: 30px;
+
+		}
+
+	}
+
+	&__error {
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin-top: -1px;
+		color: var(--error);
+		border-top: 1px solid var(--error);
+		font-size: 10px;
+		font-weight: 500;
+		line-height: 14px;
+
+	}
+
+	&__check {
+
+		position: absolute;
+		width: 26px;
+		height: 22px;
+		top: 2px;
+		left: 100%;
+		display: none;
+		margin-left: 8px;
+
+	}
+
+	&__input:disabled ~ &__btn {
+
+		display: none;
+
+	}
+
+	&__input:disabled ~ &__check {
+
+		display: block;
+
+	}
+
+}

@@ -1,148 +1,122 @@
-((form) => {
+( forms => {
 
-	if(!form) {
+	if(!forms.length) {
 
 		return;
 
 	}
 
-	let secunds = 60;
+	Array.from(forms, form => {
 
-	const timer = form.querySelector('.form-sms__timer'),
-		  textError = form.querySelector('.form-lk__after'),
-		  btnRepeat = form.querySelector('.form-lk__repeat-sms'),
-		  formLogin = document.querySelector('.form-login');
+		const code = form.querySelector('.form-sms__code'),
+			  timer = form.querySelector('.form-sms__timer'),
+			  textError = form.querySelector('.form-lk__after'),
+			  btnRepeat = form.querySelector('.form-lk__repeat-sms');
 
-	const setupTimer = () => {
+		const submitForm = repeat => {
 
-		timer.textContent = secunds;
+			const formData = new FormData(form),
+				  xhr = new XMLHttpRequest();
 
-		setTimeout( () => {
+			if(repeat) {
 
-			secunds--;
-
-			if(secunds > 0) {
-
-				setupTimer();
-
-			}
-			else {
-
-				btnRepeat.classList.remove('hide');
-				timer.parentNode.classList.add('hide');
+				formData.append('repeat-code', 'more');
 
 			}
 
-		}, 100);
+			xhr.open("POST", form.getAttribute('action'));
+			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 
-	}
+			xhr.onreadystatechange = () => {
 
-	// повторный запрос смс
-
-	btnRepeat.addEventListener('click', () => {
-
-		btnRepeat.classList.add('hide');
-		timer.parentNode.classList.remove('hide');
-
-	});
-
-	// обработка неверных смс
-
-	form.addEventListener('submit', event => {
-
-		event.preventDefault();
-
-		const formData = new FormData(form),
-			  xhr = new XMLHttpRequest();
-
-		xhr.open("POST", form.getAttribute('action'));
-		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-
-		xhr.onreadystatechange = () => {
-
-			if (xhr.readyState != 4){
-
-				return;
-
-			}
-
-			if (xhr.status === 200) {
-
-				textError.innerHTML = xhr.responseText;
-				textError.classList.add('is-error');
-
-			}
-
-		}
-
-		xhr.send(formData);
-
-	});
-
-	// обработка формы логина
-
-	formLogin.addEventListener('submit', event => {
-
-		event.preventDefault();
-
-		const formData = new FormData(formLogin),
-			  xhr = new XMLHttpRequest();
-
-		xhr.open("POST", formLogin.getAttribute('action'));
-		xhr.responseType = 'json';
-		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-
-		xhr.onreadystatechange = () => {
-
-			if (xhr.readyState != 4){
-
-				return;
-
-			}
-
-			if (xhr.status === 200) {
-
-				const obj = xhr.response;
-
-				console.log(obj);
-
-				if(obj.modalShow === 'info') {
-
-					document.querySelector('#modal-info__title').innerHTML = obj.title ? obj.title : '';
-					document.querySelector('#modal-info__message').innerHTML = obj.message ? obj.message : '';
-
-					CG.modalShow(obj.modalShow);
+				if (xhr.readyState !== 4){
 
 					return;
 
 				}
 
-				if(obj.phone) {
+				if (xhr.status === 200) {
 
-					document.querySelector('#modal-sms__phone').innerHTML = obj.phone;
+					textError.classList.add('is-error');
+
+					if(obj.from) {
+
+						form.querySelector('.form-sms__from').textContent = obj.from;
+
+					}
+
+					if(obj.repeat === 'disabled') {
+
+						form.querySelector('.form-lk__repeat').innerHTML = obj.text;
+
+					}
+					else {
+
+						form.setupTimer(obj.repeat ? obj.repeat : undefined);
+
+					}
+
+					if(obj.confirmPhone.disabledId) {
+
+						document.querySelector('#' + obj.disabled.id + ' .input').disabled = true;
+
+					}
 
 				}
 
-				if(obj.repeat === 'disabled') {
+			}
 
-					form.querySelector('.form-lk__repeat').innerHTML = obj.text;
+			xhr.send(formData);
+
+		};
+
+		form.setupTimer = (secunds = 60) => {
+
+			timer.textContent = secunds;
+
+			setTimeout( () => {
+
+				secunds--;
+
+				if(secunds > 0) {
+
+					form.setupTimer(secunds);
 
 				}
 				else {
 
-					secunds = parseInt(obj.repeat);
+					btnRepeat.classList.remove('hide');
+					timer.parentNode.classList.add('hide');
 
 				}
 
-				CG.modalShow('sms');
-				setupTimer();
-
-			}
+			}, 100);
 
 		}
 
-		xhr.send(formData);
+		// повторный запрос смс
+
+		btnRepeat.addEventListener('click', () => {
+
+			btnRepeat.classList.add('hide');
+			timer.parentNode.classList.remove('hide');
+
+			code.value = '';
+
+			submitForm(true);
+
+		});
+
+		// обработка неверных смс
+
+		form.addEventListener('submit', event => {
+
+			event.preventDefault();
+
+			submitForm();
+
+		});
 
 	});
 
-})(document.querySelector('.form-sms'));
+})(document.querySelectorAll('.form-sms'));

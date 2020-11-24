@@ -1,0 +1,41 @@
+			<form action="/" class="modal__item modal__item--confirm-phone-sms form-lk form-sms" id="modal-form-confirm-phone-sms">
+
+				<input type="hidden" class="form-sms__login" name="phone">
+
+				<div class="form-lk__head">
+
+					<h3 class="form-lk__title h3">
+						Подтверждение телефона
+					</h3>
+
+				</div>
+
+				<label class="form-lk__label" for="confirm-phone-sms">
+					Введите 4 цифры кода подтверждения
+				</label>
+
+				<input class="form-lk__input modal__focus input form-sms__code" required="required" name="sms" id="confirm-phone-sms" type="tel">
+
+				<p class="form-lk__after form-sms__from">
+					Мы отправили SMS с кодом на ваш номер
+				</p>
+
+				<button class="form-lk__submit btn btn--blue">
+					Проверить код  из SMS
+				</button>
+
+				<div class="form-lk__repeat">
+
+					Не получили код?
+
+					<span class="form-sms__repeat-text">
+						Попробуйте через <span class="form-sms__timer">60</span> сек.
+					</span>
+
+					<button class="form-lk__repeat-sms btn btn--read hide" type="button">
+						Отправить новое sms
+					</button>
+
+				</div>
+
+			</form>
