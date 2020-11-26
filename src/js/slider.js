@@ -11,8 +11,9 @@
 
 	Array.from(range, slider => {
 
-		const min = parseInt(slider.getAttribute('data-min'), 10),
-			  max = parseInt(slider.getAttribute('data-max'), 10),
+		const step = parseInt(slider.getAttribute('data-step'), 10) || 1,
+			  min = parseInt(slider.getAttribute('data-min'), 10) || 0,
+			  max = parseInt(slider.getAttribute('data-max'), 10) || 9999999,
 			  input = slider.querySelectorAll('.input'),
 			  inputMin = slider.querySelector('.slider-range__input-min'),
 			  inputMax = slider.querySelector('.slider-range__input-max'),
@@ -21,7 +22,7 @@
 		noUiSlider.create(track, {
 			connect: true,
 			start: [min, max],
-			step: 10,
+			step: step,
 			range: {
 				'min': min,
 				'max': max
@@ -59,8 +60,12 @@
 
 			el.addEventListener('focus', () => {
 
-				el.value = CG.strToNumber(el.value);
-				setTimeout( () => el.setSelectionRange(0,99), 100);
+				if(el.value.length) {
+
+					el.value = CG.strToNumber(el.value);
+					setTimeout( () => el.setSelectionRange(0,99), 100);
+
+				}
 
 			});
 

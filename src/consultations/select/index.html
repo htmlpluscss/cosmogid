@@ -1,13 +1,13 @@
-{% set title = "Вступить в Cosmogid Профи" %}
+{% set title = "Подобрать личную схему ухода" %}
 
-{% set description = "Для оформления заявки заполните поля формы отправки, приложив сканы ваших документов об образовании в бьюти-сфере." %}
+{% set description = "Для оформления заявки как можно подробнее заполните поля формы отправки, это увеличит точность подобранной схемы ухода." %}
 
-{% set urlPage = "club" %}
+{% set urlPage = "consultations/select" %}
 
-{% set ogImage = "img/club/service@2x.png" %}
-{% set ogImage236 = "img/club/service.png" %}
+{% set ogImage = "img/consultations/ogImage.jpg" %}
+{% set ogImage236 = "img/consultations/ogImage236.jpg" %}
 
-{% set breadcrumbs = ['Клуб профессионалов','Заявка на вступление'] %}
+{% set breadcrumbs = ['Консультации специалистов',title] %}
 
 {% extends "template/base.html" %}
 
@@ -15,23 +15,29 @@
 
 	<div class="center">
 
-		<form action="/" class="form form-table form-club" enctype="multipart/form-data">
+		<form action="/" class="form form-table">
 
-{% include "club/registration/head.html" %}
+{% include "consultations/select/head.html" %}
 
-{% include "club/registration/data.html" %}
+{% include "consultations/select/data.html" %}
 
-{% include "club/registration/contact.html" %}
+{% include "consultations/select/contact.html" %}
 
-{% include "club/registration/profi.html" %}
+{% include "consultations/select/category.html" %}
 
-{% include "club/registration/brand.html" %}
+{% include "consultations/select/problem.html" %}
 
-{% include "club/registration/files.html" %}
+{% include "consultations/select/type.html" %}
 
-{% include "club/registration/comment.html" %}
+{% include "consultations/select/expectation.html" %}
 
-{% include "club/registration/foot.html" %}
+{% include "consultations/select/brand.html" %}
+
+{% include "consultations/select/budget.html" %}
+
+{% include "consultations/select/comment.html" %}
+
+{% include "consultations/select/foot.html" %}
 
 		</form>
 

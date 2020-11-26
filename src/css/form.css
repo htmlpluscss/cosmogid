@@ -1428,6 +1428,18 @@ fieldset {
 
 			height: 120px;
 
+			&--h32 {
+
+				height: 32px;
+
+			}
+
+			&--h64 {
+
+				height: 64px;
+
+			}
+
 		}
 
 		&--row {
@@ -1437,6 +1449,53 @@ fieldset {
 			.checkbox-radio + .checkbox-radio {
 
 				margin-left: 20px;
+
+			}
+
+		}
+
+		&-help {
+
+			position: relative;
+
+			&-link {
+
+				color: var(--pink);
+				font-size: 11px;
+				line-height: 12px;
+				font-weight: 500;
+				display: flex;
+				align-items: center;
+				white-space: nowrap;
+
+				@media ($responsive) {
+
+					margin: 8px 0;
+
+					br {
+
+						display: none;
+
+					}
+
+				}
+
+				@media ($desktop) {
+
+					position: absolute;
+					top: 4px;
+					left: 100%;
+					margin-left: 8px;
+
+				}
+
+				svg {
+
+					margin-right: 8px;
+					fill: var(--pink);
+					flex-shrink: 0;
+
+				}
 
 			}
 
@@ -1522,6 +1581,52 @@ fieldset {
 			}
 
 		}
+
+	}
+
+	&__columns {
+
+		@media ($responsive) {
+
+			&--sub {
+
+				margin-left: 24px;
+
+			}
+
+		}
+
+		@media ($desktop) {
+
+			display: flex;
+			margin: 0 -24px;
+
+			&--sub {
+
+				margin: 0;
+
+			}
+
+			&-item {
+
+				white-space: nowrap;
+				margin: 0 24px;
+
+				&--w324 {
+
+					width: 324px;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.noUi-connect {
+
+		background-color: var(--pink);
 
 	}
 
