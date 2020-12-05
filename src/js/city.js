@@ -1,7 +1,7 @@
 
 // подтверждение города
 
-((form) => {
+( form => {
 
 	if(!form) {
 
@@ -20,12 +20,13 @@
 		form.classList.add('hide');
 //		Cookies.set('ucity', form.elements.city.value);
 
-		const formData = new FormData(form),
-			  xhr = new XMLHttpRequest();
-
-		xhr.open("POST", form.getAttribute('action'));
-		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-		xhr.send(formData);
+		fetch(form.getAttribute('action'), {
+			method: 'POST',
+			headers: {
+				'X-Requested-With': 'XMLHttpRequest'
+			},
+			body: new FormData(form)
+		});
 
 	});
 
@@ -34,7 +35,7 @@
 
 // поиск и выбор города
 
-((form) => {
+( form => {
 
 	if(!form) {
 
@@ -51,30 +52,20 @@
 
 			form.classList.add('is-loading');
 
-			const formData = new FormData(form),
-				  xhr = new XMLHttpRequest();
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				headers: {
+					'X-Requested-With': 'XMLHttpRequest'
+				},
+				body: new FormData(form)
+			})
+			.then( response => {
 
-			xhr.open("POST", form.getAttribute('action'));
-			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+				console.log(response);
+				result.innerHTML = response.text();
+				form.classList.remove('is-loading');
 
-			xhr.onreadystatechange = () => {
-
-				if (xhr.readyState !== 4){
-
-					return;
-
-				}
-
-				if (xhr.status === 200) {
-
-					result.innerHTML = xhr.responseText;
-					form.classList.remove('is-loading');
-
-				}
-
-			}
-
-			xhr.send(formData);
+			});
 
 		}
 
@@ -88,7 +79,7 @@
 
 // пункты выдачи и постаматы
 
-((form) => {
+( form => {
 
 	if(!form) {
 
@@ -278,34 +269,19 @@ ymaps.modules.define('Panel', [
 
 		if(input.value.length > 3 && event.key !== 'enter'){
 
-			const formData = new FormData(form),
-				  xhr = new XMLHttpRequest();
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				headers: {
+					'X-Requested-With': 'XMLHttpRequest'
+				},
+				body: new FormData(form)
+			})
+			.then( response => {
 
-			xhr.open("POST", form.getAttribute('action'));
-			xhr.responseType = 'json';
-			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+				console.log(response);
+				result.innerHTML = response.json();
 
-			xhr.onreadystatechange = () => {
-
-				if (xhr.readyState !== 4){
-
-					return;
-
-				}
-
-				if (xhr.status === 200) {
-
-					const obj = xhr.response;
-
-					console.log(obj);
-
-					result.innerHTML = obj.result;
-
-				}
-
-			}
-
-			xhr.send(formData);
+			});
 
 		}
 

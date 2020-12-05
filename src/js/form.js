@@ -11,122 +11,120 @@ document.body.addEventListener('submit', event => {
 
 	event.preventDefault();
 
+
 	const form = event.target,
-		  formData = new FormData(form),
-		  xhr = new XMLHttpRequest();
+		  url = form.getAttribute('action'),
+		  formData = new FormData(form);
 
-	xhr.open("POST", form.getAttribute('action'));
-	xhr.responseType = 'json';
-	xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+	let response = await fetch(url, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'X-Requested-With': 'XMLHttpRequest'
+		},
+		body: formData
+	});
 
-	xhr.onreadystatechange = () => {
+	if (!response.ok) {
 
-		if (xhr.readyState !== 4){
+		alert("Ошибка HTTP: " + response.status);
+		return;
 
-			return;
+	}
+
+	const obj = await response.json();
+	console.log(obj);
+
+// информационные сообщения
+	if(obj.modalShow) {
+
+		if(obj.modalShow === 'info') {
+
+			document.querySelector('#modal-info__title').innerHTML = obj.title ? obj.title : '';
+			document.querySelector('#modal-info__message').innerHTML = obj.message ? obj.message : '';
 
 		}
 
-		if (xhr.status === 200) {
+		CG.modalShow(obj.modalShow);
 
-			const obj = xhr.response;
-			console.log(obj);
+	}
 
-	// информационные сообщения
-			if(obj.modalShow) {
+// избранное
+	if(form.classList.contains('form-wishlist')){
 
-				if(obj.modalShow === 'info') {
+		const headerCount = document.querySelector('.header__wishlist .header__icons-count');
 
-					document.querySelector('#modal-info__title').innerHTML = obj.title ? obj.title : '';
-					document.querySelector('#modal-info__message').innerHTML = obj.message ? obj.message : '';
+		if(obj.headerCount) {
 
-				}
+			headerCount.classList.toggle('hide', obj.headerCount === 0);
+			headerCount.textContent = obj.headerCount;
 
-				CG.modalShow(obj.modalShow);
+		}
 
-			}
+		form.elements.mode.value = obj.mode;
 
-	// избранное
-			if(form.classList.contains('form-wishlist')){
+	}
 
-				const headerCount = document.querySelector('.header__wishlist .header__icons-count');
+// сравнение
+	if(form.classList.contains('form-compare')){
 
-				if(obj.headerCount) {
+		form.elements.mode.value = obj.mode;
 
-					headerCount.classList.toggle('hide', obj.headerCount === 0);
-					headerCount.textContent = obj.headerCount;
+	}
 
-				}
+// кнопка Купить
+	if(form.classList.contains('form-buy')){
 
-				form.elements.mode.value = obj.mode;
+		const headerCount = document.querySelector('.header__cart .header__icons-count');
 
-			}
+		if(cart.headerCount) {
 
-	// сравнение
-			if(form.classList.contains('form-compare')){
+			headerCount.textContent = cart.headerCount;
 
-				form.elements.mode.value = obj.mode;
+		}
 
-			}
+		if(cart.mode === "add") {
 
-	// кнопка Купить
-			if(form.classList.contains('form-buy')){
+			form.querySelector('.form-buy__btns a').classList.remove('hide');
+			form.querySelector('.form-buy__btns button').classList.add('hide');
 
-				const headerCount = document.querySelector('.header__cart .header__icons-count');
-
-				if(cart.headerCount) {
-
-					headerCount.textContent = cart.headerCount;
-
-				}
-
-				if(cart.mode === "add") {
-
-					form.querySelector('.form-buy__btns a').classList.remove('hide');
-					form.querySelector('.form-buy__btns button').classList.add('hide');
-
-					console.log('реалтзовать возврат articleid для установке в карточке активного варианта')
+			console.log('реалтзовать возврат articleid для установке в карточке активного варианта')
 /*
-					if(articleID.length) {
+			if(articleID.length) {
 
-						Array.from(articleID, input => {
+				Array.from(articleID, input => {
 
-							if(input.value === cart.articleid) {
+					if(input.value === cart.articleid) {
 
-								input.setAttribute('data-in-basket', 'in basket');
+						input.setAttribute('data-in-basket', 'in basket');
 
-							}
+					}
 
-						});
+				});
 
-					}*/
-
-				}
-
-			}
-
-		// Часто покупают вместе
-			if(form.classList.contains('product-set')){
-
-				if(cart.headerCount) {
-
-					headerCount.textContent = cart.headerCount;
-
-				}
-
-				if(cart.mode === "add") {
-
-					form.querySelector('.product-set__btn a').classList.remove('hide');
-					form.querySelector('.product-set__btn button').classList.add('hide');
-
-				}
-
-			}
+			}*/
 
 		}
 
 	}
 
-	xhr.send(formData);
+// Часто покупают вместе
+	if(form.classList.contains('product-set')){
+
+		if(cart.headerCount) {
+
+			headerCount.textContent = cart.headerCount;
+
+		}
+
+		if(cart.mode === "add") {
+
+			form.querySelector('.product-set__btn a').classList.remove('hide');
+			form.querySelector('.product-set__btn button').classList.add('hide');
+
+		}
+
+	}
+
 
 });
