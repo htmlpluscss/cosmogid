@@ -1,6 +1,6 @@
 // ajax add item
 
-((form) => {
+( form => {
 
 	if(!form) {
 
@@ -14,37 +14,26 @@
 
 		event.preventDefault();
 
-		const formData = new FormData(form),
-			  xhr = new XMLHttpRequest();
-
-		xhr.open("POST", form.getAttribute('action'));
-		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-
 		btn.disabled = true;
 
-		xhr.onreadystatechange = () => {
+		fetch(form.getAttribute('action'), {
+			method: 'POST',
+			headers: {
+				'X-Requested-With' : 'XMLHttpRequest'
+			},
+			body: new FormData(form)
+		})
+		.then( response => {
 
-			if (xhr.readyState != 4){
+			console.log(response);
 
-				return;
+			btn.disabled = false;
 
-			}
+			form.elements.page.value = parseInt(form.elements.page.value + 1);
 
-			if (xhr.status === 200) {
+			document.querySelector('#review-sort-result').innerHTML = document.querySelector('#review-sort-result').innerHTML + response.text();
 
-				btn.disabled = false;
-
-				console.log(xhr.responseText);
-
-				form.elements.page.value = parseInt(form.elements.page.value + 1);
-
-				document.querySelector('#review-sort-result').innerHTML = document.querySelector('#review-sort-result').innerHTML + xhr.responseText;
-
-			}
-
-		}
-
-		xhr.send(formData);
+		});
 
 	});
 
@@ -53,7 +42,7 @@
 
 // сортировака
 
-((sort) => {
+( sort => {
 
 	if(!sort.length) {
 
@@ -67,31 +56,19 @@
 
 		form.addEventListener('change', () => {
 
-			const formData = new FormData(form),
-				  xhr = new XMLHttpRequest();
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				headers: {
+					'X-Requested-With' : 'XMLHttpRequest'
+				},
+				body: new FormData(form)
+			})
+			.then( response => {
 
-			xhr.open("POST", form.getAttribute('action'));
-			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+				console.log(response);
+				document.querySelector('#review-sort-result').innerHTML = response.text();
 
-			xhr.onreadystatechange = () => {
-
-				if (xhr.readyState != 4){
-
-					return;
-
-				}
-
-				if (xhr.status === 200) {
-
-					console.log(xhr.responseText);
-
-					document.querySelector('#review-sort-result').innerHTML = xhr.responseText;
-
-				}
-
-			}
-
-			xhr.send(formData);
+			});
 
 		});
 
@@ -100,7 +77,7 @@
 })(document.querySelectorAll('.review-sort'));
 
 // показать форму
-((form) => {
+( form => {
 
 	if(!form) {
 
@@ -138,7 +115,7 @@
 
 // like
 
-((review) => {
+( review => {
 
 	if(!review) {
 
@@ -152,39 +129,29 @@
 
 			event.preventDefault();
 
-			const form = event.target,
-				  formData = new FormData(form),
-				  xhr = new XMLHttpRequest();
+			const form = event.target;
 
-			xhr.open("POST", form.getAttribute('action'));
-			xhr.responseType = 'json';
-			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				headers: {
+					'Content-Type' : 'application/json',
+					'X-Requested-With' : 'XMLHttpRequest'
+				},
+				body: new FormData(form)
+			})
+			.then( response => {
 
-			xhr.onreadystatechange = () => {
+				console.log(response);
+				const obj = response.json();
 
-				if (xhr.readyState != 4){
+				if(obj.mode) {
 
-					return;
-
-				}
-
-				if (xhr.status === 200) {
-
-					const obj = xhr.response;
-					console.log(obj);
-
-					if(obj.mode) {
-
-						form.classList.toggle('is-like', obj.mode === "add");
-						form.querySelector('.review-like__count').textContent = obj.count;
-
-					}
+					form.classList.toggle('is-like', obj.mode === "add");
+					form.querySelector('.review-like__count').textContent = obj.count;
 
 				}
 
-			}
-
-			xhr.send(formData);
+			});
 
 		}
 

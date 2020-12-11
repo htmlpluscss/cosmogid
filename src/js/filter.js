@@ -34,50 +34,41 @@
 
 			// запрос
 
-			const formData = new FormData(filter),
-				  xhr = new XMLHttpRequest();
+			fetch(filter.getAttribute('action'), {
+				method: 'POST',
+				headers: {
+					'Content-Type' : 'application/json',
+					'X-Requested-With' : 'XMLHttpRequest'
+				},
+				body: new FormData(filter)
+			})
+			.then( response => {
 
-			xhr.open("POST", filter.getAttribute('action'));
-			xhr.responseType = 'json';
-			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+				console.log(response);
 
-			xhr.onreadystatechange = () => {
+				const obj = response.json();
 
-				if (xhr.readyState !== 4){
+				console.log(obj);
 
-					return;
+				filter.classList.remove('is-loading');
 
-				}
+				Array.from(counerTotal, el => el.textContent = obj.total);
 
-				if (xhr.status === 200) {
+				setTimeoutID = setTimeout( () => floatBtn.classList.remove('is-show'), 5000);
 
-					const obj = xhr.response;
+				if(obj.list) {
 
-					console.log(obj);
-
-					filter.classList.remove('is-loading');
-
-					Array.from(counerTotal, el => el.textContent = obj.total);
-
-					setTimeoutID = setTimeout( ()=> floatBtn.classList.remove('is-show'), 5000);
-
-					if(obj.list) {
-
-						listResult.innerHTML = obj.list;
-
-					}
-
-					if(obj.pagin) {
-
-						pagin.innerHTML = obj.pagin;
-
-					}
+					listResult.innerHTML = obj.list;
 
 				}
 
-			}
+				if(obj.pagin) {
 
-			xhr.send(formData);
+					pagin.innerHTML = obj.pagin;
+
+				}
+
+			});
 
 		}
 
@@ -89,34 +80,24 @@
 
 		event.preventDefault();
 
-		const formData = new FormData(filter),
-			  xhr = new XMLHttpRequest();
-
-		xhr.open("POST", filter.getAttribute('action'));
-		xhr.responseType = 'json';
-		xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		const formData = new FormData(filter);
 
 		formData.append("result", true);
 		catalogRight.classList.add('is-loading');
 
-		xhr.onreadystatechange = () => {
+		fetch(filter, {
+			method: 'POST',
+			headers: {
+				'X-Requested-With' : 'XMLHttpRequest'
+			},
+			body: formData
+		})
+		.then( response => {
 
-			if (xhr.readyState !== 4){
+			console.log(response.text());
+			catalogRight.classList.remove('is-loading');
 
-				return;
-
-			}
-
-			if (xhr.status === 200) {
-
-				console.log(xhr.responseText);
-				catalogRight.classList.remove('is-loading');
-
-			}
-
-		}
-
-		xhr.send(formData);
+		});
 
 	});
 

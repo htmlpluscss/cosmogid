@@ -1,6 +1,4 @@
-((items)=>{
-
-	"use strict";
+( items => {
 
 	if(!items.length) {
 

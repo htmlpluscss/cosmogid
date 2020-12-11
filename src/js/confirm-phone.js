@@ -29,51 +29,43 @@
 			}
 			else {
 
-				const formData = new FormData(),
-					  xhr = new XMLHttpRequest();
+				const formData = new FormData();
 
 				formData.append('id-disabled', el.getAttribute('id'));
 				formData.append('phone', input.value);
 
-				xhr.open("POST", url);
-				xhr.responseType = 'json';
-				xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+				fetch(url, {
+					method: 'POST',
+					headers: {
+						'X-Requested-With' : 'XMLHttpRequest'
+					},
+					body: formData
+				})
+				.then( response => {
 
-				xhr.onreadystatechange = () => {
+					console.log(response);
 
-					if (xhr.readyState !== 4){
+					const obj = response.json();
+					console.log(obj);
 
-						return;
+					if(obj.done) {
 
-					}
-
-					if (xhr.status === 200) {
-
-						const obj = xhr.response;
-						console.log(obj);
-
-						if(obj.done) {
-
-						//	input.disabled = true;
-							document.querySelector('#modal-form-confirm-phone-sms').setupTimer();
-
-						}
-
-						if(obj.error) {
-
-							error.classList.remove('hide');
-							error.textContent = obj.error;
-
-							//	Телефон уже есть в базе. Забыли авторизироваться?
-							//	Подтвердите номер
-
-						}
+					//	input.disabled = true;
+						document.querySelector('#modal-form-confirm-phone-sms').setupTimer();
 
 					}
 
-				}
+					if(obj.error) {
 
-				xhr.send(formData);
+						error.classList.remove('hide');
+						error.textContent = obj.error;
+
+						//	Телефон уже есть в базе. Забыли авторизироваться?
+						//	Подтвердите номер
+
+					}
+
+				});
 
 			}
 

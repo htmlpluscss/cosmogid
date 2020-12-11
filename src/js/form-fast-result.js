@@ -17,31 +17,24 @@
 
 				form.classList.add('is-loading');
 
-				const formData = new FormData(form),
-					  xhr = new XMLHttpRequest();
 
-				xhr.open("POST", form.getAttribute('action'));
-				xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+				fetch(form.getAttribute('action'), {
+					method: 'POST',
+					headers: {
+						'X-Requested-With' : 'XMLHttpRequest'
+					},
+					body: new FormData(form)
+				})
+				.then(response => response.text())
+				.then(result => {
 
-				xhr.onreadystatechange = () => {
+					console.log(result);
 
-					if (xhr.readyState !== 4){
+					result.innerHTML = result;
+					form.classList.remove('is-loading');
+					form.classList.toggle('is-empty', result.length === 0);
 
-						return;
-
-					}
-
-					if (xhr.status === 200) {
-
-						result.innerHTML = xhr.responseText;
-						form.classList.remove('is-loading');
-						form.classList.toggle('is-empty', xhr.responseText.length === 0);
-
-					}
-
-				}
-
-				xhr.send(formData);
+				});
 
 			}
 

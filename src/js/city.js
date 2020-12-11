@@ -55,7 +55,7 @@
 			fetch(form.getAttribute('action'), {
 				method: 'POST',
 				headers: {
-					'X-Requested-With': 'XMLHttpRequest'
+					'X-Requested-With' : 'XMLHttpRequest'
 				},
 				body: new FormData(form)
 			})

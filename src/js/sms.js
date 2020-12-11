@@ -15,8 +15,7 @@
 
 		const submitForm = repeat => {
 
-			const formData = new FormData(form),
-				  xhr = new XMLHttpRequest();
+			const formData = new FormData(form);
 
 			if(repeat) {
 
@@ -24,49 +23,44 @@
 
 			}
 
-			xhr.open("POST", form.getAttribute('action'));
-			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+			fetch(form.getAttribute('action'), {
+				method: 'POST',
+				headers: {
+					'X-Requested-With' : 'XMLHttpRequest'
+				},
+				body: formData
+			})
+			.then( response => response.json())
+			.then( obj => {
 
-			xhr.onreadystatechange = () => {
+				console.log(obj);
 
-				if (xhr.readyState !== 4){
+				textError.classList.add('is-error');
 
-					return;
+				if(obj.from) {
 
-				}
-
-				if (xhr.status === 200) {
-
-					textError.classList.add('is-error');
-
-					if(obj.from) {
-
-						form.querySelector('.form-sms__from').textContent = obj.from;
-
-					}
-
-					if(obj.repeat === 'disabled') {
-
-						form.querySelector('.form-lk__repeat').innerHTML = obj.text;
-
-					}
-					else {
-
-						form.setupTimer(obj.repeat ? obj.repeat : undefined);
-
-					}
-
-					if(obj.confirmPhone.disabledId) {
-
-						document.querySelector('#' + obj.disabled.id + ' .input').disabled = true;
-
-					}
+					form.querySelector('.form-sms__from').textContent = obj.from;
 
 				}
 
-			}
+				if(obj.repeat === 'disabled') {
 
-			xhr.send(formData);
+					form.querySelector('.form-lk__repeat').innerHTML = obj.text;
+
+				}
+				else {
+
+					form.setupTimer(obj.repeat ? obj.repeat : undefined);
+
+				}
+
+				if(obj.confirmPhone.disabledId) {
+
+					document.querySelector('#' + obj.disabled.id + ' .input').disabled = true;
+
+				}
+
+			});
 
 		};
 
