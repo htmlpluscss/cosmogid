@@ -1,0 +1,158 @@
+.dostavka {
+
+	&__fieldset {
+
+		padding: 16px;
+		background-color: #f8f8f8;
+		max-width: 670px;
+
+	}
+
+	&__row {
+
+		@media ($desktop) {
+
+			display: flex;
+			align-items: flex-start;
+
+		}
+
+		& + & {
+
+			margin-top: 10px;
+
+		}
+
+	}
+
+	&__label {
+
+		padding: 5px 0;
+		font-weight: 500;
+		width: 158px;
+		line-height: 20px !important;
+		margin: 0 !important;
+
+	}
+
+	&__control {
+
+		display: flex;
+		flex-wrap: wrap;
+
+		.select {
+
+			width: 256px;
+
+		}
+
+		.checkbox-2 {
+
+			margin: 5px 20px 5px 0;
+
+		}
+
+	}
+
+	&__result {
+
+		margin: 36px 0;
+
+		@media ($responsive) {
+
+			overflow-x: scroll;
+			margin: 0 -16px;
+			padding: 16px;
+
+		}
+
+	}
+
+	&__table {
+
+		width: 100%;
+
+		thead {
+
+			th {
+
+				text-align: left;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 18px;
+				color: #9A9A9A;
+				padding: 6px 0;
+
+				& + th {
+
+					padding-left: 32px;
+
+				}
+
+			}
+
+		}
+
+		tbody {
+
+			td {
+
+				font-size: 13px;
+				line-height: 18px;
+				font-weight: 500;
+				color: #595959;
+				padding: 12px 0;
+				border-top: 1px solid #e1e1e1;
+				border-bottom: 1px solid #e1e1e1;
+				vertical-align: top;
+				text-align: left;
+
+				& + td {
+
+					padding-left: 32px;
+
+				}
+
+				b {
+
+					font-weight: 600;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__note {
+
+		color: var(--red);
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 18px;
+		margin: 20px 0 !important;
+
+	}
+
+	&__achtung {
+
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 20px;
+		margin: 10px 0 0 !important;
+		padding-left: 42px;
+		position: relative;
+
+		svg {
+
+			position: absolute;
+			top: 4px;
+			left: 0;
+			fill: var(--pink);
+
+		}
+
+	}
+
+}

@@ -4,22 +4,19 @@
 
 {% set urlPage = "help" %}
 
-{% set ogImage = "img/help/ogImage.jpg" %}
-{% set ogImage236 = "img/help/ogImage236.jpg" %}
-
 {% set breadcrumbs = [title] %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-	<section class="center">
+	<article class="center">
 
 		<div class="service-page">
 
-			<h1 class="h1">
+			<p class="h1">
 				Помощь
-			</h1>
+			</p>
 
 			<div class="service-page__box">
 
@@ -31,9 +28,9 @@
 
 				<div class="service-page__body">
 
-					<h2 class="h2">
+					<h1 class="h2">
 						<u>Как сделать</u> заказ
-					</h2>
+					</h1>
 
 					<p>
 						В интернет-магазине <span class="color-pink">CosmoGid</span> заказ можно оформить без регистрации. Регистрация на сайте необязательная. Цены на товары на сайте указаны без учета стоимости доставки. Стоимсоть доставки можно узнать <a href="/" class="color-pink">здесь</a>.
@@ -308,6 +305,6 @@
 
 		</div>
 
-	</section>
+	</article>
 
 {% endblock %}

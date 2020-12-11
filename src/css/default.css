@@ -102,6 +102,12 @@ table {
 
 }
 
+.color-red {
+
+	color: var(--red);
+
+}
+
 .align-center {
 
 	text-align: center;
