@@ -153,4 +153,40 @@
 
 	}
 
+	&-letters {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: 16px -8px;
+
+		&__item {
+
+			margin: 8px;
+
+		}
+
+		a {
+
+			font-size: 14px;
+			color: var(--color);
+			text-decoration: none;
+			font-weight: 600;
+
+			&.is-current {
+
+				color: var(--pink);
+
+			}
+
+		}
+
+	}
+
+	&-search {
+
+		max-width: 400px;
+		margin: 36px 0;
+
+	}
+
 }

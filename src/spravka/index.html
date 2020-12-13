@@ -1,10 +1,10 @@
-{% set title = "Бренды - купить, цена со скидкой" %}
+{% set title = "Справочник ингридиентов" %}
 
-{% set description = "Профессиональная косметика для лица огромный выбор по низким ценам в интернет-магазине профессиональной косметики CosmoGid." %}
+{% set description = "300 вариантов" %}
 
-{% set urlPage = "producers" %}
+{% set urlPage = "spravka" %}
 
-{% set breadcrumbs = ['Бренды'] %}
+{% set breadcrumbs = ['Каталог','Справочник ингридиентов','Все'] %}
 
 {% extends "template/base.html" %}
 
@@ -12,33 +12,23 @@
 
 	<section class="center">
 
-		<form action="/" class="producers-filter">
+		<header class="catalog-head">
 
-			<div class="producers-filter__row">
+			<h1 class="h1 catalog-head__title" data-counter="300 вариантов">
+				{{ title }}
+			</h1>
 
-				<div class="producers-filter__item">
+		</header>
 
-{% include "producers/country.html" %}
+{% include "spravka/letters.html" %}
 
-				</div>
+		<div class="producers-search">
 
-				<div class="producers-filter__item">
+{% include "spravka/search.html" %}
 
-{% include "producers/letter.html" %}
+		</div>
 
-				</div>
-
-				<div class="producers-filter__item">
-
-{% include "producers/category.html" %}
-
-				</div>
-
-			</div>
-
-		</form>
-
-		<div class="producers-list" data-empty="Подходящих брендов не найдено">
+		<div class="producers-list" data-empty="Подходящих ингридиентов не найдено">
 
 {% include "producers/brand.html" %}
 
