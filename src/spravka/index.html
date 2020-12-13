@@ -1,0 +1,49 @@
+{% set title = "Бренды - купить, цена со скидкой" %}
+
+{% set description = "Профессиональная косметика для лица огромный выбор по низким ценам в интернет-магазине профессиональной косметики CosmoGid." %}
+
+{% set urlPage = "producers" %}
+
+{% set breadcrumbs = ['Бренды'] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="center">
+
+		<form action="/" class="producers-filter">
+
+			<div class="producers-filter__row">
+
+				<div class="producers-filter__item">
+
+{% include "producers/country.html" %}
+
+				</div>
+
+				<div class="producers-filter__item">
+
+{% include "producers/letter.html" %}
+
+				</div>
+
+				<div class="producers-filter__item">
+
+{% include "producers/category.html" %}
+
+				</div>
+
+			</div>
+
+		</form>
+
+		<div class="producers-list" data-empty="Подходящих брендов не найдено">
+
+{% include "producers/brand.html" %}
+
+		</div>
+
+	</section>
+
+{% endblock %}

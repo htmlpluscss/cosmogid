@@ -237,8 +237,18 @@ CG.swiper = swipe => {
 				  mySwipeCompareTable = document.querySelector('.swiper-container--compare-table');
 
 			mySwipe = new Swiper(swipe, {
-				slidesPerView: 4,
-				simulateTouch: false
+				simulateTouch: false,
+				breakpoints: {
+					1250: {
+						slidesPerView: 4
+					},
+					768: {
+						slidesPerView: 3
+					},
+					320: {
+						slidesPerView: 2
+					}
+				}
 			});
 
 			btn[0].addEventListener('click', () => {
@@ -295,8 +305,18 @@ CG.swiper = swipe => {
 			toggleSwipe = false;
 
 			mySwipe = new Swiper(swipe, {
-				slidesPerView: 4,
-				simulateTouch: false
+				simulateTouch: false,
+				breakpoints: {
+					1250: {
+						slidesPerView: 4
+					},
+					768: {
+						slidesPerView: 3
+					},
+					320: {
+						slidesPerView: 2
+					}
+				}
 			});
 
 		}

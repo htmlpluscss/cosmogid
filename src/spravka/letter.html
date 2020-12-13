@@ -1,0 +1,46 @@
+{% set letter = [
+
+	"A",
+	"B",
+	"C",
+	"D",
+	"E",
+	"F",
+	"G",
+	"H",
+	"I",
+	"J",
+	"K",
+	"L",
+	"M",
+	"N",
+	"O",
+	"P",
+	"R",
+	"S",
+	"T",
+	"V",
+	"W",
+	"Y"
+
+] %}
+
+	<div class="select is-default">
+
+		<select name="letter">
+
+			<option value="all">
+				А-Я
+			</option>
+
+{% for item in letter %}
+
+			<option value="{{ item }}">
+				{{ item }}
+			</option>
+
+{% endfor %}
+
+		</select>
+
+	</div>
