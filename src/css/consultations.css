@@ -223,6 +223,12 @@
 
 		}
 
+		&__body + &__title {
+
+			margin-top: 1em;
+
+		}
+
 		&__title {
 
 			color: var(--pink);

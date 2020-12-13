@@ -1341,6 +1341,19 @@ fieldset {
 
 		}
 
+		&-required {
+
+			display: flex;
+
+			&::after {
+
+				color: var(--red);
+				content: '*';
+
+			}
+
+		}
+
 	}
 
 	&__control {
@@ -1503,10 +1516,25 @@ fieldset {
 
 	}
 
+	&__note-required {
+
+		color: var(--red);
+		font-weight: 600;
+		margin: 24px 0;
+		font-size: 13px;
+
+	}
+
 	&__submit {
 
 		display: flex;
 		justify-content: center;
+
+		&--w464 {
+
+			max-width: 464px;
+
+		}
 
 		@media ($responsive) {
 

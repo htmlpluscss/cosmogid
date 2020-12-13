@@ -1,0 +1,103 @@
+{% set title = "Вопросы и ответы" %}
+
+{% set description = "В данном разделе Вы сможете найти ответы на частые вопросы." %}
+
+{% set urlPage = "faq" %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="center">
+
+		<div class="service-page">
+
+			<p class="h1">
+				Помощь
+			</p>
+
+			<div class="service-page__box">
+
+				<div class="service-page-bar">
+
+{% include "service-page/menu.html" %}
+
+				</div>
+
+				<div class="service-page__body">
+
+					<header class="service-page__content">
+
+						<h1 class="h2">
+							<u>Вопросы</u> и ответы
+						</h1>
+
+						<p>
+							В данном разделе Вы сможете найти ответы на частые вопросы.
+						</p>
+
+					</header>
+
+{% for double in [1,2,3] %}
+
+					<article class="consultations-item">
+
+						<div class="consultations-item__body">
+
+							<p class="consultations-item__title">
+								Вопрос:
+							</p>
+
+							<p class="consultations-item__text">
+								Когда ожидать поступления товара, который находится в статусе «предзаказ»?
+							</p>
+
+						</div>
+
+						<p class="consultations-item__title">
+							Ответ:
+						</p>
+
+						<p class="consultations-item__text">
+							Статус «предзаказ» означает, что данный товар надо будет заказывать у поставщика. Сроки поступления обычно не превышают 5-7 дней.
+						</p>
+
+					</article>
+
+					<article class="consultations-item">
+
+						<div class="consultations-item__body">
+
+							<p class="consultations-item__title">
+								Вопрос:
+							</p>
+
+							<p class="consultations-item__text">
+								Могу ли я отказаться от части заказа уже после его оформления или добавить еще товар?
+							</p>
+
+						</div>
+
+						<p class="consultations-item__title">
+							Ответ:
+						</p>
+
+						<p class="consultations-item__text">
+							Добрый день. Да, это можно сделать, но при условии, что ваш заказ еще не передан в службу доставки. Чтобы отказаться от части заказа, вы можете либо самостоятельно позвонить оператору, либо дождаться его звонка и попросить подкорректировать ваш заказ. Если вы хотите добавить новую позицию, то это также можно сделать по телефону или же оформить новый заказа с комментарием о том, с каким заказом объединить новую покупку.
+						</p>
+
+					</article>
+
+{% endfor %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+{% endblock %}

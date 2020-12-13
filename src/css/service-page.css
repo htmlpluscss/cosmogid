@@ -26,6 +26,11 @@
 	&__body {
 
 		flex-grow: 1;
+
+	}
+
+	&__content {
+
 		font-size: 14px;
 		line-height: 23px;
 		color: var(--text);

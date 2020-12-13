@@ -1,0 +1,136 @@
+{% set title = "Обратная связь" %}
+
+{% set description = "Через данное обращение руководитель напрямую получит от Вас все предложения и замечания по работе интрнет-магазина." %}
+
+{% set urlPage = "feedback" %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<section class="center">
+
+		<div class="service-page">
+
+			<p class="h1">
+				Помощь
+			</p>
+
+			<div class="service-page__box">
+
+				<div class="service-page-bar">
+
+{% include "service-page/menu.html" %}
+
+				</div>
+
+				<article class="service-page__body">
+
+					<div class="service-page__content">
+
+						<h1 class="h2">
+							<u>Обратная</u> связь
+						</h1>
+
+						<p>
+							Уважаемые посетители интернет-магазина CosmoGid! <br>
+							Через данное обращение руководитель напрямую получит от Вас все предложения и замечания по работе интрнет-магазина. Будем благодарны Вам за обращение, нам важно чтобы клиентам было комфортно с нами  сотрудничать на всех этапах работы!
+						</p>
+
+					</div>
+
+					<form action="/" class="form form-table">
+
+						<div class="form-table__table">
+
+							<div class="form-table__row">
+
+								<label class="form-table__label form-table__label--w140" for="form-name">
+									<span class="form-table__label-required">
+										Имя:
+									</span>
+								</label>
+
+								<div class="form-table__control form-table__control--w324">
+
+									<input class="input" required="required" name="name" id="form-name">
+
+								</div>
+
+							</div>
+
+							<div class="form-table__row">
+
+								<label class="form-table__label" for="form-phone">
+									<span class="form-table__label-required">
+										Телефон:
+									</span>
+								</label>
+
+								<div class="form-table__control">
+
+									<input class="input" required="required" name="phone" id="form-phone" type="tel">
+
+								</div>
+
+							</div>
+
+							<div class="form-table__row">
+
+								<label class="form-table__label" for="form-email">
+									<span class="form-table__label-required">
+										E-mail:
+									</span>
+								</label>
+
+								<div class="form-table__control">
+
+									<input class="input" required="required" name="email" id="form-email" type="email">
+
+								</div>
+
+							</div>
+
+							<div class="form-table__row">
+
+								<label class="form-table__label" for="form-comment">
+									<span class="form-table__label-required">
+										Сообщение:
+									</span>
+								</label>
+
+								<div class="form-table__control">
+
+									<textarea class="input" name="comment" id="form-comment"></textarea>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<p class="form-table__note-required">
+							*Поля обязательные для заполнения
+						</p>
+
+						<div class="form-table__submit form-table__submit--w464">
+
+							<button class="btn btn--super">
+								Отправить
+							</button>
+
+						</div>
+
+					</form>
+
+				</article>
+
+			</div>
+
+		</div>
+
+	</section>
+
+{% endblock %}

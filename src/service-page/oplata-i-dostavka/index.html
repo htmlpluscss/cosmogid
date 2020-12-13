@@ -2,7 +2,7 @@
 
 {% set description = "Варианты доставки и оплаты очень разнообразны. Каждый может выбрать для себя максимально удобный вариант. Доставка заказа осуществляется курьером лично в руки, либо до пункта самовывоза." %}
 
-{% set urlPage = "oplata-i-dostavka/" %}
+{% set urlPage = "oplata-i-dostavka" %}
 
 {% set breadcrumbs = [title] %}
 
@@ -22,7 +22,7 @@
 
 				<div class="service-page-bar">
 
-{% include "help/menu.html" %}
+{% include "service-page/menu.html" %}
 
 				</div>
 
@@ -30,9 +30,13 @@
 
 					<article>
 
-						<h1 class="h2">
-							<u>Доставка</u>
-						</h1>
+						<header class="service-page__content">
+
+							<h1 class="h2">
+								<u>Доставка</u>
+							</h1>
+
+						</header>
 
 						<form action="/" class="dostavka">
 
@@ -68,7 +72,7 @@
 
 										<label class="checkbox-2">
 
-											<input type="checkbox" class="checkbox-2__input" name="type1" value="1" checked="checked">
+											<input type="radio" class="checkbox-2__input" name="type" value="1" checked="checked">
 
 											<span class="checkbox-2__label is-pink">
 												Курьерская доставка
@@ -78,7 +82,7 @@
 
 										<label class="checkbox-2">
 
-											<input type="checkbox" class="checkbox-2__input" name="type2" value="2">
+											<input type="radio" class="checkbox-2__input" name="type" value="2">
 
 											<span class="checkbox-2__label is-pink">
 												Самовывоз
@@ -88,7 +92,7 @@
 
 										<label class="checkbox-2">
 
-											<input type="checkbox" class="checkbox-2__input" name="type3" value="3">
+											<input type="radio" class="checkbox-2__input" name="type" value="3">
 
 											<span class="checkbox-2__label is-pink">
 												Почта России
@@ -187,22 +191,18 @@
 											</td>
 										</tr>
 
-										<tr>
-											<td colspan="4">
-												<p class="dostavka__achtung">
-													<svg width="31" height="31" viewBox="0 0 31 31">
-														<path fill-rule="evenodd" clip-rule="evenodd" d="M30.78 15.1a15 15 0 11-30 0 15 15 0 0130 0zm-13.12 7.5a1.87 1.87 0 11-3.75 0 1.87 1.87 0 013.75 0zM15.78 5.74c-1.03 0-1.87.84-1.87 1.88v7.5a1.88 1.88 0 003.75 0V7.6c0-1.04-.84-1.88-1.88-1.88z"/>
-													</svg>
-													Уважаемые покупатели! <br>Пожалуйста проверяйте заказанный товар при получении. После получения товара ответственность переходит к покупателю.
-												</p>
-											</td>
-										</tr>
-
 									</tfoot>
 
 								</table>
 
 							</div>
+
+							<p class="dostavka__achtung">
+								<svg width="31" height="31" viewBox="0 0 31 31">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M30.78 15.1a15 15 0 11-30 0 15 15 0 0130 0zm-13.12 7.5a1.87 1.87 0 11-3.75 0 1.87 1.87 0 013.75 0zM15.78 5.74c-1.03 0-1.87.84-1.87 1.88v7.5a1.88 1.88 0 003.75 0V7.6c0-1.04-.84-1.88-1.88-1.88z"/>
+								</svg>
+								Уважаемые покупатели! <br>Пожалуйста проверяйте заказанный товар при получении. После получения товара ответственность переходит к покупателю.
+							</p>
 
 						</form>
 
@@ -210,7 +210,7 @@
 
 					<hr>
 
-					<article>
+					<article class="service-page__content">>
 
 						<h1 class="h2">
 							<u>Оплата</u>

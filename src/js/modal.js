@@ -17,7 +17,7 @@
 
 	modal.addEventListener('click', event => {
 
-		if(event.target.classList.contains('modal') || event.target.classList.contains('modal__box') || event.target.closest('.modal__close')){
+		if(event.target.classList.contains('modal') || event.target.closest('.modal__close')){
 
 			CG.hideModal();
 
