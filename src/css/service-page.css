@@ -35,11 +35,17 @@
 		line-height: 23px;
 		color: var(--text);
 
-		@media ($desktop) {
+		.img-arrow {
 
-			.img-arrow {
+			@media ($desktop) {
 
 				margin-left: -20px;
+
+			}
+
+			@media ($responsive) {
+
+				max-width: 100%;
 
 			}
 

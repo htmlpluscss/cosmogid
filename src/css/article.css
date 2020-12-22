@@ -7,6 +7,12 @@
 
 		margin-bottom: 24px;
 
+		@media ($responsive) {
+
+			margin-bottom: 12px;
+
+		}
+
 	}
 
 	&__footer {
@@ -41,6 +47,29 @@
 			&:hover {
 
 				border-color: var(--pink);
+
+			}
+
+		}
+
+		&-first-letter {
+
+			@media ($desktop) {
+
+				margin-bottom: 14px;
+
+			}
+
+			@media ($responsive) {
+
+				font-size: 16px;
+				font-weight: 500;
+
+			}
+
+			&:first-letter {
+
+				color: var(--pink);
 
 			}
 
