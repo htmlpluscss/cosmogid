@@ -1,0 +1,472 @@
+{% set title = site %}
+
+{% set dev = true %}
+{% set cart = true %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+<div class="center">
+
+<script>
+
+setTimeout( ()=> {
+
+	const eventModalShow = new CustomEvent("modalShow", {
+		detail: {
+			selector: "city"
+		}
+	});
+
+//	window.modal.dispatchEvent(eventModalShow);
+})
+
+</script>
+
+	<h1>
+		Страницы
+	</h1>
+
+	<ul class="h3">
+		<li><a href="/main/">Главная</a></li>
+		<li><a href="/category/">Категории</a></li>
+		<li><a href="/catalog/">Каталог</a></li>
+		<li><a href="/product/">Карточка товара</a></li>
+	</ul>
+
+	<h2>
+		Корзина
+	</h2>
+
+	<ul class="h3">
+		<li><a href="/cart/">Корзина</a></li>
+		<li><a href="/cart/empty/">Корзина пуста</a></li>
+	</ul>
+
+	<h2>
+		Личный кабинет
+	</h2>
+
+	<h2>
+		Modal
+	</h2>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<form action="/" class="form-buy">
+
+				<input type="hidden" name="id" value="19021">
+
+				<button class="btn form-buy__submit">
+					Купить
+				</button>
+
+			</form>
+
+		</div>
+
+		<div class="item">
+
+			<form action="/" class="form-buy">
+
+				<input type="hidden" name="id" value="19021">
+
+				<input type="hidden" name="modal" value="get-price">
+				<input type="hidden" name="img" value="https://forthouse.ru/pic/180x180/r-wb642vu0_gmg.jpg">
+				<input type="hidden" name="name" value="Холодильник Hitachi R-WB642VU0 GMG">
+
+				<button class="btn form-buy__submit">
+					Запросить цену
+				</button>
+
+			</form>
+
+		</div>
+
+		<div class="item">
+
+			<form action="/" class="form-buy">
+
+				<input type="hidden" name="id" value="19021">
+
+				<input type="hidden" name="modal" value="buy-one-click">
+				<input type="hidden" name="img" value="https://forthouse.ru/pic/180x180/r-wb642vu0_gmg.jpg">
+				<input type="hidden" name="name" value="Холодильник Hitachi R-WB642VU0 GMG">
+				<input type="hidden" name="price" value="84 950 ₽">
+
+				<button class="btn form-buy__submit">
+					Заказ в 1 клик
+				</button>
+
+			</form>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="ok" onclick="document.querySelector('.modal__item--ok .modal__title').innerHTML = `Заголовок`;document.querySelector('.modal__item--ok .modal__text').innerHTML = `Текст сообщения`">
+				Info
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<a data-youtube="oSOiGLNVGg0" target="_blank" rel="nofollow noopener" href="https://www.youtube.com/watch?v=oSOiGLNVGg0" class="btn btn--big btn--outline">
+				video youtube
+			</a>
+
+		</div>
+
+	</div>
+
+	<hr>
+
+	<h2>
+		Buttons
+	</h2>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<button class="btn">
+				btn
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--small">
+				btn btn--small
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--medium">
+				btn btn--medium
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--big">
+				btn btn--big
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--grey">
+				btn btn--grey
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--outline">
+				btn btn--outline
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--more">
+				btn btn--more
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" disabled="disabled">
+				btn disabled
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn">
+				<svg width="24" height="24" viewBox="0 0 24 24">
+					<path d="M16 18a1 1 0 0 0 0-2H6.99A1 1 0 0 0 6 17a1 1 0 0 0 .99 1H16ZM6 7a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1 1 1 0 0 0-1-1H7a1 1 0 0 0-1 1Zm14 6a1 1 0 1 0 0-2H7a1 1 0 1 0 0 2h13Z"/>
+					<circle cx="4" cy="7" r="1"/>
+					<circle cx="4" cy="12" r="1"/>
+					<circle cx="4" cy="17" r="1"/>
+				</svg>
+				btn
+			</button>
+
+		</div>
+
+	</div>
+
+
+	<h3>
+		Checkbox
+	</h3>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="checkbox" class="checkbox__input">
+
+					<span class="checkbox__label">
+						Выберите значение
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="checkbox" class="checkbox__input" checked="checked">
+
+					<span class="checkbox__label">
+						Выберите значение
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="checkbox" class="checkbox__input" disabled="disabled">
+
+					<span class="checkbox__label">
+						Выберите значение
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="checkbox" class="checkbox__input" disabled="disabled" checked="checked">
+
+					<span class="checkbox__label">
+						Выберите значение
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<h3>
+		Radio
+	</h3>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="radio" class="checkbox__input" name="radio">
+
+					<span class="checkbox__label">
+						Выберите значение
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="radio" class="checkbox__input" name="radio" checked="checked">
+
+					<span class="checkbox__label">
+						Выберите значение
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="radio" class="checkbox__input" disabled="disabled">
+
+					<span class="checkbox__label">
+						Выберите значение
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="checkbox">
+
+				<label class="checkbox__control">
+
+					<input type="radio" class="checkbox__input" disabled="disabled" checked="checked">
+
+					<span class="checkbox__label">
+						Выберите значение
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<hr>
+
+	<h2>
+		Input
+	</h2>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<input class="input" placeholder="placeholder">
+
+		</div>
+
+		<div class="item">
+
+			<input class="input" value="value">
+
+		</div>
+
+		<div class="item">
+
+			<input class="input" value="disabled" disabled="disabled">
+
+		</div>
+
+		<div class="item">
+
+			<input class="input input--big" placeholder="input--big">
+
+		</div>
+
+	</div>
+
+	<div class="flex flex--wrap hide">
+
+		<div class="item">
+
+			<div class="inputbox">
+
+				<label for="inputbox" class="inputbox__label">
+					* Индекс
+				</label>
+
+				<input id="inputbox" placeholder="Введите название" class="input" required="required">
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="inputbox">
+
+				<label for="inputbox-2" class="inputbox__label">
+					* Индекс
+				</label>
+
+				<input id="inputbox-2" value="123" class="input" required="required">
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<hr>
+
+	<h2>
+		Select
+	</h2>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<div class="select">
+
+				<select name="select">
+
+					<option value="1">Все заказы</option>
+					<option value="2">Готов к выдаче</option>
+					<option value="3">Собирается</option>
+					<option value="4">Отправлен</option>
+					<option value="5">Получен заказчиком</option>
+					<option value="6">Ожидает согласования</option>
+
+				</select>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock %}

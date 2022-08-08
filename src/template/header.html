@@ -1,0 +1,99 @@
+	<header class="header">
+
+		<div class="header__top">
+
+			<div class="center">
+
+				<div class="header__flex">
+
+					<div class="header__menu-top">
+
+						<button class="button btn-menu-toggle" type="button" aria-label="открыть меню">
+
+							<span class="btn-menu-toggle__top"></span>
+							<span class="btn-menu-toggle__center"></span>
+							<span class="btn-menu-toggle__bottom"></span>
+
+						</button>
+
+{% include "template/header/menu-top.html" %}
+
+					</div>
+
+					<div class="header__phone-mobile">
+
+						<a href="tel:+74952830878">
+
+							+7 495 283-08-78
+
+						</a>
+
+					</div>
+
+					<div class="header__cart">
+
+{% include "template/header/cart.html" %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header__main">
+
+			<div class="center">
+
+				<div class="header__flex">
+
+					<div class="header__logo">
+
+{% include "template/header/logo.html" %}
+
+					</div>
+
+					<div class="header__search">
+
+{% include "template/header/search.html" %}
+
+					</div>
+
+					<div class="header__phone">
+
+{% include "template/header/phone.html" %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header__bottom">
+
+			<div class="center">
+
+				<div class="header__flex">
+
+{% include "template/header/menu-category.html" %}
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header__search-mobile">
+
+			<form action="/search.php" autocomplete="off">
+
+				<input name="model" class="input" placeholder="Поиск по каталогу">
+
+			</form>
+
+		</div>
+
+	</header>
