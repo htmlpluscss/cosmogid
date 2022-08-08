@@ -1,0 +1,151 @@
+					<div class="menu-main__grid">
+
+						<div class="menu-main__column">
+
+							<ul class="menu-main__level-2">
+
+								<li>
+
+									<a class="menu-main__link is-open" href="/">
+										Вся парфюмерия
+									</a>
+
+									<ul class="menu-main__level-3">
+
+				{% for level3 in ["Новинки","Наборы","Миниатюры","Подарочные наборы"] %}
+
+										<li>
+
+											<a class="menu-main__link" href="/">
+												{{ level3 }}
+											</a>
+
+										</li>
+
+				{% endfor %}
+
+									</ul>
+
+								</li>
+
+								<li>
+
+									<a class="menu-main__link menu-main__link--sale" href="/">
+										Распродажа
+									</a>
+
+								</li>
+
+							</ul>
+
+						</div>
+
+						<div class="menu-main__column">
+
+							<ul class="menu-main__level-2">
+
+				{% for level2 in ["Женская парфюмерия","Мужская парфюмерия","Детская парфюмерия"] %}
+
+								<li>
+
+									<a class="menu-main__link is-btn" href="/">
+										{{ level2 }}
+									</a>
+
+									<ul class="menu-main__level-3">
+
+						{% for level3 in ["Новинки","Наборы","Подарочные наборы","Миниатюры"] %}
+
+										<li>
+
+											<a class="menu-main__link" href="/">
+												{{ level3 }}
+											</a>
+
+										</li>
+
+						{% endfor %}
+
+									</ul>
+
+								</li>
+
+				{% endfor %}
+
+							</ul>
+
+						</div>
+
+						<div class="menu-main__column">
+
+							<ul class="menu-main__level-2">
+
+				{% for level2 in ["Нишевая парфюмерия","Элитная парфюмерия","Арабская парфюмерия","Атомайзеры"] %}
+
+								<li>
+
+									<a class="menu-main__link is-btn" href="/">
+										{{ level2 }}
+									</a>
+
+									<ul class="menu-main__level-3">
+
+						{% for level3 in ["Новинки","Наборы","Подарочные наборы","Миниатюры"] %}
+
+										<li>
+
+											<a class="menu-main__link" href="/">
+												{{ level3 }}
+											</a>
+
+										</li>
+
+						{% endfor %}
+
+									</ul>
+
+								</li>
+
+				{% endfor %}
+
+							</ul>
+
+						</div>
+
+						<div class="menu-main__column">
+
+							<ul class="menu-main__level-2">
+
+				{% for level2 in ["Ароматы для дома"] %}
+
+								<li>
+
+									<a class="menu-main__link is-btn" href="/">
+										{{ level2 }}
+									</a>
+
+									<ul class="menu-main__level-3">
+
+						{% for level3 in ["Ароматизатор","Ароматические свечи","Атомайзеры","Освежители воздуха"] %}
+
+										<li>
+
+											<a class="menu-main__link" href="/">
+												{{ level3 }}
+											</a>
+
+										</li>
+
+						{% endfor %}
+
+									</ul>
+
+								</li>
+
+				{% endfor %}
+
+							</ul>
+
+						</div>
+
+					</div>

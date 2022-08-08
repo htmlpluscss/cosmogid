@@ -7,7 +7,7 @@
 
 .center {
 
-	width: 1370px;
+	width: 1304px;
 	max-width: 100%;
 	margin: 0 auto;
 	position: relative;
@@ -17,11 +17,14 @@
 
 @media $desktop {
 
+}
+
+@media (max-width: 1335px) {
+
 
 }
 
 @media $tablet {
-
 
 }
 
@@ -29,7 +32,9 @@
 
 	:root {
 
-		--space: 60px;
+	--indent: 40px;
+	--gap: 24px;
+		--space: 72px;
 
 	}
 
@@ -47,8 +52,7 @@
 
 	.center {
 
-		width: 848px;
-		padding: 0 var(--indent);
+		width: 768px;
 
 	}
 
@@ -58,9 +62,8 @@
 
 	:root {
 
-		--indent: 18px;
-		--gap: 20px;
-		--space: 40px;
+		--indent: 16px;
+		--gap: 24px;
 
 	}
 

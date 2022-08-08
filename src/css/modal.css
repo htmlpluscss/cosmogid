@@ -73,25 +73,6 @@
 
 	}
 
-	&__head,
-	&__foot {
-
-		padding: var(--gap) var(--indent);
-		background-color: #f2f2f2;
-
-	}
-
-	&__body {
-
-		padding: var(--gap) var(--indent);
-
-		& + & {
-
-			border-top: 1px solid #f2f2f2;
-
-		}
-
-	}
 
 	&__close-btn {
 
@@ -115,27 +96,6 @@
 			}
 
 		}
-
-	}
-
-	&__text {
-
-		font-size: 16px;
-
-	}
-
-	&__note {
-
-		font-size: 14px;
-		color: var(--text);
-
-	}
-
-	.btn,
-	.input {
-
-		border-radius: 0;
-		width: 100%;
 
 	}
 
@@ -177,24 +137,7 @@
 
 }
 
-.modal-product {
+.modal-city {
 
-	display: flex;
-	align-items: center;
-
-	&__photo {
-
-		width: 90px;
-		height: 90px;
-		margin-right: var(--gap);
-		flex-shrink: 0;
-
-		img {
-
-			object-fit: contain;
-
-		}
-
-	}
 
 }

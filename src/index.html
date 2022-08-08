@@ -29,10 +29,16 @@ setTimeout( ()=> {
 	</h1>
 
 	<ul class="h3">
+		<li><a href="https://cosmogid_2020.htmlpluscss.website/">2020</a></li>
 		<li><a href="/main/">Главная</a></li>
-		<li><a href="/category/">Категории</a></li>
 		<li><a href="/catalog/">Каталог</a></li>
 		<li><a href="/product/">Карточка товара</a></li>
+		<li><a href="/contacts/">Контакты</a></li>
+		<li><a href="/sale/">Акции и скидки</a></li>
+		<li><a href="/news/">Новости</a></li>
+		<li><a href="/news/article/">Новость</a></li>
+		<li><a href="/favourites/">Избранное</a></li>
+		<li><a href="/brand/">Бренды</a></li>
 	</ul>
 
 	<h2>
@@ -41,12 +47,8 @@ setTimeout( ()=> {
 
 	<ul class="h3">
 		<li><a href="/cart/">Корзина</a></li>
-		<li><a href="/cart/empty/">Корзина пуста</a></li>
+		<li><a href="/cart/order/">Оформление заказа</a></li>
 	</ul>
-
-	<h2>
-		Личный кабинет
-	</h2>
 
 	<h2>
 		Modal
@@ -54,7 +56,7 @@ setTimeout( ()=> {
 
 	<div class="flex flex--wrap">
 
-		<div class="item">
+		<div class="item hide">
 
 			<form action="/" class="form-buy">
 
@@ -68,7 +70,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<form action="/" class="form-buy">
 
@@ -86,7 +88,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<form action="/" class="form-buy">
 
@@ -105,7 +107,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<button class="btn" type="button" data-modal="ok" onclick="document.querySelector('.modal__item--ok .modal__title').innerHTML = `Заголовок`;document.querySelector('.modal__item--ok .modal__text').innerHTML = `Текст сообщения`">
 				Info
@@ -113,7 +115,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<a data-youtube="oSOiGLNVGg0" target="_blank" rel="nofollow noopener" href="https://www.youtube.com/watch?v=oSOiGLNVGg0" class="btn btn--big btn--outline">
 				video youtube
@@ -139,39 +141,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
-
-			<button class="btn btn--small">
-				btn btn--small
-			</button>
-
-		</div>
-
-		<div class="item">
-
-			<button class="btn btn--medium">
-				btn btn--medium
-			</button>
-
-		</div>
-
-		<div class="item">
-
-			<button class="btn btn--big">
-				btn btn--big
-			</button>
-
-		</div>
-
-		<div class="item">
-
-			<button class="btn btn--grey">
-				btn btn--grey
-			</button>
-
-		</div>
-
-		<div class="item">
+		<div class="item hide">
 
 			<button class="btn btn--outline">
 				btn btn--outline
@@ -197,20 +167,30 @@ setTimeout( ()=> {
 
 		<div class="item">
 
-			<button class="btn">
+			<button class="btn btn--text">
+				btn--text
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--text">
+
 				<svg width="24" height="24" viewBox="0 0 24 24">
 					<path d="M16 18a1 1 0 0 0 0-2H6.99A1 1 0 0 0 6 17a1 1 0 0 0 .99 1H16ZM6 7a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1 1 1 0 0 0-1-1H7a1 1 0 0 0-1 1Zm14 6a1 1 0 1 0 0-2H7a1 1 0 1 0 0 2h13Z"/>
 					<circle cx="4" cy="7" r="1"/>
 					<circle cx="4" cy="12" r="1"/>
 					<circle cx="4" cy="17" r="1"/>
 				</svg>
-				btn
+
+				btn--text + ico
+
 			</button>
 
 		</div>
 
 	</div>
-
 
 	<h3>
 		Checkbox
@@ -218,7 +198,7 @@ setTimeout( ()=> {
 
 	<div class="flex flex--wrap">
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="checkbox">
 
@@ -236,7 +216,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="checkbox">
 
@@ -254,7 +234,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="checkbox">
 
@@ -272,7 +252,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="checkbox">
 
@@ -298,7 +278,7 @@ setTimeout( ()=> {
 
 	<div class="flex flex--wrap">
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="checkbox">
 
@@ -316,7 +296,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="checkbox">
 
@@ -334,7 +314,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="checkbox">
 
@@ -352,7 +332,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="checkbox">
 
@@ -398,17 +378,11 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
-
-			<input class="input input--big" placeholder="input--big">
-
-		</div>
-
 	</div>
 
 	<div class="flex flex--wrap hide">
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="inputbox">
 
@@ -422,7 +396,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="inputbox">
 
@@ -446,7 +420,7 @@ setTimeout( ()=> {
 
 	<div class="flex flex--wrap">
 
-		<div class="item">
+		<div class="item hide">
 
 			<div class="select">
 

@@ -66,18 +66,17 @@ legend {
 .btn {
 
 	padding: 0 24px;
-	font-size: 14px;
-	height: 36px;
-	line-height: 36px;
-	border-radius: 3px;
+	font-size: 16px;
+	height: 40px;
+	line-height: 40px;
+	background-color: var(--purple);
+	font-weight: 500;
+	color: #fff;
 	display: grid;
 	align-items: center;
 	justify-content: center;
 	grid-auto-flow: column;
-gap: 12px;
-	background-color: var(--orange);
-	font-weight: 700;
-	color: #fff;
+	gap: 8px;
 
 	svg {
 
@@ -88,7 +87,7 @@ gap: 12px;
 	&:disabled {
 
 		color: var(--text);
-		background-color: var(--grey);
+		background-color: #cdcdcd;
 
 	}
 
@@ -96,57 +95,7 @@ gap: 12px;
 
 		&:hover {
 
-			background-color: var(--orangeHover);
-
-		}
-
-	}
-
-	&--big {
-
-		height: 48px;
-		line-height: 48px;
-		padding: 0 40px;
-		font-weight: 600;
-		font-size: 18px;
-
-		@media $mdWidth {
-
-			height: 42px;
-			line-height: 42px;
-			font-size: 15px;
-
-		}
-
-	}
-
-	&--medium {
-
-		height: 42px;
-		line-height: 42px;
-		padding: 0 36px;
-		text-transform: uppercase;
-
-	}
-
-	&--small {
-
-		padding: 0 10px;
-		font-size: 13px;
-
-	}
-
-	&--grey {
-
-		background-color: var(--text);
-
-		@media $desktop {
-
-			&:hover {
-
-				background-color: var(--grey);
-
-			}
+			/* background-color: var(--orangeHover); */
 
 		}
 
@@ -155,15 +104,15 @@ gap: 12px;
 	&--outline {
 
 		background-color: transparent !important;
-		font-weight: 400;
-		color: var(--color);
-		box-shadow: inset 0 0 0 1px var(--color);
+		font-weight: 500;
+		color: var(--purple);
+		box-shadow: inset 0 0 0 1px var(--purple);
 
 		@media $desktop {
 
 			&:hover {
 
-				box-shadow: inset 0 0 0 1px var(--grey);
+				/* box-shadow: inset 0 0 0 1px var(--gray); */
 
 			}
 
@@ -171,15 +120,22 @@ gap: 12px;
 
 	}
 
+	&--text {
+
+		background-color: transparent !important;
+		font-weight: 500;
+		font-size: 14px;
+		color: currentColor;
+		padding: 0 !important;
+
+	}
+
 	&--more {
 
 		background-color: transparent !important;
-		font-weight: 400;
-		color: var(--color);
-		border-bottom: 1px dotted;
-		padding: 0;
-		height: 24px;
-		line-height: 24px;
+		color: var(--purple);
+		border-bottom: 1px solid;
+		padding: 0 4px;
 
 		@media $desktop {
 
@@ -195,10 +151,23 @@ gap: 12px;
 
 }
 
+.ico-box {
+
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	box-shadow: 0 33px 133px rgba(18, 24, 39, 0.05), 0 13.7866px 55.5642px rgba(18, 24, 39, 0.0359427), 0 7.37098px 29.7073px rgba(18, 24, 39, 0.0298054), 0 4.13211px 16.6537px rgba(18, 24, 39, 0.025), 0 2.19453px 8.84464px rgba(18, 24, 39, 0.0201946), 0 0.913195px 3.68045px rgba(18, 24, 39, 0.0140573);
+outline:1px solid red;
+
+}
+
 .input {
 
-	line-height: 20px;
-	padding: 8px 14px;
+	line-height: 24px;
+	padding: 12px 16px;
 	font-size: 16px;
 	color: var(--color);
 
@@ -210,10 +179,11 @@ gap: 12px;
 	filter: none;
 	-webkit-transform: translateZ(0px);
 
-	height: 36px;
+	height: 48px;
 
-	border-radius: 3px;
-	border: 1px solid var(--border);
+	border: 0;
+	border-radius: 0;
+	border-bottom: 1px solid var(--border);
 	background-color: #fff;
 	box-shadow: inset 0 0 0 100px #fff;
 
@@ -224,20 +194,20 @@ gap: 12px;
 		overflow: auto;
 
 		scrollbar-width: thin;
-		scrollbar-color: var(--grey) transparent;
+		scrollbar-color: var(--gray) transparent;
 
 		&::-webkit-scrollbar {
 
 			width: 6px;
-			border-radius: 3px;
+			border-radius: 0px;
 			background-color: transparent;
 
 		}
 
 		&::-webkit-scrollbar-thumb {
 
-			border-radius: 3px;
-			background-color: var(--grey);
+			border-radius: 0px;
+			background-color: var(--gray);
 
 		}
 
@@ -245,35 +215,14 @@ gap: 12px;
 
 	@media $desktop {
 
-		font-size: 14px;
 
 	}
 
 	&::placeholder {
 
-		opacity: .5;
-		font-size: 14px;
-
-	}
-
-	&--big {
-
-		height: 50px;
-		line-height: 24px;
-		padding: 13px 16px;
-		font-size: 18px;
-
-		@media $desktop {
-
-			font-size: 18px;
-
-		}
-
-		&::placeholder {
-
-			font-size: 16px;
-
-		}
+		opacity: 1;
+		font-weight: 300;
+		font-style: italic;
 
 	}
 
@@ -290,8 +239,8 @@ gap: 12px;
 	&:focus {
 
 		outline: none;
-		border-color: var(--orange);
-		box-shadow: 0 0 0 1px var(--orange);
+		color: var(--purple);
+		border-color: var(--purple);
 
 	}
 
@@ -299,10 +248,8 @@ gap: 12px;
 
 		pointer-events: none;
 		color: var(--text);
-		box-shadow: inset 0 0 0 100px #d7dada;
-		background-color: #d7dada;
-		border-color: var(--grey);
-		background-color: var(--grey);
+		background-color: #cdcdcd;
+		box-shadow: inset 0 0 0 100px #cdcdcd;
 
 	}
 
