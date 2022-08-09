@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-/* color: red !important; */
+color: red !important;
 }
 
 html {
@@ -37,7 +37,7 @@ body {
 	overflow-y: scroll;
 	position: relative;
 	background-color: var(--bg);
-/* background-image: url(/css/1.png); */
+background-image: url(/css/1.png);
 background-position: center -476px;
 }
 
@@ -96,6 +96,14 @@ li {
 	font-size: 20px;
 	line-height: 1.2;
 	color: var(--gray);
+
+}
+
+hr {
+
+	border: 0;
+	height: 1px;
+	background-color: var(--purple);
 
 }
 
