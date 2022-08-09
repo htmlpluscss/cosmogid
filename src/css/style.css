@@ -12,12 +12,14 @@
 
 @import url(flex.css);
 
+@import url(billboard.css);
+
 /*
 @import url(content.css);
 @import url(breadcrumbs.css);
 @import url(content-block.css);
 
-@import url(billboard.css);
+
 @import url(swiper.css);
 @import url(main.css);
 

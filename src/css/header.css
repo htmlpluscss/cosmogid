@@ -5,8 +5,21 @@
 	position: sticky;
 	z-index: 9;
 	top: 0;
-	/* background-color: #fff; */
-	border-bottom: 1px solid var(--purple);
+	background-color: #fff;
+
+	&::after {
+
+		position: absolute;
+		height: 1px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		background-color: var(--purple);
+		pointer-events: none;
+
+	}
+
 
 	.center {
 
