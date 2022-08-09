@@ -1,0 +1,68 @@
+	<section class="preview-swiper">
+
+		<h2 class="h1 preview-swiper__title">
+			Отзывы наших покупателей
+		</h2>
+
+		<div class="preview-swiper__box">
+
+			<div class="preview-swiper__wrap">
+
+				<div class="preview-swiper__swiper swiper-container swiper-container--preview">
+
+					<div class="preview-swiper__list swiper-wrapper">
+
+{% for i in range(0, 2) %}
+
+{% for text in ["Являясь всего лишь частью общей картины, сделанные на базе интернет-аналитики выводы набирают популярность среди определенных слоев населения, а значит, должны быть обнародованы. Равным образом, курс на социально-ориентированный национальный проект.","Лишь некоторые особенности внутренней политики преданы социально-демократической анафеме. Таким образом, реализация намеченных плановых заданий в значительной степени обусловливает важность поставленных обществом задач. И нет.","Повседневная практика показывает, что экономическая повестка сегодняшнего дня требует определения и уточнения новых предложений. Как принято считать, активно развивающиеся страны третьего мира являются только методом политического.  Как принято считать, активно развивающиеся страны третьего мира являются только методом политического. Как принято считать, активно развивающиеся страны третьего мира являются только методом политического.","Следует отметить, что реализация намеченных плановых заданий способствует подготовке и реализации соответствующих условий активизации. Задача организации, в особенности же современная методология разработки создаёт необходимость."] %}
+
+						<div class="preview-swiper__item swiper-slide">
+
+							<article class="preview-review">
+
+								<a href="/" class="preview-review__img">
+
+									<picture>
+
+										<source srcset="/img/preview-review/{{ loop.index }}.webp 1x, /img/preview-review/{{ loop.index }}@2x.webp 2x" type="image/webp">
+										<source srcset="/img/preview-review/{{ loop.index }}.jpg 1x, /img/preview-review/{{ loop.index }}@2x.jpg 2x">
+
+										<img src="/img/preview-review/{{ loop.index }}.jpg" alt="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл" loading="lazy" width="244" height="200">
+
+									</picture>
+
+								</a>
+
+								<p class="preview-review__rating">
+
+									<span class="ratio ratio--4">
+										рейтинг 4 звезды
+									</span>
+
+								</p>
+
+								<a href="/" class="preview-review__title">
+									Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл
+								</a>
+
+								<p class="preview-review__text">
+									{{ text }}
+								</p>
+
+							</article>
+
+						</div>
+
+{% endfor %}
+
+{% endfor %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>

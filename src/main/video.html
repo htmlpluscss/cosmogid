@@ -1,0 +1,84 @@
+	<section class="preview-swiper preview-swiper--video">
+
+		<h2 class="h1 preview-swiper__title">
+			Видео отзывы наших покупателей
+		</h2>
+
+		<p class="preview-swiper__intro">
+			Загрузи отзыв получи скидку 5%
+		</p>
+
+		<div class="preview-swiper__box">
+
+			<div class="preview-swiper__wrap">
+
+				<div class="preview-swiper__swiper swiper-container swiper-container--preview">
+
+					<ul class="preview-swiper__list swiper-wrapper">
+
+{% for i in range(0, 12) %}
+
+						<li class="preview-swiper__item preview-swiper__item--video swiper-slide">
+
+							<article class="preview-video">
+
+								<a href="https://www.youtube.com/" class="preview-video__img" target="_blank" rel="noopener noffolow">
+
+									<picture>
+
+										<source srcset="/img/preview-video/video.webp 1x, /img/preview-video/video@2x.webp 2x" type="image/webp">
+										<source srcset="/img/preview-video/video.jpg 1x, /img/preview-video/video@2x.jpg 2x">
+
+										<img src="/img/preview-video/video.jpg" alt="Название видео ролика" loading="lazy" width="226" height="400">
+
+									</picture>
+
+								</a>
+
+								<div class="preview-video__stat">
+
+									<div class="preview-video__stat-item">
+
+										<svg width="32" height="32" viewBox="0 0 32 32">
+											<path d="M16 28c-.35 0-.7-.14-.94-.39L4.7 17.24a6.99 6.99 0 0 1 9.87-9.87L16 8.81l1.44-1.44a6.99 6.99 0 0 1 9.87 0 7.01 7.01 0 0 1 0 9.87L16.95 27.61c-.25.25-.6.4-.95.39ZM9.63 8C8.5 8 7.4 8.45 6.6 9.25a4.32 4.32 0 0 0 0 6.1L16 24.77l9.42-9.42a4.32 4.32 0 0 0 0-6.1 4.43 4.43 0 0 0-6.08 0l-2.39 2.4c-.52.53-1.36.53-1.88.01h-.01l-2.39-2.4c-.8-.81-1.9-1.27-3.04-1.26Z"/>
+										</svg>
+
+										25
+
+									</div>
+
+									<div class="preview-video__stat-item">
+
+										<svg width="32" height="32" viewBox="0 0 32 32">
+											<path d="M23.41 28c-.21 0-.42-.05-.61-.15L16 24.3l-6.8 3.56a1.33 1.33 0 0 1-1.93-1.41l1.33-7.5-5.5-5.34a1.33 1.33 0 0 1-.33-1.33c.16-.49.58-.84 1.08-.91l7.6-1.1L14.8 3.4a1.33 1.33 0 0 1 2.4 0l3.39 6.83 7.6 1.1c.5.08.92.43 1.08.91.14.48.01.99-.34 1.34l-5.5 5.33 1.34 7.5c.1.52-.1 1.04-.53 1.34-.24.17-.53.25-.83.24ZM16 21.47c.21 0 .43.04.61.14l5.03 2.67-.96-5.61c-.08-.44.07-.88.39-1.19l4-3.9-5.6-.83a1.33 1.33 0 0 1-.95-.75L16 7l-2.52 5c-.2.39-.57.66-1 .72l-5.6.83 4 3.9c.32.31.46.76.39 1.19l-.96 5.55 5.02-2.67c.22-.08.45-.1.67-.05Z"/>
+										</svg>
+
+										4.0
+
+									</div>
+
+								</div>
+
+							</article>
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="preview-swiper__all">
+
+				<button class="btn btn--outline" type="button" data-modal="video-review">
+					Загрузить видео отзыв
+				</button>
+
+			</div>
+
+		</div>
+
+	</section>

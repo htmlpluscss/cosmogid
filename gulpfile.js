@@ -170,11 +170,11 @@ gulp.task('copy', () => {
 
 gulp.task('ftp', () => {
 
-//	if(!config) {
+	if(!config) {
 
 		return true;
 
-//	}
+	}
 
 	const f = filter('**/*.html', {restore: true});
 	const conn = ftp.create( config.ftp );

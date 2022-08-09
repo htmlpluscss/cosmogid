@@ -1,0 +1,63 @@
+		<div class="tabs">
+
+			<div class="tabs__nav">
+
+				<button class="tabs__btn button is-active" type="button">
+					Акции
+				</button>
+
+				<button class="tabs__btn button" type="button">
+					Новинки
+				</button>
+
+				<button class="tabs__btn button" type="button">
+					Хиты продаж
+				</button>
+
+			</div>
+
+{% for i in range(0, 3) %}
+
+			<div class="tabs__item{% if loop.first === false %} visuallyhidden{% endif %}">
+
+				<div class="preview-swiper__box is-pagination-hide">
+
+					<div class="preview-swiper__wrap">
+
+						<div class="preview-swiper__swiper swiper-container swiper-container--preview">
+
+							<ul class="preview-swiper__list swiper-wrapper">
+
+{% for i in range(0, 10) %}
+
+								<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__preview-card-3.html" %}
+
+								</li>
+
+{% endfor %}
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="preview-swiper__all">
+
+					<a href="/" class="btn btn--outline">
+						Смотреть все
+					</a>
+
+				</div>
+
+			</div>
+
+{% endfor %}
+
+		</div>
+
+	</section>

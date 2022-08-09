@@ -1,0 +1,37 @@
+			<div class="tabs__item visuallyhidden">
+
+				<div class="preview-swiper__box is-pagination-hide">
+
+					<div class="preview-swiper__wrap">
+
+						<div class="preview-swiper__swiper swiper-container swiper-container--preview">
+
+							<ul class="preview-swiper__list swiper-wrapper">
+
+{% for i in range(0, 12) %}
+
+								<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__preview-card" + ["","-2","-3"] | random + ".html" %}
+
+								</li>
+
+{% endfor %}
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="preview-swiper__all">
+
+					<a href="/" class="btn btn--outline">
+						Смотреть все
+					</a>
+
+				</div>
+
+			</div>

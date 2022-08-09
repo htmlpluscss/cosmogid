@@ -1,0 +1,85 @@
+	<section class="preview-swiper">
+
+		<h2 class="h1 preview-swiper__title">
+			Новинки брендов
+		</h2>
+
+		<div class="tabs">
+
+			<div class="tabs__nav">
+
+				<button class="tabs__btn button is-active" type="button">
+					Косметика
+				</button>
+
+				<button class="tabs__btn button" type="button">
+					Парфюмерия
+				</button>
+
+				<button class="tabs__btn button" type="button">
+					Макияж
+				</button>
+
+			</div>
+
+			<div class="tabs__item">
+
+				<div class="preview-swiper__box is-pagination-hide">
+
+					<div class="preview-swiper__wrap">
+
+						<div class="preview-swiper__swiper swiper-container swiper-container--preview">
+
+							<ul class="preview-swiper__list swiper-wrapper">
+
+								<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__billboard-1.html" %}
+
+								</li>
+
+								<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__preview-card-withdrawn.html" %}
+
+								</li>
+
+								<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__preview-card.html" %}
+
+								</li>
+
+								<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__preview-card-not.html" %}
+
+								</li>
+
+{% for i in range(0, 7) %}
+
+								<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__preview-card.html" %}
+
+								</li>
+
+{% endfor %}
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+{% include "main/new-brand__item.html" %}
+
+{% include "main/new-brand__item.html" %}
+
+		</div>
+
+	</section>

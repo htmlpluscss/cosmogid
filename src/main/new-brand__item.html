@@ -1,0 +1,29 @@
+			<div class="tabs__item visuallyhidden">
+
+				<div class="preview-swiper__box is-pagination-hide">
+
+					<div class="preview-swiper__wrap">
+
+						<div class="preview-swiper__swiper swiper-container swiper-container--preview">
+
+							<ul class="preview-swiper__list swiper-wrapper">
+
+{% for i in range(0, 5) %}
+
+								<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__preview-card.html" %}
+
+								</li>
+
+{% endfor %}
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>

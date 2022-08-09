@@ -9,23 +9,26 @@
 @import url(footer.css);
 @import url(menu.css);
 @import url(modal.css);
-
+@import url(swiper.css);
 @import url(flex.css);
+@import url(tabs.css);
+@import url(rating.css);
 
 @import url(billboard.css);
 @import url(main-service.css);
+@import url(preview-swiper.css);
+@import url(preview-card.css);
+@import url(preview-review.css);
+@import url(preview-news.css);
+@import url(preview-video.css);
+@import url(support.css);
 
 /*
 @import url(content.css);
 @import url(breadcrumbs.css);
 @import url(content-block.css);
 
-
-@import url(swiper.css);
-@import url(main.css);
-
 @import url(category.css);
-@import url(tab-swiper.css);
 @import url(preview-product.css);
 
 @import url(catalog.css);
@@ -33,9 +36,7 @@
 @import url(nouislider.css);
 
 @import url(product.css);
-@import url(rating.css);
 @import url(tooltip.css);
-@import url(tabs.css);
 
 @import url(publication.css);
 

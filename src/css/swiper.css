@@ -19,9 +19,6 @@
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
-		list-style: none;
-		padding: 0;
-		z-index: 1;
 
 	}
 
@@ -51,18 +48,6 @@
 
 	}
 
-	.swiper-controls {
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		pointer-events: none;
-		z-index: 3;
-
-	}
-
 	.swiper-navigation {
 
 		display: flex;
@@ -73,6 +58,8 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
+		pointer-events: none;
+		z-index: 3;
 
 	}
 
@@ -85,25 +72,16 @@
 			position: relative;
 			pointer-events: auto;
 
-			width: 36px;
-			height: 36px;
-			background-color: #fff;
-
-			svg {
-
-				fill: #d5d5d5;
-
-			}
+			width: 40px;
+			height: 40px;
+			color: var(--purple);
 
 			@media $desktop {
 
 				&:hover {
 
-					svg {
-
-						fill: var(--orangeHover);
-
-					}
+					color: #fff;
+					background-color: var(--purple);
 
 				}
 
@@ -136,25 +114,20 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		position: absolute;
-		bottom: 15px;
-		left: 0;
-		right: 0;
+		margin: 24px 0;
 
 		.button {
 
-			height: 6px;
-			width: 6px;
+			width: 8px;
+			height: 8px;
 			flex-shrink: 0;
-			margin: 0 3px;
+			margin: 0 2px;
 			border-radius: 50%;
-			transition: var(--transitionDefault);
-			pointer-events: auto;
-			background-color: #f2f2f2;
+			background-color: #bdbdbd;
 
 			&.is-active {
 
-				background-color: var(--orange);
+				background-color: var(--purple);
 
 			}
 

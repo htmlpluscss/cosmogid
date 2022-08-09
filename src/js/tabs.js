@@ -4,6 +4,36 @@
 
 		[...tabs].forEach( tab => {
 
+			const btns = tab.querySelectorAll('.tabs__btn'),
+				  items = tab.querySelectorAll('.tabs__item');
+
+			[...btns].forEach( btn => {
+
+				btn.addEventListener('click', () => {
+
+					[...btns].forEach( (_btn,index) => {
+
+						_btn.classList.toggle('is-active', _btn === btn);
+						items[index].classList.toggle('visuallyhidden', _btn !== btn);
+
+					});
+
+				});
+
+			});
+
+		});
+
+	}
+
+})(document.querySelectorAll('.tabs'));
+
+/*( tabs => {
+
+	if ( tabs.length > 0 ) {
+
+		[...tabs].forEach( tab => {
+
 			const btn = tab.querySelectorAll('.tabs__btn'),
 				  item = tab.querySelectorAll('.tabs__item'),
 				  nav = document.createElement('div');
@@ -44,4 +74,4 @@
 
 	}
 
-})(document.querySelectorAll('.tabs'));
+})(document.querySelectorAll('.tabs'));*/

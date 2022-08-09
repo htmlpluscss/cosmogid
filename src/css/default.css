@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-color: red !important;
+/* color: red !important; */
 }
 
 html {
@@ -37,8 +37,8 @@ body {
 	overflow-y: scroll;
 	position: relative;
 	background-color: var(--bg);
-background-image: url(/css/1.png);
-background-position: center -476px;
+/* background-image: url(/css/1.png); */
+background-position: center -554px;
 }
 
 a {
@@ -87,6 +87,16 @@ li {
 	line-height: 1.2;
 	text-transform: uppercase;
 	color: var(--gray);
+
+}
+
+.h2 {
+
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: #000;
 
 }
 

@@ -1,0 +1,68 @@
+	<section class="preview-swiper">
+
+		<h2 class="h1 preview-swiper__title">
+			Новости и интересные статьи
+		</h2>
+
+		<div class="preview-swiper__list preview-swiper__list--news">
+
+{% for i in range(0, 4) %}
+
+			<div class="preview-swiper__item">
+
+				<article class="preview-news">
+
+					<a href="/news/article/" class="preview-news__img">
+
+						<picture>
+
+							<source srcset="/img/preview-news/news.webp 1x, /img/preview-news/news@2x.webp 2x" type="image/webp">
+							<source srcset="/img/preview-news/news.jpg 1x, /img/preview-news/news@2x.jpg 2x">
+
+							<img src="/img/preview-news/news.jpg" alt="С учётом сложившейся международной обстановки." loading="lazy" width="288" height="200">
+
+						</picture>
+
+					</a>
+
+					<div class="preview-news__category">
+
+						<a href="/news/">
+							{% if loop.index === 3 %}Статьи{% else %}Новости{% endif %}
+						</a>
+
+					</div>
+
+					<div class="preview-news__body">
+
+						<div class="preview-news__date">
+
+							<svg width="16" height="16" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M11.33 1.92A.67.67 0 0 0 10 2v.67H6v-.75A.67.67 0 0 0 4.67 2v.67H4a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-.67v-.75Zm1.34 4.75v-2c0-.37-.3-.67-.67-.67h-.67v.67a.67.67 0 0 1-1.33.07V4H6v.67a.67.67 0 0 1-1.33.07V4H4c-.37 0-.67.3-.67.67v2h9.34ZM3.33 8h9.34v4.67c0 .36-.3.66-.67.66H4a.67.67 0 0 1-.67-.66V8Zm5.33 1.92V12a.67.67 0 0 1-1.32.08V10.67a.67.67 0 0 1-.08-1.33H8c.34 0 .62.25.66.58Z"/>
+							</svg>
+
+							<time datetime="2022-09-24">
+								25.09.2022
+							</time>
+
+						</div>
+
+						<h3 class="preview-news__title">
+							С учётом сложившейся международной обстановки.
+						</h3>
+
+						<p class="preview-news__text">
+							А также некоторые особенности внутренней политики набирают популярность среди определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям. И нет.
+						</p>
+
+					</div>
+
+				</article>
+
+			</div>
+
+{% endfor %}
+
+		</div>
+
+	</section>

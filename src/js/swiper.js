@@ -12,8 +12,7 @@
 			toggleSwipe = null,
 			resetSwipe = null;
 
-		const swipeControls = document.createElement('div'),
-			  swipeNav = document.createElement('div'),
+		const swipeNav = document.createElement('div'),
 			  swipeBtns = document.createElement('div'),
 			  swipeNext = document.createElement('button'),
 			  swipePrev = document.createElement('button'),
@@ -26,7 +25,6 @@
 			  galleryModal = swipe.classList.contains('swiper-container--gallery-modal');
 
 		swipeNav.className = 'swiper-pagination';
-		swipeControls.className = 'swiper-controls';
 
 		swipeBtns.className = 'swiper-navigation';
 		swipePrev.className = 'swiper-button-prev button';
@@ -35,13 +33,11 @@
 		swipePrev.setAttribute('aria-label','Previous slide');
 		swipeNext.setAttribute('aria-label','Next slide');
 
-		swipePrev.innerHTML = '<svg width="36" height="36" viewBox="0 0 36 36"><path d="m13.5 16.5 6.9-6.9a1.49 1.49 0 1 1 2.1 2.1l-5.85 5.85 5.85 5.85a1.48 1.48 0 0 1-2.1 2.1l-6.9-6.88a1.5 1.5 0 0 1 0-2.13Z"/></svg>';
-		swipeNext.innerHTML = '<svg width="36" height="36" viewBox="0 0 36 36">><path d="m22.5 16.5-6.9-6.9a1.49 1.49 0 1 0-2.1 2.1l5.85 5.85-5.85 5.85a1.48 1.48 0 0 0 2.1 2.1l6.9-6.88a1.5 1.5 0 0 0 0-2.13Z"/></svg>';
+		swipePrev.innerHTML = '<svg width="40" height="40" viewBox="0 0 40 40"><path d="M23.82 9.32a1.67 1.67 0 0 1 2.5 2.2l-.14.16-8.82 8.82 8.82 8.82c.6.6.65 1.55.14 2.2l-.14.16c-.6.6-1.55.65-2.2.14l-.16-.14-10-10c-.6-.6-.65-1.55-.14-2.2l.14-.16 10-10Z"/></svg>';
+		swipeNext.innerHTML = '<svg width="40" height="40" viewBox="0 0 40 40"><path d="M13.82 9.32c.6-.6 1.55-.65 2.2-.14l.16.14 10 10c.6.6.65 1.55.14 2.2l-.14.16-10 10a1.67 1.67 0 0 1-2.5-2.2l.14-.16 8.82-8.82-8.82-8.82c-.6-.6-.65-1.55-.14-2.2l.14-.16Z"/></svg>';
 
-		swipeBtns.appendChild(swipePrev);
-		swipeBtns.appendChild(swipeNext);
-		swipeControls.appendChild(swipeBtns);
-		swipeControls.appendChild(swipeNav);
+		swipeBtns.append(swipePrev);
+		swipeBtns.append(swipeNext);
 
 		resetSwipe = () => {
 
@@ -54,7 +50,6 @@
 
 			swipeNav.classList.add('hide');
 			swipeBtns.classList.add('hide');
-			swipeControls.classList.add('hide');
 
 			if ( swipe.closest('.swiper-container-style') ) {
 
@@ -64,13 +59,40 @@
 
 		}
 
+		if (preview) {
+
+			toggleSwipe = () => {
+
+				swipe.parentNode.parentNode.classList.add('swiper-container-style');
+
+				mySwipe = new Swiper(swipe, {
+					spaceBetween: 24,
+					slidesPerView: 'auto',
+					slidesPerGroupAuto: true,
+					navigation: {
+						nextEl: swipeNext,
+						prevEl: swipePrev
+					},
+					pagination: {
+						el: swipeNav,
+						clickable: true,
+						bulletClass: 'button',
+						bulletActiveClass: 'is-active'
+					}
+				});
+
+			}
+
+		}
+
+/*
 		if (billboard) {
 
 			toggleSwipe = () => {
 
 				toggleSwipe = false;
 				swipe.closest('.billboard').classList.add('swiper-container-style');
-				swipe.parentNode.appendChild(swipeControls);
+				swipe.parentNode.append(swipeControls);
 
 				new Swiper(swipe, {
 					loop: true,
@@ -104,7 +126,7 @@
 				toggleSwipe = false;
 
 				swipe.parentNode.classList.add('swiper-container-style');
-				swipe.parentNode.appendChild(swipeControls);
+				swipe.parentNode.append(swipeControls);
 
 				new Swiper(swipe, {
 					loop: true,
@@ -149,7 +171,7 @@
 				toggleSwipe = false;
 
 				swipe.parentNode.classList.add('swiper-container-style');
-				swipe.parentNode.appendChild(swipeControls);
+				swipe.parentNode.append(swipeControls);
 
 				new Swiper(swipe, {
 					loop: true,
@@ -184,7 +206,7 @@
 			toggleSwipe = () => {
 
 				swipe.parentNode.classList.add('swiper-container-style');
-				swipe.appendChild(swipeNav);
+				swipe.append(swipeNav);
 
 				mySwipe = new Swiper(swipe, {
 					loop: true,
@@ -243,10 +265,11 @@
 			}
 
 		}
-
+*/
 		swipe.addEventListener('swiperJsLoad', () => {
 
-			swipe.appendChild(swipeControls);
+			swipe.parentNode.append(swipeBtns);
+			swipe.parentNode.insertAdjacentElement('afterend', swipeNav);
 
 			// eager
 			[...swipe.querySelectorAll('[loading="lazy"]')].forEach( img => img.setAttribute('loading','eager') );
@@ -299,6 +322,6 @@
 
 	script.onload = () => [...swiperContainer].forEach( swipe => swipe.dispatchEvent(new Event("swiperJsLoad")) );
 
-//	setTimeout( () => document.head.appendChild(script), localStorage.getItem('fastLoadScript') ? 0 : 10000);
+	setTimeout( () => document.head.append(script), localStorage.getItem('fastLoadScript') ? 0 : 10000);
 
 })(document.querySelectorAll('.swiper-container'));
