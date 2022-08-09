@@ -1,0 +1,35 @@
+.main-service {
+
+	margin: 40px 0;
+	display: flex;
+	justify-content: space-between;
+
+	&__item {
+
+		width: 288px;
+		min-height: 64px;
+		padding-left: 72px;
+
+		dd {
+
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.2;
+			color: var(--text);
+
+		}
+
+	}
+
+	.ico-box {
+
+		width: 64px;
+		height: 64px;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+	}
+
+
+}
