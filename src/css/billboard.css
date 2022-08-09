@@ -1,30 +1,6 @@
 .billboard {
 
-	margin: 36px 0 var(--space);
-
-	@media $mdWidth {
-
-		margin: 0 0 54px;
-
-		.center {
-
-			width: 100%;
-			padding: 0;
-
-		}
-
-		.swiper-navigation {
-
-			display: none;
-
-		}
-
-	}
-
-	&__wrap {
-
-		box-shadow: 0 -4px 10px rgba(175, 174, 198, 0.03), 0 4px 10px 2px rgba(175, 174, 198, 0.23);
-	}
+	margin: var(--gap) 0;
 
 	&:not(.swiper-container-style) &__item + &__item {
 
@@ -35,50 +11,17 @@
 	.swiper-button-prev,
 	.swiper-button-next {
 
-		background-color: transparent !important;
 
 	}
 
 	.swiper-pagination {
 
-		bottom: -24px !important;
-
-	}
-
-	&__style-dark-slash,
-	&__style-dark-grad,
-	&__style-dark-bg {
-
-		background-color: var(--color);
-		color: #fff;
-
-	}
-
-	&__style-light-slash,
-	&__style-light-grad,
-	&__style-light-bg {
-
-		background-color: #fff;
 
 	}
 
 	&__item {
 
-		display: flex;
-		height: 560px;
 		position: relative;
-
-		@media $mdWidth {
-
-			height: 470px;
-
-		}
-
-		@media $smWidth {
-
-			height: 640px;
-
-		}
 
 	}
 
@@ -86,23 +29,10 @@
 
 		position: absolute;
 		top: 0;
-		left: 620px;
+		left: 0;
 		right: 0;
 		bottom: 0;
 		pointer-events: none;
-
-		@media $mdWidth {
-
-			left: 380px;
-
-		}
-
-		@media $smWidth {
-
-			left: 0;
-			top: 430px;
-
-		}
 
 		img {
 
@@ -117,260 +47,51 @@
 
 	}
 
-	&__style-dark-grad &__img {
-
-		left: 0;
-
-		&::after {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			background-image: linear-gradient(84deg, var(--color) 24%, rgba(5, 12, 5, 0) 86%);
-
-		}
-
-		@media $smWidth {
-
-			top: 0;
-
-		}
-
-	}
-
-	&__style-light-grad &__img {
-
-		left: 0;
-
-		&::after {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			background-image: linear-gradient(84deg, #fff 24%, rgba(255, 255, 255, 0) 86%);
-
-		}
-
-		@media $smWidth {
-
-			top: 0;
-
-		}
-
-	}
-
-	&__style-dark-bg &__img,
-	&__style-light-bg &__img {
-
-		@media $mdWidth {
-
-			left: 50%;
-
-		}
-
-		@media $smWidth {
-
-			left: 0;
-
-		}
-
-		img {
-
-			object-fit: contain;
-
-		}
-
-	}
-
-	&__slash {
-
-		position: absolute;
-		width: 130px;
-		height: 100%;
-		left: 0;
-		top: 0;
-		fill: var(--color);
-
-		@media $mdWidth {
-
-			width: 72px;
-
-		}
-
-		@media $smWidth {
-
-			height: 33px;
-			width: 100%;
-
-		}
-
-	}
-
-	&__style-light-slash &__slash {
-
-		fill: #fff;
-
-	}
-
 	&__content {
 
-		width: 620px;
-		padding: 58px 50px 72px 78px;
+		width: 762px;
+		height: 400px;
+		padding: 74px 0 60px 51px;
 		position: relative;
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
-
-		@media $mdWidth {
-
-			width: 400px;
-			padding: 30px var(--indent);
-
-		}
-
-		@media $smWidth {
-
-			max-width: 100%;
-			margin: 0 auto;
-			width: 464px;
-			padding: 24px var(--indent);
-			display: block;
-
-		}
+		color: var(--gray);
 
 	}
 
-	&__logo {
+	&__slogan {
 
-		height: 96px;
-		margin-bottom: 21px;
-
-		img {
-
-			width: auto;
-
-		}
-
-		@media $mdWidth {
-
-			height: 90px;
-
-		}
-
-		@media $smWidth {
-
-			height: 60px;
-
-			img {
-
-				height: 60px;
-
-			}
-
-		}
+		font-weight: 300;
+		font-size: 20px;
+		text-transform: uppercase;
 
 	}
 
 	&__title {
 
-		margin-bottom: 24px;
-		position: relative;
-
-		@media $mdWidth {
-
-			margin-bottom: 12px;
-
-		}
+		font-weight: 600;
+		font-size: 64px;
+		text-transform: uppercase;
 
 	}
 
 	&__text {
 
-		font-size: 18px;
-		line-height: 33px;
-
-		@media $mdWidth {
-
-			font-size: 15px;
-			line-height: 24px;
-			min-height: 120px;
-
-		}
+		font-size: 20px;
+		color: #374151;
+		max-width: 560px;
 
 	}
 
 	&__foot {
 
-		@media $desktop {
+		margin-top: auto;
+		padding-top: 24px;
 
-			display: flex;
-			align-items: center;
-			margin-top: auto;
-			padding-top: 24px;
+		.btn {
 
-		}
-
-		@media $mdWidth {
-
-			max-width: 236px;
-			justify-content: space-between;
-			flex-direction: column;
-			flex-grow: 1;
-			display: flex;
-
-		}
-
-		@media $smWidth {
-
-			max-width: 100%;
-
-			.btn {
-
-				width: 100%;
-
-			}
-
-		}
-
-	}
-
-	&__date {
-
-		display: flex;
-		align-items: center;
-		white-space: nowrap;
-
-		@media $desktop {
-
-			margin-left: 36px;
-
-		}
-
-		@media $smWidth {
-
-			font-size: 12px;
-			margin-top: 42px;
-
-			svg {
-
-				width: 18px;
-				height: 18px;
-				margin-right: 6px;
-
-			}
-
-		}
-
-		svg {
-
-			margin-right: 9px;
-			flex-shrink: 0;
+			width: 224px;
 
 		}
 
