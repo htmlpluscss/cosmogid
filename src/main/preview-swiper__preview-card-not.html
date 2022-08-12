@@ -1,56 +1,126 @@
 		<article class="preview-card">
 
-			<div class="preview-card__img">
+{% set card = {
 
-				<picture>
+	overlay : "not",
+	label : false,
+	flag  : false,
+	rating : 4,
+	review : "отавить отзыв",
+	priceOld : false
 
-					<source srcset="/img/preview-card/3.webp 1x, /img/preview-card/3@2x.webp 2x" type="image/webp">
-					<source srcset="/img/preview-card/3.jpg 1x, /img/preview-card/3@2x.jpg 2x">
+} %}
 
-					<img src="/img/preview-card/3.jpg" alt="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл" loading="lazy" width="272" height="200">
+{% include "_include/preview-card/head.html" %}
 
-				</picture>
+			<form action="/" class="preview-card__form swiper-no-swiping">
 
-				<div class="preview-card__overlay">
+				<input type="hidden" name="id" value="123">
 
-					<p class="preview-card__overlay-title">
-						Отсутствует до 25.09.2020
-					</p>
+				<div class="preview-card__hover">
 
-					<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="123">
-						Уведомить  / найти аналог
-					</button>
+					<div class="preview-card__hover-inner">
+
+						<div class="preview-card__volume">
+
+							<div class="preview-card__volume-list">
+
+								<label class="preview-card__volume-item">
+
+									<input
+
+										checked="checked"
+
+										type="radio"
+										class="preview-card__volume-input visuallyhidden"
+										name="value"
+										value="120 мл"
+
+										data-label-sale="25%"
+										data-price="2581"
+										data-old-price="2581"
+										data-flag-red="хит продаж"
+										data-in-cart="false"
+
+										data-flag-not=""
+										data-flag-withdrawn=""
+
+									>
+
+									<span class="preview-card__volume-name">
+										120 мл
+									</span>
+
+								</label>
+
+								<label class="preview-card__volume-item">
+
+									<input
+
+										type="radio"
+										class="preview-card__volume-input visuallyhidden"
+										name="value"
+										value="220 мл"
+
+										data-label-sale=""
+										data-price="5581"
+										data-old-price="6581"
+										data-flag-red=""
+										data-in-cart="true"
+
+										data-flag-not="Снят с продажи"
+										data-flag-withdrawn="Отсутствует до 25.09.2020"
+
+									>
+
+									<span class="preview-card__volume-name">
+										220 мл
+									</span>
+
+								</label>
+
+								<label class="preview-card__volume-item">
+
+									<input
+
+										type="radio"
+										class="preview-card__volume-input visuallyhidden"
+										name="value"
+										value="220 мл"
+
+										data-label-sale=""
+										data-price="5581"
+										data-old-price="6581"
+										data-flag-red=""
+										data-in-cart="true"
+
+										data-flag-not="Снят с продажи"
+										data-flag-withdrawn="Отсутствует до 25.09.2020"
+
+									>
+
+									<span class="preview-card__volume-name">
+										400 мл
+									</span>
+
+								</label>
+
+							</div>
+
+						</div>
+
+						<div class="preview-card__buy">
+
+							<button class="btn" disabled="disabled">
+								В корзину
+							</button>
+
+						</div>
+
+					</div>
 
 				</div>
 
-			</div>
-
-			<p class="preview-card__rating">
-
-				<span class="ratio ratio--4">
-					рейтинг 4 звезды
-				</span>
-
-				<a href="/product/#review" class="preview-card__review">
-					отавить отзыв
-				</a>
-
-			</p>
-
-			<p class="preview-card__madein">
-				Kaaral (Италия)
-			</p>
-
-			<a href="/" class="preview-card__title tooltip-title" title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл">
-				Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл
-			</a>
-
-			<p class="preview-card__price">
-
-				<b class="preview-card__price-value">
-					2581 ₽
-				</b>
-
-			</p>
+			</form>
 
 		</article>

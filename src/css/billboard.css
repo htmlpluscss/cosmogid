@@ -8,20 +8,23 @@
 
 	}
 
-	.swiper-button-prev,
-	.swiper-button-next {
+	&:not(:hover) .swiper-navigation {
 
+		opacity: 0;
 
 	}
 
 	.swiper-pagination {
 
+		display: none;
 
 	}
 
 	&__item {
 
 		position: relative;
+		width: 100%;
+		flex-shrink: 0;
 
 	}
 

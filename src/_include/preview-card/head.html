@@ -1,0 +1,138 @@
+			<div class="preview-card__head">
+
+				<a href="/" class="preview-card__img">
+
+					<picture>
+
+						<source srcset="/img/preview-card/{{ [1,2,3,4,5] | random  }}.webp 1x, /img/preview-card/{{ [1,2,3,4,5] | random  }}@2x.webp 2x" type="image/webp">
+						<source srcset="/img/preview-card/{{ [1,2,3,4,5] | random  }}.jpg 1x, /img/preview-card/{{ [1,2,3,4,5] | random  }}@2x.jpg 2x">
+
+						<img src="/img/preview-card/{{ [1,2,3,4,5] | random  }}.jpg" alt="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл" loading="lazy" width="272" height="200">
+
+					</picture>
+
+				</a>
+
+{% if card.overlay %}
+
+				<div class="preview-card__overlay">
+
+	{% if card.overlay === "login" %}
+
+					<p class="preview-card__overlay-title">
+						Товар для специстов
+					</p>
+
+					<p class="preview-card__overlay-text">
+						Для покупки этого товара вам требуется регистрация
+					</p>
+
+					<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="login">
+						Авторизоваться
+					</button>
+
+	{% elif card.overlay === "not" %}
+
+					<p class="preview-card__overlay-title">
+						Отсутствует до 25.09.2020
+					</p>
+
+					<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="123">
+						Уведомить  / найти аналог
+					</button>
+
+	{% elif card.overlay === "withdrawn" %}
+
+					<p class="preview-card__overlay-title">
+						Снят с продажи
+					</p>
+
+					<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="find-analogue" data-form-set-id="modal-form-find-analogue" data-id="123">
+						Найти аналог
+					</button>
+
+{% endif %}
+
+				</div>
+
+{% endif %}
+
+{% if card.label %}
+
+				<div class="preview-card__label">
+
+	{% for label in card.label %}
+
+					<p class="preview-card__label-item is-{{ label.mod }}">
+						<span class="visuallyhidden">{{ label.name }}</span> {{ label.value }}
+					</p>
+
+	{% endfor %}
+
+				</div>
+
+{% endif %}
+
+{% if card.flag %}
+
+				<p class="preview-card__flag is-{{ card.flag[0] }}">
+					{{ card.flag[1] }}
+				</p>
+
+{% endif %}
+
+			</div>
+
+			<p class="preview-card__rating">
+
+				<span class="ratio ratio--{{ card.rating }}">
+
+{% if card.rating === 0 %}
+
+					нет рейтинга
+
+{% elif card.rating === 1 %}
+
+					рейтинг 1 звезда
+
+{% elif card.rating === 2 or card.rating === 3 or card.rating === 4 %}
+
+					рейтинг {{ card.rating }} звезды
+
+{% else %}
+
+					рейтинг 5 звезд
+
+{% endif %}
+
+				</span>
+
+				<a href="/product/#review" class="preview-card__review">
+					{{ card.review }}
+				</a>
+
+			</p>
+
+			<p class="preview-card__madein">
+				Kaaral (Италия)
+			</p>
+
+			<a href="/" class="preview-card__title tooltip-title" title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл">
+				Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл
+			</a>
+
+			<p class="preview-card__price">
+
+{% if card.priceOld %}
+
+				<s class="preview-card__price-old">
+					3456 ₽
+				</s>
+
+{% endif %}
+
+				<b class="preview-card__price-value">
+					2581 ₽
+				</b>
+
+			</p>

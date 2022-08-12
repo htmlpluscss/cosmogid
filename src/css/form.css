@@ -159,8 +159,7 @@ legend {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	box-shadow: 0 33px 133px rgba(18, 24, 39, 0.05), 0 13.7866px 55.5642px rgba(18, 24, 39, 0.0359427), 0 7.37098px 29.7073px rgba(18, 24, 39, 0.0298054), 0 4.13211px 16.6537px rgba(18, 24, 39, 0.025), 0 2.19453px 8.84464px rgba(18, 24, 39, 0.0201946), 0 0.913195px 3.68045px rgba(18, 24, 39, 0.0140573);
-outline:1px solid red;
+	box-shadow: var(--box-shadow);
 
 }
 

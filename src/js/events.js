@@ -13,6 +13,23 @@
 
 		}
 
+		// выбор цвета
+
+		const cardColor = event.target.closest('.preview-card__color');
+
+		if (cardColor) {
+
+
+			const eventModalShow = new CustomEvent("modalShow", {
+				detail: {
+					selector: "card-color"
+				}
+			});
+
+			window.modal.dispatchEvent(eventModalShow);
+
+		}
+
 	});
 
 })();

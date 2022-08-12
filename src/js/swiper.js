@@ -18,11 +18,8 @@
 			  swipePrev = document.createElement('button'),
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
-			  billboard = swipe.classList.contains('swiper-container--billboard'),
-			  brand = swipe.classList.contains('swiper-container--brand'),
-			  preview = swipe.classList.contains('swiper-container--preview'),
-			  gallery = swipe.classList.contains('swiper-container--gallery'),
-			  galleryModal = swipe.classList.contains('swiper-container--gallery-modal');
+			  billboard = swipe.classList.contains('swiper-container--billboard')
+			  preview = swipe.classList.contains('swiper-container--preview');
 
 		swipeNav.className = 'swiper-pagination';
 
@@ -61,11 +58,14 @@
 
 		if (preview) {
 
+			swipe.parentNode.insertAdjacentElement('afterend', swipeNav);
+
 			toggleSwipe = () => {
 
 				swipe.parentNode.parentNode.classList.add('swiper-container-style');
 
 				mySwipe = new Swiper(swipe, {
+					rewind: true,
 					spaceBetween: 24,
 					slidesPerView: 'auto',
 					slidesPerGroupAuto: true,
@@ -85,14 +85,12 @@
 
 		}
 
-/*
 		if (billboard) {
 
 			toggleSwipe = () => {
 
 				toggleSwipe = false;
 				swipe.closest('.billboard').classList.add('swiper-container-style');
-				swipe.parentNode.append(swipeControls);
 
 				new Swiper(swipe, {
 					loop: true,
@@ -118,6 +116,8 @@
 			}
 
 		}
+/*
+
 
 		if (brand) {
 
@@ -269,7 +269,7 @@
 		swipe.addEventListener('swiperJsLoad', () => {
 
 			swipe.parentNode.append(swipeBtns);
-			swipe.parentNode.insertAdjacentElement('afterend', swipeNav);
+			swipe.parentNode.append(swipeNav);
 
 			// eager
 			[...swipe.querySelectorAll('[loading="lazy"]')].forEach( img => img.setAttribute('loading','eager') );

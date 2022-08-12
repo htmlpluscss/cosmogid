@@ -69,6 +69,7 @@
 		&:hover {
 
 			z-index: 1;
+			position: relative;
 
 		}
 
@@ -101,12 +102,6 @@
 
 	}
 
-	&__box:not(.swiper-container-style) &__list {
-
-		overflow: hidden;
-
-	}
-
 	&__box:not(.swiper-container-style) &__item {
 
 		margin-right: var(--gap);
@@ -121,7 +116,9 @@
 
 	@media $desktop {
 
-		&__box:not(.swiper-container-style) &__item:nth-child(n+5) {
+		&__box:not(.swiper-container-style) &__item:not(&__item--video):nth-child(n+5),
+		&__box:not(.swiper-container-style) &__item--video + &__item:nth-child(n+6),
+		&__box:not(.swiper-container-style) &__item--billboard + &__item:nth-child(n+1) {
 
 			display: none;
 
