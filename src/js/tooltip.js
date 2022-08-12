@@ -2,6 +2,64 @@
 
 	if(tooltips.length){
 
+		[...tooltips].forEach( tooltip => {
+
+			const title = document.createElement('span');
+
+			title.className = 'tooltip-title__inner';
+			title.textContent = tooltip.getAttribute('title')
+
+			tooltip.removeAttribute('title');
+			tooltip.append(title);
+
+		});
+
+		let timeout = null;
+
+		window.addEventListener("mousemove", event => {
+
+			window.requestAnimationFrame( () => {
+
+				const target = event.target.closest('.tooltip-title');
+
+				[...tooltips].forEach( tooltip => {
+
+					if(target !== tooltip) {
+
+						tooltip.classList.remove('is-show');
+
+					}
+
+				});
+
+				if (timeout !== null) {
+
+					clearTimeout(timeout);
+
+				}
+
+				timeout = setTimeout( ()=> {
+
+					if ( target ) {
+
+						target.classList.add('is-show');
+
+					}
+
+				}, 300);
+
+			});
+
+		});
+
+	}
+
+})(document.querySelectorAll('.tooltip-title'));
+/*
+( tooltips => {
+
+	if(tooltips.length){
+
 		let observer = new MutationObserver(mutationRecords => {
 
 			const t = mutationRecords[0].target,
@@ -84,3 +142,4 @@
 	}
 
 })(document.querySelectorAll('.tooltip'));
+*/

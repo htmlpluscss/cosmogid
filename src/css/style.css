@@ -13,6 +13,7 @@
 @import url(flex.css);
 @import url(tabs.css);
 @import url(rating.css);
+@import url(tooltip.css);
 
 @import url(billboard.css);
 @import url(main-service.css);
@@ -36,7 +37,6 @@
 @import url(nouislider.css);
 
 @import url(product.css);
-@import url(tooltip.css);
 
 @import url(publication.css);
 

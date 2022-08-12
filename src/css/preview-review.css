@@ -55,7 +55,7 @@
 
 		margin: 8px 8px 24px;
 		font-size: 12px;
-		color: var(--text);
+		color: var(--gray);
 
 		display: -webkit-box;
 		-webkit-line-clamp: 8;
