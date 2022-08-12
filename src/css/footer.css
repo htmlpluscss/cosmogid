@@ -176,17 +176,42 @@
 .callback-fixed {
 
 	position: fixed;
-	right: -170px;
-	bottom: 90px;
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--purple);
+	top: 50%;
+	left: 50%;
+	margin-top: -40px;
+	margin-left: 702px;
+	border-radius: 40px;
 	box-shadow: var(--box-shadow);
-display: none;
+	background-color: #fff;
+	z-index: 7;
+	height: 80px;
+	overflow: hidden;
+	transition: var(--transitionDefault);
+
+	@media (max-width: 1599px) {
+
+		margin-left: 0;
+		left: auto;
+		right: 40px;
+
+	}
+
+	&:hover {
+
+		height: 240px;
+
+	}
+
+	&__btn {
+
+		width: 80px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--purple);
+
+	}
 
 }
 
