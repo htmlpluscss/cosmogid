@@ -92,7 +92,12 @@
 		font-size: 14px;
 		line-height: 21px;
 		color: var(--gray);
-		margin-bottom: 32px;
+
+		& + & {
+
+			margin-top: 21px;
+
+		}
 
 	}
 
@@ -112,6 +117,114 @@
 			}
 
 		}
+
+	}
+
+	&__row {
+
+		display: flex;
+		justify-content: space-between;
+
+		& + & {
+
+			margin-top: 32px;
+
+		}
+
+	}
+
+	&__row &__inputbox {
+
+		width: 300px;
+		margin: 0;
+
+	}
+
+	&__inputbox {
+
+		margin: 32px 0;
+		position: relative;
+
+		.input {
+
+			padding: 8px 16px;
+			height: 40px;
+			line-height: 24px;
+			border-bottom-color: var(--text);
+
+			@media $desktop {
+
+				font-size: 14px;
+
+			}
+
+			&::placeholder {
+
+				font-size: 14px;
+				font-weight: 400;
+				color: var(--text);
+
+			}
+
+		}
+
+		.phone-country__btn {
+
+			padding-left: 16px;
+
+		}
+
+		.phone-country__mask {
+
+			padding-left: 76px;
+
+			&::placeholder {
+
+				font-style: normal;
+
+			}
+
+		}
+
+	}
+
+	&__label {
+
+		display: block;
+		padding: 8px 0 8px 16px;
+		font-size: 14px;
+		line-height: 1.2;
+		color: var(--gray);
+		font-weight: 600;
+
+		&--0 {
+
+			padding-left: 0;
+
+		}
+
+	}
+
+	&__foot {
+
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 42px;
+
+		.btn {
+
+			width: 240px;
+
+		}
+
+	}
+
+	&__file {
+
+		padding: 4px 16px;
+		display: block;
+		position: relative;
+		color: var(--purple);
 
 	}
 
@@ -260,83 +373,46 @@
 
 .modal-callback {
 
-	&__inputrow {
+	.modal__text {
 
-		display: flex;
-		justify-content: space-between;
+		margin-bottom: 32px;
 
 	}
 
-	&__inputrow &__inputbox {
+	.modal__row .modal__inputbox {
 
 		width: 240px;
-		margin: 0;
 
 	}
 
-	&__inputbox {
+}
 
-		margin: 32px 0;
+.modal-review {
 
-		.input {
+	width: 1200px;
+	display: flex;
+	padding: 80px 65px 80px 32px;
 
-			padding: 8px 16px;
-			height: 40px;
-			line-height: 24px;
-			border-bottom-color: var(--text);
+	&__head {
 
-			@media $desktop {
-
-				font-size: 14px;
-
-			}
-
-			&::placeholder {
-
-				font-size: 14px;
-				font-weight: 400;
-				color: var(--text);
-
-			}
-
-			&.phone-country__mask {
-
-				padding-left: 60px;
-
-				&::placeholder {
-
-					font-style: normal;
-
-				}
-
-			}
-
-		}
+		width: 439px;
+		flex-shrink: 0;
 
 	}
 
-	&__label {
+	&__fieldset {
 
-		display: block;
-		padding: 8px 16px;
-		font-size: 14px;
-		line-height: 1.2;
-		color: var(--gray);
-		font-weight: 600;
+		margin-left: 32px;
+		flex-grow: 1;
 
 	}
 
-	&__foot {
+	&__file {
 
 		display: flex;
-		justify-content: flex-end;
-		margin-top: 42px;
-
-		.btn {
-
-			width: 240px;
-
-		}
+		position: absolute;
+		top: 100%;
+		left: 0;
 
 	}
 

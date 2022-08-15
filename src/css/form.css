@@ -434,7 +434,6 @@ legend {
 		text-align: left;
 		font-size: 14px;
 		padding: 4px 8px;
-		cursor: pointer;
 
 	}
 
@@ -459,6 +458,62 @@ legend {
 	&__mask {
 
 		padding-left: 60px;
+
+	}
+
+}
+
+.input-rating {
+
+	display: flex;
+	gap: 8px;
+	position: relative;
+
+	&__btn {
+
+		width: 24px;
+		height: 24px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		text-indent: 100vw;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%239CA3AF' d='M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .8-.68l5.7-.83 2.52-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .8.68 1 1 0 0 1-.24 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18ZM12 16.1c.16 0 .32.03.46.11l3.77 2-.72-4.21a1 1 0 0 1 .29-.89l3-2.93-4.2-.62a1 1 0 0 1-.71-.56L12 5.25 10.11 9a1 1 0 0 1-.75.54l-4.2.62 3 2.93a1 1 0 0 1 .29.89l-.72 4.16 3.77-2a.92.92 0 0 1 .5-.04Z'/%3E%3C/svg%3E");
+
+	}
+
+	input[value="1"]:checked ~ [for="modal-review-rating-1"] {
+
+		outline:1px solid red;
+
+	}
+
+	input[value="2"]:checked ~ [for="modal-review-rating-1"],
+	input[value="2"]:checked ~ [for="modal-review-rating-2"] {
+
+		outline:1px solid red;
+
+	}
+
+	input[value="3"]:checked ~ [for="modal-review-rating-1"],
+	input[value="3"]:checked ~ [for="modal-review-rating-2"],
+	input[value="3"]:checked ~ [for="modal-review-rating-3"] {
+
+		outline:1px solid red;
+
+	}
+
+	input[value="4"]:checked ~ [for="modal-review-rating-1"],
+	input[value="4"]:checked ~ [for="modal-review-rating-2"],
+	input[value="4"]:checked ~ [for="modal-review-rating-3"],
+	input[value="4"]:checked ~ [for="modal-review-rating-4"] {
+
+		outline:1px solid red;
+
+	}
+
+	input[value="5"]:checked ~ [for] {
+
+		outline:1px solid red;
 
 	}
 

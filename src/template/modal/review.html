@@ -1,0 +1,133 @@
+			<form action="/" class="modal__item modal__item--review modal-review">
+
+				<div class="modal-review__head">
+
+					<h3 class="modal__title">
+						Вы можете оставить отзыв или задать вопрос
+					</h3>
+
+					<p class="modal__text">
+						Используйте данную форму для того, чтобы оставить отзыв о товаре или задать вопрос.
+					</p>
+
+					<p class="modal__text">
+						Все комментарии, не касающиеся продукта, будут удалены!
+					</p>
+
+					<p class="modal__text">
+						Комментарий будет выведен только после предварительной проверки нашими сотрудниками.
+					</p>
+
+					<p class="modal__text">
+						*Оставьте свой email и мы отправим оповещение сразу после того, как специалист даст ответ на ваш вопрос.
+					</p>
+
+				</div>
+
+				<div class="modal-review__fieldset">
+
+					<div class="modal__row">
+
+						<div class="modal__inputbox">
+
+							<label class="modal__label" for="modal-review-name">
+								Как вас зовут
+							</label>
+
+							<input class="input" name="name" placeholder="Кузякина Марина" required="required" id="modal-review-name">
+
+						</div>
+
+						<div class="modal__inputbox">
+
+							<label for="modal-review-text" class="modal__label">
+								Задайте вопрос или напишите отзыв
+							</label>
+
+							<input class="input" name="text" placeholder="Кузякина Марина" id="modal-review-text">
+
+							<div class="modal-review__file">
+
+								<label class="modal__file">
+
+									<input type="file" name="file" class="visuallyhidden">
+
+									<span class="btn btn--link">
+										Добавить фото
+									</span>
+
+								</label>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="modal__row">
+
+						<div class="modal__inputbox">
+
+							<label class="modal__label" for="modal-review-email">
+								Ваша почта
+							</label>
+
+							<input class="input" name="email" placeholder="Кузякина Марина" required="required" id="modal-review-email" type="email">
+
+						</div>
+
+					</div>
+
+					<div class="modal__row">
+
+						<div class="modal__inputbox">
+
+							<label class="modal__label modal__label--0">
+								Поставьте оценку товару
+							</label>
+
+							<div class="input-rating">
+
+								<input id="modal-review-rating-1" class="visuallyhidden" type="radio" name="rating" value="1">
+								<input id="modal-review-rating-2" class="visuallyhidden" type="radio" name="rating" value="2">
+								<input id="modal-review-rating-3" class="visuallyhidden" type="radio" name="rating" value="3">
+								<input id="modal-review-rating-4" class="visuallyhidden" type="radio" name="rating" value="4">
+								<input id="modal-review-rating-5" class="visuallyhidden" type="radio" name="rating" value="5">
+
+								<label for="modal-review-rating-1" class="input-rating__btn">
+									1 звезда
+								</label>
+
+								<label for="modal-review-rating-2" class="input-rating__btn">
+									2 звезды
+								</label>
+
+								<label for="modal-review-rating-3" class="input-rating__btn">
+									3 звезды
+								</label>
+
+								<label for="modal-review-rating-4" class="input-rating__btn">
+									4 звезды
+								</label>
+
+								<label for="modal-review-rating-5" class="input-rating__btn">
+									5 звезд
+								</label>
+
+							</div>
+
+						</div>
+
+						<div class="modal__foot">
+
+							<button class="btn">
+								Отправить
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</form>
