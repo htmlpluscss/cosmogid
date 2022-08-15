@@ -1,0 +1,80 @@
+			<form action="/" class="modal__item modal__item--city modal-city">
+
+				<p class="modal-city__title">
+					Где вы находитесь
+				</p>
+
+				<div class="modal-city__inputbox">
+
+					<input class="input" name="keywords" placeholder="Введите город" required="required" autocomplete="off">
+
+					<button class="button" aria-label="Отправить">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<path d="m20.71 19.29-3.4-3.39a8 8 0 1 0-1.41 1.41l3.39 3.4a1 1 0 0 0 1.41 0h.01a1 1 0 0 0 0-1.41v-.01ZM5 11a6 6 0 1 1 12 0 6 6 0 0 1-12 0Z"/>
+						</svg>
+					</button>
+
+				</div>
+
+				<div class="modal-city__auto">
+
+					<button class="btn btn--link" type="button">
+						Определить автоматически
+					</button>
+
+				</div>
+
+				<p class="modal-city__title">
+					Наиболее популярные города
+				</p>
+
+				<div class="modal-city__list">
+
+{% for item in range(0,3) %}
+
+{% for item in [
+
+	{
+		name     : "Москва",
+		country  : "Россия"
+	},
+	{
+		name     : "Минск",
+		country  : "Белорусь"
+	},
+	{
+		name     : "Астана",
+		country  : "Казахстан"
+	},
+	{
+		name     : "Екатеринбург",
+		country  : "Россия"
+	},
+	{
+		name     : "Петропавловск-Камчатский",
+		country  : "Россия"
+	}
+
+] %}
+
+					<label class="modal-city__btn">
+
+						<input class="visuallyhidden" type="radio" name="id" value="{{ loop.index }}">
+
+						<span class="modal-city__label">
+							{{ item.name }}
+						</span>
+
+						<span class="modal-city__country">
+							{{ item.country }}
+						</span>
+
+					</label>
+
+{% endfor %}
+
+{% endfor %}
+
+				</div>
+
+			</form>

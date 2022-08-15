@@ -123,10 +123,32 @@ legend {
 	&--text {
 
 		background-color: transparent !important;
-		font-weight: 500;
 		font-size: 14px;
 		color: currentColor;
 		padding: 0 !important;
+
+	}
+
+	&--link {
+
+		background-color: transparent !important;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.5;
+		height: 21px;
+		color: currentColor;
+		padding: 0 !important;
+		text-decoration: underline;
+
+		@media $desktop {
+
+			&:hover {
+
+				text-decoration-color: transparent;
+
+			}
+
+		}
 
 	}
 

@@ -42,8 +42,9 @@
 
 		flex-shrink: 0;
 		margin-right: 20px;
+		position: relative;
 
-		.btn {
+		&__btn {
 
 			height: 37px;
 			line-height: 37px;
@@ -235,6 +236,51 @@
 			top: 8px;
 			right: 16px;
 			color: var(--gray);
+
+		}
+
+	}
+
+}
+
+.header-city-auto {
+
+	position: absolute;
+	top: 10px;
+	left: -40px;
+	z-index: 1;
+	padding: 40px;
+	width: 318px;
+	background-color: #fff;
+
+	&__title {
+
+		font-size: 16px;
+		line-height: 12px;
+		margin-bottom: 40px;
+		color: var(--gray);
+
+		b {
+
+			font-weight: 500;
+
+		}
+
+	}
+
+	&__foot {
+
+		display: flex;
+
+		.btn {
+
+			flex-grow: 1;
+
+			& + .btn {
+
+				margin-left: 24px;
+
+			}
 
 		}
 
