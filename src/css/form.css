@@ -171,6 +171,20 @@ legend {
 
 	}
 
+	&--favourite {
+
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		border: 2px solid;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent !important;
+		color: var(--purple);
+
+	}
+
 }
 
 .ico-box {

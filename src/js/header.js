@@ -1,9 +1,11 @@
-/*
+
 ( header => {
 
 	if (header) {
 
 		let resizeTimeout = null;
+
+		header.classList.toggle('is-fixed', window.pageYOffset > document.documentElement.clientHeight);
 
 		window.addEventListener("scroll", () => {
 
@@ -15,7 +17,7 @@
 
 						resizeTimeout = null;
 
-						header.classList.toggle('is-fixed', window.pageYOffset > 0);
+						header.classList.toggle('is-fixed', window.pageYOffset > document.documentElement.clientHeight);
 
 					}, 100);
 
@@ -27,4 +29,4 @@
 
 	}
 
-})(document.querySelector('.header'));*/
+})(document.querySelector('.header'));
