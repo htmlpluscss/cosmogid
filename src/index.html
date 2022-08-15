@@ -2,6 +2,7 @@
 
 {% set dev = true %}
 {% set cart = true %}
+{% set favourite = true %}
 
 {% extends "template/base.html" %}
 
@@ -15,11 +16,11 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "city"
+			selector: "callback"
 		}
 	});
 
-//	window.modal.dispatchEvent(eventModalShow);
+	window.modal.dispatchEvent(eventModalShow);
 })
 
 </script>
@@ -66,7 +67,7 @@ setTimeout( ()=> {
 
 		<div class="item">
 
-			<button class="btn" type="button" data-modal="city">
+			<button class="btn" type="button" data-modal="callback">
 				Заказ обратного звонка
 			</button>
 

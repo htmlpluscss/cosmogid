@@ -18,7 +18,7 @@
 
 				maskInput = new Inputmask({
 					mask: el.getAttribute('data-mask'),
-					placeholder: '0'
+					placeholder: '-'
 				});
 
 			}
