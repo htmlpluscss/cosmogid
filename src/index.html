@@ -20,7 +20,7 @@ setTimeout( ()=> {
 		}
 	});
 
-	window.modal.dispatchEvent(eventModalShow);
+//	window.modal.dispatchEvent(eventModalShow);
 })
 
 </script>
@@ -83,8 +83,16 @@ setTimeout( ()=> {
 
 		<div class="item">
 
-			<button class="btn" type="button" data-modal="city">
-				Где вы находитесь
+			<button class="btn" type="button" data-modal="callback" data-title="Задать вопрос">
+				Задать вопрос
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="callback" data-title="Узнать больше">
+				Узнать больше
 			</button>
 
 		</div>

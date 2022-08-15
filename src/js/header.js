@@ -11,7 +11,7 @@
 
 			window.requestAnimationFrame( () => {
 
-				if ( resizeTimeout === null ) {
+				if ( resizeTimeout === null && document.body.classList.contains('modal-show') === false ) {
 
 					resizeTimeout = setTimeout( () => {
 

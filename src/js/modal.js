@@ -8,7 +8,8 @@
 
 	const items = modal.querySelectorAll('.modal__item'),
 		  btns = document.querySelectorAll('[data-modal]'),
-		  wrapper = document.querySelector('.wrapper');
+		  wrapper = document.querySelector('.wrapper'),
+		  titleDefault = {};
 
 	let activeModal = null,
 		windowScroll = window.pageYOffset;
@@ -20,7 +21,11 @@
 		window.scrollTo(0,windowScroll);
 		activeModal = false;
 
-		setTimeout( () => document.documentElement.classList.remove('scroll-behavior-off'), 500);
+		window.requestAnimationFrame( () => {
+
+			document.documentElement.classList.remove('scroll-behavior-off');
+
+		});
 
 //		document.querySelector('#modal-video').innerHTML = '';
 
@@ -36,7 +41,7 @@
 
 	});
 
-	const modalShow = selector => {
+	const modalShow = (selector,title) => {
 
 		if(!activeModal){
 
@@ -46,11 +51,23 @@
 
 		activeModal = modal.querySelector('.modal__item--' + selector);
 
-		Array.from(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
+		if ( activeModal.querySelector('.modal__title') ) {
+
+			if ( titleDefault[selector] === undefined ) {
+
+				titleDefault[selector] = activeModal.querySelector('.modal__title').textContent;
+
+			}
+
+			activeModal.querySelector('.modal__title').textContent = title ? title : titleDefault[selector];
+
+		}
+
+		[...items].forEach( el => el.classList.toggle('visuallyhidden', el !== activeModal) );
 
 		document.documentElement.classList.add('scroll-behavior-off');
 
-		setTimeout( () => {
+		window.requestAnimationFrame( () => {
 
 			wrapper.style.top = -windowScroll + 'px';
 			document.body.classList.add('modal-show');
@@ -80,7 +97,7 @@
 
 			if (target.hasAttribute('data-modal')) {
 
-				modalShow(target.getAttribute('data-modal'));
+				modalShow(target.getAttribute('data-modal'),target.getAttribute('data-title'));
 
 			}
 

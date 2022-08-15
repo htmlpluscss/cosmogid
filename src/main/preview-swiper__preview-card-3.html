@@ -21,7 +21,9 @@
 	flag : "хит",
 	rating : 3,
 	review : "2 отзыва",
-	priceOld : true
+	priceOld : true,
+
+	buy : "enabled"
 
 } %}
 
@@ -53,19 +55,7 @@
 
 						</button>
 
-						<div class="preview-card__foot">
-
-							<button class="preview-card__buy btn">
-								В корзину
-							</button>
-
-							<button class="btn btn--favourite" type="button" aria-label="В избранное">
-								<svg width="24" height="24" viewBox="0 0 24 24">
-									<path d="M12.5 21a1 1 0 0 1-.7-.29l-7.78-7.78a5.24 5.24 0 0 1 7.4-7.4l1.08 1.08 1.08-1.08a5.24 5.24 0 0 1 7.4 0 5.26 5.26 0 0 1 0 7.4l-7.77 7.78a1 1 0 0 1-.7.29ZM7.72 6a3.24 3.24 0 0 0-2.28 5.51l7.06 7.07 7.06-7.07a3.24 3.24 0 0 0 0-4.57 3.32 3.32 0 0 0-4.56 0l-1.79 1.8a1 1 0 0 1-1.41 0L10 6.94A3.2 3.2 0 0 0 7.72 6Z"/>
-								</svg>
-							</button>
-
-						</div>
+{% include "_include/preview-card/foot.html" %}
 
 					</div>
 
