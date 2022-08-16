@@ -30,8 +30,8 @@
 		swipePrev.setAttribute('aria-label','Previous slide');
 		swipeNext.setAttribute('aria-label','Next slide');
 
-		swipePrev.innerHTML = '<svg width="40" height="40" viewBox="0 0 40 40"><path d="M23.82 9.32a1.67 1.67 0 0 1 2.5 2.2l-.14.16-8.82 8.82 8.82 8.82c.6.6.65 1.55.14 2.2l-.14.16c-.6.6-1.55.65-2.2.14l-.16-.14-10-10c-.6-.6-.65-1.55-.14-2.2l.14-.16 10-10Z"/></svg>';
-		swipeNext.innerHTML = '<svg width="40" height="40" viewBox="0 0 40 40"><path d="M13.82 9.32c.6-.6 1.55-.65 2.2-.14l.16.14 10 10c.6.6.65 1.55.14 2.2l-.14.16-10 10a1.67 1.67 0 0 1-2.5-2.2l.14-.16 8.82-8.82-8.82-8.82c-.6-.6-.65-1.55-.14-2.2l.14-.16Z"/></svg>';
+		swipePrev.innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-chevron-left"/></svg>';
+		swipeNext.innerHTML = '<svg width="40" height="40" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-chevron-right"/></svg>';
 
 		swipeBtns.append(swipePrev);
 		swipeBtns.append(swipeNext);
