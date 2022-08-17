@@ -133,23 +133,48 @@
 		position: absolute;
 		top: 8px;
 		right: 8px;
-		padding: 0 8px;
-		font-size: 12px;
-		line-height: 24px;
-		font-weight: 600;
-		border: 1px solid;
-		transition: var(--transitionDefault);
-		color: var(--red);
 		z-index: 1;
-		background-color: rgba(255,255,255,.5);
+
+		&-item {
+
+			padding: 0 8px;
+			font-size: 12px;
+			line-height: 24px;
+			font-weight: 600;
+			border: 1px solid;
+			border-radius: 2px;
+			transition: var(--transitionDefault);
+			background-color: rgba(255,255,255,.5);
+			color: var(--color);
+			text-transform: uppercase;
+
+			&.is-red {
+
+				--color: var(--red);
+
+			}
+
+			&.is-green {
+
+				--color: var(--green);
+
+			}
+
+			&.is-violet {
+
+				--color: var(--violet);
+
+			}
+
+		}
 
 	}
 
-	&:hover &__flag {
+	&:hover &__flag-item {
 
 		color: #fff;
-		border-color: var(--red);
-		background-color: var(--red);
+		border-color: var(--color);
+		background-color: var(--color);
 
 	}
 

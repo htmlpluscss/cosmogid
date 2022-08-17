@@ -18,7 +18,7 @@
 			value : "35%"
 		}
 	],
-	flag : "хит",
+	flag : ["red","sale"],
 	rating : 3,
 	review : "2 отзыва",
 	priceOld : true,
@@ -37,23 +37,7 @@
 
 					<div class="preview-card__hover-inner">
 
-						<button class="preview-card__color button" type="button">
-
-							<span class="preview-card__color-img">
-
-								<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23DC2626'/%3E%3C/svg%3E" width="24" height="24" loading="lazy" alt="Кармин светлый">
-
-							</span>
-
-							<span class="preview-card__color-name">
-								Кармин светлый
-							</span>
-
-							<svg class="preview-card__color-arrow" width="24" height="24" viewBox="0 0 24 24">
-								<path d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28Z"/>
-							</svg>
-
-						</button>
+{% include "_include/preview-card/color.html" %}
 
 {% include "_include/preview-card/foot.html" %}
 

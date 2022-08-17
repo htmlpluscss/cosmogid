@@ -1,6 +1,4 @@
-			<div class="modal-card-color">
-
-				<input type="hidden" name="id">
+			<div class="preview-card__modal-color hide">
 
 				<div class="modal-card-color__left">
 
@@ -18,7 +16,7 @@
 
 				<div class="modal-card-color__right">
 
-					<p class="modal-card-color__availability is-green">
+					<p class="modal-card-color__availability" data-color="green">
 						есть в наличии
 					</p>
 
@@ -36,38 +34,106 @@
 
 					<p class="modal-card-color__label">
 
-						<b>Выберите цвет краски:</b> из 125 вариантов
+						<b>
+							Выберите цвет краски:
+						</b>
+
+						<span class="modal-card-color__label-count">
+							из 125 вариантов
+						</span>
 
 					</p>
 
-					<div class="modal-card-color__list">
+					<ul class="modal-card-color__list is-scroll">
 
-{% for i in range(0, 125) %}
+{% for i in range(0, 50) %}
 
-						<label class="modal-card-color__item">
+						<li class="modal-card-color__item">
 
-							<input type="radio" name="sku" value="123456" class="visuallyhidden" data-articleid="123">
+							<label class="modal-card-color__item-btn">
 
-							<span class="modal-card-color__img">
+								<input
 
-								<img src="/img/modal/card-color/small.jpg" srcset="/img/modal/card-color/small@2x.jpg 2x" width="40" height="40" loading="lazy" alt="">
+									type="radio"
+									name="articleid"
+									value="123{{ loop.index }}"
+									class="modal-card-color__item-input visuallyhidden"
 
-							</span>
+								{% if loop.index === 5%}
 
-							<span class="modal-card-color__label">
-								Арт:65417626 <br>
-								10/0 экстра светлый блонд натуральный
-							</span>
+									checked="checked"
 
-						</label>
+								{% endif %}
+
+									data-src="/img/modal/card-color/big.jpg"
+									data-srcset="/img/modal/card-color/big@2x.jpg 2x"
+
+									data-price="2581 ₽"
+
+								{% if [1,2] | random === 2 %}
+
+									data-price-old="3456 ₽"
+
+								{% endif %}
+
+								{% if loop.index === 2 %}
+
+									data-buy="disabled"
+
+									data-overlay="login"
+									data-overlay-title="Товар для специстов"
+									data-overlay-text="Для покупки этого товара вам требуется регистрация"
+
+									data-availability="есть в наличии"
+									data-availability-color="green"
+
+								{% elif loop.index === 3 %}
+
+									data-buy="disabled"
+
+									data-overlay="not"
+									data-overlay-title="Отсутствует до 25.09.2020"
+
+									data-availability="нет в наличии"
+									data-availability-color="red"
+
+								{% else %}
+
+									data-buy="{{ ['enabled','in-cart'] | random }}"
+
+									data-availability="есть в наличии"
+									data-availability-color="green"
+
+								{% endif %}
+
+								>
+
+								<span class="modal-card-color__item-img">
+
+									<img src="/img/modal/card-color/small.jpg" srcset="/img/modal/card-color/small@2x.jpg 2x" width="40" height="40" loading="lazy" alt="">
+
+								</span>
+
+								<span class="modal-card-color__item-label">
+									Арт:65417626 <br>
+									10/0 экстра светлый блонд натуральный
+								</span>
+
+							</label>
+
+						</li>
 
 {% endfor %}
 
-					</div>
+					</ul>
 
-					<button class="btn">
-						В корзину
-					</button>
+					<div class="modal-card-color__submit">
+
+						<button class="btn">
+							В корзину
+						</button>
+
+					</div>
 
 				</div>
 

@@ -35,25 +35,16 @@
 			// флаг
 
 			const flag = cardVolume.getAttribute('data-flag'),
+				  flagColor = cardVolume.getAttribute('data-flag-color'),
 				  cardFlag = card.querySelector('.preview-card__flag');
 
 			if (cardFlag) {
 
-				if ( flag ) {
-
-					cardFlag.textContent = flag;
-
-				} else {
-
-					cardFlag.remove();
-
-				}
-
-			} else if ( flag ) {
-
-				card.querySelector('.preview-card__head').insertAdjacentHTML('beforeend', Mustache.render(templateFlag, { flag }));
+				cardFlag.remove();
 
 			}
+
+			card.querySelector('.preview-card__head').insertAdjacentHTML('beforeend', Mustache.render(templateFlag, { flag, flagColor }));
 
 			// label
 
@@ -87,38 +78,6 @@
 			}
 
 			card.querySelector('.preview-card__head').insertAdjacentHTML('beforeend', Mustache.render(templateOverlay, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, overlayWithdrawn, id, articleId }));
-
-		}
-
-	});
-
-	document.addEventListener('click', event => {
-
-		// Уведомить  / найти аналог
-		// Найти аналог
-
-		const modalFormSetId = event.target.closest('[data-form-set-id]');
-
-		if (modalFormSetId) {
-
-//			document.querySelector('#' + modalFormSetId.getAttribute('data-form-set-id')).elements.id.value = modalFormSetId.getAttribute('data-id');
-
-		}
-
-		// выбор цвета
-
-		const cardColor = event.target.closest('.preview-card__color');
-
-		if (cardColor) {
-
-
-			const eventModalShow = new CustomEvent("modalShow", {
-				detail: {
-					selector: "card-color"
-				}
-			});
-
-			window.modal.dispatchEvent(eventModalShow);
 
 		}
 

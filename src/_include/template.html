@@ -176,9 +176,17 @@
 
 		<script type="text/html" id="preview-card-flag-template">
 
-			<p class="preview-card__flag">
-				{{ flag }}
-			</p>
+			{{# flag }}
+
+				<div class="preview-card__flag">
+
+					<p class="preview-card__flag-item is-{{ flagColor }}">
+						{{ flag }}
+					</p>
+
+				</div>
+
+			{{/ flag }}
 
 		</script>
 
@@ -236,6 +244,70 @@
 				</button>
 
 			{{/ favourite }}
+
+		</script>
+
+		<script type="text/html" id="modal-card-color-submit-template">
+
+			{{# buy }}
+
+				<button class="btn"{{# buyDisabled }} disabled="disabled"{{/ buyDisabled }}>
+					В корзину
+				</button>
+
+			{{/ buy }}
+
+			{{# buyCart }}
+
+				<a href="/cart/" class="btn btn--outline">
+					В корзине
+				</a>
+
+			{{/ buyCart }}
+
+		</script>
+
+		<script type="text/html" id="modal-card-color-overlay-template">
+
+			{{# overlay }}
+
+				<div class="modal-card-color__overlay">
+
+					{{# overlayTitle }}
+
+						<p class="modal-card-color__overlay-title">
+							{{ overlayTitle }}
+						</p>
+
+					{{/ overlayTitle }}
+
+					{{# overlayText }}
+
+						<p class="modal-card-color__overlay-text">
+							{{ overlayText }}
+						</p>
+
+					{{/ overlayText }}
+
+					{{# overlayLogin }}
+
+						<button class="modal-card-color__overlay-btn btn btn--outline" type="button" data-modal="login">
+							Авторизоваться
+						</button>
+
+					{{/ overlayLogin }}
+
+					{{# overlayNot }}
+
+						<button class="modal-card-color__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="{{ id }}" data-articleId="{{ articleId }}">
+							Уведомить  / найти аналог
+						</button>
+
+					{{/ overlayNot }}
+
+				</div>
+
+			{{/ overlay }}
 
 		</script>
 

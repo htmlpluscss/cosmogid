@@ -75,9 +75,13 @@
 
 {% if card.flag %}
 
-				<p class="preview-card__flag">
-					{{ card.flag }}
-				</p>
+				<div class="preview-card__flag">
+
+					<p class="preview-card__flag-item is-{{ card.flag[0] }}">
+						{{ card.flag[1] }}
+					</p>
+
+				</div>
 
 {% endif %}
 

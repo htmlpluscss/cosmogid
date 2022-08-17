@@ -16,6 +16,8 @@
 
 	modal.addEventListener('hide', () => {
 
+		activeModal.dispatchEvent(new Event("modalClose"));
+
 		document.body.classList.remove('modal-show');
 		wrapper.style.top = 0;
 		window.scrollTo(0,windowScroll);
