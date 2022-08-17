@@ -88,4 +88,157 @@
 
 		</svg>
 
+{% raw %}
+
+		<script type="text/html" id="preview-card-overlay-template">
+
+			{{# overlay }}
+
+				<div class="preview-card__overlay">
+
+					{{# overlayTitle }}
+
+						<p class="preview-card__overlay-title">
+							{{ overlayTitle }}
+						</p>
+
+					{{/ overlayTitle }}
+
+					{{# overlayText }}
+
+						<p class="preview-card__overlay-text">
+							{{ overlayText }}
+						</p>
+
+					{{/ overlayText }}
+
+					{{# overlayLogin }}
+
+						<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="login">
+							Авторизоваться
+						</button>
+
+					{{/ overlayLogin }}
+
+					{{# overlayNot }}
+
+						<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="{{ id }}" data-articleId="{{ articleId }}">
+							Уведомить  / найти аналог
+						</button>
+
+					{{/ overlayNot }}
+
+					{{# overlayWithdrawn }}
+
+						<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="find-analogue" data-form-set-id="modal-form-find-analogue" data-id="{{ id }}" data-articleId="{{ articleId }}">
+							Найти аналог
+						</button>
+
+					{{/ overlayWithdrawn }}
+
+				</div>
+
+			{{/ overlay }}
+
+		</script>
+
+		<script type="text/html" id="preview-card-label-template">
+
+			<div class="preview-card__label">
+
+				{{# discount }}
+
+					<p class="preview-card__label-item is-discount">
+						<span class="visuallyhidden">{{ discount }}</span>
+					</p>
+
+				{{/ discount }}
+
+				{{# gift }}
+
+					<p class="preview-card__label-item is-gift">
+						<span class="visuallyhidden">{{ gift }}</span>
+					</p>
+
+				{{/ gift }}
+
+				{{# sale }}
+
+					<p class="preview-card__label-item is-sale">
+						<span class="visuallyhidden">скидка</span> {{ sale }}
+					</p>
+
+				{{/ sale }}
+
+			</div>
+
+		</script>
+
+		<script type="text/html" id="preview-card-flag-template">
+
+			<p class="preview-card__flag">
+				{{ flag }}
+			</p>
+
+		</script>
+
+		<script type="text/html" id="preview-card-price-template">
+
+			{{# priceOld }}
+
+				<s class="preview-card__price-old">
+					{{ priceOld }} ₽
+				</s>
+
+			{{/ priceOld }}
+
+				<b class="preview-card__price-value">
+					{{ price }} ₽
+				</b>
+
+		</script>
+
+		<script type="text/html" id="preview-card-foot-template">
+
+			{{# buy }}
+
+				<button class="preview-card__buy btn"{{# buyDisabled }} disabled="disabled"{{/ buyDisabled }}>
+					В корзину
+				</button>
+
+			{{/ buy }}
+
+			{{# buyCart }}
+
+				<a href="/cart/" class="preview-card__buy btn btn--outline">
+					В корзине
+				</a>
+
+			{{/ buyCart }}
+
+
+			{{^ favourite }}
+
+				<button class="btn btn--favourite" type="button" aria-label="В избранное">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="#svg-favourite"/>
+					</svg>
+				</button>
+
+			{{/ favourite }}
+
+			{{# favourite }}
+
+				<button class="btn btn--favourite" type="button" aria-label="Удалить из избранного">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="#svg-favourite-fill"/>
+					</svg>
+				</button>
+
+			{{/ favourite }}
+
+		</script>
+
+{% endraw %}
+
 	</div>

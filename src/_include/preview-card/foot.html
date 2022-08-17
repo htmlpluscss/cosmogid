@@ -1,29 +1,37 @@
 						<div class="preview-card__foot">
 
-{% if card.buy === "enabled" or card.buy === "disabled" %}
+							<div class="preview-card__foot-buy">
 
-							<button class="preview-card__buy btn"{% if card.buy === "disabled" %} disabled="disabled"{% endif %}>
-								В корзину
-							</button>
+	{% if card.buy === "enabled" or card.buy === "disabled" %}
 
-{% endif %}
+								<button class="preview-card__buy btn"{% if card.buy === "disabled" %} disabled="disabled"{% endif %}>
+									В корзину
+								</button>
 
-{% if [1,2] | random === 2 %}
+	{% endif %}
 
-							<button class="btn btn--favourite" type="button" aria-label="В избранное">
-								<svg width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="#svg-favourite"/>
-								</svg>
-							</button>
+							</div>
 
-{% else %}
+							<div class="preview-card__foot-favourite">
 
-							<button class="btn btn--favourite" type="button" aria-label="Удалить из избранного">
-								<svg width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="#svg-favourite-fill"/>
-								</svg>
-							</button>
+	{% if [1,2] | random === 2 %}
 
-{% endif %}
+								<button class="btn btn--favourite" type="button" aria-label="В избранное">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-favourite"/>
+									</svg>
+								</button>
+
+	{% else %}
+
+								<button class="btn btn--favourite" type="button" aria-label="Удалить из избранного">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-favourite-fill"/>
+									</svg>
+								</button>
+
+	{% endif %}
+
+							</div>
 
 						</div>
