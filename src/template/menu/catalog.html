@@ -1,6 +1,8 @@
-		<nav class="menu-main">
+	<nav class="menu-catalog">
 
-			<ul class="menu-main__list">
+		<div class="center">
+
+			<ul class="menu-catalog__list">
 
 {% for item in [
 
@@ -47,19 +49,19 @@
 
 ] %}
 
-				<li class="menu-main__item">
+				<li class="menu-catalog__item">
 
-					<a class="menu-main__link{% if item.mod %} menu-main__link--{{ item.mod }}{% endif %}" href="/">
+					<a class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}" href="/">
 						{{ item.name }}
 					</a>
 
 		{% if item.name === 'Парфюмерия' %}
 
-					<div class="menu-main__sub">
+					<div class="menu-catalog__sub">
 
-{% include "template/header/menu-main-grid.html" %}
+{% include "template/menu/grid.html" %}
 
-{% include "template/header/menu-main-brand.html" %}
+{% include "template/menu/brand.html" %}
 
 					</div>
 
@@ -71,4 +73,6 @@
 
 			</ul>
 
-		</nav>
+		</div>
+
+	</nav>

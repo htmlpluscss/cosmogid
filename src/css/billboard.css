@@ -2,6 +2,13 @@
 
 	margin: var(--gap) 0;
 
+	@media $smWidth {
+
+		margin: 16px 0;
+		padding-bottom: 16px;
+
+	}
+
 	&:not(.swiper-container-style) &__item + &__item {
 
 		display: none;
@@ -11,6 +18,16 @@
 	&:not(:hover) .swiper-navigation {
 
 		opacity: 0;
+
+	}
+
+	@media $mdWidth {
+
+		.swiper-navigation {
+
+			display: none;
+
+		}
 
 	}
 
@@ -45,6 +62,7 @@
 			top: 0;
 			left: 0;
 			object-fit: cover;
+			object-position: right bottom;
 
 		}
 
@@ -61,6 +79,19 @@
 		flex-direction: column;
 		color: var(--gray);
 
+		@media $mdWidth {
+
+			width: 264px;
+
+		}
+
+		@media $smWidth {
+
+			height: 300px;
+			padding: 32px 0 43px 13px;
+
+		}
+
 	}
 
 	&__slogan {
@@ -68,6 +99,14 @@
 		font-weight: 300;
 		font-size: 20px;
 		text-transform: uppercase;
+
+		@media $mdWidth {
+
+			font-size: 16px;
+			font-weight: 400;
+			text-transform: none;
+
+		}
 
 	}
 
@@ -77,6 +116,14 @@
 		font-size: 64px;
 		text-transform: uppercase;
 
+		@media $mdWidth {
+
+			font-size: 24px;
+			line-height: 1.2;
+			font-weight: 400;
+
+		}
+
 	}
 
 	&__text {
@@ -84,6 +131,12 @@
 		font-size: 20px;
 		color: #374151;
 		max-width: 560px;
+
+		@media $mdWidth {
+
+			font-size: 14px;
+
+		}
 
 	}
 

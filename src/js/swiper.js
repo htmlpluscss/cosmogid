@@ -64,11 +64,14 @@
 
 				swipe.parentNode.parentNode.classList.add('swiper-container-style');
 
+				const gap = window.innerWidth < 1250 ? 16 : 24;
+
 				mySwipe = new Swiper(swipe, {
 					rewind: true,
-					spaceBetween: 24,
+					spaceBetween: gap,
 					slidesPerView: 'auto',
-					slidesPerGroupAuto: true,
+					slidesPerGroup: 1,
+//					slidesPerGroupAuto: true,
 					navigation: {
 						nextEl: swipeNext,
 						prevEl: swipePrev

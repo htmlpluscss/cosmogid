@@ -9,6 +9,8 @@
 	const items = modal.querySelectorAll('.modal__item'),
 		  btns = document.querySelectorAll('[data-modal]'),
 		  wrapper = document.querySelector('.wrapper'),
+		  menu = document.querySelector('.menu-catalog'),
+		  header = document.querySelector('.header'),
 		  titleDefault = {};
 
 	let activeModal = null,
@@ -22,6 +24,9 @@
 		wrapper.style.top = 0;
 		window.scrollTo(0,windowScroll);
 		activeModal = false;
+
+		menu.removeAttribute('style');
+		header.removeAttribute('style');
 
 		window.requestAnimationFrame( () => {
 
@@ -72,6 +77,17 @@
 		window.requestAnimationFrame( () => {
 
 			wrapper.style.top = -windowScroll + 'px';
+
+			if ( header.classList.contains('is-fixed') ) {
+
+				const menuTop = parseInt(getComputedStyle(menu).top),
+					  headerTop = parseInt(getComputedStyle(header).top);
+
+				menu.style.top = windowScroll + menuTop + 'px';
+				header.style.top = windowScroll + headerTop + 'px';
+
+			}
+
 			document.body.classList.add('modal-show');
 			window.scrollTo(0,0);
 

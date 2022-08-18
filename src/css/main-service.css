@@ -4,6 +4,12 @@
 	display: flex;
 	justify-content: space-between;
 
+	@media $mdWidth {
+
+		display: none;
+
+	}
+
 	&__item {
 
 		width: 288px;
@@ -28,9 +34,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		color: var(--purple);
 
 	}
-
 
 }

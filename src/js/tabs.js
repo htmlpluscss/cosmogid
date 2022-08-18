@@ -4,23 +4,54 @@
 
 		[...tabs].forEach( tab => {
 
+			const select = document.createElement("select"),
+				  arrow = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+
+			arrow.setAttributeNS(null, "viewBox", "0 0 24 24");
+			arrow.setAttributeNS(null, "width", 16);
+			arrow.setAttributeNS(null, "height", 16);
+
+			arrow.innerHTML = '<use xlink:href="#svg-arrow-chevron-down"/>';
+
 			const btns = tab.querySelectorAll('.tabs__btn'),
 				  items = tab.querySelectorAll('.tabs__item');
 
-			[...btns].forEach( btn => {
+			[...btns].forEach( (btn,index) => {
+
+				btn.appendChild(arrow.cloneNode(true));
+
+				const option = document.createElement("option");
+				option.value = index;
+				option.textContent = btn.textContent;
+				select.append(option);
 
 				btn.addEventListener('click', () => {
 
-					[...btns].forEach( (_btn,index) => {
+					[...btns].forEach( (_btn,_index) => {
 
 						_btn.classList.toggle('is-active', _btn === btn);
-						items[index].classList.toggle('visuallyhidden', _btn !== btn);
+						items[_index].classList.toggle('visuallyhidden', _btn !== btn);
 
 					});
 
 				});
 
 			});
+
+			select.addEventListener('change', event => {
+
+				const index = parseInt(select.value);
+
+				[...btns].forEach( (btn,_index) => {
+
+					btn.classList.toggle('is-active', _index === index);
+					items[_index].classList.toggle('visuallyhidden', _index !== index);
+
+				});
+
+			});
+
+			tab.querySelector('.tabs__nav').prepend(select);
 
 		});
 

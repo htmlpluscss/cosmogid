@@ -8,16 +8,12 @@
 
 						</span>
 
-						<span class="header-cart__title is-fixed-hide">
+						<span class="header-cart__title">
 							Ваша корзина
 						</span>
 
-						<span class="header-cart__value is-fixed-hide">
-{% if cart %}
-							у вас 25 товаров
-{% else %}
-							пока пуста
-{% endif %}
+						<span class="header-cart__value">
+							{% if cart %}у вас 25 товаров{% else %}пока пуста{% endif %}
 						</span>
 
 					</a>

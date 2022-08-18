@@ -2,7 +2,7 @@
 
 	if(menu) {
 
-		const linkBtn = menu.querySelectorAll('.menu-main__link.is-btn'),
+		const linkBtn = menu.querySelectorAll('.menu-catalog__link.is-btn'),
 			  ico = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
 		ico.setAttributeNS(null, "viewBox", "0 0 16 16");
@@ -27,4 +27,4 @@
 
 	}
 
-})(document.querySelector('.menu-main'));
+})(document.querySelector('.menu-catalog'));

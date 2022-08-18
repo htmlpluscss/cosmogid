@@ -99,7 +99,11 @@
 
 								{% else %}
 
-									data-buy="{{ ['enabled','in-cart'] | random }}"
+									{% if [true,false] | random %}
+
+									data-buy="in-cart"
+
+									{% endif %}
 
 									data-availability="есть в наличии"
 									data-availability-color="green"

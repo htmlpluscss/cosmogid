@@ -93,19 +93,17 @@
 
 {% if card.rating === 0 %}
 
-					нет рейтинга
-
-{% elif card.rating === 1 %}
-
-					рейтинг 1 звезда
-
-{% elif card.rating === 2 or card.rating === 3 or card.rating === 4 %}
-
-					рейтинг {{ card.rating }} звезды
+					<span class="visuallyhidden">
+						нет рейтинга
+					</span>
 
 {% else %}
 
-					рейтинг 5 звезд
+					<span class="visuallyhidden">
+						рейтинг
+					</span>
+
+					4,9
 
 {% endif %}
 

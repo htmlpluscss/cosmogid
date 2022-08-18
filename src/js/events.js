@@ -18,12 +18,13 @@
 
 			// кнопка купить и избранное
 
-			const buy = cardVolume.getAttribute('data-buy') === 'enabled' || cardVolume.getAttribute('data-buy') === 'disabled',
-				  buyDisabled = cardVolume.getAttribute('data-buy') === 'disabled',
-				  buyCart = cardVolume.getAttribute('data-buy') === 'in-cart',
+			const buy = cardVolume.getAttribute('data-buy'),
+				  buyCart = buy === 'in-cart',
+				  buyDisabled = buy === 'disabled',
+				  buyBtn = buy === null || buyDisabled,
 				  favourite = cardVolume.getAttribute('data-favourite');
 
-			card.querySelector('.preview-card__foot').innerHTML = Mustache.render(templateFoot, { buy, buyDisabled, buyCart, favourite });
+			card.querySelector('.preview-card__foot').innerHTML = Mustache.render(templateFoot, { buyBtn, buyDisabled, buyCart, favourite });
 
 			// цена
 

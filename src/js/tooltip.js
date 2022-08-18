@@ -20,33 +20,37 @@
 
 			window.requestAnimationFrame( () => {
 
-				const target = event.target.closest('.tooltip-title');
+				if ( event.target !== document ) {
 
-				[...tooltips].forEach( tooltip => {
+					const target = event.target.closest('.tooltip-title');
 
-					if(target !== tooltip) {
+					[...tooltips].forEach( tooltip => {
 
-						tooltip.classList.remove('is-show');
+						if(target !== tooltip) {
+
+							tooltip.classList.remove('is-show');
+
+						}
+
+					});
+
+					if (timeout !== null) {
+
+						clearTimeout(timeout);
 
 					}
 
-				});
+					timeout = setTimeout( ()=> {
 
-				if (timeout !== null) {
+						if ( target ) {
 
-					clearTimeout(timeout);
+							target.classList.add('is-show');
+
+						}
+
+					}, 300);
 
 				}
-
-				timeout = setTimeout( ()=> {
-
-					if ( target ) {
-
-						target.classList.add('is-show');
-
-					}
-
-				}, 300);
 
 			});
 

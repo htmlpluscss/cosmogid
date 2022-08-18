@@ -1,35 +1,15 @@
-						<button class="header-city__btn btn btn--text" type="button" aria-label="изменить Ваш город" data-modal="city">
+						<div class="header-city">
 
-							<svg width="16" height="16" viewBox="0 0 24 24">
-								<use xlink:href="#svg-map"/>
-							</svg>
+							<button class="header-city__btn btn btn--text" type="button" aria-label="изменить Ваш город" data-modal="city">
 
-							<span class="header-city__value">
-								Екатеринбург
-							</span>
+								<svg width="16" height="16" viewBox="0 0 24 24">
+									<use xlink:href="#svg-map"/>
+								</svg>
 
-						</button>
+								<span class="header-city__value">
+									Екатеринбург
+								</span>
 
-{% if dev %}
+							</button>
 
-						<form action="/" class="header-city-auto">
-
-							<p class="header-city-auto__title">
-								Ваш город <b>Екатеринбург?</b>
-							</p>
-
-							<div class="header-city-auto__foot">
-
-								<button class="btn btn--outline" type="button" data-modal="city">
-									Нет
-								</button>
-
-								<button class="btn">
-									Да
-								</button>
-
-							</div>
-
-						</form>
-
-{% endif %}
+						</div>

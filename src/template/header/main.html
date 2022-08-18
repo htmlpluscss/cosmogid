@@ -1,0 +1,87 @@
+		<div class="header__main">
+
+			<div class="center">
+
+				<div class="header__main-inner">
+
+					<div class="header__main-left">
+
+{% include "template/header/phone.html" %}
+
+					</div>
+
+					<div class="header__main-right">
+
+						<div class="header__cart">
+
+{% include "template/header/cart.html" %}
+
+						</div>
+
+						<div class="header__search">
+
+{% include "template/header/search.html" %}
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="header__main-fixed">
+
+					<div class="header__main-left">
+
+						<button class="ico-box button" type="button" data-modal="callback" aria-label="Обратный звонок">
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="#svg-phone"/>
+							</svg>
+
+						</button>
+
+						<a class="ico-box" href="https://wa.me/74951234567" title="whatsapp {{ site }}" target="_blank" rel="noopener nofollow">
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="#svg-whatsapp"/>
+							</svg>
+
+						</a>
+
+					</div>
+
+					<div class="header__logo">
+
+						<a href="/" title="Главная страница {{ site }}">
+
+							<img src="/img/logo-fixed.svg" width="90" height="60" loading="lazy" alt="Компания {{ site }}">
+
+						</a>
+
+					</div>
+
+					<div class="header__main-right">
+
+						<button class="header-search-show ico-box button" type="button" aria-label="открыть поиск" onclick="alert('что должно поизойти?')">
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="#svg-search"/>
+							</svg>
+
+						</button>
+
+						<a class="ico-box" href="/cart/" title="{% if cart %}у вас 25 товаров{% else %}пока пуста{% endif %}">
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="#svg-cart"/>
+							</svg>
+
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>

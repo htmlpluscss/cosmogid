@@ -195,6 +195,7 @@ legend {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
+	color: var(--purple);
 	box-shadow: var(--box-shadow);
 
 }

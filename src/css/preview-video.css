@@ -2,9 +2,13 @@
 
 	position: relative;
 
-	&:hover {
+	@media $desktop {
 
-		box-shadow: var(--box-shadow);
+		&:hover {
+
+			box-shadow: var(--box-shadow);
+
+		}
 
 	}
 

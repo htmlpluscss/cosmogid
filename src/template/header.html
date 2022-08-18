@@ -1,79 +1,33 @@
 	<header class="header">
 
-		<div class="header__top">
+{% include "template/header/top.html" %}
 
-			<div class="center">
+{% include "template/header/main.html" %}
 
-				<div class="flex">
-
-					<div class="header__city">
-
-{% include "template/header/city.html" %}
-
-					</div>
-
-					<div class="header__menu-top">
-
-{% include "template/header/menu-top.html" %}
-
-					</div>
-
-					<div class="header__user">
-
-{% include "template/header/user.html" %}
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="header__main">
-
-			<div class="center">
-
-				<div class="flex">
-
-					<div class="header__main-left">
-
-{% include "template/header/phone.html" %}
-
-					</div>
-
-					<div class="header__logo">
-
-{% include "template/header/logo.html" %}
-
-					</div>
-
-					<div class="header__main-right">
-
-						<div class="header__cart">
-
-{% include "template/header/cart.html" %}
-
-						</div>
-
-						<div class="header__search">
-
-{% include "template/header/search.html" %}
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="header__menu-main">
-
-{% include "template/header/menu-main.html" %}
-
-				</div>
-
-			</div>
-
-		</div>
+{% include "template/header/mobile.html" %}
 
 	</header>
+
+{% if dev %}
+
+	<form action="/" class="city-auto">
+
+		<p class="city-auto__title">
+			Ваш город <b>Екатеринбург?</b>
+		</p>
+
+		<div class="city-auto__foot">
+
+			<button class="btn btn--outline" type="button" data-modal="city">
+				Нет
+			</button>
+
+			<button class="btn">
+				Да
+			</button>
+
+		</div>
+
+	</form>
+
+{% endif %}

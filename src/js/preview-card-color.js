@@ -93,12 +93,13 @@
 
 				// buy
 
-				const buy = cardColor.getAttribute('data-buy') === 'enabled' || cardColor.getAttribute('data-buy') === 'disabled',
-					  buyDisabled = cardColor.getAttribute('data-buy') === 'disabled',
-					  buyCart = cardColor.getAttribute('data-buy') === 'in-cart',
+				const buy = cardColor.getAttribute('data-buy'),
+					  buyCart = buy === 'in-cart',
+					  buyDisabled = buy === 'disabled',
+					  buyBtn = buy === null || buyDisabled,
 					  templateSubmit = document.querySelector('#modal-card-color-submit-template').innerHTML;
 
-				card.querySelector('.modal-card-color__submit').innerHTML = Mustache.render(templateSubmit, { buy, buyDisabled, buyCart });
+				card.querySelector('.modal-card-color__submit').innerHTML = Mustache.render(templateSubmit, { buyBtn, buyDisabled, buyCart });
 
 				// overlay
 
