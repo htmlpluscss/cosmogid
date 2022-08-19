@@ -2,9 +2,67 @@
 
 	margin: 135px 0 190px;
 
+	@media $desktop {
+
+		.swiper-pagination {
+
+			display: none;
+
+		}
+
+		.swiper-navigation {
+
+			top: var(--gap);
+			bottom: 158px;
+
+		}
+
+		&--news,
+		&--video,
+		&--review {
+
+			.swiper-navigation {
+
+				bottom: 32px;
+
+			}
+
+			.swiper-pagination {
+
+				display: flex;
+
+			}
+
+		}
+
+		&--news,
+		&--review {
+
+			.preview-swiper__all {
+
+				display: none;
+
+			}
+
+		}
+
+	}
+
 	@media $mdWidth {
 
-		margin: 72px 0;
+		margin: 72px 0 96px;
+
+		.swiper-container {
+
+			overflow: visible;
+
+		}
+
+		.swiper-pagination {
+
+			margin: 0;
+
+		}
 
 		.swiper-navigation {
 
@@ -12,9 +70,13 @@
 
 		}
 
-		.swiper-pagination {
+	}
 
+	@media $smWidth {
 
+		.tabs__nav {
+
+			margin-bottom: 24px;
 
 		}
 
@@ -45,19 +107,27 @@
 		font-size: 18px;
 		margin-top: 8px;
 
+		@media $smWidth {
+
+			margin-bottom: 24px;
+
+		}
+
 	}
 
 	&__box {
 
 		margin: 0 calc( var(--indent) * -1 );
 
-		@media $desktop {
+		@media $mdWidth {
 
-			&.is-pagination-hide .swiper-pagination {
+			overflow: hidden;
 
-				display: none;
+		}
 
-			}
+		@media $smWidth {
+
+			margin-top: -24px;
 
 		}
 
@@ -68,19 +138,55 @@
 		position: relative;
 		padding: 0 calc( var(--indent) - 12px );
 
-		.swiper-navigation {
+		@media $mdWidth {
 
-			top: var(--gap);
-			bottom: 158px;
+			padding: 0 calc( var(--indent) / 2 );
 
+		}
+
+		@media $smWidth {
+
+
+		}
+
+	}
+
+	&--news &__wrap,
+	&--review &__wrap {
+
+		@media $smWidth {
+/*
+			padding: 0;
+
+			.swiper-container {
+
+				padding: var(--gap);
+
+			}
+ */
 		}
 
 	}
 
 	&__swiper {
 
-		padding: var(--gap) 12px 158px !important; /* preview-card for box-shadow, and hover */
-		margin-bottom: -158px !important;
+		@media $desktop {
+
+			padding: var(--gap) 12px 158px !important; /* preview-card for box-shadow, and hover */
+			margin-bottom: -158px !important;
+
+		}
+
+		@media $mdWidth {
+
+			padding: 0;
+
+		}
+
+		@media $smWidth {
+
+
+		}
 
 	}
 
@@ -92,23 +198,6 @@
 
 			z-index: 1;
 			position: relative;
-
-		}
-
-		&--news {
-
-			justify-content: space-between;
-			margin: 24px 0;
-
-			@media $tablet {
-
-				.preview-swiper__item:nth-child(n+4) {
-
-					display: none;
-
-				}
-
-			}
 
 		}
 
@@ -134,7 +223,8 @@
 
 		@media $tablet {
 
-			width: calc( ( 100% - ( var(--gap) * 2 ) ) / 3) !important;
+			width: calc( 100% / 3 ) !important;
+			padding: 24px 8px;
 
 			&--billboard {
 
@@ -142,9 +232,28 @@
 
 			}
 
-			&--video {
+		}
 
-				width: calc( ( 100% - ( var(--gap) * 2 ) ) / 3) !important;
+		@media $smWidth {
+
+			width: 50% !important;
+			padding: 24px 8px;
+
+			&--news {
+
+				width: 288px !important;
+
+			}
+
+		}
+
+		@media $xsWidth {
+
+			width: 100% !important;
+
+			&--news {
+
+				width: 288px !important;
 
 			}
 
@@ -152,19 +261,19 @@
 
 	}
 
-	&__box:not(.swiper-container-style) &__item {
+	@media $desktop {
 
-		margin-right: var(--gap);
+		&__box:not(.swiper-container-style) &__item {
 
-		&:last-child {
+			margin-right: var(--gap);
 
-			margin-right: 0;
+			&:last-child {
+
+				margin-right: 0;
+
+			}
 
 		}
-
-	}
-
-	@media $desktop {
 
 		&__box:not(.swiper-container-style) &__item:not(&__item--video):nth-child(n+5),
 		&__box:not(.swiper-container-style) &__item--video + &__item:nth-child(n+6),
@@ -190,9 +299,11 @@
 
 	@media $smWidth {
 
-		&__box:not(.swiper-container-style) &__item:nth-child(n+3) {
+		&__box:not(.swiper-container-style) &__item:not(&__item--video):nth-child(n+3),
+		&__box:not(.swiper-container-style) &__item--video + &__item:nth-child(n+3),
+		&__box:not(.swiper-container-style) &__item--news + &__item:nth-child(n+2) {
 
-			/* display: none; */
+			display: none;
 
 		}
 
@@ -203,6 +314,12 @@
 		display: flex;
 		justify-content: center;
 		margin-top: var(--gap);
+
+		@media $smWidth {
+
+			margin-top: 8px;
+
+		}
 
 		.btn {
 
@@ -216,11 +333,8 @@
 
 	&__billboard-1 {
 
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		flex-grow: 1;
+		position: relative;
 		padding: 36px 22px;
 		font-weight: 300;
 		font-size: 16px;
@@ -282,13 +396,48 @@
 
 /* billboard-2 | revlon */
 
+	&__billboard-mobile &__billboard-2 {
+
+		margin: 24px 0;
+		padding: 24px;
+
+		a {
+
+			font-weight: 400;
+			font-size: 14px;
+			text-transform: none;
+
+			b {
+
+				font-size: 20px;
+				line-height: 1.2;
+				text-transform: uppercase;
+
+			}
+
+		}
+
+		p {
+
+			font-size: 14px;
+			height: 63px;
+
+		}
+
+		.btn {
+
+			width: 256px;
+			font-size: 14px;
+			margin-top: 13px;
+
+		}
+
+	}
+
 	&__billboard-2 {
 
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		position: relative;
+		flex-grow: 1;
 		padding: 89px 42px;
 
 		a {
@@ -324,7 +473,7 @@
 
 			max-width: 320px;
 			font-size: 18px;
-			height: 113px;
+			min-height: 113px;
 
 		}
 

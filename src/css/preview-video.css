@@ -1,6 +1,7 @@
 .preview-video {
 
 	position: relative;
+	flex-grow: 1;
 
 	@media $desktop {
 

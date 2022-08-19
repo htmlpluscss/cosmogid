@@ -30,6 +30,12 @@
 		padding: 32px;
 		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 8px 8px 16px rgba(0, 0, 0, 0.08);
 
+		@media $smWidth {
+
+			padding: 24px;
+
+		}
+
 /*
 		&--video {
 
@@ -85,6 +91,12 @@
 		color: var(--gray);
 		margin-bottom: 16px;
 
+		@media $smWidth {
+
+			font-size: 20px;
+
+		}
+
 	}
 
 	&__text {
@@ -133,6 +145,12 @@
 		display: flex;
 		justify-content: space-between;
 
+		@media $smWidth {
+
+			display: block;
+
+		}
+
 		& + & {
 
 			margin-top: 32px;
@@ -146,6 +164,13 @@
 		width: 240px;
 		margin: 0;
 
+		@media $smWidth {
+
+			width: auto;
+			margin-top: 32px;
+
+		}
+
 	}
 
 	&__grid {
@@ -153,6 +178,12 @@
 		display: grid;
 		gap: 40px 32px;
 		grid-template-columns: 1fr 1fr;
+
+		@media $smWidth {
+
+			display: block;
+
+		}
 
 	}
 
@@ -247,6 +278,12 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-top: 42px;
+
+		@media $smWidth {
+
+			justify-content: center;
+
+		}
 
 		.btn {
 
@@ -482,6 +519,12 @@
 
 	}
 
+	@media $smWidth {
+
+		display: block;
+
+	}
+
 	&__left {
 
 		width: 500px;
@@ -490,6 +533,14 @@
 		@media $mdWidth {
 
 			width: calc( 100% - 360px);
+
+		}
+
+		@media $smWidth {
+
+			width: auto;
+			padding: 0;
+			margin-bottom: 24px;
 
 		}
 
@@ -533,6 +584,12 @@
 		@media $mdWidth {
 
 			width: 360px;
+
+		}
+
+		@media $smWidth {
+
+			width: auto;
 
 		}
 

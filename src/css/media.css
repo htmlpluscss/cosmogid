@@ -43,7 +43,7 @@
 
 	:root {
 
-		--indent: 20px;
+		--indent: 16px;
 		--gap: 16px;
 		--space: 72px;
 
@@ -70,12 +70,6 @@
 }
 
 @media $smWidth {
-
-	:root {
-
-		--indent: 16px;
-
-	}
 
 	.hidden-sm {
 

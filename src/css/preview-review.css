@@ -4,11 +4,16 @@
 	flex-direction: column;
 	padding: 8px;
 	position: relative;
-	transition: box-shadow var(--transitionDefault);
 
-	&:hover {
+	@media $desktop {
 
-		box-shadow: var(--box-shadow);
+		transition: box-shadow var(--transitionDefault);
+
+		&:hover {
+
+			box-shadow: var(--box-shadow);
+
+		}
 
 	}
 

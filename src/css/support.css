@@ -4,6 +4,13 @@
 	display: flex;
 	justify-content: space-between;
 
+	@media $smWidth {
+
+		display: block;
+		margin: 96px 0 56px;
+
+	}
+
 	&__item {
 
 		padding: 0 8px;
@@ -19,6 +26,13 @@
 				display: none;
 
 			}
+
+		}
+
+		@media $smWidth {
+
+			display: block;
+			margin: 56px 0;
 
 		}
 
