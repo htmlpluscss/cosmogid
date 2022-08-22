@@ -43,8 +43,12 @@
 
 			setTimeout( ()=> {
 
-				el.style.width = el.clientWidth + 'px';
-				el.style.textAlign = 'left';
+				if ( el.clientWidth > 0 ) {
+
+					el.style.width = el.clientWidth + 'px';
+					el.style.textAlign = 'left';
+
+				}
 
 			}, 1000);
 
