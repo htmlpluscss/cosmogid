@@ -37,6 +37,9 @@
 		swipeBtns.append(swipePrev);
 		swipeBtns.append(swipeNext);
 
+		swipe.append(swipeBtns);
+		swipe.append(swipeNav);
+
 		resetSwipe = () => {
 
 			if(mySwipe) {
@@ -59,7 +62,8 @@
 
 		if (news) {
 
-			swipe.parentNode.insertAdjacentElement('afterend', swipeNav);
+			swipe.parentNode.append(swipeBtns);
+			swipe.parentNode.append(swipeNav);
 
 			toggleSwipe = () => {
 
@@ -103,7 +107,8 @@
 
 		if (preview) {
 
-			swipe.parentNode.insertAdjacentElement('afterend', swipeNav);
+			swipe.parentNode.append(swipeBtns);
+			swipe.parentNode.append(swipeNav);
 
 			toggleSwipe = () => {
 
@@ -144,31 +149,48 @@
 
 			toggleSwipe = () => {
 
-				toggleSwipe = false;
-				swipe.closest('.billboard').classList.add('swiper-container-style');
+				resetSwipe();
 
-				new Swiper(swipe, {
-					loop: true,
-					autoplay: {
-						delay: 5000
-					},
-					effect: 'fade',
-					fadeEffect: {
-						crossFade: true
-					},
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					},
-					pagination: {
-						el: swipeNav,
-						clickable: true,
-						bulletClass: 'button',
-						bulletActiveClass: 'is-active'
-					}
-				});
+				swipe.parentNode.classList.add('swiper-container-style');
+
+				if( window.innerWidth < 1250 ) {
+
+					swipeNav.classList.remove('hide');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						pagination: {
+							el: swipeNav,
+							clickable: true,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
+						}
+					});
+
+				} else {
+
+					swipeBtns.classList.remove('hide');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						autoplay: {
+							delay: 5000
+						},
+						effect: 'fade',
+						fadeEffect: {
+							crossFade: true
+						},
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
+						}
+					});
+
+				}
 
 			}
+
+			swipe.addEventListener('swiperResize', toggleSwipe);
 
 		}
 /*
@@ -239,9 +261,6 @@
 		}
 */
 		swipe.addEventListener('swiperJsLoad', () => {
-
-			swipe.parentNode.append(swipeBtns);
-			swipe.parentNode.append(swipeNav);
 
 			// eager
 			[...swipe.querySelectorAll('[loading="lazy"]')].forEach( img => img.setAttribute('loading','eager') );

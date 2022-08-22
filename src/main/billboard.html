@@ -1,77 +1,61 @@
-		<div class="billboard">
+	<div class="billboard">
+
+		<div class="center">
 
 			<div class="billboard__wrap swiper-container swiper-container--billboard">
 
-				<div class="billboard__list swiper-wrapper">
+				<ul class="billboard__list swiper-wrapper">
 
-{% for item in [
+					<li class="billboard__item swiper-slide">
 
-	{
-		slogan : "красота без границ",
-		title  : "новинки maskara",
-		text   : "лови новые замечательные скидки при покупке от одной бочки в руки",
-		img    : "maskara"
-	},
-	{
-		slogan : "новинки maskara",
-		title  : "красота",
-		text   : "скидки при покупке от одной бочки в руки",
-		img    : "maskara"
-	}
-
-]%}
-
-					<article class="billboard__item swiper-slide">
-
-						<div class="billboard__content">
-
-							<p class="billboard__slogan">
-								{{ item.slogan }}
-							</p>
-
-							<h2 class="billboard__title">
-								{{ item.title }}
-							</h2>
-
-							<p class="billboard__text">
-								{{ item.text }}
-							</p>
-
-							<div class="billboard__foot">
-
-								<a class="btn" href="/">
-									Узнать больше
-								</a>
-
-							</div>
-
-						</div>
-
-						<div class="billboard__img">
+						<a href="/" class="billboard__link">
 
 							<picture>
 
-								<source srcset="/img/main/billboard/{{ item.img }}--mobile.webp" type="image/webp" media="(max-width: 767px)">
-								<source srcset="/img/main/billboard/{{ item.img }}--mobile.jpg" media="(max-width: 767px)">
+								<source srcset="/img/main/billboard/maskara--mobile.webp" type="image/webp" media="(max-width: 767px)">
+								<source srcset="/img/main/billboard/maskara--mobile.jpg" media="(max-width: 767px)">
 
-								<source srcset="/img/main/billboard/{{ item.img }}--tablet.webp" type="image/webp" media="(max-width: 1249px)">
-								<source srcset="/img/main/billboard/{{ item.img }}--tablet.jpg" media="(max-width: 1249px)">
+								<source srcset="/img/main/billboard/maskara--tablet.webp" type="image/webp" media="(max-width: 1249px)">
+								<source srcset="/img/main/billboard/maskara--tablet.jpg" media="(max-width: 1249px)">
 
-								<source srcset="/img/main/billboard/{{ item.img }}.webp 1x, /img/main/billboard/{{ item.img }}@2x.webp 2x" type="image/webp">
-								<source srcset="/img/main/billboard/{{ item.img }}.jpg 1x, /img/main/billboard/{{ item.img }}@2x.jpg 2x">
+								<source srcset="/img/main/billboard/maskara.webp 1x, /img/main/billboard/maskara@2x.webp 2x" type="image/webp">
+								<source srcset="/img/main/billboard/maskara.jpg 1x, /img/main/billboard/maskara@2x.jpg 2x">
 
-								<img src="/img/main/billboard/{{ item.img }}.jpg" alt="{{ item.title }}" loading="lazy" width="1224" height="400">
+								<img src="/img/main/billboard/maskara.jpg" alt="новинки maskara" loading="lazy" width="1224" height="400">
 
 							</picture>
 
-						</div>
+						</a>
 
-					</article>
+					</li>
 
-{% endfor %}
+					<li class="billboard__item swiper-slide">
 
-				</div>
+						<a href="/" class="billboard__link">
+
+							<picture>
+
+								<source srcset="/img/main/billboard/maskara--mobile.webp" type="image/webp" media="(max-width: 767px)">
+								<source srcset="/img/main/billboard/maskara--mobile.jpg" media="(max-width: 767px)">
+
+								<source srcset="/img/main/billboard/maskara--tablet.webp" type="image/webp" media="(max-width: 1249px)">
+								<source srcset="/img/main/billboard/maskara--tablet.jpg" media="(max-width: 1249px)">
+
+								<source srcset="/img/main/billboard/maskara.webp 1x, /img/main/billboard/maskara@2x.webp 2x" type="image/webp">
+								<source srcset="/img/main/billboard/maskara.jpg 1x, /img/main/billboard/maskara@2x.jpg 2x">
+
+								<img src="/img/main/billboard/maskara.jpg" alt="новинки maskara" loading="lazy" width="1224" height="400">
+
+							</picture>
+
+						</a>
+
+					</li>
+
+				</ul>
 
 			</div>
 
 		</div>
+
+	</div>

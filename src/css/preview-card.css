@@ -6,6 +6,7 @@
 	position: relative;
 	transition: box-shadow var(--transitionDefault);
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	width: 100%;
 
 	.modal-card-color {
 
@@ -372,6 +373,7 @@
 		padding: 8px;
 		color: var(--gray);
 		border-bottom: 1px solid;
+		max-width: 100%;
 
 		&-img {
 
@@ -387,6 +389,10 @@
 		}
 
 		&-name {
+
+			max-width: 100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
 
 			@media $desktop {
 
