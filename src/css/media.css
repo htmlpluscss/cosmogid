@@ -93,15 +93,19 @@
 
 @media $xsWidth {
 
-	:root {
-
-		--indent: 10px;
-
-	}
-
 	.hidden-xs {
 
 		display: none !important;
+
+	}
+
+}
+
+@media (max-width: 359px) {
+
+	:root {
+
+		--indent: 10px;
 
 	}
 

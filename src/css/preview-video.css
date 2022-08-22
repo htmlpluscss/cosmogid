@@ -39,6 +39,20 @@
 		pointer-events: none;
 		gap: 24px;
 
+		@media $smWidth {
+
+			padding: 8px;
+			gap: 16px;
+
+			svg {
+
+				width: 16px;
+				height: 16px;
+
+			}
+
+		}
+
 		&-item {
 
 			gap: 8px;
