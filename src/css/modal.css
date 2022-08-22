@@ -810,6 +810,15 @@
 			border-radius: 2px;
 			--purple: #fff;
 
+			@media $mdWidth {
+
+				padding: 0 16px;
+				line-height: 30px;
+				height: 30px;
+				font-size: 11px;
+
+			}
+
 		}
 
 	}
