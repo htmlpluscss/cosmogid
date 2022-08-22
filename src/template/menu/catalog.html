@@ -2,17 +2,66 @@
 
 		<div class="center">
 
+			<div class="menu-catalog__head">
+
+				<div class="menu-catalog__nav">
+
+					<div class="menu-catalog__logo">
+
+						<a href="/" title="Главная страница {{ site }}">
+
+							<img src="/img/logo-menu.svg" width="140" height="40" loading="lazy" alt="Компания {{ site }}">
+
+						</a>
+
+					</div>
+
+					<a class="ico-box" href="tel:+74951234567" title="телефон {{ site }}">
+
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#svg-phone"/>
+						</svg>
+
+					</a>
+
+					<a class="ico-box" href="/" title="Профиль">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#svg-user"/>
+						</svg>
+					</a>
+
+					<button class="button btn-menu-close" type="button" aria-label="Закрыть меню">
+						<svg width="32" height="32" viewBox="0 0 24 24">
+							<use xlink:href="#svg-close-small"/>
+						</svg>
+					</button>
+
+				</div>
+
+				<div class="menu-catalog__back hide"></div>
+
+			</div>
+
+			<div class="menu-catalog__body hide"></div>
+
 			<ul class="menu-catalog__list">
 
 {% for item in [
 
 	{
 		name : "Бренды",
-		mod  : "brand"
+		mod  : "brand",
+		sub  : [
+			["Academie (Франция)","Aerazen Lab (Италия)","Aespira (Австрия-Южная Корея)","Alfaparf Milano (Италия)"],
+			["Algologie (Франция)","Amenity (Япония)","American crew (США)","Anesi (Испания)"],
+			["Anna Lotan (Израиль)","Aravia Professional (Россия)","Beauty Style (США)","Carita (Франция)"],
+			["Casmara (Испания)","Cehko (Германия)","Daigo - метабиотик BS Corporation (Япония)","Davines (Италия)"]
+		]
 	},
 
 	{
-		name : "Парфюмерия"
+		name : "Парфюмерия",
+		sub  : []
 	},
 
 	{
@@ -51,19 +100,17 @@
 
 				<li class="menu-catalog__item">
 
-					<a class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}" href="/">
-						{{ item.name }}
+					<a class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}{% if item.sub %} menu-catalog__link--arrow{% endif %}" href="/">
+
+						<span class="menu-catalog__name">
+							{{ item.name }}
+						</span>
+
 					</a>
 
-		{% if item.name === 'Парфюмерия' %}
+		{% if item.sub %}
 
-					<div class="menu-catalog__sub">
-
-{% include "template/menu/grid.html" %}
-
-{% include "template/menu/brand.html" %}
-
-					</div>
+{% include "template/menu/sub.html" %}
 
 		{% endif %}
 

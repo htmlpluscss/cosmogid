@@ -1,0 +1,41 @@
+					<div class="menu-catalog__sub">
+
+		{% if item.name === 'Парфюмерия' %}
+
+{% include "template/menu/grid.html" %}
+
+{% include "template/menu/brand.html" %}
+
+		{% else %}
+
+						<div class="menu-catalog__grid">
+
+				{% for column in item.sub %}
+
+							<div class="menu-catalog__column">
+
+								<ul class="menu-catalog__level-2">
+
+						{% for level2 in item.sub[loop.index0] %}
+
+									<li>
+
+										<a class="menu-catalog__link is-level-2" href="/">
+											{{ level2 }}
+										</a>
+
+									</li>
+
+						{% endfor %}
+
+								</ul>
+
+							</div>
+
+				{% endfor %}
+
+						</div>
+
+					</div>
+
+		{% endif %}

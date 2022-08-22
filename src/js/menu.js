@@ -2,18 +2,126 @@
 
 	if(menu) {
 
+		let scrollLevel2 = null;
+
+		const back = menu.querySelector('.menu-catalog__back'),
+			  body = menu.querySelector('.menu-catalog__body');
+
+		// иконка level2 +
+
 		const linkBtn = menu.querySelectorAll('.menu-catalog__link.is-btn'),
-			  ico = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+			  icoPlus = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
-		ico.setAttributeNS(null, "viewBox", "0 0 16 16");
-		ico.setAttributeNS(null, "width", 16);
-		ico.setAttributeNS(null, "height", 16);
+		icoPlus.setAttributeNS(null, "viewBox", "0 0 16 16");
+		icoPlus.setAttributeNS(null, "width", 16);
+		icoPlus.setAttributeNS(null, "height", 16);
 
-		ico.innerHTML = '<rect x="7" y="2" width="2" height="12"/><rect x="2" y="7" width="12" height="2"/>';
+		icoPlus.innerHTML = '<rect x="7" y="2" width="2" height="12"/><rect x="2" y="7" width="12" height="2"/>';
+
+		// иконка right level1 и level2
+		const level_1 = menu.querySelectorAll('.menu-catalog__link--arrow'),
+			  icoRight = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+
+		icoRight.setAttributeNS(null, "viewBox", "0 0 32 32");
+		icoRight.setAttributeNS(null, "width", 32);
+		icoRight.setAttributeNS(null, "height", 32);
+
+		icoRight.innerHTML = '<path d="M14 22.67a1.33 1.33 0 0 1-.95-2.28L17.48 16l-4.24-4.41a1.33 1.33 0 0 1 1.89-1.89l5.15 5.34c.5.52.5 1.35 0 1.87l-5.33 5.33c-.25.26-.58.41-.94.43Z"/></svg>';
+
+		// resize
+
+		const resize = () => {
+
+			if ( window.innerWidth < 1250 ) {
+
+				[...level_1].forEach( btn => {
+
+					if ( btn.querySelector('svg') === null ) {
+
+						btn.append(icoRight.cloneNode(true));
+
+					}
+
+				});
+
+				[...linkBtn].forEach( btn => {
+
+					if ( btn.querySelector('svg') ) {
+
+						btn.querySelector('svg').remove();
+
+					}
+
+					btn.append(icoRight.cloneNode(true));
+
+				});
+
+			} else {
+
+				back.classList.add('hide');
+				body.classList.add('hide');
+
+				[...level_1].forEach( btn => {
+
+					if ( btn.querySelector('svg') ) {
+
+						btn.querySelector('svg').remove();
+
+					}
+
+				});
+
+				[...linkBtn].forEach( btn => {
+
+					if ( btn.querySelector('svg') ) {
+
+						btn.querySelector('svg').remove();
+
+					}
+
+					btn.append(icoPlus.cloneNode(true));
+
+				});
+
+			}
+
+		}
+
+		resize();
+
+		let resizeTimeout = null,
+			windowWidthOLd = window.innerWidth;
+
+		window.addEventListener("resize", () => {
+
+			window.requestAnimationFrame( () => {
+
+				if (resizeTimeout === null) {
+
+					resizeTimeout = setTimeout( () => {
+
+						resizeTimeout = null;
+
+						if(windowWidthOLd !== window.innerWidth) {
+
+							resize();
+
+						}
+
+					}, 100);
+
+				}
+
+			});
+
+		});
+
+		// end resize
+
+
+		// клик по level2 => раскрытие level3
 
 		[...linkBtn].forEach( btn => {
-
-			btn.append(ico.cloneNode(true));
 
 			btn.addEventListener('click', event => {
 
@@ -25,6 +133,109 @@
 
 		});
 
+		// mobile
+
+		// клик по level2 => раскрытие level3
+
+		[...level_1].forEach( btn => {
+
+			btn.addEventListener('click', event => {
+
+				if ( window.innerWidth < 1250 ) {
+
+					event.preventDefault();
+
+					scrollLevel2 = window.pageYOffset;
+
+					back.innerHTML = btn.innerHTML;
+					body.innerHTML = btn.nextElementSibling.innerHTML;
+
+					window.requestAnimationFrame( () => {
+
+						back.classList.remove('hide');
+						body.classList.remove('hide');
+
+					});
+
+				}
+
+			});
+
+		});
+
+		// back
+
+		back.addEventListener('click', () => {
+
+			window.requestAnimationFrame( () => {
+
+				back.classList.add('hide');
+				body.classList.add('hide');
+
+				window.scrollTo(0,scrollLevel2);
+
+			});
+
+		});
+
+		// body
+
+		body.addEventListener('click', event => {
+
+			if ( event.target.closest('.menu-catalog__link.is-btn') ) {
+
+				event.preventDefault();
+
+				event.target.classList.toggle('is-open');
+
+			}
+
+		});
+
 	}
+
+})(document.querySelector('.menu-catalog'));
+
+// toogle
+( menu => {
+
+	// btn toggle
+
+	let windowScroll = null;
+
+	( btns => {
+
+		[...btns].forEach( btn => {
+
+			btn.addEventListener('click', () => {
+
+				windowScroll = window.pageYOffset;
+
+				document.body.classList.add('menu-show');
+				document.documentElement.classList.add('scroll-behavior-off');
+				window.scrollTo(0,0);
+
+			});
+
+		});
+
+	})(document.querySelectorAll('.btn-menu-open'));
+
+	( btns => {
+
+		[...btns].forEach( btn => {
+
+			btn.addEventListener('click', () => {
+
+				document.body.classList.remove('menu-show');
+				window.scrollTo(0,windowScroll);
+
+				setTimeout( () => document.documentElement.classList.remove('scroll-behavior-off') );
+
+			});
+
+		});
+
+	})(document.querySelectorAll('.btn-menu-close'));
 
 })(document.querySelector('.menu-catalog'));
