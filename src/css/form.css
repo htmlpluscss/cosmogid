@@ -195,6 +195,15 @@ legend {
 
 	}
 
+	&--filter {
+
+		background-color: #ede9fe;
+		border: 1px solid #4c1d95;
+		color: var(--purple);
+		font-size: 12px;
+
+	}
+
 }
 
 .ico-box {

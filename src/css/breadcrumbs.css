@@ -34,11 +34,13 @@
 
 		display: flex;
 		justify-content: center;
-		/* white-space: nowrap; */
+		white-space: nowrap;
 		font-weight: 500;
 		color: var(--text);
 
 		@media $mdWidth {
+
+			font-size: 12px;
 
 /* 			overflow-x: auto;
 margin: -10px calc( var(--indent) * -1);
@@ -52,6 +54,8 @@ padding: 10px var(--indent); */
 
 		display: flex;
 		align-items: center;
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 		&::after {
 
@@ -75,6 +79,14 @@ padding: 10px var(--indent); */
 	&__link {
 
 		text-decoration: underline;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		@media $mdWidth {
+
+			max-width: 128px;
+
+		}
 
 		@media $desktop {
 

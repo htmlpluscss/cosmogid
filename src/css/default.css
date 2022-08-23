@@ -133,6 +133,12 @@ hr {
 	text-transform: uppercase;
 	color: var(--gray);
 
+	@media $mdWidth {
+
+		font-size: 24px;
+
+	}
+
 }
 /*
 -----------------------------------------------------------------------------*/

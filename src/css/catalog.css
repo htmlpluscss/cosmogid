@@ -1,3 +1,28 @@
+@media $mdWidth {
+
+	.is-filter-show {
+
+		.catalog ~ *,
+		.footer,
+		.header,
+		.breadcrumbs,
+		.title,
+		.catalog__body {
+
+			display: none;
+
+		}
+
+		.catalog__filter {
+
+			display: block;
+
+		}
+
+	}
+
+}
+
 .catalog {
 
 	&__box {
@@ -25,12 +50,6 @@
 		@media $mdWidth {
 
 			display: none;
-/*
-			.is-filter-show & {
-
-				display: block;
-
-			}*/
 
 		}
 
@@ -40,16 +59,6 @@
 
 		flex-grow: 1;
 
-		@media $mdWidth {
-/*
-			.is-filter-show & {
-
-				display: none;
-
-			}
- */
-		}
-
 	}
 
 	&__list {
@@ -58,9 +67,21 @@
 		gap: var(--gap);
 		grid-template-columns: repeat(3, 1fr);
 
+		@media $mdWidth {
+
+			margin: 40px 0;
+
+		}
+
 		@media $smWidth {
 
-			/* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+			grid-template-columns: repeat(2, 1fr);
+
+		}
+
+		@media $xsWidth {
+
+			display: block;
 
 		}
 
@@ -74,6 +95,12 @@
 
 			z-index: 3;
 			transition: none;
+
+		}
+
+		@media $xsWidth {
+
+			margin: var(--gap) 0;
 
 		}
 
@@ -97,6 +124,14 @@
 
 		margin-bottom: 32px;
 
+		@media $mdWidth {
+
+			background-color: #f9fafb;
+			padding: 8px var(--indent);
+			margin: 0 calc( var(--indent) * -1 );
+
+		}
+
 	}
 
 	&__foot {
@@ -115,11 +150,24 @@
 	display: flex;
 	justify-content: space-between;
 
+	@media $smWidth {
+
+		display: block;
+
+	}
+
 	&__list {
 
 		flex-grow: 1;
 		display: flex;
+		flex-wrap: wrap;
 		gap: 16px;
+
+		@media $smWidth {
+
+			margin-bottom: 16px;
+
+		}
 
 	}
 
@@ -129,7 +177,7 @@
 
 		.btn {
 
-			padding: 0 8px;
+			padding: 0 8px !important;
 			font-weight: 500;
 			color: var(--purple);
 
@@ -166,21 +214,7 @@
 
 }
 
-@media $mdWidth {
 
-	.is-filter-show {
-
-		.header,
-		.footer,
-		.breadcrumbs {
-
-			display: none;
-
-		}
-
-	}
-
-}
 */
 
 .catalog-billboard {
