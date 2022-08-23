@@ -3,6 +3,18 @@
 	display: flex;
 	gap: 16px;
 
+	@media $mdWidth {
+
+		justify-content: center;
+
+	}
+
+	@media $xsWidth {
+
+		gap: 8px;
+
+	}
+
 	&__item {
 
 		font-weight: 500;
