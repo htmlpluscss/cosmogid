@@ -1,0 +1,64 @@
+				<fieldset class="filter__fieldset">
+
+					<legend class="filter__legend is-open">
+						Цветовая палитра
+					</legend>
+
+					<div class="filter__box">
+
+						<div class="filter__scroll is-scroll">
+
+{% for i in range(1,5) %}
+
+{% for checkbox in [
+
+	{
+		name  : "Белый",
+		count : 56
+	},
+	{
+		name  : "Синий",
+		count : 356
+	},
+	{
+		name  : "Зеленый",
+		count : 256,
+		disabled : true
+	},
+	{
+		name  : "Уход за кончиками ухов",
+		count : 566
+	},
+	{
+		name  : "Пиллинг пяточек",
+		count : 465
+	},
+	{
+		name  : "Тонизирование бровей",
+		count : 25,
+		checked : true
+	},
+	{
+		name  : "Полировка затылка",
+		count : 256
+	}
+
+]%}
+							<label class="filter-checkbox">
+
+								<input class="filter-checkbox__input visuallyhidden" type="checkbox"{% if checkbox.disabled %} disabled="disabled"{% endif %}{% if checkbox.checked %} checked="checked"{% endif %}>
+
+								<span class="filter-checkbox__label">
+									{{ checkbox.name }} <b>({{ checkbox.count }})</b>
+								</span>
+
+							</label>
+{% endfor %}
+
+{% endfor %}
+
+						</div>
+
+					</div>
+
+				</fieldset>

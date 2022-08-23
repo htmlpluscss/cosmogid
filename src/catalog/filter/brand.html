@@ -1,0 +1,93 @@
+				<fieldset class="filter__fieldset">
+
+					<legend class="filter__legend is-open">
+						Бренды
+					</legend>
+
+					<div class="filter__box">
+
+						<ul class="filter-brand">
+
+{% for checkbox in ["Все","A","B","C","D","E","F","G","H","I","K","L","M","R","T","S","Z","X","V","W","Y","1-9","А","Б","Г"]
+%}
+
+							<li class="filter-brand__item">
+
+								<label class="filter-brand__btn">
+
+									<input class="filter-brand__input visuallyhidden" type="checkbox">
+
+									<span class="filter-brand__label">
+										{{ checkbox }}
+									</span>
+
+								</label>
+
+							</li>
+
+{% endfor %}
+
+						</ul>
+
+						<div class="filter__fastfilter">
+
+							<input class="input" placeholder="Поиск">
+
+						</div>
+
+						<div class="filter__scroll is-scroll">
+
+{% for i in range(1,5) %}
+
+{% for checkbox in [
+
+	{
+		name  : "Аааовлаофвды",
+		count : 125,
+		disabled : true
+	},
+	{
+		name  : "Алоорылоа",
+		count : 355
+	},
+	{
+		name  : "Уход за ушами",
+		count : 252
+	},
+	{
+		name  : "Уход за кончиками ухов",
+		count : 25
+	},
+	{
+		name  : "Пиллинг пяточек",
+		count : 25
+	},
+	{
+		name  : "Тонизирование бровей",
+		count : 15,
+		checked : true
+	},
+	{
+		name  : "Полировка затылка",
+		count : 5
+	}
+
+]%}
+							<label class="filter-checkbox">
+
+								<input class="filter-checkbox__input visuallyhidden" type="checkbox"{% if checkbox.disabled %} disabled="disabled"{% endif %}{% if checkbox.checked %} checked="checked"{% endif %}>
+
+								<span class="filter-checkbox__label">
+									{{ checkbox.name }} <b>({{ checkbox.count }})</b>
+								</span>
+
+							</label>
+{% endfor %}
+
+{% endfor %}
+
+						</div>
+
+					</div>
+
+				</fieldset>

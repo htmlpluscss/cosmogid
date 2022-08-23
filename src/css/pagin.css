@@ -1,75 +1,49 @@
 .pagin {
 
-	margin: 48px 0 84px;
 	display: flex;
-	justify-content: flex-end;
-
-	@media $smWidth {
-
-		margin: var(--space) 0;
-
-	}
+	gap: 16px;
 
 	&__item {
 
-		&--sep {
-
-			width: 28px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: var(--BnW);
-
-		}
-
-	}
-
-	&__item--current &__link {
-
-		background-color: var(--yellow);
-		color: #fff;
-		pointer-events: none;
+		font-weight: 500;
+		font-size: 16px;
+		color: var(--text);
+		border-bottom: 1px solid;
+		min-width: 40px;
+		height: 40px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 	}
 
-	&__item--disabled &__link {
+	&__item--current {
 
 		pointer-events: none;
-
-		svg {
-
-			fill: var(--BnW);
-
-		}
+		border: 1px solid;
+		color: var(--purple);
 
 	}
 
 	&__link {
 
-		color: #F5C400;
-		min-width: 32px;
-		height: 32px;
 		display: block;
-		text-align: center;
-		line-height: 32px;
-		font-size: 14px;
-		border-radius: 3px;
 
-		svg {
+		&::after {
 
-			fill: #0F0B38;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
 
 		}
 
 		&:hover {
 
-			color: var(--color);
-
-			svg {
-
-				fill: var(--yellow);
-
-			}
+			color: var(--gray);
 
 		}
 

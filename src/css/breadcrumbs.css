@@ -1,10 +1,10 @@
 .breadcrumbs {
 
-	margin: var(--gap) 0;
+	margin: 24px 0 16px;
 	position: relative;
 
 	@media $mdWidth {
-
+/*
 		&::after,
 		&::before {
 
@@ -27,19 +27,22 @@
 			background-image: linear-gradient(to left, var(--bg), rgba(255, 255, 255, 0));
 
 		}
-
+ */
 	}
 
 	&__list {
 
 		display: flex;
-		white-space: nowrap;
+		justify-content: center;
+		/* white-space: nowrap; */
+		font-weight: 500;
+		color: var(--text);
 
 		@media $mdWidth {
 
-			overflow-x: auto;
-			margin: -10px calc( var(--indent) * -1);
-			padding: 10px var(--indent);
+/* 			overflow-x: auto;
+margin: -10px calc( var(--indent) * -1);
+padding: 10px var(--indent); */
 
 		}
 
@@ -49,12 +52,11 @@
 
 		display: flex;
 		align-items: center;
-		color: var(--text);
 
 		&::after {
 
-			margin: 0 8px;
-			content: '•';
+			content: '/';
+			margin: 0 4px;
 
 		}
 
@@ -72,15 +74,13 @@
 
 	&__link {
 
-		color: var(--text);
-		font-size: 13px;
+		text-decoration: underline;
 
 		@media $desktop {
 
 			&:hover {
 
-				color: var(--orangeHover);
-				text-decoration: underline;
+				color: var(--gray);
 
 			}
 

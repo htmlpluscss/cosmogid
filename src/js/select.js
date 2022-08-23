@@ -11,7 +11,7 @@ window.selects = select => {
 	value.className = 'select__value';
 	value.innerHTML = '<span class="select__value-inner"></span>';
 
-	value.insertAdjacentHTML('beforeend', '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M7.2 9.2a.65.65 0 0 1 .91 0L12 13.12l3.89-3.94a.65.65 0 0 1 .92 0c.25.26.25.68 0 .94L12 15l-4.8-4.87a.67.67 0 0 1 0-.94Z"/></svg>');
+	value.insertAdjacentHTML('beforeend', '<svg width="16" height="16" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-chevron-down"/></svg>');
 	select.appendChild(value);
 
 	const form = select.closest('form'),
@@ -20,7 +20,7 @@ window.selects = select => {
 		valueText = select.querySelector('.select__value-inner'),
 		list = document.createElement('div');
 
-	list.className = 'select__list';
+	list.className = 'select__list is-scroll';
 
 	let selected = control.querySelector('[value="' + control.value + '"]');
 
