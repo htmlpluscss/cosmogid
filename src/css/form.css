@@ -139,6 +139,28 @@ legend {
 
 	}
 
+	&--hash {
+
+		background-color: transparent !important;
+		font-size: 14px;
+		color: var(--purple);
+		padding: 0 !important;
+		height: 26px;
+		line-height: 26px;
+		border-bottom: 1px dashed;
+
+		@media $desktop {
+
+			&:hover {
+
+				border-bottom-color: transparent;
+
+			}
+
+		}
+
+	}
+
 	&--link {
 
 		background-color: transparent !important;

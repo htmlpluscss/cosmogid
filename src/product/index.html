@@ -1,0 +1,61 @@
+{% set title = "Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл" %}
+
+{% set description = "Шампунь для вьющихся волос Moroccanoil - Улучшающий состояние кудрей шампунь насыщен питательным маслом арганы, которое усиливает эластичность и блеск волос, а также делает их более послушными." %}
+
+{% set breadcrumbs = ["Каталог", "Лицо", "Очищающие маски", "MoroccanOil Curl Enhancing Shampoo (Шампунь для вьющихся волос)"] %}
+
+{% set ogType = "article" %}
+{% set urlPage = "product" %}
+{% set ogImage = "img/product/gallery/1--928x928.jpg" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="product">
+
+{% include "product/schema.html" %}
+
+			<div class="product__grid">
+
+				<div class="product__main">
+
+{% include "product/main.html" %}
+
+				</div>
+
+				<div class="product__gallery">
+
+{% include "product/gallery.html" %}
+
+				</div>
+
+				<div class="product__bar">
+
+{% include "product/buy.html" %}
+
+{% include "product/service.html" %}
+
+				</div>
+
+			</div>
+
+			<div class="product__tabs">
+
+{% include "product/tabs.html" %}
+
+			</div>
+
+		</article>
+
+{% include "_include/recently-watched.html" %}
+
+{% include "_include/review.html" %}
+
+{% include "_include/support.html" %}
+
+	</div>
+
+{% endblock %}

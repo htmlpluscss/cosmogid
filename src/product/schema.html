@@ -1,0 +1,58 @@
+		<script type="application/ld+json">
+
+			{
+
+				"@context": "https://schema.org",
+				"@type": "Product",
+				"name": "{{ title }}",
+				"description": "{{ description }}",
+				"image": "{{ url }}/img/product/gallery/1--928x928.jpg",
+				"url": "{{ url }}/product/",
+				"brand": "Moroccanoil",
+				"sku": "494303",
+				"gtin13": "УТ000003140",
+				"offers": {
+					"@type": "Offer",
+					"price": "2581",
+					"priceValidUntil": "2022-06-05",
+					"availability": "https://schema.org/InStock",
+					"priceCurrency": "RUB",
+					"url": "{{ url }}/product/"
+				},
+
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"worstRating": "1",
+					"bestRating" : "5",
+					"ratingValue": "4.7",
+					"reviewCount": "2"
+				},
+
+				"review": [
+					{
+						"@type": "Review",
+						"author": "Макс Д.",
+						"description": "Хорошие ценники, техники предостаточно, большая официальная гарантия и сервис отработан до самых мелочей. Стиральная машина куплена, прошло все ровно и теперь можно нацеливаться на покупку уже сушилки, причем и модель прямо здесь же выбрали.",
+						"reviewRating": {
+							"@type": "Rating",
+							"worstRating": "1",
+							"bestRating" : "5",
+							"ratingValue": "5"
+						}
+					},
+					{
+						"@type": "Review",
+						"author": "Алексей",
+						"description": "Быстрая обработка заказа и доставк Согласовали окно доставки заранее",
+						"reviewRating": {
+							"@type": "Rating",
+							"worstRating": "1",
+							"bestRating" : "5",
+							"ratingValue": "4"
+						}
+					}
+				]
+
+			}
+
+		</script>

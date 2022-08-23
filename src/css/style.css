@@ -28,6 +28,8 @@
 @import url(catalog.css);
 @import url(filter.css);
 @import url(pagin.css);
+
+@import url(product.css);
 /*
 
 @import url(content.css);
@@ -37,7 +39,7 @@
 @import url(preview-product.css);
 
 
-@import url(product.css);
+
 
 @import url(publication.css);
 

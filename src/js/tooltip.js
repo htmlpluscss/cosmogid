@@ -1,3 +1,5 @@
+// title
+
 ( tooltips => {
 
 	if(tooltips.length){
@@ -59,7 +61,9 @@
 	}
 
 })(document.querySelectorAll('.tooltip-title'));
-/*
+
+// help
+
 ( tooltips => {
 
 	if(tooltips.length){
@@ -146,4 +150,3 @@
 	}
 
 })(document.querySelectorAll('.tooltip'));
-*/

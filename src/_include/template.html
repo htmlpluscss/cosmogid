@@ -2,6 +2,22 @@
 
 		<svg>
 
+			<symbol id="svg-info" viewBox="0 0 24 24">
+				<path d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm2 0a8 8 0 1 0 16 0 8 8 0 0 0-16 0Zm8.7-4.7a1 1 0 1 1-1.4 1.4 1 1 0 0 1 1.4-1.4ZM11 11a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0v-5Z"/>
+			</symbol>
+
+			<symbol id="svg-card" viewBox="0 0 24 24">
+				<path fill-rule="evenodd" d="M19 5H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3ZM4 8a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1H4V8Zm15 9a1 1 0 0 0 1-1v-5H4v5a1 1 0 0 0 1 1h14ZM7 15h4a1 1 0 1 0 0-2H7a1 1 0 1 0 0 2Zm10 0h-2a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2Z"/>
+			</symbol>
+
+			<symbol id="svg-truck" viewBox="0 0 24 24">
+				<path fill-rule="evenodd" d="M13 4a1 1 0 0 1 1 .88V5h4c.3 0 .6.14.78.38l.08.1 3 5 .03.07.05.1.04.13.02.12V17a1 1 0 0 1-.88 1h-1.29a3 3 0 0 1-5.66 0H9.83a3 3 0 0 1-5.66 0H3a1 1 0 0 1-1-.88V13a1 1 0 0 1 2-.12V16h.17a3 3 0 0 1 5.66 0H12V6H2a1 1 0 0 1-1-.88V5a1 1 0 0 1 .88-1H13Zm7 12h-.17a3 3 0 0 0-5.66 0H14v-4h6v4Zm-3 2a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM7 18a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm7-8V7h3.43l1.8 3H14ZM8 9a1 1 0 0 0-1-1H2.88A1 1 0 0 0 3 10h4.12A1 1 0 0 0 8 9Z"/>
+			</symbol>
+
+			<symbol id="svg-shield" viewBox="0 0 24 24">
+				<path d="M12 21.85a2 2 0 0 1-1-.25l-.3-.17A15.17 15.17 0 0 1 3 8.23v-.14a2 2 0 0 1 1-1.75l7-3.94a2 2 0 0 1 2 0l7 3.94a2 2 0 0 1 1 1.75v.14c0 5.47-2.96 10.51-7.72 13.2l-.3.17a2 2 0 0 1-.98.25Zm0-17.7L5 8.09v.14c0 4.75 2.56 9.12 6.7 11.45l.3.17.3-.17c4.14-2.33 6.7-6.7 6.7-11.45v-.14l-7-3.94Z"/>
+			</symbol>
+
 			<symbol id="svg-list-search" viewBox="0 0 24 24">
 				<path d="M21 6a1 1 0 0 0-1-1H3.88A1 1 0 0 0 4 7h16.12A1 1 0 0 0 21 6Zm-11 9a5 5 0 1 1 9.17 2.76l.04.03 2.5 2.5a1 1 0 0 1-1.32 1.5l-.1-.08-2.5-2.5a.98.98 0 0 1-.03-.04A5 5 0 0 1 10 15Zm8 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0ZM8 11a1 1 0 0 1 .12 2H4a1 1 0 0 1-.12-2H8Zm1 7a1 1 0 0 0-1-1H3.88A1 1 0 0 0 4 19h4.12A1 1 0 0 0 9 18Z"/>
 			</symbol>
@@ -139,7 +155,7 @@
 					{{# overlayNot }}
 
 						<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="{{ id }}" data-articleId="{{ articleId }}">
-							Уведомить  / найти аналог
+							Уведомить  / <span class="hidden-sm">найти</span> аналог
 						</button>
 
 					{{/ overlayNot }}
@@ -324,6 +340,137 @@
 				</div>
 
 			{{/ overlay }}
+
+		</script>
+
+
+		<script type="text/html" id="product-gallery-overlay-template">
+
+			{{# overlay }}
+
+				<div class="product-gallery__overlay">
+
+					{{# overlayTitle }}
+
+						<p class="product-gallery__overlay-title">
+							{{ overlayTitle }}
+						</p>
+
+					{{/ overlayTitle }}
+
+					{{# overlayText }}
+
+						<p class="product-gallery__overlay-text">
+							{{ overlayText }}
+						</p>
+
+					{{/ overlayText }}
+
+					{{# overlayLogin }}
+
+						<button class="product-gallery__overlay-btn btn btn--outline" type="button" data-modal="login">
+							Авторизоваться
+						</button>
+
+					{{/ overlayLogin }}
+
+					{{# overlayNot }}
+
+						<button class="product-gallery__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="{{ id }}" data-articleId="{{ articleId }}">
+							Уведомить  / найти аналог
+						</button>
+
+					{{/ overlayNot }}
+
+					{{# overlayWithdrawn }}
+
+						<button class="product-gallery__overlay-btn btn btn--outline" type="button" data-modal="find-analogue" data-form-set-id="modal-form-find-analogue" data-id="{{ id }}" data-articleId="{{ articleId }}">
+							Найти аналог
+						</button>
+
+					{{/ overlayWithdrawn }}
+
+				</div>
+
+			{{/ overlay }}
+
+		</script>
+
+		<script type="text/html" id="product-buy-availability-template">
+
+			{{^ availability }}
+
+				есть в наличии
+
+			{{/ availability }}
+
+		</script>
+
+		<script type="text/html" id="product-buy-price-template">
+
+			{{# priceOld }}
+
+				<s class="product-buy__price-old">
+					{{ priceOld }} ₽
+				</s>
+
+			{{/ priceOld }}
+
+				<b class="product-buy__price-value">
+					{{ price }} ₽
+				</b>
+
+		</script>
+
+		<script type="text/html" id="product-buy-submit-template">
+
+			{{# buyBtn }}
+
+				<button class="btn"{{# buyDisabled }} disabled="disabled"{{/ buyDisabled }}>
+					В корзину
+				</button>
+
+			{{/ buyBtn }}
+
+			{{# buyCart }}
+
+				<a href="/cart/" class="btn btn--outline">
+					В корзине
+				</a>
+
+			{{/ buyCart }}
+
+		</script>
+
+		<script type="text/html" id="product-buy-favourite-template">
+
+			{{^ favourite }}
+
+				<button class="btn btn--more" type="button">
+
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="#svg-favourite"/>
+					</svg>
+
+					Добавить в избранное
+
+				</button>
+
+			{{/ favourite }}
+
+			{{# favourite }}
+
+				<button class="btn btn--more" type="button">
+
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="#svg-favourite-fill"/>
+					</svg>
+
+					Удалить из избранного
+
+				</button>
+
+			{{/ favourite }}
 
 		</script>
 

@@ -279,9 +279,11 @@
 		justify-content: center;
 		align-items: center;
 
-		@media $desktop {
+		img {
 
-			img {
+			z-index: 2;
+
+			@media $desktop {
 
 				width: 193px;
 				height: 128px;

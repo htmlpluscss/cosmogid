@@ -67,41 +67,13 @@
 
 	position: relative;
 
-	&__btn {
+	summary {
 
 		position: relative;
 		list-style: none;
 		user-select: none;
-		cursor: default;
-		text-decoration: underline;
-		text-decoration-style: dotted;
-		text-underline-position: under;
-
-		@media $desktop {
-
-			&:hover {
-
-				text-decoration-color: transparent;
-
-			}
-
-		}
-
-		&::before {
-
-			left: 50%;
-			margin-left: -10px;
-			bottom: 100%;
-			content: '';
-			border: 10px solid transparent;
-			position: absolute;
-			border-top-color: rgba(0,0,0,.85);
-			border-bottom: 0;
-			margin-bottom: 2px;
-			pointer-events: none;
-			opacity: 0;
-
-		}
+		cursor: pointer;
+		color: var(--purple);
 
 		&::-webkit-details-marker {
 
@@ -121,41 +93,41 @@
 
 		}
 
-	}
+		&::after,
+		&::before {
 
-	&__inner {
-
-		width: 320px;
-		color: #fff;
-		padding: 10px;
-		position: absolute;
-		left: -24px;
-		margin-bottom: 12px;
-		font-size: 13px;
-		bottom: 100%;
-		line-height: 16px;
-		background-color: rgba(0,0,0,.85);
-		text-align: left;
-		pointer-events: none;
-		z-index: 9;
-		opacity: 0;
-
-		@media $smWidth {
-
-			width: 280px;
+			content: '';
+			position: absolute;
+			height: 8px;
+			bottom: 100%;
+			left: 50%;
+			width: 24px;
+			margin-bottom: 6px;
+			margin-left: -12px;
+			background-color: #f9fafb;
+			pointer-events: none;
+			opacity: 0;
+			z-index: 6;
 
 		}
 
-		@media $xsWidth {
+		&::before {
 
-			width: 256px;
+			width: 8px;
+			left: 50%;
+			margin-bottom: 2px;
+			margin-left: -4px;
+			transform: rotate(45deg);
+			border-radius: 1px;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 
 		}
 
 	}
 
 	&[open] &__inner,
-	&[open] &__btn::before {
+	&[open] summary::after,
+	&[open] summary::before {
 
 		animation: opacity var(--transitionDefault);
 		pointer-events: auto;
@@ -163,7 +135,25 @@
 
 	}
 
+	&__inner {
+
+		width: 308px;
+		padding: 16px;
+		background-color: #f9fafb;
+		border-radius: 8px;
+		position: absolute;
+		left: -146px;
+		margin-bottom: 6px;
+		bottom: 100%;
+		z-index: 5;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		opacity: 0;
+		pointer-events: none;
+
+	}
+
 }
+
 
 @keyframes opacity {
 	from {

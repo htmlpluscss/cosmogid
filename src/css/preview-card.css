@@ -470,6 +470,12 @@
 			margin-right: 8px;
 			flex-shrink: 0;
 
+			img {
+
+				border-radius: 50%;
+
+			}
+
 			@media $mdWidth {
 
 				display: none;

@@ -20,7 +20,8 @@
 			  count = items.length,
 			  billboard = swipe.classList.contains('swiper-container--billboard'),
 			  news = swipe.classList.contains('swiper-container--news'),
-			  preview = swipe.classList.contains('swiper-container--preview');
+			  preview = swipe.classList.contains('swiper-container--preview'),
+			  product = swipe.classList.contains('swiper-container--product');
 
 		swipeNav.className = 'swiper-pagination';
 
@@ -193,16 +194,18 @@
 			swipe.addEventListener('swiperResize', toggleSwipe);
 
 		}
-/*
 
-		if (gallery) {
+		if (product) {
+
+			const galleryPreview = document.querySelectorAll('.product-gallery__preview-link');
 
 			toggleSwipe = () => {
 
-				swipe.parentNode.classList.add('swiper-container-style');
-				swipe.append(swipeNav);
+				toggleSwipe = false;
 
-				mySwipe = new Swiper(swipe, {
+				swipe.parentNode.classList.add('swiper-container-style');
+
+				new Swiper(swipe, {
 					loop: true,
 					navigation: {
 						nextEl: swipeNext,
@@ -213,13 +216,20 @@
 						clickable: true,
 						bulletClass: 'button',
 						bulletActiveClass: 'is-active'
+					},
+					on: {
+						slideChange : () => {
+
+							[...galleryPreview].forEach( (_link,index) => _link.parentNode.classList.toggle('is-current', swipe.swiper.realIndex === index) );
+
+						}
 					}
 				});
 
 			}
 
 		}
-
+/*
 		if (galleryModal) {
 
 			swipeNav.remove();

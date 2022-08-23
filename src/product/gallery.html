@@ -1,0 +1,61 @@
+				<div class="product-gallery">
+
+					<div class="product-gallery__wrap">
+
+						<div class="swiper-container swiper-container--product">
+
+							<ul class="product-gallery__list swiper-wrapper">
+
+{% for img in [1,2,3,4] %}
+
+								<li class="product-gallery__item swiper-slide">
+
+									<a class="product-gallery__link" href="/img/product/gallery/{{ img }}--928x928.jpg" target="_blank">
+
+										<picture>
+
+											<source srcset="/img/product/gallery/{{ img }}--464x464.webp 1x, /img/product/gallery/{{ img }}--928x928.webp 2x" type="image/webp">
+											<source srcset="/img/product/gallery/{{ img }}--464x464.jpg 1x, /img/product/gallery/{{ img }}--928x928.jpg 2x">
+
+											<img src="/img/product/gallery/{{ img }}--464x464.jpg" width="464" height="464" alt="{{ title }}" loading="lazy">
+
+										</picture>
+
+									</a>
+
+								</li>
+
+{% endfor %}
+
+							</ul>
+
+						</div>
+
+					</div>
+
+					<ul class="product-gallery__preview">
+
+{% for img in [1,2,3,4] %}
+
+						<li class="product-gallery__preview-item{% if loop.first %} is-current{% endif %}">
+
+							<a class="product-gallery__preview-link" href="/img/product/gallery/{{ img }}--928x928.jpg" target="_blank">
+
+								<picture>
+
+									<source srcset="/img/product/gallery/{{ img }}--80x80.webp 1x, /img/product/gallery/{{ img }}--160x160.webp 2x" type="image/webp">
+									<source srcset="/img/product/gallery/{{ img }}--80x80.jpg 1x, /img/product/gallery/{{ img }}--160x160.jpg 2x">
+
+									<img src="/img/product/gallery/{{ img }}--80x80.jpg" width="80" height="80" alt="{{ title }}" loading="lazy">
+
+								</picture>
+
+							</a>
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>

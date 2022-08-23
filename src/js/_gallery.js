@@ -1,4 +1,4 @@
-( preview => {
+/*( preview => {
 
 	if( preview ) {
 
@@ -87,4 +87,4 @@
 
 	}
 
-})(document.querySelector('.product-gallery'));
+})(document.querySelector('.product-gallery'));*/
