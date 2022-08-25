@@ -1,7 +1,9 @@
 	<section class="preview-swiper">
 
 		<h2 class="h1 preview-swiper__title">
-			Вы недавно смотрели
+
+			{{ previewSwiperTitle | default ('Вы недавно смотрели') }}
+
 		</h2>
 
 		<div class="preview-swiper__box">

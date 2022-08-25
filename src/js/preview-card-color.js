@@ -6,13 +6,36 @@
 
 		document.addEventListener('click', event => {
 
-			// выбор цвета
+			// выбор цвета в товаре
+
+			const productColor = event.target.closest('.product-buy__color');
+
+			if (productColor) {
+
+				const formProduct = productColor.closest('.product-buy');
+
+				modalFormTarget = formProduct.querySelector('.preview-card__modal-color');
+
+				form.innerHTML = modalFormTarget.innerHTML;
+				form.insertAdjacentElement('afterbegin', formProduct.elements.id.cloneNode());
+
+				const eventModalShow = new CustomEvent("modalShow", {
+					detail: {
+						selector: "preview-card-color"
+					}
+				});
+
+				window.modal.dispatchEvent(eventModalShow);
+
+			}
+
+			// выбор цвета в карточке
 
 			const cardColor = event.target.closest('.preview-card__color');
 
 			if (cardColor) {
 
-				const card = event.target.closest('.preview-card'),
+				const card = cardColor.closest('.preview-card'),
 					  cardForm = card.querySelector('.preview-card__form');
 
 				modalFormTarget = card.querySelector('.preview-card__modal-color');

@@ -1,0 +1,83 @@
+			<form action="/" class="product-buy">
+
+				<input type="hidden" name="id" value="123">
+
+				<p class="product-buy__price">
+
+					<s class="product-buy__price-old">
+						3456 ₽
+					</s>
+
+					<b class="product-buy__price-value">
+						2581 ₽
+					</b>
+
+				</p>
+
+				<p class="product-buy__availability is-not">
+					нет наличии
+				</p>
+
+				<dl class="product-buy__key-value">
+
+					<dt>
+						код:
+					</dt>
+
+					<dd>
+						25694549
+					</dd>
+
+				</dl>
+
+				<p class="product-buy__label">
+
+					<b>Выберите цвет краски:</b>
+					из 125 вариантов
+
+				</p>
+
+				<button class="product-buy__color button" type="button">
+
+					<span class="product-buy__color-img">
+
+						<img src="/img/modal/card-color/24x24.jpg" srcset="/img/modal/card-color/48x48.jpg 2x" width="24" height="24" loading="lazy" alt="10/0 экстра светлый блонд натуральный">
+
+					</span>
+
+					<span class="product-buy__color-name">
+						Арт:65417626 <br>
+						10/0 экстра светлый блонд натуральный
+					</span>
+
+					<svg class="product-buy__color-arrow" width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="#svg-arrow-chevron-down"/>
+					</svg>
+
+				</button>
+
+				<div class="product-buy__submit">
+
+					<button class="btn" disabled="disabled">
+						В корзину
+					</button>
+
+				</div>
+
+				<div class="product-buy__favourite">
+
+					<button class="btn btn--more" type="button">
+
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#svg-favourite-fill"/>
+						</svg>
+
+						Удалить из избранного
+
+					</button>
+
+				</div>
+
+{% include "_include/preview-card/modal-color.html" %}
+
+			</form>

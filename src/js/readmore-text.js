@@ -24,7 +24,6 @@
 			}
 
 			btn.addEventListener('click', toggle);
-			block.addEventListener('toggle', toggle);
 
 		});
 

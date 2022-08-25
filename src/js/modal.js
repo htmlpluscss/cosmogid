@@ -48,7 +48,7 @@
 
 	});
 
-	const modalShow = (selector,title) => {
+	const modalShow = (selector,title,id) => {
 
 		if(!activeModal){
 
@@ -67,6 +67,12 @@
 			}
 
 			activeModal.querySelector('.modal__title').textContent = title ? title : titleDefault[selector];
+
+		}
+
+		if ( activeModal.elements.id ) {
+
+			activeModal.elements.id.value = id;
 
 		}
 
@@ -115,7 +121,11 @@
 
 			if (target.hasAttribute('data-modal')) {
 
-				modalShow(target.getAttribute('data-modal'),target.getAttribute('data-title'));
+				modalShow(
+					target.getAttribute('data-modal'),
+					target.getAttribute('data-title'),
+					target.getAttribute('data-id')
+				);
 
 			}
 

@@ -2,12 +2,27 @@
 
 	if( product ) {
 
-		window.addEventListener('hashchange', () => {
-			console.log(location.hash)
+		// hash
 
-			document.querySelector(location.hash).dispatchEvent(new Event("toggle"));
+		const setTab = ()=> {
 
-		});
+			const tabItem = document.querySelector(location.hash).closest('.tabs__item');
+
+			if ( tabItem ) {
+
+				tabItem.dispatchEvent(new Event("setActive"));
+
+			}
+
+		}
+
+		window.addEventListener('hashchange', setTab);
+
+		if ( location.hash ) {
+
+			setTimeout( setTab );
+
+		}
 
 		// gallery
 

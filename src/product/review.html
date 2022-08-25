@@ -1,0 +1,75 @@
+									<article class="review__item">
+
+										<header class="review__head">
+
+											<h3 class="review__name">
+												{{ item.name }}
+											</h3>
+
+											<p class="review__rating">
+
+					{% set star = [1,2,3,4,5] | random %}
+
+												<span class="ratio ratio--{{ star }}">
+
+					{% if star === 1 %}
+													рейтинг 1 звезда
+					{% elif star === 5 %}
+													рейтинг 5 звезд
+					{% else %}
+													рейтинг {{ star }} звезды
+					{% endif %}
+
+												</span>
+
+											</p>
+
+											<time class="review__date" datetime="2022-06-17">
+												17 июня 2022
+											</time>
+
+					{% if item.sub %}
+
+											<p class="review__mark">
+
+												<svg width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="#svg-checkmark"/>
+												</svg>
+
+												Покупка подтверждена
+
+											</p>
+
+					{% endif %}
+
+										</header>
+
+										<div class="review__body">
+
+											<div class="review__text">
+
+												<p>
+													{{ item.text }}
+												</p>
+
+											</div>
+
+											<div class="review__foot">
+
+												<button class="btn btn--more" type="button" data-modal="review" data-id="{{ range(100,999) | random }}">
+													Ответить
+												</button>
+
+					{% if item.sub %}
+
+												<button class="review__toggle-sub btn btn--more" type="button" data-alt="Свернуть ответы">
+													Показать все ответы <span>({{ item.sub | length }})</span>
+												</button>
+
+					{% endif %}
+
+											</div>
+
+										</div>
+
+									</article>

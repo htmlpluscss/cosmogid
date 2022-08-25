@@ -38,6 +38,21 @@
 
 			});
 
+			[...items].forEach( item => {
+
+				item.addEventListener('setActive', ()=> {
+
+					[...items].forEach( (_item,_index) => {
+
+						btns[_index].classList.toggle('is-active', _item === item);
+						_item.classList.toggle('visuallyhidden', _item !== item);
+
+					});
+
+				});
+
+			});
+
 			select.addEventListener('change', event => {
 
 				const index = parseInt(select.value);

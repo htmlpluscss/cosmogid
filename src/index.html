@@ -34,6 +34,7 @@ setTimeout( ()=> {
 		<li><a href="/main/">Главная</a></li>
 		<li><a href="/catalog/">Каталог</a></li>
 		<li><a href="/product/">Карточка товара</a></li>
+		<li><a href="/product/color/">Карточка товара (Выберите цвет краски | Бесплатная доставка | Удалить из избранного | нет в наличии)</a></li>
 		<li><a href="/contacts/">Контакты</a></li>
 		<li><a href="/sale/">Акции и скидки</a></li>
 		<li><a href="/news/">Новости</a></li>
@@ -75,7 +76,7 @@ setTimeout( ()=> {
 
 		<div class="item">
 
-			<button class="btn" type="button" data-modal="review">
+			<button class="btn" type="button" data-modal="review" data-id="123">
 				Оставить отзыв
 			</button>
 
@@ -129,22 +130,22 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
-			<form action="/" class="form-buy">
+			<button
 
-				<input type="hidden" name="id" value="19021">
-
-				<input type="hidden" name="modal" value="buy-one-click">
-				<input type="hidden" name="img" value="https://forthouse.ru/pic/180x180/r-wb642vu0_gmg.jpg">
-				<input type="hidden" name="name" value="Холодильник Hitachi R-WB642VU0 GMG">
-				<input type="hidden" name="price" value="84 950 ₽">
-
-				<button class="btn form-buy__submit">
-					Заказ в 1 клик
-				</button>
-
-			</form>
+				class="btn btn--outline"
+				data-modal="find-analogue"
+				data-form-set-id="modal-form-find-analogue"
+				data-id="123"
+				data-articleid="234"
+				data-price="2581"
+				data-price-old="2581"
+				data-img="234"
+				data-title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл"
+			>
+				Найти аналог
+			</button>
 
 		</div>
 
@@ -243,6 +244,14 @@ setTimeout( ()=> {
 
 				btn--text + ico
 
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--medium">
+				btn--medium
 			</button>
 
 		</div>

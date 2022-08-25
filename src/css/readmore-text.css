@@ -1,0 +1,32 @@
+.readmore-text {
+
+	&__body {
+
+		transition: opacity var(--transitionDefault);
+
+	}
+
+	&:not(.is-open) &__body {
+
+		overflow: hidden;
+		height: 0;
+		opacity: 0;
+
+	}
+
+	&__foot {
+
+		display: flex;
+		justify-content: center;
+		margin-top: 8px;
+
+		.btn {
+
+			min-width: 240px;
+
+		}
+
+	}
+
+
+}
