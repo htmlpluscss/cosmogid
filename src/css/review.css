@@ -16,7 +16,6 @@
 
 	&__item {
 
-		margin: 40px 0;
 		padding: 16px 0;
 		position: relative;
 		color: var(--gray);
@@ -31,6 +30,18 @@
 
 	}
 
+	&__group {
+
+		margin: 40px 0;
+
+		@media $mdWidth {
+
+			margin: 32px 0;
+
+		}
+
+	}
+
 	&__group:not(.is-open) &__sub {
 
 		overflow: hidden;
@@ -42,6 +53,13 @@
 	&__sub &__item {
 
 		padding-left: 40px;
+		margin-top: 40px;
+
+		@media $mdWidth {
+
+			margin-top: 32px;
+
+		}
 
 	}
 
@@ -51,12 +69,24 @@
 		margin-right: 40px;
 		flex-shrink: 0;
 
+		@media $mdWidth {
+
+			margin-right: 32px;
+			width: 256px;
+
+		}
+
 	}
 
 	&__body {
 
 		flex-grow: 1;
-		padding-left: 40px;
+
+		@media $desktop {
+
+			padding-left: 40px;
+
+		}
 
 	}
 

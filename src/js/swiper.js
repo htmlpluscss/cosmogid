@@ -199,6 +199,8 @@
 
 			const galleryPreview = document.querySelectorAll('.product-gallery__preview-link');
 
+			swipe.parentNode.append(swipeNav);
+
 			toggleSwipe = () => {
 
 				toggleSwipe = false;

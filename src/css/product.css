@@ -6,11 +6,34 @@
 		gap: 24px;
 		padding: 40px 0 80px;
 
+		@media $mdWidth {
+
+			flex-wrap: wrap;
+
+		}
+
+		@media $smWidth {
+
+			display: block;
+
+		}
+
 	}
 
 	&__main {
 
-		flex-grow: 1;
+		@media $desktop {
+
+			flex-grow: 1;
+
+		}
+
+		@media $mdWidth {
+
+			width: calc( 100% - 288px - 24px );
+			order: 1;
+
+		}
 
 	}
 
@@ -20,6 +43,21 @@
 		flex-shrink: 0;
 		padding: 0 16px;
 
+		@media $mdWidth {
+
+			margin: 24px auto;
+			padding: 0;
+			order: 3;
+
+			img {
+
+				width: 100%;
+				height: auto;
+
+			}
+
+		}
+
 	}
 
 	&__bar {
@@ -28,6 +66,12 @@
 		box-shadow: var(--box-shadow);
 		padding: 16px;
 		width: 288px;
+
+		@media $mdWidth {
+
+			order: 2;
+
+		}
 
 	}
 
@@ -95,11 +139,44 @@
 
 	}
 
+	&__tabs {
+
+		@media $mdWidth {
+
+			.tabs__btn {
+
+				font-size: 16px;
+				line-height: 64px;
+				padding: 0 16px;
+
+			}
+
+		}
+
+	}
+
 }
 
 .product-gallery {
 
 	@media $desktop {
+
+		.swiper-container {
+
+			&::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				pointer-events: none;
+				border: 1px solid #f3f4f6;
+
+			}
+
+		}
 
 		.swiper-container:not(:hover) .swiper-navigation {
 
@@ -118,19 +195,6 @@
 	&__wrap {
 
 		position: relative;
-
-		&::after {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			content: '';
-			pointer-events: none;
-			border: 1px solid #f3f4f6;
-
-		}
 
 	}
 
@@ -836,6 +900,12 @@
 		justify-content: space-between;
 		max-width: 912px;
 		margin: 0 auto;
+
+		@media $mdWidth {
+
+			gap: 40px;
+
+		}
 
 	}
 
