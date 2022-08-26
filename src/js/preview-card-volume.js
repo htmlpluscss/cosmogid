@@ -9,7 +9,7 @@
 			  templateFlag = document.querySelector('#preview-card-flag-template').innerHTML,
 			  templateLabel = document.querySelector('#preview-card-label-template').innerHTML,
 			  templatePrice = document.querySelector('#price-template').innerHTML,
-			  templateOverlay = document.querySelector('#preview-card-overlay-template').innerHTML;
+			  templateOverlay = document.querySelector('#overlay-disabled-template').innerHTML;
 
 		// кнопка купить и избранное
 
@@ -65,7 +65,7 @@
 			  overlayLogin = overlay === 'login',
 			  overlayNot = overlay === 'not',
 			  overlayWithdrawn = overlay === 'withdrawn',
-			  elOverlay = card.querySelector('.preview-card__overlay');
+			  elOverlay = card.querySelector('.overlay-disabled');
 
 		if ( elOverlay ) {
 

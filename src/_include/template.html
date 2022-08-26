@@ -171,15 +171,15 @@
 
 		</script>
 
-		<script type="text/html" id="preview-card-overlay-template">
+		<script type="text/html" id="overlay-disabled-template">
 
 			{{# overlay }}
 
-				<div class="preview-card__overlay">
+				<div class="overlay-disabled">
 
 					{{# overlayTitle }}
 
-						<p class="preview-card__overlay-title">
+						<p class="overlay-disabled__title">
 							{{ overlayTitle }}
 						</p>
 
@@ -187,7 +187,7 @@
 
 					{{# overlayText }}
 
-						<p class="preview-card__overlay-text">
+						<p class="overlay-disabled__text">
 							{{ overlayText }}
 						</p>
 
@@ -195,7 +195,7 @@
 
 					{{# overlayLogin }}
 
-						<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="login">
+						<button class="overlay-disabled__btn btn btn--outline" type="button" data-modal="login">
 							Авторизоваться
 						</button>
 
@@ -203,7 +203,7 @@
 
 					{{# overlayNot }}
 
-						<button class="preview-card__overlay-btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
+						<button class="overlay-disabled__btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
 							Уведомить  / <span class="hidden-sm">найти</span> аналог
 						</button>
 
@@ -213,7 +213,7 @@
 
 						<button
 
-							class="preview-card__overlay-btn btn btn--outline js-find-analogue"
+							class="overlay-disabled__btn btn btn--outline js-find-analogue"
 							type="button"
 							data-modal="find-analogue"
 							data-id="{{ analogue_id }}"
@@ -346,117 +346,6 @@
 
 		</script>
 
-		<script type="text/html" id="modal-card-color-overlay-template">
-
-			{{# overlay }}
-
-				<div class="modal-card-color__overlay">
-
-					{{# overlayTitle }}
-
-						<p class="modal-card-color__overlay-title">
-							{{ overlayTitle }}
-						</p>
-
-					{{/ overlayTitle }}
-
-					{{# overlayText }}
-
-						<p class="modal-card-color__overlay-text">
-							{{ overlayText }}
-						</p>
-
-					{{/ overlayText }}
-
-					{{# overlayLogin }}
-
-						<button class="modal-card-color__overlay-btn btn btn--outline" type="button" data-modal="login">
-							Авторизоваться
-						</button>
-
-					{{/ overlayLogin }}
-
-					{{# overlayNot }}
-
-						<button class="modal-card-color__overlay-btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
-							Уведомить  / найти аналог
-						</button>
-
-					{{/ overlayNot }}
-
-				</div>
-
-			{{/ overlay }}
-
-		</script>
-
-
-		<script type="text/html" id="product-gallery-overlay-template">
-
-			{{# overlay }}
-
-				<div class="product-gallery__overlay">
-
-					{{# overlayTitle }}
-
-						<p class="product-gallery__overlay-title">
-							{{ overlayTitle }}
-						</p>
-
-					{{/ overlayTitle }}
-
-					{{# overlayText }}
-
-						<p class="product-gallery__overlay-text">
-							{{ overlayText }}
-						</p>
-
-					{{/ overlayText }}
-
-					{{# overlayLogin }}
-
-						<button class="product-gallery__overlay-btn btn btn--outline" type="button" data-modal="login">
-							Авторизоваться
-						</button>
-
-					{{/ overlayLogin }}
-
-					{{# overlayNot }}
-
-						<button class="product-gallery__overlay-btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
-							Уведомить  / найти аналог
-						</button>
-
-					{{/ overlayNot }}
-
-					{{# overlayWithdrawn }}
-
-
-						<button
-
-							class="preview-card__overlay-btn btn btn--outline js-find-analogue"
-							type="button"
-							data-modal="find-analogue"
-							data-id="{{ analogue_id }}"
-							data-articleid="{{ analogue_articleid }}"
-							data-link="{{ analogue_link }}"
-							data-price="{{ analogue_price }}"
-							data-price-old="{{ analogue_price-old }}"
-							data-img="{{ analogue_img }}"
-							data-img2x="{{ analogue_img2x }}"
-							data-name="{{ analogue_name }}"
-
-						>
-							Найти аналог
-						</button>
-
-					{{/ overlayWithdrawn }}
-
-				</div>
-
-			{{/ overlay }}
-
-		</script>
 
 		<script type="text/html" id="availability-template">
 

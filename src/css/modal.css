@@ -745,44 +745,9 @@
 
 	}
 
-	&__overlay {
+	.overlay-disabled {
 
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		color: #fff;
-		background-color: rgba(0,0,0,.6);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		padding: 12px;
-		gap: 16px;
-
-		&-title {
-
-			font-weight: 600;
-			line-height: 1.2;
-
-		}
-
-		&-text {
-
-			font-weight: 500;
-			line-height: 1.2;
-			max-width: 256px;
-
-		}
-
-		&-btn {
-
-			font-size: 12px;
-			padding: 0 40px;
-			border-radius: 2px;
-			--purple: #fff;
+		&__btn {
 
 			@media $smWidth {
 

@@ -126,7 +126,7 @@
 					  overlayText = cardColor.getAttribute('data-overlay-text'),
 					  overlayLogin = overlay === 'login',
 					  overlayNot = overlay === 'not',
-					  elOverlay = card.querySelector('.modal-card-color__overlay');
+					  elOverlay = card.querySelector('.overlay-disabled');
 
 				if ( elOverlay ) {
 
@@ -134,7 +134,7 @@
 
 				}
 
-				card.querySelector('.modal-card-color__photo').insertAdjacentHTML('beforeend', Mustache.render(document.querySelector('#modal-card-color-overlay-template').innerHTML, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, id, articleId }));
+				card.querySelector('.modal-card-color__photo').insertAdjacentHTML('beforeend', Mustache.render(document.querySelector('#overlay-disabled-template').innerHTML, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, id, articleId }));
 
 				// availability
 

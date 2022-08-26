@@ -65,7 +65,7 @@
 				  templateFavourite = document.querySelector('#product-buy-favourite-template').innerHTML,
 				  templatePrice = document.querySelector('#price-template').innerHTML,
 				  templateAvailability = document.querySelector('#availability-template').innerHTML,
-				  templateOverlay = document.querySelector('#product-gallery-overlay-template').innerHTML;
+				  templateOverlay = document.querySelector('#overlay-disabled-template').innerHTML;
 
 			// кнопка купить
 
@@ -97,7 +97,7 @@
 				  overlayLogin = overlay === 'login',
 				  overlayNot = overlay === 'not',
 				  overlayWithdrawn = overlay === 'withdrawn',
-				  elOverlay = product.querySelector('.product-gallery__overlay');
+				  elOverlay = product.querySelector('.overlay-disabled');
 
 			if ( elOverlay ) {
 
