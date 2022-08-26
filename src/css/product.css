@@ -392,22 +392,25 @@
 
 		margin-bottom: 24px;
 
-		&-old {
+		.price {
 
-			font-size: 16px;
-			color: #4f4f4f;
-			display: block;
-			margin-bottom: 8px;
+			position: relative;
+			padding-top: 32px;
 
-		}
+			&__old {
 
-		&-value {
+				position: absolute;
+				top: 0;
+				left: 0;
 
-			font-size: 32px;
-			line-height: 1.2;
-			font-weight: 400;
-			color: var(--gray);
-			display: block;
+			}
+
+			&__value {
+
+				font-size: 32px;
+				line-height: 1.2;
+
+			}
 
 		}
 
@@ -889,6 +892,32 @@
 	&.is-not {
 
 		color: var(--red);
+
+	}
+
+}
+
+.price {
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	line-height: 24px;
+
+	&__old {
+
+		font-size: 16px;
+		display: block;
+		color: var(--text);
+
+	}
+
+	&__value {
+
+		display: block;
+		font-size: 20px;
+		font-weight: 400;
+		color: var(--gray);
 
 	}
 

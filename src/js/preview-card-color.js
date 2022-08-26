@@ -98,16 +98,16 @@
 
 				if ( cardColor.getAttribute('data-price-old') ) {
 
-					card.querySelector('.modal-card-color__price-old').textContent = cardColor.getAttribute('data-price-old');
-					card.querySelector('.modal-card-color__price-old').classList.remove('hide');
+					card.querySelector('.price__old').textContent = cardColor.getAttribute('data-price-old');
+					card.querySelector('.price__old').classList.remove('hide');
 
 				} else {
 
-					card.querySelector('.modal-card-color__price-old').classList.add('hide');
+					card.querySelector('.price__old').classList.add('hide');
 
 				}
 
-				card.querySelector('.modal-card-color__price-value').textContent = cardColor.getAttribute('data-price');
+				card.querySelector('.price__value').textContent = cardColor.getAttribute('data-price');
 
 				// buy
 

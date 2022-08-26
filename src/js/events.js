@@ -52,7 +52,7 @@ console.log(product.querySelector('.preview-card__form').elements)
 
 				param.id        = product.querySelector('.preview-card__form').elements.id.value;
 				param.link      = product.querySelector('.preview-card__title').href;
-				param.price     = parseInt(product.querySelector('.preview-card__price-value').textContent);
+				param.price     = parseInt(product.querySelector('.price__value').textContent);
 				param.img       = product.querySelector('.preview-card__img img').src;
 				param.img2x     = product.querySelector('.preview-card__img img').src;
 				param.name      = product.querySelector('.preview-card__img img').alt;
@@ -63,9 +63,9 @@ console.log(product.querySelector('.preview-card__form').elements)
 
 				}
 
-				if ( product.querySelector('.preview-card__price-old') ) {
+				if ( product.querySelector('.price__old') ) {
 
-					param.priceOld = parseInt(product.querySelector('.preview-card__price-old').textContent);
+					param.priceOld = parseInt(product.querySelector('.price__old').textContent);
 
 				}
 

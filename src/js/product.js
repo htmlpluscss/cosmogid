@@ -63,7 +63,7 @@
 				  articleId = cardVolume.value,
 				  templateFoot = document.querySelector('#product-buy-submit-template').innerHTML,
 				  templateFavourite = document.querySelector('#product-buy-favourite-template').innerHTML,
-				  templatePrice = document.querySelector('#product-buy-price-template').innerHTML,
+				  templatePrice = document.querySelector('#price-template').innerHTML,
 				  templateAvailability = document.querySelector('#availability-template').innerHTML,
 				  templateOverlay = document.querySelector('#product-gallery-overlay-template').innerHTML;
 

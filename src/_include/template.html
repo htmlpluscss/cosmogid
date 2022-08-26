@@ -145,21 +145,25 @@
 						{{ name }}
 					</a>
 
-					<div class="preview-card-row__price">
+					<p class="preview-card-row__price">
 
-					{{# priceOld }}
+						<span class="price">
 
-						<s class="preview-card-row__price-old">
-							{{ priceOld }} ₽
-						</s>
+						{{# priceOld }}
 
-					{{/ priceOld }}
+							<s class="price__old">
+								{{ priceOld }} ₽
+							</s>
 
-						<b class="preview-card-row__price-value">
-							{{ price }} ₽
-						</b>
+						{{/ priceOld }}
 
-					</div>
+							<b class="price__value">
+								{{ price }} ₽
+							</b>
+
+						</span>
+
+					</p>
 
 				</div>
 
@@ -278,22 +282,6 @@
 				</div>
 
 			{{/ flag }}
-
-		</script>
-
-		<script type="text/html" id="preview-card-price-template">
-
-			{{# priceOld }}
-
-				<s class="preview-card__price-old">
-					{{ priceOld }} ₽
-				</s>
-
-			{{/ priceOld }}
-
-				<b class="preview-card__price-value">
-					{{ price }} ₽
-				</b>
 
 		</script>
 
@@ -490,19 +478,23 @@
 
 		</script>
 
-		<script type="text/html" id="product-buy-price-template">
+		<script type="text/html" id="price-template">
 
-			{{# priceOld }}
+			<span class="price">
 
-				<s class="product-buy__price-old">
-					{{ priceOld }} ₽
-				</s>
+				{{# priceOld }}
 
-			{{/ priceOld }}
+					<s class="price__old">
+						{{ priceOld }} ₽
+					</s>
 
-				<b class="product-buy__price-value">
-					{{ price }} ₽
-				</b>
+				{{/ priceOld }}
+
+					<b class="price__value">
+						{{ price }} ₽
+					</b>
+
+			</span>
 
 		</script>
 

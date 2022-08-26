@@ -8,7 +8,7 @@
 			  templateFoot = document.querySelector('#preview-card-foot-template').innerHTML,
 			  templateFlag = document.querySelector('#preview-card-flag-template').innerHTML,
 			  templateLabel = document.querySelector('#preview-card-label-template').innerHTML,
-			  templatePrice = document.querySelector('#preview-card-price-template').innerHTML,
+			  templatePrice = document.querySelector('#price-template').innerHTML,
 			  templateOverlay = document.querySelector('#preview-card-overlay-template').innerHTML;
 
 		// кнопка купить и избранное

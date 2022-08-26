@@ -622,26 +622,7 @@
 
 	&__price {
 
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		line-height: 24px;
 		margin-bottom: 24px;
-
-		&-old {
-
-			font-size: 16px;
-			color: var(--text);
-
-		}
-
-		&-value {
-
-			font-size: 20px;
-			font-weight: 400;
-			color: var(--gray);
-
-		}
 
 	}
 

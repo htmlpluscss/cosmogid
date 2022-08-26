@@ -141,16 +141,20 @@
 
 			<p class="preview-card__price">
 
-{% if card.priceOld %}
+				<span class="price">
 
-				<s class="preview-card__price-old">
-					3456 ₽
-				</s>
+	{% if card.priceOld %}
 
-{% endif %}
+					<s class="price__old">
+						3456 ₽
+					</s>
 
-				<b class="preview-card__price-value">
-					2581 ₽
-				</b>
+	{% endif %}
+
+					<b class="price__value">
+						2581 ₽
+					</b>
+
+				</span>
 
 			</p>
