@@ -126,6 +126,47 @@
 
 {% raw %}
 
+		<script type="text/html" id="preview-card-row-template">
+
+			<article class="preview-card-row">
+
+				<input type="text" name="id" value="{{ id }}">
+				<input type="text" name="articleid" value="{{ articleid }}">
+
+				<a href="{{ link }}" class="preview-card-row__img" target="_blank">
+
+					<img src="{{ img }}" srcset="{{ img2x }} 2x" alt="">
+
+				</a>
+
+				<div class="preview-card-row__body">
+
+					<a href="{{ link }}" class="preview-card-row__title" target="_blank">
+						{{ name }}
+					</a>
+
+					<div class="preview-card-row__price">
+
+					{{# priceOld }}
+
+						<s class="preview-card-row__price-old">
+							{{ priceOld }} ₽
+						</s>
+
+					{{/ priceOld }}
+
+						<b class="preview-card-row__price-value">
+							{{ price }} ₽
+						</b>
+
+					</div>
+
+				</div>
+
+			</article>
+
+		</script>
+
 		<script type="text/html" id="preview-card-overlay-template">
 
 			{{# overlay }}
@@ -158,7 +199,7 @@
 
 					{{# overlayNot }}
 
-						<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="{{ id }}" data-articleId="{{ articleId }}">
+						<button class="preview-card__overlay-btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
 							Уведомить  / <span class="hidden-sm">найти</span> аналог
 						</button>
 
@@ -166,7 +207,21 @@
 
 					{{# overlayWithdrawn }}
 
-						<button class="preview-card__overlay-btn btn btn--outline" type="button" data-modal="find-analogue" data-form-set-id="modal-form-find-analogue" data-id="{{ id }}" data-articleId="{{ articleId }}">
+						<button
+
+							class="preview-card__overlay-btn btn btn--outline js-find-analogue"
+							type="button"
+							data-modal="find-analogue"
+							data-id="{{ analogue_id }}"
+							data-articleid="{{ analogue_articleid }}"
+							data-link="{{ analogue_link }}"
+							data-price="{{ analogue_price }}"
+							data-price-old="{{ analogue_price-old }}"
+							data-img="{{ analogue_img }}"
+							data-img2x="{{ analogue_img2x }}"
+							data-name="{{ analogue_name }}"
+
+						>
 							Найти аналог
 						</button>
 
@@ -335,7 +390,7 @@
 
 					{{# overlayNot }}
 
-						<button class="modal-card-color__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="{{ id }}" data-articleId="{{ articleId }}">
+						<button class="modal-card-color__overlay-btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
 							Уведомить  / найти аналог
 						</button>
 
@@ -380,7 +435,7 @@
 
 					{{# overlayNot }}
 
-						<button class="product-gallery__overlay-btn btn btn--outline" type="button" data-modal="notify" data-form-set-id="modal-form-notify" data-id="{{ id }}" data-articleId="{{ articleId }}">
+						<button class="product-gallery__overlay-btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
 							Уведомить  / найти аналог
 						</button>
 
@@ -388,7 +443,22 @@
 
 					{{# overlayWithdrawn }}
 
-						<button class="product-gallery__overlay-btn btn btn--outline" type="button" data-modal="find-analogue" data-form-set-id="modal-form-find-analogue" data-id="{{ id }}" data-articleId="{{ articleId }}">
+
+						<button
+
+							class="preview-card__overlay-btn btn btn--outline js-find-analogue"
+							type="button"
+							data-modal="find-analogue"
+							data-id="{{ analogue_id }}"
+							data-articleid="{{ analogue_articleid }}"
+							data-link="{{ analogue_link }}"
+							data-price="{{ analogue_price }}"
+							data-price-old="{{ analogue_price-old }}"
+							data-img="{{ analogue_img }}"
+							data-img2x="{{ analogue_img2x }}"
+							data-name="{{ analogue_name }}"
+
+						>
 							Найти аналог
 						</button>
 
