@@ -14,6 +14,8 @@
 		  titleDefault = {};
 
 	let activeModal = null,
+		menuTop = null,
+		headerTop = null,
 		windowScroll = window.pageYOffset;
 
 	modal.addEventListener('hide', () => {
@@ -54,6 +56,13 @@
 
 			windowScroll = window.pageYOffset;
 
+			if ( header.classList.contains('is-fixed') ) {
+
+				menuTop = parseInt(getComputedStyle(menu).top),
+				headerTop = parseInt(getComputedStyle(header).top);
+
+			}
+
 		}
 
 		activeModal = modal.querySelector('.modal__item--' + selector);
@@ -85,9 +94,6 @@
 			wrapper.style.top = -windowScroll + 'px';
 
 			if ( header.classList.contains('is-fixed') ) {
-
-				const menuTop = parseInt(getComputedStyle(menu).top),
-					  headerTop = parseInt(getComputedStyle(header).top);
 
 				menu.style.top = windowScroll + menuTop + 'px';
 				header.style.top = windowScroll + headerTop + 'px';

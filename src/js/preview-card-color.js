@@ -6,42 +6,24 @@
 
 		document.addEventListener('click', event => {
 
-			// выбор цвета в товаре
+			// выбор цвета в товаре или в карточке
 
-			const productColor = event.target.closest('.product-buy__color');
+			const productColor = event.target.closest('.js-modal-color');
 
 			if (productColor) {
 
-				const formProduct = productColor.closest('.product-buy');
+				const cardProduct = productColor.closest('.product') || productColor.closest('.preview-card'),
+					  formProduct = cardProduct.querySelector('.product-buy') || cardProduct.querySelector('.preview-card__form'),
+					  inputId = document.createElement('input');
+
+				inputId.name = 'id';
+				inputId.type = 'hidden';
+				setTimeout( () => inputId.value = formProduct.elements.id.value);
 
 				modalFormTarget = formProduct.querySelector('.preview-card__modal-color');
 
 				form.innerHTML = modalFormTarget.innerHTML;
-				form.insertAdjacentElement('afterbegin', formProduct.elements.id.cloneNode());
-
-				const eventModalShow = new CustomEvent("modalShow", {
-					detail: {
-						selector: "preview-card-color"
-					}
-				});
-
-				window.modal.dispatchEvent(eventModalShow);
-
-			}
-
-			// выбор цвета в карточке
-
-			const cardColor = event.target.closest('.preview-card__color');
-
-			if (cardColor) {
-
-				const card = cardColor.closest('.preview-card'),
-					  cardForm = card.querySelector('.preview-card__form');
-
-				modalFormTarget = card.querySelector('.preview-card__modal-color');
-
-				form.innerHTML = modalFormTarget.innerHTML;
-				form.insertAdjacentElement('afterbegin', cardForm.elements.id.cloneNode());
+				form.insertAdjacentElement('afterbegin', inputId);
 
 				const eventModalShow = new CustomEvent("modalShow", {
 					detail: {
@@ -54,6 +36,8 @@
 			}
 
 		});
+
+		// обратно вставляем модалку в товар
 
 		form.addEventListener('modalClose', event => {
 
