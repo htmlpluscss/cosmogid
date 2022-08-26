@@ -68,6 +68,10 @@
 			align-items: center;
 			pointer-events: none;
 
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+
 			&:not(.is-active) {
 
 				display: none;

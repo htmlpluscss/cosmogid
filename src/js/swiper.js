@@ -197,9 +197,9 @@
 
 		if (product) {
 
-			const galleryPreview = document.querySelectorAll('.product-gallery__preview-link');
+			swipeNav.classList.add('hide');
 
-			swipe.parentNode.append(swipeNav);
+			const galleryPreview = document.querySelectorAll('.product-gallery__preview-link');
 
 			toggleSwipe = () => {
 
@@ -212,12 +212,6 @@
 					navigation: {
 						nextEl: swipeNext,
 						prevEl: swipePrev
-					},
-					pagination: {
-						el: swipeNav,
-						clickable: true,
-						bulletClass: 'button',
-						bulletActiveClass: 'is-active'
 					},
 					on: {
 						slideChange : () => {

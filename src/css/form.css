@@ -168,6 +168,12 @@ legend {
 
 		}
 
+		@media $smWidth {
+
+			font-size: 12px;
+
+		}
+
 	}
 
 	&--link {

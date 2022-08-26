@@ -7,13 +7,13 @@
 
 		display: flex;
 		justify-content: center;
-		white-space: nowrap;
 		font-weight: 500;
 		color: var(--text);
 
 		@media $mdWidth {
 
 			font-size: 12px;
+			display: block;
 
 		}
 
@@ -23,12 +23,22 @@
 
 		display: flex;
 		align-items: center;
-		overflow: hidden;
-		text-overflow: ellipsis;
+
+		@media $mdWidth {
+
+			display: inline;
+
+			&::after {
+
+				margin: 0;
+
+			}
+
+		}
 
 		&::after {
 
-			content: '/';
+			content: ' / ';
 			margin: 0 4px;
 
 		}
@@ -51,17 +61,37 @@
 
 	}
 
+	@media $mdWidth {
+
+		&__item:nth-child(n+2)::before {
+
+			content: '...';
+
+		}
+
+		&__item:nth-last-child(-n+2)::before {
+
+			display: none;
+
+		}
+
+		&__item:nth-child(n+2) &__link {
+
+			display: none;
+
+		}
+
+		&__item:nth-last-child(-n+2) &__link {
+
+			display: inline;
+
+		}
+
+	}
+
 	&__link {
 
 		text-decoration: underline;
-		overflow: hidden;
-		text-overflow: ellipsis;
-
-		@media $mdWidth {
-
-			max-width: 128px;
-
-		}
 
 		@media $desktop {
 

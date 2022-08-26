@@ -533,14 +533,14 @@
 
 		@media $mdWidth {
 
-			width: calc( 100% - 360px);
+			width: calc( 100% - 360px - 24px);
+			padding: 0;
 
 		}
 
 		@media $smWidth {
 
 			width: auto;
-			padding: 0;
 			margin-bottom: 24px;
 
 		}
@@ -556,7 +556,7 @@
 		margin-bottom: 16px;
 		max-width: 392px;
 
-		@media $mdWidth {
+		@media $smWidth {
 
 			font-weight: 600;
 			font-size: 14px;
@@ -572,8 +572,7 @@
 
 		@media $mdWidth {
 
-			width: 200px;
-			margin: auto;
+			width: 100%;
 
 			img {
 
@@ -581,6 +580,13 @@
 				height: auto;
 
 			}
+
+		}
+
+		@media $smWidth {
+
+			width: 200px;
+			margin: auto;
 
 		}
 
@@ -810,7 +816,7 @@
 			border-radius: 2px;
 			--purple: #fff;
 
-			@media $mdWidth {
+			@media $smWidth {
 
 				padding: 0 16px;
 				line-height: 30px;

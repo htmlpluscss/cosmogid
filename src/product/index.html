@@ -20,11 +20,9 @@
 
 			<div class="product__grid">
 
-				<div class="product__main">
-
-{% include "product/main.html" %}
-
-				</div>
+				<h1 class="product__title">
+					{{ title }}
+				</h1>
 
 				<div class="product__gallery">
 
@@ -39,6 +37,16 @@
 {% include "product/service.html" %}
 
 				</div>
+
+				<div class="product__specs">
+
+{% include "product/specs.html" %}
+
+				</div>
+
+				<p class="product__description">
+					{{ description }}
+				</p>
 
 			</div>
 
