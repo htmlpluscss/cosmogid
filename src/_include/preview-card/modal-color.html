@@ -16,8 +16,12 @@
 
 				<div class="modal-card-color__right">
 
-					<p class="modal-card-color__availability" data-color="green">
-						есть в наличии
+					<p class="modal-card-color__availability">
+
+						<span class="availability">
+							есть в наличии
+						</span>
+
 					</p>
 
 					<p class="modal-card-color__price">
@@ -84,18 +88,12 @@
 									data-overlay-title="Товар для специстов"
 									data-overlay-text="Для покупки этого товара вам требуется регистрация"
 
-									data-availability="есть в наличии"
-									data-availability-color="green"
-
 								{% elif loop.index === 3 %}
 
 									data-buy="disabled"
 
 									data-overlay="not"
 									data-overlay-title="Отсутствует до 25.09.2020"
-
-									data-availability="нет в наличии"
-									data-availability-color="red"
 
 								{% else %}
 
@@ -104,9 +102,6 @@
 									data-buy="in-cart"
 
 									{% endif %}
-
-									data-availability="есть в наличии"
-									data-availability-color="green"
 
 								{% endif %}
 

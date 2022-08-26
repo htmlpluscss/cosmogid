@@ -73,15 +73,6 @@ console.log(product.querySelector('.preview-card__form').elements)
 
 			if ( productModal ) {
 console.log(productModal.elements)
-/*<input type="radio" name="articleid" value="1233" class="modal-card-color__item-input visuallyhidden"
-data-src="/img/modal/card-color/468x468.jpg"
-data-srcset="/img/modal/card-color/936x936.jpg 2x"
-data-price="2581 ₽"
-data-buy="disabled"
-data-overlay="not"
-data-overlay-title="Отсутствует до 25.09.2020"
-data-availability="нет в наличии"
-data-availability-color="red">*/
 
 				param.id        = productModal.elements.id.value;
 				param.articleid = productModal.elements.articleid.value;

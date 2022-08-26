@@ -130,8 +130,8 @@
 
 			<article class="preview-card-row">
 
-				<input type="text" name="id" value="{{ id }}">
-				<input type="text" name="articleid" value="{{ articleid }}">
+				<input type="hidden" name="id" value="{{ id }}">
+				<input type="hidden" name="articleid" value="{{ articleid }}">
 
 				<a href="{{ link }}" class="preview-card-row__img" target="_blank">
 
@@ -470,11 +470,21 @@
 
 		</script>
 
-		<script type="text/html" id="product-buy-availability-template">
+		<script type="text/html" id="availability-template">
+
+			{{# availability }}
+
+				<span class="availability">
+					есть в наличии
+				</span>
+
+			{{/ availability }}
 
 			{{^ availability }}
 
-				есть в наличии
+				<span class="availability is-not">
+					нет в наличии
+				</span>
 
 			{{/ availability }}
 

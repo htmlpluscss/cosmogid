@@ -64,7 +64,7 @@
 				  templateFoot = document.querySelector('#product-buy-submit-template').innerHTML,
 				  templateFavourite = document.querySelector('#product-buy-favourite-template').innerHTML,
 				  templatePrice = document.querySelector('#product-buy-price-template').innerHTML,
-				  templateAvailability = document.querySelector('#product-buy-availability-template').innerHTML,
+				  templateAvailability = document.querySelector('#availability-template').innerHTML,
 				  templateOverlay = document.querySelector('#product-gallery-overlay-template').innerHTML;
 
 			// кнопка купить
@@ -109,17 +109,7 @@
 
 			// availability
 
-			if ( overlayNot ) {
-
-				form.querySelector('.product-buy__availability').textContent = overlayTitle;
-				form.querySelector('.product-buy__availability').classList.add('is-not');
-
-			} else {
-
-				form.querySelector('.product-buy__availability').textContent = Mustache.render(templateAvailability, { availability : false });
-				form.querySelector('.product-buy__availability').classList.remove('is-not');
-
-			}
+			form.querySelector('.product-buy__availability').innerHTML = Mustache.render(templateAvailability, { availability: !overlayNot });
 
 		}
 

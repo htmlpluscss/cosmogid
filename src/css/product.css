@@ -415,15 +415,7 @@
 
 	&__availability {
 
-		font-weight: 600;
 		margin-bottom: 8px;
-		color: var(--green);
-
-		&.is-not {
-
-			color: var(--red);
-
-		}
 
 	}
 
@@ -883,6 +875,20 @@
 
 		max-width: 1016px;
 		margin: 0 auto;
+
+	}
+
+}
+
+
+.availability {
+
+	font-weight: 600;
+	color: var(--green);
+
+	&.is-not {
+
+		color: var(--red);
 
 	}
 

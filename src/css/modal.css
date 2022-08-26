@@ -616,20 +616,7 @@
 
 	&__availability {
 
-		font-weight: 600;
 		margin-bottom: 24px;
-
-		&[data-color="red"] {
-
-			color: var(--red);
-
-		}
-
-		&[data-color="green"] {
-
-			color: var(--green);
-
-		}
 
 	}
 

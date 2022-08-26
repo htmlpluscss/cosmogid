@@ -94,11 +94,6 @@
 				card.querySelector('.modal-card-color__photo img').setAttribute('src', cardColor.getAttribute('data-src'));
 				card.querySelector('.modal-card-color__photo img').setAttribute('srcset', cardColor.getAttribute('data-srcset'));
 
-				// availability
-
-				card.querySelector('.modal-card-color__availability').textContent = cardColor.getAttribute('data-availability');
-				card.querySelector('.modal-card-color__availability').setAttribute('data-color', cardColor.getAttribute('data-availability-color'));
-
 				// price
 
 				if ( cardColor.getAttribute('data-price-old') ) {
@@ -140,6 +135,10 @@
 				}
 
 				card.querySelector('.modal-card-color__photo').insertAdjacentHTML('beforeend', Mustache.render(document.querySelector('#modal-card-color-overlay-template').innerHTML, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, id, articleId }));
+
+				// availability
+
+				card.querySelector('.modal-card-color__availability').innerHTML = Mustache.render(document.querySelector('#availability-template').innerHTML, { availability: !overlayNot });
 
 			}
 
