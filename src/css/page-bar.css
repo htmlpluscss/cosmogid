@@ -111,6 +111,16 @@
 
 		}
 
+		@media $xsWidth {
+
+			ul {
+
+				width: 300px;
+
+			}
+
+		}
+
 		&-btn {
 
 			border-radius: 0;
@@ -154,6 +164,16 @@
 						display: block;
 
 					}
+
+				}
+
+			}
+
+			@media $xsWidth {
+
+				&.is-open {
+
+					left: 260px;
 
 				}
 

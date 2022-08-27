@@ -1,4 +1,193 @@
 .page-sale {
 
+	.billboard {
+
+		margin: 40px 0 32px;
+
+	}
+
+	&__list {
+
+		display: grid;
+		gap: 48px;
+		margin-bottom: 120px;
+		grid-template-columns: 1fr 1fr;
+
+		@media $mdWidth {
+
+			gap: 24px;
+
+		}
+
+		@media $smWidth {
+
+			display: block;
+			margin-bottom: 80px;
+
+		}
+
+	}
+
+	&__item {
+
+		position: relative;
+
+		@media $smWidth {
+
+			margin: 24px 0;
+
+		}
+
+	}
+
+	&__card {
+
+		position: relative;
+		padding: 42px 42px 24px;
+		min-height: 360px;
+		display: flex;
+
+		@media $mdWidth {
+
+			padding: 36px 24px;
+
+		}
+
+		a {
+
+			display: block;
+			font-weight: 300;
+			font-size: 16px;
+			text-transform: uppercase;
+			color: var(--gray);
+
+			b {
+
+				display: block;
+				font-weight: 600;
+				font-size: 36px;
+
+			}
+
+			&::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+
+			}
+
+		}
+
+		p {
+
+			max-width: 320px;
+			font-size: 18px;
+			min-height: 113px;
+
+		}
+
+		&-inner {
+
+			display: flex;
+			flex-direction: column;
+
+		}
+
+		&-body {
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			flex-grow: 1;
+
+		}
+
+		&-foot {
+
+			display: flex;
+			margin: 13px 0 3px;
+
+			.btn {
+
+				@media $desktop {
+
+					padding: 0 40px;
+
+				}
+
+				@media $smWidth {
+
+					width: 100%;
+
+				}
+
+			}
+
+		}
+
+		img {
+
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			object-position: right bottom;
+			object-fit: cover;
+
+		}
+
+	}
+
+}
+
+.page-sale-sort {
+
+	margin: 32px 0 24px;
+	display: flex;
+
+	@media $smWidth {
+
+		margin: 16px calc( var(--indent) * -1 );
+		padding-left: var(--indent);
+		padding-bottom: 10px;
+		overflow-x: auto;
+
+	}
+
+	&__btn {
+
+		margin-right: 24px;
+
+		@media $smWidth {
+
+			margin-right: var(--indent);
+
+		}
+
+	}
+
+	&__label {
+
+		@media $desktop {
+
+			padding: 0 40px;
+
+		}
+
+	}
+
+	&__input:not(:checked) + &__label {
+
+		--purple: #6b7280;
+
+	}
+
+
 
 }

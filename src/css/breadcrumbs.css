@@ -1,6 +1,6 @@
 .breadcrumbs {
 
-	margin: 24px 0;
+	margin: 24px 0 16px;
 	position: relative;
 
 	&__list {
@@ -10,31 +10,12 @@
 		font-weight: 500;
 		color: var(--text);
 
-		@media $mdWidth {
-
-			font-size: 12px;
-			display: block;
-
-		}
-
 	}
 
 	&__item {
 
 		display: flex;
 		align-items: center;
-
-		@media $mdWidth {
-
-			display: inline;
-
-			&::after {
-
-				margin: 0;
-
-			}
-
-		}
 
 		&::after {
 
@@ -61,34 +42,6 @@
 
 	}
 
-	@media $mdWidth {
-
-		&__item:nth-child(n+2)::before {
-
-			content: '...';
-
-		}
-
-		&__item:nth-last-child(-n+2)::before {
-
-			display: none;
-
-		}
-
-		&__item:nth-child(n+2) &__link {
-
-			display: none;
-
-		}
-
-		&__item:nth-last-child(-n+2) &__link {
-
-			display: inline;
-
-		}
-
-	}
-
 	&__link {
 
 		text-decoration: underline;
@@ -98,6 +51,59 @@
 			&:hover {
 
 				color: var(--gray);
+
+			}
+
+		}
+
+	}
+
+	&.is-small & {
+
+		margin-bottom: 24px;
+
+		@media $mdWidth {
+
+			&__list {
+
+				font-size: 12px;
+				display: block;
+
+			}
+
+			&__item {
+
+				display: inline;
+
+				&::after {
+
+					margin: 0;
+
+				}
+
+				&:nth-child(n+2)::before {
+
+					content: '...';
+
+				}
+
+				&:nth-last-child(-n+2)::before {
+
+					display: none;
+
+				}
+
+				&:nth-child(n+2) .breadcrumbs__link {
+
+					display: none;
+
+				}
+
+				&:nth-last-child(-n+2) .breadcrumbs__link {
+
+					display: inline;
+
+				}
 
 			}
 

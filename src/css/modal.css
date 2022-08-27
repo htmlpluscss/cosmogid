@@ -293,15 +293,6 @@
 
 	}
 
-	&__file {
-
-		padding: 4px 16px;
-		display: block;
-		position: relative;
-		color: var(--purple);
-
-	}
-
 }
 
 .modal-show {
@@ -494,12 +485,6 @@
 			flex-grow: 1;
 
 		}
-
-	}
-
-	&__file {
-
-		display: flex;
 
 	}
 
@@ -768,5 +753,32 @@
 #modal-form-find-analogue-product {
 
 	margin: 24px 0;
+
+}
+
+.fileupload {
+
+	display: flex;
+
+	&__btn {
+
+		padding: 4px 16px;
+		display: flex;
+		gap: 8px;
+		position: relative;
+
+	}
+
+	&__name {
+
+		color: #1f2937;
+
+	}
+
+	.btn {
+
+		color: var(--purple);
+
+	}
 
 }

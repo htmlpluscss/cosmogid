@@ -1,14 +1,48 @@
-			<div class="catalog__list">
+			<div class="page-sale__list">
 
-{% for item in range(0,12) %}
+{% for item in range(0,5) %}
 
-				<div class="catalog__item">
+				<div class="page-sale__item">
 
-					<article class="preview-product">
+					<figure class="page-sale__card">
 
-{% include "main/preview-swiper__preview-card-3.html" %}
+						<picture>
 
-					</article>
+							<source srcset="/img/sale/1--688x720.webp" type="image/webp" media="(max-width: 767px)">
+							<source srcset="/img/sale/1--688x720.jpg" media="(max-width: 767px)">
+
+							<source srcset="/img/sale/{{ loop.index }}--588x360.webp 1x, /img/sale/{{ loop.index }}--1167x720.webp 2x" type="image/webp">
+							<source srcset="/img/sale/{{ loop.index }}--588x360.jpg 1x, /img/sale/{{ loop.index }}--1167x720.jpg 2x">
+
+							<img src="/img/sale/{{ loop.index }}--588x360.jpg" alt="новая палитра от revlon" loading="lazy" width="588" height="360">
+
+						</picture>
+
+						<figcaption class="page-sale__card-inner">
+
+							<div class="page-sale__card-body">
+
+								<a href="/sale/item/">
+									Хотите подарок <b>от revlon</b>
+								</a>
+
+								<p>
+									Получите набор пробников при покупке 10 тюбиков неведомой хрени, в одни руки за раз
+								</p>
+
+							</div>
+
+							<div class="page-sale__card-foot">
+
+								<span class="btn">
+									Осталось <span data-deadline="2022-{{ ['09',10] | random }}-{{ range(1,30) | random }} {{ range(10,24) | random }}:{{ range(0,59) | random }}" data-declension="день и|дня и|дней и">1 день и 09:25:35</span>
+								</span>
+
+							</div>
+
+						</figcaption>
+
+					</figure>
 
 				</div>
 

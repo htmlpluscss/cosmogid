@@ -1,48 +1,33 @@
-			<fieldset class="catalog__sort">
+			<form action="/" class="page-sale-sort">
 
-				<div class="catalog__sort-item visible-md">
+				<label class="page-sale-sort__btn">
 
-					<button class="btn btn--filter catalog-mobile-filter" type="button">
-						Фильтры
-					</button>
+					<input class="page-sale-sort__input visuallyhidden" type="radio" name="sort" value="new">
 
-				</div>
+					<span class="page-sale-sort__label btn btn--outline">
+						Новые
+					</span>
 
-				<div class="catalog__sort-item">
+				</label>
 
-					<div class="select">
+				<label class="page-sale-sort__btn">
 
-						<select name="sort">
+					<input class="page-sale-sort__input visuallyhidden" type="radio" name="sort" value="old">
 
-							<option value="sale" selected="selected">Сначала акционные</option>
-							<option value="price_up">От дешевых к дорогим</option>
-							<option value="price_down">От дорогих к дешевым</option>
-							<option value="new">Новинки</option>
-							<option value="rating">По рейтингу покупателей</option>
-							<option value="abc">По наименованию</option>
+					<span class="page-sale-sort__label btn btn--outline">
+						Заканчиваются
+					</span>
 
-						</select>
+				</label>
 
-					</div>
+				<label class="page-sale-sort__btn">
 
-				</div>
+					<input class="page-sale-sort__input visuallyhidden" type="radio" name="sort" value="top" checked="checked">
 
-				<div class="catalog__sort-item hidden-md">
+					<span class="page-sale-sort__label btn btn--outline">
+						Популярные
+					</span>
 
-					<div class="select">
+				</label>
 
-						<select name="limit">
-
-							<option value="12" selected="selected">Показать по 12</option>
-							<option value="24">Показать по 24</option>
-							<option value="48">Показать по 48</option>
-							<option value="96">Показать по 96</option>
-							<option value="192">Показать по 192</option>
-
-						</select>
-
-					</div>
-
-				</div>
-
-			</fieldset>
+			</form>
