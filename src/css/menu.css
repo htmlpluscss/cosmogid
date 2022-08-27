@@ -55,6 +55,7 @@
 			svg {
 
 				fill: var(--purple);
+				transition: none;
 
 			}
 

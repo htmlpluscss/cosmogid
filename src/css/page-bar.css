@@ -1,0 +1,184 @@
+.page-bar {
+
+	&__box {
+
+		position: relative;
+
+		@media $desktop {
+
+			display: flex;
+			justify-content: space-between;
+			margin: 64px 0 120px;
+
+		}
+
+		@media $mdWidth {
+
+			margin: 64px 0;
+
+		}
+
+	}
+
+	&__head {
+
+		@media $desktop {
+
+			width: 288px;
+			flex-shrink: 0;
+
+		}
+
+		@media $mdWidth {
+
+			position: sticky;
+			top: var(--scrollMargin);
+			margin-top: -60px;
+			margin-bottom: 20px;
+			z-index: 2;
+
+		}
+
+		@media $smWidth {
+
+			top: 24px;
+
+		}
+
+	}
+
+	&__body {
+
+		flex-grow: 1;
+		color: var(--gray);
+		position: relative;
+
+		@media $desktop {
+
+			padding-left: 64px;
+
+		}
+
+		& > h2 {
+
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 1.2;
+			text-transform: uppercase;
+			margin: 40px 0;
+
+		}
+
+		& > p {
+
+			margin: 1em 0;
+
+			&:first-child {
+
+				margin-top: 0;
+
+			}
+
+			&:last-child {
+
+				margin-bottom: 0;
+
+			}
+
+		}
+
+	}
+
+	&__menu {
+
+		position: sticky;
+		top: var(--scrollMargin);
+
+		@media $mdWidth {
+
+			ul {
+
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 40px 16px 16px;
+				width: 320px;
+				background-color: #fff;
+				box-shadow: var(--box-shadow);
+
+			}
+
+		}
+
+		&-btn {
+
+			border-radius: 0;
+			background-color: #fff;
+			left: calc( var(--indent) * -1 );
+
+			@media $desktop {
+
+				display: none;
+
+			}
+
+			@media $mdWidth {
+
+				use + use {
+
+					display: none;
+
+				}
+
+				&.is-open {
+
+					z-index: 1;
+					left: 280px;
+					box-shadow: none;
+
+					use {
+
+						display: none;
+
+						& + use {
+
+							display: block;
+
+						}
+
+					}
+
+					& + ul {
+
+						display: block;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		a {
+
+			font-weight: 500;
+			font-size: 16px;
+			color: var(--gray);
+			display: flex;
+			align-items: center;
+			padding: 16px;
+			justify-content: space-between;
+
+			&.is-current {
+
+				background-color: #eef2ff;
+
+			}
+
+		}
+
+	}
+
+}

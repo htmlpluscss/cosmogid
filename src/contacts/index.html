@@ -1,0 +1,127 @@
+{% set title = "Контакты" %}
+
+{% set description = "Связаться с нами вы всегда можете по телефонам указанным в шапке сайта. Также вы можете направить свой запрос/жалобу/предложение в отдел по работе с клиентами или в отдел маркетинга с помощью формы на этой странице." %}
+
+{% set breadcrumbs = ["Информация","Контакты"] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="page-bar">
+
+			<h1 class="title">
+				Мы всегда на связи
+			</h1>
+
+			<div class="page-bar__box">
+
+				<div class="page-bar__head">
+
+{% include "about/menu.html" %}
+
+				</div>
+
+				<div class="page-bar__body page-contacts">
+
+					<p>
+						Связаться с нами вы всегда можете по телефонам указанным в шапке сайта.
+					</p>
+
+					<p>
+						Также вы можете направить свой запрос/жалобу/предложение в отдел по работе с клиентами или в отдел маркетинга с помощью формы на этой странице.
+					</p>
+
+					<p>
+						Если вы являетесь представителем бренда и хотели бы предложить нам сотрудничество, свяжитесь с нами. Мы рассмотрим предложение и в случае заинтересованности, свяжемся с вами.
+					</p>
+
+					<div class="page-contacts__columns">
+
+						<div class="page-contacts__columns-item">
+
+							<h2>
+								Служба поддержки клиентов
+							</h2>
+
+{% set list = [
+	{
+		name : "8 (800) 100-08-53",
+		href : "tel:88001000853",
+		ico  : "phone"
+	},
+	{
+		name : "8 (800) 100-08-53",
+		href : "tel:88001000853",
+		ico  : "phone"
+	},
+	{
+		name : "work@cosmogid.ru",
+		href : "mailto:work@cosmogid.ru",
+		ico  : "mail-forward",
+		suf  : "служба поддержки"
+	},
+	{
+		name : "с 9:00 до 19:00",
+		ico  : "clock",
+		suf  : "пн-пт"
+	}
+]%}
+
+{% include "contacts/list.html" %}
+
+						</div>
+
+						<div class="page-contacts__columns-item">
+
+							<h2>
+								По вопросам сотрудничества
+							</h2>
+
+{% set list = [
+	{
+		name : "8 (800) 100-08-53",
+		href : "tel:88001000853",
+		ico  : "phone"
+	},
+	{
+		name : "8 (800) 100-08-53",
+		href : "tel:88001000853",
+		ico  : "phone"
+	},
+	{
+		name : "shop@cosmogid.ru",
+		href : "mailto:work@cosmogid.ru",
+		ico  : "mail-forward",
+		suf  : "служба поддержки"
+	},
+	{
+		name : "с 9:00 до 19:00",
+		ico  : "clock",
+		suf  : "пн-пт"
+	}
+]%}
+
+{% include "contacts/list.html" %}
+
+						</div>
+
+					</div>
+
+					<h2>
+						Если у вас есть вопрос - задайте их ниже
+					</h2>
+
+{% include "contacts/form.html" %}
+
+				</div>
+
+			</div>
+
+		</article>
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+					<form action="/" class="contacts-form">
+
+						<div class="contacts-form__fieldset">
+
+							<div class="contacts-form__column">
+
+								<div class="contacts-form__inputbox">
+
+									<label for="contacts-form-name" class="contacts-form__label">
+										Как вас зовут*
+									</label>
+
+									<input name="name" id="contacts-form-name" class="input" placeholder="Кузякина Марина">
+
+								</div>
+
+								<div class="contacts-form__inputbox">
+
+									<label for="contacts-form-email" class="contacts-form__label">
+										Ваша почта
+									</label>
+
+									<input name="email" id="contacts-form-email" class="input" placeholder="kuzakina@mail.ru" type="email">
+
+								</div>
+
+								<div class="contacts-form__inputbox is-error">
+
+									<label for="contacts-form-phone" class="contacts-form__label">
+										Ваш телефон
+									</label>
+
+									<input name="phone" id="contacts-form-phone" class="input inputmask inputmask--phone" placeholder="+7 ( --- ) --- -- --" type="tel">
+
+									<span class="contacts-form__error-text">
+										Это обязательное поле
+									</span>
+
+								</div>
+
+							</div>
+
+							<div class="contacts-form__column">
+
+								<div class="contacts-form__inputbox">
+
+									<label for="contacts-form-subject" class="contacts-form__label">
+										Выберите тематику
+									</label>
+
+									<div class="select">
+
+										<select name="subject" id="contacts-form-subject">
+
+											<option value="Оптовые продажи">
+												Оптовые продажи
+											</option>
+
+											<option value="Предложение">
+												Предложение
+											</option>
+
+											<option value="Вопрос">
+												Вопрос
+											</option>
+
+											<option value="Жалоба">
+												Жалоба
+											</option>
+
+										</select>
+
+									</div>
+
+								</div>
+
+								<div class="contacts-form__inputbox">
+
+									<label for="contacts-form-text" class="contacts-form__label">
+										Задайте вопрос
+									</label>
+
+									<textarea name="text" id="contacts-form-text" class="input autosize" placeholder="Задайте вопрос или напишите сообщение"></textarea>
+
+									<div class="contacts-form__file">
+
+{% include "template/modal/file.html" %}
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="contacts-form__foot">
+
+							<button class="btn">
+								Отправить
+							</button>
+
+							<p class="contacts-form__note">
+								Нажимая на кнопку "Отправить", Вы соглашаетесь на обработку Ваших персональных данных в соответствии с Политикой конфеденциальности
+							</p>
+
+						</div>
+
+					</form>

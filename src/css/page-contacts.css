@@ -1,0 +1,210 @@
+.page-contacts {
+
+	&__columns {
+
+		display: flex;
+		margin: 40px 0;
+
+		@media $smWidth {
+
+			display: block;
+
+		}
+
+		&-item {
+
+			width: 386px;
+
+			@media $smWidth {
+
+				width: auto;
+				margin: 40px 0;
+
+			}
+
+			h2 {
+
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 1.2;
+				margin: 24px 0;
+
+			}
+
+			li {
+
+				padding-left: 44px;
+				display: flex;
+				align-items: center;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 1.2;
+				color: var(--purple);
+				min-height: 40px;
+				margin: 24px 0;
+
+			}
+
+			small {
+
+				display: block;
+				font-weight: 400;
+				font-size: 14px;
+				color: #828282;
+
+			}
+
+			.ico-box {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+
+			}
+
+		}
+
+	}
+
+}
+
+.contacts-form {
+
+	&__fieldset {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@media $smWidth {
+
+			display: block;
+
+		}
+
+	}
+
+	&__column {
+
+		width: calc( 50% - 12px );
+
+		@media $smWidth {
+
+			width: 100%;
+
+		}
+
+	}
+
+	&__inputbox {
+
+		margin-bottom: 32px;
+		position: relative;
+		color: var(--gray);
+
+		&.is-error {
+
+			color: var(--red);
+
+		}
+
+	}
+
+	&__label {
+
+		display: block;
+		padding: 8px 16px;
+		font-weight: 600;
+		line-height: 1.2;
+
+	}
+
+	.input {
+
+		border-color: #6b7280;
+		color: #6b7280;
+		height: 40px;
+		line-height: 23px;
+		padding: 8px 8px 8px 16px;
+		box-shadow: inset 0 0 0 1000px #f9fafb;
+
+		&::placeholder {
+
+			font-size: 14px;
+			font-weight: 400;
+
+		}
+
+	}
+
+	textarea.input {
+
+		height: 40px;
+
+		@media $smWidth {
+
+			height: 160px;
+
+		}
+
+	}
+
+	.select__value {
+
+		padding: 0 8px 0 16px;
+		line-height: 39px;
+		color: #6b7280;
+		background-color: #f9fafb;
+		border-color: #6b7280;
+
+	}
+
+	.select__list {
+
+		background-color: #f9fafb;
+
+	}
+
+	&__file {
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+
+	}
+
+	&__error-text {
+
+		padding: 4px 16px;
+		display: block;
+
+	}
+
+	&__foot {
+
+		width: 350px;
+
+		@media $smWidth {
+
+			width: auto;
+			margin-top: 70px;
+
+		}
+
+		.btn {
+
+			min-width: 240px;
+
+		}
+
+	}
+
+	&__note {
+
+		font-size: 12px;
+		margin-top: 16px;
+		color: #4b5563;
+
+	}
+
+}

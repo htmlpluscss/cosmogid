@@ -1,0 +1,55 @@
+			<div class="page-bar__menu">
+
+				<button class="ico-box button page-bar__menu-btn" aria-label="открыть меню" type="button">
+
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="#svg-menu"/>
+						<use xlink:href="#svg-close"/>
+					</svg>
+
+				</button>
+
+				<ul>
+
+{% for item in [
+	{
+		name : "О компании",
+		link : "about"
+	},
+	{
+		name : "Контакты",
+		link : "contacts"
+	},
+	{
+		name : "Доставка",
+		link : "shipping"
+	},
+	{
+		name : "Оплата",
+		link : "payment"
+	},
+	{
+		name : "FAQ",
+		link : "faq"
+	}
+] %}
+
+					<li>
+
+						<a href="/{{ item.link }}/"{% if item.name === title %} class="is-current"{% endif %}>
+
+							{{ item.name }}
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="#svg-chevron-right"/>
+							</svg>
+
+						</a>
+
+					</li>
+
+{% endfor %}
+
+				</ul>
+
+			</div>
