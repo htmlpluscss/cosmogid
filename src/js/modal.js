@@ -77,6 +77,12 @@
 
 			activeModal.querySelector('.modal__title').textContent = title ? title : titleDefault[selector];
 
+			if ( activeModal.elements.subject ) {
+
+				activeModal.elements.subject.value = title ? title : titleDefault[selector];
+
+			}
+
 		}
 
 		if ( activeModal.elements.id ) {

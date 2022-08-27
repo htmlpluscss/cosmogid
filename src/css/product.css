@@ -862,8 +862,132 @@
 
 	}
 
+	&__certificates {
+
+		max-width: 1016px;
+		margin: 0 auto;
+
+	}
+
 }
 
+.certificates {
+
+	&__text {
+
+		font-size: 18px;
+		text-align: center;
+		margin-bottom: 24px;
+
+	}
+
+	&__foot {
+
+		display: flex;
+		justify-content: center;
+		margin-top: 24px;
+
+		@media $smWidth {
+
+			margin: 0;
+
+		}
+
+		.btn {
+
+			min-width: 240px;
+
+		}
+
+	}
+
+	&__wrap {
+
+		width: 912px;
+		margin: auto;
+		position: relative;
+
+		@media $mdWidth {
+
+			width: 600px;
+
+		}
+
+		@media $smWidth {
+
+			width: auto;
+			margin: 0 calc( var(--indent) * -1);
+
+			.swiper-navigation {
+
+				display: none;
+
+			}
+
+			.swiper-pagination {
+
+				margin: 24px 0;
+
+			}
+
+		}
+
+		.swiper-pagination {
+
+			margin: 48px 0 0;
+
+		}
+
+		.swiper-navigation {
+
+			bottom: 56px;
+			left: -40px;
+			right: -40px;
+
+		}
+
+	}
+
+	&__swiper {
+
+		overflow: hidden;
+
+	}
+
+	&__list {
+
+		display: flex;
+
+	}
+
+	&__item {
+
+		width: 288px !important;
+
+		@media $smWidth {
+
+			width: 100% !important;
+			display: flex;
+			justify-content: center;
+
+		}
+
+	}
+
+	&__swiper:not(.swiper-initialized) &__item {
+
+		margin-right: 24px;
+		flex-shrink: 0;
+
+		@media $smWidth {
+
+			margin: 0;
+
+		}
+
+	}
+
+}
 
 .availability {
 
