@@ -2,6 +2,22 @@
 
 	if( product ) {
 
+		// param
+
+		if ( window.innerWidth < 768 ) {
+
+			const btn = product.querySelector('.product__open-tab .btn');
+
+			btn.addEventListener('click', event => {
+
+				event.preventDefault();
+
+				btn.closest('.product__specs').classList.toggle('is-open');
+
+			});
+
+		}
+
 		// hash
 
 		const setTab = ()=> {
@@ -58,6 +74,7 @@
 
 		const volumeChange = cardVolume => {
 
+
 			const form = cardVolume.closest('.product-buy'),
 				  id = form.elements.id.value,
 				  articleId = cardVolume.value,
@@ -66,6 +83,18 @@
 				  templatePrice = document.querySelector('#price-template').innerHTML,
 				  templateAvailability = document.querySelector('#availability-template').innerHTML,
 				  templateOverlay = document.querySelector('#overlay-disabled-template').innerHTML;
+
+			// volume -> gallery
+
+			[...galleryPreview].forEach( link => {
+
+				if ( link.getAttribute('data-articleid') === articleId ) {
+
+					link.dispatchEvent(new Event('click'));
+
+				}
+
+			});
 
 			// кнопка купить
 

@@ -38,11 +38,39 @@
 			grid-column-start: 1;
 			grid-column-end: 2;
 
+			tbody + tbody {
+
+				display: none;
+
+			}
+
 		}
 
-		@media $mdWidth {
+		@media $tablet {
 
 			grid-column: span 2;
+
+			tbody + tbody,
+			tr:nth-child(n+4) {
+
+				display: none;
+
+			}
+
+		}
+
+		@media $smWidth {
+
+			&:not(.is-open) {
+
+				tbody + tbody,
+				tr:nth-child(n+4) {
+
+					display: none;
+
+				}
+
+			}
 
 		}
 
@@ -195,6 +223,25 @@
 
 		margin: 8px 0;
 		display: flex;
+
+		@media $smWidth {
+
+			.product__specs.is-open & .btn {
+
+				overflow: hidden;
+				display: block;
+
+				&::before {
+
+					content: attr(data-alt);
+					display: block;
+
+				}
+
+
+			}
+
+		}
 
 	}
 

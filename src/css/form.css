@@ -430,18 +430,19 @@ legend {
 
 	&__list {
 
+		padding: 19px 0;
+		box-shadow: var(--box-shadow);
+
 		position: absolute;
 		top: 100%;
 		left: 0;
 		min-width: 100%;
-		background-color: var(--bg);
-		border: 1px solid var(--border);
+		background-color: #fff;
 		z-index: 5;
-		padding: 4px;
 
 		opacity: 0;
 		pointer-events: none;
-		transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 8px, 0);
 		transition: opacity var(--transitionDefault) 0s, transform var(--transitionDefault) 0s;
 
 		max-height: 256px;
@@ -471,7 +472,7 @@ legend {
 
 		opacity: 1;
 		pointer-events: auto;
-		transform: translate3d(0, 12px, 0);
+		transform: translate3d(0, 0, 0);
 
 	}
 
@@ -484,8 +485,7 @@ legend {
 		transition: var(--transitionDefault);
 		cursor: pointer;
 		text-align: left;
-		font-size: 14px;
-		padding: 4px 8px;
+		padding: 6px 16px;
 
 	}
 
@@ -504,6 +504,12 @@ legend {
 		bottom: 0;
 		margin: auto;
 		z-index: 1;
+
+	}
+
+	&.is-open &__btn svg {
+
+		transform: rotate(-90deg);
 
 	}
 

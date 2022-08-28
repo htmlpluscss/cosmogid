@@ -6,7 +6,9 @@
 
 							<ul class="product-gallery__list swiper-wrapper">
 
-{% for img in [1,2,3,4] %}
+{% set articleid = [234,345,456,567,678] %}
+
+{% for img in [1,2,3,4,5] %}
 
 								<li class="product-gallery__item swiper-slide">
 
@@ -35,11 +37,11 @@
 
 					<ul class="product-gallery__preview">
 
-{% for img in [1,2,3,4] %}
+{% for img in [1,2,3,4,5] %}
 
 						<li class="product-gallery__preview-item{% if loop.first %} is-current{% endif %}">
 
-							<a class="product-gallery__preview-link" href="/img/product/gallery/{{ img }}--928x928.jpg" target="_blank">
+							<a class="product-gallery__preview-link" href="/img/product/gallery/{{ img }}--928x928.jpg" target="_blank" data-articleid="{{ articleid[loop.index0] }}">
 
 								<picture>
 

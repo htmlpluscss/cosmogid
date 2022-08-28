@@ -11,7 +11,7 @@ window.selects = select => {
 	value.className = 'select__value';
 	value.innerHTML = '<span class="select__value-inner"></span>';
 
-	value.insertAdjacentHTML('beforeend', '<svg width="16" height="16" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-chevron-down"/></svg>');
+	value.insertAdjacentHTML('beforeend', '<svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-chevron-down"/></svg>');
 	select.appendChild(value);
 
 	const form = select.closest('form'),
@@ -23,7 +23,7 @@ window.selects = select => {
 	list.className = 'select__list is-scroll';
 
 	let selected = control.querySelector('[value="' + control.value + '"]');
-
+/*
 	// в мобиле системный контрол
 
 	control.addEventListener("change", () => {
@@ -34,7 +34,7 @@ window.selects = select => {
 		list.remove();
 
 	});
-
+*/
 	const valueDefault = selected.textContent;
 
 	if( control.disabled || control.value === 'none' || control.value === '' ){
@@ -76,7 +76,7 @@ window.selects = select => {
 			select.classList.remove('is-open');
 
 			// не мобиле системный контрол не нужен
-			control.remove();
+//			control.remove();
 
 		});
 
@@ -98,6 +98,9 @@ window.selects = select => {
 	});
 
 	select.classList.add('is-ready');
+
+	// удаляем контрол
+	control.remove();
 
 };
 

@@ -115,8 +115,6 @@
 
 		&-item {
 
-			width: 240px;
-
 			@media $smWidth {
 
 				width: calc( 50% - 4px );
@@ -136,10 +134,27 @@
 					justify-content: center;
 					border: 1px solid var(--purple);
 					color: var(--purple);
+					min-width: 0;
 
 					svg {
 
 						display: none;
+
+					}
+
+				}
+
+				.select__list {
+
+					max-height: none;
+					right: 0;
+					left: auto;
+
+					&-item {
+
+						padding: 8px 16px;
+						font-weight: 600;
+						line-height: 1.2;
 
 					}
 

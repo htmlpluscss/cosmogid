@@ -151,16 +151,6 @@
 
 	.select__value {
 
-		padding: 0 8px 0 16px;
-		line-height: 39px;
-		color: #6b7280;
-		background-color: #f9fafb;
-		border-color: #6b7280;
-
-	}
-
-	.select__list {
-
 		background-color: #f9fafb;
 
 	}
