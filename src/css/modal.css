@@ -116,8 +116,8 @@
 	&__close-btn {
 
 		position: absolute;
-		top: 16px;
-		right: 16px;
+		top: 8px;
+		right: 8px;
 		color: var(--purple);
 		transition: none;
 
@@ -128,13 +128,6 @@
 				color: var(--text);
 
 			}
-
-		}
-
-		.modal-card-color:not(.visuallyhidden) ~ & {
-
-			top: 0;
-			right: 0;
 
 		}
 

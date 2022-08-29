@@ -513,9 +513,21 @@
 
 		}
 
+		@media $desktop {
+
+			&-item:hover &-name {
+
+				color: var(--purple);
+
+			}
+
+		}
+
 		&-input:checked + &-name {
 
-			color: var(--gray);
+			color: #fff !important;
+			border-color: var(--purple);
+			background-color: var(--purple);
 
 		}
 
@@ -790,93 +802,9 @@
 
 	&__description {
 
-		max-width: 808px;
-		margin: 0 auto;
-		font-size: 14px;
-		line-height: 21px;
-		color: var(--gray);
-
-		h3, h4, h5 {
-
-			font-size: 24px;
-			line-height: 29px;
-			font-weight: 400;
-			text-transform: uppercase;
-			margin: 16px 0;
-
-			@media $smWidth {
-
-				font-size: 18px;
-				font-weight: 600;
-				text-transform: none;
-				line-height: 1.5;
-
-			}
-
-		}
-
-		h4 {
-
-			font-size: 20px;
-
-		}
-
-		h5 {
-
-			font-size: 16px;
-
-		}
-
-		p, ul {
-
-			margin: 16px 0;
-
-		}
-
-		ul {
-
-			li {
-
-				padding-left: 22px;
-
-				&::before {
-
-					position: absolute;
-					top: 10px;
-					left: 10px;
-					content: '';
-					background-color: var(--gray);
-					width: 3px;
-					height: 3px;
-					border-radius: 50%;
-
-				}
-
-			}
-
-		}
-
-		ol {
-
-			counter-reset: headings 0;
-
-			li {
-
-				padding-left: 22px;
-				counter-increment: headings 1;
-
-				&::before {
-
-					position: absolute;
-					top: 0;
-					left: 0;
-					content: counter(headings, decimal) '.';
-
-				}
-
-			}
-
-		}
+		width: 808px !important;
+		margin: 0 auto !important;
+		max-width: 100%;
 
 	}
 
@@ -1110,7 +1038,7 @@
 
 		font-weight: 500;
 		line-height: 1.2;
-		max-width: 300px;
+		max-width: 220px;
 
 	}
 

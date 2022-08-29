@@ -8,8 +8,8 @@
 				  arrow = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
 			arrow.setAttributeNS(null, "viewBox", "0 0 24 24");
-			arrow.setAttributeNS(null, "width", 16);
-			arrow.setAttributeNS(null, "height", 16);
+			arrow.setAttributeNS(null, "width", 24);
+			arrow.setAttributeNS(null, "height", 24);
 
 			arrow.innerHTML = '<use xlink:href="#svg-arrow-chevron-down"/>';
 

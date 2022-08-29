@@ -16,15 +16,17 @@
 
 					<div class="modal__inputbox">
 
-						<label class="modal__label" for="modal-callback-name">
+						<label class="modal__label" for="modal-find-analogue-name">
 							Как вас зовут
 						</label>
 
-						<input class="input" name="name" placeholder="Кузякина Марина" required="required" id="modal-callback-name">
+						<input class="input" name="name" placeholder="Кузякина Марина" required="required" id="modal-find-analogue-name">
 
 					</div>
 
 					<div class="modal__inputbox">
+
+{% set modalMod = 'find-analogue' %}
 
 {% include "template/modal/modal-callback-phone.html" %}
 

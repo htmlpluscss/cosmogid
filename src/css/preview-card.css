@@ -413,13 +413,21 @@
 
 			}
 
+			&:hover {
+
+				color: var(--purple);
+
+			}
+
 		}
 
 		&-input:checked + &-name {
 
 			@media $desktop {
 
-				color: var(--gray);
+				color: #fff;
+				border-color: var(--purple);
+				background-color: var(--purple);
 
 			}
 
