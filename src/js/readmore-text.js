@@ -30,3 +30,31 @@
 	}
 
 })(document.querySelectorAll('.readmore-text'));
+
+// footer
+( btn => {
+
+	if(btn) {
+
+		const footer = document.querySelector('.footer'),
+			  textClose = btn.textContent;
+
+		btn.addEventListener('click', ()=> {
+
+			if ( footer.classList.contains('is-open') ) {
+
+				footer.classList.remove('is-open');
+				btn.textContent = textClose;
+
+			} else {
+
+				footer.classList.add('is-open');
+				btn.textContent = btn.getAttribute('data-alt');
+
+			}
+
+		});
+
+	}
+
+})(document.querySelector('.footer__readmore'));

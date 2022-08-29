@@ -52,7 +52,21 @@
 
 		@media $smWidth {
 
+			grid-template-columns: 1fr 1fr;
+
+		}
+
+	}
+
+	&__readmore {
+
+		display: none;
+
+		@media $smWidth {
+
+			margin: 24px 0;
 			display: block;
+			width: 100%;
 
 		}
 
@@ -63,6 +77,12 @@
 		@media $tablet {
 
 			padding-top: 48px;
+
+		}
+
+		@media $smWidth {
+
+			grid-column: span 2;
 
 		}
 
@@ -123,6 +143,22 @@
 		@media $mdWidth {
 
 			margin: 24px 0;
+
+		}
+
+		@media $smWidth {
+
+			&:nth-of-type(1) {
+
+				display: none;
+
+			}
+
+			.footer:not(.is-open) & {
+
+				display: none;
+
+			}
 
 		}
 
