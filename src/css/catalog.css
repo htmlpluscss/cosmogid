@@ -8,7 +8,8 @@
 		.breadcrumbs,
 		.title,
 		.catalog__body,
-		.menu-bar {
+		.menu-bar,
+		.main > .content {
 
 			display: none;
 
@@ -109,74 +110,13 @@
 
 	&__sort {
 
-		display: flex;
-		justify-content: space-between;
 		margin-bottom: 32px;
-
-		&-item {
-
-			@media $smWidth {
-
-				width: calc( 50% - 4px );
-
-				.btn {
-
-					width: 100%;
-
-				}
-
-				.select__value {
-
-					padding: 0 8px;
-					line-height: 38px;
-					font-size: 12px;
-					font-weight: 500;
-					justify-content: center;
-					border: 1px solid var(--purple);
-					color: var(--purple);
-					min-width: 0;
-
-					svg {
-
-						display: none;
-
-					}
-
-				}
-
-				.select__list {
-
-					max-height: none;
-					right: 0;
-					left: auto;
-
-					&-item {
-
-						padding: 8px 16px;
-						font-weight: 600;
-						line-height: 1.2;
-
-					}
-
-				}
-
-			}
-
-		}
 
 	}
 
 	&__tags {
 
 		margin-bottom: 32px;
-
-		@media $mdWidth {
-
-			background-color: #f9fafb;
-			padding: 8px var(--indent);
-			margin: 0 calc( var(--indent) * -1 );
-
-		}
 
 	}
 
@@ -209,7 +149,7 @@
 
 }
 
-.catalog-tags {
+.hash-tags {
 
 	display: flex;
 	justify-content: space-between;
@@ -217,6 +157,9 @@
 	@media $smWidth {
 
 		display: block;
+		background-color: #f9fafb;
+		padding: 8px var(--indent);
+		margin: 0 calc( var(--indent) * -1 );
 
 	}
 
@@ -331,6 +274,65 @@
 		.btn {
 
 			width: 224px;
+
+		}
+
+	}
+
+}
+
+.sort-select {
+
+	display: flex;
+	justify-content: space-between;
+
+	&__item {
+
+		@media $smWidth {
+
+			width: calc( 50% - 4px );
+
+			.btn {
+
+				width: 100%;
+
+			}
+
+			.select__value {
+
+				padding: 0 8px;
+				line-height: 38px;
+				font-size: 12px;
+				font-weight: 500;
+				justify-content: center;
+				border: 1px solid var(--purple);
+				color: var(--purple);
+				min-width: 0;
+				background-color: #fff;
+
+				svg {
+
+					display: none;
+
+				}
+
+			}
+
+			.select__list {
+
+				max-height: none;
+				right: 0;
+				left: auto;
+
+				&-item {
+
+					padding: 8px 16px;
+					font-weight: 600;
+					line-height: 1.2;
+
+				}
+
+			}
 
 		}
 

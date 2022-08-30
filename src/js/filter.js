@@ -1,3 +1,4 @@
+// filter
 ( filter => {
 
 	if(!filter) {
@@ -8,8 +9,7 @@
 
 	let windowScroll = window.pageYOffset;
 
-	const sort = document.querySelector('.catalog__sort'),
-		  mobileOpen = document.querySelector('.catalog-mobile-filter');
+	const mobileOpen = document.querySelector('.js-filter-mobile-open');
 
 	// change
 
@@ -40,33 +40,8 @@
 			});
 
 		}
+
 	});
-
-// sort
-
-	if (sort) {
-
-		sort.addEventListener("change", event => {
-
-			console.log(event.target);
-
-			if( event.target.name === 'sort' ) {
-
-				filter.elements.sort.value = event.target.value;
-
-			}
-
-			if( event.target.name === 'limit' ) {
-
-				filter.elements.limit.value = event.target.value;
-
-			}
-
-			filter.dispatchEvent(new Event("change"));
-
-		});
-
-	}
 
 // open filter
 
@@ -85,4 +60,25 @@
 
 	});
 
+// sort
+
+	const sort = document.querySelector('.js-filter-change');
+
+	if (sort) {
+
+		sort.addEventListener("change", event => {
+
+			console.log(event.target);
+
+			if( filter.elements[event.target.name] ) {
+
+				filter.elements[event.target.name].value = event.target.value;
+
+				filter.dispatchEvent(new Event("change"));
+
+			}
+
+		});
+
+	}
 })(document.querySelector('.filter'));

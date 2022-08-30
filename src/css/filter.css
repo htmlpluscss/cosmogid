@@ -41,6 +41,7 @@
 		top: var(--indent);
 		right: var(--indent);
 		color: var(--purple);
+		background-color: rgba(255,255,255,.5);
 
 		@media $desktop {
 

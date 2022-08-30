@@ -1,0 +1,63 @@
+			<form action="/" class="filter" autocomplete="off">
+
+				<input type="hidden" name="page" value="3">
+				<input type="hidden" name="sort" value="top">
+				<input type="hidden" name="limit" value="16">
+				<input type="hidden" name="category" value="news">
+
+				<fieldset class="filter__fieldset">
+
+{% for checkbox in [
+
+	{
+		name  : "Новости",
+		checked : true
+	},
+	{
+		name  : "Советы косметолога",
+		checked : true
+	},
+	{
+		name  : "Подбор ухода"
+	},
+	{
+		name  : "Новости индустрии"
+	}
+
+]%}
+
+					<label class="filter-checkbox">
+
+						<input class="filter-checkbox__input visuallyhidden" type="checkbox"{% if checkbox.checked %} checked="checked"{% endif %}>
+
+						<span class="filter-checkbox__label">
+							{{ checkbox.name }}
+						</span>
+
+					</label>
+
+{% endfor %}
+
+				</fieldset>
+
+				<div class="filter__foot">
+
+					<button class="btn btn--outline" type="reset">
+						Очистить
+					</button>
+
+					<button class="btn">
+						Применить
+					</button>
+
+				</div>
+
+				<button type="button" class="filter__btn-close button" aria-label="закрыть фильтр">
+
+					<svg width="32" height="32" viewBox="0 0 24 24">
+						<use xlink:href="#svg-close-small"/>
+					</svg>
+
+				</button>
+
+			</form>
