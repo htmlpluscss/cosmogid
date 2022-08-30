@@ -1,5 +1,7 @@
 					<div class="menu-catalog__sub">
 
+						<div class="menu-catalog__grid center">
+
 		{% if item.name === 'Парфюмерия' %}
 
 {% include "template/menu/grid.html" %}
@@ -8,34 +10,32 @@
 
 		{% else %}
 
-						<div class="menu-catalog__grid">
+					{% for column in item.sub %}
 
-				{% for column in item.sub %}
+								<div class="menu-catalog__column">
 
-							<div class="menu-catalog__column">
+									<ul class="menu-catalog__level-2">
 
-								<ul class="menu-catalog__level-2">
+							{% for level2 in item.sub[loop.index0] %}
 
-						{% for level2 in item.sub[loop.index0] %}
+										<li>
 
-									<li>
+											<a class="menu-catalog__link is-level-2" href="/">
+												{{ level2 }}
+											</a>
 
-										<a class="menu-catalog__link is-level-2" href="/">
-											{{ level2 }}
-										</a>
+										</li>
 
-									</li>
+							{% endfor %}
 
-						{% endfor %}
+									</ul>
 
-								</ul>
+								</div>
 
-							</div>
+					{% endfor %}
 
-				{% endfor %}
+		{% endif %}
 
 						</div>
 
 					</div>
-
-		{% endif %}

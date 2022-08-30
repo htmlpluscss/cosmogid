@@ -315,10 +315,10 @@
 		swipe.addEventListener('swiperJsLoad', () => {
 
 			// eager
-			[...swipe.querySelectorAll('[loading="lazy"]')].forEach( img => img.setAttribute('loading','eager') );
+		//	[...swipe.querySelectorAll('[loading="lazy"]')].forEach( img => img.setAttribute('loading','eager') );
 
 			// hide
-			[...items].forEach( el => el.classList.remove('hide') );
+		//	[...items].forEach( el => el.classList.remove('hide') );
 
 			toggleSwipe();
 
