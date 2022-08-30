@@ -1,0 +1,118 @@
+				<div class="cart__list">
+
+{% for item in range(0,3) %}
+
+					<div class="cart__item">
+
+						<article class="cart-item">
+
+							<div class="cart-item__head">
+
+								<a href="/product/" target="_blank">
+
+									<picture>
+
+										<source srcset="/img/cart/100x100.webp 1x, /img/cart/200x200.webp 2x" type="image/webp">
+										<source srcset="/img/cart/100x100.jpg 1x, /img/cart/200x200.jpg 2x">
+
+										<img src="/img/cart/100x100.jpg" alt="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл" loading="lazy" width="100" height="100">
+
+									</picture>
+
+								</a>
+
+							</div>
+
+							<div class="cart-item__body">
+
+								<div class="cart-item__name">
+
+									<a href="/product/" target="_blank">
+										Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл
+									</a>
+
+								</div>
+
+								<table class="cart-item__param">
+
+									<tr>
+
+										<th>
+											Код
+										</th>
+
+										<td>
+											494303
+										</td>
+
+									</tr>
+
+									<tr>
+
+										<th>
+											Вес:
+										</th>
+
+										<td>
+											<a href="/product/" target="_blank">30 мл</a>
+										</td>
+
+									</tr>
+
+								</table>
+
+							</div>
+
+							<div class="cart-item__foot">
+
+								<div class="cart-item__quantity">
+
+									<span class="cart-quantity">
+
+										<button class="cart-quantity__btn cart-quantity__btn--down button" type="button" aria-label="уменьшить на одну штуку">
+											-
+										</button>
+
+										<input type="tel" name="quantity[]" value="2" class="cart-quantity__count input" maxlength="3">
+
+										<button class="cart-quantity__btn cart-quantity__btn--up button" type="button" aria-label="увеличить на одну штуку">
+											+
+										</button>
+
+									</span>
+
+								</div>
+
+								<div class="cart-item__price">
+
+									<div class="price">
+
+										<b class="price__value">
+											2 225 581 ₽
+										</b>
+
+										<s class="price__old">
+											2581 ₽
+										</s>
+
+									</div>
+
+								</div>
+
+								<button class="cart-item__remove button" type="button" aria-label="Удалить из корзины">
+
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-trash"/>
+									</svg>
+
+								</button>
+
+							</div>
+
+						</article>
+
+					</div>
+
+{% endfor %}
+
+				</div>

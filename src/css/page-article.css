@@ -415,13 +415,10 @@
 			@media $smWidth {
 
 				float: none;
-				margin: 24px 0;
-
-			}
-
-			@media $xsWidth {
-
 				gap: 16px;
+				overflow-x: auto;
+				padding: var(--indent);
+				margin: 0 calc( var(--indent) * -1 );
 
 				.page-article__product-card {
 
@@ -451,6 +448,8 @@
 			padding: 8px 8px 16px;
 			transition: box-shadow var(--transitionDefault);
 			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+			padding-right: 7px;
 
 			@media $desktop {
 
@@ -553,16 +552,6 @@
 			.page-article__product-card {
 
 				width: 100%;
-
-				@media $desktop {
-
-					a {
-
-						padding-right: 7px;
-
-					}
-
-				}
 
 				img {
 

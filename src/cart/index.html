@@ -1,0 +1,37 @@
+{% set title = "Мои покупки" %}
+
+{% set breadcrumbs = ["Корзина"] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<form action="/" class="cart">
+
+			<h1 class="title">
+				{{ title }}
+			</h1>
+
+			<div class="cart__box">
+
+{% include "cart/list.html" %}
+
+{% include "cart/foot.html" %}
+
+			</div>
+
+		</form>
+
+		<div class="cart-related">
+
+{% set previewSwiperTitle = "Часто покупают с товарами из вашей корзины" %}
+
+{% include "_include/recently-watched.html" %}
+
+		</div>
+
+	</div>
+
+{% endblock %}

@@ -181,7 +181,7 @@
 				const centeredSlides = window.innerWidth < 768;
 
 				mySwipe = new Swiper(swipe, {
-					loop: true,
+					rewind: true,
 					centeredSlides: centeredSlides,
 					slidesPerView: 'auto',
 					slidesPerGroup: 1,
