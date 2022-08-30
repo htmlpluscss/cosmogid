@@ -151,6 +151,19 @@
 
 }
 
+.filter-menu {
+
+	&__link {
+
+		padding: 10px 8px;
+		line-height: 32px;
+		font-weight: 600;
+		color: var(--gray);
+
+	}
+
+}
+
 .filter-brand {
 
 	display: flex;

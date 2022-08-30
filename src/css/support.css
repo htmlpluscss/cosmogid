@@ -4,6 +4,12 @@
 	display: flex;
 	justify-content: space-between;
 
+	.catalog + & {
+
+		margin-top: 96px;
+
+	}
+
 	@media $smWidth {
 
 		display: block;
