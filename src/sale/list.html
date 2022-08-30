@@ -2,49 +2,49 @@
 
 {% for item in range(0,5) %}
 
-				<div class="page-sale__item">
+				<figure class="sale-card">
 
-					<figure class="page-sale__card">
+					<picture>
 
-						<picture>
+						<source srcset="/img/sale/1--688x720.webp" type="image/webp" media="(max-width: 767px)">
+						<source srcset="/img/sale/1--688x720.jpg" media="(max-width: 767px)">
 
-							<source srcset="/img/sale/1--688x720.webp" type="image/webp" media="(max-width: 767px)">
-							<source srcset="/img/sale/1--688x720.jpg" media="(max-width: 767px)">
+						<source srcset="/img/sale/{{ loop.index }}--588x360.webp 1x, /img/sale/{{ loop.index }}--1167x720.webp 2x" type="image/webp">
+						<source srcset="/img/sale/{{ loop.index }}--588x360.jpg 1x, /img/sale/{{ loop.index }}--1167x720.jpg 2x">
 
-							<source srcset="/img/sale/{{ loop.index }}--588x360.webp 1x, /img/sale/{{ loop.index }}--1167x720.webp 2x" type="image/webp">
-							<source srcset="/img/sale/{{ loop.index }}--588x360.jpg 1x, /img/sale/{{ loop.index }}--1167x720.jpg 2x">
+						<img src="/img/sale/{{ loop.index }}--588x360.jpg" alt="новая палитра от revlon" loading="lazy" width="588" height="360">
 
-							<img src="/img/sale/{{ loop.index }}--588x360.jpg" alt="новая палитра от revlon" loading="lazy" width="588" height="360">
+					</picture>
 
-						</picture>
+					<figcaption class="sale-card__inner">
 
-						<figcaption class="page-sale__card-inner">
+						<p class="sale-card__head">
 
-							<div class="page-sale__card-body">
+							Хотите подарок
 
-								<a href="/sale/item/">
-									Хотите подарок <b>от revlon</b>
-								</a>
+							<a class="sale-card__link" href="/sale/item/">
+								от revlon
+							</a>
 
-								<p>
-									Получите набор пробников при покупке 10 тюбиков неведомой хрени, в одни руки за раз
-								</p>
+						</p>
 
-							</div>
+						<p class="sale-card__text">
 
-							<div class="page-sale__card-foot">
+							Получите набор пробников при покупке 10 тюбиков неведомой хрени, в одни руки за раз
 
-								<span class="btn">
-									Осталось <span data-deadline="2022-{{ ['09',10] | random }}-{{ range(1,30) | random }} {{ range(10,24) | random }}:{{ range(0,59) | random }}" data-declension="день и|дня и|дней и">1 день и 09:25:35</span>
-								</span>
+						</p>
 
-							</div>
+						<p class="sale-card__foot">
 
-						</figcaption>
+							<span class="btn">
+								Осталось <span data-deadline="2022-{{ ['09',10] | random }}-{{ range(1,30) | random }} {{ range(10,24) | random }}:{{ range(0,59) | random }}" data-declension="день и|дня и|дней и">1 день и 09:25:35</span>
+							</span>
 
-					</figure>
+						</p>
 
-				</div>
+					</figcaption>
+
+				</figure>
 
 {% endfor %}
 

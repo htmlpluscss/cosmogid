@@ -4,6 +4,13 @@
 
 		margin: 40px 0 32px;
 
+		img {
+
+			max-width: 100%;
+			height: auto;
+
+		}
+
 	}
 
 	&__list {
@@ -28,9 +35,7 @@
 
 	}
 
-	&__item {
-
-		position: relative;
+	.sale-card {
 
 		@media $smWidth {
 
@@ -40,107 +45,119 @@
 
 	}
 
-	&__card {
+}
 
-		position: relative;
-		padding: 42px 42px 24px;
-		min-height: 360px;
-		display: flex;
+.sale-card {
 
-		@media $mdWidth {
+	position: relative;
+	padding: 24px 42px;
+	display: flex;
+	min-height: 360px;
+	color: var(--gray);
 
-			padding: 36px 24px;
+	@media $mdWidth {
 
-		}
+		padding: 36px 24px;
 
-		a {
+	}
 
-			display: block;
-			font-weight: 300;
-			font-size: 16px;
-			text-transform: uppercase;
-			color: var(--gray);
+	@media $xsWidth {
 
-			b {
+		padding: 24px;
 
-				display: block;
-				font-weight: 600;
-				font-size: 36px;
+	}
 
-			}
+	&__head {
 
-			&::after {
+		font-weight: 300;
+		font-size: 16px;
+		text-transform: uppercase;
+		margin-top: 24px;
+		flex-shrink: 0;
 
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: '';
+	}
 
-			}
+	&__link {
 
-		}
+		display: block;
+		font-weight: 600;
+		font-size: 36px;
 
-		p {
+		@media $xsWidth {
 
-			max-width: 320px;
-			font-size: 18px;
-			min-height: 113px;
+			font-size: 24px;
 
 		}
 
-		&-inner {
-
-			display: flex;
-			flex-direction: column;
-
-		}
-
-		&-body {
-
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			flex-grow: 1;
-
-		}
-
-		&-foot {
-
-			display: flex;
-			margin: 13px 0 3px;
-
-			.btn {
-
-				@media $desktop {
-
-					padding: 0 40px;
-
-				}
-
-				@media $smWidth {
-
-					width: 100%;
-
-				}
-
-			}
-
-		}
-
-		img {
+		&::after {
 
 			position: absolute;
-			width: 100%;
-			height: 100%;
 			top: 0;
 			left: 0;
-			z-index: -1;
-			object-position: right bottom;
-			object-fit: cover;
+			right: 0;
+			bottom: 0;
+			content: '';
 
 		}
+
+	}
+
+	&__text {
+
+		font-size: 18px;
+		flex-grow: 1;
+		max-width: 320px;
+
+		@media $xsWidth {
+
+			font-size: 16px;
+
+		}
+
+	}
+
+	&__inner {
+
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	&__foot {
+
+		display: flex;
+		margin: 16px 0 8px;
+		flex-shrink: 0;
+
+		.btn {
+
+			@media $desktop {
+
+				padding: 0 40px;
+
+			}
+
+			@media $smWidth {
+
+				width: 100%;
+				padding: 0;
+
+			}
+
+		}
+
+	}
+
+	img {
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		object-position: right bottom;
+		object-fit: cover;
 
 	}
 

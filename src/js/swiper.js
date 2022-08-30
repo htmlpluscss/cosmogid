@@ -22,7 +22,8 @@
 			  news = swipe.classList.contains('swiper-container--news'),
 			  preview = swipe.classList.contains('swiper-container--preview'),
 			  product = swipe.classList.contains('swiper-container--product'),
-			  certificates = swipe.classList.contains('swiper-container--certificates');
+			  certificates = swipe.classList.contains('swiper-container--certificates'),
+			  productArticle = swipe.classList.contains('swiper-container--product-article');
 
 		swipeNav.className = 'swiper-pagination';
 
@@ -132,6 +133,56 @@
 				mySwipe = new Swiper(swipe, {
 					loop: true,
 					spaceBetween: gap,
+					slidesPerView: 'auto',
+					slidesPerGroup: 1,
+					navigation: {
+						nextEl: swipeNext,
+						prevEl: swipePrev
+					},
+					pagination: {
+						el: swipeNav,
+						clickable: true,
+						bulletClass: 'button',
+						bulletActiveClass: 'is-active'
+					}
+				});
+
+			}
+
+			swipe.addEventListener('swiperResize', toggleSwipe);
+
+		}
+
+		if (productArticle) {
+
+			swipe.parentNode.append(swipeBtns);
+			swipe.parentNode.append(swipeNav);
+
+			toggleSwipe = () => {
+
+				resetSwipe();
+
+				if ( window.innerWidth >= 1250 && count < 4 ) {
+
+					return;
+
+				}
+
+				if ( window.innerWidth >= 768 ) {
+
+					swipeBtns.classList.remove('hide');
+
+				}
+
+				swipeNav.classList.remove('hide');
+
+				swipe.parentNode.parentNode.classList.add('swiper-container-style');
+
+				const centeredSlides = window.innerWidth < 768;
+
+				mySwipe = new Swiper(swipe, {
+					loop: true,
+					centeredSlides: centeredSlides,
 					slidesPerView: 'auto',
 					slidesPerGroup: 1,
 					navigation: {
