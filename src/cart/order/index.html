@@ -1,0 +1,29 @@
+{% set title = "Оформление заказа" %}
+
+{% set breadcrumbs = ["Корзина"] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<form action="/" class="order">
+
+			<h1 class="title">
+				{{ title }}
+			</h1>
+
+			<div class="order__box">
+
+{% include "cart/order/new.html" %}
+
+{% include "cart/order/foot.html" %}
+
+			</div>
+
+		</form>
+
+	</div>
+
+{% endblock %}

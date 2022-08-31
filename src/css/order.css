@@ -1,0 +1,57 @@
+.order {
+
+	&__box {
+
+		display: flex;
+		margin: 64px 0 80px;
+
+		@media $mdWidth {
+
+			margin: 48px 0;
+
+		}
+
+		@media $smWidth {
+
+			display: block;
+			margin-bottom: 24px;
+
+		}
+
+	}
+
+	&__body {
+
+		flex-grow: 1;
+
+		@media $smWidth {
+
+			margin: 24px 0;
+
+		}
+
+	}
+
+	&__foot {
+
+		width: 392px;
+		flex-shrink: 0;
+		margin-left: 24px;
+
+		@media $mdWidth {
+
+			width: 320px;
+			margin-left: 16px;
+
+		}
+
+		@media $smWidth {
+
+			width: auto;
+			margin: 24px 0;
+
+		}
+
+	}
+
+}
