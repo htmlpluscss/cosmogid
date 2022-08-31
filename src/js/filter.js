@@ -7,11 +7,66 @@
 
 	}
 
+	// scrollTo
+	const scrollTo = (element, to, duration = 70) => {
+
+		if (duration <= 0) return;
+
+		const difference = to - element.scrollTop,
+			  perTick = difference / duration * 10;
+
+		setTimeout( ()=> {
+
+			element.scrollTop = element.scrollTop + perTick;
+
+			if (element.scrollTop === to) return;
+
+			scrollTo(element, to, duration - 10);
+
+		}, 10);
+
+	}
+
+
 	let windowScroll = window.pageYOffset;
 
 	const mobileOpen = document.querySelector('.js-filter-mobile-open');
 
 	// change
+
+	filter.addEventListener('input', event => {
+
+		const target = event.target;
+
+		// live-search
+
+		if ( target.closest('.js-live-search__input') ) {
+
+			const value = target.closest('.js-live-search__input').value.toLowerCase(),
+				  liveSearch = target.closest('.js-live-search'),
+				  item = liveSearch.querySelectorAll('.js-live-search__item'),
+				  reset = liveSearch.querySelector('.js-live-search__reset'),
+				  input = liveSearch.querySelector('.js-live-search__input');
+
+			if ( value.length === 0 ) {
+
+				reset.classList.add('hide');
+
+				[...item].forEach( el => el.classList.remove('hide') );
+
+				return;
+
+			}
+
+			reset.classList.remove('hide');
+
+			[...item].forEach( el => el.classList.toggle('hide', el.getAttribute('data-live-search').toLowerCase().includes(value) === false ));
+
+		}
+
+	});
+
+	// click
 
 	filter.addEventListener('click', event => {
 
@@ -22,6 +77,58 @@
 		if ( target.closest('.filter__legend') ) {
 
 			target.closest('.filter__legend').classList.toggle('is-open');
+
+		}
+
+		// letter
+
+		if ( target.closest('.js-letter__btn') ) {
+
+			const box = target.closest('.js-letter'),
+				  scrollList = box.querySelector('.js-letter__scroll'),
+				  item = box.querySelectorAll('.js-letter__item'),
+				  letter = target.closest('.js-letter__btn').getAttribute('data-value');
+
+			if ( letter === 'top' ) {
+
+				scrollTo(scrollList, 0);
+
+				return true;
+
+			}
+
+			[...item].every( el => {
+
+				if ( letter === el.getAttribute('data-letter') ) {
+
+					scrollTo(scrollList, el.offsetTop);
+
+					return false;
+
+				} else {
+
+					return true;
+
+				}
+
+			});
+
+		}
+
+		// live-search
+
+		if ( target.closest('.js-live-search__reset') ) {
+
+			const liveSearch = target.closest('.js-live-search'),
+				  item = liveSearch.querySelectorAll('.js-live-search__item'),
+				  input = liveSearch.querySelector('.js-live-search__input');
+
+			input.value = '';
+			target.closest('.js-live-search__reset').classList.add('hide');
+
+			[...item].forEach( el => el.classList.remove('hide') );
+
+			input.focus();
 
 		}
 
