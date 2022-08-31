@@ -400,37 +400,39 @@
 			margin-left: 24px;
 			display: flex;
 			gap: 24px;
+			margin-bottom: 16px;
+
+			.preview-card {
+
+				width: 224px;
+
+				@media $mdWidth {
+
+					width: 168px;
+
+				}
+
+				@media $smWidth {
+
+					width:calc( 50% - 8px );
+
+				}
+
+			}
 
 			@media $mdWidth {
 
-				img {
-
-					width: 144px;
-					height: auto;
-
-				}
+				gap: 16px;
+				margin-left: 16px;
 
 			}
 
 			@media $smWidth {
 
 				float: none;
-				gap: 16px;
 				overflow-x: auto;
 				padding: var(--indent);
 				margin: 0 calc( var(--indent) * -1 );
-
-				.page-article__product-card {
-
-					flex-basis: calc( 50% - 8px );
-
-					img {
-
-						width: 100%;
-
-					}
-
-				}
 
 			}
 
@@ -438,26 +440,27 @@
 
 	}
 
-	&__product-card {
+	.preview-card {
 
-		display: flex;
-		flex-shrink: 0;
+		.preview-card__form,
+		.tooltip-title__inner {
 
-		a {
+			display: none;
 
-			padding: 8px 8px 16px;
-			transition: box-shadow var(--transitionDefault);
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+		}
 
-			padding-right: 7px;
+		.preview-card__title {
 
-			@media $desktop {
+			position: static;
 
-				&:hover {
+			&::after {
 
-					box-shadow: var(--box-shadow);
-
-				}
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
 
 			}
 
@@ -535,6 +538,7 @@
 
 			max-width: 25%;
 			display: flex;
+			flex-shrink: 0;
 			padding: 24px 12px;
 
 			@media $mdWidth {
@@ -545,20 +549,7 @@
 
 			@media $smWidth {
 
-				max-width: 224px;
-
-			}
-
-			.page-article__product-card {
-
-				width: 100%;
-
-				img {
-
-					max-width: 100%;
-					height: auto;
-
-				}
+				max-width: 234px;
 
 			}
 
