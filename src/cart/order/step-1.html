@@ -1,0 +1,143 @@
+				<div class="order__body">
+
+					<div class="order__tabs">
+
+						<button class="btn btn--more" type="button">
+							Новый покупатель
+						</button>
+
+						<button class="btn btn--more is-active" type="button">
+							Я постоянный клиент
+						</button>
+
+					</div>
+
+					<div class="order__column">
+
+						<fieldset class="order__fieldset">
+
+							<h2 class="order__head">
+
+								<span class="ico-box is-purple">
+									<svg width="16" height="16" viewBox="0 0 24 24">
+										<use xlink:href="#svg-user"/>
+									</svg>
+								</span>
+
+								Личные данные
+
+							</h2>
+
+							<div class="inputbox is-error">
+
+								<label class="inputbox__label" for="order-name">
+									Как вас зовут
+								</label>
+
+								<input class="input" name="name" placeholder="Марина" required="required" id="order-name">
+
+								<div class="inputbox__note">
+									Это поле нужно заполнить !!!
+								</div>
+
+							</div>
+
+							<div class="inputbox">
+
+								<label class="inputbox__label" for="order-lastname">
+									Ваша фамилия
+								</label>
+
+								<input class="input" name="lastname" placeholder="Кузякина" required="required" id="order-lastname">
+
+							</div>
+
+						</fieldset>
+
+						<fieldset class="order__fieldset">
+
+							<h2 class="order__head">
+
+								<span class="ico-box">
+									<svg width="16" height="16" viewBox="0 0 24 24">
+										<use xlink:href="#svg-car"/>
+									</svg>
+								</span>
+
+								Информация о доставке
+
+							</h2>
+
+							<div class="inputbox">
+
+		{% include "template/modal/modal-callback-phone.html" %}
+
+							</div>
+
+							<div class="inputbox">
+
+								<label class="inputbox__label" for="order-email">
+									Ваша почта (необязательно)
+								</label>
+
+								<input class="input" name="email" placeholder="mail@mail.ru" required="required" id="order-email" type="email">
+
+								<div class="inputbox__note flex">
+
+									<details class="tooltip" open>
+
+										<summary class="tooltip__link">
+											Только для статуса заказа
+										</summary>
+
+										<p class="tooltip__inner">
+											Укажите Ваш e-mail. Уведомления об изменении статуса заказа и его трекинг-номер будут приходить на указанный Вами электронный адрес.
+										</p>
+
+									</details>
+
+								</div>
+
+							</div>
+
+						</fieldset>
+
+					</div>
+
+					<div class="order__rules">
+
+						<label class="checkbox">
+
+							<input class="checkbox__input visuallyhidden" type="checkbox" required="required">
+
+							<span class="checkbox__label">
+								Я ходу оплатить как юридическое лицо
+							</span>
+
+						</label>
+
+						<label class="checkbox">
+
+							<input class="checkbox__input visuallyhidden" type="checkbox" required="required">
+
+							<span class="checkbox__label">
+								Я принимаю Договор оферту
+							</span>
+
+						</label>
+
+					</div>
+
+					<div class="order__next">
+
+						<a href="/catalog/" class="btn btn--outline">
+							Продолжить покупки
+						</a>
+
+						<button class="btn">
+							Далее
+						</button>
+
+					</div>
+
+				</div>

@@ -322,58 +322,8 @@
 			}
 
 		}
-/*
-		if (galleryModal) {
 
-			swipeNav.remove();
-
-			toggleSwipe = () => {
-
-				toggleSwipe = false;
-
-				swipe.parentNode.classList.add('swiper-container-style');
-
-				mySwipe = new Swiper(swipe, {
-					loop: true,
-					navigation: {
-						nextEl: swipeNext,
-						prevEl: swipePrev
-					},
-					on: {
-						init: () => {
-
-							swipe.addEventListener('setSlides', event => {
-
-								console.log(event.detail.index);
-								swipe.swiper.slideTo(event.detail.index + 1, 0);
-
-							});
-
-						}
-					}
-				});
-
-				if ( count <= 1 ) {
-
-					resetSwipe();
-
-				}
-
-			}
-
-		}
-*/
-		swipe.addEventListener('swiperJsLoad', () => {
-
-			// eager
-		//	[...swipe.querySelectorAll('[loading="lazy"]')].forEach( img => img.setAttribute('loading','eager') );
-
-			// hide
-		//	[...items].forEach( el => el.classList.remove('hide') );
-
-			toggleSwipe();
-
-		});
+		swipe.addEventListener('swiperJsLoad', toggleSwipe);
 
 	});
 

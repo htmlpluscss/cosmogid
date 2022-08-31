@@ -8,114 +8,17 @@
 
 {% include "template/modal/review.html" %}
 
-			<form action="/" class="modal__item modal__item--preview-card-color modal-card-color" id="preview-card-color"></form>
+{% include "template/modal/preview-card-color.html" %}
 
-			<div class="modal__item modal__item--video-review">
+{% include "template/modal/card-color.html" %}
 
-				Загрузить видео отзыв
-
-			</div>
+{% include "template/modal/video-review".html" %}
 
 {% include "template/modal/find-notify.html" %}
 
 {% include "template/modal/find-analogue.html" %}
 
-			<form action="/" class="modal__item modal__item--login">
-
-				Авторизоваться
-
-			</form>
-
-			<form action="/" class="modal__item modal__item--card-color" id="modal-card-color">
-
-			</form>
-
-
-<!--
-			<div class="modal__item modal__item--buy-one-click">
-
-				<form action="/order/" class="form" id="modal-buy-one-click">
-
-					<input type="hidden" name="id">
-
-					<div class="modal__head">
-
-						<div class="modal-product">
-
-							<div class="modal-product__photo"></div>
-							<div class="modal-product__name h4"></div>
-
-						</div>
-
-					</div>
-
-					<div class="modal__body">
-
-						<input class="input input--big" name="phone" placeholder="Телефон" type="tel">
-
-					</div>
-
-					<div class="modal__body">
-
-						<button class="btn btn--big form__submit">
-							Заказ в 1 клик
-						</button>
-
-					</div>
-
-					<div class="modal__foot">
-
-						<p class="modal__note">
-							Менеджер свяжется с Вам с 10 до 16 часов
-						</p>
-
-					</div>
-
-				</form>
-
-			</div>
-
-			<div class="modal__item modal__item--gallery">
-
-				<div id="modal-gallery" class="swiper-container swiper-container--gallery-modal">
-
-					<div class="swiper-wrapper"></div>
-
-				</div>
-
-			</div>
-
-			<div class="modal__item modal__item--ok">
-
-				<div class="modal__head">
-
-					<div class="modal__title h3"></div>
-
-				</div>
-
-				<div class="modal__body">
-
-					<div class="modal__text"></div>
-
-				</div>
-
-				<div class="modal__body">
-
-					<button type="button" class="modal__close btn btn--big">
-						Закрыть
-					</button>
-
-				</div>
-
-			</div>
-
-			<div class="modal__item modal__item--video">
-
-				<div id="modal-video">
-
-				</div>
-
-			</div> -->
+{% include "template/modal/login.html" %}
 
 			<button type="button" class="modal__close modal__close-btn button" aria-label="Закрыть">
 				<svg width="32" height="32" viewBox="0 0 24 24">

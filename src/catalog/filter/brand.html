@@ -1144,11 +1144,11 @@
 
 {% for checkbox in brands %}
 
-							<label class="filter-checkbox js-letter__item js-live-search__item" data-letter="{{ checkbox.name | first }}" data-live-search="{{ checkbox.name }}">
+							<label class="checkbox js-letter__item js-live-search__item" data-letter="{{ checkbox.name | first }}" data-live-search="{{ checkbox.name }}">
 
-								<input class="filter-checkbox__input visuallyhidden" type="checkbox"{% if range(0,10) | random === 0 %} disabled="disabled"{% endif %}{% if range(0,10) | random === 0 %} checked="checked"{% endif %}>
+								<input class="checkbox__input visuallyhidden" type="checkbox"{% if range(0,10) | random === 0 %} disabled="disabled"{% endif %}{% if range(0,10) | random === 0 %} checked="checked"{% endif %}>
 
-								<span class="filter-checkbox__label">
+								<span class="checkbox__label">
 									{{ checkbox.name }} <b>({{ range(0,1000) | random }})</b>
 								</span>
 
