@@ -145,17 +145,27 @@
 		color: currentColor;
 		text-decoration: underline;
 
+		@media $desktop {
+
+			&:hover {
+
+				text-decoration: none;
+
+			}
+
+		}
+
 	}
 
 	&__link + &__inner {
 
 		width: 280px;
 		padding: 8px;
-		left: -140px;
+		left: 50%;
 		font-size: 12px;
 		color: #111;
 		text-align: center;
-		transform: translateX(50%);
+		transform: translateX(-50%);
 		border: 1px solid #f3f4f6;
 
 	}

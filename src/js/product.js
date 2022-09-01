@@ -1,187 +1,57 @@
-( product => {
+( brands => {
 
-	if( product ) {
+	if( brands ) {
 
-		// param
+		const group = brands.querySelectorAll('.brands__group');
 
-		if ( window.innerWidth < 768 ) {
+		// hash
 
-			const btn = product.querySelector('.product__open-tab .btn');
+		const setStage = ()=> {
 
-			btn.addEventListener('click', event => {
+			const hash = location.hash.toLowerCase().slice(1);
 
-				event.preventDefault();
+			[...group].forEach( item => {
 
-				btn.closest('.product__specs').classList.toggle('is-open');
+				item.classList.toggle('hide', item.getAttribute('data-hash').toLowerCase() !== hash && hash );
 
 			});
 
 		}
 
-		// hash
-
-		const setTab = ()=> {
-
-			const tabItem = document.querySelector(location.hash).closest('.tabs__item');
-
-			if ( tabItem ) {
-
-				tabItem.dispatchEvent(new Event("setActive"));
-
-			}
-
-		}
-
-		window.addEventListener('hashchange', setTab);
+		window.addEventListener('hashchange', setStage);
 
 		if ( location.hash ) {
 
-			setTimeout( setTab );
+			setTimeout( setStage );
 
 		}
 
-		// gallery
+		// btns
 
-		const galleryPreview = product.querySelectorAll('.product-gallery__preview-link');
+		const btns = document.querySelectorAll('.brands-sort__btn');
 
-		[...galleryPreview].forEach( link => {
+		[...btns].forEach( link => {
 
 			link.addEventListener('click', event => {
 
 				event.preventDefault();
 
-				let index = null;
+				if ( link.href.includes('#') ) {
 
-				[...galleryPreview].forEach( (_link,_index) => {
+					location.hash = link.getAttribute('href');
 
-					_link.parentNode.classList.toggle('is-current', _link === link);
+				} else {
 
-					if ( _link === link ) {
-
-						index = _index;
-
-					}
-
-				});
-
-				product.querySelector('.swiper-container--product').swiper.slideToLoop(index);
-
-			});
-
-		});
-
-		// volume
-
-		const volumeChange = cardVolume => {
-
-
-			const form = cardVolume.closest('.product-buy'),
-				  id = form.elements.id.value,
-				  articleId = cardVolume.value,
-				  templateFoot = document.querySelector('#product-buy-submit-template').innerHTML,
-				  templateFavourite = document.querySelector('#product-buy-favourite-template').innerHTML,
-				  templatePrice = document.querySelector('#price-template').innerHTML,
-				  templateAvailability = document.querySelector('#availability-template').innerHTML,
-				  templateOverlay = document.querySelector('#overlay-disabled-template').innerHTML;
-
-			// volume -> gallery
-
-			[...galleryPreview].forEach( link => {
-
-				if ( link.getAttribute('data-articleid') === articleId ) {
-
-					link.dispatchEvent(new Event('click'));
+					history.pushState('', document.title, window.location.pathname + window.location.search);
 
 				}
 
+				setStage();
+
 			});
-
-			// кнопка купить
-
-			const buy = cardVolume.getAttribute('data-buy'),
-				  buyCart = buy === 'in-cart',
-				  buyDisabled = buy === 'disabled',
-				  buyBtn = buy === null || buyDisabled;
-
-			form.querySelector('.product-buy__submit').innerHTML = Mustache.render(templateFoot, { buyBtn, buyDisabled, buyCart });
-
-			// кнопка избранное
-
-			const favourite = cardVolume.getAttribute('data-favourite');
-
-			form.querySelector('.product-buy__favourite').innerHTML = Mustache.render(templateFavourite, { favourite });
-
-			// цена
-
-			const price = cardVolume.getAttribute('data-price'),
-				  priceOld = cardVolume.getAttribute('data-price-old');
-
-			form.querySelector('.product-buy__price').innerHTML = Mustache.render(templatePrice, { price, priceOld });
-
-			// overlay
-
-			const overlay = cardVolume.getAttribute('data-overlay'),
-				  overlayTitle = cardVolume.getAttribute('data-overlay-title'),
-				  overlayText = cardVolume.getAttribute('data-overlay-text'),
-				  overlayLogin = overlay === 'login',
-				  overlayNot = overlay === 'not',
-				  overlayWithdrawn = overlay === 'withdrawn',
-				  elOverlay = product.querySelector('.overlay-disabled');
-
-			if ( elOverlay ) {
-
-				elOverlay.remove();
-
-			}
-
-			product.querySelector('.product-gallery__wrap').insertAdjacentHTML('beforeend', Mustache.render(templateOverlay, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, overlayWithdrawn, id, articleId }));
-
-			// availability
-
-			form.querySelector('.product-buy__availability').innerHTML = Mustache.render(templateAvailability, { availability: !overlayNot });
-
-		}
-
-		document.addEventListener('change', event => {
-
-			// изменить объём
-			const cardVolume = event.target.closest('.product-buy__volume-input');
-
-			if (cardVolume) {
-
-				volumeChange(cardVolume);
-
-			}
-
-			// изменить объём в мобильном
-			const cardVolumeMobile = event.target.closest('.product-buy__volume-select');
-
-			if (cardVolumeMobile) {
-
-				const value = cardVolumeMobile.value,
-					  card = cardVolumeMobile.closest('.product-buy'),
-					  inputBtn = card.querySelectorAll('.product-buy__volume-input');
-
-				[...inputBtn].forEach( el => {
-
-					if ( el.getAttribute('value') === value ) {
-
-						el.checked = true;
-
-						volumeChange(el);
-
-					} else {
-
-						el.checked = false;
-
-					}
-
-				});
-
-			}
 
 		});
 
 	}
 
-})(document.querySelector('.product'));
+})(document.querySelector('.brands'));

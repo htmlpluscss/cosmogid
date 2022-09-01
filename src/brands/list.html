@@ -1,0 +1,42 @@
+			<div class="brands">
+
+{% set lastLetter = '' %}
+
+{% for letter in brands %}
+
+	{% if lastLetter | upper !== letter.name | first | upper %}
+
+		{% set lastLetter = letter.name | first %}
+
+			{% if loop.first === false %}
+
+					</ul>
+
+				</section>
+
+			{% endif %}
+
+				<section class="brands__group" data-hash="{{ lastLetter | urlencode }}">
+
+					<h2 class="brands__head">
+						{{ lastLetter }}
+					</h2>
+
+					<ul class="brands__list">
+
+		{% endif %}
+
+						<li class="brands__item">
+
+							<a href="/">
+								{{ letter.name }}
+							</a>
+
+						</li>
+
+{% endfor %}
+					</ul>
+
+				</section>
+
+			</div>

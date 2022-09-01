@@ -1,0 +1,27 @@
+						<div class="filter__scroll is-scroll">
+
+{% for i in range(1,5) %}
+
+{% for checkbox in checkboxList %}
+
+							<label class="checkbox">
+
+								<input class="checkbox__input visuallyhidden" type="checkbox"{% if checkbox.disabled %} disabled="disabled"{% endif %}{% if checkbox.checked %} checked="checked"{% endif %}>
+
+								<span class="checkbox__label">
+
+									{{ checkbox.name }}
+
+									{% if checkbox.count %}
+										<b>({{ checkbox.count }})</b>
+									{% endif %}
+
+								</span>
+
+							</label>
+
+{% endfor %}
+
+{% endfor %}
+
+						</div>

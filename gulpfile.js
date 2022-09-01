@@ -43,10 +43,11 @@ let config             = null;
 
 const site             = 'cosmogid.ru';
 const domain           = 'cosmogid.htmlpluscss.website';
+const brands           = require('./brands.json');
 
 try {
 
-	config           = require('./config.json');
+	config            = require('./config.json');
 
 	config.ftp.remotePath = domain + config.ftp.remotePath;
 
@@ -64,7 +65,8 @@ const html = (files, since = {}, folder = '') => {
 		.pipe(nunjucksRender({
 			data: {
 				url: 'https://' + site,
-				site: site
+				site: site,
+				brands: brands
 			},
 			path: 'src/'
 		}))

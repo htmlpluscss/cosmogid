@@ -1,22 +1,40 @@
 				<fieldset class="filter__fieldset">
 
 					<legend class="filter__legend is-open">
-						Категории
+						Категории товаров
 					</legend>
 
 					<div class="filter__box">
 
-						<div class="filter-menu">
+{% set checkboxList = [
 
-{% for name in ["Уход за волосами","Уход за лицом","Уход за волосами","Альгинатные маски"] %}
+	{
+		name : "Уход за лицом"
+	},
+	{
+		name : "Уход за головой"
+	},
+	{
+		name : "Уход за ушами"
+	},
+	{
+		name : "Уход за телом"
+	},
+	{
+		name : "Уход за волосами пяточек"
+	},
+	{
+		name : "Уход за волосами",
+		checked : true
+	},
+	{
+		name : "Полировка затылка",
+		disabled : true
+	}
 
-							<div class="filter-menu__link">
-								{{ name }}
-							</div>
+]%}
 
-{% endfor %}
-
-						</div>
+{% include "catalog/filter/checkbox.html" %}
 
 					</div>
 

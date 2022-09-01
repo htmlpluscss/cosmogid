@@ -1,0 +1,35 @@
+			<div class="brands-sort">
+
+				<ul class="brands-sort__list">
+
+					<li class="brands-sort__item">
+
+						<a class="brands-sort__btn" href="/brands/">
+							Все
+						</a>
+
+					</li>
+
+{% set lastLetter = '' %}
+
+{% for letter in brands %}
+
+{% if lastLetter | upper !== letter.name | first | upper %}
+
+{% set lastLetter = letter.name | first %}
+
+					<li class="brands-sort__item">
+
+						<a class="brands-sort__btn" href="#{{ lastLetter }}">
+							{{ lastLetter }}
+						</a>
+
+					</li>
+
+{% endif %}
+
+{% endfor %}
+
+				</ul>
+
+			</div>

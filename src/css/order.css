@@ -60,7 +60,7 @@
 		justify-content: space-between;
 		margin: 48px 0 64px;
 
-		.btn:not(.is-active) {
+		.btn.is-active {
 
 			border-bottom-color: transparent;
 

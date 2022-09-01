@@ -1,0 +1,51 @@
+{% set title = "Бренды" %}
+
+{% set description = "Мы продаем профессиональную косметику оптом и в розницу, с доставкой по Москве, Санкт-Петербургу, Екатеринбургу и другим городам России. Вся косметика, представленная в нашем магазине, оригинальная и сертифицированная на территории Российской Федерации" %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="catalog">
+
+			<h1 class="title">
+				{{ title }}
+			</h1>
+
+			<div class="catalog__box">
+
+				<div class="catalog__filter">
+
+{% include "brands/filter.html" %}
+
+				</div>
+
+				<div class="catalog__body">
+
+					<div class="brands-filter-btn visible-md">
+
+						<button class="btn btn--filter js-filter-mobile-open" type="button">
+							Фильтры
+						</button>
+
+					</div>
+
+{% include "brands/tags.html" %}
+
+{% include "brands/sort.html" %}
+
+{% include "brands/list.html" %}
+
+				</div>
+
+			</div>
+
+		</article>
+
+	</div>
+
+{% endblock %}
