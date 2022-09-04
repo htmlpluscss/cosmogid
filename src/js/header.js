@@ -39,6 +39,31 @@
 
 		});
 
+		// search
+
+		const headerSearch = header.querySelectorAll('.header-search__input');
+
+		window.addEventListener("click", event => {
+
+			const btnOpen = event.target.closest('.header-search-show');
+
+			if ( btnOpen ) {
+
+				header.classList.add('is-search');
+
+				setTimeout( () => [...headerSearch].forEach( input => input.focus() ), 100);
+
+			}
+
+			if ( event.target.closest('.header') === null ) {
+
+				header.classList.remove('is-search');
+				[...headerSearch].forEach( input => input.classList.remove('is-focus') );
+
+			}
+
+		});
+
 	}
 
 })(document.querySelector('.header'));
