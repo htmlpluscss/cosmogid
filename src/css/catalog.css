@@ -156,6 +156,12 @@
 
 	}
 
+	&__desc + &__sort {
+
+		margin-top: 48px;
+
+	}
+
 }
 
 .hash-tags {

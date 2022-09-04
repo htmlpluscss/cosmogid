@@ -20,7 +20,12 @@
 		justify-content: center;
 		margin-top: 8px;
 
-	}
+		&--right {
 
+			justify-content: flex-end;
+
+		}
+
+	}
 
 }
