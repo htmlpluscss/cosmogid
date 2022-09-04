@@ -4,6 +4,7 @@
 	order: 10;
 	margin: 96px auto;
 	width: 1176px;
+	scroll-margin: var(--scrollMargin);
 
 	@media $smWidth {
 
@@ -15,6 +16,12 @@
 
 		margin: 24px 0;
 		background-color: var(--gray);
+
+	}
+
+	h1 {
+
+		text-align: center;
 
 	}
 

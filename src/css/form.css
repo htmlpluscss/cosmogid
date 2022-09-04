@@ -151,11 +151,10 @@ legend {
 	&--hash {
 
 		background-color: transparent !important;
-		font-size: 14px;
 		color: var(--purple);
 		padding: 0 !important;
-		height: 26px;
-		line-height: 26px;
+		height: 32px;
+		line-height: 32px;
 		border-bottom: 1px dashed;
 
 		@media $desktop {
@@ -173,6 +172,14 @@ legend {
 			font-size: 12px;
 
 		}
+
+	}
+
+	&--hash&--small {
+
+		font-size: 14px;
+		height: 26px;
+		line-height: 26px;
 
 	}
 

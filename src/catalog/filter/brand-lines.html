@@ -1,0 +1,23 @@
+				<fieldset class="filter__fieldset">
+
+					<legend class="filter__legend">
+						Линии бренда
+					</legend>
+
+					<div class="filter__box">
+
+						<div class="filter-menu">
+
+{% for name in ["Уход за волосами","Уход за лицом","Уход за волосами","Альгинатные маски"] %}
+
+							<div class="filter-menu__link">
+								{{ name }}
+							</div>
+
+{% endfor %}
+
+						</div>
+
+					</div>
+
+				</fieldset>

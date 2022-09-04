@@ -9,7 +9,8 @@
 		.title,
 		.catalog__body,
 		.menu-bar,
-		.main > .content {
+		.main > .content,
+		.catalog .content {
 
 			display: none;
 
@@ -144,6 +145,14 @@
 			margin-bottom: 24px;
 
 		}
+
+	}
+
+	&__desc {
+
+		font-size: 18px;
+		color: #4c515d;
+		margin-bottom: 24px;
 
 	}
 
