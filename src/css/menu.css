@@ -196,13 +196,13 @@
 	@media $desktop {
 
 		position: sticky;
-		z-index: 8;
 		top: 60px;
 		background-color: #fff;
 
 		&.is-transparent {
 
 			background-color: transparent;
+			z-index: 8;
 
 			&::before {
 

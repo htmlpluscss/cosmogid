@@ -1,5 +1,86 @@
 					<form class="header-search" action="/" autocomplete="off">
 
+{% if title === "Поиск" %}
+
+
+						<input name="keywords" class="header-search__input input is-focus" placeholder="Поиск по сайту" value="Крем">
+
+						<button class="header-search__submit button" aria-label="Искать">
+
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="#svg-search"/>
+							</svg>
+
+						</button>
+
+						<div class="header-search__result is-scroll">
+
+							<a class="header-search__result-link" href="/">
+								Крем для рук
+							</a>
+
+							<a class="header-search__result-link" href="/">
+								Крем для ног
+							</a>
+
+							<a class="header-search__result-link" href="/">
+								Крем для тела
+							</a>
+
+{% for i in range(0,4) %}
+
+							<a class="header-search__result-card" href="/">
+
+								<article class="preview-card-row">
+
+									<span class="preview-card-row__img">
+
+										<img src="/img/preview-card/preview-80x80.jpg" srcset="/img/preview-card/preview-160x160.jpg 2x" alt="">
+
+									</span>
+
+									<div class="preview-card-row__body">
+
+										<span class="preview-card-row__title">
+											Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл
+										</span>
+
+										<p class="preview-card-row__price">
+
+											<span class="price">
+
+												<s class="price__old">
+													2581 ₽
+												</s>
+
+												<b class="price__value">
+													2581 ₽
+												</b>
+
+											</span>
+
+										</p>
+
+									</div>
+
+								</article>
+
+							</a>
+
+{% endfor %}
+
+							<div class="header-search__result-all">
+
+								<a href="/search/" class="btn btn--more">
+									Показать все результаты
+								</a>
+
+							</div>
+
+						</div>
+
+{% else %}
+
 						<input name="keywords" class="header-search__input input" placeholder="Поиск по сайту">
 
 						<button class="header-search__submit button" aria-label="Искать">
@@ -9,5 +90,9 @@
 							</svg>
 
 						</button>
+
+						<div class="header-search__result is-scroll hide"></div>
+
+{% endif %}
 
 					</form>

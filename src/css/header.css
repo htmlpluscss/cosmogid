@@ -421,6 +421,15 @@
 
 	}
 
+	&__search {
+
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		z-index: 3;
+
+	}
+
 }
 
 .city-auto {
@@ -476,6 +485,65 @@
 				margin-left: 24px;
 
 			}
+
+		}
+
+	}
+
+}
+
+.header-search {
+
+	flex-shrink: 0;
+
+	&__input {
+
+		width: 100%;
+
+		&:focus,
+		&.is-focus {
+
+			width: 400px;
+
+		}
+
+	}
+
+	&__result {
+
+		padding: 16px 0;
+		position: absolute;
+		width: 100%;
+		top: 100%;
+		right: 0;
+		background-color: #fff;
+		box-shadow: var(--box-shadow);
+		max-height: 584px;
+
+		&-all {
+
+			display: flex;
+			justify-content: center;
+
+		}
+
+		&-link {
+
+			display: block;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.2;
+			color: var(--gray);
+			padding: 8px 15px;
+			border-bottom: 1px solid #e5e7eb;
+			margin-bottom: 8px;
+
+		}
+
+		.preview-card-row {
+
+			padding: 8px 16px;
+			border: 0;
 
 		}
 
