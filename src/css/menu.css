@@ -191,6 +191,18 @@
 
 		}
 
+		.menu-catalog__grid--brand &__level-3 {
+
+			display: block;
+
+		}
+
+		.menu-catalog__grid--brand .menu-catalog__level-2 li:last-child {
+
+			border-bottom: 0;
+
+		}
+
 	}
 
 	@media $desktop {
@@ -216,6 +228,12 @@
 				box-shadow: var(--box-shadow);
 
 			}
+
+		}
+
+		&:hover {
+
+			z-index: 8;
 
 		}
 
