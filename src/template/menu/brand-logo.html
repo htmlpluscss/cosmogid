@@ -1,0 +1,68 @@
+			<ul class="menu-catalog__brand-logo">
+
+{% for item in [
+
+	{
+		name  : "DIOR",
+		logo  : "dior",
+		width : 122
+	},
+	{
+		name  : "Lancôme",
+		logo  : "lancome",
+		width : 123
+	},
+	{
+		name  : "Pantene",
+		logo  : "pantene",
+		width : 122
+	},
+	{
+		name  : "Nivea",
+		logo  : "nivea-me.com",
+		width : 123
+	},
+	{
+		name  : "Shane Co.",
+		logo  : "shane_co",
+		width : 122
+	},
+	{
+		name  : "Lancôme",
+		logo  : "lancome_2",
+		width : 123
+	},
+	{
+		name  : "L'Oréal",
+		logo  : "loreal",
+		width : 123
+	},
+	{
+		name  : "Oriflame",
+		logo  : "oriflame",
+		width : 123
+	},
+	{
+		name  : "Pantene",
+		logo  : "pantene_2",
+		width : 122
+	}
+
+]%}
+
+				<li>
+
+					<picture>
+
+						<source srcset="/img/brand/{{ item.logo }}.webp 1x, /img/brand/{{ item.logo }}@2x.webp 2x" type="image/webp">
+						<source srcset="/img/brand/{{ item.logo }}.png 1x, /img/brand/{{ item.logo }}@2x.png 2x">
+
+						<img src="/img/brand/{{ item.logo }}.png" alt="{{ item.name }}" width="{{ item.width }}" height="41" loading="lazy">
+
+					</picture>
+
+				</li>
+
+{% endfor %}
+
+			</ul>

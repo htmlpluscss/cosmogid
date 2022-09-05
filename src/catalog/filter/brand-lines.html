@@ -10,9 +10,17 @@
 
 {% for name in ["Уход за волосами","Уход за лицом","Уход за волосами","Альгинатные маски"] %}
 
-							<div class="filter-menu__link">
-								{{ name }}
-							</div>
+							<label class="filter-menu__link">
+
+								<input class="visuallyhidden" type="checkbox">
+
+								<span>
+
+									{{ name }}
+
+								</span>
+
+							</label>
 
 {% endfor %}
 
