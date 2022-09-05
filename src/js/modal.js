@@ -85,7 +85,7 @@
 
 		}
 
-		if ( activeModal.elements.id ) {
+		if ( activeModal.classList.contains('form') && activeModal.elements.id ) {
 
 			activeModal.elements.id.value = id;
 

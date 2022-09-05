@@ -1,0 +1,55 @@
+						<div class="phone-country">
+
+							<button class="phone-country__btn button" type="button">
+
+								<span class="phone-country__value">
+									RUS
+								</span>
+
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="#svg-chevron"/>
+								</svg>
+
+							</button>
+
+							<input class="phone-country__mask input inputmask inputmask--phone" type="tel" name="phone" data-mask="+\7 (999) 999 99 99" placeholder="+7 ( --- ) --- -- --" required="required" id="contacts-form-phone">
+
+							<ul class="phone-country__list">
+
+{% for item in [
+
+{
+	name : "Россия",
+	mask : "+7 (999) 999 99 99",
+	code : "RUS"
+},
+{
+	name : "Беларусь",
+	mask : "+375 99 999 99 99",
+	code : "BYN"
+},
+{
+	name : "Казахстан",
+	mask : "+7 999 999 99 99",
+	code : "KZT"
+}
+
+] %}
+
+								<li>
+
+									<label class="phone-country__item">
+
+										<input class="phone-country__radio visuallyhidden" type="radio" name="country" value="{{ item.code }}" data-mask="{{ item.mask }}"{% if loop.first %} checked="checked"{% endif %}>
+
+										{{ item.name }}
+
+									</label>
+
+								</li>
+
+{% endfor %}
+
+							</ul>
+
+						</div>

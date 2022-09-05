@@ -1,5 +1,95 @@
-			<form action="/" class="modal__item modal__item--login">
+			<div class="modal__item modal__item--login modal-login">
 
-				Авторизоваться
+				<form class="modal-login__form" action="/">
 
-			</form>
+					<h3 class="modal-login__title">
+						Войдите в систему
+					</h3>
+
+					<p class="modal-login__intro">
+						или <u data-modal="reg" role="button">зарегистрируйтесь</u> если еще не успели это сделать
+					</p>
+
+					<p class="modal-login__text">
+						Чтобы получать скидки и преимущества Вы сможете использовать промокоды со скидками и пользоваться статусом профессионального покупателя
+					</p>
+
+					<div class="modal__row">
+
+						<div class="inputbox">
+
+							<label class="inputbox__label" for="modal-login-email">
+								Ваша почта
+							</label>
+
+							<input class="input" name="email" placeholder="mail@mail.ru" required="required" id="modal-login-email" type="email">
+
+						</div>
+
+						<div class="inputbox">
+
+							<label class="inputbox__label" for="modal-login-password">
+								Ваш пароль
+							</label>
+
+							<input class="input" name="password" placeholder="********" required="required" id="modal-login-password" type="password">
+
+						</div>
+
+					</div>
+
+					<div class="modal__row">
+
+						<div class="modal__column">
+
+							<button class="btn btn--outline" type="button" data-modal="recovery">
+								Забыли пароль
+							</button>
+
+						</div>
+
+						<div class="modal__column">
+
+							<button class="btn">
+								Войти
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						или войдите используя номер телефона:
+					</h3>
+
+					<div class="modal__row">
+
+						<div class="modal__column">
+
+							<div class="inputbox">
+
+{% set modalMod = 'login' %}
+
+{% include "template/modal/modal-callback-phone.html" %}
+
+							</div>
+
+						</div>
+
+						<div class="modal__column flex flex--align-end">
+
+							<button class="btn">
+								Получить код
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>

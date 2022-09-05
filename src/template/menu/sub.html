@@ -1,10 +1,14 @@
 					<div class="menu-catalog__sub">
 
-						<div class="menu-catalog__grid center">
+						<div class="menu-catalog__grid center{% if item.mod %} menu-catalog__grid--{{ item.mod }}{% endif %}">
 
 		{% if item.name === 'Парфюмерия' %}
 
 {% include "template/menu/grid.html" %}
+
+{% include "template/menu/brand-logo.html" %}
+
+		{% elif item.mod === 'brand' %}
 
 {% include "template/menu/brand.html" %}
 

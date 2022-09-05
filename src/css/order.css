@@ -98,7 +98,7 @@
 
 			margin-right: 16px;
 
-			&.is-purple {
+			&.is-current {
 
 				background-color: var(--purple);
 				color: #fff;

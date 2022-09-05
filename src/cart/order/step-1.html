@@ -6,7 +6,7 @@
 							Новый покупатель
 						</button>
 
-						<button class="btn btn--more" type="button">
+						<button class="btn btn--more" type="button" data-modal="login">
 							Я постоянный клиент
 						</button>
 
@@ -16,9 +16,9 @@
 
 						<fieldset class="order__fieldset">
 
-							<h2 class="order__head">
+							<div class="order__head">
 
-								<span class="ico-box is-purple">
+								<span class="ico-box is-current">
 									<svg width="16" height="16" viewBox="0 0 24 24">
 										<use xlink:href="#svg-user"/>
 									</svg>
@@ -26,7 +26,31 @@
 
 								Личные данные
 
-							</h2>
+							</div>
+
+						</fieldset>
+
+						<fieldset class="order__fieldset">
+
+							<div class="order__head">
+
+								<span class="ico-box">
+									<svg width="16" height="16" viewBox="0 0 24 24">
+										<use xlink:href="#svg-car"/>
+									</svg>
+								</span>
+
+								Информация о доставке
+
+							</div>
+
+						</fieldset>
+
+					</div>
+
+					<div class="order__column">
+
+						<fieldset class="order__fieldset">
 
 							<div class="inputbox is-error">
 
@@ -55,18 +79,6 @@
 						</fieldset>
 
 						<fieldset class="order__fieldset">
-
-							<h2 class="order__head">
-
-								<span class="ico-box">
-									<svg width="16" height="16" viewBox="0 0 24 24">
-										<use xlink:href="#svg-car"/>
-									</svg>
-								</span>
-
-								Информация о доставке
-
-							</h2>
 
 							<div class="inputbox">
 

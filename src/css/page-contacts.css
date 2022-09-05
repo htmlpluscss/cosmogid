@@ -149,6 +149,18 @@
 
 	}
 
+	.phone-country__btn {
+
+		left: 16px;
+
+	}
+
+	.phone-country__mask {
+
+		padding-left: 76px;
+
+	}
+
 	.select__value {
 
 		background-color: #f9fafb;

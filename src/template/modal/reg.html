@@ -1,0 +1,45 @@
+			<form action="/" class="modal__item modal__item--reg modal-login">
+
+				<h3 class="modal-login__title">
+					Быстрая регистрация
+				</h3>
+
+				<p class="modal-login__intro">
+					или <u data-modal="login" role="button">войдите в систему</u> если вы уже зарегистрировались
+				</p>
+
+				<p class="modal-login__text">
+					Чтобы получать скидки и преимущества Вы сможете использовать промокоды со скидками и пользоваться статусом профессионального покупателя
+				</p>
+
+				<div class="modal__row">
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="modal-reg-name">
+							Как вас зовут
+						</label>
+
+						<input class="input" name="name" placeholder="Кузякина Марина" required="required" id="modal-reg-name">
+
+					</div>
+
+					<div class="inputbox">
+
+{% set modalMod = 'reg' %}
+
+{% include "template/modal/modal-callback-phone.html" %}
+
+					</div>
+
+				</div>
+
+				<div class="modal__foot">
+
+					<button class="btn">
+						Зарегистрироваться
+					</button>
+
+				</div>
+
+			</form>

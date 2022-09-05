@@ -368,6 +368,13 @@ legend {
 		color: #9ca3af;
 		pointer-events: none;
 
+		&::after {
+
+			background-color: #9ca3af;
+
+		}
+
+
 		b {
 
 			font-weight: 600;
@@ -415,6 +422,26 @@ legend {
 
 	}
 
+	&__input[type="radio"]+ &__label {
+
+		&::before {
+
+			border-radius: 50%;
+
+		}
+
+	}
+
+	&__input[type="radio"]:checked + &__label {
+
+		&::after {
+
+			border-radius: 50%;
+
+		}
+
+	}
+
 }
 
 /* phone-country */
@@ -423,6 +450,7 @@ legend {
 	position: relative;
 	display: flex;
 	align-items: center;
+	color: var(--color);
 
 	&__list {
 

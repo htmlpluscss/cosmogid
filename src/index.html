@@ -16,11 +16,11 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "preview-card-color"
+			selector: "reg"
 		}
 	});
 
-//	window.modal.dispatchEvent(eventModalShow);
+	window.modal.dispatchEvent(eventModalShow);
 })
 
 </script>
@@ -128,38 +128,6 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item hide">
-
-			<form action="/" class="form-buy">
-
-				<input type="hidden" name="id" value="19021">
-
-				<button class="btn form-buy__submit">
-					Купить
-				</button>
-
-			</form>
-
-		</div>
-
-		<div class="item hide">
-
-			<form action="/" class="form-buy">
-
-				<input type="hidden" name="id" value="19021">
-
-				<input type="hidden" name="modal" value="get-price">
-				<input type="hidden" name="img" value="https://forthouse.ru/pic/180x180/r-wb642vu0_gmg.jpg">
-				<input type="hidden" name="name" value="Холодильник Hitachi R-WB642VU0 GMG">
-
-				<button class="btn form-buy__submit">
-					Запросить цену
-				</button>
-
-			</form>
-
-		</div>
-
 		<div class="item">
 
 			<button
@@ -189,11 +157,35 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
-			<a data-youtube="oSOiGLNVGg0" target="_blank" rel="nofollow noopener" href="https://www.youtube.com/watch?v=oSOiGLNVGg0" class="btn btn--big btn--outline">
-				video youtube
-			</a>
+			<button class="btn" type="button" data-modal="reg">
+				Регистрация
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="login">
+				Войти в систему
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="sms">
+				Ввести код из SMS
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="recovery">
+				Забыли пароль
+			</button>
 
 		</div>
 
@@ -257,6 +249,14 @@ setTimeout( ()=> {
 
 		<div class="item">
 
+			<button class="btn btn--hash btn--small">
+				btn--hash btn--small
+			</button>
+
+		</div>
+
+		<div class="item">
+
 			<button class="btn btn--text">
 				btn--text
 			</button>
@@ -304,75 +304,59 @@ setTimeout( ()=> {
 
 	<div class="flex flex--wrap">
 
-		<div class="item hide">
+		<div class="item">
 
-			<div class="checkbox">
+			<label class="checkbox">
 
-				<label class="checkbox__control">
+				<input type="checkbox" class="checkbox__input visuallyhidden">
 
-					<input type="checkbox" class="checkbox__input">
+				<span class="checkbox__label">
+					Выберите значение
+				</span>
 
-					<span class="checkbox__label">
-						Выберите значение
-					</span>
-
-				</label>
-
-			</div>
+			</label>
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
-			<div class="checkbox">
+			<label class="checkbox">
 
-				<label class="checkbox__control">
+				<input type="checkbox" class="checkbox__input visuallyhidden" checked="checked">
 
-					<input type="checkbox" class="checkbox__input" checked="checked">
+				<span class="checkbox__label">
+					Выберите значение
+				</span>
 
-					<span class="checkbox__label">
-						Выберите значение
-					</span>
-
-				</label>
-
-			</div>
+			</label>
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
-			<div class="checkbox">
+			<label class="checkbox">
 
-				<label class="checkbox__control">
+				<input type="checkbox" class="checkbox__input visuallyhidden" disabled="disabled">
 
-					<input type="checkbox" class="checkbox__input" disabled="disabled">
+				<span class="checkbox__label">
+					Выберите значение
+				</span>
 
-					<span class="checkbox__label">
-						Выберите значение
-					</span>
-
-				</label>
-
-			</div>
+			</label>
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
-			<div class="checkbox">
+			<label class="checkbox">
 
-				<label class="checkbox__control">
+				<input type="checkbox" class="checkbox__input visuallyhidden" disabled="disabled" checked="checked">
 
-					<input type="checkbox" class="checkbox__input" disabled="disabled" checked="checked">
+				<span class="checkbox__label">
+					Выберите значение
+				</span>
 
-					<span class="checkbox__label">
-						Выберите значение
-					</span>
-
-				</label>
-
-			</div>
+			</label>
 
 		</div>
 
@@ -384,75 +368,59 @@ setTimeout( ()=> {
 
 	<div class="flex flex--wrap">
 
-		<div class="item hide">
+		<div class="item">
 
-			<div class="checkbox">
+			<label class="checkbox">
 
-				<label class="checkbox__control">
+				<input type="radio" class="checkbox__input visuallyhidden" name="radio">
 
-					<input type="radio" class="checkbox__input" name="radio">
+				<span class="checkbox__label">
+					Выберите значение
+				</span>
 
-					<span class="checkbox__label">
-						Выберите значение
-					</span>
-
-				</label>
-
-			</div>
+			</label>
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
-			<div class="checkbox">
+			<label class="checkbox">
 
-				<label class="checkbox__control">
+				<input type="radio" class="checkbox__input visuallyhidden" name="radio" checked="checked">
 
-					<input type="radio" class="checkbox__input" name="radio" checked="checked">
+				<span class="checkbox__label">
+					Выберите значение
+				</span>
 
-					<span class="checkbox__label">
-						Выберите значение
-					</span>
-
-				</label>
-
-			</div>
+			</label>
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
-			<div class="checkbox">
+			<label class="checkbox">
 
-				<label class="checkbox__control">
+				<input type="radio" class="checkbox__input visuallyhidden" disabled="disabled">
 
-					<input type="radio" class="checkbox__input" disabled="disabled">
+				<span class="checkbox__label">
+					Выберите значение
+				</span>
 
-					<span class="checkbox__label">
-						Выберите значение
-					</span>
-
-				</label>
-
-			</div>
+			</label>
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
-			<div class="checkbox">
+			<label class="checkbox">
 
-				<label class="checkbox__control">
+				<input type="radio" class="checkbox__input visuallyhidden" disabled="disabled" checked="checked">
 
-					<input type="radio" class="checkbox__input" disabled="disabled" checked="checked">
+				<span class="checkbox__label">
+					Выберите значение
+				</span>
 
-					<span class="checkbox__label">
-						Выберите значение
-					</span>
-
-				</label>
-
-			</div>
+			</label>
 
 		</div>
 
@@ -486,9 +454,9 @@ setTimeout( ()=> {
 
 	</div>
 
-	<div class="flex flex--wrap hide">
+	<div class="flex flex--wrap">
 
-		<div class="item hide">
+		<div class="item">
 
 			<div class="inputbox">
 
@@ -502,7 +470,7 @@ setTimeout( ()=> {
 
 		</div>
 
-		<div class="item hide">
+		<div class="item">
 
 			<div class="inputbox">
 

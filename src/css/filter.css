@@ -197,7 +197,16 @@
 		padding: 10px 8px;
 		line-height: 32px;
 		font-weight: 600;
+		cursor: pointer;
+		display: block;
+		user-select: none;
 		color: var(--gray);
+
+		input:checked + span {
+
+			color: var(--purple);
+
+		}
 
 	}
 
@@ -223,7 +232,7 @@
 
 		&:hover {
 
-			color: var(--text);
+			color: var(--purple);
 
 		}
 
