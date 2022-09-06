@@ -2,62 +2,23 @@
 
 	window.addEventListener('click', event => {
 
-// можно унифицировать
-
 		//  Найти аналогичный товар
 
 		const findAnalogue = event.target.closest('.js-find-analogue');
 
-		if (findAnalogue) {
+		if ( findAnalogue ) {
 
 			const template = document.querySelector('#preview-card-row-template').innerHTML,
-				  param = {
-					id        : null,
-					articleid : null,
-					link      : null,
-					price     : null,
-					priceOld  : null,
-					img       : null,
-					img2x     : null,
-					name      : null
-				  };
+				  param = {};
 
-//			const product = findAnalogue.closest('.product');
-
-//			if ( product ) {
-/*
-				param.id        = product.querySelector('.product-buy').id.value;
-				param.link      = location.href;
-				param.price     = parseInt(product.querySelector('.price__value').textContent);
-				param.priceOld  = product.querySelector('data-price-old');
-				param.img       = product.querySelector('.product-gallery img').src;
-				param.img2x     = product.querySelector('.product-gallery img').src;
-				param.name      = product.querySelector('.product__title');
-
-				if ( product.querySelector('.product-buy').articleid ) {
-
-					param.articleid = product.querySelector('.product-buy').articleid.value;
-
-				}
-
-				if ( product.querySelector('.price__old') ) {
-
-					param.priceOld = parseInt(product.querySelector('.price__old').textContent);
-
-				}
-
-			} else {
-*/
-				param.id        = findAnalogue.getAttribute('data-id');
-				param.articleid = findAnalogue.getAttribute('data-articleid');
-				param.link      = findAnalogue.getAttribute('data-link');
-				param.price     = findAnalogue.getAttribute('data-price');
-				param.priceOld  = findAnalogue.getAttribute('data-price-old');
-				param.img       = findAnalogue.getAttribute('data-img');
-				param.img2x     = findAnalogue.getAttribute('data-img2x');
-				param.name      = findAnalogue.getAttribute('data-name');
-
-//			}
+			param.id        = findAnalogue.getAttribute('data-id');
+			param.articleid = findAnalogue.getAttribute('data-articleid');
+			param.link      = findAnalogue.getAttribute('data-link');
+			param.price     = findAnalogue.getAttribute('data-price');
+			param.priceOld  = findAnalogue.getAttribute('data-price-old');
+			param.img       = findAnalogue.getAttribute('data-img');
+			param.img2x     = findAnalogue.getAttribute('data-img2x');
+			param.name      = findAnalogue.getAttribute('data-name');
 
 			document.querySelector('#modal-form-find-analogue-product').innerHTML = Mustache.render(template, param);
 
@@ -73,16 +34,7 @@
 				  product = findNotify.closest('.product');
 				  previewCard = findNotify.closest('.preview-card'),
 				  productModal = findNotify.closest('#preview-card-color'),
-				  param = {
-					id        : null,
-					articleid : null,
-					link      : null,
-					price     : null,
-					priceOld  : null,
-					img       : null,
-					img2x     : null,
-					name      : null
-				  };
+				  param = {};
 
 			if ( product ) {
 console.log(product.querySelector('.product-buy').elements)

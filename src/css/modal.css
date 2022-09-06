@@ -95,6 +95,18 @@
 
 	}
 
+	&__checkbox {
+
+		display: flex;
+
+	}
+
+	&__checkbox + &__row {
+
+		margin-top: 24px;
+
+	}
+
 	&__row {
 
 		display: flex;

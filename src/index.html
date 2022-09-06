@@ -20,7 +20,7 @@ setTimeout( ()=> {
 		}
 	});
 
-	window.modal.dispatchEvent(eventModalShow);
+//	window.modal.dispatchEvent(eventModalShow);
 })
 
 </script>
@@ -30,11 +30,12 @@ setTimeout( ()=> {
 	</h1>
 
 	<ul class="h3">
-		<li><a href="https://cosmogid_2020.htmlpluscss.website/">2020</a></li>
+		<li><a href="https://cosmogid_2020.htmlpluscss.website/" style="font-size: 12px">2020</a></li>
 		<li><a href="/main/">Главная</a></li>
 		<li><a href="/catalog/">Каталог</a></li>
 		<li><a href="/product/">Карточка товара</a></li>
 		<li><a href="/product/color/">Карточка товара (Выберите цвет краски | Бесплатная доставка | Удалить из избранного | нет в наличии)</a></li>
+		<li><a href="/product/login/" style="color:red">Карточка товара (Товар для специалистов)</a></li>
 		<li><a href="/contacts/">Контакты</a></li>
 		<li><a href="/sale/">Акции и скидки</a></li>
 		<li><a href="/sale/item/">Страници акции</a></li>
@@ -53,10 +54,10 @@ setTimeout( ()=> {
 
 	<ul class="h3">
 		<li><a href="/cart/">Корзина</a></li>
-		<li><a href="/cart/order/">Оформление заказа (Личные данные)</a></li>
-		<li><a href="/cart/order/2/">Оформление заказа (Информация о доставке)</a></li>
-		<li><a href="/cart/order/3/">Оформление заказа (Информация о доставке)</a></li>
-		<li><a href="/cart/order/4/">Оформление заказа (Реквизиты для оплаты)</a></li>
+		<li><a href="/cart/order/" style="color:red">Оформление заказа (Личные данные)</a></li>
+		<li><a href="/cart/order/2/" style="color:red">Оформление заказа (Информация о доставке)</a></li>
+		<li><a href="/cart/order/3/" style="color:red">Оформление заказа (Информация о доставке)</a></li>
+		<li><a href="/cart/order/4/" style="color:red">Оформление заказа (Реквизиты для оплаты)</a></li>
 	</ul>
 
 	<h2>
@@ -68,7 +69,7 @@ setTimeout( ()=> {
 			<a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fproduct%2F">Product, BreadcrumbList</a>
 		</li>
 		<li>
-			<a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fcontacts%2F">Contacts (пока нет)</a>
+			<a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fcontacts%2F" style="color:red">Contacts (пока нет)</a>
 		</li>
 	</ul>
 
@@ -77,9 +78,9 @@ setTimeout( ()=> {
 	</h2>
 
 	<ul class="h3">
-		<li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fmain%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext">Главная <b>00</b></a></li>
-		<li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fcatalog%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext">Каталог <b>87</b></a></li>
-		<li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fproduct%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext">Карточка товара <b>92</b></a></li>
+		<li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fmain%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext" style="color:red">Главная <b>00</b></a></li>
+		<li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fcatalog%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext" style="color:red">Каталог <b>87</b></a></li>
+		<li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fproduct%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext" style="color:red">Карточка товара <b>92</b></a></li>
 	</ul>
 
 	<h2>
@@ -145,6 +146,27 @@ setTimeout( ()=> {
 				data-name="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл"
 			>
 				Найти аналог
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button
+
+				class="btn btn--outline js-find-notify"
+				type="button"
+				data-modal="find-notify"
+				data-id="123"
+				data-articleid="234"
+				data-link="/product/"
+				data-price="2581"
+				data-price-old="2581"
+				data-img="/img/preview-card/preview-80x80.jpg"
+				data-img2x="/img/preview-card/preview-160x160.jpg"
+				data-name="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл"
+			>
+				Уведомить о наличии
 			</button>
 
 		</div>
