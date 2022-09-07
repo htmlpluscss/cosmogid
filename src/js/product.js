@@ -82,7 +82,8 @@
 				  templateFavourite = document.querySelector('#product-buy-favourite-template').innerHTML,
 				  templatePrice = document.querySelector('#price-template').innerHTML,
 				  templateAvailability = document.querySelector('#availability-template').innerHTML,
-				  templateOverlay = document.querySelector('#overlay-disabled-template').innerHTML;
+				  templateOverlay = document.querySelector('#overlay-disabled-template').innerHTML,
+				  templateBoardLogin = document.querySelector('#product-login-template').innerHTML;
 
 			// volume -> gallery
 
@@ -96,27 +97,11 @@
 
 			});
 
-			// кнопка купить
-
-			const buy = cardVolume.getAttribute('data-buy'),
-				  buyCart = buy === 'in-cart',
-				  buyDisabled = buy === 'disabled',
-				  buyBtn = buy === null || buyDisabled;
-
-			form.querySelector('.product-buy__submit').innerHTML = Mustache.render(templateFoot, { buyBtn, buyDisabled, buyCart });
-
 			// кнопка избранное
 
 			const favourite = cardVolume.getAttribute('data-favourite');
 
 			form.querySelector('.product-buy__favourite').innerHTML = Mustache.render(templateFavourite, { favourite });
-
-			// цена
-
-			const price = cardVolume.getAttribute('data-price'),
-				  priceOld = cardVolume.getAttribute('data-price-old');
-
-			form.querySelector('.product-buy__price').innerHTML = Mustache.render(templatePrice, { price, priceOld });
 
 			// overlay
 
@@ -126,7 +111,8 @@
 				  overlayLogin = overlay === 'login',
 				  overlayNot = overlay === 'not',
 				  overlayWithdrawn = overlay === 'withdrawn',
-				  elOverlay = product.querySelector('.overlay-disabled');
+				  elOverlay = product.querySelector('.overlay-disabled'),
+				  boardLogin = product.querySelector('.board-login');
 
 			if ( elOverlay ) {
 
@@ -134,7 +120,58 @@
 
 			}
 
-			product.querySelector('.product-gallery__wrap').insertAdjacentHTML('beforeend', Mustache.render(templateOverlay, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, overlayWithdrawn, id, articleId }));
+			if ( overlayLogin ) {
+
+				if ( boardLogin === null ) {
+
+					product.querySelector('.product-buy__price').insertAdjacentHTML('afterend', Mustache.render(templateBoardLogin));
+
+				}
+
+			} else {
+
+				if ( boardLogin ) {
+
+					boardLogin.remove();
+
+				}
+
+				product.querySelector('.product-gallery__wrap').insertAdjacentHTML('beforeend', Mustache.render(templateOverlay, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, overlayWithdrawn, id, articleId }));
+
+			}
+
+			// цена
+
+			if ( overlayLogin ) {
+
+				form.querySelector('.product-buy__price').innerHTML = '';
+
+			} else {
+
+				const price = cardVolume.getAttribute('data-price'),
+					  priceOld = cardVolume.getAttribute('data-price-old');
+
+				form.querySelector('.product-buy__price').innerHTML = Mustache.render(templatePrice, { price, priceOld });
+
+			}
+
+			// кнопка купить
+
+			const buy = cardVolume.getAttribute('data-buy'),
+				  buyCart = buy === 'in-cart',
+				  buyDisabled = buy === 'disabled',
+				  buyBtn = buy === null || buyDisabled,
+				  btnLogin = overlayLogin;
+
+			if ( btnLogin ) {
+
+				form.querySelector('.product-buy__submit').innerHTML = Mustache.render(templateFoot, { btnLogin });
+
+			} else {
+
+				form.querySelector('.product-buy__submit').innerHTML = Mustache.render(templateFoot, { buyBtn, buyDisabled, buyCart });
+
+			}
 
 			// availability
 

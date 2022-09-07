@@ -141,6 +141,8 @@
 
 			<p class="preview-card__price">
 
+{% if card.overlay !== "login" %}
+
 				<span class="price">
 
 	{% if card.priceOld %}
@@ -156,5 +158,7 @@
 					</b>
 
 				</span>
+
+{% endif %}
 
 			</p>

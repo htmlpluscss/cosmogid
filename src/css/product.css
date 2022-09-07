@@ -9,14 +9,14 @@
 
 		@media $desktop {
 
-			grid-template-columns: 1fr 496px 288px;
+			grid-template-columns: 1fr 496px 290px;
 			grid-template-rows: auto auto 1fr;
 
 		}
 
 		@media $mdWidth {
 
-			grid-template-columns: 1fr 288px;
+			grid-template-columns: 1fr 290px;
 
 		}
 
@@ -441,6 +441,12 @@
 			}
 
 		}
+
+	}
+
+	.board-login {
+
+		margin-bottom: 24px;
 
 	}
 
@@ -1055,6 +1061,39 @@
 			padding: 0 20px;
 			line-height: 20px;
 			height: 20px;
+
+		}
+
+	}
+
+}
+
+.board-login {
+
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+
+	.ico-box,
+	.tooltip {
+
+		flex-shrink: 0;
+
+	}
+
+	&__text {
+
+		font-size: 12px;
+		line-height: 1.2;
+		padding: 0 8px;
+		color: var(--gray);
+
+		b {
+
+			display: block;
+			font-size: 14px;
+			line-height: 1.5;
+			font-weight: 600;
 
 		}
 

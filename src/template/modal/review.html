@@ -42,11 +42,9 @@
 
 						<div class="inputbox">
 
-							<label class="inputbox__label" for="modal-review-email">
-								Ваша почта
-							</label>
+{% set modalMod = 'review' %}
 
-							<input class="input" name="email" placeholder="info@mail.ru" required="required" id="modal-review-email" type="email">
+{% include "template/modal/modal-callback-phone.html" %}
 
 						</div>
 

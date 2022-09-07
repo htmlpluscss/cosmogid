@@ -23,18 +23,7 @@ window.selects = select => {
 	list.className = 'select__list is-scroll';
 
 	let selected = control.querySelector('[value="' + control.value + '"]');
-/*
-	// в мобиле системный контрол
 
-	control.addEventListener("change", () => {
-
-		valueText.textContent = control.querySelector('option[value="' + control.value + '"]').textContent;
-
-		// d мобиле кнопки не нужены
-		list.remove();
-
-	});
-*/
 	const valueDefault = selected.textContent;
 
 	if( control.disabled || control.value === 'none' || control.value === '' ){
@@ -74,9 +63,6 @@ window.selects = select => {
 
 			valueText.textContent = el.textContent;
 			select.classList.remove('is-open');
-
-			// не мобиле системный контрол не нужен
-//			control.remove();
 
 		});
 

@@ -120,6 +120,12 @@ legend {
 
 	}
 
+	&--gray {
+
+		background-color: #9ca3af;
+
+	}
+
 	&--outline {
 
 		background-color: rgba(255,255,255,.5);
