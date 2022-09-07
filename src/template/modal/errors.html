@@ -1,0 +1,222 @@
+			<div class="modal__item modal__item--errors modal-login">
+
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						Быстрая регистрация
+					</h3>
+
+					<div class="modal__row">
+
+						<div class="inputbox">
+
+							<label class="inputbox__label" for="modal-errors-name">
+								Как вас зовут
+							</label>
+
+							<input class="input" name="name" placeholder="Кузякина Марина" required="required" id="modal-errors-name">
+
+						</div>
+
+						<div class="inputbox is-error">
+
+{% include "template/modal/modal-callback-phone--errors.html" %}
+
+							<span class="inputbox__text">
+								Телефон уже зарегистрирован
+							</span>
+
+						</div>
+
+					</div>
+
+					<div class="modal__foot">
+
+						<button class="btn">
+							Зарегистрироваться
+						</button>
+
+					</div>
+
+				</form>
+
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						Войдите в систему
+					</h3>
+
+					<div class="modal__row">
+
+						<div class="inputbox is-error">
+
+							<label class="inputbox__label" for="modal-errors-email">
+								Ваша почта
+							</label>
+
+							<input class="input" name="email" placeholder="mail@mail.ru" required="required" id="modal-errors-email" type="email" value="mail@mail.ru">
+
+							<span class="inputbox__text">
+								email не зарегистрирован
+							</span>
+
+						</div>
+
+						<div class="inputbox is-error">
+
+							<label class="inputbox__label" for="modal-errors-password">
+								Ваш пароль
+							</label>
+
+							<input class="input" name="password" placeholder="********" required="required" id="modal-errors-password" type="password" value="123456">
+
+							<span class="inputbox__text">
+								Пароль неверный
+							</span>
+
+						</div>
+
+					</div>
+
+					<div class="modal__row">
+
+						<div class="modal__column">
+
+							<button class="btn btn--outline" type="button" data-modal="recovery">
+								Забыли пароль
+							</button>
+
+						</div>
+
+						<div class="modal__column">
+
+							<button class="btn">
+								Войти
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						или войдите используя номер телефона:
+					</h3>
+
+					<div class="modal__row">
+
+						<div class="modal__column">
+
+							<div class="inputbox is-error">
+
+{% include "template/modal/modal-callback-phone--errors.html" %}
+
+								<span class="inputbox__text">
+									Телефон не зарегистрирован
+								</span>
+
+							</div>
+
+						</div>
+
+						<div class="modal__column flex flex--align-end">
+
+							<button class="btn">
+								Получить код
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						Восстановление пароля
+					</h3>
+
+					<div class="inputbox is-error">
+
+						<label class="inputbox__label" for="modal-recovery-email">
+							Ваша почта
+						</label>
+
+						<input class="input" name="email" placeholder="mail@mail.ru" required="required" id="modal-recovery-email" type="email" value="mail@mail.ru">
+
+						<span class="inputbox__text">
+							email не зарегистрирован
+						</span>
+
+					</div>
+
+					<div class="modal__row">
+
+						<div class="modal__column">
+
+							<button class="btn btn--outline" type="button" data-modal="login">
+								Отмена
+							</button>
+
+						</div>
+
+						<div class="modal__column">
+
+							<button class="btn">
+								Восстановить пароль
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						Введите код из SMS
+					</h3>
+
+					<p class="modal-login__text">
+						Повторно отправить код на телефон <b class="nowrap" role="button" data-modal="login">+7 (777) 777-77-77</b> <br>
+						через <u role="button">60 секунд</u>
+					</p>
+
+					<div class="modal__row">
+
+						<div class="modal__column">
+
+							<div class="inputbox is-error">
+
+								<label class="inputbox__label" for="modal-sms-code">
+									Код
+								</label>
+
+								<input class="input" name="code" placeholder="Код из sms" required="required" id="modal-sms-code" type="tel" value="1234">
+
+								<span class="inputbox__text">
+									Код неверный
+								</span>
+
+							</div>
+
+						</div>
+
+						<div class="modal__column flex flex--align-end">
+
+							<button class="btn">
+								Войти
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
