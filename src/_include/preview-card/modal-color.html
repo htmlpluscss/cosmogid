@@ -80,6 +80,8 @@
 									data-src="/img/modal/card-color/468x468.jpg"
 									data-srcset="/img/modal/card-color/936x936.jpg 2x"
 
+							{% if loop.index !== 2 %}
+
 									data-price="2581 ₽"
 
 								{% if [1,2] | random === 2 %}
@@ -87,6 +89,8 @@
 									data-price-old="3456 ₽"
 
 								{% endif %}
+
+							{% endif %}
 
 								{% if loop.index === 2 %}
 

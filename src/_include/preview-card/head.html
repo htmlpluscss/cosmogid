@@ -143,6 +143,8 @@
 
 				<span class="price">
 
+{% if card.overlay !== "login" %}
+
 	{% if card.priceOld %}
 
 					<s class="price__old">
@@ -154,6 +156,8 @@
 					<b class="price__value">
 						2581 ₽
 					</b>
+
+{% endif %}
 
 				</span>
 
