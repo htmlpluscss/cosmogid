@@ -2,7 +2,7 @@
 
 						<div class="order__column">
 
-							<div class="inputbox is-error order-1">
+							<div class="inputbox is-error">
 
 								<label class="inputbox__label" for="order-name">
 									Как вас зовут
@@ -16,7 +16,7 @@
 
 							</div>
 
-							<div class="inputbox order-3">
+							<div class="inputbox">
 
 								<label class="inputbox__label" for="order-lastname">
 									Ваша фамилия
@@ -26,7 +26,7 @@
 
 							</div>
 
-							<div class="inputbox order-5">
+							<div class="inputbox">
 
 								<label class="inputbox__label" for="order-middlename">
 									Ваше отчество
@@ -36,14 +36,18 @@
 
 							</div>
 
-							<div class="inputbox order-2">
+						</div>
+
+						<div class="order__column">
+
+							<div class="inputbox">
 
 {% set modalMod = 'order' %}
 {% include "template/modal/modal-callback-phone.html" %}
 
 							</div>
 
-							<div class="inputbox order-4">
+							<div class="inputbox">
 
 								<label class="inputbox__label" for="order-email">
 									Ваша почта (необязательно)
@@ -71,24 +75,14 @@
 
 						</div>
 
-						<div class="order__rules">
-
-							<label class="checkbox">
-
-								<input class="checkbox__input visuallyhidden" type="checkbox" name="payment-as-ip">
-
-								<span class="checkbox__label">
-									Я ходу оплатить как юридическое лицо
-								</span>
-
-							</label>
+						<div class="order__checkbox">
 
 							<label class="checkbox">
 
 								<input class="checkbox__input visuallyhidden" type="checkbox" required="required">
 
 								<span class="checkbox__label">
-									Я принимаю Договор оферту
+									Я принимаю <a href="/" target="_blank">Договор оферту</a>
 								</span>
 
 							</label>

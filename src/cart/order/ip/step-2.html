@@ -1,149 +1,10 @@
 					<div class="order__step hide" data-hash="step-2">
 
-						<div class="order__column">
+{% include "cart/order/city.html" %}
 
-							<div class="inputbox order-1">
+{% include "cart/order/cdek.html" %}
 
-								<label class="inputbox__label" for="order-city">
-									Ваш город
-								</label>
-
-								<div class="select select--white">
-
-									<select id="order-city" name="city">
-
-										<option value="none">Выбрать город</option>
-										<option value="2" selected="selected">Екатеринбург</option>
-										<option value="3">Москва</option>
-										<option value="4">Санкт-Петербург</option>
-										<option value="5">Казань</option>
-										<option value="6">Ростов-на-Дону</option>
-
-									</select>
-
-								</div>
-
-							</div>
-
-							<div class="inputbox order-3">
-
-								<label class="inputbox__label" for="order-shipping">
-									Способ доставки
-								</label>
-
-								<div class="select select--white">
-
-									<select id="order-shipping" name="shipping">
-
-										<option value="none">Выбрать</option>
-										<option value="1">Курьером</option>
-										<option value="2">Пункт выдачи</option>
-										<option value="3">Самовывоз</option>
-										<option value="4" selected="selected">СДЭК до пункта выдачи заказа от 300 руб</option>
-
-									</select>
-
-								</div>
-
-							</div>
-
-							<div class="inputbox order-2">
-
-								<label class="inputbox__label" for="order-time-date">
-									Время и дата доставки
-								</label>
-
-								<div class="select select--white">
-
-									<select id="order-time-date" name="time-date">
-
-										<option value="none">Указать</option>
-										<option value="1">25.08 с 10:00 до 12:00</option>
-
-									</select>
-
-								</div>
-
-								<div class="inputbox__note flex">
-
-									<details class="tooltip">
-
-										<summary class="tooltip__link">
-											Как это работает
-										</summary>
-
-										<p class="tooltip__inner">
-											Доставка по Екатеринбургу осуществляется в течение 1-го дня в выбранный временной интервал. Заказы, оформленные до 6:00, будут доставлены в тот же день. В другие города  - доставка в среднем в течение 1-2 рабочих дней.
-										</p>
-
-									</details>
-
-								</div>
-
-							</div>
-
-							<div class="inputbox order-4">
-
-								<label class="inputbox__label" for="order-payment">
-									Варианты оплаты
-								</label>
-
-								<div class="select select--white">
-
-									<select id="order-payment" name="payment">
-
-										<option value="none">Выбрать способ оплаты</option>
-										<option value="1" selected="selected">Картой на сайте</option>
-										<option value="2">Наложеный платеж</option>
-										<option value="3">Курьеру картой</option>
-										<option value="4">Курьеру наличными</option>
-										<option value="5">Безналичная (юр.лица)</option>
-
-									</select>
-
-								</div>
-
-								<div class="inputbox__note flex">
-
-									<details class="tooltip">
-
-										<summary class="tooltip__link">
-											Условия
-										</summary>
-
-										<p class="tooltip__inner">
-											После оформления заказа с Вами свами свяжется менеджер, подтвердит заказ и вышлет реквизиты для оплаты.
-										</p>
-
-									</details>
-
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="order__column">
-
-							<div class="inputbox">
-
-								<label class="inputbox__label" for="order-store">
-									Выберите пункт выдачи
-								</label>
-
-								<button class="btn btn--select" type="button" data-modal="cdek">
-
-									Название ПВЗ(Москва)
-
-									<svg width="24" height="24" viewBox="0 0 24 24">
-										<use xlink:href="#svg-arrow-narrow-right"/>
-									</svg>
-
-								</button>
-
-							</div>
-
-						</div>
+{% include "cart/order/payment.html" %}
 
 						<div class="order__file">
 
@@ -245,29 +106,7 @@
 
 						</div>
 
-						<div class="inputbox">
-
-							<label class="inputbox__label" for="order-information">
-								Примечания к заказу
-							</label>
-
-							<textarea class="input autosize" name="information" placeholder="Ваши пожелания к заказу" id="order-information"></textarea>
-
-						</div>
-
-						<div class="order__rules">
-
-							<label class="checkbox">
-
-								<input class="checkbox__input visuallyhidden" type="checkbox" name="call-me" checked="checked">
-
-								<span class="checkbox__label">
-									Курьер перезвонит перед тем как доставлять товар
-								</span>
-
-							</label>
-
-						</div>
+{% include "cart/order/info.html" %}
 
 						<div class="order__next">
 

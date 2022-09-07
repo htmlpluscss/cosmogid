@@ -99,6 +99,12 @@
 
 		}
 
+		.checkbox {
+
+			margin-left: 16px;
+
+		}
+
 		.select__value {
 
 			padding-left: 16px;
@@ -126,53 +132,12 @@
 
 		}
 
-		.order-1 {
-
-			order: 1;
-
-		}
-
-		.order-2 {
-
-			order: 2;
-
-		}
-
-		.order-3 {
-
-			order: 3;
-
-		}
-
-		.order-4 {
-
-			order: 4;
-
-		}
-
-		.order-5 {
-
-			order: 5;
-
-		}
-
-		.order-6 {
-
-			order: 6;
-
-		}
-
-		.order-7 {
-
-			order: 7;
-
-		}
-
 	}
 
 	&__steps {
 
 		display: flex;
+		gap: 40px;
 		justify-content: space-between;
 		counter-reset: headings 0;
 
@@ -184,8 +149,8 @@
 
 		&-item {
 
-			width: 360px;
 			font-weight: 600;
+			flex-basis: 50%;
 			counter-increment: headings 1;
 
 		}
@@ -265,7 +230,7 @@
 
 	}
 
-	&__rules {
+	&__checkbox {
 
 		margin: 36px 0;
 		display: flex;

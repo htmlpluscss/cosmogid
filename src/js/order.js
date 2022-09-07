@@ -11,8 +11,6 @@
 
 			const hash = location.hash;
 
-			console.log(hash);
-
 			[...steps].forEach( step => {
 
 				step.classList.toggle('hide', step.getAttribute('data-hash') !== hash.slice(1) );
@@ -42,32 +40,6 @@
 
 		}
 
-		// btns
-
-/*		const btns = order.querySelectorAll('a[href^="#"]');
-
-		[...btns].forEach( link => {
-
-			link.addEventListener('click', event => {
-
-				event.preventDefault();
-
-				if ( link.href.includes('#') ) {
-
-					location.hash = link.getAttribute('href');
-
-				} else {
-
-					history.pushState('', document.title, window.location.pathname + window.location.search);
-
-				}
-
-				setStage();
-
-			});
-
-		});
-*/
 	};
 
 })(document.querySelector('.order'));
