@@ -21,6 +21,13 @@
 
 		card.querySelector('.preview-card__foot').innerHTML = Mustache.render(templateFoot, { buyBtn, buyDisabled, buyCart, favourite });
 
+		// цена
+
+		const price = cardVolume.getAttribute('data-price'),
+			  priceOld = cardVolume.getAttribute('data-price-old');
+
+		card.querySelector('.preview-card__price').innerHTML = Mustache.render(templatePrice, { price, priceOld });
+
 		// флаг
 
 		const flag = cardVolume.getAttribute('data-flag'),
@@ -67,21 +74,6 @@
 		}
 
 		card.querySelector('.preview-card__head').insertAdjacentHTML('beforeend', Mustache.render(templateOverlay, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, overlayWithdrawn, id, articleId }));
-
-		// цена
-
-		if ( overlayLogin ) {
-
-			card.querySelector('.preview-card__price').innerHTML = '';
-
-		} else {
-
-			const price = cardVolume.getAttribute('data-price'),
-				  priceOld = cardVolume.getAttribute('data-price-old');
-
-			card.querySelector('.preview-card__price').innerHTML = Mustache.render(templatePrice, { price, priceOld });
-
-		}
 
 	}
 

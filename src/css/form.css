@@ -644,6 +644,14 @@ legend {
 
 	}
 
+	&__text {
+
+		padding: 4px 0;
+		margin-left: 16px;
+		display: block;
+
+	}
+
 	&__label {
 
 		display: block;
@@ -667,6 +675,7 @@ legend {
 
 	}
 
+	&.is-error &__text,
 	&.is-error &__label {
 
 		color: var(--red);

@@ -142,18 +142,10 @@
 
 			// цена
 
-			if ( overlayLogin ) {
+			const price = cardVolume.getAttribute('data-price'),
+				  priceOld = cardVolume.getAttribute('data-price-old');
 
-				form.querySelector('.product-buy__price').innerHTML = '';
-
-			} else {
-
-				const price = cardVolume.getAttribute('data-price'),
-					  priceOld = cardVolume.getAttribute('data-price-old');
-
-				form.querySelector('.product-buy__price').innerHTML = Mustache.render(templatePrice, { price, priceOld });
-
-			}
+			form.querySelector('.product-buy__price').innerHTML = Mustache.render(templatePrice, { price, priceOld });
 
 			// кнопка купить
 

@@ -181,3 +181,9 @@ table {
 	overflow: hidden !important;
 
 }
+
+.nowrap {
+
+	white-space: nowrap;
+
+}
