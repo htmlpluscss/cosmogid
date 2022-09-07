@@ -58,11 +58,56 @@
 
 		display: flex;
 		justify-content: space-between;
-		margin: 48px 0 64px;
 
-		.btn.is-active {
+		@media $desktop {
 
-			border-bottom-color: transparent;
+			margin-bottom: 64px;
+
+		}
+
+		@media $smWidth {
+
+			justify-content: center;
+
+		}
+
+		&-head {
+
+			border: 0;
+			cursor: text !important;
+			color: var(--gray);
+
+			@media $mdWidth {
+
+				display: none;
+
+			}
+
+		}
+
+	}
+
+	&__step {
+
+		.inputbox {
+
+			@media $desktop {
+
+				margin: 0;
+
+			}
+
+		}
+
+		.select__value {
+
+			padding-left: 16px;
+
+		}
+
+		.inputbox__note {
+
+			position: static;
 
 		}
 
@@ -70,18 +115,110 @@
 
 	&__column {
 
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px 40px;
+		margin: 24px 0;
+
+		@media $mdWidth {
+
+			display: block;
+
+		}
+
+		.order-1 {
+
+			order: 1;
+
+		}
+
+		.order-2 {
+
+			order: 2;
+
+		}
+
+		.order-3 {
+
+			order: 3;
+
+		}
+
+		.order-4 {
+
+			order: 4;
+
+		}
+
+		.order-5 {
+
+			order: 5;
+
+		}
+
+		.order-6 {
+
+			order: 6;
+
+		}
+
+		.order-7 {
+
+			order: 7;
+
+		}
 
 	}
 
-	&__fieldset {
+	&__steps {
 
-		width: 360px;
+		display: flex;
+		justify-content: space-between;
+		counter-reset: headings 0;
 
-		.inputbox + .inputbox {
+		@media $mdWidth {
 
-			margin-top: 60px;
+			display: none;
+
+		}
+
+		&-item {
+
+			width: 360px;
+			font-weight: 600;
+			counter-increment: headings 1;
+
+		}
+
+		a {
+
+			display: flex;
+			align-items: center;
+
+			&::before  {
+
+				content: counter(headings, decimal);
+				width: 40px;
+				height: 40px;
+				margin-right: 16px;
+				border-radius: 50%;
+				flex-shrink: 0;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 40px;
+				text-align: center;
+				color: #9ca3af;
+				outline: 1px solid #9ca3af;
+
+			}
+
+			&.is-active::before {
+
+				color: #fff;
+				outline: none;
+				background-color: var(--purple);
+
+			}
 
 		}
 
@@ -109,9 +246,28 @@
 
 	}
 
+	&__row-inputbox {
+
+		display: flex;
+		gap: 40px;
+
+		.inputbox {
+
+			margin: 0;
+
+		}
+
+		@media $smWidth {
+
+			gap: 32px;
+
+		}
+
+	}
+
 	&__rules {
 
-		margin: 24px 0;
+		margin: 36px 0;
 		display: flex;
 		gap: 8px;
 		flex-direction: column;
@@ -123,13 +279,79 @@
 
 		margin-top: 60px;
 		display: flex;
+		gap: 24px;
 		justify-content: flex-end;
+
+		@media $mdWidth {
+
+			margin-top: 32px;
+
+		}
+
+		@media $xsWidth {
+
+			gap: 16px;
+
+		}
 
 		.btn {
 
-			min-width: 240px;
-			padding: 0 40px;
-			margin-left: 24px;
+			@media $mdWidth {
+
+				flex-grow: 1;
+
+			}
+
+			@media $xsWidth {
+
+				padding: 0;
+
+			}
+
+			@media $desktop {
+
+				min-width: 240px;
+				padding: 0 40px;
+
+			}
+
+		}
+
+	}
+
+	.input.autosize {
+
+		height: 40px;
+
+	}
+
+	&__file {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 64px;
+
+		.fileupload__btn {
+
+			padding: 0;
+
+		}
+
+		&-head {
+
+			width: 100%;
+			font-size: 18px;
+			line-height: 1.2;
+			font-weight: 600;
+
+		}
+
+		&-text {
+
+			margin: 8px 0;
+			font-size: 12px;
+			max-width: 444px;
 
 		}
 

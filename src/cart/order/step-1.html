@@ -1,58 +1,8 @@
-				<div class="order__body">
+					<div class="order__step" data-hash="step-1">
 
-					<div class="order__tabs">
+						<div class="order__column">
 
-						<button class="btn btn--more is-active" type="button">
-							Новый покупатель
-						</button>
-
-						<button class="btn btn--more" type="button" data-modal="login">
-							Я постоянный клиент
-						</button>
-
-					</div>
-
-					<div class="order__column">
-
-						<fieldset class="order__fieldset">
-
-							<div class="order__head">
-
-								<span class="ico-box is-current">
-									<svg width="16" height="16" viewBox="0 0 24 24">
-										<use xlink:href="#svg-user"/>
-									</svg>
-								</span>
-
-								Личные данные
-
-							</div>
-
-						</fieldset>
-
-						<fieldset class="order__fieldset">
-
-							<div class="order__head">
-
-								<span class="ico-box">
-									<svg width="16" height="16" viewBox="0 0 24 24">
-										<use xlink:href="#svg-car"/>
-									</svg>
-								</span>
-
-								Информация о доставке
-
-							</div>
-
-						</fieldset>
-
-					</div>
-
-					<div class="order__column">
-
-						<fieldset class="order__fieldset">
-
-							<div class="inputbox is-error">
+							<div class="inputbox is-error order-1">
 
 								<label class="inputbox__label" for="order-name">
 									Как вас зовут
@@ -66,7 +16,7 @@
 
 							</div>
 
-							<div class="inputbox">
+							<div class="inputbox order-3">
 
 								<label class="inputbox__label" for="order-lastname">
 									Ваша фамилия
@@ -76,23 +26,30 @@
 
 							</div>
 
-						</fieldset>
+							<div class="inputbox order-5">
 
-						<fieldset class="order__fieldset">
+								<label class="inputbox__label" for="order-middlename">
+									Ваше отчество
+								</label>
 
-							<div class="inputbox">
-
-		{% include "template/modal/modal-callback-phone.html" %}
+								<input class="input" name="middlename" placeholder="Ивановна" required="required" id="order-middlename">
 
 							</div>
 
-							<div class="inputbox">
+							<div class="inputbox order-2">
+
+{% set modalMod = 'order' %}
+{% include "template/modal/modal-callback-phone.html" %}
+
+							</div>
+
+							<div class="inputbox order-4">
 
 								<label class="inputbox__label" for="order-email">
 									Ваша почта (необязательно)
 								</label>
 
-								<input class="input" name="email" placeholder="mail@mail.ru" required="required" id="order-email" type="email">
+								<input class="input" name="email" placeholder="mail@mail.ru" id="order-email" type="email">
 
 								<div class="inputbox__note flex">
 
@@ -112,44 +69,42 @@
 
 							</div>
 
-						</fieldset>
+						</div>
+
+						<div class="order__rules">
+
+							<label class="checkbox">
+
+								<input class="checkbox__input visuallyhidden" type="checkbox" name="payment-as-ip">
+
+								<span class="checkbox__label">
+									Я ходу оплатить как юридическое лицо
+								</span>
+
+							</label>
+
+							<label class="checkbox">
+
+								<input class="checkbox__input visuallyhidden" type="checkbox" required="required">
+
+								<span class="checkbox__label">
+									Я принимаю Договор оферту
+								</span>
+
+							</label>
+
+						</div>
+
+						<div class="order__next">
+
+							<a href="/catalog/" class="btn btn--outline hidden-sm">
+								Продолжить покупки
+							</a>
+
+							<a href="#step-2" class="btn">
+								Далее
+							</a>
+
+						</div>
 
 					</div>
-
-					<div class="order__rules">
-
-						<label class="checkbox">
-
-							<input class="checkbox__input visuallyhidden" type="checkbox" required="required">
-
-							<span class="checkbox__label">
-								Я ходу оплатить как юридическое лицо
-							</span>
-
-						</label>
-
-						<label class="checkbox">
-
-							<input class="checkbox__input visuallyhidden" type="checkbox" required="required">
-
-							<span class="checkbox__label">
-								Я принимаю Договор оферту
-							</span>
-
-						</label>
-
-					</div>
-
-					<div class="order__next">
-
-						<a href="/catalog/" class="btn btn--outline">
-							Продолжить покупки
-						</a>
-
-						<button class="btn">
-							Далее
-						</button>
-
-					</div>
-
-				</div>

@@ -54,10 +54,9 @@ setTimeout( ()=> {
 
 	<ul class="h3">
 		<li><a href="/cart/">Корзина</a></li>
-		<li><a href="/cart/order/" style="color:red">Оформление заказа (Личные данные)</a></li>
-		<li><a href="/cart/order/2/" style="color:red">Оформление заказа (Информация о доставке)</a></li>
-		<li><a href="/cart/order/3/" style="color:red">Оформление заказа (Информация о доставке)</a></li>
-		<li><a href="/cart/order/4/" style="color:red">Оформление заказа (Реквизиты для оплаты)</a></li>
+		<li><a href="/cart/order/">Оформление заказа (Новый покупатель)</a></li>
+		<li><a href="/cart/order/cdek/#step-2">Оформление заказа (СДЭК)</a></li>
+		<li><a href="/cart/order/ip/#step-2">Оформление заказа (Юридическое лицо)</a></li>
 	</ul>
 
 	<h2>
@@ -521,6 +520,47 @@ setTimeout( ()=> {
 			</div>
 
 		</div>
+
+	</div>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<div class="fileupload">
+
+				<label class="fileupload__btn">
+
+					<input type="file" name="file" class="visuallyhidden">
+
+					<span class="btn btn--link">
+						Добавить фото
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="fileupload">
+
+				<label class="fileupload__btn">
+
+					<input type="file" name="file" class="visuallyhidden">
+
+					<span class="btn btn--hash">
+						Приложить файл с реквизитами
+					</span>
+
+				</label>
+
+			</div>
+
+		</div>
+
 
 	</div>
 

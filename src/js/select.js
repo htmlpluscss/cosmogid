@@ -40,6 +40,12 @@ window.selects = select => {
 
 	[...option].forEach( el => {
 
+		if ( el.value === 'none' || el.value === '' ) {
+
+			return;
+
+		}
+
 		const btn = document.createElement('label'),
 			  label = document.createElement('span'),
 			  input = document.createElement('input');
