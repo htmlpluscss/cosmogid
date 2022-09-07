@@ -126,6 +126,14 @@
 
 					product.querySelector('.product-buy__price').insertAdjacentHTML('afterend', Mustache.render(templateBoardLogin));
 
+					const tooltip = product.querySelector('.board-login .tooltip');
+
+					if ( tooltip ) {
+
+						new Tooltip(tooltip);
+
+					}
+
 				}
 
 			} else {
