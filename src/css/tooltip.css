@@ -66,8 +66,6 @@
 .tooltip {
 
 	position: relative;
-	-webkit-text-size-adjust:none;
-	-webkit-overflow-scrolling: touch;
 
 	summary {
 
@@ -75,6 +73,8 @@
 		list-style: none;
 		user-select: none;
 		cursor: pointer;
+		-webkit-text-size-adjust:none;
+		-webkit-overflow-scrolling: touch;
 
 		svg {
 

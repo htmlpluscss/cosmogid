@@ -10,39 +10,7 @@
 								На каждый продукт имеется сертификат качества. Как правило документы отправляются по запросу, так как на каждый бренд может быть более 30 страниц, ниже некоторые примеры
 							</p>
 
-							<div class="certificates__wrap">
-
-								<div class="certificates__swiper swiper-container swiper-container--certificates">
-
-									<ul class="certificates__list swiper-wrapper">
-
-{% for i in range(0, 10) %}
-
-										<li class="certificates__item certificates__item--news swiper-slide">
-
-											<a href="/.pdf" target="_blank">
-
-												<picture>
-				<!--
-													<source srcset="/img/.webp 1x, /img/@2x.webp 2x" type="image/webp">
-													<source srcset="/img/.jpg 1x, /img/@2x.jpg 2x">
-				-->
-
-													<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='288' height='400' viewBox='0 0 288 400'%3E%3Cpath fill='%23D9D9D9' d='M0 0h288v400H0z'/%3E%3C/svg%3E" alt="название сертификата" loading="lazy" width="288" height="400">
-
-												</picture>
-
-											</a>
-
-										</li>
-
-{% endfor %}
-
-									</ul>
-
-								</div>
-
-							</div>
+{% include "product/certificates.html" %}
 
 							<div class="certificates__foot">
 
