@@ -16,6 +16,38 @@
 
 					<div class="modal__row">
 
+						<div class="modal__column">
+
+							<div class="inputbox">
+
+{% set modalMod = 'login' %}
+
+{% include "template/modal/modal-callback-phone.html" %}
+
+							</div>
+
+						</div>
+
+						<div class="modal__column flex flex--align-end">
+
+							<button class="btn">
+								Получить код
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						или войдите используя электронную почту:
+					</h3>
+
+					<div class="modal__row">
+
 						<div class="inputbox">
 
 							<label class="inputbox__label" for="modal-login-email">
@@ -52,38 +84,6 @@
 
 							<button class="btn">
 								Войти
-							</button>
-
-						</div>
-
-					</div>
-
-				</form>
-
-				<form class="modal-login__form" action="/">
-
-					<h3 class="modal-login__title">
-						или войдите используя номер телефона:
-					</h3>
-
-					<div class="modal__row">
-
-						<div class="modal__column">
-
-							<div class="inputbox">
-
-{% set modalMod = 'login' %}
-
-{% include "template/modal/modal-callback-phone.html" %}
-
-							</div>
-
-						</div>
-
-						<div class="modal__column flex flex--align-end">
-
-							<button class="btn">
-								Получить код
 							</button>
 
 						</div>

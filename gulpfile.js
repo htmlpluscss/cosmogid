@@ -183,8 +183,8 @@ gulp.task('ftp', () => {
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('"https://' + site, '"https://' + domain))
-		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
+		.pipe(replace('css/styles.css', 'css/styles.css?' + Date.now()))
+		.pipe(replace('js/scripts.js', 'js/scripts.js?' + Date.now()))
 		.pipe(f.restore)
 		.pipe(conn.dest(domain));
 

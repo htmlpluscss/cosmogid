@@ -268,12 +268,6 @@ legend {
 		color: var(--gray);
 		width: 100%;
 
-		svg {
-
-			fill: var(--text);
-
-		}
-
 	}
 
 }
@@ -466,18 +460,9 @@ legend {
 
 	}
 
-	&__input[type="radio"]+ &__label {
+	&__input[type="radio"] + &__label {
 
-		&::before {
-
-			border-radius: 50%;
-
-		}
-
-	}
-
-	&__input[type="radio"]:checked + &__label {
-
+		&::before,
 		&::after {
 
 			border-radius: 50%;

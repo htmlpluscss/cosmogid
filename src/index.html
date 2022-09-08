@@ -16,11 +16,11 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "cdek"
+			selector: "calendar"
 		}
 	});
 
-	window.modal.dispatchEvent(eventModalShow);
+//	window.modal.dispatchEvent(eventModalShow);
 })
 
 </script>
@@ -152,6 +152,10 @@ setTimeout( ()=> {
 
 		</div>
 
+	</div>
+
+	<div class="flex flex--wrap">
+
 		<div class="item">
 
 			<button
@@ -202,6 +206,10 @@ setTimeout( ()=> {
 
 		</div>
 
+	</div>
+
+	<div class="flex flex--wrap">
+
 		<div class="item">
 
 			<button class="btn" type="button" data-modal="errors">
@@ -238,6 +246,26 @@ setTimeout( ()=> {
 
 			<button class="btn" type="button" data-modal="recovery">
 				Забыли пароль
+			</button>
+
+		</div>
+
+	</div>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<button class="btn btn--outline" data-modal="cdek">
+				Пункты выдачи и постоматы
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--outline" data-modal="calendar">
+				Дата и время пикер
 			</button>
 
 		</div>
@@ -628,6 +656,25 @@ setTimeout( ()=> {
 					<option value="5">Получен заказчиком</option>
 					<option value="6">Ожидает согласования</option>
 
+				</select>
+
+			</div>
+
+		</div>
+
+		<div class="item">
+
+			<div class="select select--filter select--white">
+
+				<select name="select-filter">
+					<option value="none">Выбрать</option>
+					<option value="1">ПАО Газпром нефть</option>
+					<option value="2">Газпром</option>
+					<option value="3">Газпром нефть - ЦР</option>
+					<option value="4">Газпром нефть - ПИ</option>
+					<option value="5">Газпром нефть - МА</option>
+					<option value="6">Газпром нефть - ЩЫ</option>
+					<option value="7">Газпром нефть - ЁЕ</option>
 				</select>
 
 			</div>

@@ -1,0 +1,122 @@
+.pickmeup {
+
+	touch-action    : manipulation;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+
+	.pmu-instance {
+
+		display    : block;
+		text-align : center;
+		width      : 286px;
+		color      : #1d1d1b;
+
+		.pmu-button {
+
+			outline         : none;
+			text-decoration : none;
+
+		}
+
+		.pmu-today {
+
+		}
+
+		.pmu-disabled {
+
+			color: #d1d5db;
+
+			& + .pmu-button:not(.pmu-disabled),
+			& + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled),
+			& + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled),
+			& + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled),
+			& + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) {
+
+				box-shadow: inset 0 0 0 1px var(--purple);
+
+			}
+
+		}
+
+		.pmu-selected {
+
+			background-color : var(--purple);
+			color      : #fff !important;
+
+		}
+
+		nav {
+
+			display     : flex;
+
+			.pmu-prev,
+			.pmu-next {
+
+				display : flex;
+				height  : 40px;
+				width   : 40px;
+				justify-content: center;
+				align-items: center;
+				flex-shrink: 0;
+				cursor: pointer;
+
+			}
+
+			.pmu-month {
+
+				flex-grow: 1;
+				font-size: 24px;
+
+			}
+
+		}
+
+		.pmu-day-of-week,
+		.pmu-days {
+
+			display: grid;
+			grid-template-columns: repeat(7, 1fr);
+			gap: 2px 1px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 40px;
+			text-transform: uppercase;
+
+		}
+
+		.pmu-days .pmu-button:not(.pmu-disabled):hover {
+
+			cursor: pointer;
+			box-shadow: inset 0 0 0 2px var(--purple) !important;
+
+		}
+
+		.pmu-day-of-week * {
+
+			font-size: 14px;
+
+			&:nth-child(n+6) {
+
+				color: var(--red);
+
+			}
+
+		}
+
+		.pmu-saturday,
+		.pmu-sunday {
+
+			color: var(--red);
+
+		}
+
+	}
+
+	&:not(.pmu-view-days) .pmu-days,
+	&:not(.pmu-view-days) .pmu-day-of-week,
+	&:not(.pmu-view-months) .pmu-months,
+	&:not(.pmu-view-years) .pmu-years {
+		display : none;
+	}
+}

@@ -97,6 +97,17 @@
 
 			}
 
+
+			[data-modal="cdek"] {
+
+				svg {
+
+					fill: var(--text);
+
+				}
+
+			}
+
 		}
 
 		.checkbox {

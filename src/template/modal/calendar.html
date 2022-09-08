@@ -1,0 +1,81 @@
+			<form action="/" class="modal__item modal__item--calendar modal-calendar">
+
+				<h3 class="modal-calendar__title">
+					Дата и время доставки
+				</h3>
+
+				<p class="modal-calendar__text">
+					Если даты не подходят- сообщите менеджеру, указав удобные даты в комментариях к заказу
+				</p>
+
+				<div class="modal-calendar__date">
+
+					<div class="calendar">
+
+						<input class="calendar__input visuallyhidden" type="date" name="modal-calendar-date" min="2022-09-12" max="2022-10-12">
+
+					</div>
+
+				</div>
+
+				<div class="modal-calendar__time">
+
+					<label class="checkbox">
+
+						<input type="radio" class="checkbox__input visuallyhidden" checked="checked" name="modal-calendar-time">
+
+						<span class="checkbox__label">
+							9:00 - 18:00
+						</span>
+
+					</label>
+
+{% for btn in [
+	{
+		name : "10:00 - 12:00"
+	},
+	{
+		name : "12:00 - 14:00"
+	},
+	{
+		name : "14:00 - 16:00",
+		disabled : true
+	},
+	{
+		name : "16:00 - 18:00",
+		disabled : true
+	},
+	{
+		name : "18:00 - 20:00"
+	},
+	{
+		name : "20:00 - 22:00"
+	}
+]%}
+					<label class="checkbox">
+
+						<input type="radio" class="checkbox__input visuallyhidden"{% if btn.disabled %} disabled="disabled"{% endif %} name="modal-calendar-time">
+
+						<span class="checkbox__label">
+							{{ btn.name }}
+						</span>
+
+					</label>
+
+{% endfor %}
+
+				</div>
+
+				<div class="modal-calendar__foot">
+
+					<button class="btn btn--outline modal__close" type="button">
+						Отмена
+					</button>
+
+					<button class="btn">
+						Выбрано
+					</button>
+
+				</div>
+
+			</form>

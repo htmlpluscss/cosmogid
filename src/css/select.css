@@ -121,10 +121,9 @@
 
 			}
 
-			&[value=""],
-			&[value="none"] {
+			input:checked + span {
 
-				display: none;
+				color: var(--purple);
 
 			}
 
@@ -165,18 +164,49 @@
 
 	}
 
-	&.is-ready select {
+	/* filter */
+
+	&__filter {
+
+		display: none;
+
 
 		position: absolute;
 		top: 0;
 		left: 0;
 		opacity: 0;
+		z-index: 1;
+		padding: 8px 16px;
+		height: 40px;
+		border: 0 !important;
+		pointer-events: none;
 
-		@media $desktop {
+		&::placeholder {
 
-			pointer-events: none;
+			font-size: 14px;
 
 		}
+
+	}
+
+	&.is-open &__filter {
+
+		opacity: 1;
+		pointer-events: auto;
+
+	}
+
+	&__filter-empty {
+
+		display: none;
+		margin: 16px;
+		color: var(--text);
+
+	}
+
+	&--filter-empty &__filter-empty {
+
+		display: block;
 
 	}
 

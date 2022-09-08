@@ -154,6 +154,67 @@
 
 {% raw %}
 
+		<script type="text/html" id="select-template">
+
+			<div class="select__value">
+
+				<span class="select__value-inner">
+					{{ valueDefault }}
+				</span>
+
+				<svg width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="#svg-arrow-chevron-down"/>
+				</svg>
+
+			</div>
+
+		{{# filter }}
+
+			<input class="select__filter input" placeholder="Поиск">
+
+		{{/ filter }}
+
+			<fieldset class="select__list is-scroll">
+
+			{{# filter }}
+
+				<p class="select__filter-empty">
+					Ничего не найдено
+				</p>
+
+			{{/ filter }}
+
+			{{# list }}
+
+				<label class="select__list-item">
+
+					<input
+
+						type="radio"
+						class="visuallyhidden"
+						name="{{ name }}"
+						value="{{ value }}"
+
+						{{# checked }}
+
+						checked="checked"
+
+						{{/ checked }}
+
+					>
+
+					<span>
+						{{ label }}
+					</span>
+
+				</label>
+
+			{{/ list }}
+
+			</fieldset>
+
+		</script>
+
 		<script type="text/html" id="product-login-template">
 
 			<div class="board-login">
