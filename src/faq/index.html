@@ -1,0 +1,79 @@
+{% set title = "FAQ" %}
+
+{% set description = "Ответы на часто задаваемые вопросы в нашем магазине." %}
+
+{% set breadcrumbs = ["Информация",title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="page-bar">
+
+			<h1 class="title">
+				Ответы на часто задаваемые вопросы
+			</h1>
+
+			<div class="page-bar__box">
+
+				<div class="page-bar__head">
+
+{% include "about/menu.html" %}
+
+				</div>
+
+				<div class="page-bar__body page-faq">
+
+{% for head in ["Первая группа вопросов","Вторая группа вопросов","Третья группа вопросов"]%}
+
+					<h2>
+						{{ head }}
+					</h2>
+
+					<div class="accordion">
+
+{% for head in ["Оплата по картой","Оплата наличными на пункте самовывоза","Оплата через СБП (Систему быстрых платежей)","Безналичная (юридическое лицо)"]%}
+
+						<div class="accordion__item">
+
+							<div class="accordion__head accordion__btn">
+
+								<h3 class="page-faq__h3">
+									{{ head }}
+								</h3>
+
+							</div>
+
+							<div class="accordion__body">
+
+								<div class="accordion__body-inner">
+
+									<p>
+										Обладатели карт Мир, Visa или MasterCard могут полностью оплатить заказ в момент его оформления. Данный вариант оплаты позволит сэкономить время при получении посылки. При встрече с курьером, менеджерами пункта самовывоза или почтового отделения вам нужно будет просто забрать заказ, предварительно предоставив документ, подтверждающий личность получателя.
+									</p>
+
+								</div>
+
+							</div>
+
+						</div>
+
+{% endfor %}
+
+					</div>
+
+{% endfor %}
+
+				</div>
+
+			</div>
+
+		</article>
+
+{% include "_include/support.html" %}
+
+	</div>
+
+{% endblock %}
