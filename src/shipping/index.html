@@ -1,0 +1,41 @@
+{% set title = "Доставка" %}
+
+{% set description = "Мы приветствуем Вас в интернет-магазине Cosmogid. Мы очень рады, что Вы попали на эту страницу на просторах интернета. Наша команда хочет немного рассказать Вам о нашем магазине." %}
+
+{% set breadcrumbs = ["Информация",title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="page-bar">
+
+			<h1 class="title">
+				Доставляем счастье на дом )
+			</h1>
+
+			<div class="page-bar__box">
+
+				<div class="page-bar__head">
+
+{% include "about/menu.html" %}
+
+				</div>
+
+				<div class="page-bar__body page-about">
+
+
+
+				</div>
+
+			</div>
+
+		</article>
+
+{% include "_include/support.html" %}
+
+	</div>
+
+{% endblock %}

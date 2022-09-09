@@ -1,0 +1,64 @@
+.accordion {
+
+	position: relative;
+	border-top: 1px solid #9ca3af;
+	margin: 24px 0;
+
+	&__body {
+
+		overflow: hidden;
+		position: relative;
+		max-height: 0;
+		opacity: 0;
+		transition: max-height var(--transitionDefault), opacity var(--transitionDefault);
+
+		&-inner {
+
+			padding: 24px;
+
+		}
+
+	}
+
+	&__item.is-open &__body {
+
+		overflow: visible;
+		max-height: 90000px;
+		opacity: 1;
+
+	}
+
+	&__item {
+
+		border-bottom: 1px solid #9ca3af;
+
+	}
+
+	&__head {
+
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		user-select: none;
+		padding: 24px;
+
+		svg {
+
+			fill: var(--purple);
+			transition: transform var(--transitionDefault);
+			transform: rotate(90deg);
+			flex-shrink: 0;
+
+		}
+
+	}
+
+	&__item.is-open &__head svg {
+
+		transform: rotate(0deg);
+
+	}
+
+}
