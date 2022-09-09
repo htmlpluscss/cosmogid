@@ -40,31 +40,31 @@
 
 					<div class="page-contacts__columns">
 
-						<div class="page-contacts__columns-item">
+						<h2>
+							Служба поддержки клиентов
+						</h2>
 
-							<h2>
-								Служба поддержки клиентов
-							</h2>
+						<div class="page-contacts__columns-item">
 
 {% set list = [
 	{
-		name : "8 (800) 100-08-53",
-		href : "tel:88001000853",
-		ico  : "phone"
+		name : "+7 (922) 297 77 30",
+		href : "https://wa.me/79222977730",
+		ico  : "whatsapp"
 	},
 	{
-		name : "8 (800) 100-08-53",
-		href : "tel:88001000853",
-		ico  : "phone"
+		name : "+7 (922) 297 77 30",
+		href : "https://t.me/cosmo_gid_bot",
+		ico  : "telegram"
 	},
 	{
-		name : "work@cosmogid.ru",
-		href : "mailto:work@cosmogid.ru",
+		name : "shop@cosmogid.ru",
+		href : "mailto:shop@cosmogid.ru",
 		ico  : "mail-forward",
 		suf  : "служба поддержки"
 	},
 	{
-		name : "с 9:00 до 19:00",
+		name : "с 7:00 до 19:00",
 		ico  : "clock",
 		suf  : "пн-пт"
 	}
@@ -76,10 +76,6 @@
 
 						<div class="page-contacts__columns-item">
 
-							<h2>
-								По вопросам сотрудничества
-							</h2>
-
 {% set list = [
 	{
 		name : "8 (800) 100-08-53",
@@ -87,20 +83,42 @@
 		ico  : "phone"
 	},
 	{
-		name : "8 (800) 100-08-53",
-		href : "tel:88001000853",
+		name : "+7 (499) 346 86 80",
+		href : "tel:+74993468680",
 		ico  : "phone"
 	},
 	{
-		name : "shop@cosmogid.ru",
-		href : "mailto:work@cosmogid.ru",
-		ico  : "mail-forward",
-		suf  : "служба поддержки"
+		name : "+7 (343) 339 48 43",
+		href : "tel:+73433394843",
+		ico  : "phone"
 	},
 	{
-		name : "с 9:00 до 19:00",
-		ico  : "clock",
-		suf  : "пн-пт"
+		name : "+7 (812) 385 73 17",
+		href : "tel:+78123857317",
+		ico  : "phone"
+	}
+]%}
+
+{% include "contacts/list.html" %}
+
+						</div>
+
+					</div>
+
+					<div class="page-contacts__columns">
+
+						<h2>
+							По вопросам сотрудничества
+						</h2>
+
+						<div class="page-contacts__columns-item">
+
+{% set list = [
+	{
+		name : "cosmogid@mail.ru",
+		href : "mailto:cosmogid@mail.ru",
+		ico  : "mail-forward",
+		suf  : "служба поддержки"
 	}
 ]%}
 

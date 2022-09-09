@@ -3,6 +3,7 @@
 	&__columns {
 
 		display: flex;
+		flex-wrap: wrap;
 		margin: 40px 0;
 
 		@media $smWidth {
@@ -11,23 +12,29 @@
 
 		}
 
+		h2 {
+
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 1.2;
+			margin: 24px 0;
+			width: 100%;
+
+		}
+
 		&-item {
 
 			width: 386px;
 
-			@media $smWidth {
+			@media $mdWidth {
 
-				width: auto;
-				margin: 40px 0;
+				width: 300px;
 
 			}
 
-			h2 {
+			@media $smWidth {
 
-				font-weight: 600;
-				font-size: 18px;
-				line-height: 1.2;
-				margin: 24px 0;
+				width: auto;
 
 			}
 
