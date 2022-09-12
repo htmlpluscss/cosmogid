@@ -768,14 +768,47 @@
 
 	&__box {
 
-		display: flex;
 		margin: 24px 0;
+
+	}
+
+	&__foot {
+
+		display: flex;
+		margin-top: 48px;
+		justify-content: center;
 
 		@media $smWidth {
 
-			flex-direction: column-reverse;
+			margin: 24px -12px 0;
+
+			.btn {
+
+				padding: 0;
+				flex-grow: 1;
+
+			}
 
 		}
+
+		.btn {
+
+			padding: 0 40px;
+			margin: 0 12px;
+
+		}
+
+	}
+
+}
+
+.map-points-issue {
+
+	display: flex;
+
+	@media $smWidth {
+
+		flex-direction: column-reverse;
 
 	}
 
@@ -786,6 +819,17 @@
 		flex-shrink: 0;
 		position: relative;
 		background-color: #ededed;
+
+		.page-shipping & {
+
+			@media $desktop {
+
+				width: 600px;
+				height: 600px;
+
+			}
+
+		}
 
 		@media $mdWidth {
 
@@ -808,6 +852,16 @@
 		height: 480px;
 		display: flex;
 		flex-direction: column;
+
+		.page-shipping & {
+
+			@media $desktop {
+
+				height: 600px;
+
+			}
+
+		}
 
 		@media $smWidth {
 
@@ -876,36 +930,7 @@
 
 	}
 
-	&__foot {
-
-		display: flex;
-		margin-top: 48px;
-		justify-content: center;
-
-		@media $smWidth {
-
-			margin: 24px -12px 0;
-
-			.btn {
-
-				padding: 0;
-				flex-grow: 1;
-
-			}
-
-		}
-
-		.btn {
-
-			padding: 0 40px;
-			margin: 0 12px;
-
-		}
-
-	}
-
 }
-
 
 .modal-calendar {
 

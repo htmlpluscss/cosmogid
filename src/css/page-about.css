@@ -1,39 +1,19 @@
 .page-faq {
 
-	@media $desktop {
+	.page-bar__h2 {
 
-		margin-left: 24px;
+		text-align: left;
+		margin: 64px 0 24px;
 
-	}
+		&:first-child {
 
-	& > h2 {
+			margin-top: 24px;
 
-		font-size: 32px;
-		margin: 24px 0;
+		}
 
 		@media $smWidth {
 
 			font-size: 18px;
-
-		}
-
-		& ~ h2 {
-
-			margin-top: 64px;
-
-		}
-
-	}
-
-	&__h3 {
-
-		font-weight: 600;
-		font-size: 18px;
-		line-height: 1.2;
-
-		@media $smWidth {
-
-			font-size: 16px;
 
 		}
 
@@ -43,22 +23,10 @@
 
 .page-about {
 
-	@media $desktop {
+	& > .page-bar__h2 {
 
-		margin-left: 24px;
-
-	}
-
-	& > p {
-
-		font-size: 18px;
-
-	}
-
-	& > h2 {
-
+		text-align: left;
 		font-size: 28px;
-		margin: 32px 0 56px;
 
 	}
 
@@ -106,39 +74,6 @@
 				text-decoration: none;
 
 			}
-
-		}
-
-	}
-
-	&__h2 {
-
-		font-weight: 400;
-		font-size: 32px;
-		line-height: 1.2;
-		text-transform: uppercase;
-		text-align: center;
-
-		@media $smWidth {
-
-			font-size: 24px;
-
-		}
-
-	}
-
-	&__h3 {
-
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 1.2;
-		text-transform: uppercase;
-
-		@media $smWidth {
-
-			font-size: 18px;
-			font-weight: 600;
-			text-transform: none;
 
 		}
 

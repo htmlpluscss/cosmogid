@@ -14,66 +14,7 @@
 
 				<div class="modal-cdek__box">
 
-					<div class="modal-cdek__map">
-
-					</div>
-
-					<div class="modal-cdek__list">
-
-						<div class="modal-cdek__filter">
-
-							<div class="inputbox">
-
-								<label class="inputbox__label" for="modal-cdek-name">
-									Выбор пункта выдачи
-								</label>
-
-								<input class="input" name="keywords" placeholder="Найти по метро или улице" id="modal-cdek-name">
-
-								<svg width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="#svg-search"/>
-								</svg>
-
-							</div>
-
-						</div>
-
-						<div class="modal-cdek__scroll is-scroll">
-
-{% for i in range(0,10) %}
-
-							<label class="cdek-radio">
-
-								<input class="cdek-radio__input visuallyhidden" type="radio" name="placemark" value="1">
-
-								<span class="cdek-radio__label">
-
-									<span class="cdek-radio__name">
-										Уралмаш
-									</span>
-
-									<span class="cdek-radio__address">
-										г. Екатериньбург, ул. улица Фёдора Полетаева, дом 34, корпус 1
-									</span>
-
-									<span class="cdek-radio__desc">
-										Постамат Box 3024 <br>
-										Срок хранения заказа: 2 дн
-									</span>
-
-									<span class="cdek-radio__info">
-										Доставка: вт., 12 дек., Бесплатно
-									</span>
-
-								</span>
-
-							</label>
-
-{% endfor %}
-
-						</div>
-
-					</div>
+{% include "template/modal/map-points-issue.html" %}
 
 				</div>
 

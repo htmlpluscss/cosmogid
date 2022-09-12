@@ -24,9 +24,135 @@
 
 				</div>
 
-				<div class="page-bar__body page-about">
+				<div class="page-bar__body page-shipping">
 
+					<form action="/" class="page-shipping-place">
 
+						<p class="page-shipping-place__label">
+							Введите название вашего населенного пункта, и мы предложим варианты доставки
+						</p>
+
+						<div class="page-shipping-place__fieldset">
+
+							<input name="keywords" class="input" placeholder="В какой город вам привезти заказ?">
+
+							<button class="button" aria-label="Искать">
+
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="#svg-search"/>
+								</svg>
+
+							</button>
+
+						</div>
+
+					</form>
+
+					<ul class="page-shipping-type">
+
+						<li class="page-shipping-type__item">
+
+							<div class="page-shipping-type__img">
+
+								<div class="ico-box">
+
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-truck"/>
+									</svg>
+
+								</div>
+
+							</div>
+
+							<p>
+								Курьером Cosmogid
+							</p>
+
+						</li>
+
+						<li class="page-shipping-type__item">
+
+							<div class="page-shipping-type__img">
+
+								<div class="ico-box">
+
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-gift"/>
+									</svg>
+
+								</div>
+
+							</div>
+
+							<p>
+								Самовывоз
+							</p>
+
+						</li>
+
+						<li class="page-shipping-type__item">
+
+							<div class="page-shipping-type__img">
+
+								<img src="/img/shipping/cdek.svg" width="116" height="32" loading="lazy" alt="Курьером СДЭК {{ title }} {{ site }}">
+
+							</div>
+
+							<p>
+								Курьером СДЭК
+							</p>
+
+						</li>
+
+						<li class="page-shipping-type__item">
+
+							<div class="page-shipping-type__img">
+
+								<img src="/img/shipping/cdek.svg" width="116" height="32" loading="lazy" alt="Пункты выдачи СДЭК {{ title }} {{ site }}">
+
+							</div>
+
+							<p>
+								Пункты выдачи СДЭК
+							</p>
+
+						</li>
+
+						<li class="page-shipping-type__item">
+
+							<div class="page-shipping-type__img">
+
+								<img src="/img/shipping/russian_post.svg" width="130" height="63" loading="lazy" alt="Почта России {{ title }} {{ site }}">
+
+							</div>
+
+							<p>
+								Почта России
+							</p>
+
+						</li>
+
+						<li class="page-shipping-type__item">
+
+							<div class="page-shipping-type__img">
+
+								<img src="/img/shipping/russian_post.svg" width="130" height="63" loading="lazy" alt="Экспресс доставка EMS {{ title }} {{ site }}">
+
+							</div>
+
+							<p>
+								Экспресс доставка EMS
+							</p>
+
+						</li>
+
+					</ul>
+
+{% include "shipping/courier.html" %}
+
+{% include "shipping/in-store.html" %}
+
+{% include "shipping/boxberry.html" %}
 
 				</div>
 

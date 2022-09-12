@@ -73,6 +73,16 @@
 
 	}
 
+	.page-bar__h3 {
+
+		@media $smWidth {
+
+			margin: 48px 0 24px;
+
+		}
+
+	}
+
 }
 
 .contacts-form {
