@@ -315,6 +315,16 @@
 		padding: 2px 0 2px 44px;
 		display: block;
 
+		@media $desktop {
+
+			&:hover {
+
+				--purple: var(--color);
+
+			}
+
+		}
+
 		.ico-box {
 
 			position: absolute;

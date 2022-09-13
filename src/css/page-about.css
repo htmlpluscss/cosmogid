@@ -79,57 +79,6 @@
 
 	}
 
-	&__review {
-
-		margin: 128px 0;
-
-		@media $desktop {
-
-			.preview-swiper {
-
-				margin: 0;
-
-			}
-
-			.preview-swiper__wrap {
-
-				padding: 0 var(--indent);
-
-			}
-
-			.swiper-container {
-
-				width: 912px !important;
-				max-width: 100%;
-
-				&:not(.swiper-initialized) {
-
-					overflow: hidden;
-
-				}
-
-			}
-
-			.preview-swiper__item {
-
-				width: calc( ( 100% - ( var(--gap) * 2 ) ) / 3) !important;
-
-			}
-
-		}
-
-	}
-
-	&__certificates {
-
-		.certificates {
-
-			margin: 8px 0;
-
-		}
-
-	}
-
 }
 
 .video-clip {
