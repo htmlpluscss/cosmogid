@@ -6,20 +6,17 @@
 									Ваш город
 								</label>
 
-								<div class="select select--white">
+								<input class="input" name="city" placeholder="Населенный пункт" id="order-city" list="order-city-list" value="Екатеринбург">
 
-									<select id="order-city" name="city">
+								<datalist id="order-city-list">
 
-										<option value="none">Выбрать город</option>
-										<option value="2" selected="selected">Екатеринбург</option>
-										<option value="3">Москва</option>
-										<option value="4">Санкт-Петербург</option>
-										<option value="5">Казань</option>
-										<option value="6">Ростов-на-Дону</option>
+								{% for value in ["Екатеринбург","Москва","Санкт-Петербург","Казань","Ростов-на-Дону"] %}
 
-									</select>
+									<option value="{{ value }}">
 
-								</div>
+								{% endfor %}
+
+								</datalist>
 
 							</div>
 

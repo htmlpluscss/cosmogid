@@ -1,0 +1,122 @@
+					<div class="page-shipping__item">
+
+						<h2 class="page-bar__h3">
+							Доставка в ближайшие населенные пункты:
+						</h2>
+
+						<div class="page-shipping-table">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+	{% for th in ["Способ доставки","Город/район","Сроки","Стоимость","БЕСПЛАТНО при заказе от"] %}
+
+										<th>
+											{{ th }}
+										</th>
+
+	{% endfor %}
+
+									</tr>
+
+								</thead>
+
+	{% set tbody = [
+		{
+			name  : "Пункт выдачи заказа (ПВЗ)",
+			time  : "2 - 3 дня",
+			list  : [
+				{
+					name : "Бутово",
+					time  : "3 дня",
+					price : "340",
+					free  : "6700"
+				},
+				{
+					name : "Митино",
+					time  : "3 дня",
+					price : "340",
+					free  : "6700"
+				},
+				{
+					name : "Мосрентген",
+					time  : "3 дня",
+					price : "340",
+					free  : "6700"
+				},
+				{
+					name : "Некрасовка",
+					time  : "3 - 4 дня",
+					price : "340",
+					free  : "6700"
+				},
+				{
+					name : "Ново-Переделкино",
+					time  : "3 дня",
+					price : "340",
+					free  : "6700"
+				},
+				{
+					name : "Солнцево",
+					time  : "3 дня",
+					price : "240",
+					free  : "4770"
+				}
+			]
+		},
+		{
+			name  : "Курьер",
+			time  : "3 дня",
+			list  : [
+				{
+					name : "Бутово",
+					time  : "3 дня",
+					price : "490",
+					free  : "9700"
+				},
+				{
+					name : "Митино",
+					time  : "3 дня",
+					price : "490",
+					free  : "9700"
+				},
+				{
+					name : "Мосрентген",
+					time  : "3 дня",
+					price : "490",
+					free  : "9700"
+				},
+				{
+					name : "Некрасовка",
+					time  : "3 - 4 дня",
+					price : "490",
+					free  : "9700"
+				},
+				{
+					name : "Ново-Переделкино",
+					time  : "3 дня",
+					price : "490",
+					free  : "9700"
+				},
+				{
+					name : "Солнцево",
+					time  : "3 дня",
+					price : "330",
+					free  : "6480"
+				}
+			]
+		}
+	] %}
+
+	{% include "shipping/tbody.html" %}
+
+							</table>
+
+						</div>
+
+{% include "shipping/note.html" %}
+
+					</div>

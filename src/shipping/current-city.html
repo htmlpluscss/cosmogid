@@ -1,0 +1,66 @@
+					<div class="page-shipping__item">
+
+						<h2 class="page-bar__h3">
+							В вашем городе доступны:
+						</h2>
+
+						<div class="page-shipping-current-city">
+
+							<ul>
+
+								<li>
+								 	<a href="#shipping-map">309 пунктов выдачи заказов (ПВЗ)</a>
+								</li>
+
+								<li>
+									Курьерская доставка
+								</li>
+
+							</ul>
+
+						</div>
+
+						<div class="page-shipping-table">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+	{% for th in ["Способ доставки","Сроки","Стоимость","БЕСПЛАТНО при заказе от"] %}
+
+										<th>
+											{{ th }}
+										</th>
+
+	{% endfor %}
+
+									</tr>
+
+								</thead>
+
+	{% set tbody = [
+		{
+			name  : "Пункт выдачи заказа (ПВЗ)",
+			time  : "2 - 3 дня",
+			price : "810",
+			free  : "16200"
+		},
+		{
+			name  : "Курьер",
+			time  : "3 дня",
+			price : "300",
+			free  : "6000"
+		}
+	] %}
+
+	{% include "shipping/tbody.html" %}
+
+							</table>
+
+						</div>
+
+{% include "shipping/note.html" %}
+
+					</div>

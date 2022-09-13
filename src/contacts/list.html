@@ -6,7 +6,7 @@
 
 									{% if item.href %}
 
-									<a href="{{ item.href }}">
+									<a href="{{ item.href }}"{% if item.ico === 'whatsapp' or item.ico === 'telegram' %} target="_blank" rel="noopener nofollow"{% endif %}>
 
 									{% endif %}
 

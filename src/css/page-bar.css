@@ -82,6 +82,42 @@
 
 			}
 
+			b {
+
+				font-weight: 600;
+
+			}
+
+			a {
+
+				text-decoration: underline;
+				color: var(--purple);
+
+				&:hover {
+
+					text-decoration: none;
+
+				}
+
+			}
+
+		}
+
+		.accordion__body-inner {
+
+			a {
+
+				text-decoration: underline;
+				color: var(--purple);
+
+				&:hover {
+
+					text-decoration: none;
+
+				}
+
+			}
+
 		}
 
 	}

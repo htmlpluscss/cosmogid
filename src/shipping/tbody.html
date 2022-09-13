@@ -1,29 +1,64 @@
 							<tbody>
 
-{% for tr in tbody %}
+{% for row in tbody %}
+
+	{% if row.list %}
+
+		{% for tr in row.list %}
 
 								<tr>
+
+			{% if loop.first %}
+
+									<td rowspan="{{ row.list.length }}">
+										{{ row.name | safe }}
+									</td>
+
+			{% endif %}
 
 									<td>
 										{{ tr.name | safe }}
 									</td>
 
 									<td>
-										<b>1-2 дня</b>
-										без учета праздников
+										{{ tr.time | safe }}*
 									</td>
 
 									<td>
-										<b>500 руб</b>
-										бесплатно от 1500 руб
+										{{ tr.price | safe }} ₽**
 									</td>
 
 									<td>
-										<b>Наличные, На карту, Б/нал</b>
-										выбрать при оформлении заказа
+										{{ tr.free | safe }} ₽**
 									</td>
 
 								</tr>
+
+		{% endfor %}
+
+	{% else %}
+
+								<tr>
+
+									<td>
+										{{ row.name | safe }}
+									</td>
+
+									<td>
+										{{ row.time | safe }}*
+									</td>
+
+									<td>
+										{{ row.price | safe }} ₽**
+									</td>
+
+									<td>
+										{{ row.free | safe }} ₽**
+									</td>
+
+								</tr>
+
+	{% endif %}
 
 {% endfor %}
 
