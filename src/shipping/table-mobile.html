@@ -1,0 +1,49 @@
+							<div class="visible-sm">
+
+								<table>
+
+									<thead>
+
+										<tr>
+
+	{% for th in ["Способ <br>доставки","Срок <br> Стоимость","БЕСПЛАТНО <br>при заказе от"] %}
+
+											<th>
+												{{ th | safe }}
+											</th>
+
+	{% endfor %}
+
+										</tr>
+
+									</thead>
+
+									<tbody>
+
+	{% for tr in tbody %}
+
+
+										<tr>
+
+											<td>
+												{{ tr.name | safe }}
+											</td>
+
+											<td>
+												{{ tr.time | safe }} <br>
+												{{ tr.price | safe }} ₽
+											</td>
+
+											<td>
+												{{ tr.free | safe }} ₽
+											</td>
+
+										</tr>
+
+	{% endfor %}
+
+									</tbody>
+
+								</table>
+
+							</div>

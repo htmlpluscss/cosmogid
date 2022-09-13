@@ -6,7 +6,7 @@
 
 						<div class="page-shipping-table">
 
-							<table>
+							<table class="hidden-sm">
 
 								<thead>
 
@@ -26,7 +26,7 @@
 
 	{% set tbody = [
 		{
-			name  : "Пункт выдачи заказа (ПВЗ)",
+			name  : "Доставка в Пункты выдачи",
 			time  : "2 - 3 дня",
 			list  : [
 				{
@@ -68,7 +68,7 @@
 			]
 		},
 		{
-			name  : "Курьер",
+			name  : "Доставка Курьером",
 			time  : "3 дня",
 			list  : [
 				{
@@ -114,6 +114,8 @@
 	{% include "shipping/tbody.html" %}
 
 							</table>
+
+	{% include "shipping/table-mobile-list.html" %}
 
 						</div>
 

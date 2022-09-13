@@ -1,0 +1,56 @@
+							<div class="visible-sm">
+
+	{% for row in tbody %}
+
+								<h3 class="page-bar__h4">
+									{{ row.name }}
+								</h3>
+
+								<table>
+
+									<thead>
+
+										<tr>
+
+		{% for th in ["Город/район","Срок <br> Стоимость","БЕСПЛАТНО <br>при заказе от"] %}
+
+											<th>
+												{{ th | safe }}
+											</th>
+
+		{% endfor %}
+
+										</tr>
+
+									</thead>
+
+									<tbody>
+
+				{% for tr in row.list %}
+
+										<tr>
+
+											<td>
+												{{ tr.name | safe }}
+											</td>
+
+											<td>
+												{{ tr.time | safe }} <br>
+												{{ tr.price | safe }} ₽
+											</td>
+
+											<td>
+												{{ tr.free | safe }} ₽
+											</td>
+
+										</tr>
+
+				{% endfor %}
+
+									</tbody>
+
+								</table>
+
+	{% endfor %}
+
+							</div>
