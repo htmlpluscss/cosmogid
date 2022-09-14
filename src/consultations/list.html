@@ -1,0 +1,63 @@
+			<div class="consultations__list">
+
+{% for item in range(0,4) %}
+
+				<article class="consultations-card">
+
+					<figure class="consultations-card__expert">
+
+						<picture>
+
+							<source srcset="/img/consultations/expert/{{ loop.index }}--80x80.webp 1x, /img/consultations/expert/{{ loop.index }}--160x160.webp 2x" type="image/webp">
+							<source srcset="/img/consultations/expert/{{ loop.index }}--80x80.jpg 1x, /img/consultations/expert/{{ loop.index }}--160x160.jpg 2x">
+
+							<img src="/img/consultations/expert/{{ loop.index }}--80x80.jpg" alt="Мария Кузякина" loading="lazy" width="80" height="80">
+
+						</picture>
+
+						<figcaption>
+
+							эксперт <br>
+							Мария Кузякина
+
+						</figcaption>
+
+					</figure>
+
+					<blockquote class="consultations-card__question">
+
+						<address class="consultations-card__question-name">
+							Вопрос от Ольги:
+						</address>
+
+						<p class="consultations-card__question-text">
+							Лишь действия представителей оппозиции освещают чрезвычайно интересные особенности картины в целом, однако.
+						</p>
+
+						<ul class="consultations-card__question-tags">
+							<li>
+								#уход за кожей
+							</li>
+							<li>
+								#маски
+							</li>
+							<li>
+								#revlon
+							</li>
+						</ul>
+
+					</blockquote>
+
+					<div class="consultations-card__foot">
+
+						<a href="/consultations/item/" class="btn">
+							Смотреть ответ
+						</a>
+
+					</div>
+
+				</article>
+
+{% endfor %}
+
+			</div>

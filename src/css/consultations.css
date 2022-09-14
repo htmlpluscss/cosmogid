@@ -1,0 +1,200 @@
+.consultations {
+
+	&__text {
+
+		margin: 56px 0;
+		font-size: 18px;
+
+	}
+
+	&__list {
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 48px;
+		margin: 24px 0;
+
+	}
+
+	&__pagin {
+
+		display: flex;
+		justify-content: center;
+		margin: 48px 0;
+
+	}
+
+	&__billboards {
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+		margin: 120px 0 48px;
+
+	}
+
+}
+
+.filter-row {
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+
+		position: relative;
+		margin-right: 16px;
+
+	}
+
+	&__btn {
+
+		padding: 16px;
+		display: flex;
+		justify-content: space-between;
+		width: 240px;
+		align-items: center;
+		height: 65px;
+		border: 1px solid #d1d5db;
+		font-weight: 600;
+		font-size: 14px;
+		color: var(--gray);
+
+		&.is-checked {
+
+			color: var(--purple);
+
+		}
+
+	}
+
+	&__item:not(.is-open) &__btn:hover {
+
+		/* border-color: var(--purple); */
+
+	}
+
+	&__wrap {
+
+		position: absolute;
+		top: 64px;
+		left: 0;
+		right: 0;
+		padding-right: 8px;
+		padding-bottom: 8px;
+		background-color: #fff;
+		z-index: 1;
+		border: 1px solid #d1d5db;
+		border-top-color: #fff;
+
+	}
+
+	&__item:not(.is-open) &__wrap {
+
+		display: none;
+
+	}
+
+	&__list {
+
+		max-height: 256px;
+		padding-left: 16px;
+
+	}
+
+	&__checkbox {
+
+		.checkbox {
+
+			&::before {
+
+				position: absolute;
+				top: 0;
+				left: -16px;
+				right: 0;
+				bottom: 0;
+				content: '';
+				cursor: pointer;
+
+			}
+
+			&__label {
+
+				font-size: 12px;
+
+			}
+
+		}
+
+	}
+
+}
+
+.consultations-card {
+
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	background-color: #f9fafb;
+	color: var(--gray);
+
+	&__expert {
+
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		margin-bottom: 24px;
+		line-height: 1.2;
+
+		img {
+
+			border-radius: 50%;
+			margin-right: 8px;
+
+		}
+
+	}
+
+	&__question {
+
+		margin-bottom: 24px;
+
+		&-name {
+
+			font-style: normal;
+			font-weight: 600;
+			margin-bottom: 8px;
+
+		}
+
+		&-text {
+
+			margin-bottom: 8px;
+
+		}
+
+		&-tags {
+
+			color: var(--purple);
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+
+		}
+
+	}
+
+	&__foot {
+
+		display: flex;
+		margin-top: auto;
+
+		.btn {
+
+			min-width: 300px;
+
+		}
+
+	}
+
+}

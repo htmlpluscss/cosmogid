@@ -1,0 +1,61 @@
+			<form action="/" class="filter-row">
+
+{% for checkbox in ["Проблемы головы","Проблемы кожи лица","Проблемы волос","Проблемы рук"] %}
+
+	{% if loop.index === 2 %}
+
+		{% set checked = ' is-checked' %}
+
+	{% else %}
+
+		{% set checked = '' %}
+
+	{% endif %}
+
+				<div class="filter-row__item">
+
+					<button class="filter-row__btn button{{ checked }}" type="button">
+
+						{{ checkbox }}
+
+						<svg width="16" height="16" viewBox="0 0 24 24">
+							<use xlink:href="#svg-plus"/>
+						</svg>
+
+					</button>
+
+					<div class="filter-row__wrap">
+
+						<ul class="filter-row__list is-scroll">
+
+{% for item in range(0,4) %}
+
+{% for checkbox in ["Проблемы рук","Уход за лицом","Уход за головой","Уход за ушами","Уход за телом","Уход за волосами пяточек","Уход за волосами","Полировка затылка"] %}
+
+							<li class="filter-row__checkbox">
+
+								<label class="checkbox">
+
+									<input type="checkbox" class="checkbox__input visuallyhidden"{% if loop.index === 2 and checked !== '' %} checked="checked"{% endif %}{% if loop.index === 6 %} disabled="disabled"{% endif %}>
+
+									<span class="checkbox__label">
+										{{ checkbox }}
+									</span>
+
+								</label>
+
+							</li>
+
+{% endfor %}
+
+{% endfor %}
+
+						</ul>
+
+					</div>
+
+				</div>
+
+{% endfor %}
+
+			</form>

@@ -1,0 +1,48 @@
+			<div class="consultations__billboards">
+
+{% for item in range(0,2) %}
+
+				<aside class="billboard-consultation">
+
+					<div class="billboard-consultation__content">
+
+						<p class="billboard-consultation__slogan">
+							именно для вас
+						</p>
+
+						<h2 class="billboard-consultation__title">
+							схема ухода от мастера
+						</h2>
+
+						<p class="billboard-consultation__text">
+							Разнообразный и богатый опыт говорит нам, что высококачественный прототип.
+						</p>
+
+						<div class="billboard-consultation__foot">
+
+							<a class="btn" href="/">
+								Подобрать схему ухода
+							</a>
+
+						</div>
+
+					</div>
+
+					<div class="billboard-consultation__img">
+
+						<picture>
+
+							<source srcset="/img/consultations/billboard/600x380.webp 1x, /img/consultations/billboard/1200x760.webp 2x" type="image/webp">
+							<source srcset="/img/consultations/billboard/600x380.jpg 1x, /img/consultations/billboard/1200x760.jpg 2x">
+
+							<img src="/img/consultations/billboard/600x380.jpg" alt="{{ title }}" loading="lazy" width="600" height="380">
+
+						</picture>
+
+					</div>
+
+				</aside>
+
+{% endfor %}
+
+			</div>
