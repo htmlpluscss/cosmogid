@@ -1,0 +1,123 @@
+						<div class="menu-catalog__column">
+
+							<ul class="menu-catalog__level-2">
+
+								<li>
+
+									<a class="menu-catalog__link is-level-2 is-open" href="/">
+										Пилинги
+									</a>
+
+									<ul class="menu-catalog__level-3">
+
+				{% for level3 in ["Пилинги для тела и кожи головы","Пилинги, не требующие нейтрализатора","Желтый пилинг, ретиноевый пилинг","Карбоновый пилинг","Энзимный пилинг"] %}
+
+										<li>
+
+											<a class="menu-catalog__link is-level-3" href="/">
+												{{ level3 }}
+											</a>
+
+										</li>
+
+				{% endfor %}
+
+									</ul>
+
+								</li>
+
+							</ul>
+
+						</div>
+
+						<div class="menu-catalog__column">
+
+							<ul class="menu-catalog__level-3">
+
+		{% for level3 in ["Пилинг Джесснера","Пилинг с миндальной кислотой","Пилинг с кислотами prx t33","Пилинг гликолевый","Пилинг с молочной кислотой","Пилинг с салициловой кислотой","Маска пилинг","Гель пилинг"] %}
+
+								<li>
+
+									<a class="menu-catalog__link is-level-3" href="/">
+										{{ level3 }}
+									</a>
+
+								</li>
+
+		{% endfor %}
+
+							</ul>
+
+						</div>
+
+						<div class="menu-catalog__column">
+
+							<ul class="menu-catalog__level-3">
+
+		{% for level3 in ["Пилинг крем","Пилинг скатка","Пилинг с AHA (фруктовыми кислотами)","Пилинг с азелаиновой кислотой","Коралловый пилинг","Феруловый пилинг","Алмазный пилинг","Мыло пилинг"] %}
+
+								<li>
+
+									<a class="menu-catalog__link is-level-3" href="/">
+										{{ level3 }}
+									</a>
+
+								</li>
+
+		{% endfor %}
+
+							</ul>
+
+						</div>
+
+						<div class="menu-catalog__column">
+
+							<ul class="menu-catalog__level-2">
+
+								<li>
+
+									<a class="menu-catalog__link is-level-2 is-btn" href="/">
+										Скрабы, отшелушивающие средства
+									</a>
+
+									<ul class="menu-catalog__level-3">
+
+						{% for level3 in ["Скрабы для лица, шеи и зоны декольте","Отшелушивающие средства для лица и тела"] %}
+
+										<li>
+
+											<a class="menu-catalog__link is-level-3" href="/">
+												{{ level3 }}
+											</a>
+
+										</li>
+
+						{% endfor %}
+
+									</ul>
+
+								</li>
+
+				{% for level2 in ["Подготовка кожи к пилингу","Нейтрализаторы для пилингов","Восстановление кожи после пилинга"] %}
+
+								<li>
+
+									<a class="menu-catalog__link is-level-2" href="/">
+										{{ level2 }}
+									</a>
+
+								</li>
+
+				{% endfor %}
+
+								<li>
+
+									<a class="menu-catalog__link is-level-2 menu-catalog__link--sale" href="/">
+										Распродажа
+									</a>
+
+								</li>
+
+							</ul>
+
+						</div>

@@ -2,19 +2,28 @@
 
 						<div class="menu-catalog__grid center{% if item.mod %} menu-catalog__grid--{{ item.mod }}{% endif %}">
 
-		{% if item.name === 'Парфюмерия' %}
+		{% if item.sub === 'other' %}
 
-{% include "template/menu/grid.html" %}
+{% include "template/menu/all.html" %}
+
+						</div>
+{# это для разрыва grid #}
+						<div class="center">
 
 {% include "template/menu/brand-logo.html" %}
 
-		{% elif item.mod === 'brand' %}
+		{% elif item.sub %}
 
-{% include "template/menu/brand.html" %}
+{% include "template/menu/" + item.sub + ".html" %}
 
 		{% else %}
 
-					{% for column in item.sub %}
+					{% for column in [
+						["Academie (Франция)","Aerazen Lab (Италия)","Aespira (Австрия-Южная Корея)","Alfaparf Milano (Италия)"],
+						["Algologie (Франция)","Amenity (Япония)","American crew (США)","Anesi (Испания)"],
+						["Anna Lotan (Израиль)","Aravia Professional (Россия)","Beauty Style (США)","Carita (Франция)"],
+						["Casmara (Испания)","Cehko (Германия)","Daigo - метабиотик BS Corporation (Япония)","Davines (Италия)"]
+					] %}
 
 								<div class="menu-catalog__column">
 
