@@ -1,0 +1,36 @@
+	<section class="preview-swiper preview-swiper--consultations">
+
+		<h2 class="h1 preview-swiper__title">
+
+			{{ previewSwiperTitle | default ('Еще консультации на эту тему') }}
+
+		</h2>
+
+		<div class="preview-swiper__box">
+
+			<div class="preview-swiper__wrap">
+
+				<div class="preview-swiper__swiper swiper-container swiper-container--consultations">
+
+					<div class="preview-swiper__list swiper-wrapper">
+
+{% for i in range(0, 6) %}
+
+
+						<div class="preview-swiper__item preview-swiper__item--consultations swiper-slide">
+
+{% include "consultations/card.html" %}
+
+						</div>
+
+{% endfor %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>

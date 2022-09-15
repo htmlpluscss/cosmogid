@@ -31,6 +31,18 @@
 		gap: 24px;
 		margin: 120px 0 48px;
 
+		@media $mdWidth {
+
+			display: block;
+
+			.billboard-consultation {
+
+				margin: 24px 0;
+
+			}
+
+		}
+
 	}
 
 }
@@ -85,7 +97,7 @@
 		background-color: #fff;
 		z-index: 1;
 		border: 1px solid #d1d5db;
-		border-top-color: #fff;
+		border-top: 0;
 
 	}
 
@@ -132,11 +144,13 @@
 
 .consultations-card {
 
-	display: flex;
-	flex-direction: column;
-	padding: 24px;
-	background-color: #f9fafb;
 	color: var(--gray);
+
+	.page-article & {
+
+		margin: 72px 24px 48px;
+
+	}
 
 	&__expert {
 
@@ -157,19 +171,19 @@
 
 	&__question {
 
-		margin-bottom: 24px;
-
 		&-name {
 
 			font-style: normal;
 			font-weight: 600;
 			margin-bottom: 8px;
+			font-size: 18px;
 
 		}
 
 		&-text {
 
-			margin-bottom: 8px;
+			margin-bottom: 16px;
+			font-size: 18px;
 
 		}
 
@@ -188,12 +202,36 @@
 
 		display: flex;
 		margin-top: auto;
+		padding-top: 24px;
 
 		.btn {
 
 			min-width: 300px;
 
+			@media $smWidth {
+
+				min-width: 100%;
+
+			}
+
 		}
+
+	}
+
+	&--link {
+
+		display: flex;
+		flex-direction: column;
+		padding: 24px;
+		background-color: #f9fafb;
+
+	}
+
+	&--link &__question-name,
+	&--link &__question-text {
+
+		margin-bottom: 8px;
+		font-size: 14px;
 
 	}
 

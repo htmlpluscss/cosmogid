@@ -1,53 +1,42 @@
-{% set title = "Акция косметика для жопки от Bode" %}
+{% set title = "Пилинги на летний период" %}
 
-{% set description = "Мы продаем профессиональную косметику оптом и в розницу, с доставкой по Москве, Санкт-Петербургу, Екатеринбургу и другим городам России. Вся косметика, представленная в нашем магазине, оригинальная и сертифицированная на территории Российской Федерации" %}
+{% set description = "Лишь действия представителей оппозиции освещают чрезвычайно интересные особенности картины в целом, однако." %}
 
 {% set breadcrumbsMod = "is-small" %}
-{% set breadcrumbs = ["Акции", "Акция от Bode"] %}
+{% set breadcrumbs = ["Консультации",title] %}
+
+{% set ogType = "article" %}
+{% set urlPage = "consultations/item" %}
+{% set ogImage = "img/consultations/expert/1--160x160.jpg" %}
+{% set ogImage256 = "img/consultations/expert/1--160x160.jpg" %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-{% include "_include/content.html" %}
-
 	<div class="center">
 
-		<article class="catalog">
+{% include "consultations/item/body.html" %}
 
-			<h1 class="title">
-				{{ title }}
-			</h1>
+{% include "_include/consultations.html" %}
 
-			<div class="catalog__box">
+{% set previewSwiperTitle = "Отзывы о товарах этого раздела" %}
 
-				<div class="catalog__filter">
+{% include "_include/review.html" %}
 
-{% include "catalog/filter.html" %}
+{% include "consultations/billboards.html" %}
 
-				</div>
-
-				<div class="catalog__body">
-
-{% include "sale/item/billboard.html" %}
-
-{% include "catalog/sort.html" %}
-
-{% include "catalog/tags.html" %}
-
-{% include "catalog/list.html" %}
-
-{% include "catalog/foot.html" %}
-
-				</div>
-
-			</div>
-
-		</article>
+{% set previewSwiperTitle = "Вы недавно смотрели" %}
 
 {% include "_include/recently-watched.html" %}
 
-{% include "_include/review.html" %}
+		<div class="page-article-related">
+
+{% set previewSwiperTitle = "Вам так же может быть интересно" %}
+
+{% include "_include/news.html" %}
+
+		</div>
 
 {% include "_include/support.html" %}
 

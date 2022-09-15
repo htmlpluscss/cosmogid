@@ -30,7 +30,15 @@
 
 {% include "consultations/sort.html" %}
 
-{% include "consultations/list.html" %}
+			<div class="consultations__list">
+
+{% for item in range(0,4) %}
+
+{% include "consultations/card.html" %}
+
+{% endfor %}
+
+			</div>
 
 {% include "consultations/foot.html" %}
 
