@@ -339,6 +339,13 @@
 		flex-direction: column;
 		color: var(--gray);
 
+		@media $smWidth {
+
+			width: auto;
+			padding: 24px;
+
+		}
+
 	}
 
 	&__slogan {
@@ -382,6 +389,12 @@
 		.btn {
 
 			min-width: 300px;
+
+			@media $smWidth {
+
+				min-width: 100%
+
+			}
 
 		}
 

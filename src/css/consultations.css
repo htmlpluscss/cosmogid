@@ -150,6 +150,12 @@
 
 		margin: 72px 24px 48px;
 
+		@media $mdWidth {
+
+			margin: 24px 0;
+
+		}
+
 	}
 
 	&__expert {
