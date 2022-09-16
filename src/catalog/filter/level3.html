@@ -1,0 +1,47 @@
+				<fieldset class="filter__fieldset">
+
+					<legend class="filter__legend is-open">
+						Категории
+					</legend>
+
+					<div class="filter__box js-live-search">
+
+						<div class="filter__fastfilter">
+
+							<input class="input js-live-search__input" placeholder="Поиск">
+
+							<button class="button filter__fastfilter-reset js-live-search__reset hide" type="button" aria-label="Очистить поле">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="#svg-close"/>
+								</svg>
+							</button>
+
+						</div>
+
+						<div class="filter__scroll is-scroll">
+
+							<div class="filter-menu">
+
+{% for name in ["Аромасвечи","Эфирные и аромамасла","Аромакосметика для лица","Аромакосметика для тела","Массажные арома-масла","Цветочные воды","Базовые масла","Масла с фитоэстрагенами","Травяные сборы","Косметические арома-основы","Терапевтические смеси эфирных масел","Аромасборы","Аромакосметика для загара","Очищение, аромапилинги, скрабы","Арома уход за волосами и кожей головы","Детская аромакосметика гипоаллергенная","Аромакосметика для будущих мам и совместимая с лактацией","Эфирные масла для духовных и энергетических практик","Книги и материалы по ароматерапии"] %}
+
+								<label class="filter-menu__link js-live-search__item" data-live-search="{{ name }}">
+
+									<input class="visuallyhidden" type="checkbox">
+
+									<span>
+
+										{{ name }}
+
+									</span>
+
+								</label>
+
+{% endfor %}
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</fieldset>

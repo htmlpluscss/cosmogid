@@ -179,7 +179,7 @@ gulp.task('ftp', () => {
 	const f = filter('**/*.html', {restore: true});
 	const conn = ftp.create( config.ftp );
 
-	return gulp.src( ['build/**/*'], {since: gulp.lastRun('ftp')} )
+	return gulp.src( ['build/**/*','!build/img/**/*'], {since: gulp.lastRun('ftp')} )
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('"https://' + site, '"https://' + domain))

@@ -2,7 +2,11 @@
 
 						<div class="menu-catalog__grid center{% if item.mod %} menu-catalog__grid--{{ item.mod }}{% endif %}">
 
-		{% if item.sub === 'other' %}
+		{% if item.level2 === 'brand' %}
+
+{% include "template/menu/brand.html" %}
+
+		{% elif item.level2 === 'other' %}
 
 {% include "template/menu/all.html" %}
 
@@ -12,40 +16,9 @@
 
 {% include "template/menu/brand-logo.html" %}
 
-		{% elif item.sub %}
-
-{% include "template/menu/" + item.sub + ".html" %}
-
 		{% else %}
 
-					{% for column in [
-						["Academie (Франция)","Aerazen Lab (Италия)","Aespira (Австрия-Южная Корея)","Alfaparf Milano (Италия)"],
-						["Algologie (Франция)","Amenity (Япония)","American crew (США)","Anesi (Испания)"],
-						["Anna Lotan (Израиль)","Aravia Professional (Россия)","Beauty Style (США)","Carita (Франция)"],
-						["Casmara (Испания)","Cehko (Германия)","Daigo - метабиотик BS Corporation (Япония)","Davines (Италия)"]
-					] %}
-
-								<div class="menu-catalog__column">
-
-									<ul class="menu-catalog__level-2">
-
-							{% for level2 in item.sub[loop.index0] %}
-
-										<li>
-
-											<a class="menu-catalog__link is-level-2" href="/">
-												{{ level2 }}
-											</a>
-
-										</li>
-
-							{% endfor %}
-
-									</ul>
-
-								</div>
-
-					{% endfor %}
+{% include "template/menu/grid.html" %}
 
 		{% endif %}
 

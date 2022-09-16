@@ -1,0 +1,57 @@
+		{% for column in item.level2 %}
+
+				{% set lastColumn = loop.last %}
+
+						<div class="menu-catalog__column">
+
+							<ul class="menu-catalog__level-2">
+
+				{% for level2 in column %}
+
+								<li>
+
+									<a class="menu-catalog__link is-level-2{% if level2.level3 %} is-btn{% endif %}" href="/catalog/level2/">
+										{{ level2.name }}
+									</a>
+
+						{% if level2.level3 %}
+
+									<ul class="menu-catalog__level-3">
+
+								{% for level3 in level2.level3 %}
+
+										<li>
+
+											<a class="menu-catalog__link is-level-3" href="/catalog/">
+												{{ level3 }}
+											</a>
+
+										</li>
+
+								{% endfor %}
+
+									</ul>
+
+						{% endif %}
+
+								</li>
+
+						{% if loop.last and lastColumn %}
+
+								<li>
+
+									<a class="menu-catalog__link is-level-2 menu-catalog__link--sale" href="/catalog/level2/">
+										Распродажа
+									</a>
+
+								</li>
+
+						{% endif %}
+
+				{% endfor %}
+
+							</ul>
+
+						</div>
+
+		{% endfor %}

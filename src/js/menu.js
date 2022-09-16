@@ -16,7 +16,7 @@
 		icoPlus.setAttributeNS(null, "width", 16);
 		icoPlus.setAttributeNS(null, "height", 16);
 
-		icoPlus.innerHTML = '<rect x="7" y="2" width="2" height="12"/><rect x="2" y="7" width="12" height="2"/>';
+//		icoPlus.innerHTML = '<rect x="7" y="2" width="2" height="12"/><rect x="2" y="7" width="12" height="2"/>';
 
 		// иконка right level1 и level2
 		const level_1 = menu.querySelectorAll('.menu-catalog__link--arrow'),
@@ -79,7 +79,7 @@
 
 					}
 
-					btn.append(icoPlus.cloneNode(true));
+	//				btn.append(icoPlus.cloneNode(true));
 
 				});
 
@@ -125,9 +125,13 @@
 
 			btn.addEventListener('click', event => {
 
-				event.preventDefault();
+				if ( window.innerWidth < 1250 ) {
 
-				btn.classList.toggle('is-open');
+					event.preventDefault();
+
+					btn.classList.toggle('is-open');
+
+				}
 
 			});
 
