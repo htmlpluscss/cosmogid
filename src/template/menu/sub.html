@@ -6,19 +6,20 @@
 
 {% include "template/menu/brand.html" %}
 
-		{% elif item.level2 === 'other' %}
-
-{% include "template/menu/all.html" %}
-
-						</div>
-{# это для разрыва grid #}
-						<div class="center">
-
-{% include "template/menu/brand-logo.html" %}
-
 		{% else %}
 
 {% include "template/menu/grid.html" %}
+
+			{% if item.name === 'Другие' %}
+
+						</div>
+				{# это для разрыва grid #}
+						<div class="center">
+
+				{% include "template/menu/brand-logo.html" %}
+
+
+			{% endif %}
 
 		{% endif %}
 
