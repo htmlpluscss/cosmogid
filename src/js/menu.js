@@ -9,17 +9,10 @@
 
 		// иконка level2 +
 
-		const linkBtn = menu.querySelectorAll('.menu-catalog__link.is-btn'),
-			  icoPlus = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-
-		icoPlus.setAttributeNS(null, "viewBox", "0 0 16 16");
-		icoPlus.setAttributeNS(null, "width", 16);
-		icoPlus.setAttributeNS(null, "height", 16);
-
-//		icoPlus.innerHTML = '<rect x="7" y="2" width="2" height="12"/><rect x="2" y="7" width="12" height="2"/>';
+		const linkBtn = menu.querySelectorAll('.menu-catalog__link.is-btn');
 
 		// иконка right level1 и level2
-		const level_1 = menu.querySelectorAll('.menu-catalog__link--arrow'),
+		const level_1 = menu.querySelectorAll('.menu-catalog__link--level-1'),
 			  icoRight = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
 		icoRight.setAttributeNS(null, "viewBox", "0 0 32 32");
@@ -28,96 +21,7 @@
 
 		icoRight.innerHTML = '<path d="M14 22.67a1.33 1.33 0 0 1-.95-2.28L17.48 16l-4.24-4.41a1.33 1.33 0 0 1 1.89-1.89l5.15 5.34c.5.52.5 1.35 0 1.87l-5.33 5.33c-.25.26-.58.41-.94.43Z"/></svg>';
 
-		// resize
-
-		const resize = () => {
-
-			if ( window.innerWidth < 1250 ) {
-
-				[...level_1].forEach( btn => {
-
-					if ( btn.querySelector('svg') === null ) {
-
-						btn.append(icoRight.cloneNode(true));
-
-					}
-
-				});
-
-				[...linkBtn].forEach( btn => {
-
-					if ( btn.querySelector('svg') ) {
-
-						btn.querySelector('svg').remove();
-
-					}
-
-					btn.append(icoRight.cloneNode(true));
-
-				});
-
-			} else {
-
-				back.classList.add('hide');
-				body.classList.add('hide');
-
-				[...level_1].forEach( btn => {
-
-					if ( btn.querySelector('svg') ) {
-
-						btn.querySelector('svg').remove();
-
-					}
-
-				});
-
-				[...linkBtn].forEach( btn => {
-
-					if ( btn.querySelector('svg') ) {
-
-						btn.querySelector('svg').remove();
-
-					}
-
-	//				btn.append(icoPlus.cloneNode(true));
-
-				});
-
-			}
-
-		}
-
-		resize();
-
-		let resizeTimeout = null,
-			windowWidthOLd = window.innerWidth;
-
-		window.addEventListener("resize", () => {
-
-			window.requestAnimationFrame( () => {
-
-				if (resizeTimeout === null) {
-
-					resizeTimeout = setTimeout( () => {
-
-						resizeTimeout = null;
-
-						if(windowWidthOLd !== window.innerWidth) {
-
-							resize();
-
-						}
-
-					}, 100);
-
-				}
-
-			});
-
-		});
-
-		// end resize
-
+		[...linkBtn,...level_1].forEach( btn => btn.append(icoRight.cloneNode(true)));
 
 		// клик по level2 => раскрытие level3
 

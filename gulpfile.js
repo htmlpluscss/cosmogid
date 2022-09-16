@@ -43,6 +43,7 @@ let config             = null;
 
 const site             = 'cosmogid.ru';
 const domain           = 'cosmogid.htmlpluscss.website';
+const menu             = require('./menu.json');
 const brands           = require('./brands.json');
 
 try {
@@ -66,6 +67,7 @@ const html = (files, since = {}, folder = '') => {
 			data: {
 				url: 'https://' + site,
 				site: site,
+				menu: menu,
 				brands: brands
 			},
 			path: 'src/'
