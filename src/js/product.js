@@ -42,31 +42,44 @@
 
 		// gallery
 
-		const galleryPreview = product.querySelectorAll('.product-gallery__preview-link');
+		const gallery = product.querySelector('.product-gallery');
+			  galleryPreview = product.querySelectorAll('.product-gallery__preview-link');
 
-		[...galleryPreview].forEach( link => {
+		const setActiveImg = link => {
 
-			link.addEventListener('click', event => {
+			let index = null;
+
+			[...galleryPreview].forEach( (_link,_index) => {
+
+				_link.parentNode.classList.toggle('is-current', _link === link);
+
+				if ( _link === link ) {
+
+					index = _index;
+
+				}
+
+			});
+
+			product.querySelector('.swiper-container--product').swiper.slideToLoop(index);
+
+		}
+
+		gallery.addEventListener('click', event => {
+
+			const targetLink = event.target.closest('a');
+
+			if ( targetLink ) {
 
 				event.preventDefault();
 
-				let index = null;
+				if ( targetLink.classList.contains('product-gallery__preview-link') ) {
 
-				[...galleryPreview].forEach( (_link,_index) => {
+					setActiveImg(targetLink);
 
-					_link.parentNode.classList.toggle('is-current', _link === link);
+				}
 
-					if ( _link === link ) {
-
-						index = _index;
-
-					}
-
-				});
-
-				product.querySelector('.swiper-container--product').swiper.slideToLoop(index);
-
-			});
+			}
 
 		});
 
@@ -91,7 +104,7 @@
 
 				if ( link.getAttribute('data-articleid') === articleId ) {
 
-					link.dispatchEvent(new Event('click'));
+					setActiveImg(link);
 
 				}
 
