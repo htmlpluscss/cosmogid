@@ -54,6 +54,18 @@
 
 	}
 
+	&__footer {
+
+		margin: 24px;
+
+		@media $smWidth {
+
+			margin: 24px 0;
+
+		}
+
+	}
+
 	&__share {
 
 		position: relative;

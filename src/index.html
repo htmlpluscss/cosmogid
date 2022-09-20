@@ -16,7 +16,7 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "calendar"
+			selector: "consultation"
 		}
 	});
 
@@ -82,10 +82,10 @@ setTimeout( ()=> {
 			<a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fproduct%2F">Product, BreadcrumbList</a>
 		</li>
 		<li>
-			<a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fcontacts%2F">Contacts</a>
+			<a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fcontacts%2F">Organization</a>
 		</li>
 		<li>
-			<a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fconsultations%2Fitem%2F">Страница Консультации</a>
+			<a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fconsultations%2Fitem%2F">FAQPage</a>
 		</li>
 	</ul>
 
@@ -283,6 +283,18 @@ setTimeout( ()=> {
 
 			<button class="btn btn--outline" data-modal="calendar">
 				Дата и время пикер
+			</button>
+
+		</div>
+
+	</div>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<button class="btn" data-modal="consultation">
+				О консультации
 			</button>
 
 		</div>

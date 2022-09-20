@@ -56,64 +56,6 @@
 
 				</div>
 
-				<div class="page-article__header-bar">
-
-					<div class="page-article__share">
-
-						<button class="page-article__share-btn button" type="button">
-
-							<span class="ico-box">
-								<svg width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="#svg-share"/>
-								</svg>
-							</span>
-
-							Поделиться
-
-						</button>
-
-						<ul class="page-article__share-list">
-
-							<li>
-								<a class="ico-box" href="https://t.me/share/url?url=https://cosmogid.htmlpluscss.website/news/article/&text={{ title }}" target="_blank" rel="noopener nofollow" title="Поделиться в Telegram">
-									<svg width="24" height="24" viewBox="0 0 24 24">
-										<use xlink:href="#svg-telegram"/>
-									</svg>
-								</a>
-							</li>
-
-							<li>
-								<a class="ico-box" href="https://api.whatsapp.com/send?text={{ title }}%20https://cosmogid.htmlpluscss.website/news/article/" target="_blank" rel="noopener nofollow" title="Поделиться в WhatsApp">
-									<svg width="24" height="24" viewBox="0 0 24 24">
-										<use xlink:href="#svg-whatsapp"/>
-									</svg>
-								</a>
-							</li>
-
-							<li>
-								<a onClick=" window.open(this.href, '', 'scrollbars=1,height='+Math.min(500, screen.availHeight)+',width='+Math.min(500, screen.availWidth)); return false" class="ico-box" href="https://vk.com/share.php?url=https://cosmogid.htmlpluscss.website/news/article/&title={{ title }}" target="_blank" rel="noopener nofollow" title="Поделиться Вконтакте">
-									<svg width="24" height="24" viewBox="0 0 24 24">
-										<use xlink:href="#svg-vkontakte"/>
-									</svg>
-								</a>
-							</li>
-
-						</ul>
-
-					</div>
-
-					<time class="page-article__date" datetime="2022-09-25">
-
-						<svg width="32" height="32" viewBox="0 0 24 24">
-							<use xlink:href="#svg-calendar"/>
-						</svg>
-
-						25.09.2022
-
-					</time>
-
-				</div>
-
 			</header>
 
 			<div class="page-article__body">
@@ -181,5 +123,53 @@
 				</p>
 
 			</div>
+
+			<footer class="page-article__footer">
+
+				<div class="page-article__share">
+
+					<button class="page-article__share-btn button" type="button">
+
+						<span class="ico-box">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="#svg-share"/>
+							</svg>
+						</span>
+
+						Поделиться
+
+					</button>
+
+					<ul class="page-article__share-list">
+
+						<li>
+							<a class="ico-box" href="https://t.me/share/url?url=https://cosmogid.htmlpluscss.website/news/article/&text={{ title }}" target="_blank" rel="noopener nofollow" title="Поделиться в Telegram">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="#svg-telegram"/>
+								</svg>
+							</a>
+						</li>
+
+						<li>
+							<a class="ico-box" href="https://api.whatsapp.com/send?text={{ title }}%20https://cosmogid.htmlpluscss.website/news/article/" target="_blank" rel="noopener nofollow" title="Поделиться в WhatsApp">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="#svg-whatsapp"/>
+								</svg>
+							</a>
+						</li>
+
+						<li>
+							<a onClick=" window.open(this.href, '', 'scrollbars=1,height='+Math.min(500, screen.availHeight)+',width='+Math.min(500, screen.availWidth)); return false" class="ico-box" href="https://vk.com/share.php?url=https://cosmogid.htmlpluscss.website/news/article/&title={{ title }}" target="_blank" rel="noopener nofollow" title="Поделиться Вконтакте">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="#svg-vkontakte"/>
+								</svg>
+							</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</footer>
 
 		</article>

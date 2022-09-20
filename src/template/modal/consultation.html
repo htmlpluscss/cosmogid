@@ -1,0 +1,127 @@
+			<div class="modal__item modal__item--consultation modal-login">
+
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						Подобрать личную схему ухода
+					</h3>
+
+					<p class="modal-login__text">
+						Наши специалисты работают с разными брендами и могут посоветовать лучшее индивидуально для&nbsp;Вас
+					</p>
+
+					<div class="modal__row">
+
+						<div class="inputbox">
+
+							<label class="inputbox__label" for="modal-consultation-name">
+								Как вас зовут
+							</label>
+
+							<input class="input" name="name" placeholder="Кузякина Марина" id="modal-consultation-name">
+
+							<span class="inputbox__text">
+								Информационное сообщение
+							</span>
+
+						</div>
+
+						<div class="inputbox">
+
+							<label class="inputbox__label" for="modal-consultation-email">
+								Ваша почта
+							</label>
+
+							<input class="input" name="email" placeholder="kuzyakina@mail.ru" id="modal-consultation-email" type="email">
+
+						</div>
+
+					</div>
+
+					<div class="modal__row">
+
+						<div class="inputbox">
+
+{% set modalMod = 'consultation' %}
+
+{% include "template/modal/modal-callback-phone.html" %}
+
+						</div>
+
+						<div class="inputbox">
+
+							<label class="inputbox__label" for="modal-consultation-telegram">
+								Ваш телеграмм
+							</label>
+
+							<input class="input" name="telegram" placeholder="Телефон или @никнейм" id="modal-consultation-telegram">
+
+						</div>
+
+					</div>
+
+					<h3 class="modal-login__title">
+						Опишите проблему и укажите ваши пожелания
+					</h3>
+
+					<p class="modal-login__text">
+						Опишите проблему чтобы наши специалисты могли получить первичное представление о Вас и квалифицированно проконсультировать&nbsp;Вас
+					</p>
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="modal-consultation-message">
+							Опишите проблему (обязательно)
+						</label>
+
+						<textarea class="input autosize" name="message" placeholder="Вот тут можно описать проблему" required="required" id="modal-consultation-message"></textarea>
+
+					</div>
+
+					<div class="modal__row">
+
+						<div class="inputbox">
+
+							<label class="inputbox__label" for="modal-consultation-price">
+								Желаемый бюджет
+							</label>
+
+							<input class="input" name="price" placeholder="от 500 до 1000 рублей" id="modal-consultation-price">
+
+						</div>
+
+						<div class="inputbox">
+
+							<label class="inputbox__label" for="modal-consultation-brand">
+								Предпочтения по бренду
+							</label>
+
+							<input class="input" name="brand" placeholder="Бренд или Страна" id="modal-consultation-brand">
+
+						</div>
+
+					</div>
+
+					<div class="modal__row">
+
+						<div class="modal__column">
+
+							<button class="btn btn--outline modal__close">
+								Отмена
+							</button>
+
+						</div>
+
+						<div class="modal__column">
+
+							<button class="btn">
+								Отправить
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>

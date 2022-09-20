@@ -7,7 +7,8 @@
 
 	}
 
-	const items = filter.querySelectorAll('.filter-row__item');
+	const items = filter.querySelectorAll('.filter-row__item'),
+		  itemReset = filter.querySelector('.filter-row__item--reset');
 
 	// change
 
@@ -27,7 +28,17 @@
 
 		});
 
-		item.querySelector('.filter-row__btn').classList.toggle('is-checked', checked);
+		item.querySelector('.filter-row__btn').classList.toggle('btn--outline', checked === false);
+
+		itemReset.querySelector('.filter-row__btn').classList.toggle('btn--outline', checked === true);
+
+	});
+
+	// reset
+
+	filter.addEventListener('reset', ()=> {
+
+		[...items].forEach( item => item.querySelector('.filter-row__btn').classList.toggle('btn--outline', item !== itemReset) );
 
 	});
 

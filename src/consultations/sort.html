@@ -1,61 +1,62 @@
 			<form action="/" class="filter-row">
 
-{% for checkbox in ["Проблемы головы","Проблемы кожи лица","Проблемы волос","Проблемы рук"] %}
+				<div class="visible-md">
 
-	{% if loop.index === 2 %}
-
-		{% set checked = ' is-checked' %}
-
-	{% else %}
-
-		{% set checked = '' %}
-
-	{% endif %}
-
-				<div class="filter-row__item">
-
-					<button class="filter-row__btn button{{ checked }}" type="button">
-
-						{{ checkbox }}
-
-						<svg width="16" height="16" viewBox="0 0 24 24">
-							<use xlink:href="#svg-plus"/>
-						</svg>
-
+					<button class="btn btn--filter js-filter-mobile-open" type="button">
+						Фильтры
 					</button>
-
-					<div class="filter-row__wrap">
-
-						<ul class="filter-row__list is-scroll">
-
-{% for item in range(0,4) %}
-
-{% for checkbox in ["Проблемы рук","Уход за лицом","Уход за головой","Уход за ушами","Уход за телом","Уход за волосами пяточек","Уход за волосами","Полировка затылка"] %}
-
-							<li class="filter-row__checkbox">
-
-								<label class="checkbox">
-
-									<input type="checkbox" class="checkbox__input visuallyhidden"{% if loop.index === 2 and checked !== '' %} checked="checked"{% endif %}{% if loop.index === 6 %} disabled="disabled"{% endif %}>
-
-									<span class="checkbox__label">
-										{{ checkbox }}
-									</span>
-
-								</label>
-
-							</li>
-
-{% endfor %}
-
-{% endfor %}
-
-						</ul>
-
-					</div>
 
 				</div>
 
+				<div class="filter-row__inner">
+
+					<div class="filter-row__item filter-row__item--reset">
+
+						<button class="filter-row__btn btn" type="reset">
+							Все
+						</button>
+
+					</div>
+
+{% for checkbox in ["Руки","Ноги","Лицо","Тело","Волосы","Кожа","Прочее"] %}
+
+					<div class="filter-row__item">
+
+						<button class="filter-row__btn btn btn--outline" type="button">
+							{{ checkbox }}
+						</button>
+
+						<div class="filter-row__wrap">
+
+							<ul class="filter-row__list is-scroll">
+
+{% for item in range(0,21) %}
+
+
+								<li class="filter-row__checkbox">
+
+									<label class="checkbox">
+
+										<input type="checkbox" class="checkbox__input visuallyhidden"{% if loop.index === 6 %} disabled="disabled"{% endif %}>
+
+										<span class="checkbox__label">
+											{{ ["Проблемы рук","Уход за лицом","Уход за головой","Уход за ушами","Уход за телом","Уход за волосами пяточек","Уход за волосами","Полировка затылка"] | random }}
+										</span>
+
+									</label>
+
+								</li>
+
 {% endfor %}
+
+							</ul>
+
+						</div>
+
+					</div>
+
+{% endfor %}
+
+				</div>
 
 			</form>

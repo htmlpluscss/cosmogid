@@ -714,6 +714,12 @@
 		margin-bottom: 8px;
 		text-align: center;
 
+		& ~ & {
+
+			margin-top: 56px;
+
+		}
+
 	}
 
 	&__intro {
@@ -750,6 +756,12 @@
 	&__title + .modal__row {
 
 		margin-top: 40px;
+
+	}
+
+	.input.autosize {
+
+		height: 40px;
 
 	}
 

@@ -14,6 +14,24 @@
 		gap: 48px;
 		margin: 24px 0;
 
+		@media $mdWidth {
+
+			gap: 24px;
+
+		}
+
+		@media $smWidth {
+
+			display: block;
+
+			.consultations-card {
+
+				margin: 24px 0;
+
+			}
+
+		}
+
 	}
 
 	&__pagin {
@@ -43,67 +61,98 @@
 
 		}
 
+		@media $smWidth {
+
+			margin: 48px 0;
+
+		}
+
+	}
+
+	.filter {
+
+		display: none;
+
+	}
+
+	@media $mdWidth {
+
+		.is-filter-show & > * {
+
+			display: none;
+
+		}
+
+		.is-filter-show & > .filter {
+
+			display: block;
+
+		}
+
 	}
 
 }
 
 .filter-row {
 
-	display: flex;
-	flex-wrap: wrap;
+	position: relative;
 
-	&__item {
+	&__inner {
 
-		position: relative;
-		margin-right: 16px;
-
-	}
-
-	&__btn {
-
-		padding: 16px;
 		display: flex;
-		justify-content: space-between;
-		width: 240px;
-		align-items: center;
-		height: 65px;
-		border: 1px solid #d1d5db;
-		font-weight: 600;
-		font-size: 14px;
-		color: var(--gray);
+		flex-wrap: wrap;
+		gap: 16px;
 
-		&.is-checked {
+		@media $mdWidth {
 
-			color: var(--purple);
+			display: none;
 
 		}
 
 	}
 
-	&__item:not(.is-open) &__btn:hover {
+	&__item {
 
-		/* border-color: var(--purple); */
+		position: relative;
+
+	}
+
+	&__item--reset &__btn {
+
+		text-transform: uppercase;
+
+	}
+
+	&__btn {
+
+		padding: 0 40px;
 
 	}
 
 	&__wrap {
 
 		position: absolute;
-		top: 64px;
+		top: 48px;
+		width: 240px;
 		left: 0;
-		right: 0;
-		padding-right: 8px;
-		padding-bottom: 8px;
+		padding: 8px;
+		padding-left: 0;
 		background-color: #fff;
 		z-index: 1;
 		border: 1px solid #d1d5db;
-		border-top: 0;
 
 	}
 
 	&__item:not(.is-open) &__wrap {
 
 		display: none;
+
+	}
+
+	&__item:last-child &__wrap {
+
+		left: auto;
+		right: 0;
 
 	}
 
@@ -137,6 +186,12 @@
 			}
 
 		}
+
+	}
+
+	.btn--filter {
+
+		margin: auto;
 
 	}
 

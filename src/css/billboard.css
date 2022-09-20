@@ -250,6 +250,20 @@
 		flex-direction: column;
 		color: var(--gray);
 
+		@media $mdWidth {
+
+			padding: 20px;
+			width: 560px;
+
+		}
+
+		@media $smWidth {
+
+			padding: 32px 16px;
+			width: 100%;
+
+		}
+
 	}
 
 	&__slogan {
@@ -267,6 +281,13 @@
 
 		}
 
+		@media $smWidth {
+
+			font-size: 14px;
+			margin-bottom: 16px;
+
+		}
+
 	}
 
 	&__title {
@@ -276,11 +297,37 @@
 		text-transform: uppercase;
 		line-height: 1.2;
 
+		@media $mdWidth {
+
+			font-size: 36px;
+
+		}
+
+		@media $smWidth {
+
+			font-size: 24px;
+			margin-bottom: 16px;
+
+		}
+
 	}
 
 	&__text {
 
 		font-size: 20px;
+
+		@media $mdWidth {
+
+			font-size: 18px;
+
+		}
+
+		@media $smWidth {
+
+			font-size: 14px;
+			width: 60%;
+
+		}
 
 	}
 
@@ -363,6 +410,12 @@
 
 		}
 
+		@media $smWidth {
+
+			margin-bottom: 16px;
+
+		}
+
 	}
 
 	&__title {
@@ -372,11 +425,25 @@
 		text-transform: uppercase;
 		line-height: 1.2;
 
+		@media $smWidth {
+
+			font-size: 24px;
+			margin-bottom: 16px;
+
+		}
+
 	}
 
 	&__text {
 
 		font-size: 16px;
+
+		@media $smWidth {
+
+			font-size: 14px;
+			max-width: 80%;
+
+		}
 
 	}
 
