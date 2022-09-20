@@ -1,0 +1,41 @@
+			<form action="/" class="filter" autocomplete="off">
+
+				<input type="hidden" name="page" value="3">
+
+{% for checkbox in ["Руки","Ноги","Лицо","Тело","Волосы","Кожа","Прочее"] %}
+
+				<fieldset class="filter__fieldset">
+
+					<legend class="filter__legend">
+						{{ checkbox }}
+					</legend>
+
+					<div class="filter__box">
+
+						<div class="filter__scroll is-scroll">
+
+{% for item in range(0,21) %}
+
+							<label class="checkbox">
+
+								<input class="checkbox__input visuallyhidden" type="checkbox"{% if range(0,10) | random === 0 %} disabled="disabled"{% endif %}{% if range(0,10) | random === 0 %} checked="checked"{% endif %}>
+
+								<span class="checkbox__label">
+									{{ ["Проблемы рук","Уход за лицом","Уход за головой","Уход за ушами","Уход за телом","Уход за волосами пяточек","Уход за волосами","Полировка затылка"] | random }} <b>({{ range(0,1000) | random }})</b>
+								</span>
+
+							</label>
+
+{% endfor %}
+
+						</div>
+
+					</div>
+
+				</fieldset>
+
+{% endfor %}
+
+{% include "catalog/filter/foot.html" %}
+
+			</form>
