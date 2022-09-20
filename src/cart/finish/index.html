@@ -1,0 +1,111 @@
+{% set title = "Спасибо за заказ" %}
+
+{% set breadcrumbs = ["Оформление заказа"] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="page-bar">
+
+			<h1 class="title">
+				Благодарим за заказ! <br>
+				ЗАКАЗ № 203897 Успешно оформлен
+			</h1>
+
+			<p class="intro">
+				Мы позвоним Вам для подтверждения заказа.
+			</p>
+
+			<p>
+				Вы можете связаться с нами используя контакты ниже или форму обратной связи, состояние вашего заказа можно отследить в Личном кабинете
+			</p>
+
+			<div class="page-bar__box">
+
+				<div class="page-bar__body page-contacts">
+
+					<div class="page-contacts__columns">
+
+						<h2>
+							Служба поддержки клиентов
+						</h2>
+
+						<div class="page-contacts__columns-item">
+
+{% set list = [
+	{
+		name : "+7 (922) 297 77 30",
+		href : "https://wa.me/79222977730",
+		ico  : "whatsapp"
+	},
+	{
+		name : "+7 (922) 297 77 30",
+		href : "https://t.me/cosmo_gid_bot",
+		ico  : "telegram"
+	},
+	{
+		name : "shop@cosmogid.ru",
+		href : "mailto:shop@cosmogid.ru",
+		ico  : "mail-forward",
+		suf  : "служба поддержки"
+	},
+	{
+		name : "с 7:00 до 19:00",
+		ico  : "clock",
+		suf  : "пн-пт"
+	}
+]%}
+
+{% include "contacts/list.html" %}
+
+						</div>
+
+						<div class="page-contacts__columns-item">
+
+{% set list = [
+	{
+		name : "8 (800) 100-08-53",
+		href : "tel:88001000853",
+		ico  : "phone"
+	},
+	{
+		name : "+7 (499) 346 86 80",
+		href : "tel:+74993468680",
+		ico  : "phone"
+	},
+	{
+		name : "+7 (343) 339 48 43",
+		href : "tel:+73433394843",
+		ico  : "phone"
+	},
+	{
+		name : "+7 (812) 385 73 17",
+		href : "tel:+78123857317",
+		ico  : "phone"
+	}
+]%}
+
+{% include "contacts/list.html" %}
+
+						</div>
+
+					</div>
+
+					<h2 class="page-bar__h3">
+						Если у вас есть вопрос - задайте их ниже
+					</h2>
+
+{% include "contacts/form.html" %}
+
+				</div>
+
+			</div>
+
+		</article>
+
+	</div>
+
+{% endblock %}
