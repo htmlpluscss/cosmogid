@@ -2,7 +2,8 @@
 
 	{
 		"name" : "Бренды",
-		"mod"  : "brand"
+		"mod"  : "brand",
+		"level2"  : true
 	},
 	{
 		"name" : "Волосы",

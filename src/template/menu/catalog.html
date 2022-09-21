@@ -4,47 +4,7 @@
 
 			<div class="center">
 
-				<div class="menu-catalog__head">
-
-					<div class="menu-catalog__nav">
-
-						<div class="menu-catalog__logo">
-
-							<a href="/" title="Главная страница {{ site }}">
-
-								<img src="/img/logo-menu.svg" width="140" height="40" loading="lazy" alt="Компания {{ site }}">
-
-							</a>
-
-						</div>
-
-						<a class="ico-box" href="tel:+74993468680" title="телефон {{ site }}">
-
-							<svg width="24" height="24" viewBox="0 0 24 24">
-								<use xlink:href="#svg-phone"/>
-							</svg>
-
-						</a>
-
-						<a class="ico-box" href="/" title="Профиль">
-							<svg width="24" height="24" viewBox="0 0 24 24">
-								<use xlink:href="#svg-user"/>
-							</svg>
-						</a>
-
-						<button class="button btn-menu-close" type="button" aria-label="Закрыть меню">
-							<svg width="32" height="32" viewBox="0 0 24 24">
-								<use xlink:href="#svg-close-small"/>
-							</svg>
-						</button>
-
-					</div>
-
-					<div class="menu-catalog__back hide"></div>
-
-				</div>
-
-				<div class="menu-catalog__body hide"></div>
+{% include "template/menu/mobile.html" %}
 
 				<ul class="menu-catalog__list">
 

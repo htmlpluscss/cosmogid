@@ -11,7 +11,11 @@
 								<li>
 
 									<a class="menu-catalog__link is-level-2{% if level2.level3 %} is-btn{% endif %}" href="/catalog/level2/">
-										{{ level2.name }}
+
+										<span class="menu-catalog__name">
+											{{ level2.name }}
+										</span>
+
 									</a>
 
 						{% if level2.level3 %}

@@ -146,6 +146,7 @@
 			gap: 16px;
 			cursor: pointer;
 			color: var(--gray);
+			border-bottom: 1px solid #e5e7eb;
 
 			svg {
 
@@ -200,6 +201,12 @@
 		.menu-catalog__grid--brand .menu-catalog__level-2 li:last-child {
 
 			border-bottom: 0;
+
+		}
+
+		&__grid {
+
+			padding: 0;
 
 		}
 
@@ -292,7 +299,7 @@
 			padding: 16px 8px;
 			text-align: center;
 
-			&:hover {
+			&:not(.is-btn):hover {
 
 				color: var(--purple);
 
@@ -317,6 +324,27 @@
 				position: relative;
 				padding-right: 20px !important;
 
+				.menu-catalog__name {
+
+					&::before {
+
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						content: '';
+
+					}
+
+					&:hover {
+
+						color: var(--purple);
+
+					}
+
+				}
+
 				svg {
 
 					position: absolute;
@@ -324,6 +352,12 @@
 					right: 0;
 					bottom: 0;
 					margin: auto;
+
+					&:hover {
+
+						fill: var(--purple);
+
+					}
 
 				}
 
@@ -343,16 +377,18 @@
 
 				}
 
+				svg rect {
+
+					transition: transform var(--transitionDefault);
+					transform-origin: center;
+
+				}
 
 				&.is-open {
 
-					svg {
+					svg rect:first-child {
 
-						rect:first-child {
-
-							opacity: 0;
-
-						}
+						transform: rotate(90deg);
 
 					}
 
@@ -360,9 +396,9 @@
 
 			}
 
-			&.is-level-2:not(.is-open) + .menu-catalog__level-3 {
+			&.is-level-2.is-open + .menu-catalog__level-3 {
 
-				display: none;
+				max-height: 1024px;
 
 			}
 
@@ -434,6 +470,14 @@
 		&__level-2 {
 
 			width: 256px;
+
+		}
+
+		&__level-3 {
+
+			transition: var(--transitionDefault);
+			max-height: 0;
+			overflow: hidden;
 
 		}
 

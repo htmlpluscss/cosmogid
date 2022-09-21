@@ -12,22 +12,23 @@
 		const linkBtn = menu.querySelectorAll('.menu-catalog__link.is-btn'),
 			  icoPlus = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
-		icoPlus.setAttributeNS(null, "viewBox", "0 0 16 16");
-		icoPlus.setAttributeNS(null, "width", 16);
-		icoPlus.setAttributeNS(null, "height", 16);
-		icoPlus.setAttribute('rule', 'button');
+		icoPlus.setAttributeNS(null, "viewBox", "0 0 24 24");
+		icoPlus.setAttributeNS(null, "width", 24);
+		icoPlus.setAttributeNS(null, "height", 24);
+		icoPlus.setAttribute('role', 'button');
 
-		icoPlus.innerHTML = '<rect x="7" y="2" width="2" height="12"/><rect x="2" y="7" width="12" height="2"/>';
+		icoPlus.innerHTML = '<rect x="11" y="6" width="2" height="12"/><rect x="6" y="11" width="12" height="2"/>';
 
 		// иконка right level1 и level2
 		const level_1 = menu.querySelectorAll('.menu-catalog__link--arrow'),
 			  icoRight = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
-		icoRight.setAttributeNS(null, "viewBox", "0 0 32 32");
+		icoRight.setAttributeNS(null, "viewBox", "0 0 24 24");
 		icoRight.setAttributeNS(null, "width", 32);
 		icoRight.setAttributeNS(null, "height", 32);
+		icoRight.setAttribute('role', 'button');
 
-		icoRight.innerHTML = '<path d="M14 22.67a1.33 1.33 0 0 1-.95-2.28L17.48 16l-4.24-4.41a1.33 1.33 0 0 1 1.89-1.89l5.15 5.34c.5.52.5 1.35 0 1.87l-5.33 5.33c-.25.26-.58.41-.94.43Z"/></svg>';
+		icoRight.innerHTML = '<use xlink:href="#svg-chevron-right"/>';
 
 		// resize
 
@@ -126,9 +127,13 @@
 
 			btn.addEventListener('click', event => {
 
-				event.preventDefault();
+				if ( event.target.closest('[role="button"]') ) {
 
-				btn.classList.toggle('is-open');
+					event.preventDefault();
+
+					btn.classList.toggle('is-open');
+
+				}
 
 			});
 
@@ -142,7 +147,7 @@
 
 			btn.addEventListener('click', event => {
 
-				if ( window.innerWidth < 1250 ) {
+				if ( window.innerWidth < 1250 && event.target.closest('[role="button"]') ) {
 
 					event.preventDefault();
 
@@ -185,7 +190,7 @@
 
 			const btn = event.target.closest('.is-btn');
 
-			if ( btn ) {
+			if ( btn && event.target.closest('[role="button"]') ) {
 
 				event.preventDefault();
 
