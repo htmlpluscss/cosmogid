@@ -52,7 +52,7 @@
 
 					<li class="menu-catalog__item">
 
-						<a class="menu-catalog__link menu-catalog__link--level-1{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}" href="/">
+						<a href="/" class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}{% if item.level2 %} menu-catalog__link--arrow{% endif %}">
 
 							<span class="menu-catalog__name">
 								{{ item.name }}

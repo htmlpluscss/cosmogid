@@ -203,12 +203,6 @@
 
 		}
 
-		&__grid {
-
-			padding: 0;
-
-		}
-
 	}
 
 	@media $desktop {
@@ -298,12 +292,6 @@
 			padding: 16px 8px;
 			text-align: center;
 
-			svg {
-
-				display: none;
-
-			}
-
 			&:hover {
 
 				color: var(--purple);
@@ -324,11 +312,51 @@
 
 			}
 
+			&.is-btn {
+
+				position: relative;
+				padding-right: 20px !important;
+
+				svg {
+
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+
+				}
+
+			}
+
 			&.is-level-2 {
 
 				padding: 8px 0;
 				font-size: 16px;
 				text-align: left;
+
+				@media $desktop and (max-height: 800px) {
+
+					font-size: 14px;
+					line-height: 1.2;
+					padding: 6px 0;
+
+				}
+
+
+				&.is-open {
+
+					svg {
+
+						rect:first-child {
+
+							opacity: 0;
+
+						}
+
+					}
+
+				}
 
 			}
 
@@ -345,6 +373,14 @@
 				padding: 8px 0 8px 16px;
 				text-align: left;
 
+				@media $desktop and (max-height: 800px) {
+
+					line-height: 1.2;
+					font-size: 12px;
+					padding: 6px 0;
+
+				}
+
 			}
 
 		}
@@ -359,6 +395,12 @@
 			display: none;
 			background-color: #fff;
 			white-space: normal;
+
+			@media $desktop and (max-height: 800px) {
+
+				padding: 16px;
+
+			}
 
 			&::before {
 
@@ -402,6 +444,9 @@
 			align-items: center;
 			margin-top: 16px;
 			padding: 16px 0;
+
+			grid-column-start: 1;
+			grid-column-end: -1;
 
 		}
 
