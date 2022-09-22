@@ -1,0 +1,45 @@
+{% set title = "Пилинги на летний период" %}
+
+{% set description = "Лишь действия представителей оппозиции освещают чрезвычайно интересные особенности картины в целом, однако." %}
+
+{% set breadcrumbsMod = "is-small" %}
+{% set breadcrumbs = ["Мастер-классы",title] %}
+
+{% set ogType = "article" %}
+{% set urlPage = "consultations/item" %}
+{% set ogImage = "img/consultations/expert/1--160x160.jpg" %}
+{% set ogImage256 = "img/consultations/expert/1--160x160.jpg" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+{% include "workshop/item/body.html" %}
+
+{% include "consultations/billboards.html" %}
+
+{% set previewSwiperTitle = "Отзывы о товарах этого раздела" %}
+
+{% include "_include/review.html" %}
+
+{% set previewSwiperTitle = "Вы недавно смотрели" %}
+
+{% include "_include/recently-watched.html" %}
+
+{% include "_include/workshop.html" %}
+
+		<div class="page-article-related">
+
+{% set previewSwiperTitle = "Вам так же может быть интересно" %}
+
+{% include "_include/news.html" %}
+
+		</div>
+
+{% include "_include/support.html" %}
+
+	</div>
+
+{% endblock %}

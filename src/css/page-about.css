@@ -83,8 +83,10 @@
 
 .video-clip {
 
-	display: block;
+	display: flex;
+	justify-content: center;
 	position: relative;
+	margin: 24px 0;
 
 	&__link {
 
@@ -93,7 +95,7 @@
 
 		img {
 
-			width: 100%;
+			max-width: 100%;
 			height: auto;
 			transition: var(--transitionDefault);
 
