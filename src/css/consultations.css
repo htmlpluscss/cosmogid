@@ -77,7 +77,8 @@
 
 	@media $mdWidth {
 
-		.is-filter-show & > * {
+		.is-filter-show & > *,
+		.is-filter-show & + * {
 
 			display: none;
 
@@ -238,6 +239,28 @@
 			font-weight: 600;
 			margin-bottom: 8px;
 			font-size: 18px;
+
+		}
+
+		&-title {
+
+			margin-bottom: 8px;
+
+			@media $desktop {
+
+				font-weight: 400;
+				font-size: 28px;
+				line-height: 1.2;
+				text-transform: uppercase;
+
+			}
+
+			@media $mdWidth {
+
+				font-weight: 600;
+				font-size: 18px;
+
+			}
 
 		}
 
