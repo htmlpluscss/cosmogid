@@ -320,3 +320,308 @@
 	}
 
 }
+
+.consultations-online {
+
+	&__head {
+
+		text-align: center;
+		margin: 128px 0 64px;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 1.2;
+		text-transform: uppercase;
+		color: var(--gray);
+
+		@media $smWidth {
+
+			margin: 48px 0 24px;
+			font-weight: 600;
+			font-size: 20px;
+			text-transform: none;
+
+		}
+
+	}
+
+}
+
+.consultations-online-details {
+
+	text-align: center;
+	color: var(--gray);
+
+	h3 {
+
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1.2;
+		margin-bottom: 16px;
+		text-transform: uppercase;
+
+	}
+
+	& > p {
+
+		font-size: 18px;
+		margin: 0 auto 64px;
+		max-width: 1000px;
+
+		@media $smWidth {
+
+			font-size: 16px;
+			margin-bottom: 48px;
+
+		}
+
+	}
+
+	ul {
+
+		display: grid;
+		gap: 24px;
+		grid-template-columns: 1fr 1fr 1fr;
+		font-size: 16px;
+
+		@media $mdWidth {
+
+			grid-template-columns: 1fr 1fr;
+
+		}
+
+		@media $smWidth {
+
+			display: block;
+
+		}
+
+	}
+
+	li {
+
+		padding: 24px;
+
+		@media $smWidth {
+
+			padding: 24px 0;
+
+		}
+
+	}
+
+}
+
+.consultations-online-price {
+
+	&__box {
+
+		@media $desktop {
+
+			display: flex;
+			gap: 24px;
+			align-items: flex-start;
+			margin: 96px 0;
+
+		}
+
+	}
+
+	&__item {
+
+		background-color: rgba(245, 243, 255, 0.3);
+		border-radius: 8px;
+		padding: 32px;
+		flex-basis: 392px;
+		position: relative;
+
+		@media $mdWidth {
+
+			margin: 48px 0;
+
+		}
+
+		&:nth-child(2n) {
+
+			background-color: rgba(245, 243, 255, 0.75);
+
+		}
+
+		@media $smWidth {
+
+			padding: 24px;
+
+		}
+
+	}
+
+	&__ico {
+
+		position: absolute;
+		top: -24px;
+		left: 0;
+		right: 0;
+		width: 48px;
+		height: 48px;
+		padding: 4px;
+		background-color: #f4ebff;
+		border: 8px solid #f9f5ff;
+		border-radius: 50%;
+		margin: auto;
+		color: var(--purple);
+
+	}
+
+	&__head {
+
+		margin-top: 16px;
+		font-weight: 400;
+		font-size: 20px;
+		text-align: center;
+		color: var(--gray);
+
+	}
+
+	&__value {
+
+		text-align: center;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		margin: 8px 0;
+
+		b {
+
+			font-size: 48px;
+			font-weight: 700;
+
+		}
+
+	}
+
+	&__count {
+
+		text-align: center;
+		font-size: 16px;
+		margin: 8px 0;
+		color: #1f2937;
+
+	}
+
+	&__list {
+
+		font-size: 16px;
+		color: #1f2937;
+		margin-top: 32px;
+
+		li {
+
+			margin-top: 16px;
+			padding-left: 36px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23F4EBFF' rx='12'/%3E%3Cpath fill='%239E77ED' d='M17.1 7.39 9.94 14.3l-1.9-2.03c-.35-.33-.9-.35-1.3-.07-.4.29-.5.8-.26 1.21l2.25 3.66c.22.34.6.55 1.03.55.4 0 .8-.21 1.02-.55.36-.47 7.23-8.66 7.23-8.66.9-.92-.2-1.73-.91-1.03v.01Z'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+
+		}
+
+		b {
+
+			font-weight: 600;
+
+		}
+
+	}
+
+	&__btn {
+
+		margin-top: 40px;
+
+		.btn {
+
+			width: 100%;
+			margin-top: 12px;
+
+		}
+
+	}
+
+}
+
+.consultations-online-faq {
+
+	text-align: center;
+	color: var(--gray);
+
+	h3 {
+
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1.2;
+		margin-bottom: 16px;
+		text-transform: uppercase;
+
+	}
+
+	ol {
+
+		display: grid;
+		gap: 24px;
+		grid-template-columns: 1fr 1fr 1fr;
+		font-size: 16px;
+		counter-reset: headings 0;
+		margin: 96px 0;
+
+		@media $mdWidth {
+
+			grid-template-columns: 1fr 1fr;
+
+		}
+
+		@media $smWidth {
+
+			display: block;
+			margin: 24px 0;
+
+		}
+
+	}
+
+	li {
+
+		padding: 24px;
+		counter-increment: headings 1;
+
+		@media $smWidth {
+
+			padding: 24px 0;
+
+		}
+
+		&::before {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '0' counter(headings, decimal);
+			font-weight: 700;
+			font-size: 128px;
+			line-height: 1;
+			color: #ddd6fe;
+			z-index: -1;
+
+			@media $smWidth {
+
+				font-size: 96px;
+
+			}
+
+		}
+
+	}
+
+	.btn {
+
+		margin: 16px auto;
+
+	}
+
+}

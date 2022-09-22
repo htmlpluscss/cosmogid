@@ -1,0 +1,39 @@
+{% set title = "Подбор ухода" %}
+
+{% set description = "Мы можем делиться с Вами накопленным опытом и рассказать о преимуществах или минусах по разным брендам.  Помочь подобрать индивидуально  домашний (ежедневный), а также более активный (курсовой, салонный) уходы" %}
+
+{% set breadcrumbs = ["Консультации",title] %}
+
+{% set ogType = "article" %}
+{% set urlPage = "consultations/online" %}
+{% set ogImage = "img/consultations/online/og.jpg" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="consultations-online">
+
+			<h1 class="title">
+				{{ title }}
+			</h1>
+
+{% include "consultations/online/billboard.html" %}
+
+{% include "consultations/online/details.html" %}
+
+{% include "consultations/online/price.html" %}
+
+{% include "consultations/online/billboard_2.html" %}
+
+{% include "consultations/online/faq.html" %}
+
+		</article>
+
+{% include "_include/support.html" %}
+
+	</div>
+
+{% endblock %}
