@@ -1,0 +1,54 @@
+.video-review {
+
+	&__text {
+
+		margin: 56px 0;
+		font-size: 18px;
+
+	}
+
+	&__list {
+
+		display: grid;
+		gap: var(--gap);
+		grid-template-columns: repeat(3, 1fr);
+
+		@media $mdWidth {
+
+			display: block;
+
+		}
+
+	}
+
+	&__item {
+
+		margin: 0;
+		position: relative;
+		display: flex;
+
+		iframe {
+
+			width: 100%;
+			height: auto;
+			min-height: 200px;
+
+		}
+
+		@media $smWidth {
+
+			margin: var(--gap) 0;
+
+		}
+
+	}
+
+	&__pagin {
+
+		display: flex;
+		justify-content: center;
+		margin: 72px 0;
+
+	}
+
+}

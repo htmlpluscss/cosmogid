@@ -86,7 +86,6 @@
 	display: flex;
 	justify-content: center;
 	position: relative;
-	margin: 24px 0;
 
 	&__link {
 

@@ -1,0 +1,43 @@
+{% set title = "Видео отзывы от наших покупателей" %}
+
+{% set description = "Cosmogid сотрудничает с врачами-косметологами, технологами и другими специалистами, поэтому консультации проводятся только на профессиональном уровне." %}
+
+{% set breadcrumbs = ["Видео отзывы"] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="video-review">
+
+			<h1 class="title">
+				{{ title }}
+			</h1>
+
+{% include "video-review/billboard.html" %}
+
+			<div class="video-review__text">
+
+				<p>
+					Лишь интерактивные прототипы неоднозначны и будут разоблачены. Таким образом, постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно определяет каждого участника как способного принимать собственные решения касаемо инновационных методов управления процессами. Господа, понимание сути ресурсосберегающих технологий прекрасно подходит для реализации поставленных обществом.
+				</p>
+
+			</div>
+
+{% include "video-review/sort.html" %}
+
+{% include "video-review/list.html" %}
+
+{% include "video-review/pagin.html" %}
+
+{% include "consultations/billboards.html" %}
+
+		</article>
+
+{% include "_include/support.html" %}
+
+	</div>
+
+{% endblock %}
