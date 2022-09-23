@@ -72,8 +72,20 @@ const html = (files, since = {}, folder = '') => {
 			},
 			path: 'src/'
 		}))
-//		.pipe(w3cjs())
-//		.pipe(w3cjs.reporter())
+		.pipe(w3cjs({
+			url : 'https://validator.w3.org/nu/',
+			verifyMessage: (type, message) => {
+console.log(type,message);
+				// prevent logging error message
+				if(message.includes('for attribute “src” on element “img”')) return false;
+
+				if(message.includes('iframe')) return false;
+
+				// allow message to pass through
+				return true;
+			}
+		}))
+		.pipe(w3cjs.reporter())
 		.pipe(gulp.dest('build' + folder))
 
 };
@@ -181,7 +193,7 @@ gulp.task('ftp', () => {
 	const f = filter('**/*.html', {restore: true});
 	const conn = ftp.create( config.ftp );
 
-	return gulp.src( ['build/**/*','!build/img/**/*'], {since: gulp.lastRun('ftp')} )
+	return gulp.src( ['build/**/*'], {since: gulp.lastRun('ftp')} )
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('"https://' + site, '"https://' + domain))
