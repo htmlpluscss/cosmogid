@@ -567,6 +567,7 @@
 		@media $smWidth {
 
 			font-size: 24px;
+			font-weight: 600;
 			margin-bottom: 16px;
 
 		}
@@ -586,7 +587,6 @@
 		@media $smWidth {
 
 			font-size: 14px;
-			width: 60%;
 
 		}
 
@@ -601,6 +601,18 @@
 		.btn {
 
 			min-width: 224px;
+
+		}
+
+		@media $smWidth {
+
+			margin: 0;
+
+			.btn {
+
+				min-width: 100%;
+
+			}
 
 		}
 
@@ -627,13 +639,6 @@
 
 		width: 580px;
 		padding: 20px 30px;
-
-	}
-
-	&__title {
-
-		font-weight: 600;
-		text-transform: none;
 
 	}
 

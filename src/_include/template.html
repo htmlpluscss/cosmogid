@@ -2,6 +2,10 @@
 
 		<svg>
 
+			<symbol id="svg-upload-cloud" viewBox="0 0 20 20">
+				<path stroke-width="1.67" d="M13.33 13.33 10 10m0 0-3.33 3.33M10 10v7.5m7-2.18a4.17 4.17 0 0 0-2-7.82h-1.05A6.67 6.67 0 1 0 2.5 13.58"/>
+			</symbol>
+
 			<symbol id="svg-thumb-up" viewBox="0 0 24 24">
 				<path d="M13 3a3 3 0 0 1 3 2.82V10h2a3 3 0 0 1 3 2.82V13l-.02.2-1 5.03c-.39 1.62-1.5 2.8-2.82 2.78L17 21h-7c-.87 0-1.68-.28-2.33-.75l-.07-.05a2 2 0 0 1-1.45.8H4a2 2 0 0 1-2-1.85V12a2 2 0 0 1 1.85-2H7a3 3 0 0 0 3-2.82V6a3 3 0 0 1 3-3Zm0 2a1 1 0 0 0-1 .88V7a5 5 0 0 1-3.94 4.89H8V17a2 2 0 0 0 1.85 2h7.23c.3.03.7-.34.9-1.03l.04-.17.98-4.88v-.04a1 1 0 0 0-.88-.87L18 12h-3a1 1 0 0 1-1-.88V6a1 1 0 0 0-1-1ZM6 19v-7H4v7h2Z"/>
 			</symbol>
@@ -310,6 +314,30 @@
 				</span>
 
 				<button class="fileupload__reset btn btn--link" type="button">
+					Удалить
+				</button>
+
+			</div>
+
+		</script>
+
+		<script type="text/html" id="drag-and-drop-template">
+
+			<div class="drag-and-drop__btn">
+
+				<span class="drag-and-drop__ico">
+
+					<svg width="20" height="20" viewBox="0 0 20 20">
+						<use xlink:href="#svg-upload-cloud"/>
+					</svg>
+
+				</span>
+
+				<span class="drag-and-drop__label">
+					{{ name }}
+				</span>
+
+				<button class="drag-and-drop__reset btn btn--link" type="button">
 					Удалить
 				</button>
 

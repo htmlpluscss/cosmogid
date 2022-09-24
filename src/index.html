@@ -16,7 +16,7 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "consultation"
+			selector: "video-review"
 		}
 	});
 
@@ -154,6 +154,14 @@ setTimeout( ()=> {
 
 			<button class="btn" type="button" data-modal="review" data-id="123">
 				Оставить отзыв
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="video-review">
+				Оставить видео-отзыв
 			</button>
 
 		</div>

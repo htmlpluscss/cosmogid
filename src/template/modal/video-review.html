@@ -1,5 +1,71 @@
-			<div class="modal__item modal__item--video-review">
+			<div class="modal__item modal__item--video-review modal-login">
 
-				Загрузить видео отзыв
+				<form class="modal-login__form" action="/">
+
+					<h3 class="modal-login__title">
+						Загрузите видео-отзыв
+					</h3>
+
+					<p class="modal-login__text">
+						Чтобы получать скидки и преимущества Вы сможете использовать промокоды со скидками и пользоваться статусом профессионального покупателя
+					</p>
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="modal-video-review-url">
+							Ссылка на Youtube или другой видео хостинг
+						</label>
+
+						<input class="input" name="url" type="url" placeholder="youtube.com/....." id="modal-video-review-url">
+
+						<span class="inputbox__text">
+							Информационное сообщение
+						</span>
+
+					</div>
+
+					<div class="inputbox">
+
+						<div class="drag-and-drop">
+
+							<label class="inputbox__label" for="modal-video-review-file">
+								Или загрузите файл с вашего телефона или компьютера
+							</label>
+
+							<label class="drag-and-drop__btn">
+
+								<span class="drag-and-drop__ico">
+
+									<svg width="20" height="20" viewBox="0 0 20 20">
+										<use xlink:href="#svg-upload-cloud"/>
+									</svg>
+
+								</span>
+
+								<input type="file" name="file" class="visuallyhidden" id="modal-video-review-file">
+
+								<span class="drag-and-drop__label">
+									<span>Нажмите сюда</span> или просто перетащите файл в зону загрузки
+								</span>
+
+								<span class="drag-and-drop__label">
+									mov, mpg4 (не более 50 тмб)
+								</span>
+
+							</label>
+
+						</div>
+
+					</div>
+
+					<div class="modal__foot is-center">
+
+						<button class="btn">
+							Загрузить
+						</button>
+
+					</div>
+
+				</form>
 
 			</div>
