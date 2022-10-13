@@ -1,0 +1,130 @@
+.page-404 {
+
+	@media $desktop {
+
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		margin: 80px 0;
+
+	}
+
+	@media $mdWidth {
+
+		margin: 50px 0;
+
+	}
+
+	&__content {
+
+		@media $desktop {
+
+			width: 678px;
+
+		}
+
+	}
+
+	&__img {
+
+		@media $desktop {
+
+			align-self: center;
+			margin-left: 24px;
+
+		}
+
+		@media $mdWidth {
+
+			img {
+
+				width: 344px;
+				max-width: 100%;
+				height: auto;
+				margin: 40px auto;
+
+			}
+
+		}
+
+	}
+
+	&__before {
+
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 1;
+		color: var(--purple);
+		margin-bottom: 20px;
+
+		@media $smWidth {
+
+			margin-bottom: 12px;
+
+		}
+
+	}
+
+	&__title {
+
+		font-weight: 600;
+		font-size: 48px;
+		line-height: 1.2;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+
+		@media $mdWidth {
+
+			font-size: 24px;
+
+		}
+
+	}
+
+	&__description {
+
+		font-size: 16px;
+		color: var(--text);
+		margin-bottom: 24px;
+
+		@media $mdWidth {
+
+			font-size: 14px;
+
+		}
+
+	}
+
+	&__btns {
+
+		display: flex;
+		gap: 24px;
+
+		@media $mdWidth {
+
+			justify-content: center;
+
+		}
+
+		@media $smWidth {
+
+			display: block;
+
+			.btn {
+
+				margin-top: 24px;
+				width: 100%;
+
+			}
+
+		}
+
+		.btn {
+
+			width: 240px;
+
+		}
+
+	}
+
+}

@@ -1,0 +1,55 @@
+{% set title = "Этой страницы не существует" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="page-404">
+
+			<div class="page-404__img">
+
+				<img src="/img/404.svg" alt="" loading="lazy" width="514" height="164">
+
+			</div>
+
+			<div class="page-404__content">
+
+				<p class="page-404__before">
+					404 error
+				</p>
+
+				<h1 class="page-404__title">
+					{{ title }}
+				</h1>
+
+				<p class="page-404__description">
+					Возможно там была устаревшая или не интересная информация, Но не огорчайтесь у нас есть очень много других замечательных страниц, Для поиска нужной информации или товара пожалуйста воспользуйтесь поиском, либо главным меню сайта.
+				</p>
+
+				<div class="page-404__btns">
+
+					<a href="/" class="btn">
+						На главную
+					</a>
+
+					<a href="/catalog/" class="btn btn--outline">
+						В каталог
+					</a>
+
+				</div>
+
+			</div>
+
+		</article>
+
+{% set previewSwiperTitle = "Возможно вас заинтересуют новинки брендов" %}
+
+{% include "main/new-brand.html" %}
+
+{% include "_include/support.html" %}
+
+	</div>
+
+{% endblock %}
