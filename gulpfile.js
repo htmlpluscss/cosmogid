@@ -72,7 +72,7 @@ const html = (files, since = {}, folder = '') => {
 			},
 			path: 'src/'
 		}))
-		.pipe(w3cjs({
+/*		.pipe(w3cjs({
 			url : 'https://validator.w3.org/nu/',
 			verifyMessage: (type, message) => {
 
@@ -86,7 +86,7 @@ const html = (files, since = {}, folder = '') => {
 			}
 		}))
 		.pipe(w3cjs.reporter())
-		.pipe(gulp.dest('build' + folder))
+*/		.pipe(gulp.dest('build' + folder))
 
 };
 

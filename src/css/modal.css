@@ -220,6 +220,63 @@
 
 }
 
+.modal-file {
+
+	display: flex;
+	margin: 16px 0;
+
+	@media $smWidth {
+
+		display: block;
+
+	}
+
+	&__head {
+
+		flex-grow: 1;
+		padding-right: 24px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 1.2;
+		color: var(--gray);
+
+	}
+
+	&__desc {
+
+		display: block;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1.5;
+		color: var(--gray);
+
+	}
+
+	&__body {
+
+		width: calc( 50% - 20px );
+		flex-shrink: 0;
+		position: relative;
+
+		@media $smWidth {
+
+			margin-top: 16px;
+			display: block;
+			width: 240px;
+
+		}
+
+		.btn {
+
+			background-color: var(--text);
+			font-size: 14px;
+
+		}
+
+	}
+
+}
+
 .modal-show {
 
 	.modal {
@@ -727,6 +784,20 @@
 
 		}
 
+		&--uppercase {
+
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 28px;
+
+			@media $smWidth {
+
+				font-size: 24px;
+
+			}
+
+		}
+
 	}
 
 	&__intro {
@@ -1086,6 +1157,72 @@
 
 			fill: none;
 			stroke: #475467;
+
+		}
+
+	}
+
+}
+
+.modal-club {
+
+	&__files {
+
+		margin-bottom: 72px;
+
+		@media $smWidth {
+
+			margin-bottom: 32px;
+
+			& + .modal__row .modal__column {
+
+				margin-top: 24px;
+
+			}
+
+		}
+
+	}
+
+	&__checkbox {
+
+		.inputbox__label {
+
+			padding-left: 0;
+
+		}
+
+		@media $smWidth {
+
+			.modal__column {
+
+				margin-top: 0;
+
+			}
+
+		}
+
+	}
+
+	img {
+
+
+	}
+
+	&__done {
+
+		width: 240px;
+		margin: auto;
+
+		img {
+
+			margin: 24px auto;
+
+		}
+
+		.btn {
+
+			width: 100%;
 
 		}
 

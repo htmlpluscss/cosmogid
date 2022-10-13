@@ -88,3 +88,47 @@
 	}
 
 })(document.querySelectorAll('.drag-and-drop'));
+
+
+( fileupload => {
+
+	if(fileupload.length){
+
+		const template = document.querySelector('#modal-file-template').innerHTML;
+
+		[...fileupload].forEach( file => {
+
+			const input = file.querySelector('.modal-file__input'),
+				  desc = file.querySelector('.modal-file__desc');
+
+			input.addEventListener("change", event => {
+
+				let value = '';
+
+				[...input.files].forEach( file => {
+
+					if ( value.length ) {
+
+						value += ', ';
+
+					}
+
+					let size = (file.size / 1024 / 1024).toFixed(2);
+
+					value += file.name + ' (' + size + 'Мб)';
+
+				});
+
+				file.querySelector('.btn').remove();
+
+				input.insertAdjacentHTML('afterend', Mustache.render(template));
+
+				desc.textContent = value;
+
+			});
+
+		});
+
+	}
+
+})(document.querySelectorAll('.modal-file'));

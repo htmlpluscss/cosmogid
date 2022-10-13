@@ -16,11 +16,11 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "video-review"
+			selector: "club-done"
 		}
 	});
 
-//	window.modal.dispatchEvent(eventModalShow);
+	window.modal.dispatchEvent(eventModalShow);
 })
 
 </script>
@@ -318,6 +318,22 @@ setTimeout( ()=> {
 
 			<button class="btn" data-modal="consultation">
 				О консультации
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" data-modal="club">
+				Клуб анкета
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" data-modal="club-done">
+				Клуб анкета (успех)
 			</button>
 
 		</div>
