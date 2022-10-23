@@ -61,4 +61,16 @@
 
 	}
 
+	&--plus &__head {
+
+		color:  var(--purple);
+
+	}
+
+	&--plus &__item.is-open &__head svg {
+
+		transform: rotate(45deg);
+
+	}
+
 }

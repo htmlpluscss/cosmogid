@@ -1,3 +1,31 @@
+// ClipboardJS
+
+	( elems => {
+
+		if ( elems.length ) {
+
+			[...elems].forEach( btn => {
+
+				const clipboard = new ClipboardJS(btn);
+
+				clipboard.on('success', ()=> {
+
+					btn.classList.add('is-clipboard-success');
+
+					setTimeout( ()=> {
+
+						btn.classList.remove('is-clipboard-success');
+
+					},3000);
+
+				});
+
+			});
+
+		}
+
+	})(document.querySelectorAll('[data-clipboard-text]'));
+
 // autosize
 
 	autosize(document.querySelectorAll('textarea.autosize'));

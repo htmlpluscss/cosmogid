@@ -113,6 +113,45 @@
 
 		margin-bottom: 32px;
 
+		&__inputsearch {
+
+			position: relative;
+			width: 300px;
+
+			@media $smWidth {
+
+				width: calc( 50% - 4px );
+
+			}
+
+			.input {
+
+				height: 40px;
+				padding-right: 42px;
+
+				&::placeholder {
+
+					font-size: 14px;
+					color: var(--gray);
+					font-weight: 400;
+
+				}
+
+			}
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				right: 16px;
+				bottom: 0;
+				pointer-events: none;
+				margin: auto;
+
+			}
+
+		}
+
 	}
 
 	&__tags {

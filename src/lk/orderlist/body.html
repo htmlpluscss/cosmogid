@@ -1,0 +1,141 @@
+					<div class="orderlist__body">
+
+						<div class="orderlist-info">
+
+							<h3 class="orderlist-info__head">
+								Информация о заказе
+							</h3>
+
+							<p class="orderlist-info__heading">
+								Доставка: самовывоз из СДЭК
+							</p>
+
+							<p class="orderlist-info__text">
+								Екаринбург <br>
+								ул. Константина Константинопольского 24 <br>
+								<b>График работы:</b> <br>
+								Пн-Сб: 10:00-20:00 <br>
+								Вс: 10:00-18:00
+							</p>
+
+							<p class="orderlist-info__map">
+
+								<a class="btn btn--hash btn--small" href="/" target="_blank">
+									Проложить маршрут
+								</a>
+
+							</p>
+
+							<p class="orderlist-info__text">
+								<b>Получатель:</b> <br>
+								Кузякина Мария <br>
+								+7 (495) 123-45-67 <br>
+								kuzayakina@mail.ru
+							</p>
+
+							<p class="orderlist-info__track">
+
+								<a class="btn btn--outline" href="/" target="_blank">
+									Отследить посылку
+								</a>
+
+							</p>
+
+						</div>
+
+						<div class="orderlist__details">
+
+{% for i in range(0, 3) %}
+
+							<a class="orderlist-details-product" href="/product/" target="_blank">
+
+								<span class="orderlist-details-product__img">
+
+									<picture>
+
+										<source srcset="/img/cart/64x64.webp 1x, /img/cart/128x128.webp 2x" type="image/webp">
+										<source srcset="/img/cart/64x64.jpg 1x, /img/cart/128x128.jpg 2x">
+
+										<img src="/img/cart/64x64.jpg" alt="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл" loading="lazy" width="64" height="64">
+
+									</picture>
+
+								</span>
+
+								<span class="orderlist-details-product__name">
+									Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл
+								</span>
+
+								<dl class="orderlist-details-product__dl">
+									<dt>Цена</dt>
+									<dd>2581 ₽</dd>
+								</dl>
+
+								<dl class="orderlist-details-product__dl">
+									<dt>Кол-во</dt>
+									<dd>2</dd>
+								</dl>
+
+								<dl class="orderlist-details-product__dl">
+									<dt>Сумма</dt>
+									<dd>6181 ₽<s>6181 ₽</s></dd>
+								</dl>
+
+							</a>
+
+{% endfor %}
+
+							<table class="orderlist__table">
+
+{% for tr in [
+
+	{
+		th : "Оплата",
+		td : "Предоплата 50%"
+	},
+	{
+		th : "Статус оплаты",
+		td : "Внесена"
+	},
+	{
+		th : "Доставка",
+		td : "1000 ₽"
+	},
+	{
+		th : "Статус доставки",
+		td : "Передано в службу доставки"
+	},
+	{
+		th : "Итого",
+		td : "12 566 ₽"
+	}
+
+] %}
+
+								<tr>
+									<th>
+										{{ tr.th }}
+									</th>
+									<td>
+										{{ tr.td }}
+									</td>
+								</tr>
+{% endfor %}
+
+							</table>
+
+							<div class="orderlist__details-foot">
+
+								<button class="btn btn--outline" type="button" data-modal="review" data-id="123">
+									Оставить отзыв
+								</button>
+
+								<a href="/cart/?repeat=123" class="btn">
+									Повторить заказ
+								</a>
+
+							</div>
+
+						</div>
+
+					</div>

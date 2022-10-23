@@ -11,7 +11,8 @@
 		let animateOn = false,
 			activeItem = null;
 
-		const items = accordion.querySelectorAll('.accordion__item');
+		const items = accordion.querySelectorAll('.accordion__item'),
+			  stylePlus = accordion.classList.contains('accordion--plus');
 
 		[...items].forEach( item => {
 
@@ -23,7 +24,7 @@
 			arrow.setAttributeNS(null, "viewBox", "0 0 24 24");
 			arrow.setAttributeNS(null, "width", 24);
 			arrow.setAttributeNS(null, "height", 24);
-			arrow.innerHTML = '<use xlink:href="#svg-arrow-chevron-right"/>';
+			arrow.innerHTML = `<use xlink:href="#svg-${ stylePlus ? 'plus' : 'arrow-chevron-right' }"/>`;
 
 			head.append(arrow);
 

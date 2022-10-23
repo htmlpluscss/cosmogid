@@ -20,6 +20,12 @@
 		justify-content: center;
 		margin-top: 8px;
 
+		&--left {
+
+			justify-content: flex-start;
+
+		}
+
 		&--right {
 
 			justify-content: flex-end;

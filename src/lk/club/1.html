@@ -1,0 +1,63 @@
+		<div class="club-inside__colunm">
+
+{% for i in  [1,2] %}
+
+			<article class="consultations-card consultations-card--link">
+
+				<figure class="consultations-card__expert">
+
+					<picture>
+
+						<source srcset="/img/consultations/expert/{{ loop.index }}--80x80.webp 1x, /img/consultations/expert/{{ loop.index }}--160x160.webp 2x" type="image/webp">
+						<source srcset="/img/consultations/expert/{{ loop.index }}--80x80.jpg 1x, /img/consultations/expert/{{ loop.index }}--160x160.jpg 2x">
+
+						<img src="/img/consultations/expert/{{ loop.index }}--80x80.jpg" alt="Мария Кузякина" loading="lazy" width="80" height="80">
+
+					</picture>
+
+					<figcaption>
+
+						эксперт <br>
+						Мария Кузякина
+
+					</figcaption>
+
+				</figure>
+
+				<blockquote class="consultations-card__question">
+
+					<h3 class="consultations-card__question-title">
+						Уход за шершавой кожей на пяточках - за 1 час )
+					</h3>
+
+					<p class="consultations-card__question-text">
+						Как принято считать, интерактивные прототипы призывают нас к новым свершениям, которые, в свою очередь, должны.
+					</p>
+
+					<ul class="consultations-card__question-tags">
+						<li>
+							#уход за кожей
+						</li>
+						<li>
+							#маски
+						</li>
+						<li>
+							#revlon
+						</li>
+					</ul>
+
+				</blockquote>
+
+				<div class="consultations-card__foot">
+
+					<a href="/workshop/item/" class="btn">
+						Смотреть мастер-класс
+					</a>
+
+				</div>
+
+			</article>
+
+{% endfor %}
+
+		</div>

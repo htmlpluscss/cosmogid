@@ -1,0 +1,35 @@
+			<ul class="lk-menu">
+
+{% for item in [
+	{
+		name : "Контактная информация",
+		link : "lk"
+	},
+	{
+		name : "Адресная книга",
+		link : "lk/address"
+	},
+	{
+		name : "Избранное",
+		link : "lk/favourites"
+	},
+	{
+		name : "Заказы",
+		link : "lk/orderlist"
+	},
+	{
+		name : "Club Cosmogid",
+		link : "lk/club"
+	}
+]%}
+
+				<li>
+
+					<a href="/{{ item.link }}/"{% if title === item.name %} class="is-current"{% endif %}>
+						{{ item.name }}
+					</a>
+
+				</li>
+{% endfor %}
+
+			</ul>

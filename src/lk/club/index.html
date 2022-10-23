@@ -1,0 +1,61 @@
+{% set title = "Club Cosmogid" %}
+
+{% set lk = true %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="lk">
+
+		<header class="center">
+
+			<h1 class="title">
+				{{ title }}
+			</h1>
+
+{% include "lk/menu.html" %}
+
+		</header>
+
+		<div class="center lk-accordions">
+
+{% for head in ["Вам доступны закрытые бренды клуба","Закрытые Товары для членов клуба","Акции для членов клуба","Специальные акции"]%}
+
+			<div class="accordion accordion--plus">
+
+				<div class="accordion__item">
+
+					<div class="accordion__head accordion__btn">
+
+						<h2 class="page-bar__h3">
+							{{ head }}
+						</h2>
+
+					</div>
+
+					<div class="accordion__body">
+
+						<div class="accordion__body-inner">
+
+{% include "lk/club/text.html" %}
+
+{% include "lk/club/" + loop.index + ".html" %}
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+{% endfor %}
+
+		</div>
+
+	</article>
+
+{% endblock %}

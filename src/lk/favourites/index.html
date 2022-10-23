@@ -1,0 +1,55 @@
+{% set title = "Избранное" %}
+
+{% set lk = true %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="lk">
+
+		<header class="center">
+
+			<h1 class="title">
+				{{ title }}
+			</h1>
+
+{% include "lk/menu.html" %}
+
+		</header>
+
+		<div class="center">
+
+			<div class="catalog">
+
+				<div class="catalog__box">
+
+					<div class="catalog__filter">
+
+{% include "favourites/filter.html" %}
+
+					</div>
+
+					<div class="catalog__body">
+
+{% include "catalog/sort.html" %}
+
+{% include "catalog/tags.html" %}
+
+{% include "catalog/list.html" %}
+
+{% include "catalog/foot.html" %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

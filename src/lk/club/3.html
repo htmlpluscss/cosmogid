@@ -1,0 +1,54 @@
+		<div class="club-inside__colunm">
+
+{% for i in  [1,2] %}
+
+			<article class="club-product">
+
+				<div class="club-product__content">
+
+					<p class="club-product__before">
+						Промокод для членов клуба
+					</p>
+
+					<p class="club-product__title">
+						товары revlon для специалистов
+					</p>
+
+					<p class="club-product__text">
+						Как принято считать, интерактивные прототипы призывают нас к новым свершениям, которые, в свою очередь, должны.
+					</p>
+
+					<ul class="club-product__tags">
+						<li>
+							#revlon-promo
+						</li>
+					</ul>
+
+					<div class="club-product__foot">
+
+						<button class="btn" type="button" data-clipboard-text="COSMOGID_2023" data-clipboard-success="Скопировано!">
+							Скопировать промокод
+						</button>
+
+					</div>
+
+				</div>
+
+				<div class="club-product__img">
+
+					<picture>
+
+						<source srcset="/img/club/inside/{{ loop.index }}--600x360.webp 1x, /img/club/inside/{{ loop.index }}--1200x720.webp 2x" type="image/webp">
+						<source srcset="/img/club/inside/{{ loop.index }}--600x360.jpg 1x, /img/club/inside/{{ loop.index }}--1200x720.jpg 2x">
+
+						<img src="/img/club/inside/{{ loop.index }}--600x360.jpg" alt="" loading="lazy" width="600" height="360">
+
+					</picture>
+
+				</div>
+
+			</article>
+
+{% endfor %}
+
+		</div>

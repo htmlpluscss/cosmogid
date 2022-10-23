@@ -1,0 +1,42 @@
+			<form action="/" class="filter" autocomplete="off">
+
+				<input type="hidden" name="page" value="3">
+				<input type="hidden" name="sort" value="sale">
+				<input type="hidden" name="limit" value="12">
+				<input type="hidden" name="total" value="264">
+
+				<fieldset class="filter__fieldset">
+
+					<legend class="filter__legend is-open">
+						Период
+					</legend>
+
+					<div class="filter__box">
+
+						<div class="filter-menu">
+
+{% for name in ["Все","Текущий месяц","Прошлый месяц","Этот год","Прошлый год","до 2021 года"] %}
+
+							<label class="filter-menu__link">
+
+								<input class="visuallyhidden" type="checkbox">
+
+								<span>
+
+									{{ name }}
+
+								</span>
+
+							</label>
+
+{% endfor %}
+
+						</div>
+
+					</div>
+
+				</fieldset>
+
+{% include "catalog/filter/foot.html" %}
+
+			</form>

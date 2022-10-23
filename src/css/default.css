@@ -153,6 +153,30 @@ table {
 	color: var(--purple);
 
 }
+.color-red {
+
+	color: var(--red);
+
+}
+
+.link {
+
+	text-decoration: underline;
+
+	@media $desktop {
+
+		transition: var(--transitionDefault);
+
+		&:hover {
+
+			text-decoration-color: transparent;
+
+		}
+
+	}
+
+}
+
 /*
 -----------------------------------------------------------------------------*/
 .main,

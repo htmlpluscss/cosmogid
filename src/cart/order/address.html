@@ -8,7 +8,11 @@
 
 								<input class="input" name="street" placeholder="ул. Константина Сидорова" id="order-street" list="order-street-list">
 
-{% include "cart/order/datalist.html" %}
+								<datalist id="order-street-list">
+
+									{% include "cart/order/datalist.html" %}
+
+								</datalist>
 
 							</div>
 
