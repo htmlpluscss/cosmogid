@@ -284,6 +284,13 @@
 
 		}
 
+		@media $smWidth {
+
+			max-height: 60px;
+			overflow: hidden;
+
+		}
+
 	}
 
 	&__price {
@@ -291,6 +298,7 @@
 		padding-bottom: 16px;
 		display: flex;
 		justify-content: center;
+		margin-top: auto;
 
 		@media $mdWidth {
 

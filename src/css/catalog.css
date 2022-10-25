@@ -93,6 +93,7 @@
 	&__item {
 
 		transition-delay: var(--transitionDefault);
+		display: flex;
 
 		&:hover {
 
