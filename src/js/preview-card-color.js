@@ -69,6 +69,16 @@
 
 			if (cardColor) {
 
+				// set class checked
+				const itemChecked = cardColor.closest('.modal-card-color__item'),
+					  list = form.querySelectorAll('.modal-card-color__item');
+
+				[...list].forEach( item => {
+
+					item.classList.toggle('is-checked', item === itemChecked);
+
+				});
+
 				const card = event.target.closest('.modal-card-color'),
 					  id = card.elements.id.value,
 					  articleId = cardColor.value;

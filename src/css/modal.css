@@ -537,6 +537,12 @@
 		position: relative;
 		border: 1px solid #f3f4f6;
 
+		img {
+
+			object-fit: contain;
+
+		}
+
 		@media $mdWidth {
 
 			width: 100%;
@@ -631,6 +637,20 @@
 
 	&__item {
 
+		&.is-checked &-btn::after {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			content: '';
+			background-color: #f5f3ff;
+			border: 1px solid var(--purple);
+
+		}
+
 		&:first-child &-btn::before {
 
 			display: none;
@@ -681,20 +701,6 @@
 
 			font-size: 13px;
 			color: var(--gray);
-
-		}
-
-		&-input:checked ~ &-label::after {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: -1;
-			content: '';
-			background-color: #f5f3ff;
-			border: 1px solid var(--purple);
 
 		}
 
