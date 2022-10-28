@@ -113,6 +113,7 @@ gulp.task('css', () => {
 			]))
 			.pipe(sourcemaps.write())
 			.pipe(rename('styles.css'))
+			.pipe(replace('	', '    '))
 			.pipe(gulp.dest('build/css'))
 			.pipe(csso())
 			.pipe(rename({suffix: ".min"}))
