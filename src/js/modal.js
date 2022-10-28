@@ -20,7 +20,7 @@
 
 	modal.addEventListener('hide', () => {
 
-		activeModal.dispatchEvent(new Event("modalClose"));
+		activeModal && activeModal.dispatchEvent(new Event("modalClose"));
 
 		document.body.classList.remove('modal-show');
 		wrapper.style.top = 0;
@@ -35,8 +35,6 @@
 			document.documentElement.classList.remove('scroll-behavior-off');
 
 		});
-
-//		document.querySelector('#modal-video').innerHTML = '';
 
 	});
 

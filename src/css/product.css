@@ -316,6 +316,12 @@
 		width: 100%;
 		flex-shrink: 0;
 
+		img {
+
+			object-fit: contain;
+
+		}
+
 	}
 
 	@media $desktop {
