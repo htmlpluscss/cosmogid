@@ -72,6 +72,7 @@ const html = (files, since = {}, folder = '') => {
 			},
 			path: 'src/'
 		}))
+		.pipe(replace('	', '  '))
 /*		.pipe(w3cjs({
 			url : 'https://validator.w3.org/nu/',
 			verifyMessage: (type, message) => {
