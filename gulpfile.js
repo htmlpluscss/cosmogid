@@ -93,7 +93,7 @@ const html = (files, since = {}, folder = '') => {
 
 gulp.task('html', () => html('src/**/index.html', {since: gulp.lastRun('html')}));
 gulp.task('html:touch', () => html('src/**/index.html'));
-gulp.task('html:lk', () => html('src/lk/**/index.html', {}, '/lk'));
+gulp.task('html:product', () => html('src/product/**/index.html', {}, '/product'));
 
 gulp.task('css', () => {
 
@@ -210,7 +210,7 @@ gulp.task('watch', () => {
 	gulp.watch('src/js/*.*', gulp.series('js'));
 	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
-	gulp.watch(['src/lk/**','!src/lk/index.html'], gulp.series('html:lk'));
+	gulp.watch(['src/product/**','!src/product/index.html'], gulp.series('html:product'));
 	gulp.watch(['src/_include/**/*.html','src/template/**/*.html'], gulp.series('html:touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
 	gulp.watch('build/**/*.*', gulp.series('ftp'));

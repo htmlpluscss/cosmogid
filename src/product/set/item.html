@@ -1,0 +1,85 @@
+		<article class="preview-card">
+
+{% set card = {
+
+	overlay : false,
+	label : [
+		{
+			mod : "sale",
+			name : "скидка",
+			value : "25%"
+		}
+	],
+	flag : ["red","Хит"],
+	rating : 3,
+	review : "23 отзыва",
+	priceOld : true,
+	target   : "_blank"
+
+} %}
+
+{% include "_include/preview-card/head.html" %}
+
+			<form action="/" class="preview-card__form-set">
+
+				<input type="hidden" name="id" value="123">
+
+{% if step === 1 or total %}
+
+				<span class="btn btn--small">
+					Выбрано
+				</span>
+
+{% else %}
+				<input type="hidden" name="mode" value="add">
+
+				<div class="preview-card__form-set-btn-add">
+
+					<button class="btn btn--small btn--outline">
+						Добавить в набор
+					</button>
+
+				</div>
+
+{% endif %}
+
+				<details class="tooltip">
+
+					<summary>
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#svg-help"/>
+						</svg>
+					</summary>
+
+					<div class="tooltip__inner">
+
+						<p>
+							Очищающее средство с увлажняющим действием способствуют удалению омертвевших клеток с поверхности кожи и замещению их здоровыми клетками.Мягко очищает кожу от загрязнений, жира и косметики, не нарушая гидролипидную мантию. Пантенол и аллантоин успокаивают, смягчают и восстанавливают кожу, способствуют удалению омертвевших клеток с поверхности кожи и замещению их здоровыми клетками.
+						</p>
+
+						<h4>
+							Ключевые ингредиенты:
+						</h4>
+
+						<ul>
+							<li>
+								Гиалуронат натрия, пантенол, глицерин, натриева соль РСА и мочевина: увлажняют кожу
+							</li>
+							<li>
+								Аллантоин: успокаивает и смягчает кожу.
+							</li>
+							<li>
+								Покрывает кожу шелковистым матовым слоем
+							</li>
+							<li>
+								Уменьшает выраженность мелких морщинок
+							</li>
+						</ul>
+
+					</div>
+
+				</details>
+
+			</form>
+
+		</article>

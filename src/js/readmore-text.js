@@ -47,6 +47,14 @@
 
 				[...blocks].forEach( block => {
 
+					// continue
+
+					if ( block.classList.contains('is-readmore-off') ) {
+
+						return;
+
+					}
+
 					// перемещаем в конец
 
 					const main = block.parentNode.classList.contains('main') ? block.parentNode : false;

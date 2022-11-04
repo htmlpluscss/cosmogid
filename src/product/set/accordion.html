@@ -1,0 +1,87 @@
+		<div class="product-protokol-accordion">
+
+{% for step in range(1,4) %}
+
+			<div class="accordion accordion--plus">
+
+				<div class="accordion__item{% if loop.first %} is-open{% endif %}">
+
+					<div class="accordion__head accordion__btn">
+
+						<h2 class="page-bar__h3">
+							Шаг {{ step }} Комплексная система подготовки кожи ZO Getting Skin Ready ™
+						</h2>
+
+					</div>
+
+					<div class="accordion__body">
+
+						<div class="accordion__body-inner">
+
+							<div class="product-protokol-accordion__text">
+
+								<p>
+									Ощущаете ужасную стянутость кожи после каждого очищения? Если пропускать этап тонизирования, это негативно скажется на состоянии эпидермиса. Восстановление оптимального уровня pH крайне важно для здорового и сияющего внешнего вида.
+								</p>
+
+								<div class="readmore-text">
+
+									<div class="readmore-text__body">
+
+										<p>
+											Таким образом, экономическая повестка сегодняшнего дня требует анализа своевременного выполнения сверхзадачи. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: повышение уровня гражданского сознания.
+										</p>
+
+									</div>
+
+									<div class="readmore-text__foot readmore-text__foot--left">
+
+										<button class="readmore-text__btn btn btn--hash" type="button" data-alt="Свернуть">
+											Развернуть
+										</button>
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="product-protokol-step">
+
+								<div class="product-protokol-step__bg">
+
+									<h3 class="product-protokol-step__head">
+										Утренние процедуры
+									</h3>
+
+									<p class="product-protokol-step__text">
+										Ощущаете ужасную стянутость кожи после каждого очищения? Если пропускать этап тонизирования, это негативно скажется на состоянии эпидермиса. Восстановление оптимального уровня pH крайне важно для здорового и сияющего внешнего вида.
+									</p>
+
+{% include "product/set/list.html" %}
+
+								</div>
+
+								<div class="product-protokol-step__bg">
+
+									<h3 class="product-protokol-step__head">
+										Вечерние процедуры
+									</h3>
+
+{% include "product/set/list.html" %}
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+{% endfor %}
+
+		</div>

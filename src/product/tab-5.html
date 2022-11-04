@@ -1,0 +1,40 @@
+					<div class="tabs__item visuallyhidden">
+
+						<h2 class="product-tabs__heading visuallyhidden" id="video">
+							Видео
+						</h2>
+
+		<div class="video-review">
+
+			<ul class="video-review__list">
+
+{% for item in range(0,12) %}
+
+				<li class="video-review__item">
+
+					<div class="video-clip">
+
+						<a href="https://www.youtube.com/watch?v=NRnWcDJzLzs" target="_blank" rel="nofollow noopener noreferrer" class="video-clip__link">
+
+							<picture>
+
+								<source srcset="/img/video-clip/video-review/{{ loop.index % 6 + 1 }}--392x200.webp 1x, /img/video-clip/video-review/{{ loop.index % 6 + 1 }}--784x400.webp 2x" type="image/webp">
+								<source srcset="/img/video-clip/video-review/{{ loop.index % 6 + 1 }}--392x200.jpg 1x, /img/video-clip/video-review/{{ loop.index % 6 + 1 }}--784x400.jpg 2x">
+
+								<img src="/img/video-clip/video-review/{{ loop.index % 6 + 1 }}--392x200.jpg" alt="название отзыва" loading="lazy" width="392" height="200">
+
+							</picture>
+
+						</a>
+
+					</div>
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+		</div>
+
+					</div>

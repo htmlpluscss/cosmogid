@@ -1,0 +1,35 @@
+	<section class="preview-swiper">
+
+		<h2 class="h1 preview-swiper__title">
+
+			{{ previewSwiperTitle | default ('Новинки протоколов процедур') }}
+
+		</h2>
+
+		<div class="preview-swiper__box">
+
+			<div class="preview-swiper__wrap">
+
+				<div class="preview-swiper__swiper swiper-container swiper-container--preview">
+
+					<ul class="preview-swiper__list swiper-wrapper">
+
+{% for i in range(0, 10) %}
+
+						<li class="preview-swiper__item swiper-slide">
+
+{% include "main/preview-swiper__preview-card-set.html" %}
+
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>

@@ -1,0 +1,231 @@
+					<div class="tabs__item visuallyhidden">
+
+						<h2 class="product-tabs__heading visuallyhidden" id="protokol">
+							Таблица поэтапного нанесения
+						</h2>
+
+						<div class="product-protokol-table">
+
+							<table>
+
+								<thead>
+
+									<tr>
+
+{% for th in ["Этап","Продукт","Объем","Себестоимость","Расход","Инструкция"] %}
+
+										<th>
+											{{ th }}
+										</th>
+
+{% endfor %}
+
+									</tr>
+
+								</thead>
+
+								<tbody>
+
+									<tr class="product-protokol-table__step">
+
+										<td colspan="6">
+											Шаг 1 - GSR ™
+										</td>
+
+									</tr>
+
+{% for i in range(0,3) %}
+
+									<tr>
+
+										<td>
+
+{% if loop.first %}
+
+											<b class="product-protokol-table__section">
+												Утренняя процедура
+											</b>
+{% endif %}
+
+											<div class="product-protokol-table__check">
+
+												{{ loop.index }}. Отшелушивание <br> (утром или вечером 2-3 раза в неделю, при необходимости – ежедневно)
+
+											</div>
+
+										</td>
+
+										<td>
+
+											<a href="/product/" target="_blank" class="product-protokol-table__product">
+
+												<span class="product-protokol-table__product-img">
+
+													<picture>
+
+														<source srcset="/img/product/gallery/1--40x40.webp 1x, /img/product/gallery/1--80x80.webp 2x" type="image/webp">
+														<source srcset="/img/product/gallery/1--40x40.jpg 1x, /img/product/gallery/1--80x80.jpg 2x">
+
+														<img src="/img/product/gallery/1--40x40.jpg" alt="ZO Skin программа лечения акне для нормальной и сухой кожи" loading="lazy" width="40" height="40">
+
+													</picture>
+
+												</span>
+
+												<span class="product-protokol-table__product-name">
+
+													ZO Skin Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием), 960 мл
+
+												</span>
+
+											</a>
+
+										</td>
+
+										<td class="product-protokol-table__value">
+											960 мл
+										</td>
+
+										<td class="product-protokol-table__value">
+											3 302₽
+										</td>
+
+										<td class="product-protokol-table__value">
+											3 мл
+										</td>
+
+										<td class="product-protokol-table__text">
+											Аккуратно втирать в кожу лица до растворения кристаллов. Легкое ощущение тепла – нормальная реакция. Удалить влажными теплыми салфетками или ватным спонжем
+										</td>
+
+									</tr>
+
+{% endfor %}
+
+								</tbody>
+
+								<tbody>
+
+									<tr class="product-protokol-table__step">
+
+										<td colspan="6">
+											шаг 2 Комплексная система подготовки кожи ZO Getting Skin Ready ™
+										</td>
+
+									</tr>
+
+{% for i in range(0,3) %}
+
+									<tr>
+
+										<td>
+
+											<div class="product-protokol-table__check">
+
+												{{ loop.index }}. Отшелушивание <br> (утром или вечером 2-3 раза в неделю, при необходимости – ежедневно)
+
+											</div>
+
+										</td>
+
+										<td>
+
+											<a href="/product/" target="_blank" class="product-protokol-table__product">
+
+												<span class="product-protokol-table__product-img">
+
+													<picture>
+
+														<source srcset="/img/product/gallery/1--40x40.webp 1x, /img/product/gallery/1--80x80.webp 2x" type="image/webp">
+														<source srcset="/img/product/gallery/1--40x40.jpg 1x, /img/product/gallery/1--80x80.jpg 2x">
+
+														<img src="/img/product/gallery/1--40x40.jpg" alt="ZO Skin программа лечения акне для нормальной и сухой кожи" loading="lazy" width="40" height="40">
+
+													</picture>
+
+												</span>
+
+												<span class="product-protokol-table__product-name">
+
+													ZO Skin Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием), 960 мл
+
+												</span>
+
+											</a>
+
+										</td>
+
+										<td class="product-protokol-table__value">
+											960 мл
+										</td>
+
+										<td class="product-protokol-table__value">
+											3 302₽
+										</td>
+
+										<td class="product-protokol-table__value">
+											3 мл
+										</td>
+
+										<td class="product-protokol-table__text">
+											Аккуратно втирать в кожу лица до растворения кристаллов. Легкое ощущение тепла – нормальная реакция. Удалить влажными теплыми салфетками или ватным спонжем
+										</td>
+
+									</tr>
+
+{% endfor %}
+
+								</tbody>
+
+							</table>
+
+							<div class="product-protokol-table__foot">
+
+								<div class="product-protokol-table__left">
+
+									<p class="h1">
+										Итого ваш набор
+									</p>
+
+									<p class="product-protokol-table__left-note">
+										цена актуальна при покупке всей программы из 8 средств
+									</p>
+
+									<p class="product-protokol-table__left-green">
+										есть в наличии
+									</p>
+
+									<p class="product-protokol-table__left-sku">
+										<b>код:</b> 25694549
+									</p>
+
+								</div>
+
+								<div class="product-protokol-table__right">
+
+									<p class="h1">
+
+										120 581 ₽
+
+										<s>
+											250 801 ₽
+										</s>
+
+									</p>
+
+									<p class="product-protokol-table__right-red">
+										Ваша выгода 120&nbsp;000&nbsp;₽ <br>
+										Себестоимость одной процедуры составит 200&nbsp;₽
+									</p>
+
+									<p class="product-protokol-table__right-text">
+										Рекомендуемая стоимость за один этап программы в салонах красоты от 1500&nbsp;₽ до 1900&nbsp;₽
+									</p>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>

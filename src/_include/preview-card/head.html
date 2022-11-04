@@ -1,6 +1,6 @@
 			<div class="preview-card__head">
 
-				<a href="/product/" class="preview-card__img">
+				<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/" class="preview-card__img">
 
 					{% set img = [1,2,3,4,5] | random %}
 
@@ -125,19 +125,63 @@
 
 				</span>
 
-				<a href="/product/#review" class="preview-card__review">
+				<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/#review" class="preview-card__review">
 					{{ card.review }}
 				</a>
 
 			</p>
 
 			<p class="preview-card__madein">
-				Kaaral (Италия)
+				{{ card.madein | default('Kaaral (Италия)') }}
 			</p>
 
-			<a href="/product/" class="preview-card__title tooltip-title" title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл">
+			<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/" class="preview-card__title tooltip-title" title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл">
 				{{ ["Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл","Academie Ultimate Line Correcting serum, 30 мл"] | random }}
 			</a>
+
+{% if card.madein === 'ZO Skin' %}
+
+			<dl class="preview-card__param">
+
+				<dt>
+					Длительность курса:
+				</dt>
+
+				<dd>
+					5 месяцев
+				</dd>
+
+			</dl>
+
+			<dl class="preview-card__param">
+
+				<dt>
+					Результат:
+				</dt>
+
+				<dd>
+					омоложение, увлажнение, чистая кожа
+				</dd>
+
+			</dl>
+
+			<p class="preview-card__price">
+
+				<span class="price">
+
+					<s class="price__old">
+						200124 ₽
+					</s>
+
+					<b class="price__value">
+						125810 ₽
+					</b>
+
+				</span>
+
+			</p>
+
+{% else %}
 
 			<p class="preview-card__price">
 
@@ -162,3 +206,5 @@
 				</span>
 
 			</p>
+
+{% endif %}

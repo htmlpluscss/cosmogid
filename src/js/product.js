@@ -232,6 +232,44 @@
 
 		});
 
+		// Протокол
+
+		const formSet = product.querySelectorAll('.preview-card__form-set');
+
+		if ( formSet.length > 0 ) {
+
+			const templateAddMode = document.querySelector('#product-set-addmode-template').innerHTML;
+
+			[...formSet].forEach( form => {
+
+				const mode = form.elements.mode,
+					  btnWrap = form.querySelector('.preview-card__form-set-btn-add');
+
+				form.addEventListener('submit', event => {
+
+					event.preventDefault();
+					console.log('В этой части ничего не делал, кроме смены кнопки. Могу убрать обработчик или написать что необходимо: переключение кнопок и т.п.');
+
+					if ( mode.value === 'add' ) { // тут надо смотреть, что вернули: add | remove
+
+						mode.value = 'remove';
+
+						btnWrap.innerHTML = Mustache.render(templateAddMode, { remove : true });
+
+					} else {
+
+						mode.value = 'add';
+
+						btnWrap.innerHTML = Mustache.render(templateAddMode, { add : true });
+
+					}
+
+				});
+
+			});
+
+		}
+
 	}
 
 })(document.querySelector('.product'));

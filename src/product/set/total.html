@@ -1,0 +1,33 @@
+						<div class="product-protokol-total">
+
+							<h2 class="h1">
+								Итоговый комплекс препаратов
+							</h2>
+
+							<div class="product-protokol-total__box">
+
+								<div class="product-protokol-total__list">
+
+{% for total in range(1,8) %}
+
+{% include "product/set/item.html" %}
+
+{% endfor %}
+
+								</div>
+
+								<div class="product-protokol-total__bar">
+
+									<div class="product-protokol-total__bar-sticky">
+
+{% include "product/set/buy.html" %}
+
+{% include "product/service.html" %}
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
