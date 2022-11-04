@@ -2,7 +2,7 @@
 
 {% for i in  [1,2] %}
 
-			<article class="consultations-card consultations-card--link">
+			<article class="consultations-card consultations-card--set">
 
 				<figure class="consultations-card__expert">
 
@@ -17,41 +17,42 @@
 
 					<figcaption>
 
-						эксперт <br>
+						Рекомендует эксперт-косметолог <br>
 						Мария Кузякина
 
 					</figcaption>
 
 				</figure>
 
-				<blockquote class="consultations-card__question">
+				<div class="consultations-card__product">
 
-					<h3 class="consultations-card__question-title">
-						Уход за шершавой кожей на пяточках - за 1 час )
-					</h3>
+					<div class="consultations-card__product-content">
 
-					<p class="consultations-card__question-text">
-						Как принято считать, интерактивные прототипы призывают нас к новым свершениям, которые, в свою очередь, должны.
-					</p>
+						<h3 class="consultations-card__product-title">
+							товары revlon для специалистов
+						</h3>
 
-					<ul class="consultations-card__question-tags">
-						<li>
-							#уход за кожей
-						</li>
-						<li>
-							#маски
-						</li>
-						<li>
-							#revlon
-						</li>
-					</ul>
+						<p class="consultations-card__product-text">
+							Как принято считать, интерактивные прототипы призывают нас к новым свершениям, которые, в свою очередь, должны.
+						</p>
 
-				</blockquote>
+						<a href="/" class="btn">
+							Перейти в подбрку
+						</a>
 
-				<div class="consultations-card__foot">
+					</div>
 
-					<a href="/workshop/item/" class="btn">
-						Смотреть мастер-класс
+					<a href="/" class="consultations-card__product-img">
+
+						<picture>
+
+							<source srcset="/img/preview-card/preview-200x200.webp 1x, /img/preview-card/preview-400x400.webp 2x" type="image/webp">
+							<source srcset="/img/preview-card/preview-200x200.jpg 1x, /img/preview-card/preview-400x400.jpg 2x">
+
+							<img src="/img/preview-card/preview-200x200.jpg" alt="" loading="lazy" width="200" height="200">
+
+						</picture>
+
 					</a>
 
 				</div>
@@ -59,5 +60,13 @@
 			</article>
 
 {% endfor %}
+
+		</div>
+
+		<div class="club-inside__foot-btns">
+
+			<button class="btn btn--outline" type="button">
+				Все предложения
+			</button>
 
 		</div>
