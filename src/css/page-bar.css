@@ -36,6 +36,7 @@
 			margin-top: -60px;
 			margin-bottom: 20px;
 			z-index: 2;
+			display: flex;
 
 		}
 
@@ -126,6 +127,7 @@
 
 		position: sticky;
 		top: var(--scrollMargin);
+		user-select: none;
 
 		@media $mdWidth {
 

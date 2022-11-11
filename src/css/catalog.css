@@ -10,7 +10,8 @@
 		.catalog__body,
 		.menu-bar,
 		.main > .content,
-		.catalog .content {
+		.catalog .content,
+		.lk-menu {
 
 			display: none;
 
@@ -95,10 +96,14 @@
 		transition-delay: var(--transitionDefault);
 		display: flex;
 
-		&:hover {
+		@media $desktop {
 
-			z-index: 3;
-			transition: none;
+			&:hover {
+
+				z-index: 3;
+				transition: none;
+
+			}
 
 		}
 
@@ -114,7 +119,7 @@
 
 		margin-bottom: 32px;
 
-		&__inputsearch {
+		&-inputsearch {
 
 			position: relative;
 			width: 300px;

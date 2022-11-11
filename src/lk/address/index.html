@@ -8,201 +8,87 @@
 
 {% block content %}
 
-	<article class="lk">
+	<article class="lk center">
 
-		<header class="center">
-
-			<h1 class="title">
-				{{ title }}
-			</h1>
+		<h1 class="title">
+			{{ title }}
+		</h1>
 
 {% include "lk/menu.html" %}
 
-		</header>
+		<div class="lk-form">
 
-		<div class="center">
-
-			<div class="lk-form">
-
-				<div class="lk-form__column-3">
+			<div class="lk-form__column-3">
 
 {% include "lk/address/list.html" %}
 
-					<form action="/" class="lk-form__fieldset is-column-span-2">
+				<form action="/" class="lk-form__fieldset is-column-span-2">
 
-						<h2 class="lk__head">
-							Добавление нового адреса
-						</h2>
+					<h2 class="lk__head">
+						Добавление нового адреса
+					</h2>
 
-						<div class="lk-form__column-2">
+					<div class="lk-form__column-2">
 
-							<div class="lk-form__fieldset">
+						<div class="lk-form__fieldset">
 
-								<div class="inputbox">
+							<div class="inputbox">
 
-									<label class="inputbox__label" for="lk-form-name">
-										Имя получателя
-									</label>
+								<label class="inputbox__label" for="lk-form-name">
+									Имя получателя
+								</label>
 
-									<input class="input" name="name" id="lk-form-name" placeholder="Марина">
-
-								</div>
-
-								<div class="inputbox">
-
-									<label class="inputbox__label" for="lk-form-lastname">
-										Фамилия получателя
-									</label>
-
-									<input class="input" name="name" id="lk-form-lastname" placeholder="Кузякина">
-
-								</div>
-
-								<div class="inputbox">
-
-									<label class="inputbox__label" for="lk-form-middlename">
-										Отчество получателя
-									</label>
-
-									<input class="input" name="name" id="lk-form-middlename" placeholder="Сергеевна">
-
-									<p class="inputbox__text color-red">
-										Необходимо для отправки почтой РФ
-									</p>
-
-								</div>
-
-								<div class="inputbox">
-
-									<p class="inputbox__label">
-										Телефон получателя
-									</p>
-
-									<div class="phone-country">
-
-										<button class="phone-country__btn button" type="button">
-
-											<span class="phone-country__value">
-												RUS
-											</span>
-
-											<svg width="20" height="20" viewBox="0 0 20 20">
-												<use xlink:href="#svg-chevron"/>
-											</svg>
-
-										</button>
-
-										<input class="phone-country__mask input inputmask inputmask--phone" type="tel" name="phone" data-mask="+\7 (999) 999 99 99" placeholder="+7 ( --- ) --- -- --" required="required">
-
-{% include "lk/phone-country-list.html" %}
-
-									</div>
-
-								</div>
+								<input class="input" name="name" id="lk-form-name" placeholder="Марина">
 
 							</div>
 
-							<div class="lk-form__fieldset">
+							<div class="inputbox">
 
-								<div class="inputbox">
+								<label class="inputbox__label" for="lk-form-lastname">
+									Фамилия получателя
+								</label>
 
-									<label class="inputbox__label" for="lk-form-city">
-										Ваш город
-									</label>
+								<input class="input" name="name" id="lk-form-lastname" placeholder="Кузякина">
 
-									<input class="input" name="city" placeholder="Населенный пункт" id="lk-form-city" list="lk-form-city-list">
+							</div>
 
-									<datalist id="lk-form-city-list">
+							<div class="inputbox">
 
-									{% for value in ["Екатеринбург","Москва","Санкт-Петербург","Казань","Ростов-на-Дону"] %}
+								<label class="inputbox__label" for="lk-form-middlename">
+									Отчество получателя
+								</label>
 
-										<option value="{{ value }}">
+								<input class="input" name="name" id="lk-form-middlename" placeholder="Сергеевна">
 
-									{% endfor %}
+								<p class="inputbox__text color-red">
+									Необходимо для отправки почтой РФ
+								</p>
 
-									</datalist>
+							</div>
 
-								</div>
+							<div class="inputbox">
 
-								<div class="inputbox">
+								<p class="inputbox__label">
+									Телефон получателя
+								</p>
 
-									<label class="inputbox__label" for="lk-form-street">
-										Улица
-									</label>
+								<div class="phone-country">
 
-									<input class="input" name="street" placeholder="ул. Константина Сидорова" id="lk-form-street" list="lk-form-street-list">
+									<button class="phone-country__btn button" type="button">
 
-									<datalist id="lk-form-street-list">
+										<span class="phone-country__value">
+											RUS
+										</span>
 
-										{% include "cart/order/datalist.html" %}
+										<svg width="20" height="20" viewBox="0 0 20 20">
+											<use xlink:href="#svg-chevron"/>
+										</svg>
 
-									</datalist>
-
-								</div>
-
-								<div class="inputbox is-one-row">
-
-									<div class="lk-form__row-inputbox">
-
-										<div class="inputbox">
-
-											<label class="inputbox__label" for="lk-form-house">
-												Дом
-											</label>
-
-											<input class="input" name="house" placeholder="125" id="lk-form-house">
-
-										</div>
-
-										<div class="inputbox">
-
-											<label class="inputbox__label" for="lk-form-entrance">
-												Подьезд
-											</label>
-
-											<input class="input" name="entrance" placeholder="2" id="lk-form-entrance">
-
-										</div>
-
-										<div class="inputbox">
-
-											<label class="inputbox__label" for="lk-form-apartment">
-												Квартира
-											</label>
-
-											<input class="input" name="apartment" placeholder="256" id="lk-form-apartment">
-
-										</div>
-
-									</div>
-
-								</div>
-
-								<div class="inputbox">
-
-									<label class="inputbox__label" for="lk-form-telegram">
-										Telegram
-									</label>
-
-									<input class="input" name="telegram" id="lk-form-telegram" placeholder="Телефон или @никнейм">
-
-								</div>
-
-								<div class="inputbox">
-
-									<label class="inputbox__label" for="lk-form-information">
-										Дополнительная информация
-									</label>
-
-									<textarea class="input autosize" name="information" placeholder="Код домофона, подъезд, пожелания" id="lk-form-information"></textarea>
-
-								</div>
-
-								<div class="lk-form__submit">
-
-									<button class="btn">
-										Добавить адрес
 									</button>
+
+									<input class="phone-country__mask input inputmask inputmask--phone" type="tel" name="phone" data-mask="+\7 (999) 999 99 99" placeholder="+7 ( --- ) --- -- --" required="required">
+
+{% include "lk/phone-country-list.html" %}
 
 								</div>
 
@@ -210,9 +96,115 @@
 
 						</div>
 
-					</form>
+						<div class="lk-form__fieldset">
 
-				</div>
+							<div class="inputbox">
+
+								<label class="inputbox__label" for="lk-form-city">
+									Ваш город
+								</label>
+
+								<input class="input" name="city" placeholder="Населенный пункт" id="lk-form-city" list="lk-form-city-list">
+
+								<datalist id="lk-form-city-list">
+
+								{% for value in ["Екатеринбург","Москва","Санкт-Петербург","Казань","Ростов-на-Дону"] %}
+
+									<option value="{{ value }}">
+
+								{% endfor %}
+
+								</datalist>
+
+							</div>
+
+							<div class="inputbox">
+
+								<label class="inputbox__label" for="lk-form-street">
+									Улица
+								</label>
+
+								<input class="input" name="street" placeholder="ул. Константина Сидорова" id="lk-form-street" list="lk-form-street-list">
+
+								<datalist id="lk-form-street-list">
+
+									{% include "cart/order/datalist.html" %}
+
+								</datalist>
+
+							</div>
+
+							<div class="inputbox is-one-row">
+
+								<div class="lk-form__row-inputbox">
+
+									<div class="inputbox">
+
+										<label class="inputbox__label" for="lk-form-house">
+											Дом
+										</label>
+
+										<input class="input" name="house" placeholder="125" id="lk-form-house">
+
+									</div>
+
+									<div class="inputbox">
+
+										<label class="inputbox__label" for="lk-form-entrance">
+											Подьезд
+										</label>
+
+										<input class="input" name="entrance" placeholder="2" id="lk-form-entrance">
+
+									</div>
+
+									<div class="inputbox">
+
+										<label class="inputbox__label" for="lk-form-apartment">
+											Квартира
+										</label>
+
+										<input class="input" name="apartment" placeholder="256" id="lk-form-apartment">
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="inputbox">
+
+								<label class="inputbox__label" for="lk-form-telegram">
+									Telegram
+								</label>
+
+								<input class="input" name="telegram" id="lk-form-telegram" placeholder="Телефон или @никнейм">
+
+							</div>
+
+							<div class="inputbox">
+
+								<label class="inputbox__label" for="lk-form-information">
+									Дополнительная информация
+								</label>
+
+								<textarea class="input autosize" name="information" placeholder="Код домофона, подъезд, пожелания" id="lk-form-information"></textarea>
+
+							</div>
+
+							<div class="lk-form__submit">
+
+								<button class="btn">
+									Добавить адрес
+								</button>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</form>
 
 			</div>
 

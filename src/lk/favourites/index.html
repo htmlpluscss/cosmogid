@@ -8,31 +8,25 @@
 
 {% block content %}
 
-	<article class="lk">
+	<article class="lk center">
 
-		<header class="center">
-
-			<h1 class="title">
-				{{ title }}
-			</h1>
+		<h1 class="title">
+			{{ title }}
+		</h1>
 
 {% include "lk/menu.html" %}
 
-		</header>
+		<div class="catalog">
 
-		<div class="center">
+			<div class="catalog__box">
 
-			<div class="catalog">
-
-				<div class="catalog__box">
-
-					<div class="catalog__filter">
+				<div class="catalog__filter">
 
 {% include "favourites/filter.html" %}
 
-					</div>
+				</div>
 
-					<div class="catalog__body">
+				<div class="catalog__body">
 
 {% include "catalog/sort.html" %}
 
@@ -41,8 +35,6 @@
 {% include "catalog/list.html" %}
 
 {% include "catalog/foot.html" %}
-
-					</div>
 
 				</div>
 

@@ -261,7 +261,7 @@
 
 		window.addEventListener("click", event => {
 
-			if ( event.target.closest('.page-bar__menu') === null ) {
+			if ( event.target.closest('.page-bar__menu, .lk-menu') === null ) {
 
 				btn.classList.remove('is-open');
 
@@ -271,4 +271,4 @@
 
 	}
 
-})(document.querySelector('.page-bar__menu-btn'));
+})(document.querySelector('.page-bar__menu-btn, .lk-menu__toggle-btn'));

@@ -8,19 +8,15 @@
 
 {% block content %}
 
-	<article class="lk">
+	<article class="lk center">
 
-		<header class="center">
-
-			<h1 class="title">
-				{{ title }}
-			</h1>
+		<h1 class="title">
+			{{ title }}
+		</h1>
 
 {% include "lk/menu.html" %}
 
-		</header>
-
-		<div class="center lk-accordions">
+		<div class="lk-accordions">
 
 {% for head in ["Вам доступны закрытые бренды клуба","Закрытые Товары для членов клуба","Акции для членов клуба","Специальные акции"]%}
 
