@@ -6,178 +6,182 @@
 
 						<div class="product-protokol-table">
 
-							<table>
+							<div class="product-protokol-table__scroll">
 
-								<thead>
+								<table>
 
-									<tr>
+									<thead>
+
+										<tr>
 
 {% for th in ["Этап","Продукт","Объем","Себестоимость","Расход","Инструкция"] %}
 
-										<th>
-											{{ th }}
-										</th>
+											<th>
+												{{ th }}
+											</th>
 
 {% endfor %}
 
-									</tr>
+										</tr>
 
-								</thead>
+									</thead>
 
-								<tbody>
+									<tbody>
 
-									<tr class="product-protokol-table__step">
+										<tr class="product-protokol-table__step">
 
-										<td colspan="6">
-											Шаг 1 - GSR ™
-										</td>
+											<td colspan="6">
+												Шаг 1 - GSR ™
+											</td>
 
-									</tr>
+										</tr>
 
 {% for i in range(0,3) %}
 
-									<tr>
+										<tr>
 
-										<td>
+											<td>
 
 {% if loop.first %}
 
-											<b class="product-protokol-table__section">
-												Утренняя процедура
-											</b>
+												<b class="product-protokol-table__section">
+													Утренняя процедура
+												</b>
 {% endif %}
 
-											<div class="product-protokol-table__check">
+												<div class="product-protokol-table__check">
 
-												{{ loop.index }}. Отшелушивание <br> (утром или вечером 2-3 раза в неделю, при необходимости – ежедневно)
+													{{ loop.index }}. Отшелушивание <br> (утром или вечером 2-3 раза в неделю, при необходимости – ежедневно)
 
-											</div>
+												</div>
 
-										</td>
+											</td>
 
-										<td>
+											<td>
 
-											<a href="/product/" target="_blank" class="product-protokol-table__product">
+												<a href="/product/" target="_blank" class="product-protokol-table__product">
 
-												<span class="product-protokol-table__product-img">
+													<span class="product-protokol-table__product-img">
 
-													<picture>
+														<picture>
 
-														<source srcset="/img/product/gallery/1--40x40.webp 1x, /img/product/gallery/1--80x80.webp 2x" type="image/webp">
-														<source srcset="/img/product/gallery/1--40x40.jpg 1x, /img/product/gallery/1--80x80.jpg 2x">
+															<source srcset="/img/product/gallery/1--40x40.webp 1x, /img/product/gallery/1--80x80.webp 2x" type="image/webp">
+															<source srcset="/img/product/gallery/1--40x40.jpg 1x, /img/product/gallery/1--80x80.jpg 2x">
 
-														<img src="/img/product/gallery/1--40x40.jpg" alt="ZO Skin программа лечения акне для нормальной и сухой кожи" loading="lazy" width="40" height="40">
+															<img src="/img/product/gallery/1--40x40.jpg" alt="ZO Skin программа лечения акне для нормальной и сухой кожи" loading="lazy" width="40" height="40">
 
-													</picture>
+														</picture>
 
-												</span>
+													</span>
 
-												<span class="product-protokol-table__product-name">
+													<span class="product-protokol-table__product-name">
 
-													ZO Skin Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием), 960 мл
+														ZO Skin Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием), 960 мл
 
-												</span>
+													</span>
 
-											</a>
+												</a>
 
-										</td>
+											</td>
 
-										<td class="product-protokol-table__value">
-											960 мл
-										</td>
+											<td class="product-protokol-table__value">
+												960 мл
+											</td>
 
-										<td class="product-protokol-table__value">
-											3 302₽
-										</td>
+											<td class="product-protokol-table__value">
+												3 302₽
+											</td>
 
-										<td class="product-protokol-table__value">
-											3 мл
-										</td>
+											<td class="product-protokol-table__value">
+												3 мл
+											</td>
 
-										<td class="product-protokol-table__text">
-											Аккуратно втирать в кожу лица до растворения кристаллов. Легкое ощущение тепла – нормальная реакция. Удалить влажными теплыми салфетками или ватным спонжем
-										</td>
+											<td class="product-protokol-table__text">
+												Аккуратно втирать в кожу лица до растворения кристаллов. Легкое ощущение тепла – нормальная реакция. Удалить влажными теплыми салфетками или ватным спонжем
+											</td>
 
-									</tr>
+										</tr>
 
 {% endfor %}
 
-								</tbody>
+									</tbody>
 
-								<tbody>
+									<tbody>
 
-									<tr class="product-protokol-table__step">
+										<tr class="product-protokol-table__step">
 
-										<td colspan="6">
-											шаг 2 Комплексная система подготовки кожи ZO Getting Skin Ready ™
-										</td>
+											<td colspan="6">
+												шаг 2 Комплексная система подготовки кожи ZO Getting Skin Ready ™
+											</td>
 
-									</tr>
+										</tr>
 
 {% for i in range(0,3) %}
 
-									<tr>
+										<tr>
 
-										<td>
+											<td>
 
-											<div class="product-protokol-table__check">
+												<div class="product-protokol-table__check">
 
-												{{ loop.index }}. Отшелушивание <br> (утром или вечером 2-3 раза в неделю, при необходимости – ежедневно)
+													{{ loop.index }}. Отшелушивание <br> (утром или вечером 2-3 раза в неделю, при необходимости – ежедневно)
 
-											</div>
+												</div>
 
-										</td>
+											</td>
 
-										<td>
+											<td>
 
-											<a href="/product/" target="_blank" class="product-protokol-table__product">
+												<a href="/product/" target="_blank" class="product-protokol-table__product">
 
-												<span class="product-protokol-table__product-img">
+													<span class="product-protokol-table__product-img">
 
-													<picture>
+														<picture>
 
-														<source srcset="/img/product/gallery/1--40x40.webp 1x, /img/product/gallery/1--80x80.webp 2x" type="image/webp">
-														<source srcset="/img/product/gallery/1--40x40.jpg 1x, /img/product/gallery/1--80x80.jpg 2x">
+															<source srcset="/img/product/gallery/1--40x40.webp 1x, /img/product/gallery/1--80x80.webp 2x" type="image/webp">
+															<source srcset="/img/product/gallery/1--40x40.jpg 1x, /img/product/gallery/1--80x80.jpg 2x">
 
-														<img src="/img/product/gallery/1--40x40.jpg" alt="ZO Skin программа лечения акне для нормальной и сухой кожи" loading="lazy" width="40" height="40">
+															<img src="/img/product/gallery/1--40x40.jpg" alt="ZO Skin программа лечения акне для нормальной и сухой кожи" loading="lazy" width="40" height="40">
 
-													</picture>
+														</picture>
 
-												</span>
+													</span>
 
-												<span class="product-protokol-table__product-name">
+													<span class="product-protokol-table__product-name">
 
-													ZO Skin Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием), 960 мл
+														ZO Skin Health Offects Hydrating Cleanser (Очищающее средство с увлажняющим действием), 960 мл
 
-												</span>
+													</span>
 
-											</a>
+												</a>
 
-										</td>
+											</td>
 
-										<td class="product-protokol-table__value">
-											960 мл
-										</td>
+											<td class="product-protokol-table__value">
+												960 мл
+											</td>
 
-										<td class="product-protokol-table__value">
-											3 302₽
-										</td>
+											<td class="product-protokol-table__value">
+												3 302₽
+											</td>
 
-										<td class="product-protokol-table__value">
-											3 мл
-										</td>
+											<td class="product-protokol-table__value">
+												3 мл
+											</td>
 
-										<td class="product-protokol-table__text">
-											Аккуратно втирать в кожу лица до растворения кристаллов. Легкое ощущение тепла – нормальная реакция. Удалить влажными теплыми салфетками или ватным спонжем
-										</td>
+											<td class="product-protokol-table__text">
+												Аккуратно втирать в кожу лица до растворения кристаллов. Легкое ощущение тепла – нормальная реакция. Удалить влажными теплыми салфетками или ватным спонжем
+											</td>
 
-									</tr>
+										</tr>
 
 {% endfor %}
 
-								</tbody>
+									</tbody>
 
-							</table>
+								</table>
+
+							</div>
 
 							<div class="product-protokol-table__foot">
 

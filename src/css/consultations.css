@@ -326,6 +326,12 @@
 		border: 1px solid #f3f4f6;
 		box-shadow: var(--box-shadow);
 
+		@media $smWidth {
+
+			padding: 16px;
+
+		}
+
 	}
 
 	&__product {
@@ -343,6 +349,12 @@
 
 				max-width: 300px;
 
+				@media $smWidth {
+
+					max-width: 100%;
+
+				}
+
 			}
 
 		}
@@ -351,6 +363,12 @@
 
 			width: 200px;
 			flex-shrink: 0;
+
+			@media $smWidth {
+
+				display: none;
+
+			}
 
 		}
 
@@ -362,6 +380,13 @@
 			text-transform: uppercase;
 			margin-bottom: 8px;
 			color: var(--gray);
+
+			@media $smWidth {
+
+				font-weight: 500;
+				font-size: 20px;
+
+			}
 
 		}
 

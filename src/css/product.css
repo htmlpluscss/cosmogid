@@ -232,10 +232,14 @@
 		margin: 8px 0;
 		display: flex;
 
-		.btn:not([data-alt]) {
+		@media $desktop {
 
-			width: 100%;
-			margin: 8px 0;
+			.btn:not([data-alt]) {
+
+				width: 100%;
+				margin: 8px 0;
+
+			}
 
 		}
 
@@ -267,8 +271,20 @@
 			.tabs__btn {
 
 				font-size: 16px;
-				line-height: 64px;
+				line-height: 24px;
+				white-space: normal;
+				height: 64px;
 				padding: 0 16px;
+
+			}
+
+		}
+
+		@media $smWidth {
+
+			.tabs__btn {
+
+				white-space: normal;
 
 			}
 
@@ -1164,6 +1180,12 @@
 		color: var(--gray);
 		margin-top: -8px;
 
+		@media $smWidth {
+
+			font-size: 12px;
+
+		}
+
 		p + p,
 		.readmore-text p {
 
@@ -1182,6 +1204,13 @@
 		margin: 16px 0;
 		padding: 24px 40px;
 		background-color: #f9fafb;
+
+		@media $mdWidth {
+
+			padding: 24px var(--indent);
+			margin: 16px calc( var(--indent) * -1);
+
+		}
 
 	}
 
@@ -1206,15 +1235,38 @@
 
 	&__list {
 
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
 		margin-top: 24px;
-		gap: 24px;
+		gap: var(--gap);
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+
+		@media $mdWidth {
+
+			grid-template-columns: 1fr 1fr 1fr;
+
+		}
+
+		@media $smWidth {
+
+			grid-template-columns: 1fr 1fr;
+
+		}
+
+		@media $xsWidth {
+
+			display: block;
+
+		}
 
 		.preview-card {
 
-			width: 226px;
 			background-color: #fff;
+
+			@media $xsWidth {
+
+				margin: var(--gap) 0;
+
+			}
 
 		}
 
@@ -1226,7 +1278,18 @@
 
 	padding: 40px 24px;
 	border: 1px solid var(--purple);
-	margin: 0 -24px;
+
+	@media $mdWidth {
+
+		padding: 24px var(--indent);
+		margin: 0 calc( var(--indent) * -1);
+
+	}
+
+	@media $xsWidth {
+
+
+	}
 
 	&__box {
 
@@ -1234,18 +1297,43 @@
 		justify-content: space-between;
 		margin-top: 24px;
 
+		@media $smWidth {
+
+			flex-direction: column-reverse;
+
+		}
+
 	}
 
 	&__list {
 
 		flex-grow: 1;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 24px;
+		display: grid;
+		gap: var(--gap);
+		margin-right: var(--gap);
+		grid-template-columns: 1fr 1fr 1fr;
 
-		.preview-card {
+		@media $mdWidth {
 
-			width: 210px;
+			grid-template-columns: 1fr 1fr;
+
+		}
+
+		@media $smWidth {
+
+			margin: 0;
+
+		}
+
+		@media $xsWidth {
+
+			display: block;
+
+			.preview-card {
+
+				margin: 20px 0;
+
+			}
 
 		}
 
@@ -1255,6 +1343,13 @@
 
 		width: 290px;
 		position: relative;
+
+		@media $smWidth {
+
+			width: 100%;
+			margin-bottom: 24px;
+
+		}
 
 		&-sticky {
 
@@ -1271,6 +1366,20 @@
 }
 
 .product-protokol-table {
+
+	@media $mdWidth {
+
+		&__scroll {
+
+			display: flex;
+
+			margin: calc( var(--indent) * -1);
+			padding: var(--indent);
+			overflow-x: auto;
+
+		}
+
+	}
 
 	table {
 
@@ -1396,12 +1505,31 @@
 		gap: 8px;
 		margin: 40px 0;
 
+		@media $smWidth {
+
+			display: block;
+
+		}
+
 	}
 
 	&__left {
 
 		width: 544px;
 		flex-shrink: 0;
+
+		@media $mdWidth {
+
+			width: 480px;
+
+		}
+
+		@media $smWidth {
+
+			width: auto;
+			margin-bottom: 24px;
+
+		}
 
 		&-note {
 

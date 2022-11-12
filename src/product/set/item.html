@@ -26,9 +26,13 @@
 
 {% if step === 1 or total %}
 
-				<span class="btn btn--small">
-					Выбрано
-				</span>
+				<div class="preview-card__form-set-btn-add">
+
+					<span class="btn btn--small">
+						Выбрано
+					</span>
+
+				</div>
 
 {% else %}
 				<input type="hidden" name="mode" value="add">
@@ -36,7 +40,7 @@
 				<div class="preview-card__form-set-btn-add">
 
 					<button class="btn btn--small btn--outline">
-						Добавить в набор
+						Добавить <span class="hidden-sm">в набор</span>
 					</button>
 
 				</div>

@@ -297,6 +297,12 @@
 		color: var(--gray);
 		margin-top: -8px;
 
+		@media $smWidth {
+
+			font-size: 14px;
+
+		}
+
 		p + p,
 		.readmore-text p {
 
@@ -309,6 +315,12 @@
 	&__catalog {
 
 		margin: 0 -24px;
+
+		@media $smWidth {
+
+			margin: 0;
+
+		}
 
 		.catalog__list {
 
@@ -338,6 +350,18 @@
 		display: flex;
 		justify-content: center;
 		margin: 24px 0;
+
+		@media $smWidth {
+
+			display: block;
+
+			.btn {
+
+				margin: 12px auto;
+
+			}
+
+		}
 
 		.btn {
 
@@ -386,6 +410,13 @@
 	align-items: flex-end;
 	min-height: 360px;
 
+	@media $smWidth {
+
+		padding: 128px 16px 24px;
+		display: block;
+
+	}
+
 	&__content {
 
 		width: 337px;
@@ -395,12 +426,25 @@
 		position: relative;
 		z-index: 1;
 
+		@media $smWidth {
+
+			width: auto;
+			margin-top: 16px;
+
+		}
+
 	}
 
 	&__before {
 
 		font-size: 18px;
 		margin-bottom: 8px;
+
+		@media $smWidth {
+
+			font-size: 16px;
+
+		}
 
 	}
 
@@ -412,6 +456,14 @@
 		min-height: 68px;
 		text-transform: uppercase;
 		margin-bottom: 8px;
+
+		@media $smWidth {
+
+			font-size: 16px;
+			font-weight: 500;
+			min-height: 0;
+
+		}
 
 	}
 
@@ -427,6 +479,12 @@
 
 		font-size: 18px;
 
+		@media $smWidth {
+
+			font-size: 14px;
+
+		}
+
 	}
 
 	&__foot {
@@ -437,6 +495,7 @@
 		.btn {
 
 			width: 300px;
+			max-width: 100%;
 
 		}
 
@@ -449,6 +508,13 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
+
+		@media $smWidth {
+
+			bottom: auto;
+			height: 128px;
+
+		}
 
 		img {
 
