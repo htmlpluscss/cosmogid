@@ -1,0 +1,183 @@
+{% set title = "Контактная информация" %}
+
+{% set lk = true %}
+
+{% set breadcrumbs = [title] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="lk center">
+
+		<h1 class="title">
+			{{ title }}
+		</h1>
+
+{% include "lk/menu.html" %}
+
+		<form action="/" class="lk-form">
+
+			<h2 class="lk__head">
+				Редактирование личных данных
+			</h2>
+
+			<div class="lk-form__column-3">
+
+				<div class="lk-form__fieldset">
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="lk-form-name">
+							Как вас зовут
+						</label>
+
+						<input class="input" name="name" id="lk-form-name" value="Марина">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="lk-form-lastname">
+							Ваша фамилия
+						</label>
+
+						<input class="input" name="name" id="lk-form-lastname" value="Кузякина">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="lk-form-middlename">
+							Отчество
+						</label>
+
+						<input class="input" name="name" id="lk-form-middlename" value="Сергеевна">
+
+					</div>
+
+					<div class="lk-form__checkbox">
+
+						<label class="checkbox">
+
+							<input type="checkbox" class="checkbox__input visuallyhidden" name="org">
+
+							<span class="checkbox__label">
+								Я Юридическое лицо
+							</span>
+
+						</label>
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__fieldset">
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="lk-form-birthdate">
+							Ваш день рождения
+						</label>
+
+						<input class="input" name="birthdate" placeholder="ДД.ММ.ГГГГ" id="lk-form-birthdate" onFocus="this.type='date'">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label class="inputbox__label">
+							Ваш телефон
+						</label>
+
+						<div class="phone-country">
+
+							<button class="phone-country__btn button" type="button">
+
+								<span class="phone-country__value">
+									RUS
+								</span>
+
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="#svg-chevron"/>
+								</svg>
+
+							</button>
+
+							<input class="phone-country__mask input inputmask inputmask--phone" type="tel" name="phone" data-mask="+\7 (999) 999 99 99" placeholder="+7 ( --- ) --- -- --" required="required" value="4951234567">
+
+{% include "lk/profile/phone-country-list.html" %}
+
+						</div>
+
+					</div>
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="lk-form-email">
+							Ваша почта
+						</label>
+
+						<input class="input" name="email" id="lk-form-email" type="email" value="kuzyakina@mail.ru">
+
+						<div class="inputbox__text">
+
+							<a href="/" class="link color-purple">
+								Управление подписками
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="lk-form__fieldset">
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="lk-form-password-old">
+							Старый пароль
+						</label>
+
+						<input class="input" name="password-old" id="lk-form-password-old" type="password" autocomplete="current-password">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="lk-form-password-new">
+							Новый пароль
+						</label>
+
+						<input class="input" name="password-new" id="lk-form-password-new" type="password" autocomplete="new-password">
+
+					</div>
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="lk-form-password-confirm">
+							Повторить новый пароль
+						</label>
+
+						<input class="input" name="password-confirm" id="lk-form-password-confirm" type="password" autocomplete="new-password">
+
+					</div>
+
+					<div class="lk-form__submit">
+
+						<button class="btn">
+							Сохранить изменения
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</form>
+
+	</article>
+
+{% endblock %}
