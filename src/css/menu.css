@@ -571,6 +571,24 @@
 
 		}
 
+		&[data-counter]::after {
+
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			top: 0px;
+			right: 16px;
+			content: attr(data-counter);
+			text-align: center;
+			background-color: var(--red);
+			color: #fff;
+			line-height: 18px;
+			border-radius: 50%;
+			font-size: 12px;
+			font-weight: 600;
+
+		}
+
 	}
 
 }

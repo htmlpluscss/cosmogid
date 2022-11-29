@@ -40,7 +40,7 @@
 
 				</a>
 
-				<a class="ico-box" href="/cart/" title="Ваша корзина">
+				<a class="ico-box header__counter-ico" href="/cart/" title="{% if cart %}у вас 25 товаров{% else %}пока пуста{% endif %}"{% if cart %} data-counter="2"{% endif %}>
 
 					<svg width="24" height="24" viewBox="0 0 24 24">
 						<use xlink:href="#svg-cart"/>
