@@ -427,10 +427,19 @@
 			top: 100%;
 			left: 0;
 			right: 0;
+			width: 1300px;
+			margin-left: auto;
+			margin-right: auto;
 			padding: 32px 16px;
 			display: none;
 			background-color: #fff;
 			white-space: normal;
+
+			@media (max-width: 1335px) {
+
+				width: 1250px;
+
+			}
 
 			@media $desktop and (max-height: 800px) {
 
@@ -441,11 +450,12 @@
 			&::before {
 
 				position: absolute;
-				top: 100px;
+				top: 10px;
 				left: 0;
 				right: 0;
 				bottom: 0;
 				content: '';
+				pointer-events: none;
 				box-shadow: var(--box-shadow);
 				z-index: -1;
 
