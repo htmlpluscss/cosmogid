@@ -10,9 +10,9 @@
 
 {% for item in menu %}
 
-					<li class="menu-catalog__item">
+					<li class="menu-catalog__item{% if item.mobile %} menu-catalog__item--only-mobile{% endif %}">
 
-						<a href="/" class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}{% if item.level2 %} menu-catalog__link--arrow{% endif %}">
+						<a href="/" class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}{% if item.mobile %} menu-catalog__link--only-mobile{% endif %}{% if item.level2 %} menu-catalog__link--arrow{% endif %}">
 
 							<span class="menu-catalog__name">
 								{{ item.name }}

@@ -20,7 +20,7 @@
 		icoPlus.innerHTML = '<rect x="11" y="6" width="2" height="12"/><rect x="6" y="11" width="12" height="2"/>';
 
 		// иконка right level1 и level2
-		const level_1 = menu.querySelectorAll('.menu-catalog__link--arrow'),
+		const level_1 = menu.querySelectorAll('.menu-catalog__link--arrow, .menu-catalog__link--only-mobile'),
 			  icoRight = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
 		icoRight.setAttributeNS(null, "viewBox", "0 0 24 24");
