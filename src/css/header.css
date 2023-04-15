@@ -393,17 +393,6 @@
 
 	}
 
-	&__search {
-
-		@media $mdWidth {
-
-			margin-top: 8px;
-			width: 100%;
-
-		}
-
-	}
-
 	&-search {
 
 		position: relative;
@@ -433,6 +422,12 @@
 
 			}
 
+			@media $xsWidth {
+
+				padding-right: 16px;
+
+			}
+
 		}
 
 		&__submit {
@@ -441,6 +436,31 @@
 			top: 8px;
 			right: 16px;
 			color: var(--gray);
+
+			@media $smWidth {
+
+				right: 8px;
+
+			}
+
+			@media $xsWidth {
+
+				display: none;
+
+			}
+
+		}
+
+		@media $mdWidth {
+
+			width: calc( ( 768px - var(--indent) * 2 - 16px ) / 2 );
+
+
+		}
+
+		@media $smWidth {
+
+			width: 50%;
 
 		}
 
@@ -455,6 +475,40 @@
 
 			display: flex;
 			gap: 8px;
+
+		}
+
+		&-foot {
+
+			display: flex;
+			gap: 16px;
+			margin-top: 16px;
+			width: 100%;
+			justify-content: space-between;
+
+			@media $smWidth {
+
+				gap: 8px;
+
+			}
+
+			.btn {
+
+				@media $mdWidth {
+
+					width: calc( ( 768px - var(--indent) * 2 - 16px ) / 2 );
+
+				}
+
+				@media $smWidth {
+
+					font-size: 12px;
+					padding: 0;
+					width: 50%;
+
+				}
+
+			}
 
 		}
 
@@ -591,7 +645,11 @@
 
 .header-search {
 
-	flex-shrink: 0;
+	@media $desktop {
+
+		flex-shrink: 0;
+
+	}
 
 	&__input {
 
@@ -620,6 +678,13 @@
 		width: 100%;
 		top: 100%;
 		display: none;
+		right: 0;
+
+		@media $smWidth {
+
+			width: calc( 200% + 8px );
+
+		}
 
 		&-inner {
 

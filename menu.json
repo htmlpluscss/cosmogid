@@ -1,6 +1,10 @@
 [
 
 	{
+		"name" : "SALE %",
+		"mobile" : true
+	},
+	{
 		"name" : "Бренды",
 		"mod"  : "brand",
 		"level2"  : true
@@ -603,6 +607,28 @@
 				}
 			]
 		]
+	},
+
+	{
+		"name" : "О нас",
+		"mod"  : "second-menu",
+		"mobile" : true
+	},
+	{
+		"name" : "Информация",
+		"mobile" : true
+	},
+	{
+		"name" : "Для специалистов",
+		"mobile" : true
+	},
+	{
+		"name" : "Программы ухода",
+		"mobile" : true
+	},
+	{
+		"name" : "Блог косметолога",
+		"mobile" : true
 	}
 
 ]
