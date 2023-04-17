@@ -192,6 +192,22 @@
 
 .filter-menu {
 
+	&__bold {
+
+		font-weight: 600;
+		cursor: pointer;
+		display: block;
+		user-select: none;
+		color: var(--gray);
+
+		input:checked + span {
+
+			color: var(--purple);
+
+		}
+
+	}
+
 	&__link {
 
 		padding: 10px 8px;

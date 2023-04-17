@@ -1022,6 +1022,12 @@
 
 		}
 
+		.is-checked {
+			border: solid 1px;
+			border-color: #4c1d95;
+			padding: 5px;
+		}
+
 		@media $smWidth {
 
 			max-height: 128px;
