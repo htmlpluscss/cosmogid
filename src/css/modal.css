@@ -315,8 +315,7 @@
 
 .modal-city {
 
-	width: 534px;
-	padding: 24px;
+	width: 800px;
 
 	&__title {
 
@@ -324,6 +323,7 @@
 		font-size: 18px;
 		line-height: 1.2;
 		color: var(--gray);
+		margin-bottom: 24px;
 
 		&:first-child {
 
@@ -380,8 +380,14 @@
 	&__list {
 
 		column-count: 3;
-		column-width: 146px;
+		column-gap: 48px;
 		margin: 30px 0 -8px;
+
+		@media $smWidth {
+
+			column-count: auto;
+
+		}
 
 	}
 
@@ -389,8 +395,9 @@
 
 		display: block;
 		cursor: pointer;
-		margin-bottom: 8px;
 		break-inside: avoid;
+		margin-bottom: 16px;
+		text-align: left;
 
 	}
 
@@ -400,9 +407,6 @@
 		font-size: 14px;
 		line-height: 1.2;
 		color: var(--gray);
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
 
 	}
 

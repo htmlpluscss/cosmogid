@@ -57,9 +57,7 @@
 
 ] %}
 
-					<label class="modal-city__btn">
-
-						<input class="visuallyhidden" type="radio" name="id" value="{{ loop.index }}">
+					<button type="button" class="button modal-city__btn">
 
 						<span class="modal-city__label">
 							{{ item.name }}
@@ -69,7 +67,7 @@
 							{{ item.country }}
 						</span>
 
-					</label>
+					</button>
 
 {% endfor %}
 
