@@ -28,8 +28,22 @@
 
 						<li class="brands__item">
 
-							<a href="/brands/item/">
-								{{ letter.name }}
+							<a class="brands__item-link" href="/brands/item/">
+
+								<span class="brands__item-name">
+
+									{{ letter.name }}
+
+								</span>
+
+								{% if loop.index % 10 === 0 %}
+
+								<svg class="brands__item-ico" width="18" height="18" viewBox="0 0 24 24">
+									<use xlink:href="#svg-gift"/>
+								</svg>
+
+								{% endif %}
+
 							</a>
 
 						</li>

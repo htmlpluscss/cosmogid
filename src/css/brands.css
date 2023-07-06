@@ -51,6 +51,20 @@
 		margin-bottom: 1em;
 		break-inside: avoid;
 
+		&-link {
+
+			display: flex;
+			gap: 8px;
+
+		}
+
+		&-ico {
+
+			flex-shrink: 0;
+			align-self: center;
+
+		}
+
 	}
 
 }
