@@ -131,6 +131,7 @@ hr {
 	line-height: 1.2;
 	text-transform: uppercase;
 	color: var(--gray);
+	word-break: break-word;
 
 	@media $mdWidth {
 
