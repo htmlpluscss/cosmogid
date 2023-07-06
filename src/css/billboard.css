@@ -159,7 +159,8 @@
 
 		@media $mdWidth {
 
-			font-size: 24px;
+			font-size: 20px;
+			text-transform: none;
 
 		}
 
