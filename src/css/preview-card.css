@@ -81,7 +81,7 @@
 		img {
 
 			object-fit: contain;
-			max-width: 100%;
+			width: 100%;
 
 			@media $mdWidth {
 
