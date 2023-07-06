@@ -13,7 +13,17 @@
 									<a class="menu-catalog__link is-level-2{% if level2.level3 %} is-btn{% endif %}" href="/catalog/level2/">
 
 										<span class="menu-catalog__name">
+
 											{{ level2.name }}
+
+											{% if loop.index % 4 === 0 %}
+
+											<svg class="menu-catalog__name-ico" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="#svg-gift"/>
+											</svg>
+
+											{% endif %}
+
 										</span>
 
 									</a>
@@ -27,7 +37,21 @@
 										<li>
 
 											<a class="menu-catalog__link is-level-3" href="/catalog/">
-												{{ level3 }}
+
+												<span class="menu-catalog__name">
+
+													{{ level3 }}
+
+													{% if loop.index % 4 === 0 %}
+
+													<svg class="menu-catalog__name-ico" width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="#svg-gift"/>
+													</svg>
+
+													{% endif %}
+
+												</span>
+
 											</a>
 
 										</li>

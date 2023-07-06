@@ -58,6 +58,16 @@
 			line-height: 24px;
 			color: var(--gray);
 
+			&-ico {
+
+				flex-shrink: 0;
+				order: 1;
+				outline:1px solid red;
+				margin-right: auto;
+				margin-left: 12px;
+
+			}
+
 			svg {
 
 				fill: var(--purple);
@@ -222,6 +232,20 @@
 
 		}
 
+		&__name {
+
+			display: flex;
+			gap: 8px;
+
+			&-ico {
+
+				flex-shrink: 0;
+				align-self: center;
+
+			}
+
+		}
+
 	}
 
 	@media $desktop {
@@ -309,9 +333,24 @@
 
 		}
 
+		&__name {
+
+			display: flex;
+			gap: 8px;
+
+			&-ico {
+
+				flex-shrink: 0;
+				align-self: center;
+
+			}
+
+		}
+
 		&__link {
 
-			display: block;
+			display: flex;
+			gap: 10px;
 			font-weight: 500;
 			color: var(--gray);
 			padding: 16px 8px;
