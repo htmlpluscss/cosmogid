@@ -68,9 +68,9 @@
 
 			}
 
-			svg {
+			svg:not([class]) {
 
-				fill: var(--purple);
+				color: var(--purple);
 				transition: none;
 
 			}
@@ -240,6 +240,7 @@
 			&-ico {
 
 				flex-shrink: 0;
+				color: var(--pink);
 				align-self: center;
 
 			}
@@ -341,6 +342,7 @@
 			&-ico {
 
 				flex-shrink: 0;
+				color: var(--pink);
 				align-self: center;
 
 			}

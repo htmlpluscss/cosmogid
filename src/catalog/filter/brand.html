@@ -58,7 +58,19 @@
 								<input class="checkbox__input visuallyhidden" type="checkbox"{% if range(0,10) | random === 0 %} disabled="disabled"{% endif %}{% if range(0,10) | random === 0 %} checked="checked"{% endif %}>
 
 								<span class="checkbox__label">
-									{{ checkbox.name }} <b>({{ range(0,1000) | random }})</b>
+
+									{{ checkbox.name }}
+
+									<b>({{ range(0,1000) | random }})</b>
+
+									{% if loop.index % 5 === 1 %}
+
+									<svg class="checkbox__label-ico" width="20" height="20" viewBox="0 0 24 24">
+										<use xlink:href="#svg-gift"/>
+									</svg>
+
+									{% endif %}
+
 								</span>
 
 							</label>

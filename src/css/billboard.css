@@ -94,12 +94,26 @@
 		margin-right: 32px;
 		flex-shrink: 0;
 
-		@media $mdWidth {
+		img {
 
-			img {
+			object-fit: cover;
+
+			@media $mdWidth {
 
 				width: 360px;
 				height: auto;
+
+			}
+
+			@media $smWidth {
+
+				width: 160px;
+
+			}
+
+			@media $xsWidth {
+
+				width: 128px;
 
 			}
 
@@ -110,22 +124,6 @@
 			float: left;
 			margin-right: var(--indent);
 			margin-bottom: var(--indent);
-
-			img {
-
-				width: 160px;
-
-			}
-
-		}
-
-		@media $xsWidth {
-
-			img {
-
-				width: 128px;
-
-			}
 
 		}
 
