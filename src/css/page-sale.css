@@ -214,3 +214,15 @@
 
 
 }
+
+.sale-toptext {
+	margin-bottom: 10px;
+}
+
+.sale-toptext a {
+	color: rgb(76 29 149);
+}
+
+.sale-toptext a:hover {
+	text-decoration: underline;
+}
