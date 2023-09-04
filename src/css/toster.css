@@ -1,0 +1,22 @@
+.toster {
+
+	background-color: var(--pink);
+	color: #fff;
+	padding: 8px 0;
+
+	.center {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--gap);
+
+		@media $mdWidth {
+
+			width: 100%;
+
+		}
+
+	}
+
+}
