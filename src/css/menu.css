@@ -26,6 +26,22 @@
 
 	@media $mdWidth {
 
+		&__desktop {
+			display: none;
+		}
+
+	}
+
+	@media $desktop {
+
+		&__mobile {
+			display: none;
+		}
+		
+	}
+
+	@media $mdWidth {
+
 		display: none;
 
 		&__wrap {
