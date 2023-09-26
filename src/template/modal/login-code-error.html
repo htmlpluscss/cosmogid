@@ -1,0 +1,42 @@
+			<form action="/" class="modal__item modal__item--login-code-error modal-login is-autofocus">
+
+				<h3 class="modal-login__title">
+					Введите последние 4 цифры входящего номера
+				</h3>
+
+				<p class="modal-login__text">
+					Отвечать на звонок не нужно <br>
+					Уже звоним на +7 919 888 91 35. <button class="btn btn--link" type="button" data-modal="login-phone">Изменить</button>
+				</p>
+
+				<p class="modal-login__text">
+					Например +7 XXX XXX <code>3456</code>
+				</p>
+
+				<div class="modal-login__inputbox modal-login__inputbox--code">
+
+					<input class="input is-error" name="code" autocomplete="off" inputmode="numeric" type="tel" maxlength="4" autofocus="autofocus" required="required" value="1234">
+
+				</div>
+
+				<p class="modal-login__text modal-login__text-error">
+					Код неверный или просрочен
+				</p>
+
+				<div class="modal-login__btn">
+
+					<button class="btn" disabled="disabled">
+						Зарегистрироваться
+					</button>
+
+				</div>
+
+				<div class="modal-login__after">
+
+					<button class="btn btn--hash btn--small" type="button" data-modal="login-sms">
+						Нет звонка? Запросить СМС-код
+					</button>
+
+				</div>
+
+			</form>

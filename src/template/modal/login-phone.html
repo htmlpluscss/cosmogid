@@ -1,0 +1,41 @@
+			<form action="/" class="modal__item modal__item--login-phone modal-login">
+
+				<h3 class="modal-login__title">
+					Войти
+				</h3>
+
+				<p class="modal-login__intro">
+					Введите номер телефона
+				</p>
+
+				<p class="modal-login__text">
+					Мы отправим код или позвоним. <br>
+					Отвечать на звонок не нужно. <br>
+					Код может прийти на почту или в СМС
+				</p>
+
+				<div class="modal-login__inputbox">
+
+{% set labelPhone = false %}
+
+{% include "template/modal/modal-callback-phone.html" %}
+
+				</div>
+
+				<div class="modal-login__btn">
+
+					<button class="btn btn--big">
+						Войти
+					</button>
+
+				</div>
+
+				<div class="modal-login__after">
+
+					<button class="btn btn--hash btn--small" type="button" data-modal="login-email">
+						Войти по почте
+					</button>
+
+				</div>
+
+			</form>

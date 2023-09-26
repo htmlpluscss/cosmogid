@@ -18,9 +18,17 @@
 
 					<div class="header__user">
 
+{% if signIn %}
+
+{% include "template/header/sign-in.html" %}
+
+{% else %}
+
 {% include "template/header/user.html" %}
 
 {% include "template/header/user-menu.html" %}
+
+{% endif %}
 
 					</div>
 

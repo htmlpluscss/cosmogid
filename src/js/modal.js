@@ -65,6 +65,8 @@
 
 		activeModal = modal.querySelector('.modal__item--' + selector);
 
+		const autofocus = activeModal.classList.contains('is-autofocus');
+
 		if ( activeModal.querySelector('.modal__title') ) {
 
 			if ( titleDefault[selector] === undefined ) {
@@ -108,6 +110,12 @@
 			window.scrollTo(0,0);
 
 			activeModal.focus();
+
+			if ( autofocus ) {
+
+				activeModal.querySelector('.input').focus();
+
+			}
 
 		});
 

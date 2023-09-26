@@ -3,6 +3,7 @@
 {% set dev = true %}
 {% set cart = true %}
 {% set favourite = true %}
+{% set signIn = true %}
 
 {% extends "template/base.html" %}
 
@@ -261,7 +262,47 @@ setTimeout( ()=> {
 
 		<div class="item">
 
-			<button class="btn" type="button" data-modal="errors">
+			<button class="btn" type="button" data-modal="login-phone">
+				Войти по номеру телефона
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="login-email">
+				Войти по почте
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="login-code">
+				Звонок 4 цифры входящего номера
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="login-sms">
+				Запросить СМС-код
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="login-code-error">
+				Ошибка в коде
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn" type="button" data-modal="errors" disabled="disabled">
 				Ошибки в формах
 			</button>
 
@@ -269,15 +310,15 @@ setTimeout( ()=> {
 
 		<div class="item">
 
-			<button class="btn" type="button" data-modal="reg">
-				Регистрация
+			<button class="btn" type="button" data-modal="reg" disabled="disabled">
+				Войти
 			</button>
 
 		</div>
 
 		<div class="item">
 
-			<button class="btn" type="button" data-modal="login">
+			<button class="btn" type="button" data-modal="login" disabled="disabled">
 				Войти в систему
 			</button>
 
@@ -285,7 +326,7 @@ setTimeout( ()=> {
 
 		<div class="item">
 
-			<button class="btn" type="button" data-modal="sms">
+			<button class="btn" type="button" data-modal="sms" disabled="disabled">
 				Ввести код из SMS
 			</button>
 

@@ -371,6 +371,13 @@ legend {
 
 	}
 
+	&.is-error {
+
+		color: var(--red);
+		border-bottom-color: var(--red);
+
+	}
+
 }
 
 .checkbox {
