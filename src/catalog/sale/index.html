@@ -1,0 +1,53 @@
+{% set title = "Распродажа" %}
+
+{% set description = "Мы продаем профессиональную косметику оптом и в розницу, с доставкой по Москве, Санкт-Петербургу, Екатеринбургу и другим городам России. Вся косметика, представленная в нашем магазине, оригинальная и сертифицированная на территории Российской Федерации" %}
+
+{% set breadcrumbs = ["Каталог", "Распродажа"] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "_include/content.html" %}
+
+	<div class="center">
+
+		<article class="catalog">
+
+			<h1 class="title">
+				{{ title }}
+			</h1>
+
+			<div class="catalog__box">
+
+				<div class="catalog__filter">
+
+{% include "catalog/sale/filter.html" %}
+
+				</div>
+
+				<div class="catalog__body">
+
+{% include "catalog/sort.html" %}
+
+{% include "catalog/tags.html" %}
+
+{% include "catalog/list.html" %}
+
+{% include "catalog/foot.html" %}
+
+				</div>
+
+			</div>
+
+		</article>
+
+{% include "_include/recently-watched.html" %}
+
+{% include "_include/review.html" %}
+
+{% include "_include/support.html" %}
+
+	</div>
+
+{% endblock %}

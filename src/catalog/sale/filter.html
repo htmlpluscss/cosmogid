@@ -1,0 +1,14 @@
+			<form action="/" class="filter" autocomplete="off">
+
+				<input type="hidden" name="page" value="3">
+				<input type="hidden" name="sort" value="sale">
+				<input type="hidden" name="limit" value="12">
+				<input type="hidden" name="total" value="264">
+
+{% include "catalog/filter/level3.html" %}
+
+{% include "catalog/filter/brand.html" %}
+
+{% include "catalog/filter/foot.html" %}
+
+			</form>
