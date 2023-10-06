@@ -41,12 +41,12 @@
 	&__grid {
 
 		display: grid;
-		gap: 0 var(--gap);
-		grid-template-columns: 260fr 374fr 260fr 260fr;
+		gap: var(--gap);
+		grid-template-columns: 1fr 200px 420px 180px;
 
-		@media $mdWidth {
+		@media $tablet {
 
-			grid-template-columns: 260fr 374fr;
+			grid-template-columns: auto auto auto;
 
 		}
 
@@ -76,7 +76,7 @@
 
 		@media $tablet {
 
-			padding-top: 48px;
+			width: 100%;
 
 		}
 
@@ -142,15 +142,10 @@
 
 		@media $mdWidth {
 
-			margin: 24px 0;
+			&:nth-of-type(2) {
 
-		}
-
-		@media $smWidth {
-
-			&:nth-of-type(1) {
-
-				display: none;
+				order: 10;
+				grid-column: span 2;
 
 			}
 
@@ -182,6 +177,12 @@
 			column-count: 2;
 			column-gap: 40px;
 
+			@media $mdWidth {
+
+				column-gap: var(--gap);
+
+			}
+
 		}
 
 	}
@@ -189,6 +190,12 @@
 	&__social {
 
 		margin: 12px 0 24px;
+
+		@media $mdWidth {
+
+			margin: 48px 0;
+
+		}
 
 		&-list {
 
