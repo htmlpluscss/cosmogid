@@ -386,6 +386,13 @@ legend {
 	position: relative;
 	user-select: none;
 
+	&__input {
+
+		top: 28px;
+		left: 0;
+
+	}
+
 	&__input:checked + &__label {
 
 		&::after {
