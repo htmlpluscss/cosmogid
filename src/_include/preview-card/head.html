@@ -97,6 +97,13 @@
 						{{ card.flag[1] }}
 					</p>
 
+	{% if [1,2,3,4,5] | random === 1 and card.flag[0] !== 'green' %}
+
+					<p class="preview-card__flag-item is-green">
+						New
+					</p>
+	{% endif %}
+
 				</div>
 
 {% endif %}
