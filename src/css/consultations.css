@@ -276,7 +276,16 @@
 			color: var(--purple);
 			display: flex;
 			flex-wrap: wrap;
-			gap: 8px;
+			gap: 4px 8px;
+			line-height: 20px;
+			cursor: pointer;
+
+			&-wrap:not(.is-open) {
+
+				overflow: hidden;
+				max-height: 68px;
+
+			}
 
 		}
 
