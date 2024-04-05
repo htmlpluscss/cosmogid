@@ -2,6 +2,56 @@
 
 	window.addEventListener('click', event => {
 
+		//  Нашли дешевле?
+
+		const bestPrice = event.target.closest('.js-best-price');
+
+		if ( bestPrice ) {
+
+			const template = document.querySelector('#preview-card-row-template').innerHTML,
+				  product = bestPrice.closest('.product');
+				  param = {};
+
+			if ( product ) {
+
+				param.id        = product.querySelector('.product-buy').id.value;
+				param.link      = location.href;
+				param.price     = parseInt(product.querySelector('.price__value').textContent);
+				param.priceOld  = product.querySelector('data-price-old');
+				param.img       = product.querySelector('.product-gallery img').src;
+				param.img2x     = product.querySelector('.product-gallery img').src;
+				param.name      = product.querySelector('.product__title').textContent;
+
+				if ( product.querySelector('.product-buy').articleid ) {
+
+					param.articleid = product.querySelector('.product-buy').articleid.value;
+
+				}
+
+				if ( product.querySelector('.price__old') ) {
+
+					param.priceOld = parseInt(product.querySelector('.price__old').textContent);
+
+				}
+
+			}
+			else {
+
+				param.id        = bestPrice.getAttribute('data-id');
+				param.articleid = bestPrice.getAttribute('data-articleid');
+				param.link      = bestPrice.getAttribute('data-link');
+				param.price     = bestPrice.getAttribute('data-price');
+				param.priceOld  = bestPrice.getAttribute('data-price-old');
+				param.img       = bestPrice.getAttribute('data-img');
+				param.img2x     = bestPrice.getAttribute('data-img2x');
+				param.name      = bestPrice.getAttribute('data-name');
+
+			}
+
+			document.querySelector('#modal-form-best-price-product').innerHTML = Mustache.render(template, param);
+
+		}
+
 		//  Найти аналогичный товар
 
 		const findAnalogue = event.target.closest('.js-find-analogue');
@@ -37,7 +87,6 @@
 				  param = {};
 
 			if ( product ) {
-console.log(product.querySelector('.product-buy').elements)
 
 				param.id        = product.querySelector('.product-buy').id.value;
 				param.link      = location.href;
@@ -60,7 +109,6 @@ console.log(product.querySelector('.product-buy').elements)
 				}
 
 			} else if ( previewCard ) {
-console.log(previewCard.querySelector('.preview-card__form').elements)
 
 				param.id        = previewCard.querySelector('.preview-card__form').elements.id.value;
 				param.link      = previewCard.querySelector('.preview-card__title').href;
@@ -84,7 +132,6 @@ console.log(previewCard.querySelector('.preview-card__form').elements)
 			}
 
 			if ( productModal ) {
-console.log(productModal.elements)
 
 				const checked = [...productModal.elements.articleid].find( el => el.checked );
 

@@ -505,6 +505,12 @@
 
 	}
 
+	&__best-price {
+
+		margin-bottom: 10px;
+
+	}
+
 	.board-login {
 
 		margin-bottom: 24px;

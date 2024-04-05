@@ -1,0 +1,65 @@
+			<form action="/" class="modal__item modal__item--best-price" id="modal-form-best-price">
+
+				<p class="modal__title">
+					Нашли дешевле?
+				<p>
+
+				<p class="modal__text">
+					Мы сделаем более выгодное предложение
+				</p>
+
+				<div id="modal-form-best-price-product">
+
+				</div>
+
+				<div class="modal__checkbox">
+
+					<label class="checkbox">
+
+						<input class="checkbox__input visuallyhidden" type="checkbox" name="inform-messenger">
+
+						<span class="checkbox__label">
+							Не звоните, напишите в WhatsApp или Telegram
+						</span>
+
+					</label>
+
+				</div>
+
+				<div class="modal__row">
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="modal-best-price-url">
+							Ссылка на другой сайт
+						</label>
+
+						<input class="input" name="url" placeholder="https://cosmogid.ru/store/42005" required="required" id="modal-best-price-url">
+
+					</div>
+
+					<div class="inputbox">
+
+{% set modalMod = 'best-price' %}
+
+{% include "template/modal/modal-callback-phone.html" %}
+
+					</div>
+
+				</div>
+
+				<div class="modal__foot">
+
+					<div class="modal__rule">
+
+{% include "template/modal/checkbox-rule.html" %}
+
+					</div>
+
+					<button class="btn">
+						Отправить
+					</button>
+
+				</div>
+
+			</form>
