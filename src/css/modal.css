@@ -947,6 +947,25 @@
 
 }
 
+.modal-club {
+
+	width: 600px;
+
+	&__btn-code {
+
+		display: flex;
+		align-items: flex-end;
+
+		.btn {
+
+			width: 100%;
+
+		}
+
+	}
+
+}
+
 .modal-cdek {
 
 	width: 840px;
