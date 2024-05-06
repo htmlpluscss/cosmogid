@@ -42,7 +42,7 @@ const w3cjs            = require('gulp-w3cjs');
 let config             = null;
 
 const site             = 'cosmogid.ru';
-const domain           = 'cosmogid.htmlpluscss.site';
+const domain           = 'cosmogid.htmlpluscss.website';
 const menu             = require('./menu.json');
 const brands           = require('./brands.json');
 
