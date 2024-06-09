@@ -79,7 +79,7 @@
 
 		@media $smWidth {
 
-			grid-template-columns: repeat(2, 50%);
+			grid-template-columns: 1fr 1fr;
 
 		}
 

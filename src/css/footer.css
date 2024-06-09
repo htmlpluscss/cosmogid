@@ -267,18 +267,18 @@
 
 .page-up {
 
-	position: sticky;
-	margin-left: auto;
+	position: fixed;
 	width: 60px;
 	height: 60px;
-	top: 40px;
+	bottom: 40px;
+	right: var(--indent);
 	box-shadow: var(--box-shadow);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: var(--purple);
 	background-color: #fff;
-	z-index: 1;
+	z-index: 6;
 
 	@media $mdWidth {
 
@@ -296,7 +296,7 @@
 
 	@media $smWidth {
 
-		top: 24px;
+		bottom: 80px;
 
 	}
 
