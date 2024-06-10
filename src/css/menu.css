@@ -37,7 +37,7 @@
 		&__mobile {
 			display: none;
 		}
-		
+
 	}
 
 	@media $mdWidth {
@@ -354,6 +354,7 @@
 
 			display: flex;
 			gap: 8px;
+			align-items: center;
 
 			&-ico {
 
@@ -369,10 +370,10 @@
 
 			display: flex;
 			gap: 10px;
-			font-weight: 500;
 			color: var(--gray);
 			padding: 16px 8px;
 			text-align: center;
+			font-weight: 700;
 
 			&:not(.is-btn):hover {
 
@@ -440,17 +441,11 @@
 
 			&.is-level-2 {
 
-				padding: 8px 0;
-				font-size: 16px;
 				text-align: left;
-
-				@media $desktop and (max-height: 800px) {
-
-					font-size: 14px;
-					line-height: 1.2;
-					padding: 6px 0;
-
-				}
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 1.2;
+				padding: 6px 0;
 
 				svg rect {
 
@@ -479,18 +474,11 @@
 
 			&.is-level-3 {
 
-				font-size: 14px;
 				color: var(--border);
-				padding: 8px 0 8px 16px;
 				text-align: left;
-
-				@media $desktop and (max-height: 800px) {
-
-					line-height: 1.2;
-					font-size: 12px;
-					padding: 6px 0;
-
-				}
+				font-weight: 400;
+				line-height: 1.2;
+				padding: 6px 0;
 
 			}
 
@@ -506,7 +494,9 @@
 			margin-left: auto;
 			margin-right: auto;
 			padding: 32px 16px;
-			display: none;
+			pointer-events: none;
+			opacity: 0;
+			transition: var(--transitionDefault);
 			background-color: #fff;
 			white-space: normal;
 
@@ -540,7 +530,8 @@
 
 		&__item:hover &__sub {
 
-			display: block;
+			pointer-events: auto;
+			opacity: 1;
 
 		}
 
