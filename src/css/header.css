@@ -677,7 +677,6 @@
 		position: absolute;
 		width: 100%;
 		top: 100%;
-		display: none;
 		right: 0;
 
 		@media $smWidth {
