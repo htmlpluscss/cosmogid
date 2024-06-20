@@ -73,6 +73,7 @@
 		gap: var(--gap);
 		grid-template-columns: repeat(3, 1fr);
 		flex-grow: 1;
+		align-content: flex-start;
 		position: relative;
 		min-height: 256px;
 
