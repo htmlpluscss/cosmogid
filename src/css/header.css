@@ -551,9 +551,16 @@
 
 			}
 
-			.header__search {
+			.header__search,
+			.header__mobile-foot {
 
 				display: block !important;
+
+				.btn {
+
+					display: none;
+
+				}
 
 				.header-search__input {
 
