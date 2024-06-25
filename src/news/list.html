@@ -2,9 +2,9 @@
 
 {% for i in range(0, 16) %}
 
-				<article class="preview-news">
+				<article class="preview-news" itemscope itemtype="https://schema.org/BlogPosting" itemid="/news/article/{{ loop.index }}">
 
-					<a href="/news/article/" class="preview-news__img">
+					<a href="/news/article/" class="preview-news__img" itemprop="mainEntityOfPage">
 
 						<picture>
 
@@ -17,7 +17,7 @@
 							<source srcset="/img/preview-news/288x200.webp 1x, /img/preview-news/576x400.webp 2x" type="image/webp">
 							<source srcset="/img/preview-news/288x200.jpg 1x, /img/preview-news/576x400.jpg 2x">
 
-							<img src="/img/preview-news/288x200.jpg" alt="С учётом сложившейся международной обстановки." loading="lazy" width="288" height="200">
+							<img src="/img/preview-news/288x200.jpg" alt="С учётом сложившейся международной обстановки." loading="lazy" width="288" height="200" itemprop="image">
 
 						</picture>
 
@@ -39,17 +39,17 @@
 								<use xlink:href="#svg-calendar"/>
 							</svg>
 
-							<time datetime="2022-09-24">
+							<time datetime="2022-09-24" itemprop="datePublished">
 								25.09.2022
 							</time>
 
 						</div>
 
-						<h3 class="preview-news__title">
+						<h3 class="preview-news__title" itemprop="headline">
 							С учётом сложившейся международной обстановки.
 						</h3>
 
-						<p class="preview-news__text">
+						<p class="preview-news__text" itemprop="description">
 							А также некоторые особенности внутренней политики набирают популярность среди определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям. И нет.
 						</p>
 

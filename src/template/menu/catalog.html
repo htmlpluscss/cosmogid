@@ -1,4 +1,4 @@
-	<nav class="menu-catalog">
+	<nav class="menu-catalog" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
 
 		<div class="menu-catalog__wrap">
 
@@ -12,9 +12,9 @@
 
 					<li class="menu-catalog__item{% if item.mobile %} menu-catalog__item--only-mobile{% endif %}">
 
-						<a href="/" class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}{% if item.mobile %} menu-catalog__link--only-mobile{% endif %}{% if item.level2 %} menu-catalog__link--arrow{% endif %}">
+						<a itemprop="url" href="/" class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}{% if item.mobile %} menu-catalog__link--only-mobile{% endif %}{% if item.level2 %} menu-catalog__link--arrow{% endif %}">
 
-							<span class="menu-catalog__name">
+							<span class="menu-catalog__name" itemprop="name">
 								{{ item.name }}
 							</span>
 

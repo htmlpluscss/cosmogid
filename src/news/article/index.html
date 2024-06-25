@@ -15,15 +15,15 @@
 
 	<div class="center">
 
-		<article class="page-article">
+		<article class="page-article" itemscope itemtype="https://schema.org/Article">
 
 			<header class="page-article__header">
 
-				<h1 class="title">
+				<h1 class="title" itemprop="headline">
 					{{ title }}
 				</h1>
 
-				<div class="page-article__header-img">
+				<div class="page-article__header-img" itemscope itemtype="https://schema.org/ImageObject">
 
 					<picture>
 
@@ -39,7 +39,7 @@
 						<source srcset="/img/article/header--1014x400.webp 1x, /img/article/header--2028x800.webp 2x" type="image/webp">
 						<source srcset="/img/article/header--1014x400.jpg 1x, /img/article/header--2028x800.jpg 2x">
 
-						<img src="/img/article/header--1014x400.jpg" alt="{{ title }}" loading="lazy" width="1014" height="400">
+						<img src="/img/article/header--1014x400.jpg" alt="{{ title }}" loading="lazy" width="1014" height="400" itemprop="contentUrl">
 
 					</picture>
 
@@ -91,7 +91,7 @@
 
 					</div>
 
-					<time class="page-article__date" datetime="2022-09-25">
+					<time class="page-article__date" datetime="2022-09-25" itemprop="datePublished">
 
 						<svg width="32" height="32" viewBox="0 0 24 24">
 							<use xlink:href="#svg-calendar"/>
@@ -105,7 +105,7 @@
 
 			</header>
 
-			<div class="page-article__body">
+			<div class="page-article__body" itemprop="articleBody">
 
 				<h2>
 					Как подготовить кожу к весне
@@ -125,7 +125,7 @@
 
 				<div class="page-article__billboard">
 
-					<figure class="sale-card">
+					<figure class="sale-card" itemscope itemtype="https://schema.org/ImageObject">
 
 						<picture>
 
@@ -141,13 +141,13 @@
 							<source srcset="/img/article/billboard--1014x368.webp 1x, /img/article/billboard--2028x736.webp 2x" type="image/webp">
 							<source srcset="/img/article/billboard--1014x368.jpg 1x, /img/article/billboard--2028x736.jpg 2x">
 
-							<img src="/img/article/billboard--1014x368.jpg" alt="{{ title }}" loading="lazy" width="1014" height="368">
+							<img src="/img/article/billboard--1014x368.jpg" alt="{{ title }}" loading="lazy" width="1014" height="368" itemprop="contentUrl">
 
 						</picture>
 
 						<figcaption class="sale-card__inner">
 
-							<p class="sale-card__head">
+							<p class="sale-card__head" itemprop="name">
 
 								Хотите подарок
 
@@ -157,7 +157,7 @@
 
 							</p>
 
-							<p class="sale-card__text">
+							<p class="sale-card__text" itemprop="description">
 
 								Получите набор пробников при покупке 10 тюбиков неведомой хрени, в одни руки за раз
 
@@ -185,14 +185,14 @@
 
 				<div class="page-article__float">
 
-					<div class="page-article__float-img-left">
+					<div class="page-article__float-img-left" itemscope itemtype="https://schema.org/ImageObject">
 
 						<picture>
 
 							<source srcset="/img/article/square--367x367.webp 1x, /img/article/square--734x734.webp 2x" type="image/webp">
 							<source srcset="/img/article/square--367x367.jpg 1x, /img/article/square--734x734.jpg 2x">
 
-							<img src="/img/article/square--367x367.jpg" alt="{{ title }}" loading="lazy" width="367" height="367">
+							<img src="/img/article/square--367x367.jpg" alt="{{ title }}" loading="lazy" width="367" height="367" itemprop="contentUrl">
 
 						</picture>
 
@@ -226,14 +226,14 @@
 
 				<div class="page-article__float">
 
-					<div class="page-article__float-img-right">
+					<div class="page-article__float-img-right" itemscope itemtype="https://schema.org/ImageObject">
 
 						<picture>
 
 							<source srcset="/img/article/square--367x367.webp 1x, /img/article/square--734x734.webp 2x" type="image/webp">
 							<source srcset="/img/article/square--367x367.jpg 1x, /img/article/square--734x734.jpg 2x">
 
-							<img src="/img/article/square--367x367.jpg" alt="{{ title }}" loading="lazy" width="367" height="367">
+							<img src="/img/article/square--367x367.jpg" alt="{{ title }}" loading="lazy" width="367" height="367" itemprop="contentUrl">
 
 						</picture>
 
@@ -335,7 +335,7 @@
 					Предварительные выводы неутешительны: курс на социально-ориентированный национальный проект играет определяющее значение для кластеризации усилий. Прежде всего, выбранный нами инновационный путь создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса поэтапного и последовательного развития общества. Приятно, граждане, наблюдать, как некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры.
 				</p>
 
-				<div class="page-article__img-full">
+				<div class="page-article__img-full" itemscope itemtype="https://schema.org/ImageObject">
 
 					<picture>
 
@@ -351,7 +351,7 @@
 						<source srcset="/img/article/full--966x367.webp 1x, /img/article/full--2028x736.webp 2x" type="image/webp">
 						<source srcset="/img/article/full--966x367.jpg 1x, /img/article/full--2028x736.jpg 2x">
 
-						<img src="/img/article/full--966x367.jpg" alt="{{ title }}" loading="lazy" width="966" height="367">
+						<img src="/img/article/full--966x367.jpg" alt="{{ title }}" loading="lazy" width="966" height="367" itemprop="contentUrl">
 
 					</picture>
 

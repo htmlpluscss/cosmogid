@@ -1,8 +1,14 @@
-			<div class="catalog__list">
+			<div class="catalog__list" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
 
 {% for item in range(0,12) %}
 
-				<div class="catalog__item">
+				<div class="catalog__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+
+					<meta itemprop="name" content="Название товара">
+					<meta itemprop="url" content="{{ url }}/product/">
+					<meta itemprop="image" content="{{ url }}/img/product/gallery/1--928x928.jpg">
+					<meta itemprop="price" content="1234">
+					<meta itemprop="priceCurrency" content="RUB">
 
 {% include "main/preview-swiper__preview-card-3.html" %}
 

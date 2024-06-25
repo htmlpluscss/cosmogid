@@ -1,6 +1,6 @@
 				<div class="product-gallery">
 
-					<div class="product-gallery__wrap">
+					<div class="product-gallery__wrap" itemscope itemtype="https://schema.org/ImageObject">
 
 						<div class="swiper-container swiper-container--product">
 
@@ -19,7 +19,7 @@
 											<source srcset="/img/product/gallery/{{ img }}--464x464.webp 1x, /img/product/gallery/{{ img }}--928x928.webp 2x" type="image/webp">
 											<source srcset="/img/product/gallery/{{ img }}--464x464.jpg 1x, /img/product/gallery/{{ img }}--928x928.jpg 2x">
 
-											<img src="/img/product/gallery/{{ img }}--464x464.jpg" width="464" height="464" alt="{{ title }}" loading="lazy">
+											<img src="/img/product/gallery/{{ img }}--464x464.jpg" width="464" height="464" alt="{{ title }}" loading="lazy" itemprop="contentUrl">
 
 										</picture>
 

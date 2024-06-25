@@ -10,9 +10,9 @@
 
 								<li>
 
-									<a class="menu-catalog__link is-level-2{% if level2.level3 %} is-btn{% endif %}" href="/catalog/level2/">
+									<a itemprop="url" class="menu-catalog__link is-level-2{% if level2.level3 %} is-btn{% endif %}" href="/catalog/level2/">
 
-										<span class="menu-catalog__name">
+										<span itemprop="name" class="menu-catalog__name">
 
 											{{ level2.name }}
 
@@ -36,9 +36,9 @@
 
 										<li>
 
-											<a class="menu-catalog__link is-level-3" href="/catalog/">
+											<a itemprop="url" class="menu-catalog__link is-level-3" href="/catalog/">
 
-												<span class="menu-catalog__name">
+												<span itemprop="name" class="menu-catalog__name">
 
 													{{ level3 }}
 
@@ -68,8 +68,10 @@
 
 								<li>
 
-									<a class="menu-catalog__link is-level-2 menu-catalog__link--sale" href="/catalog/level2/">
-										Распродажа
+									<a itemprop="url" class="menu-catalog__link is-level-2 menu-catalog__link--sale" href="/catalog/level2/">
+										<span itemprop="name">
+											Распродажа
+										</span>
 									</a>
 
 								</li>

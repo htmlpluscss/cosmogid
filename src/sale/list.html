@@ -2,7 +2,7 @@
 
 {% for item in range(0,5) %}
 
-				<figure class="sale-card">
+				<figure class="sale-card" itemscope itemtype="https://schema.org/ImageObject">
 
 					<picture>
 
@@ -12,13 +12,13 @@
 						<source srcset="/img/sale/{{ loop.index }}--588x360.webp 1x, /img/sale/{{ loop.index }}--1167x720.webp 2x" type="image/webp">
 						<source srcset="/img/sale/{{ loop.index }}--588x360.jpg 1x, /img/sale/{{ loop.index }}--1167x720.jpg 2x">
 
-						<img src="/img/sale/{{ loop.index }}--588x360.jpg" alt="новая палитра от revlon" loading="lazy" width="588" height="360">
+						<img src="/img/sale/{{ loop.index }}--588x360.jpg" alt="новая палитра от revlon" loading="lazy" width="588" height="360" itemprop="contentUrl">
 
 					</picture>
 
 					<figcaption class="sale-card__inner">
 
-						<p class="sale-card__head">
+						<p class="sale-card__head" itemprop="author">
 
 							Хотите подарок
 
@@ -28,7 +28,7 @@
 
 						</p>
 
-						<p class="sale-card__text">
+						<p class="sale-card__text" itemprop="description">
 
 							Получите набор пробников при покупке 10 тюбиков неведомой хрени, в одни руки за раз
 

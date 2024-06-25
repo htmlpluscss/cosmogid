@@ -20,7 +20,7 @@
 
 						<div class="preview-swiper__item preview-swiper__item--news swiper-slide">
 
-							<div class="preview-review">
+							<div class="preview-review" itemscope itemtype="https://schema.org/Review">
 
 								<a href="/product/#review" class="preview-review__img">
 
@@ -35,19 +35,21 @@
 
 								</a>
 
-								<p class="preview-review__rating">
+								<p class="preview-review__rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
 
 									<span class="ratio ratio--4">
-										рейтинг 4 звезды
+										рейтинг <span itemprop="ratingValue">4</span> звезды
 									</span>
 
 								</p>
 
 								<a href="/product/#review" class="preview-review__title">
-									Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл
+									<span itemprop="headline">
+										Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл
+									</span>
 								</a>
 
-								<p class="preview-review__text">
+								<p class="preview-review__text" itemprop="reviewBody">
 									{{ text }}
 								</p>
 

@@ -8,7 +8,7 @@
 
 {% include "template/footer/logo.html" %}
 
-			<div class="footer__grid">
+			<div class="footer__grid" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
 
 {% include "template/footer/contacts.html" %}
 
@@ -21,6 +21,8 @@
 			<hr>
 
 {% include "template/footer/bottom.html" %}
+
+{% include "template/schema/organization.html" %}
 
 		</div>
 
