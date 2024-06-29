@@ -189,4 +189,25 @@
 
 	}
 
+//  foot
+
+	const foot = filter.querySelector('.filter__foot');
+
+	if (foot) {
+
+		filter.addEventListener("change", () => {
+
+			foot.classList.remove('hide');
+
+		});
+
+		filter.addEventListener("reset", () => {
+
+			foot.classList.add('hide');
+
+		});
+
+	}
+
+
 })(document.querySelector('.filter'));
