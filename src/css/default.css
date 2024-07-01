@@ -218,3 +218,7 @@ table {
 	white-space: nowrap;
 
 }
+
+.grecaptcha-badge {
+	display: none;
+}
