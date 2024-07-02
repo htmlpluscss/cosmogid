@@ -270,6 +270,77 @@
 
 		}
 
+		// select volume
+
+		const btnsSelect = product.querySelectorAll('.product-buy__select-btn');
+		const btnsSelectToggle = product.querySelector('.product-buy__select-btn--open');
+
+		if ( btnsSelectToggle ) {
+
+			const form = btnsSelectToggle.closest('.product-buy'),
+				  templatePrice = document.querySelector('#price-template').innerHTML;
+
+			[...btnsSelect].forEach( btn => {
+
+				btn.addEventListener('click', () => {
+
+					if ( btn === btnsSelectToggle ) {
+
+						// кнопка открытия
+
+						btn.classList.toggle('is-open');
+
+					}
+					else {
+
+						// выпадашка
+
+						btnsSelectToggle.classList.remove('is-open');
+
+						[...btnsSelect].forEach( _btn => {
+
+							if ( _btn === btn ) {
+
+								_btn.classList.add('is-current');
+
+								form.elements.id.value = btn.getAttribute('data-id');
+
+								btnsSelectToggle.querySelector('.product-buy__select-img img').src = btn.querySelector('.product-buy__select-img img').src;
+
+								btnsSelectToggle.querySelector('.product-buy__select-name').textContent = btn.querySelector('.product-buy__select-name').textContent;
+
+								const price = btn.getAttribute('data-price'),
+									  priceOld = btn.getAttribute('data-price-old');
+
+								form.querySelector('.product-buy__price').innerHTML = Mustache.render(templatePrice, { price, priceOld });
+
+							}
+							else {
+
+								_btn.classList.remove('is-current');
+
+							}
+
+						});
+
+					}
+
+				});
+
+			});
+
+			window.addEventListener("click", event => {
+
+				if ( event.target.closest('.product-buy__select') === null ) {
+
+					btnsSelectToggle.classList.remove('is-open');
+
+				}
+
+			});
+
+		}
+
 	}
 
 })(document.querySelector('.product'));

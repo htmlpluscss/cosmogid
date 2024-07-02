@@ -19,4 +19,10 @@
 
 	}
 
+	.modal-show & {
+
+		display: none;
+
+	}
+
 }

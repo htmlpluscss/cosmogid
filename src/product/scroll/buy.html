@@ -1,0 +1,79 @@
+			<form action="/" class="product-buy">
+
+				<input type="hidden" name="id" value="123">
+
+				<p class="product-buy__price">
+
+					<span class="price">
+
+						<s class="price__old">
+							3456 ₽
+						</s>
+
+						<b class="price__value">
+							2581 ₽
+						</b>
+
+					</span>
+
+				</p>
+
+				<p class="product-buy__availability">
+
+					<span class="availability is-not">
+						нет наличии
+					</span>
+
+				</p>
+
+				<dl class="product-buy__key-value">
+
+					<dt>
+						код:
+					</dt>
+
+					<dd>
+						25694549
+					</dd>
+
+				</dl>
+
+				<div class="product-buy__modal-select">
+
+					<button class="btn btn--hash btn--small" type="button" data-modal="product-select">
+						+ Все объёмы (80)
+					</button>
+
+				</div>
+
+				<div class="product-buy__select">
+
+{% include "product/scroll/select.html" %}
+
+				</div>
+
+				<div class="product-buy__submit">
+
+					<button class="btn" disabled="disabled">
+						В корзину
+					</button>
+
+				</div>
+
+				<div class="product-buy__favourite">
+
+					<button class="btn btn--more" type="button">
+
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#svg-favourite-fill"/>
+						</svg>
+
+						Удалить из избранного
+
+					</button>
+
+				</div>
+
+{% include "_include/preview-card/modal-color.html" %}
+
+			</form>

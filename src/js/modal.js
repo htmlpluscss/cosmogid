@@ -107,15 +107,20 @@
 			}
 
 			document.body.classList.add('modal-show');
-			window.scrollTo(0,0);
 
-			activeModal.focus();
+			window.requestAnimationFrame( () => {
 
-			if ( autofocus ) {
+				window.scrollTo(0,0);
 
-				activeModal.querySelector('.input').focus();
+				activeModal.focus();
 
-			}
+				if ( autofocus ) {
+
+					activeModal.querySelector('.input').focus();
+
+				}
+
+			});
 
 		});
 
