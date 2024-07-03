@@ -780,6 +780,13 @@
 
 		@media $mdWidth {
 
+			&-name {
+
+				text-overflow: ellipsis;
+				overflow: hidden;
+
+			}
+
 			&-btn {
 
 				& + & {
@@ -796,8 +803,19 @@
 
 				&.is-current {
 
-					background-color: #f3f4f6;
-					color: var(--violet);
+					&::after {
+
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						content: '';
+						z-index: 1;
+						pointer-events: none;
+						outline: 1px solid var(--border);
+
+					}
 
 				}
 
@@ -807,6 +825,26 @@
 
 				display: flex;
 				padding-bottom: 10px;
+				padding-right: 16px;
+
+			}
+
+			& {
+
+				margin-right: -16px;
+
+				&::after {
+
+					position: absolute;
+					width: 24px;
+					top: 0;
+					right: 0;
+					bottom: 10px;
+					content: '';
+					pointer-events: none;
+					background-image: linear-gradient( to right, rgba(255,255,255,0), rgba(255,255,255,1));
+
+				}
 
 			}
 

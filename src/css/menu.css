@@ -581,7 +581,8 @@
 		.header,
 		.main,
 		.footer,
-		.menu-bar {
+		.menu-bar,
+		jdiv {
 
 			display: none;
 

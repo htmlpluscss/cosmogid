@@ -1374,22 +1374,15 @@
 
 		&__img {
 
-			width: 340px;
+			width: 280px;
+			height: 280px;
+			margin: 0 auto;
 			flex-shrink: 0;
 
 			img {
 
 				width: 100%;
 				height: auto;
-
-			}
-
-			@media $smWidth {
-
-				width: auto;
-				height: calc(100vw - 48px);
-				display: flex;
-				justify-content: center;
 
 			}
 
@@ -1402,7 +1395,8 @@
 
 			@media $smWidth {
 
-				height: calc(100vh - 100vw + 48px - 48px);
+				height: calc(100vh - 280px - 48px);
+				min-height: 320px;
 				padding-top: var(--gap);
 
 			}
@@ -1452,7 +1446,7 @@
 
 		&__btn {
 
-			padding: 12px 0;
+			padding: 12px 6px;
 			width: 100%;
 			display: flex;
 			gap: 10px;
@@ -1479,7 +1473,7 @@
 			&.is-current {
 
 				color: var(--violet);
-
+				background-color: #f3f4f6;
 			}
 
 			img {
@@ -1493,6 +1487,18 @@
 		&__buy {
 
 			margin-top: var(--gap);
+
+			@media $smWidth {
+
+				position: sticky;
+				bottom: 24px;
+				z-index: 1;
+				box-shadow: 0 24px 0 24px #fff;
+				padding-top: 24px;
+				margin-top: 0;
+				background-image: linear-gradient( to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 24px);
+
+			}
 
 			.btn {
 

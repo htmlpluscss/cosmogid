@@ -7,7 +7,6 @@
 	}
 
 	const items = modal.querySelectorAll('.modal__item'),
-		  btns = document.querySelectorAll('[data-modal]'),
 		  wrapper = document.querySelector('.wrapper'),
 		  menu = document.querySelector('.menu-catalog'),
 		  header = document.querySelector('.header'),

@@ -1,0 +1,76 @@
+				<div class="preview-card__modal-select">
+
+					<button class="btn btn--hash btn--small" type="button" data-modal="product-select">
+						+ Все объёмы (5)
+					</button>
+
+				</div>
+
+				<div class="preview-card__select">
+
+					<button class="preview-card__select-btn preview-card__select-btn--open button js-select-list-toggle" type="button">
+
+						<span class="preview-card__select-img">
+
+							<img src="https://i.makeupstore.co.il/o/oa/oaybhhv8w4yo.jpg" width="24" height="24" loading="lazy" alt="0.00">
+
+						</span>
+
+						<span class="preview-card__select-name">
+							0.00
+						</span>
+
+						<svg class="preview-card__select-arrow" width="16" height="16" viewBox="0 0 24 24">
+							<use xlink:href="#svg-arrow-chevron-down"/>
+						</svg>
+
+					</button>
+
+					<div class="preview-card__select-list">
+
+{% for btn in [
+	{
+	  img   : "o/oa/oaybhhv8w4yo",
+	  name  : "0.00",
+	  price : 2581
+	},
+	{
+	  img   : "c/c1/c1e3jbjbvoia",
+	  name  : "0.11 - Ash",
+	  price : 1000
+	},
+	{
+	  img   : "h/hu/hupfddcmkf6o",
+	  name  : "3.0 - Dark Brown Natural",
+	  price : 3000
+	},
+	{
+	  img   : "r/rf/rfl5mz6isyjo",
+	  name  : "9.03 - Very Light Blonde Natural Golden",
+	  price : 9000
+	},
+	{
+	  img   : "9/9y/9yeyddlefjqe",
+	  name  : "9.2 - Very Light Blonde Pearl",
+	  price : 9000
+	}
+]%}
+
+						<button class="preview-card__select-btn button{% if loop.first %} is-current{% endif %}" type="button" data-id="{{ loop.index }}" data-price="{{ btn.price }}">
+
+							<span class="preview-card__select-img">
+
+								<img src="https://i.makeupstore.co.il/{{ btn.img }}.jpg" width="24" height="24" loading="lazy" alt="{{ btn.name }}">
+
+							</span>
+
+							<span class="preview-card__select-name">
+								{{ btn.name }}
+							</span>
+
+						</button>
+{% endfor %}
+
+					</div>
+
+				</div>

@@ -1,0 +1,50 @@
+		<div class="preview-card">
+
+{% set card = {
+
+	overlay : false,
+	label : [
+		{
+			mod  : "discount",
+			name : "скидка"
+		},
+		{
+			mod  : "gift",
+			name : "подарок"
+		},
+		{
+			mod  : "sale",
+			name : "скидка",
+			value : "35%"
+		}
+	],
+	flag : ["red","sale"],
+	rating : 3,
+	review : "2 отзыва",
+	priceOld : true,
+
+	buy : "enabled"
+
+} %}
+
+{% include "_include/preview-card/head.html" %}
+
+			<form action="/" class="preview-card__form swiper-no-swiping">
+
+				<input type="hidden" name="id" value="123">
+
+				<div class="preview-card__hover">
+
+					<div class="preview-card__hover-inner">
+
+{% include "_include/preview-card/select.html" %}
+
+{% include "_include/preview-card/foot.html" %}
+
+					</div>
+
+				</div>
+
+			</form>
+
+		</div>

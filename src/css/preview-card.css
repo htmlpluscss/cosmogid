@@ -733,6 +733,188 @@
 
 	}
 
+	&__modal-select {
+
+		margin-bottom: var(--gap);
+		display: flex;
+		justify-content: flex-end;
+
+		@media $desktop {
+
+			display: none;
+
+		}
+
+	}
+
+	&__select {
+
+		margin-bottom: var(--gap);
+		position: relative;
+
+		@media $desktop {
+
+			&-btn {
+
+				white-space: normal;
+
+				&.is-current {
+
+					display: none;
+
+				}
+
+			}
+
+			&-list {
+
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				background-color: #fff;
+				z-index: 1;
+				border: 1px solid #f3f4f6;
+				border-top: 0;
+				display: none;
+
+			}
+
+			&-btn.is-open + &-list {
+
+				display: block;
+
+			}
+
+			&-list &-btn {
+
+				border: 0;
+
+				&:hover {
+
+					background-color: #f3f4f6;
+
+				}
+
+			}
+
+			&-btn.is-open &-arrow {
+
+				transform: scaleY(-1);
+
+			}
+
+		}
+
+		@media $mdWidth {
+
+			&-name {
+
+				text-overflow: ellipsis;
+				overflow: hidden;
+
+			}
+
+			&-btn {
+
+				flex-shrink: 0;
+				width: auto;
+				max-width: 100%;
+
+				& + & {
+
+					border-left: 0;
+
+				}
+
+				&--open {
+
+					display: none;
+
+				}
+
+				&.is-current {
+
+					&::after {
+
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						content: '';
+						z-index: 1;
+						pointer-events: none;
+						outline: 1px solid var(--border);
+
+					}
+
+				}
+
+			}
+
+			&-list {
+
+				display: flex;
+				padding-bottom: 10px;
+				overflow-x: auto;
+				padding-right: 8px;
+
+			}
+
+			& {
+
+				margin-right: -8px;
+
+				&::after {
+
+					position: absolute;
+					width: 24px;
+					top: 0;
+					right: 0;
+					bottom: 10px;
+					content: '';
+					pointer-events: none;
+					background-image: linear-gradient( to right, rgba(255,255,255,0), rgba(255,255,255,1));
+
+				}
+
+			}
+
+		}
+
+		&-btn {
+
+			padding: 6px 10px;
+			border: 1px solid #f3f4f6;
+			width: 100%;
+			display: flex;
+			gap: 10px;
+			align-items: center;
+
+		}
+
+		&-img {
+
+			flex-shrink: 0;
+
+		}
+
+		&-name {
+
+			flex-grow: 1;
+			text-align: left;
+
+		}
+
+		&-arrow {
+
+			flex-shrink: 0;
+
+		}
+
+	}
+
 }
 
 .preview-card-row {

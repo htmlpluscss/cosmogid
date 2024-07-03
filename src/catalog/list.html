@@ -10,7 +10,7 @@
 					<meta itemprop="price" content="1234">
 					<meta itemprop="priceCurrency" content="RUB">
 
-{% include "main/preview-swiper__preview-card-3.html" %}
+{% include "main/preview-swiper__preview-card-" + ( loop.index % 3 + 2 ) + ".html" %}
 
 				</div>
 

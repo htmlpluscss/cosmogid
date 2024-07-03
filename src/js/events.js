@@ -155,6 +155,36 @@
 
 		}
 
+		// выбор подтоваров, каталог
+
+		const btnSelectListToggle = event.target.closest('.js-select-list-toggle');
+
+		if (btnSelectListToggle) {
+
+			btnSelectListToggle.classList.toggle('is-open');
+
+		}
+
+/*
+
+		const btnsSelectListToggle = document.querySelectorAll('.js-select-list-toggle');
+
+		if ( btnsSelectListToggle.length > 0 ) {
+
+			const btnSelectListToggle = event.target.closest('.js-select-list-toggle');
+
+			if (btnSelectListToggle) {
+
+				[...btnsSelectListToggle].forEach( btn => btn.classList.toggle('is-open', btn === btnSelectListToggle && btnSelectListToggle.classList.contains('is-open') === false));
+
+			}
+			else {
+
+				[...btnsSelectListToggle].forEach( btn => btn.classList.remove('is-open'));
+
+			}
+
+		}*/
 	});
 
 })();
