@@ -452,11 +452,25 @@
 
 						</div>
 
-						<div class="modal-product-select__buy">
+						<div class="modal-product-select__buy flex">
 
-							<button class="btn">
+							<button class="btn flex--grow-1">
 								Купить
 							</button>
+
+							<button class="btn btn--favourite" type="button" aria-label="В избранное">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="#svg-favourite"/>
+								</svg>
+							</button>
+
+{#
+							<button class="btn btn--favourite" type="button" aria-label="Удалить из избранного">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="#svg-favourite-fill"/>
+								</svg>
+							</button>
+#}
 
 						</div>
 
