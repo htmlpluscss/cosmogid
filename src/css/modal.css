@@ -1378,6 +1378,7 @@
 			height: 280px;
 			margin: 0 auto;
 			flex-shrink: 0;
+			position: relative;
 
 			img {
 
@@ -1400,6 +1401,12 @@
 				padding-top: var(--gap);
 
 			}
+
+		}
+
+		&__availability {
+
+			margin-bottom: var(--gap);
 
 		}
 

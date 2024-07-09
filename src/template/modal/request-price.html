@@ -1,0 +1,79 @@
+			<form action="/" class="modal__item modal__item--request-price" id="modal-form-request-price">
+
+				<p class="modal__title">
+					Запросить стоимость
+				<p>
+
+				<p class="modal__text">
+					Наши специалисты свяжутся сразу при получении сообщения
+				</p>
+
+				<div id="modal-form-request-price-product">
+
+				</div>
+
+				<div class="modal__checkbox">
+
+					<label class="checkbox">
+
+						<input class="checkbox__input visuallyhidden" type="checkbox" name="inform-messenger">
+
+						<span class="checkbox__label">
+							Не звоните, напишите в WhatsApp или Telegram
+						</span>
+
+					</label>
+
+				</div>
+
+				<div class="modal__checkbox">
+
+					<label class="checkbox">
+
+						<input class="checkbox__input visuallyhidden" type="checkbox" name="find-analogue" checked="checked">
+
+						<span class="checkbox__label">
+							Не хочу ждать - подберите аналог
+						</span>
+
+					</label>
+
+				</div>
+
+				<div class="modal__row">
+
+					<div class="inputbox">
+
+						<label class="inputbox__label" for="modal-request-price-name">
+							Как вас зовут
+						</label>
+
+						<input class="input" name="name" placeholder="Кузякина Марина" required="required" id="modal-request-price-name">
+
+					</div>
+
+					<div class="inputbox">
+
+{% set modalMod = 'request-price' %}
+
+{% include "template/modal/modal-callback-phone.html" %}
+
+					</div>
+
+				</div>
+
+				<div class="modal__foot">
+
+					<div class="modal__rule">
+
+{% include "template/modal/checkbox-rule.html" %}
+
+					</div>
+
+					<button class="btn">
+						Отправить
+					</button>
+
+				</div>
+
+			</form>

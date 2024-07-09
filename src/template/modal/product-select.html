@@ -5,7 +5,11 @@
 					<div class="modal-product-select__img">
 
 						<img src="https://i.makeupstore.co.il/9/9s/9swdbvr7r6oe.jpg" width="280" height="280" alt="">
-
+{#
+	Все состояния для (Спец товар, Снят с продаж)
+	аналогияные как и были .overlay-disabled
+	шаблоны html в id="overlay-disabled-template"
+#}
 					</div>
 
 					<div class="modal-product-select__body">
@@ -23,7 +27,67 @@
 								</b>
 
 							</span>
+{#
+	Если "Спец товар", то вместо цены выводим:
 
+							<div class="board-login">
+
+								<span class="ico-box">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-profi"/>
+									</svg>
+								</span>
+
+								<div class="board-login__text">
+
+									<b>
+										Товар для специалистов
+									</b>
+
+									<div class="flex">
+
+										<button class="btn btn--link" type="button" data-modal="request-price">
+											Запросите цену
+										</button>
+
+									</div>
+
+								</div>
+
+								<details class="tooltip">
+
+									<summary>
+										<svg width="16" height="16" viewBox="0 0 24 24">
+											<use xlink:href="#svg-info"/>
+										</svg>
+									</summary>
+
+									<div class="tooltip__inner">
+
+										<p>
+											Вы можете его купить после прохождения авторизации
+										</p>
+
+									</div>
+
+								</details>
+
+							</div>
+#}
+
+						</div>
+
+						<div class="modal-product-select__availability">
+
+							<span class="availability">
+								есть в наличии
+							</span>
+{#
+	Если нет в наличии
+							<span class="availability is-not">
+								нет в наличии
+							</span>
+#}
 						</div>
 
 						<div class="modal-product-select__list is-scroll">
@@ -465,6 +529,8 @@
 							</button>
 
 {#
+	Если уже добавлен в избранное
+
 							<button class="btn btn--favourite" type="button" aria-label="Удалить из избранного">
 								<svg width="24" height="24" viewBox="0 0 24 24">
 									<use xlink:href="#svg-favourite-fill"/>
