@@ -32,7 +32,7 @@
 @import url(filter.css);
 @import url(pagin.css);
 
-@import url(brands.css);
+@import url(page-feedback.css);
 
 @import url(product.css);
 @import url(readmore-text.css);
@@ -46,6 +46,7 @@
 @import url(page-article.css);
 @import url(page-404.css);
 @import url(content.css);
+@import url(page-feedback.css);
 
 @import url(cart.css);
 @import url(order.css);

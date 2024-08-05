@@ -1,0 +1,67 @@
+					<form action="/" class="contacts-form">
+
+						<div class="contacts-form__fieldset">
+
+							<div class="contacts-form__column">
+
+								<div class="contacts-form__inputbox">
+
+									<label for="contacts-form-name" class="contacts-form__label">
+										Как вас зовут*
+									</label>
+
+									<input name="name" id="contacts-form-name" class="input" placeholder="Кузякина Марина">
+
+								</div>
+
+								<div class="contacts-form__inputbox">
+
+									<label for="contacts-form-email" class="contacts-form__label">
+										Ваша почта
+									</label>
+
+									<input name="email" id="contacts-form-email" class="input" placeholder="kuzakina@mail.ru" type="email">
+
+								</div>
+
+								<div class="contacts-form__inputbox">
+
+									<label for="contacts-form-phone" class="contacts-form__label">
+										Ваш телефон
+									</label>
+
+{% include "feedback/phone.html" %}
+
+								</div>
+
+							</div>
+
+							<div class="contacts-form__column">
+
+								<div class="contacts-form__inputbox">
+
+									<label for="contacts-form-text" class="contacts-form__label">
+										Текст обращения
+									</label>
+
+									<textarea name="text" id="contacts-form-text" class="input autosize" placeholder="Задайте вопрос или напишите сообщение"></textarea>
+
+								</div>
+
+								<div class="contacts-form__inputbox">
+
+									<button class="btn">
+										Отправить
+									</button>
+
+									<p class="contacts-form__note">
+										Нажимая на кнопку "Отправить", Вы соглашаетесь на обработку Ваших персональных данных в соответствии с Политикой конфеденциальности
+									</p>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</form>
