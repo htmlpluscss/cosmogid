@@ -4,11 +4,12 @@
 	order: 10;
 	margin: 96px auto;
 	width: 1176px;
+	max-width: 100%;
 	scroll-margin: var(--scrollMargin);
 
 	@media $smWidth {
 
-		margin: 40px 0;
+		margin: 40px auto;
 
 	}
 

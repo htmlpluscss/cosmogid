@@ -220,8 +220,122 @@
 	&__desc {
 
 		font-size: 18px;
-		color: #4c515d;
+		color: var(--gray);
 		margin-bottom: 24px;
+
+		h2 {
+
+			font-size: 28px;
+			line-height: 1.2;
+			font-weight: 400;
+			margin: 24px 0;
+
+			@media $smWidth {
+
+				font-size: 20px;
+				font-weight: 600;
+
+			}
+
+		}
+
+		h3, h4, h5 {
+
+			font-size: 24px;
+			line-height: 1.2;
+			font-weight: 400;
+			margin: 16px 0;
+
+			@media $smWidth {
+
+				font-size: 18px;
+				font-weight: 600;
+
+			}
+
+		}
+
+		h4 {
+
+			font-size: 20px;
+
+		}
+
+		h5 {
+
+			font-size: 16px;
+
+		}
+
+		b,
+		strong {
+
+			font-weight: 600;
+
+		}
+
+		a {
+
+			text-decoration: underline;
+
+			&:hover {
+
+				text-decoration: none;
+
+			}
+
+		}
+
+		p, ul {
+
+			margin: 16px 0;
+
+		}
+
+		ul {
+
+			li {
+
+				padding-left: 22px;
+
+				&::before {
+
+					position: absolute;
+					top: 10px;
+					left: 10px;
+					content: '';
+					background-color: var(--gray);
+					width: 3px;
+					height: 3px;
+					border-radius: 50%;
+
+				}
+
+			}
+
+		}
+
+		ol {
+
+			counter-reset: headings 0;
+
+			li {
+
+				padding-left: 22px;
+				counter-increment: headings 1;
+
+				&::before {
+
+					position: absolute;
+					top: 0;
+					left: 0;
+					content: counter(headings, decimal) '.';
+
+				}
+
+			}
+
+		}
 
 	}
 
