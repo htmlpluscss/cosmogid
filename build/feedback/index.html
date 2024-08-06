@@ -4,7 +4,7 @@
 
   <meta charset="utf-8">
 
-  <title>cosmogid.ru</title>
+  <title>Обратная связь</title>
 
   <link href="/css/styles.css" rel="preload" as="style">
   <link href="/js/scripts.js" rel="preload" as="script">
@@ -19,15 +19,15 @@
 
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="cosmogid.ru">
+  <meta name="description" content="Сообщение, которое Вы отправите через данную форму, руководитель интернет-магазина CosmoGid получит напрямую.">
   <meta name="theme-color" content="#4c1d95">
 
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="cosmogid.ru">
   <meta property="og:url" content="https://cosmogid.ru">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="cosmogid.ru">
-  <meta property="og:description" content="cosmogid.ru">
+  <meta property="og:title" content="Обратная связь">
+  <meta property="og:description" content="Сообщение, которое Вы отправите через данную форму, руководитель интернет-магазина CosmoGid получит напрямую.">
 
   <meta property="og:image" content="https://cosmogid.ru/og.png">
   <meta property="og:image:secure_url" content="https://cosmogid.ru/og.png">
@@ -44,63 +44,6 @@
 
 
 
-
-
-
-  <style>
-
-    main hr {
-
-      margin: 20px 0;
-
-    }
-
-    main h1, main h2, main h3 {
-
-      margin: 20px 0 10px;
-
-    }
-
-    main .w100p {
-
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-
-    }
-
-    main .flex {
-
-      margin: 0 -10px;
-      display: flex;
-      flex-wrap: wrap;
-
-    }
-
-    main p {
-
-      margin: 0 10px;
-
-    }
-
-    .item {
-
-      margin: 10px;
-
-    }
-
-    code {
-
-      margin: 10px;
-      background-color: #fff;
-      color: #000;
-      display: block;
-      border: 1px solid #efefef;
-      white-space: pre;
-
-    }
-
-  </style>
 
 
 
@@ -234,15 +177,27 @@
 
 
 
-            <button class="btn btn--text" type="button" data-modal="login-phone">
+            <a class="btn btn--text" href="/lk/">
 
               <svg width="16" height="16" viewBox="0 0 24 24">
                 <use xlink:href="#svg-user"/>
               </svg>
 
-              Войти
+              Личный кабинет
 
-            </button>
+            </a>
+
+            <a class="btn btn--text" href="/favourites/">
+
+              <svg width="16" height="16" viewBox="0 0 24 24">
+                <use xlink:href="#svg-heart"/>
+              </svg>
+
+              Избранное
+
+            </a>
+
+
 
 
 
@@ -333,7 +288,7 @@
             </span>
 
             <span class="header-cart__value">
-              у вас 25 товаров
+              пока пуста
             </span>
 
           </a>
@@ -410,7 +365,7 @@
 
             </button>
 
-            <a class="ico-box header__counter-ico" href="/cart/" title="у вас 25 товаров" data-counter="2">
+            <a class="ico-box header__counter-ico" href="/cart/" title="пока пуста">
 
               <svg width="24" height="24" viewBox="0 0 24 24">
                 <use xlink:href="#svg-cart"/>
@@ -468,7 +423,7 @@
 
         </a>
 
-        <a class="ico-box header__counter-ico" href="/cart/" title="у вас 25 товаров" data-counter="2">
+        <a class="ico-box header__counter-ico" href="/cart/" title="пока пуста">
 
           <svg width="24" height="24" viewBox="0 0 24 24">
             <use xlink:href="#svg-cart"/>
@@ -509,28 +464,6 @@
     </div>
 
   </header>
-
-
-
-  <form action="/" class="city-auto">
-
-    <p class="city-auto__title">
-      Ваш город <b>Екатеринбург?</b>
-    </p>
-
-    <div class="city-auto__foot">
-
-      <button class="btn btn--outline" type="button" data-modal="city">
-        Нет
-      </button>
-
-      <button class="btn">
-        Да
-      </button>
-
-    </div>
-
-  </form>
 
 
 
@@ -9471,852 +9404,221 @@
 
 
 
+  <div class="breadcrumbs">
+
+    <div class="center">
+
+      <div class="breadcrumbs__back">
+
+        <button onClick="history.back()" type="button" class="button" aria-label="вернуться">
+
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <use xlink:href="#svg-arrow-chevron-left"/>
+          </svg>
+
+        </button>
+
+      </div>
+
+      <ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+
+          <a href="/" itemprop="item" class="breadcrumbs__link">
+
+            <span itemprop="name">
+              Главная
+            </span>
+
+          </a>
+
+          <meta itemprop="position" content="1">
+
+        </li>
 
 
-<div class="center">
 
-<script>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 
-setTimeout( ()=> {
+          <a href="/" itemprop="item" class="breadcrumbs__link">
 
-  const eventModalShow = new CustomEvent("modalShow", {
-    detail: {
-      selector: "club-done"
-    }
-  });
+            <span itemprop="name">
+              Обратная связь
+            </span>
 
-//  window.modal.dispatchEvent(eventModalShow);
+          </a>
 
-})
+          <meta itemprop="position" content="2">
 
-</script>
+        </li>
 
-  <h1>
-    Страницы
-  </h1>
 
-  <ul class="h3">
-    <li><a href="https://cosmogid_2020.htmlpluscss.website/" style="font-size: 12px">2020</a></li>
-    <li><a href="/main/">Главная</a></li>
-    <li><a href="/catalog/">Каталог</a></li>
-    <li><a href="/catalog/level2/">Каталог (в фильтре третий уровень меню категории Ароматерапия)</a></li>
-    <li><a href="/catalog/set/">Каталог (Протоколы)</a></li>
-    <li><a href="/catalog/sale/">Распродажа</a></li>
-    <li><a href="/catalog/preloader/">Preloader</a></li>
-    <li><a href="/product/">Карточка товара</a></li>
-    <li><a href="/product/color/">Карточка товара (Выберите цвет краски | Бесплатная доставка | Удалить из избранного | нет в наличии)</a></li>
-    <li><a href="/product/login/">Карточка товара (Товар для специалистов)</a></li>
-    <li><a href="/product/set/">Карточка товара (Протокол процедуры)</a></li>
-    <li><a href="/product/scroll/">Карточка товара (Выбор скролл и модалка)</a></li>
-    <li><a href="/sale/">Акции и скидки</a></li>
-    <li><a href="/sale/item/">Страници акции</a></li>
-    <li><a href="/news/">Новости</a></li>
-    <li><a href="/news/article/">Новость</a></li>
-    <li><a href="/favourites/">Избранное</a></li>
-    <li><a href="/search/">Поиск</a></li>
-    <li><a href="/brands/">Бренды</a></li>
-    <li><a href="/brands/item/">Страница бренда</a></li>
-    <li><a href="/brands/item/line/">Страница линии бренда</a></li>
-    <li><a href="/consultations/">Консультации</a></li>
-    <li><a href="/consultations/item/">Страница Консультации</a></li>
-    <li><a href="/consultations/online/">Подбор ухода</a></li>
-    <li><a href="/workshop/">Мастер классы</a></li>
-    <li><a href="/workshop/item/">Мастер класс</a></li>
-    <li><a href="/video-review/">Видео отзывы</a></li>
-    <li><a href="/404/">404 error</a></li>
-    <li><a href="/club/">Клуб Cosmogid</a></li>
-  </ul>
 
-  <h2>
-    Корзина
-  </h2>
+      </ul>
 
-  <ul class="h3">
-    <li><a href="/cart/">Корзина</a></li>
-    <li><a href="/cart/order/">Оформление заказа (Новый покупатель)</a></li>
-    <li><a href="/cart/order/cdek/#step-2">Оформление заказа (СДЭК)</a></li>
-    <li><a href="/cart/order/ip/#step-2">Оформление заказа (Юридическое лицо)</a></li>
-    <li><a href="/cart/finish">Спасибо за заказ</a></li>
-  </ul>
+    </div>
 
-  <h2>
-    Информация
-  </h2>
+  </div>
 
-  <ul class="h3">
-    <li><a href="/about/">О компании</a></li>
-    <li><a href="/contacts/">Контакты</a></li>
-    <li><a href="/payment/">Оплата</a></li>
-    <li><a href="/shipping/">Доставка</a></li>
-    <li><a href="/faq/">FAQ</a></li>
-    <li><a href="/feedback/">Обратная связь</a></li>
-  </ul>
 
-  <h2>
-    Личный кабинет
-  </h2>
 
-  <ul class="h3">
-    <li><a href="/lk/">Заказы</a></li>
-    <li><a href="/lk/profile/">Контактная информация</a></li>
-    <li><a href="/lk/address/">Адресная книга</a></li>
-    <li><a href="/lk/address/edit/">Адресная книга (Редактирование адреса)</a></li>
-    <li><a href="/lk/favourites/">Избранное</a></li>
-    <li><a href="/lk/club/">Club Cosmogid</a></li>
-    <li><a href="/lk/club/join/">Club Cosmogid (Вступить в клуб)</a></li>
-  </ul>
 
-  <h2>
-    Schema.org
-  </h2>
 
-  <ul class="h3">
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fproduct%2F">Organization, SiteNavigationElement, BreadcrumbList, Product + ImageObject</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fcatalog%2F">Категория OfferCatalog</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fsale%2F">Акции ImageObject</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fsale%2Fitem">Акция ImageObject + OfferCatalog</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fnews%2F">Новости и статьи BlogPosting</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fnews%2Farticle">Новость и статья Article + ImageObject</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fconsultations%2Fitem%2F">Консультации FAQPage</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Ffaq">Частые вопросы FAQPage</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://validator.schema.org/#url=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fabout">О нас Review</a>
-    </li>
-  </ul>
+  <div class="center">
 
-  <h2>
-    Lighthouse
-  </h2>
+    <article class="page-feedback">
 
-  <ul class="h3">
-    <li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fmain%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext" style="color:red">Главная <b>31</b></a></li>
-    <li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fcatalog%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext">Каталог <b>87</b></a></li>
-    <li><a target="_blank" href="https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcosmogid.htmlpluscss.website%2Fproduct%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext">Карточка товара <b>86</b></a></li>
-  </ul>
-
-  <h2>
-    Modal
-  </h2>
-
-  <div class="flex flex--wrap">
-
-    <div class="item w100p">
+      <h1 class="title">
+        Уважаемые посетители интернет-магазина CosmoGid!
+      </h1>
 
       <p>
-        модальное окно можно вызвать и js:
+        Мы благодарны Вам за обращение! Нам очень важно, чтобы клиентам было комфортно с нами сотрудничать на всех этапах&nbsp;работы!
       </p>
-
-      <code>
-
-  const eventModalShow = new CustomEvent("modalShow", {
-    detail: {
-      selector: "login"
-    }
-  });
-
-  window.modal.dispatchEvent(eventModalShow);
-
-      </code>
 
       <p>
-        где `login` модификатор модального окна
+        Сообщение, которое Вы отправите через данную форму, руководитель интернет-магазина CosmoGid получит&nbsp;напрямую.
       </p>
 
-    </div>
+      <h2 class="h1">
+        Напишите нам отзыв
+      </h2>
 
-    <div class="item">
+          <form action="/" class="contacts-form">
 
-      <button class="btn" type="button" data-modal="city">
-        Новый город
-      </button>
+            <div class="contacts-form__fieldset">
 
-    </div>
+              <div class="contacts-form__column">
 
-    <div class="item">
+                <div class="contacts-form__inputbox">
 
-      <button class="btn" type="button" data-modal="callback">
-        Заказ обратного звонка
-      </button>
+                  <label for="contacts-form-name" class="contacts-form__label">
+                    Как вас зовут*
+                  </label>
 
-    </div>
+                  <input name="name" id="contacts-form-name" class="input" placeholder="Кузякина Марина">
 
-    <div class="item">
+                </div>
 
-      <button class="btn" type="button" data-modal="review" data-id="123">
-        Оставить отзыв
-      </button>
+                <div class="contacts-form__inputbox">
 
-    </div>
+                  <label for="contacts-form-email" class="contacts-form__label">
+                    Ваша почта
+                  </label>
 
-    <div class="item">
+                  <input name="email" id="contacts-form-email" class="input" placeholder="kuzakina@mail.ru" type="email">
 
-      <button class="btn" type="button" data-modal="video-review">
-        Оставить видео-отзыв
-      </button>
+                </div>
 
-    </div>
+                <div class="contacts-form__inputbox">
 
-    <div class="item">
+                  <label for="contacts-form-phone" class="contacts-form__label">
+                    Ваш телефон
+                  </label>
 
-      <button class="btn" type="button" data-modal="callback" data-title="Задать вопрос">
-        Задать вопрос
-      </button>
+            <div class="phone-country">
 
-    </div>
+              <button class="phone-country__btn button" type="button">
 
-    <div class="item">
+                <span class="phone-country__value">
+                  RUS
+                </span>
 
-      <button class="btn" type="button" data-modal="callback" data-title="Узнать больше">
-        Узнать больше
-      </button>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <use xlink:href="#svg-chevron"/>
+                </svg>
 
-    </div>
+              </button>
+
+              <input class="phone-country__mask input inputmask inputmask--phone" type="tel" name="phone" data-mask="+\7 (999) 999 99 99" placeholder="+7 ( --- ) --- -- --" id="contacts-form-phone">
+
+              <ul class="phone-country__list">
+
+
+
+                <li>
+
+                  <label class="phone-country__item">
+
+                    <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="RUS" data-mask="+7 (999) 999 99 99" checked="checked">
+
+                    Россия
+
+                  </label>
+
+                </li>
+
+
+
+                <li>
+
+                  <label class="phone-country__item">
+
+                    <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="BYN" data-mask="+375 99 999 99 99">
+
+                    Беларусь
+
+                  </label>
+
+                </li>
+
+
+
+                <li>
+
+                  <label class="phone-country__item">
+
+                    <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="KZT" data-mask="+7 999 999 99 99">
+
+                    Казахстан
+
+                  </label>
+
+                </li>
+
+
+
+              </ul>
+
+            </div>
+
+                </div>
+
+              </div>
+
+              <div class="contacts-form__column">
+
+                <div class="contacts-form__inputbox">
+
+                  <label for="contacts-form-text" class="contacts-form__label">
+                    Текст обращения
+                  </label>
+
+                  <textarea name="text" id="contacts-form-text" class="input autosize" placeholder="Задайте вопрос или напишите сообщение"></textarea>
+
+                </div>
+
+                <div class="contacts-form__inputbox">
+
+                  <button class="btn">
+                    Отправить
+                  </button>
+
+                  <p class="contacts-form__note">
+                    Нажимая на кнопку "Отправить", Вы соглашаетесь на обработку Ваших персональных данных в соответствии с Политикой конфеденциальности
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </form>
+
+    </article>
 
   </div>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <button
-
-        class="btn btn--outline js-find-analogue"
-        type="button"
-        data-modal="find-analogue"
-        data-id="123"
-        data-articleid="234"
-        data-link="/product/"
-        data-price="2581"
-        data-price-old="2581"
-        data-img="/img/preview-card/preview-80x80.jpg"
-        data-img2x="/img/preview-card/preview-160x160.jpg"
-        data-name="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл"
-      >
-        Найти аналог
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button
-
-        class="btn btn--outline js-find-notify"
-        type="button"
-        data-modal="find-notify"
-        data-id="123"
-        data-articleid="234"
-        data-link="/product/"
-        data-price="2581"
-        data-price-old="2581"
-        data-img="/img/preview-card/preview-80x80.jpg"
-        data-img2x="/img/preview-card/preview-160x160.jpg"
-        data-name="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл"
-      >
-        Уведомить о наличии
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button
-
-        class="btn btn--outline js-best-price"
-        type="button"
-        data-modal="best-price"
-        data-id="123"
-        data-articleid="234"
-        data-link="/product/"
-        data-price="2581"
-        data-price-old="2581"
-        data-img="/img/preview-card/preview-80x80.jpg"
-        data-img2x="/img/preview-card/preview-160x160.jpg"
-        data-name="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл"
-      >
-        Нашли дешевле?
-      </button>
-
-    </div>
-
-    <div class="item hide">
-
-      <button class="btn" type="button" data-modal="ok" onclick="document.querySelector('.modal__item--ok .modal__title').innerHTML = `Заголовок`;document.querySelector('.modal__item--ok .modal__text').innerHTML = `Текст сообщения`">
-        Info
-      </button>
-
-    </div>
-
-  </div>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="login-phone">
-        Войти по номеру телефона
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="login-email">
-        Войти по почте
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="login-code">
-        Звонок 4 цифры входящего номера
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="login-sms">
-        Запросить СМС-код
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="login-code-error">
-        Ошибка в коде
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="errors" disabled="disabled">
-        Ошибки в формах
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="reg" disabled="disabled">
-        Войти
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="login" disabled="disabled">
-        Войти в систему
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="sms" disabled="disabled">
-        Ввести код из SMS
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" type="button" data-modal="recovery">
-        Забыли пароль
-      </button>
-
-    </div>
-
-  </div>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <button class="btn btn--outline" data-modal="cdek">
-        Пункты выдачи и постоматы
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--outline" data-modal="calendar">
-        Дата и время пикер
-      </button>
-
-    </div>
-
-  </div>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <button class="btn" data-modal="consultation">
-        О консультации
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" data-modal="club">
-        Клуб анкета
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" data-modal="club-done">
-        Клуб анкета (успех)
-      </button>
-
-    </div>
-
-  </div>
-
-  <hr>
-
-  <h2>
-    Buttons
-  </h2>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <button class="btn">
-        btn
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--gray">
-        btn btn--gray
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--outline">
-        btn btn--outline
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--more">
-        btn btn--more
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn" disabled="disabled">
-        btn disabled
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--link">
-        btn--link
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--hash">
-        btn--hash
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--hash btn--small">
-        btn--hash btn--small
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--text">
-        btn--text
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--text">
-
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path d="M16 18a1 1 0 0 0 0-2H6.99A1 1 0 0 0 6 17a1 1 0 0 0 .99 1H16ZM6 7a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1 1 1 0 0 0-1-1H7a1 1 0 0 0-1 1Zm14 6a1 1 0 1 0 0-2H7a1 1 0 1 0 0 2h13Z"/>
-          <circle cx="4" cy="7" r="1"/>
-          <circle cx="4" cy="12" r="1"/>
-          <circle cx="4" cy="17" r="1"/>
-        </svg>
-
-        btn--text + ico
-
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--big">
-        btn--big
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--medium">
-        btn--medium
-      </button>
-
-    </div>
-
-    <div class="item">
-
-      <button class="btn btn--small">
-        btn--small
-      </button>
-
-    </div>
-
-  </div>
-
-  <h3>
-    Checkbox
-  </h3>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <label class="checkbox">
-
-        <input type="checkbox" class="checkbox__input visuallyhidden">
-
-        <span class="checkbox__label">
-          Выберите значение
-        </span>
-
-      </label>
-
-    </div>
-
-    <div class="item">
-
-      <label class="checkbox">
-
-        <input type="checkbox" class="checkbox__input visuallyhidden" checked="checked">
-
-        <span class="checkbox__label">
-          Выберите значение
-        </span>
-
-      </label>
-
-    </div>
-
-    <div class="item">
-
-      <label class="checkbox">
-
-        <input type="checkbox" class="checkbox__input visuallyhidden" disabled="disabled">
-
-        <span class="checkbox__label">
-          Выберите значение
-        </span>
-
-      </label>
-
-    </div>
-
-    <div class="item">
-
-      <label class="checkbox">
-
-        <input type="checkbox" class="checkbox__input visuallyhidden" disabled="disabled" checked="checked">
-
-        <span class="checkbox__label">
-          Выберите значение
-        </span>
-
-      </label>
-
-    </div>
-
-  </div>
-
-  <h3>
-    Radio
-  </h3>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <label class="checkbox">
-
-        <input type="radio" class="checkbox__input visuallyhidden" name="radio">
-
-        <span class="checkbox__label">
-          Выберите значение
-        </span>
-
-      </label>
-
-    </div>
-
-    <div class="item">
-
-      <label class="checkbox">
-
-        <input type="radio" class="checkbox__input visuallyhidden" name="radio" checked="checked">
-
-        <span class="checkbox__label">
-          Выберите значение
-        </span>
-
-      </label>
-
-    </div>
-
-    <div class="item">
-
-      <label class="checkbox">
-
-        <input type="radio" class="checkbox__input visuallyhidden" disabled="disabled">
-
-        <span class="checkbox__label">
-          Выберите значение
-        </span>
-
-      </label>
-
-    </div>
-
-    <div class="item">
-
-      <label class="checkbox">
-
-        <input type="radio" class="checkbox__input visuallyhidden" disabled="disabled" checked="checked">
-
-        <span class="checkbox__label">
-          Выберите значение
-        </span>
-
-      </label>
-
-    </div>
-
-  </div>
-
-  <hr>
-
-  <h2>
-    Input
-  </h2>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <input class="input" placeholder="placeholder">
-
-    </div>
-
-    <div class="item">
-
-      <input class="input" value="value">
-
-    </div>
-
-    <div class="item">
-
-      <input class="input" value="disabled" disabled="disabled">
-
-    </div>
-
-  </div>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <div class="inputbox">
-
-        <label for="inputbox" class="inputbox__label">
-          * Индекс
-        </label>
-
-        <input id="inputbox" placeholder="Введите название" class="input" required="required">
-
-      </div>
-
-    </div>
-
-    <div class="item">
-
-      <div class="inputbox">
-
-        <label for="inputbox-2" class="inputbox__label">
-          * Индекс
-        </label>
-
-        <input id="inputbox-2" value="123" class="input" required="required">
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <div class="fileupload">
-
-        <label class="fileupload__btn">
-
-          <input type="file" name="file" class="visuallyhidden">
-
-          <span class="btn btn--link">
-            Добавить фото
-          </span>
-
-        </label>
-
-      </div>
-
-    </div>
-
-    <div class="item">
-
-      <div class="fileupload">
-
-        <label class="fileupload__btn">
-
-          <input type="file" name="file" class="visuallyhidden">
-
-          <span class="btn btn--hash">
-            Приложить файл с реквизитами
-          </span>
-
-        </label>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-  <hr>
-
-  <h2>
-    Select
-  </h2>
-
-  <div class="flex flex--wrap">
-
-    <div class="item">
-
-      <div class="select">
-
-        <select name="select">
-
-          <option value="1">Все заказы</option>
-          <option value="2">Готов к выдаче</option>
-          <option value="3">Собирается</option>
-          <option value="4">Отправлен</option>
-          <option value="5">Получен заказчиком</option>
-          <option value="6">Ожидает согласования</option>
-
-        </select>
-
-      </div>
-
-    </div>
-
-    <div class="item">
-
-      <div class="select select--white">
-
-        <select name="select2">
-
-          <option value="1">Все заказы</option>
-          <option value="2" selected="selected">Готов к выдаче</option>
-          <option value="3">Собирается</option>
-          <option value="4">Отправлен</option>
-          <option value="5">Получен заказчиком</option>
-          <option value="6">Ожидает согласования</option>
-
-        </select>
-
-      </div>
-
-    </div>
-
-    <div class="item">
-
-      <div class="select select--filter select--white">
-
-        <select name="select-filter">
-          <option value="none">Выбрать</option>
-          <option value="1">ПАО Газпром нефть</option>
-          <option value="2">Газпром</option>
-          <option value="3">Газпром нефть - ЦР</option>
-          <option value="4">Газпром нефть - ПИ</option>
-          <option value="5">Газпром нефть - МА</option>
-          <option value="6">Газпром нефть - ЩЫ</option>
-          <option value="7">Газпром нефть - ЁЕ</option>
-        </select>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
 
 
 
@@ -10909,8 +10211,8 @@ setTimeout( ()=> {
       {
         "@context": "https://schema.org",
         "@type": "WPHeader",
-        "name": "cosmogid.ru",
-        "description": ""
+        "name": "Обратная связь",
+        "description": "Сообщение, которое Вы отправите через данную форму, руководитель интернет-магазина CosmoGid получит напрямую."
       }
 
     ]
@@ -10953,7 +10255,7 @@ setTimeout( ()=> {
 
     <li class="menu-bar__item">
 
-      <a href="/cart/" class="menu-bar__link" data-counter="2">
+      <a href="/cart/" class="menu-bar__link">
 
         <svg width="32" height="32" viewBox="0 0 24 24">
           <use xlink:href="#svg-cart"/>
@@ -14537,367 +13839,6 @@ setTimeout( ()=> {
           </button>
 
         </div>
-
-      </div>
-
-
-
-      <div class="modal__item modal__item--errors modal-login">
-
-        <form class="modal-login__form" action="/">
-
-          <p class="modal-login__title">
-            Быстрая регистрация
-          <p>
-
-          <div class="modal__row">
-
-            <div class="inputbox">
-
-              <label class="inputbox__label" for="modal-errors-name">
-                Как вас зовут
-              </label>
-
-              <input class="input" name="name" placeholder="Кузякина Марина" required="required" id="modal-errors-name">
-
-            </div>
-
-            <div class="inputbox is-error">
-
-                <label class="inputbox__label">
-                  Ваш телефон
-                </label>
-
-                <div class="phone-country">
-
-                  <button class="phone-country__btn button" type="button">
-
-                    <span class="phone-country__value">
-                      RUS
-                    </span>
-
-                    <svg width="20" height="20" viewBox="0 0 20 20">
-                      <use xlink:href="#svg-chevron"/>
-                    </svg>
-
-                  </button>
-
-                  <input class="phone-country__mask input inputmask inputmask--phone" type="tel" name="phone" data-mask="+\7 (999) 999 99 99" placeholder="+7 ( --- ) --- -- --" required="required" value="7777777777">
-
-                  <ul class="phone-country__list">
-
-    
-
-                    <li>
-
-                      <label class="phone-country__item">
-
-                        <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="RUS" data-mask="+7 (999) 999 99 99" checked="checked">
-
-                        Россия
-
-                      </label>
-
-                    </li>
-
-    
-
-                    <li>
-
-                      <label class="phone-country__item">
-
-                        <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="BYN" data-mask="+375 99 999 99 99">
-
-                        Беларусь
-
-                      </label>
-
-                    </li>
-
-    
-
-                    <li>
-
-                      <label class="phone-country__item">
-
-                        <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="KZT" data-mask="+7 999 999 99 99">
-
-                        Казахстан
-
-                      </label>
-
-                    </li>
-
-    
-
-                  </ul>
-
-                </div>
-
-              <span class="inputbox__text">
-                Телефон уже зарегистрирован
-              </span>
-
-            </div>
-
-          </div>
-
-          <div class="modal__foot">
-
-            <button class="btn">
-              Зарегистрироваться
-            </button>
-
-          </div>
-
-        </form>
-
-        <form class="modal-login__form" action="/">
-
-          <p class="modal-login__title">
-            Войдите в систему
-          <p>
-
-          <div class="modal__row">
-
-            <div class="inputbox is-error">
-
-              <label class="inputbox__label">
-                Ваша почта
-              </label>
-
-              <input class="input" name="email" placeholder="mail@mail.ru" required="required" type="email" value="mail@mail.ru">
-
-              <span class="inputbox__text">
-                email не зарегистрирован
-              </span>
-
-            </div>
-
-            <div class="inputbox is-error">
-
-              <label class="inputbox__label" for="modal-errors-password">
-                Ваш пароль
-              </label>
-
-              <input class="input" name="password" placeholder="********" required="required" id="modal-errors-password" type="password" value="123456">
-
-              <span class="inputbox__text">
-                Пароль неверный
-              </span>
-
-            </div>
-
-          </div>
-
-          <div class="modal__row">
-
-            <div class="modal__column">
-
-              <button class="btn btn--outline" type="button" data-modal="recovery">
-                Забыли пароль
-              </button>
-
-            </div>
-
-            <div class="modal__column">
-
-              <button class="btn">
-                Войти
-              </button>
-
-            </div>
-
-          </div>
-
-        </form>
-
-        <form class="modal-login__form" action="/">
-
-          <p class="modal-login__title">
-            или войдите используя номер телефона:
-          <p>
-
-          <div class="modal__row">
-
-            <div class="modal__column">
-
-              <div class="inputbox is-error">
-
-                <label class="inputbox__label">
-                  Ваш телефон
-                </label>
-
-                <div class="phone-country">
-
-                  <button class="phone-country__btn button" type="button">
-
-                    <span class="phone-country__value">
-                      RUS
-                    </span>
-
-                    <svg width="20" height="20" viewBox="0 0 20 20">
-                      <use xlink:href="#svg-chevron"/>
-                    </svg>
-
-                  </button>
-
-                  <input class="phone-country__mask input inputmask inputmask--phone" type="tel" name="phone" data-mask="+\7 (999) 999 99 99" placeholder="+7 ( --- ) --- -- --" required="required" value="7777777777">
-
-                  <ul class="phone-country__list">
-
-    
-
-                    <li>
-
-                      <label class="phone-country__item">
-
-                        <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="RUS" data-mask="+7 (999) 999 99 99" checked="checked">
-
-                        Россия
-
-                      </label>
-
-                    </li>
-
-    
-
-                    <li>
-
-                      <label class="phone-country__item">
-
-                        <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="BYN" data-mask="+375 99 999 99 99">
-
-                        Беларусь
-
-                      </label>
-
-                    </li>
-
-    
-
-                    <li>
-
-                      <label class="phone-country__item">
-
-                        <input class="phone-country__radio visuallyhidden" type="radio" name="country" value="KZT" data-mask="+7 999 999 99 99">
-
-                        Казахстан
-
-                      </label>
-
-                    </li>
-
-    
-
-                  </ul>
-
-                </div>
-
-                <span class="inputbox__text">
-                  Телефон не зарегистрирован
-                </span>
-
-              </div>
-
-            </div>
-
-            <div class="modal__column flex flex--align-end">
-
-              <button class="btn">
-                Получить код
-              </button>
-
-            </div>
-
-          </div>
-
-        </form>
-
-        <form class="modal-login__form" action="/">
-
-          <p class="modal-login__title">
-            Восстановление пароля
-          <p>
-
-          <div class="inputbox is-error">
-
-            <label class="inputbox__label">
-              Ваша почта
-            </label>
-
-            <input class="input" name="email" placeholder="mail@mail.ru" required="required" type="email" value="mail@mail.ru">
-
-            <span class="inputbox__text">
-              email не зарегистрирован
-            </span>
-
-          </div>
-
-          <div class="modal__row">
-
-            <div class="modal__column">
-
-              <button class="btn btn--outline" type="button" data-modal="login">
-                Отмена
-              </button>
-
-            </div>
-
-            <div class="modal__column">
-
-              <button class="btn">
-                Восстановить пароль
-              </button>
-
-            </div>
-
-          </div>
-
-        </form>
-
-        <form class="modal-login__form" action="/">
-
-          <p class="modal-login__title">
-            Введите код из SMS
-          <p>
-
-          <p class="modal-login__text">
-            Повторно отправить код на телефон <b class="nowrap" role="button" data-modal="login">+7 (777) 777-77-77</b> <br>
-            через <u role="button">60 секунд</u>
-          </p>
-
-          <div class="modal__row">
-
-            <div class="modal__column">
-
-              <div class="inputbox is-error">
-
-                <label class="inputbox__label">
-                  Код
-                </label>
-
-                <input class="input" name="code" placeholder="Код из sms" required="required" inputmode="numeric" value="1234">
-
-                <span class="inputbox__text">
-                  Код неверный
-                </span>
-
-              </div>
-
-            </div>
-
-            <div class="modal__column flex flex--align-end">
-
-              <button class="btn">
-                Войти
-              </button>
-
-            </div>
-
-          </div>
-
-        </form>
 
       </div>
 
