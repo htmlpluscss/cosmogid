@@ -308,3 +308,45 @@
 	}
 
 }
+
+.page-shipping-geo {
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: baseline;
+	margin-bottom: var(--indent);
+	font-size: 24px;
+	line-height: 1.2;
+
+	@media $smWidth {
+
+		display: block;
+
+		.btn {
+
+			display: inline;
+			line-height: 24px;
+			height: 24px;
+
+		}
+
+	}
+
+	&__text {
+
+		@media $smWidth {
+
+			display: inline;
+
+		}
+
+		b {
+
+			font-weight: 600;
+
+		}
+
+	}
+
+}
