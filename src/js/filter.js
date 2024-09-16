@@ -30,7 +30,7 @@
 
 	let windowScroll = window.pageYOffset;
 
-	const mobileOpen = document.querySelector('.js-filter-mobile-open');
+	const mobileOpen = document.querySelectorAll('.js-filter-mobile-open');
 
 	// change
 
@@ -152,16 +152,20 @@
 
 // open filter
 
-	mobileOpen.addEventListener("click", () => {
+	[...mobileOpen].forEach( btn => {
 
-		windowScroll = window.pageYOffset;
+		btn.addEventListener("click", () => {
 
-		document.documentElement.classList.add('scroll-behavior-off');
+			windowScroll = window.pageYOffset;
 
-		window.requestAnimationFrame( () => {
+			document.documentElement.classList.add('scroll-behavior-off');
 
-			document.body.classList.add('is-filter-show');
-			window.scrollTo(0,0);
+			window.requestAnimationFrame( () => {
+
+				document.body.classList.add('is-filter-show');
+				window.scrollTo(0,0);
+
+			});
 
 		});
 

@@ -271,3 +271,35 @@
 	}
 
 }
+
+.filter-btn-fixed {
+
+	position: fixed;
+	width: 96px;
+	height: 28px;
+	line-height: 28px;
+	top: 0;
+	right: 14px;
+	z-index: 9;
+	bottom: 0;
+	margin: auto;
+	background-color: var(--pink);
+	color: #fff;
+	transform: rotate(-90deg);
+	transform-origin: right;
+
+	.menu-show &,
+	.modal-show &,
+	.is-filter-show & {
+
+		display: none;
+
+	}
+
+	@media $desktop {
+
+		display: none;
+
+	}
+
+}
