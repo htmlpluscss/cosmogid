@@ -15,6 +15,7 @@
 	--box-shadow:  0 5px 15px rgba(0, 0, 0, .15);
 
 	--transitionDefault: 0s;
+	--transitionDelayMenu: 1s;
 	--scrollMargin: 0; /* heightHeader */
 
 	--heightProductScroll: 0; /* product-scroll__inner */

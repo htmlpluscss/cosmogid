@@ -496,7 +496,7 @@
 			padding: 32px 16px;
 			pointer-events: none;
 			opacity: 0;
-			transition: var(--transitionDefault);
+			transition: opacity var(--transitionDefault);
 			background-color: #fff;
 			white-space: normal;
 
@@ -526,12 +526,27 @@
 
 			}
 
+			&::after {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 10px;
+				content: '';
+				pointer-events: none;
+				background-color: #fff;
+				z-index: -1;
+
+			}
+
 		}
 
 		&__item:hover &__sub {
 
 			pointer-events: auto;
 			opacity: 1;
+			transition: opacity var(--transitionDefault) var(--transitionDelayMenu);
 
 		}
 

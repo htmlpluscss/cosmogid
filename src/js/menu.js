@@ -200,6 +200,28 @@
 
 		});
 
+		// delay hover
+
+		const list = menu.querySelector('.menu-catalog__list');
+
+		list.addEventListener('mouseenter',()=>{
+
+			resizeTimeout && clearTimeout(resizeTimeout);
+
+			resizeTimeout = setTimeout( () => {
+
+				document.documentElement.style.setProperty('--transitionDelayMenu', '0s');
+
+			}, 1000);
+
+		});
+
+		list.addEventListener('mouseleave',()=>{
+
+			document.documentElement.style.setProperty('--transitionDelayMenu', '1s');
+
+		});
+
 	}
 
 })(document.querySelector('.menu-catalog'));
