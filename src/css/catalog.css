@@ -368,6 +368,21 @@
 		flex-wrap: wrap;
 		gap: 16px;
 
+		.btn span {
+
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			max-width: 256px;
+
+			@media $smWidth {
+
+				max-width: 30vw;
+
+			}
+
+		}
+
 		@media $smWidth {
 
 			margin-bottom: 16px;
