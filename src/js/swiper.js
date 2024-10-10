@@ -19,6 +19,7 @@
 			  items = swipe.querySelectorAll('.swiper-slide'),
 			  count = items.length,
 			  billboard = swipe.classList.contains('swiper-container--billboard'),
+			  billboardCatalog = swipe.classList.contains('swiper-container--billboard-catalog'),
 			  news = swipe.classList.contains('swiper-container--news'),
 			  preview = swipe.classList.contains('swiper-container--preview'),
 			  product = swipe.classList.contains('swiper-container--product'),
@@ -327,6 +328,60 @@
 						navigation: {
 							nextEl: swipeNext,
 							prevEl: swipePrev
+						}
+					});
+
+				}
+
+			}
+
+			swipe.addEventListener('swiperResize', toggleSwipe);
+
+		}
+
+		if (billboardCatalog) {
+
+			toggleSwipe = () => {
+
+				resetSwipe();
+
+				swipe.parentNode.classList.add('swiper-container-style');
+				swipeNav.classList.remove('hide');
+
+				if( window.innerWidth < 1250 ) {
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						pagination: {
+							el: swipeNav,
+							clickable: true,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
+						}
+					});
+
+				} else {
+
+					swipeBtns.classList.remove('hide');
+
+					mySwipe = new Swiper(swipe, {
+						loop: true,
+						autoplay: {
+							delay: 5000
+						},
+						effect: 'fade',
+						fadeEffect: {
+							crossFade: true
+						},
+						navigation: {
+							nextEl: swipeNext,
+							prevEl: swipePrev
+						},
+						pagination: {
+							el: swipeNav,
+							clickable: true,
+							bulletClass: 'button',
+							bulletActiveClass: 'is-active'
 						}
 					});
 
