@@ -1,0 +1,73 @@
+	<div class="brands-line-list">
+
+		<ul class="brands-line-list__cards">
+
+{% for card in [
+	{
+		name : 'Линия Vitamin A - Борьба с морщинами, уход и восстановление кожи',
+		img : 1
+	},
+	{
+		name : 'Линия Vitamin A - Борьба с морщинами, уход и восстановление кожи',
+		img : 2
+	},
+	{
+		name : 'Линия Vitamin A - Борьба с морщинами, уход и восстановление кожи',
+		img : 2
+	},
+	{
+		name : 'Линия Vitamin A - Борьба с морщинами, уход и восстановление кожи',
+		img : 2
+	},
+	{
+		name : 'Линия Vitamin A - Борьба с морщинами',
+		img : 3
+	},
+	{
+		name : 'Линия Vitamin A - Борьба с морщинами, уход и восстановление кожи',
+		img : 2
+	},
+	{
+		name : 'Линия Vitamin A - Борьба с морщинами, уход и восстановление кожи, уход и восстановление кожи',
+		img : 1
+	},
+	{
+		name : 'Линия Vitamin A - Борьба с морщинами, уход',
+		img : 2
+	}
+] %}
+
+			<li class="brands-line-list__card">
+
+				<a class="brands-line-list__link" href="/">
+
+					<span class="brands-line-list__name">
+						{{ card.name }}
+					</span>
+
+					<picture>
+
+						<source srcset="/img/brand/line/{{ card.img }}--200x134.webp 1x, /img/brand/line/{{ card.img }}--400x268.webp 2x" type="image/webp">
+						<source srcset="/img/brand/line/{{ card.img }}--200x134.jpg 1x, /img/brand/line/{{ card.img }}--400x268.jpg 2x">
+
+						<img src="/img/brand/line/{{ card.img }}--200x134.jpg" alt="{{ card.name }}" loading="lazy" width="200" height="134">
+
+					</picture>
+
+				</a>
+
+			</li>
+
+{% endfor %}
+
+		</ul>
+
+		<div class="brands-line-list__foot">
+
+			<button class="btn btn--outline" type="button">
+				Показать все линии
+			</button>
+
+		</div>
+
+	</div>

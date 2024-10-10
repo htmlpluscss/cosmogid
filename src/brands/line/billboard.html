@@ -1,0 +1,73 @@
+	<div class="billboard-catalog-swiper">
+
+		<div class="swiper-container swiper-container--billboard-catalog">
+
+			<ul class="billboard-catalog-swiper__list swiper-wrapper">
+
+{% for item in range(1,6) %}
+
+				<li class="billboard-catalog-swiper__item swiper-slide">
+
+					<div class="billboard-catalog-swiper__box">
+
+						<div class="billboard-catalog-swiper__bg">
+
+							<picture>
+
+								<source srcset="/img/brand/billboard/bg.webp" type="image/webp">
+								<source srcset="/img/brand/billboard/bg.png">
+
+								<img src="/img/brand/billboard/bg.png" alt="подберем индивидульаный уход" loading="lazy" width="912" height="484">
+
+							</picture>
+
+						</div>
+
+						<div class="billboard-catalog-swiper__content">
+
+							<p class="billboard-catalog-swiper__title">
+								подберем индивидульаный уход
+							</p>
+
+							<p class="billboard-catalog-swiper__desc">
+								консультация профессионального косметолога
+							</p>
+
+							<p class="billboard-catalog-swiper__text">
+								Многолетний опыт с разными брендами и индивидуальный подход, помогают достичь лучших результатов
+							</p>
+
+							<div class="billboard-catalog-swiper__btn">
+
+								<button class="btn btn--violet" type="button">
+									Подберите мне уход
+								</button>
+
+							</div>
+
+						</div>
+
+						<div class="billboard-catalog-swiper__img">
+
+							<picture>
+
+								<source srcset="/img/brand/billboard/maskara.webp 1x, /img/brand/billboard/maskara@2x.webp 2x" type="image/webp">
+								<source srcset="/img/brand/billboard/maskara.png 1x, /img/brand/billboard/maskara@2x.png 2x">
+
+								<img src="/img/brand/billboard/maskara.png" alt="подберем индивидульаный уход" loading="lazy" width="792" height="742">
+
+							</picture>
+
+						</div>
+
+					</div>
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+		</div>
+
+	</div>
