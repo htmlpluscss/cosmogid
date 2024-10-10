@@ -46,7 +46,7 @@
 
 		svg {
 
-			fill: var(--purple);
+			fill: var(--main);
 			transition: transform var(--transitionDefault);
 			transform: rotate(90deg);
 			flex-shrink: 0;
@@ -63,7 +63,7 @@
 
 	&--plus &__head {
 
-		color:  var(--purple);
+		color:  var(--main);
 
 	}
 

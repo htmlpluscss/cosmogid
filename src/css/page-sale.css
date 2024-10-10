@@ -207,7 +207,7 @@
 
 	&__input:not(:checked) + &__label {
 
-		--purple: #6b7280;
+		--main: #6b7280;
 
 	}
 

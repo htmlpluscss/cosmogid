@@ -273,7 +273,7 @@
 
 		&-tags {
 
-			color: var(--purple);
+			color: var(--main);
 			display: flex;
 			flex-wrap: wrap;
 			gap: 4px 8px;
@@ -557,7 +557,7 @@
 		border: 8px solid #f9f5ff;
 		border-radius: 50%;
 		margin: auto;
-		color: var(--purple);
+		color: var(--main);
 
 	}
 

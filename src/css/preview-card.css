@@ -193,13 +193,13 @@
 
 			&.is-green {
 
-				--color: var(--green);
+				--color: var(--main);
 
 			}
 
 			&.is-violet {
 
-				--color: var(--violet);
+				--color: var(--accent);
 
 			}
 
@@ -580,7 +580,7 @@
 
 			&:hover {
 
-				color: var(--purple);
+				color: var(--main);
 
 			}
 
@@ -591,8 +591,8 @@
 			@media $desktop {
 
 				color: #fff;
-				border-color: var(--purple);
-				background-color: var(--purple);
+				border-color: var(--main);
+				background-color: var(--main);
 
 			}
 

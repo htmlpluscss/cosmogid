@@ -399,7 +399,7 @@
 
 			padding: 0 8px !important;
 			font-weight: 500;
-			color: var(--purple);
+			color: var(--main);
 
 		}
 
@@ -518,8 +518,8 @@
 				font-size: 12px;
 				font-weight: 500;
 				justify-content: center;
-				border: 1px solid var(--purple);
-				color: var(--purple);
+				border: 1px solid var(--main);
+				color: var(--main);
 				min-width: 0;
 				background-color: #fff;
 

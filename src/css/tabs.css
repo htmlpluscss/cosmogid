@@ -91,8 +91,8 @@
 
 		&.is-active {
 
-			color: var(--purple);
-			border-bottom-color: var(--purple);
+			color: var(--main);
+			border-bottom-color: var(--main);
 
 		}
 

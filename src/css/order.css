@@ -192,7 +192,7 @@
 
 				color: #fff;
 				outline: none;
-				background-color: var(--purple);
+				background-color: var(--main);
 
 			}
 
@@ -213,7 +213,7 @@
 
 			&.is-current {
 
-				background-color: var(--purple);
+				background-color: var(--main);
 				color: #fff;
 
 			}
@@ -388,7 +388,7 @@
 
 		a {
 
-			color: var(--purple);
+			color: var(--main);
 			text-decoration: underline;
 
 			&:hover {
@@ -453,7 +453,7 @@
 				font-weight: 500;
 				font-size: 16px;
 				line-height: 1.2;
-				color: var(--purple);
+				color: var(--main);
 				min-height: 40px;
 				margin: 24px 0;
 
@@ -513,7 +513,7 @@
 
 		display: flex;
 		gap: 16px;
-		color: var(--purple);
+		color: var(--main);
 
 	}
 

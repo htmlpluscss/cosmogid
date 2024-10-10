@@ -80,7 +80,7 @@
 			.ico-box {
 
 				margin-right: 4px;
-				color: var(--purple);
+				color: var(--main);
 				transition: var(--transitionDefault);
 
 			}
@@ -137,7 +137,7 @@
 		svg {
 
 			margin-right: 8px;
-			fill: var(--purple);
+			fill: var(--main);
 
 		}
 

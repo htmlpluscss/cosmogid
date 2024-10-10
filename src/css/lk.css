@@ -176,7 +176,7 @@
 
 			&.is-current {
 
-				color: var(--purple);
+				color: var(--main);
 
 			}
 
@@ -232,7 +232,7 @@
 
 		a {
 
-			color: var(--purple);
+			color: var(--main);
 			border-bottom: 1px dashed;
 
 		}
@@ -543,7 +543,7 @@
 	padding: 6px 12px;
 	line-height: 1;
 	transition: var(--transitionDefault);
-	color: var(--purple);
+	color: var(--main);
 	content: attr(data-clipboard-success);
 	background-color: #fff;
 	border-radius: 3px;
@@ -671,7 +671,7 @@
 
 	&__toggle {
 
-		color: var(--purple);
+		color: var(--main);
 
 		@media $smWidth {
 

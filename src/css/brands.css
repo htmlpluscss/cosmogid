@@ -22,7 +22,7 @@
 		line-height: 1.2;
 		margin-bottom: 8px;
 		text-transform: uppercase;
-		color: var(--purple);
+		color: var(--main);
 
 	}
 
@@ -62,7 +62,7 @@
 
 			flex-shrink: 0;
 			align-self: center;
-			color: var(--pink);
+			color: var(--accent);
 
 		}
 
@@ -136,7 +136,7 @@
 
 		&:not([href^="#"]) {
 
-			color: var(--purple);
+			color: var(--main);
 
 		}
 
@@ -144,7 +144,7 @@
 
 			&:hover {
 
-				color: var(--purple);
+				color: var(--main);
 
 			}
 

@@ -86,7 +86,7 @@
 
 			svg:not([class]) {
 
-				color: var(--purple);
+				color: var(--main);
 				transition: none;
 
 			}
@@ -155,7 +155,7 @@
 			position: sticky;
 			top: 0;
 			z-index: 1;
-			color: var(--purple);
+			color: var(--main);
 			padding: 24px 0;
 			background-color: #fff;
 
@@ -189,7 +189,7 @@
 			svg {
 
 				transform: scaleX(-1);
-				fill: var(--purple);
+				fill: var(--main);
 
 			}
 
@@ -256,7 +256,7 @@
 			&-ico {
 
 				flex-shrink: 0;
-				color: var(--pink);
+				color: var(--accent);
 				align-self: center;
 
 			}
@@ -315,7 +315,7 @@
 				right: 0;
 				bottom: 0;
 				content: '';
-				background-color: var(--purple);
+				background-color: var(--main);
 				pointer-events: none;
 
 			}
@@ -359,7 +359,7 @@
 			&-ico {
 
 				flex-shrink: 0;
-				color: var(--pink);
+				color: var(--accent);
 				align-self: center;
 
 			}
@@ -377,13 +377,13 @@
 
 			&:not(.is-btn):hover {
 
-				color: var(--purple);
+				color: var(--main);
 
 			}
 
 			&--brand {
 
-				color: var(--purple);
+				color: var(--main);
 				text-transform: uppercase;
 
 			}
@@ -415,7 +415,7 @@
 
 					&:hover {
 
-						color: var(--purple);
+						color: var(--main);
 
 					}
 
@@ -431,7 +431,7 @@
 
 					&:hover {
 
-						fill: var(--purple);
+						fill: var(--main);
 
 					}
 
@@ -659,7 +659,7 @@
 		svg {
 
 			margin: 4px auto;
-			color: var(--purple);
+			color: var(--main);
 
 		}
 

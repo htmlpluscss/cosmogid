@@ -189,7 +189,7 @@
 			a {
 
 				text-decoration: underline;
-				color: var(--purple);
+				color: var(--main);
 
 				&:hover {
 
@@ -217,7 +217,7 @@
 
 					width: 50%;
 					font-size: 14px;
-					color: var(--purple);
+					color: var(--main);
 
 				}
 
@@ -404,7 +404,7 @@
 
 			&.is-current::after {
 
-				border-color: var(--purple);
+				border-color: var(--main);
 
 			}
 
@@ -590,7 +590,7 @@
 
 			&-item:hover &-name {
 
-				color: var(--purple);
+				color: var(--main);
 
 			}
 
@@ -599,8 +599,8 @@
 		&-input:checked + &-name {
 
 			color: #fff !important;
-			border-color: var(--purple);
-			background-color: var(--purple);
+			border-color: var(--main);
+			background-color: var(--main);
 
 		}
 
@@ -704,7 +704,7 @@
 
 			svg {
 
-				fill: var(--pink);
+				fill: var(--accent);
 
 			}
 
@@ -731,7 +731,7 @@
 
 				&:not(.is-open):hover {
 
-					border-color: var(--violet);
+					border-color: var(--accent);
 
 				}
 
@@ -929,7 +929,7 @@
 		a {
 
 			text-decoration: underline;
-			color: var(--purple);
+			color: var(--main);
 
 			&:hover {
 
@@ -1225,7 +1225,7 @@
 .availability {
 
 	font-weight: 600;
-	color: var(--green);
+	color: var(--main);
 
 	&.is-not {
 
@@ -1306,7 +1306,7 @@
 		font-size: 12px;
 		padding: 0 40px;
 		border-radius: 2px;
-		--purple: #fff;
+		--main: #fff;
 
 		@media $mdWidth {
 
@@ -1402,7 +1402,7 @@
 		font-weight: 600;
 		font-size: 18px;
 		line-height: 1.2;
-		color: var(--purple);
+		color: var(--main);
 
 	}
 
@@ -1459,7 +1459,7 @@
 .product-protokol-total {
 
 	padding: 40px 24px;
-	border: 1px solid var(--purple);
+	border: 1px solid var(--main);
 
 	@media $mdWidth {
 
@@ -1645,7 +1645,7 @@
 			left: 0;
 			content: '';
 			background-color: #f5f3ff;
-			border: 1px solid var(--purple);
+			border: 1px solid var(--main);
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%234C1D95' d='M5.75 10.5a.58.58 0 0 1-.43-.19L2.5 7.3a.58.58 0 1 1 .85-.8l2.4 2.56 4.9-5.37a.58.58 0 1 1 .87.78l-5.33 5.84a.58.58 0 0 1-.43.19Z'/%3E%3C/svg%3E");
 			background-position: center;
 
@@ -1729,7 +1729,7 @@
 		&-green {
 
 			font-weight: 600;
-			color: var(--green);
+			color: var(--main);
 			margin-top: 8px;
 
 		}

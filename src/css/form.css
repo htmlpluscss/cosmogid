@@ -69,7 +69,7 @@ legend {
 	font-size: 16px;
 	height: 40px;
 	line-height: 40px;
-	background-color: var(--purple);
+	background-color: var(--main);
 	font-weight: 500;
 	color: #fff;
 	display: grid;
@@ -139,8 +139,8 @@ legend {
 
 		background-color: rgba(255,255,255,.5);
 		font-weight: 500;
-		color: var(--purple);
-		box-shadow: inset 0 0 0 1px var(--purple);
+		color: var(--main);
+		box-shadow: inset 0 0 0 1px var(--main);
 
 		@media $desktop {
 
@@ -166,7 +166,7 @@ legend {
 	&--hash {
 
 		background-color: transparent !important;
-		color: var(--purple);
+		color: var(--main);
 		padding: 0 !important;
 		height: 32px;
 		line-height: 32px;
@@ -224,7 +224,7 @@ legend {
 	&--more {
 
 		background-color: transparent !important;
-		color: var(--purple);
+		color: var(--main);
 		border-bottom: 1px solid;
 		padding: 0 4px;
 
@@ -250,7 +250,7 @@ legend {
 		align-items: center;
 		justify-content: center;
 		background-color: transparent !important;
-		color: var(--purple);
+		color: var(--main);
 
 	}
 
@@ -258,7 +258,7 @@ legend {
 
 		background-color: #ede9fe;
 		border: 1px solid #4c1d95;
-		color: var(--purple);
+		color: var(--main);
 		font-size: 12px;
 
 	}
@@ -289,7 +289,7 @@ legend {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	color: var(--purple);
+	color: var(--main);
 	background-color: #fff;
 	box-shadow: var(--box-shadow);
 
@@ -351,8 +351,8 @@ legend {
 	&:focus {
 
 		outline: none;
-		color: var(--purple);
-		border-color: var(--purple);
+		color: var(--main);
+		border-color: var(--main);
 
 	}
 
@@ -476,7 +476,7 @@ legend {
 
 			&:hover {
 
-				color: var(--purple);
+				color: var(--main);
 
 			}
 
@@ -638,7 +638,7 @@ legend {
 
 	overflow: auto;
 	scrollbar-width: thin;
-	scrollbar-color: var(--purple) #d9d9d9;
+	scrollbar-color: var(--main) #d9d9d9;
 
 	&::-webkit-scrollbar {
 
@@ -651,7 +651,7 @@ legend {
 	&::-webkit-scrollbar-thumb {
 
 		border-radius: 0px;
-		background-color: var(--purple);
+		background-color: var(--main);
 
 	}
 

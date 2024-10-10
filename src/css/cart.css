@@ -127,7 +127,7 @@
 
 				font-size: 24px;
 				text-transform: uppercase;
-				color: var(--purple);
+				color: var(--main);
 
 			}
 
@@ -151,7 +151,7 @@
 			padding: 10px 6px;
 			height: 40px;
 			line-height: 20px;
-			color: var(--purple);
+			color: var(--main);
 			border-bottom: 1px solid;
 
 			@media $tablet {
@@ -180,7 +180,7 @@
 
 			padding: 0 20px;
 			background-color: #c4b5fd;
-			color: var(--purple);
+			color: var(--main);
 			border-bottom: 1px solid;
 
 			@media $tablet {
@@ -327,7 +327,7 @@
 
 		a {
 
-			color: var(--purple);
+			color: var(--main);
 			text-decoration: underline;
 
 			&:hover {
@@ -395,7 +395,7 @@
 		position: absolute;
 		bottom: 24px;
 		right: 24px;
-		color: var(--purple);
+		color: var(--main);
 
 		@media $mdWidth {
 
@@ -426,7 +426,7 @@
 		padding: 0;
 		background-color: transparent;
 		box-shadow: none;
-		color: var(--purple);
+		color: var(--main);
 
 	}
 
@@ -444,7 +444,7 @@
 
 		&:hover {
 
-			color: var(--purple);
+			color: var(--main);
 
 		}
 

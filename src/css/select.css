@@ -123,7 +123,7 @@
 
 			input:checked + span {
 
-				color: var(--purple);
+				color: var(--main);
 
 			}
 

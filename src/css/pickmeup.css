@@ -33,7 +33,7 @@
 			& + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled),
 			& + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) + .pmu-button:not(.pmu-disabled) {
 
-				box-shadow: inset 0 0 0 1px var(--purple);
+				box-shadow: inset 0 0 0 1px var(--main);
 
 			}
 
@@ -41,7 +41,7 @@
 
 		.pmu-selected {
 
-			background-color : var(--purple);
+			background-color : var(--main);
 			color      : #fff !important;
 
 		}
@@ -88,7 +88,7 @@
 		.pmu-days .pmu-button:not(.pmu-disabled):hover {
 
 			cursor: pointer;
-			box-shadow: inset 0 0 0 2px var(--purple) !important;
+			box-shadow: inset 0 0 0 2px var(--main) !important;
 
 		}
 

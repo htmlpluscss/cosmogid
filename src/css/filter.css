@@ -40,7 +40,7 @@
 		position: fixed;
 		top: var(--indent);
 		right: var(--indent);
-		color: var(--purple);
+		color: var(--main);
 		background-color: rgba(255,255,255,.5);
 
 		@media $desktop {
@@ -136,7 +136,7 @@
 
 			&-ico {
 
-				color: var(--pink);
+				color: var(--accent);
 				display: inline;
 				vertical-align: middle;
 
@@ -152,7 +152,7 @@
 
 		&__input:checked + .checkbox__label {
 
-			color: var(--purple);
+			color: var(--main);
 
 			b {
 
@@ -162,7 +162,7 @@
 
 			&::after {
 
-				background-color: var(--purple);
+				background-color: var(--main);
 
 			}
 
@@ -219,7 +219,7 @@
 
 		input:checked + span {
 
-			color: var(--purple);
+			color: var(--main);
 
 		}
 
@@ -236,7 +236,7 @@
 
 		input:checked + span {
 
-			color: var(--purple);
+			color: var(--main);
 
 		}
 
@@ -264,7 +264,7 @@
 
 		&:hover {
 
-			color: var(--purple);
+			color: var(--main);
 
 		}
 
@@ -283,7 +283,7 @@
 	z-index: 9;
 	bottom: 0;
 	margin: auto;
-	background-color: var(--pink);
+	background-color: var(--accent);
 	color: #fff;
 	transform: rotate(-90deg);
 	transform-origin: right;

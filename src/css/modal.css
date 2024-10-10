@@ -80,7 +80,7 @@
 		position: absolute;
 		top: 8px;
 		right: 8px;
-		color: var(--purple);
+		color: var(--main);
 		transition: none;
 
 		@media $desktop {
@@ -376,7 +376,7 @@
 			right: 8px;
 			bottom: 0;
 			margin: auto;
-			color: var(--purple);
+			color: var(--main);
 
 		}
 
@@ -385,7 +385,7 @@
 	&__auto {
 
 		padding: 4px 16px;
-		color: var(--purple);
+		color: var(--main);
 		margin-bottom: 40px;
 
 	}
@@ -683,7 +683,7 @@
 			z-index: -1;
 			content: '';
 			background-color: #f5f3ff;
-			border: 1px solid var(--purple);
+			border: 1px solid var(--main);
 
 		}
 
@@ -802,7 +802,7 @@
 
 	.btn {
 
-		color: var(--purple);
+		color: var(--main);
 
 	}
 
@@ -853,7 +853,7 @@
 
 		[role="button"] {
 
-			color: var(--purple);
+			color: var(--main);
 			cursor: pointer;
 			user-select: none;
 
@@ -875,7 +875,7 @@
 		.btn--link {
 
 			display: inline;
-			color: var(--purple);
+			color: var(--main);
 
 		}
 
@@ -883,7 +883,7 @@
 
 			display: inline;
 			padding: 4px 10px;
-			border: 2px solid var(--green);
+			border: 2px solid var(--main);
 			border-radius: 3px;
 
 		}
@@ -1255,7 +1255,7 @@
 
 		span {
 
-			color: var(--purple);
+			color: var(--main);
 
 		}
 
@@ -1263,7 +1263,7 @@
 
 	&__reset {
 
-		color: var(--purple);
+		color: var(--main);
 		height: 20px;
 
 	}
@@ -1480,7 +1480,7 @@
 
 			&.is-current {
 
-				color: var(--violet);
+				color: var(--accent);
 				background-color: #f3f4f6;
 			}
 

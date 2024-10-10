@@ -57,7 +57,7 @@
 			box-shadow: var(--box-shadow);
 			font-weight: 500;
 			font-size: 12px;
-			color: var(--purple);
+			color: var(--main);
 			margin-top: -13px;
 			line-height: 26px;
 			position: relative;
@@ -90,7 +90,7 @@
 
 		svg {
 
-			fill: var(--purple);
+			fill: var(--main);
 			margin-right: 8px;
 
 		}
