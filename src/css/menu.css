@@ -5,8 +5,9 @@
 	a {
 
 		display: block;
-		padding: 0 14px;
-		line-height: 37px;
+		font-size: 12px;
+		padding: 0 20px;
+		line-height: 32px;
 
 		@media $desktop {
 
@@ -27,7 +28,9 @@
 	@media $mdWidth {
 
 		&__desktop {
+
 			display: none;
+
 		}
 
 	}
@@ -35,7 +38,9 @@
 	@media $desktop {
 
 		&__mobile {
+
 			display: none;
+
 		}
 
 	}
@@ -269,7 +274,7 @@
 
 		position: sticky;
 		top: 60px;
-		background-color: #fff;
+/*		background-color: #fff;*/
 
 		&.is-transparent {
 

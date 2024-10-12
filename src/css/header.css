@@ -3,17 +3,11 @@
 	flex-shrink: 0;
 	position: sticky;
 	z-index: 8;
-	top: -37px;
+	top: 0;
 	left: 0;
 	right: 0;
-	background-color: #fff;
-	margin-bottom: 16px;
-
-	@media $mdWidth {
-
-		margin-bottom: 0;
-
-	}
+	/* background-color: #fff; */
+outline:1px solid red;
 
 	@media $smWidth {
 
@@ -34,80 +28,10 @@
 
 	&__top {
 
-		color: #f2f2f2;
-		background-color: var(--main);
-		font-weight: 500;
+		color: #fff;
+		background-color: var(--color);
 		position: relative;
 		z-index: 4;
-
-	}
-
-	&__city {
-
-		flex-shrink: 0;
-		margin-right: 20px;
-		position: relative;
-
-	}
-
-	&-city {
-
-		&__btn {
-
-			height: 37px;
-			line-height: 37px;
-			text-decoration: underline;
-			gap: 4px;
-			color: #fff;
-
-			@media $desktop {
-
-				&:hover {
-
-					text-decoration: none;
-
-				}
-
-			}
-
-		}
-
-	}
-
-	&__menu-top {
-
-		flex-grow: 1;
-		flex-shrink: 0;
-
-		@media $mdWidth {
-
-			display: none;
-
-		}
-
-	}
-
-	&__phone-mobile {
-
-		display: none;
-
-		@media $mdWidth {
-
-			display: block;
-			margin-left: auto;
-
-			a {
-
-				display: flex;
-				gap: 4px;
-				align-items: center;
-				height: 37px;
-				line-height: 37px;
-				color: #fff;
-
-			}
-
-		}
 
 	}
 
@@ -139,21 +63,16 @@
 
 		.btn {
 
-			height: 37px;
-			line-height: 37px;
+			height: 32px;
+			line-height: 32px;
+			font-size: 12px;
 			margin-left: 40px;
-
-			svg {
-
-				fill: #fff;
-
-			}
 
 			@media $desktop {
 
 				&:hover {
 
-					color: #fff;
+					text-decoration: underline;
 
 				}
 
@@ -163,31 +82,41 @@
 
 	}
 
-	&__counter-ico {
+	&__city {
 
+		flex-shrink: 0;
+		margin-right: 20px;
 		position: relative;
 
-		&[data-counter]::after {
+	}
 
-			position: absolute;
-			width: 16px;
-			height: 16px;
-			top: -1px;
-			right: -01px;
-			content: attr(data-counter);
-			text-align: center;
-			background-color: var(--main);
-			color: #fff;
-			line-height: 16px;
-			border-radius: 50%;
-			font-size: 10px;
-			font-weight: 600;
+	&-city {
+
+		&__btn {
+
+			height: 32px;
+			line-height: 32px;
+			font-size: 12px;
+			gap: 4px;
+
+			@media $desktop {
+
+				&:hover {
+
+					text-decoration: underline;
+
+				}
+
+			}
 
 		}
 
 	}
 
-	&__main {
+	&__menu-top {
+
+		flex-grow: 1;
+		flex-shrink: 0;
 
 		@media $mdWidth {
 
@@ -195,117 +124,21 @@
 
 		}
 
-		&-left,
-		&-right {
+	}
 
-			width: 224px;
-			flex-shrink: 0;
+	&__main {
+
+		padding: 16px 0;
+
+		@media $mdWidth {
+
+			display: none;
 
 		}
 
 		&-inner {
 
 			display: flex;
-			justify-content: space-between;
-			transition: var(--transitionDefault);
-			position: relative;
-			z-index: 1;
-
-			.is-fixed & {
-
-				pointer-events: none;
-				opacity: 0;
-				transform: translateY(-64px);
-
-			}
-
-		}
-
-		&-fixed {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 0 var(--indent);
-
-			.header__main-left,
-			.header__main-right {
-
-				display: flex;
-				gap: 16px;
-				transition: var(--transitionDefault);
-				opacity: 0;
-				pointer-events: none;
-
-				.is-fixed & {
-
-					opacity: 1;
-					pointer-events: auto;
-					transition: var(--transitionDefault) var(--transitionDefault);
-
-				}
-
-			}
-
-			.header__main-right {
-
-				justify-content: flex-end;
-
-			}
-
-		}
-
-	}
-
-	&__phones {
-
-		position: relative;
-
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 1.2;
-		margin: 16px 0;
-		padding: 2px 44px;
-		white-space: nowrap;
-
-		&-value {
-
-			display: flex;
-			gap: 16px;
-			color: var(--main)
-
-
-		}
-
-		.ico-box {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-
-		}
-
-		&-time {
-
-			font-weight: 400;
-			font-size: 14px;
-			color: #828282;
-
-		}
-
-	}
-
-	&__callback {
-
-		width: 224px;
-
-		.btn {
-
-			width: 100%;
 
 		}
 
@@ -313,118 +146,34 @@
 
 	&__logo {
 
+		align-self: center;
+
+	}
+
+	&__search {
+
 		flex-grow: 1;
 		display: flex;
+		align-self: center;
 		justify-content: center;
-		align-items: center;
-
-		img {
-
-			z-index: 2;
-
-			@media $desktop {
-
-				width: 193px;
-				height: 128px;
-				transition: var(--transitionDefault);
-				will-change: width, height;
-
-				.is-fixed & {
-
-					width: 90px;
-					height: 60px;
-
-				}
-
-			}
-
-		}
-
-	}
-
-	&__cart {
-
-		margin: 16px 0;
-
-	}
-
-	&-cart {
-
-		position: relative;
-		padding: 2px 0 2px 44px;
-		display: block;
-
-		@media $desktop {
-
-			&:hover {
-
-				--main: var(--color);
-
-			}
-
-		}
-
-		.ico-box {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-
-		}
-
-		&__title {
-
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 1.2;
-			color: var(--main);
-			display: block;
-
-		}
-
-		&__value {
-
-			font-size: 14px;
-			color: #828282;
-			line-height: 1.2;
-			display: block;
-
-		}
 
 	}
 
 	&-search {
 
 		position: relative;
+		width: 416px;
 
 		&__input {
 
 			height: 40px;
-			padding: 8px 40px 8px 16px;
+			padding: 8px 48px 8px 16px;
+			font-size: 20px;
+			border-color: #06070A;
 
 			&::placeholder {
 
-				font-weight: 400;
-				font-size: 14px;
-				color: var(--gray);
-
-			}
-
-			@media $mdWidth {
-
-				border: 1px solid var(--gray);
-
-				&::placeholder {
-
-					font-size: 12px;
-
-				}
-
-			}
-
-			@media $xsWidth {
-
-				padding-right: 16px;
+				font-style: italic;
 
 			}
 
@@ -435,92 +184,55 @@
 			position: absolute;
 			top: 8px;
 			right: 16px;
-			color: var(--gray);
-
-			@media $smWidth {
-
-				right: 8px;
-
-			}
-
-			@media $xsWidth {
-
-				display: none;
-
-			}
-
-		}
-
-		@media $mdWidth {
-
-			width: calc( ( 768px - var(--indent) * 2 - 16px ) / 2 );
-
-
-		}
-
-		@media $smWidth {
-
-			width: 50%;
 
 		}
 
 	}
 
-	&__mobile {
+	&__phone {
 
-		display: none;
+		padding-left: 40px;
 
-		&-left,
-		&-right {
+	}
 
-			display: flex;
-			gap: 8px;
+	&-phone {
 
-		}
+		position: relative;
+		display: block;
+		white-space: nowrap;
+		color: var(--main);
 
-		&-foot {
+		&__ico {
 
-			display: flex;
-			gap: 16px;
-			margin-top: 16px;
-			width: 100%;
-			justify-content: space-between;
-
-			@media $smWidth {
-
-				gap: 8px;
-
-			}
-
-			.btn {
-
-				@media $mdWidth {
-
-					width: calc( ( 768px - var(--indent) * 2 - 16px ) / 2 );
-
-				}
-
-				@media $smWidth {
-
-					font-size: 12px;
-					padding: 0;
-					width: 50%;
-
-				}
-
-			}
+			padding: 4px;
+			position: absolute;
+			top: 0;
+			right: 100%;
+			margin-right: 4px;
 
 		}
 
-		@media $mdWidth {
+		&__number {
 
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: space-between;
-			padding: 8px var(--indent);
+			display: block;
 
 		}
+
+		&__time {
+
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 1;
+			display: block;
+			color: var(--gray);
+
+		}
+
+	}
+
+	&__callback {
+
+		margin-left: 24px;
 
 	}
 
@@ -530,119 +242,6 @@
 
 			opacity: 0;
 			pointer-events: none;
-
-		}
-
-		&.is-search.is-fixed &__mobile {
-
-			display: block;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			padding: 24px;
-			background-color: #fff;
-			box-shadow: var(--box-shadow);
-			z-index: 2;
-
-			& > * {
-
-				display: none;
-
-			}
-
-			.header__search,
-			.header__mobile-foot {
-
-				display: block !important;
-
-				.btn {
-
-					display: none;
-
-				}
-
-				.header-search__input {
-
-					width: 100% !important;
-
-				}
-
-			}
-
-		}
-
-	}
-
-	&__search {
-
-		position: relative;
-		z-index: 3;
-
-		@media $desktop {
-
-			display: flex;
-			justify-content: flex-end;
-
-		}
-
-	}
-
-}
-
-.city-auto {
-
-	position: fixed;
-	top: 30px;
-	left: var(--indent);
-	z-index: 9;
-	padding: 40px;
-	width: 318px;
-	background-color: #fff;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 8px 8px 16px rgba(0, 0, 0, 0.08);
-
-	@media $mdWidth {
-
-		width: auto;
-		padding: 24px;
-
-	}
-
-	@media $desktop {
-
-		left: 50%;
-		margin-left: -620px;
-
-	}
-
-	&__title {
-
-		font-size: 16px;
-		line-height: 12px;
-		margin-bottom: 40px;
-		color: var(--gray);
-
-		b {
-
-			font-weight: 500;
-
-		}
-
-	}
-
-	&__foot {
-
-		display: flex;
-
-		.btn {
-
-			flex-grow: 1;
-
-			& + .btn {
-
-				margin-left: 24px;
-
-			}
 
 		}
 
@@ -662,12 +261,6 @@
 
 		&:focus,
 		&.is-focus {
-
-			@media $desktop {
-
-				width: 400px;
-
-			}
 
 			& ~ .header-search__result {
 

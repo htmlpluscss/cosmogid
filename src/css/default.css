@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
+color:red !important;
 }
 
 html {
@@ -37,7 +37,8 @@ body {
 	overflow-y: scroll;
 	position: relative;
 	background-color: var(--bg);
-
+background-position: top;
+background-image: url(/css/1.png);
 }
 
 a {
@@ -112,6 +113,14 @@ li {
 	font-size: 20px;
 	line-height: 1.2;
 	color: var(--gray);
+
+}
+
+.h5 {
+
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.2;
 
 }
 

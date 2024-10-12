@@ -4,30 +4,4 @@
 
 {% include "template/header/main.html" %}
 
-{% include "template/header/mobile.html" %}
-
 	</header>
-
-{% if dev %}
-
-	<form action="/" class="city-auto">
-
-		<p class="city-auto__title">
-			Ваш город <b>Екатеринбург?</b>
-		</p>
-
-		<div class="city-auto__foot">
-
-			<button class="btn btn--outline" type="button" data-modal="city">
-				Нет
-			</button>
-
-			<button class="btn">
-				Да
-			</button>
-
-		</div>
-
-	</form>
-
-{% endif %}

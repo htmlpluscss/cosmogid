@@ -4,79 +4,36 @@
 
 				<div class="header__main-inner">
 
-					<div class="header__main-left">
+					<div class="header__logo">
+
+						<a href="/" title="Главная страница {{ site }}">
+
+							<img src="/img/logo.svg" width="238" height="40" loading="lazy" alt="Компания {{ site }}">
+
+						</a>
+
+					</div>
+
+					<div class="header__search">
+
+{% include "template/header/search.html" %}
+
+					</div>
+
+					<div class="header__phone">
 
 {% include "template/header/phone.html" %}
 
 					</div>
 
-					<div class="header__main-right">
+					<div class="header__callback">
 
-						<div class="header__cart">
-
-{% include "template/header/cart.html" %}
-
-						</div>
-
-						<div class="header__search">
-
-{% include "template/header/search.html" %}
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="header__main-fixed">
-
-					<div class="header__main-left">
-
-						<button class="ico-box button" type="button" data-modal="callback" aria-label="Обратный звонок">
-
+						<button class="btn" type="button" data-modal="callback">
+							Обратный звонок
 							<svg width="24" height="24" viewBox="0 0 24 24">
-								<use xlink:href="#svg-phone"/>
+								<use xlink:href="#svg-arrow-narrow-right"/>
 							</svg>
-
 						</button>
-
-						<a class="ico-box" href="https://wa.me/79222977730" title="whatsapp {{ site }}" target="_blank" rel="noopener nofollow">
-
-							<svg width="24" height="24" viewBox="0 0 24 24">
-								<use xlink:href="#svg-whatsapp"/>
-							</svg>
-
-						</a>
-
-					</div>
-
-					<div class="header__logo">
-
-						<a href="/" title="Главная страница {{ site }}">
-
-							<img src="/img/logo-fixed.svg" width="90" height="60" loading="lazy" alt="Компания {{ site }}">
-
-						</a>
-
-					</div>
-
-					<div class="header__main-right">
-
-						<button class="header-search-show ico-box button" type="button" aria-label="открыть поиск">
-
-							<svg width="24" height="24" viewBox="0 0 24 24">
-								<use xlink:href="#svg-search"/>
-							</svg>
-
-						</button>
-
-						<a class="ico-box header__counter-ico" href="/cart/" title="{% if cart %}у вас 25 товаров{% else %}пока пуста{% endif %}"{% if cart %} data-counter="2"{% endif %}>
-
-							<svg width="24" height="24" viewBox="0 0 24 24">
-								<use xlink:href="#svg-cart"/>
-							</svg>
-
-						</a>
 
 					</div>
 
