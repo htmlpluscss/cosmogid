@@ -26,13 +26,13 @@
 
 		background-color: #fff;
 		max-width: 100%;
-		width: 600px;
+		width: 640px;
 		padding: 32px;
 		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 8px 8px 16px rgba(0, 0, 0, 0.08);
 
 		&--sms {
 
-			width: 400px;
+			width: 480px;
 
 		}
 
@@ -50,7 +50,6 @@
 		font-size: 24px;
 		line-height: 1.2;
 		text-transform: uppercase;
-		color: var(--gray);
 		margin-bottom: 16px;
 
 		@media $smWidth {
@@ -63,9 +62,7 @@
 
 	&__text {
 
-		font-size: 14px;
-		line-height: 21px;
-		color: var(--gray);
+		color: var(--text);
 
 		& + & {
 
@@ -131,7 +128,7 @@
 		.inputbox,
 		.modal__column {
 
-			width: calc( 50% - 20px );
+			width: calc( 50% - 10px );
 			margin: 0;
 
 			@media $smWidth {
@@ -253,8 +250,6 @@
 
 		display: block;
 		font-weight: 400;
-		font-size: 12px;
-		line-height: 1.5;
 		color: var(--gray);
 
 	}
@@ -335,7 +330,7 @@
 		font-weight: 600;
 		font-size: 18px;
 		line-height: 1.2;
-		color: var(--gray);
+		color: var(--main);
 		margin-bottom: 24px;
 
 		&:first-child {
@@ -354,16 +349,6 @@
 
 			padding: 8px 48px 8px 16px;
 			height: 40px;
-			line-height: 24px;
-			border-bottom-color: #9ca3af;
-
-			&::placeholder {
-
-				font-size: 14px;
-				font-weight: 400;
-				color: #9ca3af;
-
-			}
 
 		}
 
@@ -417,19 +402,16 @@
 	&__label {
 
 		display: block;
-		font-size: 14px;
 		line-height: 1.2;
-		color: var(--gray);
+		font-weight: 500;
 
 	}
 
 	&__country {
 
 		display: block;
-		font-weight: 600;
-		font-size: 12px;
 		line-height: 1.2;
-		color:  #9ca3af;
+		color: var(--gray);
 
 	}
 
@@ -651,7 +633,6 @@
 
 			display: block;
 			margin-top: 4px;
-			font-size: 12px;
 			line-height: 1.2;
 
 		}
@@ -812,7 +793,7 @@
 
 	padding: 24px;
 	color: var(--gray);
-	width: 400px;
+	width: 480px;
 
 	&__title {
 

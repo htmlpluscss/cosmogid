@@ -87,7 +87,8 @@ legend {
 
 	&:disabled {
 
-		opacity: .5;
+		color: #efefef;
+		background-color: var(--border);
 
 	}
 
@@ -134,12 +135,6 @@ legend {
 
 	}
 
-	&--gray {
-
-		outline:1px solid red;
-
-	}
-
 	&--outline {
 
 		background-color: #fff;
@@ -165,6 +160,7 @@ legend {
 		height: 32px;
 		line-height: 32px;
 		border-bottom: 1px dashed;
+		border-radius: 0;
 
 		@media $desktop {
 
@@ -202,6 +198,7 @@ legend {
 		color: currentColor;
 		padding: 0 !important;
 		text-decoration: underline;
+		border-radius: 0;
 
 		@media $desktop {
 
@@ -221,6 +218,7 @@ legend {
 		color: var(--main);
 		border-bottom: 1px solid;
 		padding: 0 4px;
+		border-radius: 0;
 
 		@media $desktop {
 
@@ -251,9 +249,8 @@ legend {
 	&--filter {
 
 		background-color: #ede9fe;
-		border: 1px solid #4c1d95;
+		border: 1px solid var(--accent);
 		color: var(--main);
-		font-size: 12px;
 
 	}
 
@@ -269,6 +266,7 @@ legend {
 		background-color: #fff;
 		border-bottom: 1px solid;
 		color: var(--gray);
+		border-radius: 0;
 		width: 100%;
 
 	}
@@ -277,15 +275,12 @@ legend {
 
 .ico-box {
 
-	width: 40px;
-	height: 40px;
+	width: 32px;
+	height: 32px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 50%;
 	color: var(--main);
-	background-color: #fff;
-	box-shadow: var(--box-shadow);
 
 }
 
@@ -344,8 +339,7 @@ legend {
 	&:focus {
 
 		outline: none;
-		color: var(--main);
-		border-color: var(--main);
+		border-color: var(--color);
 
 	}
 
@@ -427,13 +421,11 @@ legend {
 		display: block;
 		padding: 8px 0 8px 24px;
 		cursor: pointer;
-		font-size: 14px;
-		line-height: 1.5;
-		color: var(--gray);
+		color: var(--text);
 
 		b {
 
-			color: #9ca3af;
+			color: var(--main);
 
 		}
 
@@ -621,7 +613,7 @@ legend {
 	input[value="4"]:checked ~ [for="modal-review-rating-4"],
 	input[value="5"]:checked ~ [for] {
 
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%234C1D95' d='M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .8-.68l5.7-.83 2.52-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .8.68 1 1 0 0 1-.24 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18Z'/%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%239fb270' d='M17.56 21a1 1 0 0 1-.46-.11L12 18.22l-5.1 2.67a1 1 0 0 1-1.45-1.06l1-5.63-4.12-4a1 1 0 0 1-.25-1 1 1 0 0 1 .8-.68l5.7-.83 2.52-5.13a1 1 0 0 1 1.8 0l2.54 5.12 5.7.83a1 1 0 0 1 .8.68 1 1 0 0 1-.24 1l-4.12 4 1 5.63a1 1 0 0 1-.4 1 1 1 0 0 1-.62.18Z'/%3E%3C/svg%3E");
 
 	}
 
@@ -662,20 +654,6 @@ legend {
 		line-height: 24px;
 		border-bottom-color: var(--text);
 
-		@media $desktop {
-
-			font-size: 14px;
-
-		}
-
-		&::placeholder {
-
-			font-size: 14px;
-			font-weight: 400;
-			color: var(--text);
-
-		}
-
 	}
 
 	textarea.input {
@@ -697,8 +675,8 @@ legend {
 		display: block;
 		padding: 8px 0 8px 16px;
 		line-height: 1.2;
-		color: var(--gray);
-		font-weight: 600;
+		color: var(--accent);
+		font-weight: 700;
 
 	}
 

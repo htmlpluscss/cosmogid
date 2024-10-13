@@ -182,7 +182,7 @@
 
 			&__label {
 
-				font-size: 12px;
+				font-size: 14px;
 
 			}
 
@@ -388,7 +388,7 @@
 			line-height: 1.2;
 			text-transform: uppercase;
 			margin-bottom: 8px;
-			color: var(--gray);
+			color: var(--main);
 
 			@media $smWidth {
 
@@ -402,8 +402,8 @@
 		&-text {
 
 			margin-bottom: 8px;
-			color: var(--gray);
-			font-size: 12px;
+			color: var(--text);
+			font-size: 14px;
 
 		}
 

@@ -1,8 +1,6 @@
 
 ( header => {
 
-/*
-
 	if (header) {
 
 		const menu = document.querySelector('.menu-catalog');
@@ -11,8 +9,7 @@
 
 		if ( window.innerWidth > 1249 ) {
 
-			header.classList.toggle('is-fixed', window.pageYOffset > 36); // menu top
-			menu.classList.toggle('is-transparent', window.pageYOffset > 86); // 60 + 53 - 37
+			header.classList.toggle('is-fixed', window.pageYOffset > 0);
 
 		}
 
@@ -30,8 +27,7 @@
 
 						resizeTimeout = null;
 
-						header.classList.toggle('is-fixed', window.pageYOffset > 36);
-						menu.classList.toggle('is-transparent', window.pageYOffset > 86);
+						header.classList.toggle('is-fixed', window.pageYOffset > 0);
 
 					}, 100);
 
@@ -40,6 +36,8 @@
 			});
 
 		});
+
+/*
 
 		// search
 
@@ -65,7 +63,7 @@
 			}
 
 		});
-
-	}
 */
+	}
+
 })(document.querySelector('.header'));

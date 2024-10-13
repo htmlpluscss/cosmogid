@@ -47,7 +47,7 @@
 
 	&__item {
 
-		color: var(--gray);
+		color: var(--main);
 		margin-bottom: 1em;
 		break-inside: avoid;
 
@@ -55,6 +55,16 @@
 
 			display: flex;
 			gap: 8px;
+
+			@media $desktop {
+
+				&:hover {
+
+					color: var(--accent);
+
+				}
+
+			}
 
 		}
 

@@ -56,7 +56,7 @@
 			background-color: #fff;
 			box-shadow: var(--box-shadow);
 			font-weight: 500;
-			font-size: 12px;
+			font-size: 14px;
 			color: var(--main);
 			margin-top: -13px;
 			line-height: 26px;
@@ -84,7 +84,7 @@
 
 		display: flex;
 		align-items: center;
-		font-size: 12px;
+		font-size: 14px;
 		color: var(--gray);
 		margin-bottom: 16px;
 

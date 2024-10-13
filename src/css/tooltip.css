@@ -11,7 +11,7 @@
 	&__inner {
 
 		font-weight: 500;
-		font-size: 12px;
+		font-size: 14px;
 		padding: 8px;
 		line-height: 18px;
 		text-align: center;
@@ -163,7 +163,7 @@
 		width: 280px;
 		padding: 8px;
 		left: 50%;
-		font-size: 12px;
+		font-size: 14px;
 		color: #111;
 		text-align: center;
 		transform: translateX(-50%);
@@ -185,7 +185,7 @@
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 		opacity: 0;
 		pointer-events: none;
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 1.2;
 
 	}

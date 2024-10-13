@@ -222,7 +222,7 @@
 	&__edit-link {
 
 		margin: 20px 0;
-		font-size: 12px;
+		font-size: 14px;
 
 		a {
 
@@ -590,7 +590,7 @@
 			dt {
 
 				margin-bottom: 8px;
-				font-size: 12px;
+				font-size: 14px;
 				color: var(--text);
 
 			}
@@ -637,7 +637,7 @@
 
 		&__text {
 
-			font-size: 12px;
+			font-size: 14px;
 			margin-top: 20px;
 
 			b {

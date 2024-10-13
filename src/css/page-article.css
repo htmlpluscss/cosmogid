@@ -111,6 +111,10 @@
 			left: 0;
 			z-index: 1;
 			transition: var(--transitionDefault);
+			box-shadow: var(--box-shadow);
+			background-color: #fff;
+			padding: 8px;
+			border-radius: var(--radius);
 
 			li {
 
@@ -234,7 +238,7 @@
 
 			a {
 
-				color: #7855af;
+				color: var(--main);
 				text-decoration: underline;
 
 				&:hover {

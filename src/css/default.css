@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-color:red !important;
+
 }
 
 html {
@@ -37,8 +37,7 @@ body {
 	overflow-y: scroll;
 	position: relative;
 	background-color: var(--bg);
-background-position: top;
-background-image: url(/css/1.png);
+
 }
 
 a {
@@ -87,7 +86,7 @@ li {
 	font-size: 32px;
 	line-height: 1.2;
 	text-transform: uppercase;
-	color: var(--gray);
+	color: var(--main);
 
 	@media $smWidth {
 
@@ -103,7 +102,6 @@ li {
 	font-size: 28px;
 	line-height: 1.2;
 	text-transform: uppercase;
-	color: #000;
 
 }
 
@@ -112,7 +110,7 @@ li {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 1.2;
-	color: var(--gray);
+	color: var(--main);
 
 }
 
@@ -140,7 +138,7 @@ hr {
 	font-size: 36px;
 	line-height: 1.2;
 	text-transform: uppercase;
-	color: var(--gray);
+	color: var(--main);
 	word-break: break-word;
 
 	@media $mdWidth {
@@ -159,11 +157,6 @@ table {
 }
 
 
-.color-purple {
-
-	color: var(--main);
-
-}
 .color-red {
 
 	color: var(--red);

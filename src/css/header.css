@@ -3,11 +3,16 @@
 	flex-shrink: 0;
 	position: sticky;
 	z-index: 8;
-	top: 0;
+	top: -32px;
 	left: 0;
 	right: 0;
-	/* background-color: #fff; */
-outline:1px solid red;
+	background-color: #fff;
+
+	&.is-fixed {
+
+		box-shadow: 0 4px 4px rgba(23, 25, 0, 0.05)
+
+	}
 
 	@media $smWidth {
 
@@ -278,6 +283,7 @@ outline:1px solid red;
 		width: 100%;
 		top: 100%;
 		right: 0;
+		z-index: 1;
 
 		@media $smWidth {
 
