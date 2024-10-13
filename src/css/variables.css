@@ -12,9 +12,9 @@
 	--bg: #fff;
 
 	--box-shadow:  0 10px 20px 4px rgba(23, 25, 0, 0.05);
+	--radius: 8px;
 
 	--transitionDefault: 0s;
-	--transitionDelayMenu: 1s;
 	--scrollMargin: 0; /* heightHeader */
 
 	--heightProductScroll: 0; /* product-scroll__inner */

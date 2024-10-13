@@ -1,28 +1,17 @@
-					<div class="menu-catalog__sub">
+{% if item.mod === 'brand' %}
 
-						<div class="menu-catalog__grid center{% if item.mod %} menu-catalog__grid--{{ item.mod }}{% endif %}">
-
-		{% if item.mod === 'brand' %}
+	<div class="menu-catalog__sub is-brands">
 
 {% include "template/menu/brand.html" %}
 
-		{% else %}
+	</div>
+
+{% else %}
+
+	<div class="menu-catalog__sub">
 
 {% include "template/menu/grid.html" %}
 
-			{% if item.name === 'Другие' %}
+	</div>
 
-						</div>
-				{# это для разрыва grid #}
-						<div class="center">
-
-				{% include "template/menu/brand-logo.html" %}
-
-
-			{% endif %}
-
-		{% endif %}
-
-						</div>
-
-					</div>
+{% endif %}

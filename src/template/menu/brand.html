@@ -1,125 +1,29 @@
-						<div class="menu-catalog__column">
+<ul class="menu-catalog__column">
 
-							<ul class="menu-catalog__level-2">
+	<li class="menu-catalog__item">
 
-								<li>
+		<a itemprop="url" class="menu-catalog__link" href="/brands/">
+			<b itemprop="name">
+				Все бренды (200+)
+			</b>
+		</a>
 
-									<a itemprop="url" class="menu-catalog__link is-level-2" href="/brands/">
-										<span itemprop="name">
-											Все бренды (200+)
-										</span>
-									</a>
+	</li>
 
-								</li>
+{% for level2 in ["Armand Basi","Armani","Angel Schlesser","Artdeco","Bioderma","Bobbi Brown","Bourjois","Chanel","Charlotte Tilbury","Christina","Clinique","Creed","Dior","Donna Karan","Dolce\& Gabbana","Estee Lauder","Fenty Beauty","Garnier","Guerlain","Inglot","Kerastase","Kilian","L'Oreal Paris","L'Oreal Professionnel","La Roche-Posay","Lancome","Lanvin","Luxvisage","MAKEUP","Max Factor","Maybelline New York","Montale","NYX Professional Makeup","Relouis","SHAKYLAB","Tarte Cosmetics","TheBalm","Versace","Vichy","Yves Saint Laurent"] %}
 
-								<li>
+	<li class="menu-catalog__item">
 
-									<a itemprop="url" class="menu-catalog__link is-level-2 is-open" href="/">
-										<span itemprop="name">
-											Популярные бренды
-										</span>
-									</a>
+		<a itemprop="url" class="menu-catalog__link" href="/">
 
-									<ul class="menu-catalog__level-3">
+			<span itemprop="name">
+				{{ level2 }}
+			</span>
 
-						{% for level3 in ["Armand Basi","Armani","Angel Schlesser","Artdeco","Bioderma","Bobbi Brown","Bourjois","Chanel","Charlotte Tilbury","Christina","Clinique","Creed"] %}
+		</a>
 
-										<li>
+	</li>
 
-											<a itemprop="url" class="menu-catalog__link is-level-3" href="/">
-												<span itemprop="name">
-													{{ level3 }}
-												</span>
-											</a>
+{% endfor %}
 
-										</li>
-
-						{% endfor %}
-
-									</ul>
-
-								</li>
-
-							</ul>
-
-						</div>
-
-						<div class="menu-catalog__column">
-
-							<ul class="menu-catalog__level-3">
-
-				{% for level3 in ["Dior","Donna Karan","Dolce\& Gabbana","Estee Lauder","Fenty Beauty","Garnier","Guerlain","Inglot","Kerastase","Kilian","L'Oreal Paris","L'Oreal Professionnel","La Roche-Posay","Lancome"] %}
-
-										<li>
-
-											<a itemprop="url" class="menu-catalog__link is-level-3" href="/">
-												<span itemprop="name">
-													{{ level3 }}
-												</span>
-											</a>
-
-										</li>
-
-				{% endfor %}
-
-							</ul>
-
-						</div>
-
-						<div class="menu-catalog__column">
-
-							<ul class="menu-catalog__level-3">
-
-						{% for level3 in ["Lanvin","Luxvisage","MAKEUP","Max Factor","Maybelline New York","Montale","NYX Professional Makeup","Relouis","SHAKYLAB","Tarte Cosmetics","TheBalm","Versace","Vichy","Yves Saint Laurent"] %}
-
-										<li>
-
-											<a itemprop="url" class="menu-catalog__link is-level-3" href="/">
-												<span itemprop="name">
-													{{ level3 }}
-												</span>
-											</a>
-
-										</li>
-
-						{% endfor %}
-
-							</ul>
-
-						</div>
-
-						<div class="menu-catalog__column">
-
-							<ul class="menu-catalog__level-2">
-
-								<li>
-
-									<a itemprop="url" class="menu-catalog__link is-level-2 is-open" href="/">
-										<span itemprop="name">
-											Популярные страны
-										</span>
-									</a>
-
-									<ul class="menu-catalog__level-3">
-
-						{% for level3 in ["Израиль","Испания","Италия","Корея","Польша","США","Украина","Франция","Япония"] %}
-
-										<li>
-
-											<a itemprop="url" class="menu-catalog__link is-level-3" href="/">
-												<span itemprop="name">
-													{{ level3 }}
-												</span>
-											</a>
-
-										</li>
-
-						{% endfor %}
-
-									</ul>
-
-								</li>
-
-							</ul>
-
-						</div>
+</ul>

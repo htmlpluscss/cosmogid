@@ -23,37 +23,39 @@
 
 }
 
+.menu-main {
+
+	display: flex;
+
+	a {
+
+		display: block;
+		font-weight: 500;
+		color: var(--text);
+		line-height: 20px;
+		padding: 10px 20px;
+
+		@media $desktop {
+
+			&:hover {
+
+				text-decoration: underline;
+
+			}
+
+		}
+
+	}
+
+}
+
 .menu-catalog {
 
-	@media $mdWidth {
-
-		&__desktop {
-
-			display: none;
-
-		}
-
-	}
-
-	@media $desktop {
-
-		&__mobile {
-
-			display: none;
-
-		}
-
-	}
+	position: relative;
 
 	@media $mdWidth {
 
 		display: none;
-
-		&__wrap {
-
-			width: 100%;
-
-		}
 
 		&__list {
 
@@ -149,69 +151,6 @@
 
 		}
 
-		&__brand-logo {
-
-			display: none;
-
-		}
-
-		&__head {
-
-			position: sticky;
-			top: 0;
-			z-index: 1;
-			color: var(--main);
-			padding: 24px 0;
-			background-color: #fff;
-
-		}
-
-		&__nav {
-
-			display: flex;
-			align-items: center;
-			gap: 8px;
-
-		}
-
-		&__back {
-
-			display: flex;
-			justify-content: flex-end;
-			flex-direction: row-reverse;
-			align-items: center;
-			top: 24px;
-			position: relative;
-			padding: 14px 8px;
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 24px;
-			gap: 16px;
-			cursor: pointer;
-			color: var(--gray);
-			border-bottom: 1px solid #e5e7eb;
-
-			svg {
-
-				transform: scaleX(-1);
-				fill: var(--main);
-
-			}
-
-		}
-
-		&__logo {
-
-			flex-grow: 1;
-
-		}
-
-		&__body:not(.hide) + &__list {
-
-			display: none;
-
-		}
-
 		&__level-2 {
 
 			li {
@@ -235,24 +174,6 @@
 
 		}
 
-		.menu-catalog__grid--brand &__level-3 {
-
-			display: block;
-
-		}
-
-		.menu-catalog__grid--brand .menu-catalog__level-2 li:last-child {
-
-			border-bottom: 0;
-
-		}
-
-		&__grid {
-
-			padding: 0;
-
-		}
-
 		&__name {
 
 			display: flex;
@@ -271,10 +192,10 @@
 	}
 
 	@media $desktop {
-
+/*
 		position: sticky;
 		top: 60px;
-/*		background-color: #fff;*/
+		background-color: #fff;
 
 		&.is-transparent {
 
@@ -295,97 +216,67 @@
 			}
 
 		}
+*/
 
-		&:hover {
+		&:hover,
+		.menu-catalog-open & {
 
 			z-index: 8;
 
 		}
 
-		&__wrap {
+		&__inner {
 
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			padding: 8px 0;
 			position: relative;
-
-			.center {
-
-				position: static;
-
-			}
-
-			&::after {
-
-				position: absolute;
-				height: 1px;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: '';
-				background-color: var(--main);
-				pointer-events: none;
-
-			}
-
-		}
-
-		&__head {
-
-			display: none;
 
 		}
 
 		&__list {
 
-			display: flex;
-			justify-content: space-between;
-			margin: 0 -8px;
-			white-space: nowrap;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			min-width: 272px;
+			padding: 16px 0;
+			border-radius: var(--radius);
+			box-shadow: var(--box-shadow);
+			background-color: #FCFCFD;
 
 		}
 
 		&__item {
 
-			position: static;
-			flex-grow: 1;
+			position: relative;
 
-			&--only-mobile {
+			&:hover {
 
-				display: none;
-
-			}
-
-		}
-
-		&__name {
-
-			display: flex;
-			gap: 8px;
-			align-items: center;
-
-			&-ico {
-
-				flex-shrink: 0;
-				color: var(--accent);
-				align-self: center;
-
-			}
-
-		}
-
-		&__link {
-
-			display: flex;
-			gap: 10px;
-			color: var(--gray);
-			padding: 16px 8px;
-			text-align: center;
-			font-weight: 700;
-
-			&:not(.is-btn):hover {
-
+				background-color: #F6F8F1;
 				color: var(--main);
 
 			}
 
+
+/*			&--only-mobile {
+
+				display: none;
+
+			}
+*/
+		}
+
+		&__link {
+
+			padding: 8px 16px;
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+			justify-content: space-between;
+
+			/*
 			&--brand {
 
 				color: var(--main);
@@ -400,193 +291,41 @@
 
 			}
 
-			&.is-btn {
-
-				position: relative;
-				padding-right: 20px !important;
-
-				.menu-catalog__name {
-
-					&::before {
-
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						bottom: 0;
-						content: '';
-
-					}
-
-					&:hover {
-
-						color: var(--main);
-
-					}
-
-				}
-
-				svg {
-
-					position: absolute;
-					top: 0;
-					right: 0;
-					bottom: 0;
-					margin: auto;
-
-					&:hover {
-
-						fill: var(--main);
-
-					}
-
-				}
-
-			}
-
-			&.is-level-2 {
-
-				text-align: left;
-				font-weight: 600;
-				font-size: 14px;
-				line-height: 1.2;
-				padding: 6px 0;
-
-				svg rect {
-
-					transition: transform var(--transitionDefault);
-					transform-origin: center;
-
-				}
-
-				&.is-open {
-
-					svg rect:first-child {
-
-						transform: rotate(90deg);
-
-					}
-
-				}
-
-			}
-
-			&.is-level-2.is-open + .menu-catalog__level-3 {
-
-				max-height: 1024px;
-
-			}
-
-			&.is-level-3 {
-
-				color: var(--border);
-				text-align: left;
-				font-weight: 400;
-				line-height: 1.2;
-				padding: 6px 0;
-
-			}
-
+			 */
 		}
 
 		&__sub {
 
 			position: absolute;
-			top: 100%;
-			left: 0;
-			right: 0;
-			width: 1300px;
-			margin-left: auto;
-			margin-right: auto;
-			padding: 32px 16px;
+			top: -16px;
+			left: 100%;
 			pointer-events: none;
 			opacity: 0;
-			transition: opacity var(--transitionDefault);
-			background-color: #fff;
-			white-space: normal;
+			width: 256px;
+			padding: 16px 0;
+			border-radius: var(--radius);
+			box-shadow: var(--box-shadow);
+			background-color: #FCFCFD;
 
-			@media (max-width: 1335px) {
+			&.is-brands {
 
-				width: 1250px;
-
-			}
-
-			@media $desktop and (max-height: 800px) {
-
-				padding: 16px;
-
-			}
-
-			&::before {
-
-				position: absolute;
-				top: 10px;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: '';
-				pointer-events: none;
-				box-shadow: var(--box-shadow);
-				z-index: -1;
-
-			}
-
-			&::after {
-
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				height: 10px;
-				content: '';
-				pointer-events: none;
-				background-color: #fff;
-				z-index: -1;
+				width: 952px;
 
 			}
 
 		}
 
-		&__item:hover &__sub {
+		&__item:hover > &__sub {
 
 			pointer-events: auto;
 			opacity: 1;
-			transition: opacity var(--transitionDefault) var(--transitionDelayMenu);
 
 		}
 
-		&__grid {
+		&__column {
 
-			display: grid;
-			grid-auto-flow: column;
-			gap: 24px;
-
-		}
-
-		&__level-2 {
-
-			width: 256px;
-
-		}
-
-		&__level-3 {
-
-			transition: var(--transitionDefault);
-			max-height: 0;
-			overflow: hidden;
-
-		}
-
-		&__brand-logo {
-
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-top: 16px;
-			padding: 16px 0;
-
-			grid-column-start: 1;
-			grid-column-end: -1;
+			column-count: 4;
+			column-gap: 0;
 
 		}
 
@@ -601,16 +340,9 @@
 		.header,
 		.main,
 		.footer,
-		.menu-bar,
-		jdiv {
+		.menu-bar {
 
 			display: none;
-
-		}
-
-		.menu-catalog {
-
-			display: flex;
 
 		}
 

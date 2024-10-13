@@ -1,6 +1,8 @@
 
 ( header => {
 
+/*
+
 	if (header) {
 
 		const menu = document.querySelector('.menu-catalog');
@@ -54,7 +56,7 @@
 				setTimeout( () => [...headerSearch].forEach( input => input.focus() ), 100);
 
 			}
-/*
+
 			if ( event.target.closest('.header') === null ) {
 
 				header.classList.remove('is-search');
@@ -62,8 +64,8 @@
 
 			}
 
-*/		});
+		});
 
 	}
-
+*/
 })(document.querySelector('.header'));

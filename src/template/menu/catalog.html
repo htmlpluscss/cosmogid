@@ -1,18 +1,74 @@
 	<nav class="menu-catalog" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
 
-		<div class="menu-catalog__wrap">
+		<div class="center">
 
-			<div class="center">
+			<div class="menu-catalog__inner">
 
-{% include "template/menu/mobile.html" %}
+				<button class="menu-catalog__btn-toggle btn btn--outline" type="button">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="#svg-menu"/>
+					</svg>
+					<span class="hidden-sm">
+						Каталог
+					</span>
+				</button>
 
-				<ul class="menu-catalog__list">
+				<div class="menu-catalog__main">
+
+					<ul class="menu-main">
+
+{% for item in [
+	{
+		name : "Бренды",
+		link : "brands"
+	},
+	{
+		name : "Акции",
+		link : "sale"
+	},
+	{
+		name : "Консультации",
+		link : "consultations"
+	},
+	{
+		name : "Оплата ",
+		link : "payment"
+	},
+	{
+		name : "Доставка",
+		link : "shipping"
+	},
+	{
+		name : "Новости",
+		link : "news"
+	},
+	{
+		name : "Контакты",
+		link : "contacts"
+	}
+]%}
+
+						<li>
+							<a itemprop="url" href="/{{ item.link }}/">
+								<span itemprop="name">
+									{{ item.name }}
+								</span>
+							</a>
+						</li>
+
+{% endfor %}
+
+					</ul>
+
+				</div>
+
+				<ul class="menu-catalog__list visuallyhidden">
 
 {% for item in menu %}
 
 					<li class="menu-catalog__item{% if item.mobile %} menu-catalog__item--only-mobile{% endif %}">
 
-						<a itemprop="url" href="/" class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}{% if item.mobile %} menu-catalog__link--only-mobile{% endif %}{% if item.level2 %} menu-catalog__link--arrow{% endif %}">
+						<a itemprop="url" href="/" class="menu-catalog__link{% if item.mod %} menu-catalog__link--{{ item.mod }}{% endif %}{% if item.mobile %} menu-catalog__link--only-mobile{% endif %}">
 
 							<span class="menu-catalog__name" itemprop="name">
 								{{ item.name }}
@@ -20,7 +76,11 @@
 
 						</a>
 
-	{% include "template/menu/sub.html" %}
+		{% if item.level2 %}
+
+{% include "template/menu/sub.html" %}
+
+		{% endif %}
 
 					</li>
 

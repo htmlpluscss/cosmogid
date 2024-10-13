@@ -1,16 +1,16 @@
 .billboard {
 
-	margin: var(--gap) 0;
+	margin-bottom: var(--gap);
 
 	@media $mdWidth {
 
-		margin: 10px 0;
+		margin-bottom: 10px;
 
 	}
 
 	@media $smWidth {
 
-		margin: 16px 0;
+		margin-bottom: 16px;
 
 	}
 

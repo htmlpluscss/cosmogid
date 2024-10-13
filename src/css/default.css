@@ -25,7 +25,7 @@ body {
 
 	min-width: 320px;
 	color: var(--color);
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.5;
 	font-family: 'Isabella Sans', sans-serif;
 	-webkit-text-size-adjust: none;
@@ -200,6 +200,13 @@ table {
 
 }
 
+.main {
+
+	padding: 16px 0;
+
+}
+
+
 /* hidden
 -----------------------------------------------------------------------------*/
 .hide {
@@ -231,5 +238,7 @@ table {
 
 .modal-show jdiv,
 .grecaptcha-badge {
+
 	display: none;
+
 }

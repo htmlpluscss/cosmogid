@@ -1,196 +1,175 @@
 ( menu => {
 
-	if(menu) {
+	if(!menu) {
 
-		let scrollLevel2 = null;
+		return;
 
-		const back = menu.querySelector('.menu-catalog__back'),
-			  body = menu.querySelector('.menu-catalog__body');
+	}
 
-		// иконка level2 +
+	const menuList  = menu.querySelector('.menu-catalog__list'),
+		  menuItems  = menu.querySelectorAll('.menu-catalog__item');
 
-		const linkBtn = menu.querySelectorAll('.menu-catalog__link.is-btn'),
-			  icoPlus = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	const icoArrow = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
-		icoPlus.setAttributeNS(null, "viewBox", "0 0 24 24");
-		icoPlus.setAttributeNS(null, "width", 24);
-		icoPlus.setAttributeNS(null, "height", 24);
-		icoPlus.setAttribute('role', 'button');
+	icoArrow.setAttributeNS(null, "viewBox", "0 0 24 24");
+	icoArrow.setAttributeNS(null, "width", 16);
+	icoArrow.setAttributeNS(null, "height", 16);
+	icoArrow.innerHTML = '<use xlink:href="#svg-chevron-right"/>';
 
-		icoPlus.innerHTML = '<rect x="11" y="6" width="2" height="12"/><rect x="6" y="11" width="12" height="2"/>';
+	[...menuItems].forEach( item => {
 
-		// иконка right level1 и level2
-		const level_1 = menu.querySelectorAll('.menu-catalog__link--arrow, .menu-catalog__link--only-mobile'),
-			  icoRight = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		if ( item.querySelector('.menu-catalog__sub') ) {
 
-		icoRight.setAttributeNS(null, "viewBox", "0 0 24 24");
-		icoRight.setAttributeNS(null, "width", 32);
-		icoRight.setAttributeNS(null, "height", 32);
-		icoRight.setAttribute('role', 'button');
-
-		icoRight.innerHTML = '<use xlink:href="#svg-chevron-right"/>';
-
-		// resize
-
-		const resize = () => {
-
-			if ( window.innerWidth < 1250 ) {
-
-				[...level_1].forEach( btn => {
-
-					if ( btn.querySelector('svg') === null ) {
-
-						btn.append(icoRight.cloneNode(true));
-
-					}
-
-				});
-
-				[...linkBtn].forEach( btn => {
-
-					if ( btn.querySelector('svg') ) {
-
-						btn.querySelector('svg').remove();
-
-					}
-
-					btn.append(icoRight.cloneNode(true));
-
-				});
-
-			} else {
-
-				back.classList.add('hide');
-				body.classList.add('hide');
-
-				[...level_1].forEach( btn => {
-
-					if ( btn.querySelector('svg') ) {
-
-						btn.querySelector('svg').remove();
-
-					}
-
-				});
-
-				[...linkBtn].forEach( btn => {
-
-					if ( btn.querySelector('svg') ) {
-
-						btn.querySelector('svg').remove();
-
-					}
-
-					btn.append(icoPlus.cloneNode(true));
-
-				});
-
-			}
+			item.querySelector('.menu-catalog__link').append(icoArrow.cloneNode(true));
 
 		}
 
-		resize();
+	});
 
-		let resizeTimeout = null,
-			windowWidthOLd = window.innerWidth;
+	window.addEventListener("click", event => {
 
-		window.addEventListener("resize", () => {
+		if ( event.target.closest('.menu-catalog__btn-toggle') ) {
 
-			window.requestAnimationFrame( () => {
+			document.body.classList.toggle('menu-catalog-open');
+			menuList.classList.toggle('visuallyhidden');
 
-				if (resizeTimeout === null) {
+		}
+		else if ( event.target.closest('.menu-catalog') === null && event.target.closest('.header') === null ) {
 
-					resizeTimeout = setTimeout( () => {
+			document.body.classList.remove('menu-catalog-open');
+			menuList.classList.add('visuallyhidden');
 
-						resizeTimeout = null;
+		}
 
-						if(windowWidthOLd !== window.innerWidth) {
+	});
 
-							resize();
+/*
+	let scrollLevel2 = null;
 
-						}
+	const back = menu.querySelector('.menu-catalog__back'),
+		  body = menu.querySelector('.menu-catalog__body');
 
-					}, 100);
+	// иконка level2 +
 
-				}
+	const linkBtn = menu.querySelectorAll('.menu-catalog__link.is-btn'),
+		  icoPlus = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
-			});
+	icoPlus.setAttributeNS(null, "viewBox", "0 0 24 24");
+	icoPlus.setAttributeNS(null, "width", 24);
+	icoPlus.setAttributeNS(null, "height", 24);
+	icoPlus.setAttribute('role', 'button');
 
-		});
+	icoPlus.innerHTML = '<rect x="11" y="6" width="2" height="12"/><rect x="6" y="11" width="12" height="2"/>';
 
-		// end resize
+	// иконка right level1 и level2
+	const level_1 = menu.querySelectorAll('.menu-catalog__link--arrow, .menu-catalog__link--only-mobile'),
+		  icoRight = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
+	icoRight.setAttributeNS(null, "viewBox", "0 0 24 24");
+	icoRight.setAttributeNS(null, "width", 32);
+	icoRight.setAttributeNS(null, "height", 32);
+	icoRight.setAttribute('role', 'button');
 
-		// клик по level2 => раскрытие level3
+	icoRight.innerHTML = '<use xlink:href="#svg-chevron-right"/>';
 
-		[...linkBtn].forEach( btn => {
+	// resize
 
-			btn.addEventListener('click', event => {
+	const resize = () => {
 
-				if ( event.target.closest('[role="button"]') ) {
+		if ( window.innerWidth < 1250 ) {
 
-					event.preventDefault();
+			[...level_1].forEach( btn => {
 
-					btn.classList.toggle('is-open');
+				if ( btn.querySelector('svg') === null ) {
 
-				}
-
-			});
-
-		});
-
-		// mobile
-
-		// клик по level2 => раскрытие level3
-
-		[...level_1].forEach( btn => {
-
-			btn.addEventListener('click', event => {
-
-				if ( window.innerWidth < 1250 && event.target.closest('[role="button"]') ) {
-
-					event.preventDefault();
-
-					scrollLevel2 = window.pageYOffset;
-
-					back.innerHTML = btn.innerHTML;
-					body.innerHTML = btn.nextElementSibling.innerHTML;
-
-					window.requestAnimationFrame( () => {
-
-						back.classList.remove('hide');
-						body.classList.remove('hide');
-
-					});
+					btn.append(icoRight.cloneNode(true));
 
 				}
 
 			});
 
-		});
+			[...linkBtn].forEach( btn => {
 
-		// back
+				if ( btn.querySelector('svg') ) {
 
-		back.addEventListener('click', () => {
+					btn.querySelector('svg').remove();
 
-			window.requestAnimationFrame( () => {
+				}
 
-				back.classList.add('hide');
-				body.classList.add('hide');
-
-				window.scrollTo(0,scrollLevel2);
+				btn.append(icoRight.cloneNode(true));
 
 			});
 
+		} else {
+
+			back.classList.add('hide');
+			body.classList.add('hide');
+
+			[...level_1].forEach( btn => {
+
+				if ( btn.querySelector('svg') ) {
+
+					btn.querySelector('svg').remove();
+
+				}
+
+			});
+
+			[...linkBtn].forEach( btn => {
+
+				if ( btn.querySelector('svg') ) {
+
+					btn.querySelector('svg').remove();
+
+				}
+
+				btn.append(icoPlus.cloneNode(true));
+
+			});
+
+		}
+
+	}
+
+	resize();
+
+	let resizeTimeout = null,
+		windowWidthOLd = window.innerWidth;
+
+	window.addEventListener("resize", () => {
+
+		window.requestAnimationFrame( () => {
+
+			if (resizeTimeout === null) {
+
+				resizeTimeout = setTimeout( () => {
+
+					resizeTimeout = null;
+
+					if(windowWidthOLd !== window.innerWidth) {
+
+						resize();
+
+					}
+
+				}, 100);
+
+			}
+
 		});
 
-		// body
+	});
 
-		body.addEventListener('click', event => {
+	// end resize
 
-			const btn = event.target.closest('.is-btn');
 
-			if ( btn && event.target.closest('[role="button"]') ) {
+	// клик по level2 => раскрытие level3
+
+	[...linkBtn].forEach( btn => {
+
+		btn.addEventListener('click', event => {
+
+			if ( event.target.closest('[role="button"]') ) {
 
 				event.preventDefault();
 
@@ -200,34 +179,90 @@
 
 		});
 
-		// delay hover
+	});
 
-		const list = menu.querySelector('.menu-catalog__list');
+	// mobile
 
-		list.addEventListener('mouseenter',()=>{
+	// клик по level2 => раскрытие level3
 
-			resizeTimeout && clearTimeout(resizeTimeout);
+	[...level_1].forEach( btn => {
 
-			resizeTimeout = setTimeout( () => {
+		btn.addEventListener('click', event => {
 
-				document.documentElement.style.setProperty('--transitionDelayMenu', '0s');
+			if ( window.innerWidth < 1250 && event.target.closest('[role="button"]') ) {
 
-			}, 1000);
+				event.preventDefault();
+
+				scrollLevel2 = window.pageYOffset;
+
+				back.innerHTML = btn.innerHTML;
+				body.innerHTML = btn.nextElementSibling.innerHTML;
+
+				window.requestAnimationFrame( () => {
+
+					back.classList.remove('hide');
+					body.classList.remove('hide');
+
+				});
+
+			}
 
 		});
 
-		list.addEventListener('mouseleave',()=>{
+	});
 
-			document.documentElement.style.setProperty('--transitionDelayMenu', '1s');
+	// back
+
+	back.addEventListener('click', () => {
+
+		window.requestAnimationFrame( () => {
+
+			back.classList.add('hide');
+			body.classList.add('hide');
+
+			window.scrollTo(0,scrollLevel2);
 
 		});
 
-	}
+	});
 
-})(document.querySelector('.menu-catalog'));
+	// body
 
-// toogle
-( menu => {
+	body.addEventListener('click', event => {
+
+		const btn = event.target.closest('.is-btn');
+
+		if ( btn && event.target.closest('[role="button"]') ) {
+
+			event.preventDefault();
+
+			btn.classList.toggle('is-open');
+
+		}
+
+	});
+
+	// delay hover
+
+	const list = menu.querySelector('.menu-catalog__list');
+
+	list.addEventListener('mouseenter',()=>{
+
+		resizeTimeout && clearTimeout(resizeTimeout);
+
+		resizeTimeout = setTimeout( () => {
+
+			document.documentElement.style.setProperty('--transitionDelayMenu', '0s');
+
+		}, 1000);
+
+	});
+
+	list.addEventListener('mouseleave',()=>{
+
+		document.documentElement.style.setProperty('--transitionDelayMenu', '1s');
+
+	});
 
 	// btn toggle
 
@@ -267,7 +302,7 @@
 		});
 
 	})(document.querySelectorAll('.btn-menu-close'));
-
+*/
 })(document.querySelector('.menu-catalog'));
 
 // page-bar

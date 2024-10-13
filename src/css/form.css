@@ -327,8 +327,7 @@ legend {
 	&::placeholder {
 
 		opacity: 1;
-		font-weight: 300;
-		font-style: italic;
+		color: var(--gray);
 
 	}
 

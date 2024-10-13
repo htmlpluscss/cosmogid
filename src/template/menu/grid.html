@@ -1,87 +1,51 @@
-		{% for column in item.level2 %}
+	<ul class="menu-catalog__level-2">
 
-				{% set lastColumn = loop.last %}
+{% for level2 in item.level2 %}
 
-						<div class="menu-catalog__column">
+		<li class="menu-catalog__item">
 
-							<ul class="menu-catalog__level-2">
+			<a itemprop="url" class="menu-catalog__link" href="/catalog/level2/">
 
-				{% for level2 in column %}
+				<span itemprop="name" class="menu-catalog__name">
 
-								<li>
+					{{ level2.name }}
 
-									<a itemprop="url" class="menu-catalog__link is-level-2{% if level2.level3 %} is-btn{% endif %}" href="/catalog/level2/">
+				</span>
 
-										<span itemprop="name" class="menu-catalog__name">
+			</a>
 
-											{{ level2.name }}
+	{% if level2.level3 %}
 
-											{% if loop.index % 4 === 0 %}
+			<div class="menu-catalog__sub">
 
-											<svg class="menu-catalog__name-ico" width="24" height="24" viewBox="0 0 24 24">
-												<use xlink:href="#svg-gift"/>
-											</svg>
+				<ul class="menu-catalog__level-3">
 
-											{% endif %}
+			{% for level3 in level2.level3 %}
 
-										</span>
+					<li class="menu-catalog__item">
 
-									</a>
+						<a itemprop="url" class="menu-catalog__link" href="/catalog/">
 
-						{% if level2.level3 %}
+							<span itemprop="name" class="menu-catalog__name">
 
-									<ul class="menu-catalog__level-3">
+								{{ level3 }}
 
-								{% for level3 in level2.level3 %}
+							</span>
 
-										<li>
+						</a>
 
-											<a itemprop="url" class="menu-catalog__link is-level-3" href="/catalog/">
+					</li>
 
-												<span itemprop="name" class="menu-catalog__name">
+			{% endfor %}
 
-													{{ level3 }}
+				</ul>
 
-													{% if loop.index % 4 === 0 %}
+			</div>
 
-													<svg class="menu-catalog__name-ico" width="24" height="24" viewBox="0 0 24 24">
-														<use xlink:href="#svg-gift"/>
-													</svg>
+	{% endif %}
 
-													{% endif %}
+		</li>
 
-												</span>
+{% endfor %}
 
-											</a>
-
-										</li>
-
-								{% endfor %}
-
-									</ul>
-
-						{% endif %}
-
-								</li>
-
-						{% if loop.last and lastColumn %}
-
-								<li>
-
-									<a itemprop="url" class="menu-catalog__link is-level-2 menu-catalog__link--sale" href="/catalog/level2/">
-										<span itemprop="name">
-											Распродажа
-										</span>
-									</a>
-
-								</li>
-
-						{% endif %}
-
-				{% endfor %}
-
-							</ul>
-
-						</div>
-
-		{% endfor %}
+	</ul>
