@@ -5,8 +5,10 @@
 	padding: 8px;
 	position: relative;
 	transition: box-shadow var(--transitionDefault);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 	width: 100%;
+
+	border: 1px solid #F4F5F6;
+	border-radius: var(--radius);
 
 	.modal-card-color {
 
@@ -18,12 +20,11 @@
 
 		&:hover {
 
-			box-shadow: var(--box-shadow);
+			border-color: var(--accent);
 
 			.preview-card__hover-inner {
 
-				opacity: 1;
-				pointer-events: auto;
+				display: block;
 
 			}
 
@@ -31,31 +32,29 @@
 
 		&__hover {
 
-			position: relative;
-
 			&-inner {
 
 				position: absolute;
-				top: -8px;
-				left: -8px;
-				right: -8px;
-				padding: 24px;
-				opacity: 0;
-				pointer-events: none;
-				transition: opacity var(--transitionDefault);
+				top: 100%;
+				left: 0;
+				right: 0;
+				padding: 16px;
+				display: none;
 				background-color: #fff;
-				box-shadow: var(--box-shadow);
 
 				&::before {
 
 					position: absolute;
 					top: -10px;
-					left: 0;
-					right: 0;
+					left: -1px;
+					right: -1px;
 					bottom: 0;
 					content: '';
 					pointer-events: none;
+					border: 1px solid var(--accent);
 					background-color: #fff;
+					border-top: 0;
+					border-radius: 0 0 var(--radius) var(--radius);
 
 				}
 

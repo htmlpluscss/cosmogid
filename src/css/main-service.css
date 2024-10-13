@@ -1,6 +1,6 @@
 .main-service {
 
-	margin: 40px 0;
+	margin: 20px 0;
 	display: flex;
 	justify-content: space-between;
 
@@ -14,14 +14,19 @@
 
 		width: 288px;
 		min-height: 64px;
-		padding-left: 72px;
+		padding-left: 40px;
+
+		dt {
+
+			line-height: 1;
+			margin-bottom: 6px;
+			color: var(--main);
+
+		}
 
 		dd {
 
-			font-weight: 500;
-			font-size: 14px;
 			line-height: 1.2;
-			color: var(--text);
 
 			a {
 
@@ -33,13 +38,15 @@
 
 	}
 
-	.ico-box {
+	&__ico {
 
-		width: 64px;
-		height: 64px;
+		width: 32px;
+		height: 32px;
 		position: absolute;
 		top: 0;
 		left: 0;
+		color: var(--main);
+		stroke-width: 2px;
 
 	}
 

@@ -408,3 +408,36 @@
 	}
 
 }
+
+.cart-fixed {
+
+	position: fixed;
+	top: 256px;
+	left: 50%;
+	margin-left: 702px;
+	border-radius: 50%;
+	box-shadow: var(--box-shadow);
+	background-color: #F6F8F1;
+	z-index: 7;
+	width: 72px;
+	height: 72px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--main);
+
+	@media $mdWidth {
+
+		display: none;
+
+	}
+
+	@media (max-width: 1599px) {
+
+		margin-left: 0;
+		left: auto;
+		right: 40px;
+
+	}
+
+}

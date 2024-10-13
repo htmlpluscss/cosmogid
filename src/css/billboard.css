@@ -14,6 +14,12 @@
 
 	}
 
+	&__wrap {
+
+		border-radius: var(--radius);
+
+	}
+
 	&__wrap:not(.swiper-initialized) &__item + &__item {
 
 		display: none;

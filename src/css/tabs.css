@@ -4,7 +4,8 @@
 
 		display: flex;
 		position: relative;
-		justify-content: center;
+		color: var(--gray);
+		border-bottom: 1px solid;
 
 		@media $smWidth {
 
@@ -36,11 +37,7 @@
 
 	&__btn {
 
-		font-size: 20px;
-		line-height: 84px;
-		padding: 0 40px;
-		color: var(--text);
-		border-bottom: 2px solid #9ca3af;
+		padding: 16px 40px;
 
 		svg {
 
@@ -92,7 +89,18 @@
 		&.is-active {
 
 			color: var(--main);
-			border-bottom-color: var(--main);
+
+			&::after {
+
+				position: absolute;
+				height: 1px;
+				left: 0;
+				right: 0;
+				bottom: -1px;
+				content: '';
+				background-color: var(--main);
+
+			}
 
 		}
 
