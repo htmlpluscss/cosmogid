@@ -116,6 +116,7 @@
 		text-align: center;
 		color: var(--gray);
 		border: 1px solid var(--violet);
+		background: none !important;
 
 		@media $smWidth {
 
