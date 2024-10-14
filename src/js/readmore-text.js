@@ -55,16 +55,6 @@
 
 					}
 
-					// перемещаем в конец
-
-					const main = block.parentNode.classList.contains('main') ? block.parentNode : false;
-
-					if ( main ) {
-
-						main.append(block);
-
-					}
-
 					// readmore
 
 					let append = null;

@@ -157,10 +157,11 @@ legend {
 		background-color: transparent !important;
 		color: var(--main);
 		padding: 0 !important;
-		height: 32px;
-		line-height: 32px;
+		height: 24px;
+		line-height: 24px;
 		border-bottom: 1px dashed;
 		border-radius: 0;
+		text-transform: uppercase;
 
 		@media $desktop {
 

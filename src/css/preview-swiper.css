@@ -1,12 +1,12 @@
 .preview-swiper {
 
-	margin: 103px 0 128px;
+	margin: 103px 0 184px;
 
 	@media $desktop {
 
 		.swiper-pagination {
 
-			display: none;
+			margin: 48px 0;
 
 		}
 
