@@ -46,11 +46,11 @@
 
 	&__title {
 
-		font-weight: 400;
 		font-size: 24px;
 		line-height: 1.2;
-		text-transform: uppercase;
+		font-weight: 700;
 		margin-bottom: 16px;
+		color: var(--main);
 
 		@media $smWidth {
 
@@ -239,10 +239,10 @@
 
 		flex-grow: 1;
 		padding-right: 24px;
-		font-weight: 600;
+		font-weight: 700;
 		font-size: 14px;
 		line-height: 1.2;
-		color: var(--gray);
+		color: var(--main);
 
 	}
 
@@ -250,7 +250,6 @@
 
 		display: block;
 		font-weight: 400;
-		color: var(--gray);
 
 	}
 
@@ -411,7 +410,6 @@
 
 		display: block;
 		line-height: 1.2;
-		color: var(--gray);
 
 	}
 
@@ -534,10 +532,9 @@
 
 	&__title {
 
-		font-weight: 500;
+		font-weight: 700;
 		font-size: 20px;
 		line-height: 1.2;
-		color: var(--gray);
 		margin-bottom: 16px;
 		max-width: 392px;
 
@@ -563,11 +560,9 @@
 
 		@media $mdWidth {
 
-			width: 100%;
-
 			img {
 
-				max-width: 100%;
+				width: 100%;
 				height: auto;
 
 			}
@@ -578,15 +573,46 @@
 
 			width: 200px;
 			margin: auto;
+			border: 0;
 
 		}
 
 	}
 
+	&__sku {
+
+		margin-bottom: 10px;
+
+		b {
+
+			font-weight: 600;
+
+		}
+
+		@media $smWidth {
+
+			position: absolute;
+			top: var(--gap);
+			left: var(--gap);
+			z-index: 1;
+
+			b {
+
+				display: block;
+
+			}
+
+		}
+
+	}
+
+
 	&__right {
 
-		padding: 16px 16px 40px;
-		width: 396px;
+		padding: 16px;
+		width: 380px;
+		display: flex;
+		flex-direction: column;
 		box-shadow: var(--box-shadow);
 
 		@media $mdWidth {
@@ -599,7 +625,11 @@
 
 			width: auto;
 			padding: 0;
+			display: grid;
+			grid-template-areas: "price" "availability" "list" "submit";
+			grid-template-rows: auto auto 1fr auto;
 			box-shadow: none;
+			height: calc( 100vh - 200px - var(--gap) - var(--gap) - var(--gap) );
 
 		}
 
@@ -607,20 +637,21 @@
 
 	&__availability {
 
-		margin-bottom: 24px;
+		margin-bottom: var(--gap);
+		grid-area: "availability";
 
 	}
 
 	&__price {
 
-		margin-bottom: 24px;
+		margin-bottom: var(--gap);
+		grid-area: "price";
 
 	}
 
 	&__label {
 
-		color: var(--gray);
-		margin-bottom: 24px;
+		margin-bottom: var(--gap);
 
 		b {
 
@@ -633,7 +664,14 @@
 
 			display: block;
 			margin-top: 4px;
+			font-size: 12px;
 			line-height: 1.2;
+
+		}
+
+		@media $smWidth {
+
+			display: none;
 
 		}
 
@@ -641,12 +679,26 @@
 
 	&__list {
 
-		max-height: 336px;
-		padding-right: 8px;
+		position: relative;
+		flex-grow: 1;
+		min-height: 256px;
+		grid-area: "list";
 
 		@media $smWidth {
 
-			max-height: 298px;
+			min-height: 128px;
+
+		}
+
+		&-scroll {
+
+			padding-right: 8px;
+			max-height: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
 
 		}
 
@@ -664,7 +716,7 @@
 			z-index: -1;
 			content: '';
 			background-color: #f5f3ff;
-			border: 1px solid var(--main);
+			border: 1px solid var(--purple);
 
 		}
 
@@ -677,7 +729,6 @@
 		&-btn {
 
 			display: flex;
-			justify-content: center;
 			align-items: center;
 			padding: 8px;
 			cursor: pointer;
@@ -717,7 +768,6 @@
 		&-label {
 
 			font-size: 13px;
-			color: var(--gray);
 
 		}
 
@@ -725,13 +775,29 @@
 
 	&__submit {
 
-		margin-top: 24px;
+		margin-top: var(--gap);
+		display: grid;
+		gap: 16px;
+		grid-area: "submit";
 
-		.btn {
+		@media $smWidth {
 
-			width: 100%;
+			position: sticky;
+			bottom: var(--gap);
+			z-index: 1;
+			box-shadow: 0 24px 0 24px #fff;
+			padding-top: var(--gap);
+			margin: 0;
+			background-image: linear-gradient( to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 24px);
 
 		}
+
+	}
+
+	&__buy {
+
+		display: flex;
+		gap: 16px;
 
 	}
 
@@ -792,7 +858,6 @@
 .modal-login {
 
 	padding: 24px;
-	color: var(--gray);
 	width: 480px;
 
 	&__title {
@@ -1261,10 +1326,27 @@
 
 		display: flex;
 		gap: var(--gap);
+		padding-top: 10px;
 
 		@media $smWidth {
 
 			display: block;
+
+		}
+
+		&__head {
+
+			width: 320px;
+			flex-shrink: 0;
+
+		}
+
+		&__name {
+
+			margin-bottom: 20px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.2;
 
 		}
 
@@ -1273,7 +1355,6 @@
 			width: 280px;
 			height: 280px;
 			margin: 0 auto;
-			flex-shrink: 0;
 			position: relative;
 
 			img {
@@ -1290,12 +1371,16 @@
 
 			display: flex;
 			flex-direction: column;
+			flex-grow: 1;
+			padding: var(--gap);
+			box-shadow: var(--box-shadow);
 
 			@media $smWidth {
 
 				height: calc(100vh - 280px - 48px);
 				min-height: 320px;
-				padding-top: var(--gap);
+				box-shadow: none;
+				padding: var(--gap) 0 0;
 
 			}
 

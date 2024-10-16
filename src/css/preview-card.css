@@ -41,6 +41,7 @@
 				padding: 16px;
 				display: none;
 				background-color: #fff;
+				z-index: 2;
 
 				&::before {
 

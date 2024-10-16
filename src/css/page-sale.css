@@ -53,7 +53,7 @@
 	padding: 24px 42px;
 	display: flex;
 	min-height: 360px;
-	color: var(--gray);
+	color: var(--text);
 
 	@media $mdWidth {
 

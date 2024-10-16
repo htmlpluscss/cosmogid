@@ -51,7 +51,7 @@
 	&__body {
 
 		flex-grow: 1;
-		color: var(--gray);
+		color: var(--text);
 		position: relative;
 
 		@media $desktop {

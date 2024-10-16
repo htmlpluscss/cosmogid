@@ -26,4 +26,10 @@
 
 	}
 
+	&__btn {
+
+		text-transform: uppercase;
+
+	}
+
 }

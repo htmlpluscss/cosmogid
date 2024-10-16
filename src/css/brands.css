@@ -180,8 +180,8 @@
 	&__cards {
 
 		display: grid;
-		gap: 16px;
-		grid-template-columns: repeat(4, 1fr);
+		gap: 8px;
+		grid-template-columns: repeat(5, 1fr);
 
 		@media $mdWidth {
 
@@ -212,8 +212,9 @@
 	&__link {
 
 		flex-grow: 1;
-		border: 1px solid #F4F5F6;
+		border-radius: var(--radius);
 		padding: 8px;
+		box-shadow: 0px 10px 20px 4px #1719000D;
 
 		@media $desktop {
 
@@ -234,7 +235,7 @@
 		margin-bottom: 16px;
 		overflow: hidden;
 		font-size: 13px;
-		font-weight: 500;
+		font-weight: 700;
 		line-height: 16px;
 		line-clamp: 3;
 

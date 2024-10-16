@@ -200,8 +200,6 @@
 
 .consultations-card {
 
-	color: var(--gray);
-
 	.page-article & {
 
 		margin: 72px 24px 48px;
@@ -421,7 +419,7 @@
 		font-size: 32px;
 		line-height: 1.2;
 		text-transform: uppercase;
-		color: var(--gray);
+		color: var(--main);
 
 		@media $smWidth {
 
@@ -439,7 +437,6 @@
 .consultations-online-details {
 
 	text-align: center;
-	color: var(--gray);
 
 	h3 {
 
@@ -639,7 +636,6 @@
 .consultations-online-faq {
 
 	text-align: center;
-	color: var(--gray);
 
 	h3 {
 

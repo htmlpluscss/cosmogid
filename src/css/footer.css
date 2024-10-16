@@ -269,55 +269,6 @@
 
 }
 
-.callback-fixed {
-
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-top: -40px;
-	margin-left: 702px;
-	border-radius: 40px;
-	box-shadow: var(--box-shadow);
-	background-color: #fff;
-	z-index: 7;
-	height: 80px;
-	overflow: hidden;
-	transition: var(--transitionDefault);
-
-	@media $mdWidth {
-
-		display: none;
-
-	}
-
-	@media (max-width: 1599px) {
-
-		margin-left: 0;
-		left: auto;
-		right: 40px;
-
-	}
-
-	&:hover {
-
-		height: 240px;
-
-	}
-
-	&__btn {
-
-		width: 80px;
-		height: 80px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: var(--accent);
-		stroke-width: 2px;
-
-	}
-
-}
-
 .footer-subscribe {
 
 	margin: 40px auto;
@@ -416,7 +367,7 @@
 	left: 50%;
 	margin-left: 702px;
 	border-radius: 50%;
-	box-shadow: var(--box-shadow);
+	box-shadow: 0px 5px 15px #00000026;
 	background-color: #F6F8F1;
 	z-index: 7;
 	width: 72px;
@@ -425,6 +376,27 @@
 	justify-content: center;
 	align-items: center;
 	color: var(--main);
+
+	&[data-count] {
+
+		&::after {
+
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			top: 0;
+			right: -12px;
+			color: #fff;
+			line-height: 32px;
+			text-align: center;
+			background-color: var(--error);
+			content: attr(data-count);
+			font-weight: 700;
+			border-radius: 50%;
+
+		}
+
+	}
 
 	@media $mdWidth {
 
