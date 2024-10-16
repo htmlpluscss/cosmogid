@@ -45,6 +45,7 @@
 				transition: opacity var(--transitionDefault);
 				background-color: #fff;
 				box-shadow: var(--box-shadow);
+				z-index: 2;
 
 				&::before {
 
