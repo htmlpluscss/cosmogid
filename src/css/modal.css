@@ -1365,10 +1365,27 @@
 
 		display: flex;
 		gap: var(--gap);
+		padding-top: 10px;
 
 		@media $smWidth {
 
 			display: block;
+
+		}
+
+		&__head {
+
+			width: 320px;
+			flex-shrink: 0;
+
+		}
+
+		&__name {
+
+			margin-bottom: 20px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.2;
 
 		}
 
@@ -1377,7 +1394,6 @@
 			width: 280px;
 			height: 280px;
 			margin: 0 auto;
-			flex-shrink: 0;
 			position: relative;
 
 			img {
@@ -1395,12 +1411,15 @@
 			display: flex;
 			flex-direction: column;
 			flex-grow: 1;
+			padding: var(--gap);
+			box-shadow: var(--box-shadow);
 
 			@media $smWidth {
 
 				height: calc(100vh - 280px - 48px);
 				min-height: 320px;
-				padding-top: var(--gap);
+				box-shadow: none;
+				padding: var(--gap) 0 0;
 
 			}
 
