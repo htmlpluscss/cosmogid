@@ -560,3 +560,16 @@
 	}
 
 }
+
+
+.preloader {
+
+	width: 128px;
+	height: 128px;
+	margin: 48px auto;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3CradialGradient id='a' cx='.66' cy='.31' fx='.66' fy='.31' gradientTransform='scale(1.5)'%3E%3Cstop offset='0' stop-color='%23ea0b98'/%3E%3Cstop offset='.3' stop-color='%23ea0b98' stop-opacity='.9'/%3E%3Cstop offset='.6' stop-color='%23ea0b98' stop-opacity='.6'/%3E%3Cstop offset='.8' stop-color='%23ea0b98' stop-opacity='.3'/%3E%3Cstop offset='1' stop-color='%23ea0b98' stop-opacity='0'/%3E%3C/radialGradient%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='url(%23a)' stroke-dasharray='200 1000' stroke-linecap='round' stroke-width='15' transform-origin='center'%3E%3CanimateTransform attributeName='transform' calcMode='spline' dur='2' keySplines='0 0 1 1' keyTimes='0;1' repeatCount='indefinite' type='rotate' values='360;0'/%3E%3C/circle%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='%23ea0b98' stroke-linecap='round' stroke-width='15' opacity='.2' transform-origin='center'/%3E%3C/svg%3E");
+
+}

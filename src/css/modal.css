@@ -510,14 +510,14 @@
 
 .modal-card-color {
 
-	width: 1000px;
+	width: 960px;
 	display: flex;
 	padding: 40px;
 	justify-content: space-between;
 
 	@media $mdWidth {
 
-		width: 100%;
+		max-width: 100%;
 		padding: 32px;
 
 	}
@@ -525,14 +525,13 @@
 	@media $smWidth {
 
 		display: block;
-		padding: 16px 24px 32px;
+		padding: var(--gap);
 
 	}
 
 	&__left {
 
-		width: 500px;
-		padding: 0 16px;
+		width: 468px;
 
 		@media $mdWidth {
 
@@ -544,7 +543,7 @@
 		@media $smWidth {
 
 			width: auto;
-			margin-bottom: 24px;
+			margin-bottom: var(--gap);
 
 		}
 
@@ -557,12 +556,10 @@
 		line-height: 1.2;
 		color: var(--gray);
 		margin-bottom: 16px;
-		max-width: 392px;
 
 		@media $smWidth {
 
-			font-weight: 600;
-			font-size: 14px;
+			display: none;
 
 		}
 
@@ -581,11 +578,9 @@
 
 		@media $mdWidth {
 
-			width: 100%;
-
 			img {
 
-				max-width: 100%;
+				width: 100%;
 				height: auto;
 
 			}
@@ -596,15 +591,44 @@
 
 			width: 200px;
 			margin: auto;
+			border: 0;
 
 		}
 
 	}
 
+	&__sku {
+
+		margin-bottom: 10px;
+
+		b {
+
+			font-weight: 600;
+
+		}
+
+		@media $smWidth {
+
+			position: absolute;
+			top: var(--gap);
+			left: var(--gap);
+			z-index: 1;
+
+			b {
+
+				display: block;
+
+			}
+
+		}
+
+	}
+
+
 	&__right {
 
-		padding: 16px 16px 40px;
-		width: 396px;
+		padding: 16px;
+		width: 380px;
 		box-shadow: var(--box-shadow);
 
 		@media $mdWidth {
@@ -617,7 +641,11 @@
 
 			width: auto;
 			padding: 0;
+			display: grid;
+			grid-template-areas: "price" "list" "submit";
+			grid-template-rows: auto 1fr auto;
 			box-shadow: none;
+			height: calc( 100vh - 200px - var(--gap) - var(--gap) - var(--gap) );
 
 		}
 
@@ -625,20 +653,27 @@
 
 	&__availability {
 
-		margin-bottom: 24px;
+		margin-bottom: var(--gap);
+
+		@media $smWidth {
+
+			display: none;
+
+		}
 
 	}
 
 	&__price {
 
-		margin-bottom: 24px;
+		margin-bottom: var(--gap);
+		grid-area: "price";
 
 	}
 
 	&__label {
 
 		color: var(--gray);
-		margin-bottom: 24px;
+		margin-bottom: var(--gap);
 
 		b {
 
@@ -656,16 +691,36 @@
 
 		}
 
+		@media $smWidth {
+
+			display: none;
+
+		}
+
 	}
 
 	&__list {
 
-		max-height: 336px;
-		padding-right: 8px;
+		position: relative;
+		flex-grow: 1;
+		min-height: 256px;
+		grid-area: "list";
 
 		@media $smWidth {
 
-			max-height: 298px;
+			min-height: 128px;
+
+		}
+
+		&-scroll {
+
+			padding-right: 8px;
+			max-height: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
 
 		}
 
@@ -696,7 +751,6 @@
 		&-btn {
 
 			display: flex;
-			justify-content: center;
 			align-items: center;
 			padding: 8px;
 			cursor: pointer;
@@ -744,13 +798,29 @@
 
 	&__submit {
 
-		margin-top: 24px;
+		margin-top: var(--gap);
+		display: grid;
+		gap: 16px;
+		grid-area: "submit";
 
-		.btn {
+		@media $smWidth {
 
-			width: 100%;
+			position: sticky;
+			bottom: var(--gap);
+			z-index: 1;
+			box-shadow: 0 24px 0 24px #fff;
+			padding-top: var(--gap);
+			margin: 0;
+			background-image: linear-gradient( to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 24px);
 
 		}
+
+	}
+
+	&__buy {
+
+		display: flex;
+		gap: 16px;
 
 	}
 
