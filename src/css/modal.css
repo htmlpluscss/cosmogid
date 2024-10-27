@@ -629,6 +629,8 @@
 
 		padding: 16px;
 		width: 380px;
+		display: flex;
+		flex-direction: column;
 		box-shadow: var(--box-shadow);
 
 		@media $mdWidth {
@@ -642,8 +644,8 @@
 			width: auto;
 			padding: 0;
 			display: grid;
-			grid-template-areas: "price" "list" "submit";
-			grid-template-rows: auto 1fr auto;
+			grid-template-areas: "price" "availability" "list" "submit";
+			grid-template-rows: auto auto 1fr auto;
 			box-shadow: none;
 			height: calc( 100vh - 200px - var(--gap) - var(--gap) - var(--gap) );
 
@@ -654,12 +656,7 @@
 	&__availability {
 
 		margin-bottom: var(--gap);
-
-		@media $smWidth {
-
-			display: none;
-
-		}
+		grid-area: "availability";
 
 	}
 
