@@ -293,9 +293,8 @@
 
 	&__title {
 
-		font-weight: 600;
+		font-weight: 700;
 		font-size: 48px;
-		text-transform: uppercase;
 		line-height: 1.2;
 
 		@media $mdWidth {
@@ -421,9 +420,8 @@
 
 	&__title {
 
-		font-weight: 600;
+		font-weight: 700;
 		font-size: 28px;
-		text-transform: uppercase;
 		line-height: 1.2;
 
 		@media $smWidth {

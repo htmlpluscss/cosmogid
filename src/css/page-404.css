@@ -67,10 +67,9 @@
 
 	&__title {
 
-		font-weight: 600;
+		font-weight: 700;
 		font-size: 48px;
 		line-height: 1.2;
-		text-transform: uppercase;
 		margin-bottom: 24px;
 
 		@media $mdWidth {

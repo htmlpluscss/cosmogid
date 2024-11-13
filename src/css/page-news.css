@@ -30,13 +30,7 @@
 
 	.sort-select {
 
-		margin: 80px 0 16px;
-
-		@media $mdWidth {
-
-			margin: 40px 0 16px;
-
-		}
+		margin: 40px 0 16px;
 
 		&__item {
 

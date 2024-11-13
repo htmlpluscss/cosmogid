@@ -10,7 +10,7 @@
 					  itemTags = card.querySelectorAll('.consultations-card__question-tags li'),
 					  wrapTags = card.querySelector('.consultations-card__question-tags-wrap');
 
-				if ( wrapTags.clientHeight < listTags.clientHeight ) {
+				if ( wrapTags && wrapTags.clientHeight < listTags.clientHeight ) {
 
 					const btn = document.createElement('button');
 

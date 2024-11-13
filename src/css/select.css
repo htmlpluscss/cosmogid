@@ -66,8 +66,8 @@
 		line-height: 24px;
 		transition: color var(--transitionDefault);
 		z-index: 1;
-		border: 1px solid var(--gray);
-		color: var(--gray);
+		border: 1px solid var(--border);
+		color: var(--text);
 
 		svg {
 
