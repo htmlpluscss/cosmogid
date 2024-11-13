@@ -308,6 +308,20 @@ legend {
 
 	}
 
+	&--medium {
+
+		height: 48px;
+
+	}
+
+	&--big {
+
+		padding: 16px 24px;
+		font-size: 18px;
+		height: 56px;
+
+	}
+
 	@media $desktop {
 
 
@@ -355,8 +369,8 @@ legend {
 
 	&.is-error {
 
-		color: var(--red);
-		border-bottom-color: var(--red);
+		color: var(--error);
+		--border: var(--error);
 
 	}
 
@@ -644,10 +658,11 @@ legend {
 
 	.input {
 
-		padding: 8px 16px;
-		height: 40px;
-		line-height: 24px;
-		border-bottom-color: var(--text);
+		&::placeholder {
+
+			font-style: normal;
+
+		}
 
 	}
 
@@ -677,12 +692,12 @@ legend {
 
 	&.is-error .input {
 
-		color: var(--red);
-		border-bottom-color: var(--red);
+		color: var(--error);
+		--border: var(--error);
 
 		&::placeholder {
 
-			color: var(--red);
+			color: var(--error);
 
 		}
 
@@ -691,14 +706,14 @@ legend {
 	&.is-error &__text,
 	&.is-error &__label {
 
-		color: var(--red);
+		color: var(--error);
 
 	}
 
 	&.is-error &__note,
 	&.is-error &__label {
 
-		color: var(--red);
+		color: var(--error);
 
 	}
 

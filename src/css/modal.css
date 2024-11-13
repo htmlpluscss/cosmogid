@@ -209,7 +209,7 @@
 
 		.btn {
 
-			width: 240px;
+			min-width: 128px;
 
 		}
 
@@ -860,6 +860,16 @@
 	padding: 24px;
 	width: 480px;
 
+	&__form  {
+
+		& + & {
+
+			margin-top: 24px;
+
+		}
+
+	}
+
 	&__title {
 
 		font-weight: 600;
@@ -988,6 +998,18 @@
 	&__rule {
 
 		margin: 20px 0;
+
+	}
+
+	@media $desktop {
+
+		.modal__column .inputbox.is-error .inputbox__text {
+
+			height: 0;
+			padding: 0;
+			white-space: nowrap;
+
+		}
 
 	}
 

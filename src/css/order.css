@@ -253,16 +253,9 @@
 
 	&__next {
 
-		margin-top: 60px;
+		margin-top: 32px;
 		display: flex;
 		gap: 24px;
-		justify-content: flex-end;
-
-		@media $mdWidth {
-
-			margin-top: 32px;
-
-		}
 
 		@media $xsWidth {
 
