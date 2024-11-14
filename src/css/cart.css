@@ -139,6 +139,8 @@
 
 		.input {
 
+			background-color: transparent;
+
 			&::placeholder {
 
 				font-style: normal;
@@ -178,6 +180,7 @@
 		.btn {
 
 			width: 100%;
+			background-color: transparent;
 
 		}
 

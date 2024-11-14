@@ -526,9 +526,7 @@
 
 	&__slogan {
 
-		font-weight: 300;
 		font-size: 20px;
-		text-transform: uppercase;
 		margin-top: auto;
 		margin-bottom: 8px;
 
@@ -551,9 +549,8 @@
 
 	&__title {
 
-		font-weight: 400;
+		font-weight: 700;
 		font-size: 36px;
-		text-transform: uppercase;
 		line-height: 1.2;
 		margin-bottom: 8px;
 
@@ -566,7 +563,6 @@
 		@media $smWidth {
 
 			font-size: 24px;
-			font-weight: 600;
 			margin-bottom: 16px;
 
 		}

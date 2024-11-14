@@ -117,7 +117,7 @@
 
 		margin-bottom: 32px;
 		position: relative;
-		color: var(--accent);
+		color: var(--text);
 
 		&.is-error {
 
@@ -131,7 +131,7 @@
 
 		display: block;
 		padding: 8px 16px;
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 1.2;
 
 	}

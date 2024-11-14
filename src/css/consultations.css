@@ -413,7 +413,7 @@
 	&__head {
 
 		text-align: center;
-		margin: 128px 0 64px;
+		margin: 48px 0 24px;
 		font-weight: 700;
 		font-size: 32px;
 		line-height: 1.2;
@@ -421,8 +421,6 @@
 
 		@media $smWidth {
 
-			margin: 48px 0 24px;
-			font-weight: 600;
 			font-size: 20px;
 
 		}
@@ -437,11 +435,10 @@
 
 	h3 {
 
-		font-weight: 600;
-		font-size: 20px;
+		font-weight: 700;
+		font-size: 24px;
 		line-height: 1.2;
 		margin-bottom: 16px;
-		text-transform: uppercase;
 
 	}
 
@@ -636,11 +633,10 @@
 
 	h3 {
 
-		font-weight: 600;
-		font-size: 20px;
+		font-weight: 700;
+		font-size: 24px;
 		line-height: 1.2;
 		margin-bottom: 16px;
-		text-transform: uppercase;
 
 	}
 

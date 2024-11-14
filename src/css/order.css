@@ -57,6 +57,7 @@
 	&__tabs {
 
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 
 		@media $desktop {
@@ -160,7 +161,7 @@
 
 		&-item {
 
-			font-weight: 600;
+			color: var(--gray);
 			flex-basis: 50%;
 			counter-increment: headings 1;
 
@@ -169,6 +170,7 @@
 		a {
 
 			display: flex;
+			gap: 16px;
 			align-items: center;
 
 			&::before  {
@@ -176,23 +178,25 @@
 				content: counter(headings, decimal);
 				width: 40px;
 				height: 40px;
-				margin-right: 16px;
 				border-radius: 50%;
 				flex-shrink: 0;
-				font-weight: 600;
-				font-size: 24px;
 				line-height: 40px;
 				text-align: center;
-				color: #9ca3af;
-				outline: 1px solid #9ca3af;
+				outline: 1px solid var(--gray);
 
 			}
 
-			&.is-active::before {
+			&.is-active {
 
-				color: #fff;
-				outline: none;
-				background-color: var(--main);
+				color: var(--main);
+
+				&::before {
+
+					outline: none;
+					color: var(--bg);
+					background-color: var(--main);
+
+				}
 
 			}
 
@@ -279,18 +283,12 @@
 
 			@media $desktop {
 
-				min-width: 240px;
+				min-width: 260px;
 				padding: 0 40px;
 
 			}
 
 		}
-
-	}
-
-	.input.autosize {
-
-		height: 40px;
 
 	}
 
@@ -352,6 +350,7 @@
 		@media $desktop {
 
 			font-size: 32px;
+			text-align: center;
 
 		}
 
@@ -481,10 +480,9 @@
 
 	&__head {
 
-		font-weight: 400;
+		font-weight: 700;
 		font-size: 24px;
 		line-height: 1.2;
-		text-transform: uppercase;
 		color: var(--text);
 		margin: 24px 0;
 		max-width: 428px;
@@ -493,10 +491,9 @@
 
 	&__heading {
 
-		font-weight: 500;
+		font-weight: 700;
 		font-size: 16px;
 		line-height: 1.2;
-		text-transform: uppercase;
 		color: var(--text);
 		margin: 24px 0;
 

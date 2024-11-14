@@ -679,15 +679,25 @@ legend {
 		margin-left: 16px;
 		display: block;
 
+		&.is-absolute {
+
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+
+		}
+
 	}
 
 	&__label {
 
 		display: block;
 		padding: 8px 0 8px 16px;
-		line-height: 1.2;
-		color: var(--accent);
 		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.2;
+		color: var(--text);
 
 	}
 

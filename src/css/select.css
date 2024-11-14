@@ -37,20 +37,6 @@
 
 	}
 
-	&--white &__value {
-
-		background-color: #fff;
-		padding-left: 8px;
-
-		svg {
-
-			width: 16px;
-			height: 16px;
-
-		}
-
-	}
-
 	&__value {
 
 		display: flex;

@@ -254,25 +254,6 @@
 
 	}
 
-	@media $desktop {
-
-		.inputbox.is-one-row {
-
-			min-height: 100px;
-
-			.inputbox__text {
-
-				position: absolute;
-				top: 100%;
-				left: 0;
-				right: 0;
-
-			}
-
-		}
-
-	}
-
 	textarea.autosize {
 
 		height: 40px;
