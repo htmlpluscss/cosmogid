@@ -5,7 +5,13 @@
 	{% if card.buy === "enabled" or card.buy === "disabled" %}
 
 								<button class="preview-card__buy btn"{% if card.buy === "disabled" %} disabled="disabled"{% endif %}>
-									В корзину
+
+									Купить
+
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-arrow-narrow-right"/>
+									</svg>
+
 								</button>
 
 	{% endif %}
@@ -27,6 +33,28 @@
 								<button class="btn btn--favourite" type="button" aria-label="Удалить из избранного">
 									<svg width="24" height="24" viewBox="0 0 24 24">
 										<use xlink:href="#svg-favourite-fill"/>
+									</svg>
+								</button>
+
+	{% endif %}
+
+							</div>
+
+							<div class="preview-card__foot-compare">
+
+	{% if [1,2] | random === 2 %}
+
+								<button class="btn btn--compare" type="button" aria-label="Сравнить">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-compare"/>
+									</svg>
+								</button>
+
+	{% else %}
+
+								<button class="btn btn--compare" type="button" aria-label="Удалить из сравнения">
+									<svg width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="#svg-compare"/>
 									</svg>
 								</button>
 

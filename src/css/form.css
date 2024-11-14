@@ -227,12 +227,14 @@ legend {
 
 	}
 
+	&--compare,
 	&--favourite {
 
 		width: 40px;
 		height: 40px;
 		padding: 0;
-		border: 2px solid;
+		flex-shrink: 0;
+		border: 1px solid;
 		display: flex;
 		align-items: center;
 		justify-content: center;

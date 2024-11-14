@@ -160,6 +160,12 @@
 
 		}
 
+		@media $smWidth {
+
+			margin-bottom: var(--indent);
+
+		}
+
 	}
 
 	&__description {
@@ -1204,11 +1210,8 @@
 .price {
 
 	display: flex;
-	align-items: center;
-	gap: 8px;
-	line-height: 24px;
+	gap: 16px;
 	white-space: nowrap;
-
 
 	&__old {
 
@@ -1216,13 +1219,15 @@
 		font-weight: 400;
 		color: var(--gray);
 		order: 2;
+		font-size: 12px;
 
 	}
 
 	&__value {
 
+		color: var(--main);
 		display: block;
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: 700;
 
 	}
@@ -1272,8 +1277,8 @@
 
 		@media $mdWidth {
 
-			line-height: 20px;
-			height: 20px;
+			line-height: 32px;
+			height: 32px;
 
 		}
 

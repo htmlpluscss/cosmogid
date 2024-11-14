@@ -1,114 +1,36 @@
-			<div class="preview-card__head">
+		<div class="preview-card__main">
 
-				<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/scroll/" class="preview-card__img">
+			<p class="preview-card__madein">
+				{{ card.madein | default('Kaaral (Италия)') }}
+			</p>
 
-					{% set img = [1,2,3,4,5] | random %}
+			<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/" class="preview-card__title tooltip-title" title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл">
+				{{ ["Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл","Academie Ultimate Line Correcting serum, 30 мл"] | random }}
+			</a>
 
-					<picture>
+			<p class="preview-card__price">
 
-						<source srcset="/img/preview-card/{{ img }}.webp 1x, /img/preview-card/{{ img }}@2x.webp 2x" type="image/webp">
-						<source srcset="/img/preview-card/{{ img }}.jpg 1x, /img/preview-card/{{ img }}@2x.jpg 2x">
+				<span class="price">
 
-						<img src="/img/preview-card/{{ img }}.jpg" alt="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл" loading="lazy" width="272" height="200">
+{% if card.overlay !== "login" %}
 
-					</picture>
+	{% if card.priceOld %}
 
-				</a>
+					<s class="price__old">
+						3456 ₽
+					</s>
 
-{% if card.overlay %}
-
-				<div class="overlay-disabled">
-
-	{% if card.overlay === "login" %}
-
-					<p class="overlay-disabled__title">
-						Товар для специалистов
-					</p>
-
-					<p class="overlay-disabled__text">
-						вступите в клуб CosmoGid для доступа
-					</p>
-
-					<button class="overlay-disabled__btn btn btn--outline" type="button" data-modal="login">
-						Авторизоваться
-					</button>
-
-	{% elif card.overlay === "not" %}
-
-					<p class="overlay-disabled__title">
-						Отсутствует до 25.09.2020
-					</p>
-
-					<button class="overlay-disabled__btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
-						Уведомить  / <span class="hidden-sm">найти</span> аналог
-					</button>
-
-	{% elif card.overlay === "withdrawn" %}
-
-					<p class="overlay-disabled__title">
-						Снят с продажи
-					</p>
-
-					<button
-
-						class="overlay-disabled__btn btn btn--outline js-find-analogue"
-						type="button"
-						data-modal="find-analogue"
-						data-id="123"
-						data-articleid="234"
-						data-link="/product/"
-						data-price="2581"
-						data-price-old="2888"
-						data-img="/img/preview-card/preview-80x80.jpg"
-						data-img2x="/img/preview-card/preview-160x160.jpg"
-						data-name="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл"
-
-					>
-						Найти аналог
-					</button>
-
-{% endif %}
-
-				</div>
-
-{% endif %}
-
-{% if card.label %}
-
-				<div class="preview-card__label">
-
-	{% for label in card.label %}
-
-					<p class="preview-card__label-item is-{{ label.mod }}">
-						<span class="visuallyhidden">{{ label.name }}</span> {{ label.value }}
-					</p>
-
-	{% endfor %}
-
-				</div>
-
-{% endif %}
-
-{% if card.flag %}
-
-				<div class="preview-card__flag">
-
-					<p class="preview-card__flag-item is-{{ card.flag[0] }}">
-						{{ card.flag[1] }}
-					</p>
-
-	{% if [1,2,3,4,5] | random === 1 and card.flag[0] !== 'green' %}
-
-					<p class="preview-card__flag-item is-green">
-						New
-					</p>
 	{% endif %}
 
-				</div>
+					<b class="price__value">
+						2581 ₽
+					</b>
 
 {% endif %}
 
-			</div>
+				</span>
+
+			</p>
 
 			<p class="preview-card__rating">
 
@@ -138,80 +60,116 @@
 
 			</p>
 
-			<p class="preview-card__madein">
-				{{ card.madein | default('Kaaral (Италия)') }}
-			</p>
+		</div>
 
-			<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/" class="preview-card__title tooltip-title" title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл">
-				{{ ["Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл","Academie Ultimate Line Correcting serum, 30 мл"] | random }}
+		<div class="preview-card__head">
+
+			<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/scroll/" class="preview-card__img">
+
+				{% set img = [1,2,3,4,5] | random %}
+
+				<picture>
+
+					<source srcset="/img/preview-card/{{ img }}.webp 1x, /img/preview-card/{{ img }}@2x.webp 2x" type="image/webp">
+					<source srcset="/img/preview-card/{{ img }}.jpg 1x, /img/preview-card/{{ img }}@2x.jpg 2x">
+
+					<img src="/img/preview-card/{{ img }}.jpg" alt="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл" loading="lazy" width="272" height="200">
+
+				</picture>
+
 			</a>
 
-{% if card.madein === 'ZO Skin' %}
+{% if card.overlay %}
 
-			<dl class="preview-card__param">
+			<div class="overlay-disabled">
 
-				<dt>
-					Длительность курса:
-				</dt>
+	{% if card.overlay === "login" %}
 
-				<dd>
-					5 месяцев
-				</dd>
+				<p class="overlay-disabled__title">
+					Товар для специалистов
+				</p>
 
-			</dl>
+				<p class="overlay-disabled__text">
+					вступите в клуб CosmoGid для доступа
+				</p>
 
-			<dl class="preview-card__param">
+				<button class="overlay-disabled__btn btn btn--outline" type="button" data-modal="login">
+					Авторизоваться
+				</button>
 
-				<dt>
-					Результат:
-				</dt>
+	{% elif card.overlay === "not" %}
 
-				<dd>
-					омоложение, увлажнение, чистая кожа
-				</dd>
+				<p class="overlay-disabled__title">
+					Отсутствует до 25.09.2020
+				</p>
 
-			</dl>
+				<button class="overlay-disabled__btn btn btn--outline js-find-notify" type="button" data-modal="find-notify">
+					Уведомить  / <span class="hidden-sm">найти</span> аналог
+				</button>
 
-			<p class="preview-card__price">
+	{% elif card.overlay === "withdrawn" %}
 
-				<span class="price">
+				<p class="overlay-disabled__title">
+					Снят с продажи
+				</p>
 
-					<s class="price__old">
-						200124 ₽
-					</s>
+				<button
 
-					<b class="price__value">
-						125810 ₽
-					</b>
+					class="overlay-disabled__btn btn btn--outline js-find-analogue"
+					type="button"
+					data-modal="find-analogue"
+					data-id="123"
+					data-articleid="234"
+					data-link="/product/"
+					data-price="2581"
+					data-price-old="2888"
+					data-img="/img/preview-card/preview-80x80.jpg"
+					data-img2x="/img/preview-card/preview-160x160.jpg"
+					data-name="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл"
 
-				</span>
+				>
+					Найти аналог
+				</button>
 
-			</p>
+{% endif %}
 
-{% else %}
+			</div>
 
-			<p class="preview-card__price">
+{% endif %}
 
-				<span class="price">
+{% if card.label %}
 
-{% if card.overlay !== "login" %}
+			<div class="preview-card__label">
 
-	{% if card.priceOld %}
+	{% for label in card.label %}
 
-					<s class="price__old">
-						3456 ₽
-					</s>
+				<p class="preview-card__label-item is-{{ label.mod }}">
+					<span class="visuallyhidden">{{ label.name }}</span> {{ label.value }}
+				</p>
 
+	{% endfor %}
+
+			</div>
+
+{% endif %}
+
+{% if card.flag %}
+
+			<div class="preview-card__flag">
+
+				<p class="preview-card__flag-item is-{{ card.flag[0] }}">
+					{{ card.flag[1] }}
+				</p>
+
+	{% if [1,2,3,4,5] | random === 1 and card.flag[0] !== 'green' %}
+
+				<p class="preview-card__flag-item is-green">
+					New
+				</p>
 	{% endif %}
 
-					<b class="price__value">
-						2581 ₽
-					</b>
+			</div>
 
 {% endif %}
 
-				</span>
-
-			</p>
-
-{% endif %}
+		</div>
