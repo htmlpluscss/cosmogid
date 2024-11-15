@@ -146,6 +146,7 @@ hr {
 	@media $mdWidth {
 
 		font-size: 24px;
+		margin: var(--gap) 0;
 
 	}
 

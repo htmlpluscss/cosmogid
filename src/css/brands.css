@@ -84,7 +84,7 @@
 
 	@media $mdWidth {
 
-		margin: 40px 0 16px;
+		margin-bottom: 20px;
 
 		.btn {
 

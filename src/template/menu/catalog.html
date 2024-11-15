@@ -4,13 +4,11 @@
 
 			<div class="menu-catalog__inner">
 
-				<button class="menu-catalog__btn-toggle btn btn--outline" type="button">
+				<button class="menu-catalog__btn-toggle btn btn--outline hidden-md" type="button">
 					<svg width="24" height="24" viewBox="0 0 24 24">
 						<use xlink:href="#svg-menu"/>
 					</svg>
-					<span class="hidden-sm">
-						Каталог
-					</span>
+					Каталог
 				</button>
 
 				<div class="menu-catalog__main">
@@ -62,7 +60,7 @@
 
 				</div>
 
-				<ul class="menu-catalog__list visuallyhidden">
+				<ul class="menu-catalog__list visuallyhidden" data-head="Каталог">
 
 {% for item in menu %}
 
@@ -87,6 +85,17 @@
 {% endfor %}
 
 				</ul>
+
+				<div class="menu-catalog__btn-close">
+
+					<button class="btn btn--medium btn-menu-close" type="button">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="#svg-close"/>
+						</svg>
+						Закрыть меню
+					</button>
+
+				</div>
 
 			</div>
 

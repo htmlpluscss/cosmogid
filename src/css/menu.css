@@ -25,23 +25,41 @@
 
 .menu-main {
 
-	display: flex;
+	@media $desktop {
 
-	a {
+		display: flex;
 
-		display: block;
-		font-weight: 500;
-		color: var(--text);
-		line-height: 20px;
-		padding: 10px 20px;
+		a {
 
-		@media $desktop {
+			display: block;
+			font-weight: 500;
+			color: var(--text);
+			line-height: 20px;
+			padding: 10px 20px;
 
 			&:hover {
 
 				text-decoration: underline;
 
 			}
+
+		}
+
+	}
+
+	@media $mdWidth {
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		a {
+
+			display: block;
+			font-size: 20px;
+			font-weight: 700;
+			color: var(--text);
+			line-height: 1.2;
+			padding: 4px 0;
 
 		}
 
@@ -57,15 +75,38 @@
 
 		display: none;
 
-		&__list {
+		&__btn-close {
 
-			position: relative;
+			display: flex;
+			position: sticky;
+			bottom: var(--indent);
+			justify-content: center;
+			margin-top: var(--space);
 
 		}
 
-		&__item {
+		&__list {
 
-			border-bottom:  1px solid #e5e7eb;
+			position: relative;
+			padding-top: 60px;
+
+			&::before {
+
+				content: attr(data-head);
+				color: var(--main);
+				position: absolute;
+				top: 16px;
+				left: 0;
+				font-weight: 700;
+				font-size: 24px;
+
+			}
+
+		}
+
+		&__list > &__item {
+
+			border-top:  1px solid var(--border);
 
 		}
 
@@ -75,77 +116,27 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 8px;
-			font-weight: 500;
+			padding: 8px 0 8px 8px;
+			font-weight: 700;
 			font-size: 16px;
-			line-height: 24px;
-			color: var(--gray);
-
-			&-ico {
-
-				flex-shrink: 0;
-				order: 1;
-				outline:1px solid red;
-				margin-right: auto;
-				margin-left: 12px;
-
-			}
+			color: var(--text);
 
 			svg:not([class]) {
 
-				color: var(--main);
 				transition: none;
+				stroke-width: 2px;
 
 			}
 
-			&.is-level-2 {
+			&.is-open svg:not([class]) {
 
-				font-size: 14px;
-
-				&.is-open {
-
-					svg {
-
-						transform: rotate(90deg);
-
-					}
-
-					& + .menu-catalog__level-3 {
-
-						display: block;
-
-					}
-
-				}
-
-			}
-
-			&.is-level-3 {
-
-				font-size: 14px;
-				line-height: 1.5;
-				color: var(--text);
-				padding: 0 0 0 24px;
-				min-height: 0;
-				margin-bottom: 21px;
-
-			}
-
-			&--second-menu {
-
-				margin-top: 40px;
-
-			}
-
-			&--only-mobile:not(--arrow) svg {
-
-				pointer-events: none;
+				transform: rotate(90deg);
 
 			}
 
 		}
 
-		&__sub {
+		&__link:not(.is-open) + &__sub {
 
 			display: none;
 
@@ -153,9 +144,11 @@
 
 		&__level-2 {
 
-			li {
+			.menu-catalog__link {
 
-				border-bottom:  1px solid #e5e7eb;
+				padding: 0 0 0 20px;
+				min-height: 36px;
+				font-weight: 500;
 
 			}
 
@@ -163,11 +156,24 @@
 
 		&__level-3 {
 
-			display: none;
+			.menu-catalog__link {
 
-			li {
+				padding: 0 0 0 40px;
+				min-height: 32px;
 
-				border-bottom: 0;
+			}
+
+		}
+
+		&__sub.is-brands &__column {
+
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			padding-left: 8px;
+
+			.menu-catalog__link {
+
+				min-height: 32px;
 				padding: 0;
 
 			}
@@ -192,31 +198,12 @@
 	}
 
 	@media $desktop {
-/*
-		position: sticky;
-		top: 60px;
-		background-color: #fff;
 
-		&.is-transparent {
+		&__btn-close {
 
-			background-color: transparent;
-			z-index: 8;
-
-			&::before {
-
-				position: absolute;
-				height: 256px;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: '';
-				pointer-events: none;
-				box-shadow: var(--box-shadow);
-
-			}
+			display: none;
 
 		}
-*/
 
 		&:hover,
 		.menu-catalog-open & {
@@ -259,13 +246,6 @@
 
 			}
 
-
-/*			&--only-mobile {
-
-				display: none;
-
-			}
-*/
 		}
 
 		&__link {
@@ -276,22 +256,13 @@
 			font-weight: 500;
 			justify-content: space-between;
 
-			/*
-			&--brand {
-
-				color: var(--main);
-				text-transform: uppercase;
-
-			}
-
+			&--brand,
 			&--sale {
 
-				color: var(--red);
-				text-transform: uppercase;
+				color: var(--error);
 
 			}
 
-			 */
 		}
 
 		&__sub {
@@ -337,12 +308,17 @@
 
 	@media $mdWidth {
 
-		.header,
 		.main,
 		.footer,
 		.menu-bar {
 
 			display: none;
+
+		}
+
+		.menu-catalog {
+
+			display: block;
 
 		}
 

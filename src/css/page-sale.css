@@ -2,7 +2,11 @@
 
 	.billboard {
 
-		margin: 40px 0 32px;
+		@media $desktop {
+
+			margin: 40px 0 32px;
+
+		}
 
 		img {
 

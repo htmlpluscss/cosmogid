@@ -7,7 +7,7 @@
 
 		let resizeTimeout = null;
 
-		if ( window.innerWidth > 1249 ) {
+		if ( window.innerWidth > 767 ) {
 
 			header.classList.toggle('is-fixed', window.pageYOffset > 0);
 
@@ -20,7 +20,7 @@
 				if (
 					resizeTimeout === null &&
 					document.body.classList.contains('modal-show') === false &&
-					window.innerWidth > 1249
+					window.innerWidth > 767
 				) {
 
 					resizeTimeout = setTimeout( () => {

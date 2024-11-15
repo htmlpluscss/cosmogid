@@ -261,6 +261,12 @@
 		display: flex;
 		gap: 24px;
 
+		@media $smWidth {
+
+			gap: 16px;
+
+		}
+
 		@media $xsWidth {
 
 			gap: 16px;
@@ -275,7 +281,7 @@
 
 			}
 
-			@media $xsWidth {
+			@media $smWidth {
 
 				padding: 0;
 
@@ -346,11 +352,11 @@
 	.title {
 
 		margin: 24px 0;
+		text-align: center;
 
 		@media $desktop {
 
 			font-size: 32px;
-			text-align: center;
 
 		}
 

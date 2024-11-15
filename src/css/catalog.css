@@ -85,7 +85,8 @@
 
 		@media $mdWidth {
 
-			margin: 40px 0;
+			margin: 36px 0;
+			gap: 8px;
 
 		}
 
@@ -150,6 +151,12 @@
 
 		margin-bottom: 32px;
 
+		@media $smWidth {
+
+			margin-bottom: 20px;
+
+		}
+
 		&-inputsearch {
 
 			position: relative;
@@ -193,7 +200,11 @@
 
 	&__tags {
 
-		margin-bottom: 32px;
+		@media $desktop {
+
+			margin-bottom: 32px;
+
+		}
 
 	}
 
@@ -392,7 +403,7 @@
 
 		@media $smWidth {
 
-			margin-bottom: 16px;
+			margin-bottom: 8px;
 
 		}
 
@@ -408,6 +419,12 @@
 			font-weight: 500;
 			font-size: 16px;
 			color: var(--error);
+
+			@media $smWidth {
+
+				padding: 0 !important;
+
+			}
 
 		}
 

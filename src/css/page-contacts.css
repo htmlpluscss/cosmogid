@@ -200,13 +200,19 @@
 		@media $smWidth {
 
 			width: auto;
-			margin-top: 70px;
+			margin-top: 36px;
 
 		}
 
 		.btn {
 
 			min-width: 240px;
+
+			@media $smWidth {
+
+				width: 100%;
+
+			}
 
 		}
 

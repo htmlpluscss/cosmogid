@@ -87,8 +87,8 @@
 
 	&__toggle-btn {
 
-		border-radius: 0;
 		background-color: #fff;
+		box-shadow: var(--box-shadow);
 		left: calc( var(--indent) * -1 );
 
 		@media $desktop {

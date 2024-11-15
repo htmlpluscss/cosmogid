@@ -17,13 +17,13 @@
 		@media $mdWidth {
 
 			grid-template-columns: 1fr 290px;
+			padding: 24px 0;
 
 		}
 
 		@media $smWidth {
 
 			display: block;
-			padding: 24px 0;
 
 		}
 
@@ -157,11 +157,6 @@
 			font-size: 18px;
 			font-weight: 600;
 			grid-column: span 2;
-
-		}
-
-		@media $smWidth {
-
 			margin-bottom: var(--indent);
 
 		}
@@ -1279,6 +1274,7 @@
 
 			line-height: 32px;
 			height: 32px;
+			padding: 0 10px;
 
 		}
 

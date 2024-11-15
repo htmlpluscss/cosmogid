@@ -173,12 +173,6 @@ legend {
 
 		}
 
-		@media $smWidth {
-
-			font-size: 12px;
-
-		}
-
 	}
 
 	&--link {
@@ -245,9 +239,16 @@ legend {
 
 	&--filter {
 
-		background-color: #ede9fe;
+		background-color: transparent;
 		border: 1px solid var(--accent);
 		color: var(--main);
+		height: 48px;
+
+		@media $smWidth {
+
+			height: 40px;
+
+		}
 
 	}
 

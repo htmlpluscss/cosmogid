@@ -5,6 +5,12 @@
 	scroll-margin: var(--scrollMargin);
 	margin: 24px;
 
+	@media $smWidth {
+
+		margin: var(--gap) 0;
+
+	}
+
 	hr {
 
 		margin: 24px 0;
