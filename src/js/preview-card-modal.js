@@ -8,11 +8,11 @@
 
 			// выбор цвета в товаре или в карточке
 
-			const productColor = event.target.closest('.js-modal-color');
+			const cardModal = event.target.closest('.js-modal-preview-card');
 
-			if (productColor) {
+			if (cardModal) {
 
-				const cardProduct = productColor.closest('.product') || productColor.closest('.preview-card'),
+				const cardProduct = cardModal.closest('.product') || cardModal.closest('.preview-card'),
 					  formProduct = cardProduct.querySelector('.product-buy') || cardProduct.querySelector('.preview-card__form'),
 					  inputId = document.createElement('input');
 
@@ -20,14 +20,14 @@
 				inputId.type = 'hidden';
 				setTimeout( () => inputId.value = formProduct.elements.id.value);
 
-				modalFormTarget = formProduct.querySelector('.preview-card__modal-color');
+				modalFormTarget = formProduct.querySelector('.preview-card__modal-preview-card');
 
 				form.innerHTML = modalFormTarget.innerHTML;
 				form.insertAdjacentElement('afterbegin', inputId);
 
 				const eventModalShow = new CustomEvent("modalShow", {
 					detail: {
-						selector: "preview-card-color"
+						selector: "preview-card"
 					}
 				});
 
@@ -43,7 +43,7 @@
 
 			form.elements.id.remove();
 
-			[...form.querySelectorAll('.modal-card-color__item-input')].forEach( input => {
+			[...form.querySelectorAll('.modal-preview-card__item-input')].forEach( input => {
 
 				if (input.checked) {
 
@@ -65,13 +65,13 @@
 
 			// изменить цвет
 
-			const cardColor = event.target.closest('.modal-card-color__item-input');
+			const cardColor = event.target.closest('.modal-preview-card__item-input');
 
 			if (cardColor) {
 
 				// set class checked
-				const itemChecked = cardColor.closest('.modal-card-color__item'),
-					  list = form.querySelectorAll('.modal-card-color__item');
+				const itemChecked = cardColor.closest('.modal-preview-card__item'),
+					  list = form.querySelectorAll('.modal-preview-card__item');
 
 				[...list].forEach( item => {
 
@@ -79,14 +79,14 @@
 
 				});
 
-				const card = event.target.closest('.modal-card-color'),
+				const card = event.target.closest('.modal-preview-card'),
 					  id = card.elements.id.value,
 					  articleId = cardColor.value;
 
 				// img
 
-				card.querySelector('.modal-card-color__photo img').setAttribute('src', cardColor.getAttribute('data-src'));
-				card.querySelector('.modal-card-color__photo img').setAttribute('srcset', cardColor.getAttribute('data-srcset'));
+				card.querySelector('.modal-preview-card__photo img').setAttribute('src', cardColor.getAttribute('data-src'));
+				card.querySelector('.modal-preview-card__photo img').setAttribute('srcset', cardColor.getAttribute('data-srcset'));
 
 				// price
 
@@ -109,9 +109,9 @@
 					  buyCart = buy === 'in-cart',
 					  buyDisabled = buy === 'disabled',
 					  buyBtn = buy === null || buyDisabled,
-					  templateSubmit = document.querySelector('#modal-card-color-submit-template').innerHTML;
+					  templateSubmit = document.querySelector('#modal-preview-card-submit-template').innerHTML;
 
-				card.querySelector('.modal-card-color__submit').innerHTML = Mustache.render(templateSubmit, { buyBtn, buyDisabled, buyCart });
+				card.querySelector('.modal-preview-card__submit').innerHTML = Mustache.render(templateSubmit, { buyBtn, buyDisabled, buyCart });
 
 				// overlay
 
@@ -128,11 +128,11 @@
 
 				}
 
-				card.querySelector('.modal-card-color__photo').insertAdjacentHTML('beforeend', Mustache.render(document.querySelector('#overlay-disabled-template').innerHTML, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, id, articleId }));
+				card.querySelector('.modal-preview-card__photo').insertAdjacentHTML('beforeend', Mustache.render(document.querySelector('#overlay-disabled-template').innerHTML, { overlay, overlayTitle, overlayText, overlayLogin, overlayNot, id, articleId }));
 
 				// availability
 
-				card.querySelector('.modal-card-color__availability').innerHTML = Mustache.render(document.querySelector('#availability-template').innerHTML, { availability: !overlayNot });
+				card.querySelector('.modal-preview-card__availability').innerHTML = Mustache.render(document.querySelector('#availability-template').innerHTML, { availability: !overlayNot });
 
 			}
 
@@ -140,4 +140,4 @@
 
 	}
 
-})(document.querySelector('#preview-card-color'));
+})(document.querySelector('#modal-preview-card'));

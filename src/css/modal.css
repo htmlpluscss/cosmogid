@@ -488,7 +488,7 @@
 
 }
 
-.modal-card-color {
+.modal-preview-card {
 
 	width: 1000px;
 	display: flex;
@@ -591,15 +591,8 @@
 		@media $smWidth {
 
 			position: absolute;
-			top: var(--gap);
-			left: var(--gap);
-			z-index: 1;
-
-			b {
-
-				display: block;
-
-			}
+			top: 240px;
+			right: var(--gap);
 
 		}
 
@@ -1332,185 +1325,6 @@
 
 			fill: none;
 			stroke: #475467;
-
-		}
-
-	}
-
-}
-
-#modal-product-select {
-
-	width: 768px;
-
-	.modal-product-select {
-
-		display: flex;
-		gap: var(--gap);
-		padding-top: 10px;
-
-		@media $smWidth {
-
-			display: block;
-
-		}
-
-		&__head {
-
-			width: 320px;
-			flex-shrink: 0;
-
-		}
-
-		&__name {
-
-			margin-bottom: 20px;
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 1.2;
-
-		}
-
-		&__img {
-
-			width: 280px;
-			height: 280px;
-			margin: 0 auto;
-			position: relative;
-
-			img {
-
-				width: 280px;
-				height: 280px;
-				object-fit: contain;
-
-			}
-
-		}
-
-		&__body {
-
-			display: flex;
-			flex-direction: column;
-			flex-grow: 1;
-			padding: var(--gap);
-			box-shadow: var(--box-shadow);
-
-			@media $smWidth {
-
-				height: calc(100vh - 280px - 48px);
-				min-height: 320px;
-				box-shadow: none;
-				padding: var(--gap) 0 0;
-
-			}
-
-		}
-
-		&__availability {
-
-			margin-bottom: var(--gap);
-
-		}
-
-		&__price {
-
-			margin-bottom: 24px;
-
-			.price {
-
-				position: relative;
-				padding-top: 32px;
-
-				&__old {
-
-					position: absolute;
-					top: 0;
-					left: 0;
-
-				}
-
-				&__value {
-
-					font-size: 32px;
-					line-height: 1.2;
-
-				}
-
-			}
-
-		}
-
-		&__list {
-
-			max-height: 30vh;
-			flex-grow: 1;
-
-			@media $smWidth {
-
-				max-height: 100vh;
-
-			}
-
-		}
-
-		&__btn {
-
-			padding: 12px 6px;
-			width: 100%;
-			display: flex;
-			gap: 10px;
-			align-items: center;
-			white-space: normal;
-			text-align: left;
-
-			@media $smWidth {
-
-				border-top: 1px solid #f3f4f6;
-
-			}
-
-			@media $desktop {
-
-				&:hover {
-
-					background-color: #f3f4f6;
-
-				}
-
-			}
-
-			&.is-current {
-
-				color: var(--accent);
-				background-color: #f3f4f6;
-			}
-
-			img {
-
-				flex-shrink: 0;
-
-			}
-
-		}
-
-		&__buy {
-
-			margin-top: var(--gap);
-			display: flex;
-			gap: 16px;
-
-			@media $smWidth {
-
-				position: sticky;
-				bottom: 24px;
-				z-index: 1;
-				box-shadow: 0 24px 0 24px #fff;
-				padding-top: 24px;
-				margin-top: 0;
-				background-image: linear-gradient( to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 24px);
-
-			}
 
 		}
 

@@ -37,7 +37,17 @@
 
 					<div class="preview-card__hover-inner">
 
-{% include "_include/preview-card/color.html" %}
+						<button class="preview-card__btn-modal-card button js-modal-preview-card" type="button">
+
+							<span class="preview-card__btn-modal-card-name">
+								Выбор цвета
+							</span>
+
+							<svg width="16" height="16" viewBox="0 0 24 24">
+								<use xlink:href="#svg-arrow-chevron-down"/>
+							</svg>
+
+						</button>
 
 {% include "_include/preview-card/foot.html" %}
 
@@ -45,7 +55,7 @@
 
 				</div>
 
-{% include "_include/preview-card/modal-color.html" %}
+{% include "_include/preview-card/modal.html" %}
 
 			</form>
 

@@ -137,11 +137,11 @@
 
 				param.id        = productModal.elements.id.value;
 				param.articleid = checked.value;
-				param.link      = productModal.querySelector('.modal-card-color__title a').href;
+				param.link      = productModal.querySelector('.modal-preview-card__title a').href;
 				param.price     = parseInt(checked.getAttribute('data-price'));
 				param.img       = checked.getAttribute('data-src');
 				param.img2x     = checked.getAttribute('data-src');
-				param.name      = productModal.querySelector('.modal-card-color__title').textContent;
+				param.name      = productModal.querySelector('.modal-preview-card__title').textContent;
 
 				if ( checked.getAttribute('data-price-old') ) {
 
@@ -164,27 +164,18 @@
 			btnSelectListToggle.classList.toggle('is-open');
 
 		}
+		else {
 
-/*
+			const btnSelectListToggleOpen = document.querySelector('.js-select-list-toggle.is-open');
 
-		const btnsSelectListToggle = document.querySelectorAll('.js-select-list-toggle');
+			if ( btnSelectListToggleOpen ) {
 
-		if ( btnsSelectListToggle.length > 0 ) {
-
-			const btnSelectListToggle = event.target.closest('.js-select-list-toggle');
-
-			if (btnSelectListToggle) {
-
-				[...btnsSelectListToggle].forEach( btn => btn.classList.toggle('is-open', btn === btnSelectListToggle && btnSelectListToggle.classList.contains('is-open') === false));
-
-			}
-			else {
-
-				[...btnsSelectListToggle].forEach( btn => btn.classList.remove('is-open'));
+				btnSelectListToggleOpen.classList.remove('is-open');
 
 			}
 
-		}*/
+		}
+
 	});
 
 })();

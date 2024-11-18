@@ -1,67 +1,3 @@
-		<div class="preview-card__main">
-
-			<p class="preview-card__madein">
-				{{ card.madein | default('Kaaral (Италия)') }}
-			</p>
-
-			<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/" class="preview-card__title tooltip-title" title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл">
-				{{ ["Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл","Academie Ultimate Line Correcting serum, 30 мл"] | random }}
-			</a>
-
-			<p class="preview-card__price">
-
-				<span class="price">
-
-{% if card.overlay !== "login" %}
-
-	{% if card.priceOld %}
-
-					<s class="price__old">
-						3456 ₽
-					</s>
-
-	{% endif %}
-
-					<b class="price__value">
-						2581 ₽
-					</b>
-
-{% endif %}
-
-				</span>
-
-			</p>
-
-			<p class="preview-card__rating">
-
-				<span class="ratio ratio--product ratio--{{ card.rating }}">
-
-{% if card.rating === 0 %}
-
-					<span class="visuallyhidden">
-						нет рейтинга
-					</span>
-
-{% else %}
-
-					<span class="visuallyhidden">
-						рейтинг
-					</span>
-
-					4,9
-
-{% endif %}
-
-				</span>
-
-				<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/#review" class="preview-card__review">
-					{{ card.review }}
-				</a>
-
-			</p>
-
-		</div>
-
 		<div class="preview-card__head">
 
 			<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/scroll/" class="preview-card__img">
@@ -171,5 +107,73 @@
 			</div>
 
 {% endif %}
+
+		</div>
+
+		<div class="preview-card__main">
+
+			<p class="preview-card__madein">
+				{{ card.madein | default('Kaaral (Италия)') }}
+			</p>
+
+			<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/" class="preview-card__title tooltip-title" title="Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл">
+				{{ ["Academie Ultimate Line Correcting serum (Корректирующая сыворотка от морщин), 30 мл","Academie Ultimate Line Correcting serum, 30 мл"] | random }}
+			</a>
+
+			<div class="preview-card__main-center">
+
+				<p class="preview-card__price">
+
+					<span class="price">
+
+{% if card.overlay !== "login" %}
+
+	{% if card.priceOld %}
+
+						<s class="price__old">
+							3456 ₽
+						</s>
+
+	{% endif %}
+
+						<b class="price__value">
+							2581 ₽
+						</b>
+
+{% endif %}
+
+					</span>
+
+				</p>
+
+				<p class="preview-card__rating">
+
+					<span class="ratio ratio--product ratio--{{ card.rating }}">
+
+{% if card.rating === 0 %}
+
+						<span class="visuallyhidden">
+							нет рейтинга
+						</span>
+
+{% else %}
+
+						<span class="visuallyhidden">
+							рейтинг
+						</span>
+
+						4,9
+
+{% endif %}
+
+					</span>
+
+					<a {% if card.target %}target="{{ card.target }}"{% endif %} href="/product/#review" class="preview-card__review">
+						{{ card.review }}
+					</a>
+
+				</p>
+
+			</div>
 
 		</div>
