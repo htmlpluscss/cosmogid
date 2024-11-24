@@ -97,7 +97,7 @@
 
 			height: 32px;
 			line-height: 32px;
-			font-size: 12px;
+			font-size: 16px;
 			margin-left: 40px;
 
 			@media $desktop {
@@ -128,7 +128,7 @@
 
 			height: 32px;
 			line-height: 32px;
-			font-size: 12px;
+			font-size: 16px;
 			gap: 4px;
 
 			@media $desktop {
