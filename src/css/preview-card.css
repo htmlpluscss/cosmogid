@@ -308,6 +308,20 @@
 
 		}
 
+		&.is-after-registration {
+
+			display: block;
+			text-align: center;
+
+			.btn {
+
+				color: var(--red);
+				margin: auto;
+
+			}
+
+		}
+
 	}
 
 	&__form-set {
