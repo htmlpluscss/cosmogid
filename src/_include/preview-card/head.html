@@ -190,11 +190,11 @@
 
 {% else %}
 
-			<p class="preview-card__price">
-
-				<span class="price">
+			<p class="preview-card__price{% if card.overlay === 'login' %} is-after-registration{% endif %}">
 
 {% if card.overlay !== "login" %}
+
+				<span class="price">
 
 	{% if card.priceOld %}
 
@@ -208,9 +208,17 @@
 						2581 ₽
 					</b>
 
-{% endif %}
-
 				</span>
+
+{% else %}
+
+				Цена доступна после <br>
+
+				<button class="btn btn--link" type="button" data-modal="login-phone">
+					регистрации
+				</button>
+
+{% endif %}
 
 			</p>
 
