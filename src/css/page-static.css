@@ -1,0 +1,165 @@
+.page-static {
+
+	max-width: 1014px;
+	margin: 0 auto 96px;
+
+	&__header {
+
+		h1 {
+
+			font-size: 32px;
+			margin-bottom: 1em;
+
+			@media $mdWidth {
+
+				font-size: 26px;
+
+			}
+
+			span {
+
+				display: block;
+				text-transform: uppercase;
+
+			}
+
+		}
+
+	}
+
+	&__body {
+
+		counter-reset: section 0;
+
+		h2,
+		h3 {
+
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 1.2;
+			margin: 32px 0 12px;
+
+			@media $mdWidth {
+
+				font-size: 22px;
+
+			}
+
+		}
+
+		h2 {
+
+			@media $desktop {
+
+				text-transform: uppercase;
+
+			}
+
+		}
+
+	}
+
+	p,
+	ul,
+	ol {
+
+		margin: 1em 0;
+		text-align: justify;
+		color: var(--gray);
+
+		li {
+
+			margin: 12px 0;
+
+		}
+
+		a {
+
+			text-decoration: underline;
+			color: var(--violet);
+
+			&:hover {
+
+				text-decoration: none;
+
+			}
+
+		}
+
+	}
+
+	ul {
+
+		li {
+
+			padding-left: 24px;
+
+			&::before {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '—';
+
+			}
+
+		}
+
+	}
+
+	.h2-ol-counter {
+
+		counter-reset: level1;
+
+		h2 {
+
+			counter-increment: level1;
+			counter-reset: level2;
+
+			&::before {
+
+				content: counter(level1) ". ";
+
+			}
+
+		}
+
+		& > ol > li {
+
+			counter-increment: level2;
+
+			&::before {
+
+				content: counter(level1) "." counter(level2) ".";
+
+			}
+
+			& > ul {
+
+				margin-left: 12px;
+
+			}
+
+			ol {
+
+				counter-reset: level3;
+
+				& > li {
+
+					counter-increment: level3;
+
+					&::before {
+
+						content: counter(level1) "." counter(level2) "." counter(level3) ".";
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
