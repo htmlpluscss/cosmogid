@@ -1,0 +1,124 @@
+	<form action="/" class="modal__item modal__item--promo modal__item--professional-callback modal-professional-callback">
+
+		<div class="modal-professional-callback__body">
+
+			<div class="modal-professional-callback__head">
+
+				<p class="modal-professional-callback__label">
+					Профессиональная косметика
+				<p>
+
+				<p class="modal-professional-callback__title h1">
+					товар продается только после <b>бесплатной</b> консультации специалиста
+				</p>
+
+				<p class="modal-professional-callback__text">
+					Для заказа  товара, свяжитесь с нами с помощью мессенджеров или заполните форму, и получите консультацию нашего менеджера
+				</p>
+
+			</div>
+
+			<div class="modal-professional-callback__fieldset hide">
+
+				<div class="inputbox">
+
+					<label class="inputbox__label" for="modal-professional-callback-name">
+						Как вас зовут
+					</label>
+
+					<input class="input" name="name" placeholder="Кузякина Марина" required="required" id="modal-professional-callback-name">
+
+				</div>
+
+				<div class="inputbox">
+
+{% set modalMod = 'professional-callback' %}
+
+{% include "template/modal/modal-callback-phone.html" %}
+
+					<label class="checkbox mt-gap">
+
+						<input class="checkbox__input visuallyhidden" type="checkbox" name="reg">
+
+						<span class="checkbox__label">
+							Авторизовать/зарегистрировать на сайте по номеру телефона
+						</span>
+
+					</label>
+
+				</div>
+
+				<div class="inputbox">
+
+					<label class="inputbox__label" for="modal-professional-callback-email">
+						Ваша почта
+					</label>
+
+					<input class="input" name="email" placeholder="kuzakina@mail.ru" required="required" id="modal-professional-callback-email" type="email">
+
+				</div>
+
+				<div class="inputbox">
+
+					<label for="modal-professional-callback-text" class="inputbox__label">
+						Ваш комментарий
+					</label>
+
+					<textarea class="input" name="text" placeholder="Напишите сообщение" id="modal-professional-callback-text"></textarea>
+
+					<label class="checkbox mt-gap">
+
+						<input class="checkbox__input visuallyhidden" type="checkbox" name="inform-messenger">
+
+						<span class="checkbox__label">
+							Не звоните, напишите в WhatsApp или Telegram
+						</span>
+
+					</label>
+
+				</div>
+
+{% include "template/modal/checkbox-rule.html" %}
+
+			</div>
+
+			<div class="modal-professional-callback__foot">
+
+				<button class="btn btn--outline btn--big js-modal-professional-callback-open">
+					Получить консультацию
+				</button>
+
+				<div class="modal-professional-callback__foot-messenger">
+
+					<a class="btn btn--ico-color" href="https://wa.me/79222977730" target="_blank" rel="noopener nofollow">
+						<svg width="40" height="40" viewBox="0 0 40 40">
+							<use xlink:href="#svg-whatsapp-color"/>
+						</svg>
+					</a>
+
+					<a class="btn btn--ico-color" href="https://t.me/cosmo_gid_bot" target="_blank" rel="noopener nofollow">
+						<svg width="40" height="40" viewBox="0 0 40 40">
+							<use xlink:href="#svg-telegram-color"/>
+						</svg>
+					</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="modal-professional-callback__img">
+
+			<picture>
+
+				<source srcset="/img/modal/370x370.webp 1x, /img/modal/740x740.webp 2x" type="image/webp">
+				<source srcset="/img/modal/370x370.jpg 1x, /img/modal/740x740.jpg 2x">
+
+				<img src="/img/modal/370x370.jpg" alt="Профессиональная косметика" loading="lazy" width="370" height="370">
+
+			</picture>
+
+		</div>
+
+	</form>

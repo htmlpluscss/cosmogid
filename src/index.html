@@ -17,11 +17,11 @@ setTimeout( ()=> {
 
 	const eventModalShow = new CustomEvent("modalShow", {
 		detail: {
-			selector: "product-select"
+			selector: "professional-callback-login"
 		}
 	});
 
-//	window.modal.dispatchEvent(eventModalShow);
+	window.modal.dispatchEvent(eventModalShow);
 
 })
 
@@ -434,6 +434,34 @@ setTimeout( ()=> {
 	</div>
 
 	<hr>
+
+	<div class="flex flex--wrap">
+
+		<div class="item">
+
+			<button class="btn btn--outline" data-modal="professional-callback">
+				Получить консультацию
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--outline" data-modal="professional-callback-login">
+				Получить консультацию (Войти на сайт)
+			</button>
+
+		</div>
+
+		<div class="item">
+
+			<button class="btn btn--outline" data-modal="delay-promo">
+				Баннер
+			</button>
+
+		</div>
+
+	</div>
 
 	<h2>
 		Buttons

@@ -2,6 +2,26 @@
 
 	window.addEventListener('click', event => {
 
+		// товар продается только после бесплатной консультации специалиста
+
+		const professionalCallback = event.target.closest('.js-modal-professional-callback-open');
+
+		if ( professionalCallback ) {
+
+			const form = professionalCallback.closest('.modal-professional-callback');
+			const fieldset = form.querySelector('.modal-professional-callback__fieldset');
+
+			if ( fieldset.classList.contains('hide') ) {
+
+				fieldset.classList.remove('hide');
+				event.preventDefault();
+
+			}
+
+		}
+
+
+
 		//  Нашли дешевле?
 
 		const bestPrice = event.target.closest('.js-best-price');

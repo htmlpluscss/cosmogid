@@ -1,3 +1,34 @@
+// modal-professional-callback__number
+( professionalCallback => {
+
+	if(professionalCallback){
+
+		const inputs = professionalCallback.querySelectorAll('.input');
+		const hiddenNumber = professionalCallback.querySelector('[type="hidden"]');
+
+		inputs.forEach((input, index) => {
+
+			input.addEventListener("input", event => {
+				const value = event.target.value;
+				if (value && index < inputs.length - 1) {
+					inputs[index + 1].focus();
+				}
+				hiddenNumber.value = Array.from(inputs).map(input => input.value).join("");
+			});
+
+			input.addEventListener("keydown", event => {
+				if (event.key === "Backspace" && !event.target.value && index > 0) {
+					inputs[index - 1].focus();
+					inputs[index - 1].select();
+				}
+			});
+
+		});
+
+	}
+
+})(document.querySelector('.modal-professional-callback__number'));
+
 // ClipboardJS
 
 	( elems => {
