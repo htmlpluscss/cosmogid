@@ -173,6 +173,7 @@
 			const buy = cardVolume.getAttribute('data-buy'),
 				  buyCart = buy === 'in-cart',
 				  buyDisabled = buy === 'disabled',
+				  professionalСallback = buy === 'professional-callback',
 				  buyBtn = buy === null || buyDisabled,
 				  btnLogin = overlayLogin;
 
@@ -182,7 +183,7 @@
 
 			} else {
 
-				form.querySelector('.product-buy__submit').innerHTML = Mustache.render(templateFoot, { buyBtn, buyDisabled, buyCart });
+				form.querySelector('.product-buy__submit').innerHTML = Mustache.render(templateFoot, { professionalСallback, buyBtn, buyDisabled, buyCart });
 
 			}
 

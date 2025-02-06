@@ -732,6 +732,14 @@
 
 		padding: 0 40px;
 
+		&.is-double-line {
+
+			line-height: 16px;
+			font-size: 15px;
+			--border-width: 2px;
+
+		}
+
 		@media $mdWidth {
 
 			padding: 0 20px;
@@ -743,6 +751,13 @@
 			padding: 0;
 			font-size: 12px;
 			width: 100%;
+
+			&.is-double-line {
+
+				font-size: 12px;
+
+			}
+
 
 		}
 
